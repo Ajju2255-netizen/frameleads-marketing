@@ -11,7 +11,7 @@ import ContactCTA from "../components/contact-cta"
 export default function SEOCompanyBangalorePage() {
   const bangaloreAreas = [
     "Koramangala",
-    "Indiranagar", 
+    "Indiranagar",
     "Whitefield",
     "Electronic City",
     "Marathahalli",
@@ -24,105 +24,60 @@ export default function SEOCompanyBangalorePage() {
     "Yelahanka",
   ]
 
-  const seoServices = [
+  const localServices = [
     {
       icon: MapPin,
-      title: "Local SEO Services Bangalore",
-      description: "Dominate 'near me' searches with optimized Google My Business, local citations, and location-based keyword targeting for Bangalore businesses.",
+      title: "Local SEO Optimization",
+      description: "Dominate local search results in Bangalore with optimized Google My Business and local citations.",
     },
     {
       icon: TrendingUp,
-      title: "Technical SEO Optimization",
-      description: "Complete website optimization including site speed, mobile responsiveness, and technical SEO audits for better search engine rankings.",
+      title: "Bangalore Market Analysis",
+      description: "Deep understanding of Bangalore's competitive landscape and consumer behavior patterns.",
     },
     {
       icon: Users,
-      title: "Content Marketing & SEO",
-      description: "SEO-optimized content creation that targets Bangalore-specific keywords and resonates with local audiences.",
+      title: "Local Content Strategy",
+      description: "Create content that resonates with Bangalore audiences and targets local search queries.",
     },
     {
       icon: Award,
-      title: "E-commerce SEO Services",
-      description: "Specialized SEO for Bangalore e-commerce businesses to increase online sales and product visibility.",
-    },
-  ]
-
-  const seoProcess = [
-    {
-      step: "01",
-      title: "Bangalore SEO Audit & Analysis",
-      description: "Comprehensive analysis of your current SEO performance, competitor research, and keyword opportunities specific to Bangalore market.",
-    },
-    {
-      step: "02", 
-      title: "Strategic SEO Planning",
-      description: "Develop customized SEO strategy targeting high-converting keywords for your industry and location in Bangalore.",
-    },
-    {
-      step: "03",
-      title: "Technical & On-Page Optimization",
-      description: "Implement technical SEO improvements, optimize content, and enhance website structure for better search visibility.",
-    },
-    {
-      step: "04",
-      title: "Local SEO & Citation Building",
-      description: "Optimize Google My Business, build local citations, and improve local search rankings across Bangalore areas.",
+      title: "Multi-location SEO",
+      description: "Optimize for multiple Bangalore locations to capture customers across the city.",
     },
   ]
 
   const whyChooseUs = [
-    "5+ years serving Bangalore businesses with proven SEO results",
-    "500+ successful SEO clients across all industries in Bangalore",
-    "Deep understanding of Bangalore's competitive digital landscape",
-    "Google My Business optimization experts for local SEO",
-    "Technical SEO specialists with latest algorithm knowledge",
-    "Local citation building and NAP consistency management",
-    "Bangalore-focused content creation and keyword research",
-    "Regular SEO training and algorithm update implementation",
+    "5+ years serving Bangalore businesses",
+    "500+ local clients across all industries",
+    "Deep knowledge of Bangalore market dynamics",
+    "Proven track record with local businesses",
+    "Google My Business optimization experts",
+    "Local citation building specialists",
+    "Bangalore-focused content creation",
+    "Regular local SEO training and updates",
   ]
 
   const caseStudies = [
     {
-      industry: "Tech Startup",
-      location: "Koramangala",
-      result: "400% increase in organic traffic",
-      description: "Helped a SaaS startup achieve #1 rankings for competitive keywords in Bangalore's tech sector within 6 months.",
+      industry: "Restaurant Chain",
+      location: "Koramangala & Indiranagar",
+      result: "300% increase in foot traffic",
+      description:
+        "Helped a local restaurant chain dominate food delivery searches across multiple Bangalore locations.",
     },
     {
-      industry: "Restaurant Chain", 
-      location: "Indiranagar & Whitefield",
-      result: "300% increase in foot traffic",
-      description: "Optimized local SEO for multi-location restaurant chain, dominating food delivery searches across Bangalore.",
+      industry: "Healthcare Clinic",
+      location: "Whitefield",
+      result: "250% more appointment bookings",
+      description: "Optimized local SEO for a healthcare clinic, making them #1 for medical services in Whitefield.",
     },
     {
       industry: "Real Estate Agency",
       location: "Electronic City",
       result: "400% increase in property inquiries",
-      description: "Boosted online visibility for premium real estate agency, capturing high-value leads in Electronic City area.",
+      description: "Boosted online visibility for a real estate agency, capturing more leads in Electronic City area.",
     },
-  ]
-
-  const faqData = [
-    {
-      question: "Why choose a Bangalore-based SEO company?",
-      answer: "A local SEO company in Bangalore provides deep market knowledge, understands local consumer behavior, and can optimize for Bangalore-specific keywords and local search patterns. Frameleads has 5+ years of experience serving Bangalore businesses with proven results."
-    },
-    {
-      question: "How long does it take to see SEO results in Bangalore?",
-      answer: "SEO results in Bangalore typically show initial improvements within 3-6 months, with significant growth achieved in 6-12 months. Local SEO can show faster results for 'near me' searches, while technical SEO builds long-term organic growth."
-    },
-    {
-      question: "What makes Frameleads the best SEO company in Bangalore?",
-      answer: "Frameleads stands out as the top SEO company in Bangalore due to our 500+ successful client projects, deep local market expertise, comprehensive service offering, and proven track record of delivering measurable ROI for Bangalore businesses."
-    },
-    {
-      question: "Do you provide SEO services to startups in Bangalore?",
-      answer: "Yes! We specialize in startup SEO in Bangalore, understanding the unique challenges and opportunities in Bangalore's vibrant startup ecosystem. We offer flexible SEO packages designed specifically for growing businesses and startups."
-    },
-    {
-      question: "What areas of Bangalore do you serve for SEO?",
-      answer: "We provide comprehensive SEO services across all Bangalore areas including Koramangala, Indiranagar, Whitefield, Electronic City, Marathahalli, BTM Layout, Jayanagar, HSR Layout, Banashankari, Rajajinagar, Malleshwaram, and Yelahanka."
-    }
   ]
 
   return (
@@ -143,12 +98,12 @@ export default function SEOCompanyBangalorePage() {
               Best SEO Company in{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Bangalore
-              </span>{" "}
-              | 400% Traffic Growth Guaranteed
+              </span>
             </h1>
 
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
-              Dominate local search results and grow your Bangalore business with our proven SEO strategies. As the leading SEO company in Bangalore, we've helped 500+ local businesses achieve 400% traffic growth, rank higher on Google, and increase revenue through comprehensive technical SEO, local SEO optimization, and content marketing services.
+              Dominate local search results and grow your Bangalore business with our proven SEO strategies. We've
+              helped 500+ local businesses rank higher, drive more traffic, and increase revenue.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -188,10 +143,12 @@ export default function SEOCompanyBangalorePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Frameleads is the Best SEO Company in Bangalore?
+                Why Choose Frameleads as Your Bangalore SEO Partner?
               </h2>
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-                As the leading SEO company in Bangalore, we combine deep local market knowledge with cutting-edge technical SEO expertise. Our proven track record of delivering 400% traffic growth for Bangalore businesses makes us the preferred choice for local SEO services, technical SEO optimization, and comprehensive digital marketing solutions.
+                As a local Bangalore SEO company, we understand the unique challenges and opportunities in the Silicon
+                Valley of India. Our deep market knowledge and proven strategies help businesses dominate local search
+                results.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {whyChooseUs.map((point, index) => (
@@ -220,15 +177,16 @@ export default function SEOCompanyBangalorePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive SEO Services in Bangalore
+              Specialized SEO Services for Bangalore Businesses
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our complete SEO services in Bangalore include technical SEO optimization, local SEO for 'near me' searches, content marketing, and e-commerce SEO. We help Bangalore businesses dominate search results and achieve sustainable organic growth.
+              Our comprehensive SEO services are tailored specifically for the Bangalore market, helping local
+              businesses outrank competitors and attract more customers.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {seoServices.map((service, index) => {
+            {localServices.map((service, index) => {
               const IconComponent = service.icon
               return (
                 <Card
@@ -245,34 +203,6 @@ export default function SEOCompanyBangalorePage() {
                 </Card>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Process Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Proven SEO Process for Bangalore Businesses
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We follow a systematic SEO approach specifically designed for the Bangalore market, combining technical expertise, local market knowledge, and data-driven strategies to deliver measurable results.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {seoProcess.map((process, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
-                    {process.step}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{process.description}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
@@ -331,31 +261,6 @@ export default function SEOCompanyBangalorePage() {
                     <p className="text-gray-400 text-sm">{study.location}</p>
                   </div>
                   <p className="text-gray-300 leading-relaxed">{study.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Frequently Asked Questions About SEO in Bangalore
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Get answers to common questions about SEO services in Bangalore and how Frameleads can help your business grow.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqData.map((faq, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
-                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
