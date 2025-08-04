@@ -338,7 +338,7 @@ export default function B2BMarketingCompanyBangalorePage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Bangalore
               </span>{" "}
-              | Frameleads
+              | Framel<span className="text-red-600">ad</span>s
             </h1>
 
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
@@ -404,7 +404,7 @@ export default function B2BMarketingCompanyBangalorePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Choose Frameleads as Your B2B Marketing Partner in Bangalore?
+                Why Choose Framel<span className="text-red-600">ad</span>s as Your B2B Marketing Partner in Bangalore?
               </h2>
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 As Bangalore's leading B2B digital marketing agency, Frameleads understands the unique challenges facing business-to-business companies in India's Silicon Valley. Our data-driven approach combines deep market knowledge with cutting-edge marketing technology to deliver consistent, scalable growth for B2B businesses.
@@ -456,10 +456,10 @@ export default function B2BMarketingCompanyBangalorePage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=B2B+Marketing+Results"
+                src="/story/story-3.png"
                 alt="B2B marketing results dashboard"
-                width={600}
-                height={500}
+                width={1000}
+                height={1000} 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
