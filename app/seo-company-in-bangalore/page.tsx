@@ -124,8 +124,76 @@ export default function SEOCompanyBangalorePage() {
       answer: "We provide comprehensive SEO services across all Bangalore areas including Koramangala, Indiranagar, Whitefield, Electronic City, Marathahalli, BTM Layout, Jayanagar, HSR Layout, Banashankari, Rajajinagar, Malleshwaram, and Yelahanka."
     }
   ]
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Frameleads",
+        "description": "Best SEO Company in Bangalore | 400% Traffic Growth Guaranteed",
+        "url": "https://frameleads.com/seo-company-in-bangalore",
+        "telephone": "+91 63628 21368",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 SEO Street, Koramangala",
+          "addressLocality": "Bangalore",
+          "addressRegion": "KA",
+          "postalCode": "560034",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 12.9716,
+          "longitude": 77.5946
+        },
+        "areaServed": bangaloreAreas.map(area => ({
+          "@type": "City",
+          "name": area,
+        })),
+        "priceRange": "$$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SEO Services",
+          "itemListElement": seoServices.map(service => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": service.title,
+              "description": service.description
+            }
+          }))
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqData.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://frameleads.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://frameleads.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  };
 
   return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="min-h-screen bg-gray-900">
       <Navbar />
 
@@ -376,5 +444,6 @@ export default function SEOCompanyBangalorePage() {
 
       <Footer />
     </div>
+    </>
   )
 }
