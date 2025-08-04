@@ -470,13 +470,12 @@ export default function RealEstateMarketingCompanyBangalorePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative h-full">
               <Image
                 src="/story/story-4.png"
                 alt="Real estate marketing results dashboard"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-2xl"
+                fill
+                className="rounded-2xl shadow-2xl object-cover"
               />
             </div>
           </div>

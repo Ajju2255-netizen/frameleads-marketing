@@ -36,10 +36,10 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Rahul Sharma",
+      name: "Ajsal Abbas",
       position: "Founder & CEO",
-      image: "/team/rahul-sharma.png",
-      bio: "10+ years in digital marketing with expertise in SEO strategy and business growth.",
+      image: "/team/ajsal-abbas.png",
+      bio: "15+ years in digital marketing with expertise in SEO strategy and business growth.",
     },
     {
       name: "Priya Patel",

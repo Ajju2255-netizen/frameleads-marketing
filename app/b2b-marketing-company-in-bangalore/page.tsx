@@ -454,13 +454,12 @@ export default function B2BMarketingCompanyBangalorePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative h-full">
               <Image
                 src="/story/story-3.png"
                 alt="B2B marketing results dashboard"
-                width={1000}
-                height={1000} 
-                className="rounded-2xl shadow-2xl"
+                fill
+                className="rounded-2xl shadow-2xl object-cover"
               />
             </div>
           </div>

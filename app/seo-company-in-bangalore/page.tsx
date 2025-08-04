@@ -270,13 +270,12 @@ export default function SEOCompanyBangalorePage() {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative h-full">
               <Image
                 src="/placeholder.svg?height=500&width=600&text=Bangalore+SEO+Results"
                 alt="Bangalore SEO results dashboard"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-2xl"
+                fill
+                className="rounded-2xl shadow-2xl object-cover"
               />
             </div>
           </div>

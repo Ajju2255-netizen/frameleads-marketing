@@ -493,13 +493,12 @@ export default function PerformanceMarketingCompanyBangalorePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative h-full">
               <Image
                 src="/story/story-3.png"
                 alt="Performance marketing results dashboard"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-2xl"
+                fill
+                className="rounded-2xl shadow-2xl object-cover"
               />
             </div>
           </div>

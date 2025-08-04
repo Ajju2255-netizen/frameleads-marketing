@@ -11,6 +11,7 @@ export default function Footer() {
     { name: "Content Marketing", href: "/services/content-marketing" },
     { name: "Social Media Marketing", href: "/services/social-media" },
     { name: "Performance Marketing", href: "/services/performance-marketing" },
+    { name: "Creative Advertising Company in Bangalore", href: "/creative-advertising-company-in-bangalore" },
     { name: "B2B Marketing Company in Bangalore", href: "/b2b-marketing-company-in-bangalore" },
     { name: "Performance Marketing Company in Bangalore", href: "/performance-marketing-company-in-bangalore" },
     { name: "Real Estate Marketing Company in Bangalore", href: "/real-estate-marketing-company-in-bangalore" },
@@ -43,11 +44,10 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "https://facebook.com/frameleads" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com/frameleads" },
+    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577223400100" },
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/frameleads" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/frameleads" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com/frameleads" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/frameleads/" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@ajsalabbas8093" },
   ]
 
   return (
@@ -71,7 +71,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center text-gray-400">
                 <MapPin className="h-5 w-5 mr-3 text-red-500" />
-                <span>Koramangala, Bangalore, Karnataka 560034</span>
+                <span>Electronic City, Bangalore, Karnataka, 560100</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="h-5 w-5 mr-3 text-red-500" />
@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-3 text-red-500" />
-                <span>hello@frameleads.com</span>
+                <span>ajsal@frameleads.com</span>
               </div>
             </div>
 
