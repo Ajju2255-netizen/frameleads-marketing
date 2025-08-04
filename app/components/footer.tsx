@@ -11,6 +11,10 @@ export default function Footer() {
     { name: "Content Marketing", href: "/services/content-marketing" },
     { name: "Social Media Marketing", href: "/services/social-media" },
     { name: "Performance Marketing", href: "/services/performance-marketing" },
+    { name: "B2B Marketing Company in Bangalore", href: "/b2b-marketing-company-in-bangalore" },
+    { name: "Performance Marketing Company in Bangalore", href: "/performance-marketing-company-in-bangalore" },
+    { name: "Real Estate Marketing Company in Bangalore", href: "/real-estate-marketing-company-in-bangalore" },
+    { name: "SEO Company in Bangalore", href: "/seo-company-in-bangalore" },
   ]
 
   const company = [
