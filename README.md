@@ -1,252 +1,424 @@
-# Frameleads Landing Page
+# Frameleads Marketing Website - Page Structure Documentation
 
-A modern, responsive landing page for Frameleads - Bangalore's leading SEO agency. Built with Next.js, TypeScript, and Tailwind CSS.
+This document outlines the headings and content structure for all page.tsx files in the Frameleads marketing website.
 
-## 🏠 Home Page (`app/page.tsx`)
+## Table of Contents
+1. [Home Page (`app/page.tsx`)](#home-page)
+2. [About Page (`app/about/page.tsx`)](#about-page)
+3. [Contact Page (`app/contact/page.tsx`)](#contact-page)
+4. [SEO Company Bangalore Page (`app/seo-company-in-bangalore/page.tsx`)](#seo-company-bangalore-page)
+5. [B2B Marketing Company Bangalore Page (`app/b2b-marketing-company-in-bangalore/page.tsx`)](#b2b-marketing-company-bangalore-page)
+6. [Performance Marketing Company Bangalore Page (`app/performance-marketing-company-in-bangalore/page.tsx`)](#performance-marketing-company-bangalore-page)
 
-The main landing page that showcases Frameleads' SEO services and expertise. The page is structured with a dark theme and includes the following sections:
+---
 
-- **Navigation Bar** - Company logo and main navigation links
-- **Hero Section** - Compelling headline and call-to-action
-- **Brand Logos** - Trust indicators from client companies
-- **Feature Cards** - Key service offerings
-- **Services Steps** - 4-step process explanation
-- **Testimonials** - Client success stories
-- **Card Decks** - Detailed service descriptions
-- **Footer** - Contact information and site links
+## Home Page
 
-## 🧩 Components
+**File:** `app/page.tsx`
 
-### Navigation (`app/components/navbar.tsx`)
+**Structure:**
+- **Navbar** - Navigation component
+- **Hero** - Main hero section component
+- **BrandLogos** - Client brand logos display
+- **FeatureCards** - Feature highlights component
+- **ServicesSteps** - Service process steps
+- **Testimonials** - Customer testimonials
+- **CardDecks** - Service card displays
+- **Footer** - Footer component
 
-**Purpose**: Main navigation bar with responsive design
+**Content Overview:**
+- Landing page with hero section
+- Brand showcase section
+- Feature highlights
+- Service process explanation
+- Customer testimonials
+- Service cards
+- Footer with contact information
 
-**Features**:
-- Company logo (Frameleads)
-- Desktop navigation menu with links to Home, Service, Contact Us, and About
-- Mobile-responsive hamburger menu
-- Dark theme with gray color scheme
-- Hover effects and smooth transitions
+---
 
-**Navigation Links**:
-- Home (`/`)
-- Service (`/service`)
-- Contact Us (`/contact`)
-- About (`/about`)
+## About Page
 
-### Hero Section (`app/components/hero.tsx`)
+**File:** `app/about/page.tsx`
 
-**Purpose**: Main headline and primary call-to-action
+**Structure:**
 
-**Content**:
-- Eyebrow text: "🚀 #1 SEO Agency in Bangalore"
-- Main headline: "Digital Marketing Agency That Rank Higher with Frameleads"
-- Subheading explaining SEO benefits
-- Primary CTA button: "Talk to Our Local SEO Specialists Today"
-- Trust indicators: Free consultation, No long-term contracts, Proven results
+### Hero Section
+- **Main Heading:** "About Frameleads"
+- **Subtitle:** Introduction to Frameleads as Bangalore's leading SEO agency
 
-**Design Elements**:
-- Gradient text effects
-- Red accent color for CTAs
-- Green dots for trust indicators
-- Responsive typography
+### Stats Section
+- **Metrics Display:**
+  - 500+ Happy Clients
+  - 1000+ Projects Completed
+  - 5+ Years Experience
+  - 50+ Team Members
 
-### Brand Logos (`app/components/brand-logos.tsx`)
+### Our Story Section
+- **Heading:** "Our Story"
+- **Content:** Company history and mission
+  - Founded in 2019
+  - Growth from small team to full-service agency
+  - Recognition as leading Bangalore SEO agency
 
-**Purpose**: Display client logos to build trust and credibility
+### Values Section
+- **Heading:** "Our Values"
+- **Core Values:**
+  1. **Results-Driven** - Focus on measurable results and ROI
+  2. **Client-Centric** - Working as extension of client teams
+  3. **Excellence** - Maintaining highest standards
+  4. **Innovation** - Staying ahead of industry trends
 
-**Features**:
-- Grid layout with 6 client logos
-- Hover effects with opacity changes
-- Placeholder logos for TechCorp, StartupHub, DigitalFlow, InnovateLabs, GrowthCo, ScaleUp
-- Trust statement: "Join 500+ businesses that have improved their search rankings"
+### Team Section
+- **Heading:** "Meet Our Team"
+- **Team Members:**
+  1. **Rahul Sharma** - Founder & CEO (10+ years experience)
+  2. **Priya Patel** - Head of SEO (8+ years experience)
+  3. **Amit Kumar** - Content Strategy Lead
+  4. **Sneha Reddy** - Digital Marketing Manager
 
-**Layout**:
-- 2 columns on mobile, 3 on tablet, 6 on desktop
-- Gray background with subtle hover effects
+---
 
-### Feature Cards (`app/components/feature-cards.tsx`)
+## Contact Page
 
-**Purpose**: Showcase key SEO services and capabilities
+**File:** `app/contact/page.tsx`
 
-**Services Featured**:
-1. **Advanced SEO Analytics** - Comprehensive analytics and reporting tools
-2. **Strategic Keyword Research** - Data-driven keyword discovery
-3. **Technical SEO Optimization** - Site speed and mobile optimization
-4. **Content Strategy & Creation** - SEO-optimized content creation
+**Structure:**
 
-**Design**:
-- Card-based layout with images
-- Hover effects with scale transforms
-- Gradient overlays on images
-- Call-to-action at bottom
+### Hero Section
+- **Main Heading:** "Get In Touch"
+- **Subtitle:** Invitation to discuss SEO strategies
 
-### Services Steps (`app/components/services-steps.tsx`)
+### Contact Form & Info Section
+- **Contact Form:**
+  - First Name (required)
+  - Last Name (required)
+  - Email Address (required)
+  - Phone Number
+  - Company Name
+  - Service Interested In (dropdown)
+  - Message (required)
+  - Send Message button
 
-**Purpose**: Explain the 4-step process for scaling brands online
+- **Contact Information:**
+  1. **Visit Our Office** - Koramangala, Bangalore
+  2. **Call Us** - +91 63628 21368
+  3. **Email Us** - hello@frameleads.com
+  4. **Business Hours** - Monday-Friday: 9AM-6PM
 
-**Process Steps**:
-1. **Market & Competitor Research** - Industry and audience analysis
-2. **Performance Marketing Strategy** - Tailored paid ad funnels and SEO plans
-3. **Ad Launch & Real-Time Optimization** - Google Ads, Meta Ads, YouTube campaigns
-4. **Data Analytics, Scaling & Growth** - KPI tracking and campaign scaling
+### FAQ Section
+- **Heading:** "Frequently Asked Questions"
+- **FAQs:**
+  1. How long does it take to see SEO results?
+  2. Do you work with businesses outside Bangalore?
+  3. What's included in your SEO audit?
+  4. Do you provide monthly reports?
 
-**Design Elements**:
-- Large step numbers with opacity effects
-- Alternating layout for visual interest
-- Hover effects on step titles
-- Bottom CTA for growth journey
+---
 
-### Testimonials (`app/components/testimonials.tsx`)
+## SEO Company Bangalore Page
 
-**Purpose**: Display client testimonials and success stories
+**File:** `app/seo-company-in-bangalore/page.tsx`
 
-**Testimonial Structure**:
-- 5-star ratings
-- Client photo and information
-- Testimonial quote
-- Client name, position, and company
+**Structure:**
 
-**Featured Clients**:
-- Rajesh Kumar (CEO, TechStart Solutions)
-- Priya Sharma (Marketing Director, GrowthCorp)
-- Amit Patel (Founder, DigitalEdge)
-- Sneha Reddy (E-commerce Manager, StyleHub)
-- Vikram Singh (Director, InnovateLabs)
-- Kavya Nair (CMO, BrandBoost)
-- Arjun Mehta (Owner, LocalBiz Pro)
-- Deepika Joshi (Marketing Head, ScaleUp Inc)
-- Rohit Gupta (Founder, NextGen Digital)
+### Hero Section
+- **Badge:** "🏆 #1 SEO Company in Bangalore"
+- **Main Heading:** "Best SEO Company in Bangalore 400% Traffic Growth Guaranteed"
+- **Subtitle:** Comprehensive description of SEO services
+- **CTA Buttons:** "Get Free Bangalore SEO Audit"
+- **Trust Indicators:** 500+ Bangalore clients, 5+ years experience, Guaranteed results
 
-**Results Highlighted**:
-- 300% organic traffic increase
-- 250% lead generation growth
-- First-page rankings
-- 180% store visits increase
-- 4x organic leads increase
+### Why Choose Us Section
+- **Heading:** "Why Frameleads is the Best SEO Company in Bangalore?"
+- **Content:** Local market expertise and proven results
+- **Key Points:**
+  - 5+ years serving Bangalore businesses
+  - 500+ successful SEO clients
+  - Deep understanding of local competitive landscape
+  - Google My Business optimization experts
+  - Technical SEO specialists
+  - Local citation building expertise
+  - Bangalore-focused content creation
+  - Regular SEO training and updates
 
-### Card Decks (`app/components/card-decks.tsx`)
+### Local Services Section
+- **Heading:** "Comprehensive SEO Services in Bangalore"
+- **Services:**
+  1. **Local SEO Services Bangalore** - Dominate 'near me' searches
+  2. **Technical SEO Optimization** - Complete website optimization
+  3. **Content Marketing & SEO** - SEO-optimized content creation
+  4. **E-commerce SEO Services** - Specialized e-commerce optimization
 
-**Purpose**: Detailed service descriptions with visual elements
+### SEO Process Section
+- **Heading:** "Our Proven SEO Process for Bangalore Businesses"
+- **Process Steps:**
+  1. **Bangalore SEO Audit & Analysis** - Comprehensive analysis
+  2. **Strategic SEO Planning** - Customized strategy development
+  3. **Technical & On-Page Optimization** - Implementation of improvements
+  4. **Local SEO & Citation Building** - Local search optimization
 
-**Services Covered**:
-1. **Local SEO Domination** - Rank #1 in local search results
-2. **Technical SEO Excellence** - Fix technical issues that kill rankings
-3. **Content Marketing Strategy** - Create content that ranks & converts
+### Areas We Serve Section
+- **Heading:** "Areas We Serve in Bangalore"
+- **Areas:** Koramangala, Indiranagar, Whitefield, Electronic City, Marathahalli, BTM Layout, Jayanagar, HSR Layout, Banashankari, Rajajinagar, Malleshwaram, Yelahanka
 
-**Design Features**:
-- Alternating left-right layout
-- Large images with hover effects
-- Eyebrow labels for each service
-- Arrow icons in CTAs
-- Bottom strategy call section
+### Case Studies Section
+- **Heading:** "Bangalore Success Stories"
+- **Case Studies:**
+  1. **Tech Startup (Koramangala)** - 400% increase in organic traffic
+  2. **Restaurant Chain (Indiranagar & Whitefield)** - 300% increase in foot traffic
+  3. **Real Estate Agency (Electronic City)** - 400% increase in property inquiries
 
-### Footer (`app/components/footer.tsx`)
+### FAQ Section
+- **Heading:** "Frequently Asked Questions About SEO in Bangalore"
+- **FAQs:**
+  1. Why choose a Bangalore-based SEO company?
+  2. How long does it take to see SEO results in Bangalore?
+  3. What makes Frameleads the best SEO company in Bangalore?
+  4. Do you provide SEO services to startups in Bangalore?
+  5. What areas of Bangalore do you serve for SEO?
 
-**Purpose**: Complete site footer with contact information and navigation
+---
 
-**Sections**:
-- **Company Information** - Logo, description, contact details
-- **Services** - SEO, Local SEO, Technical SEO, Content Marketing, Google Ads, Social Media
-- **Company** - About, Team, Case Studies, Blog, Careers, Contact
-- **Resources** - SEO Guide, Free Audit, Tools, Webinars, Templates, FAQ
-- **Newsletter Signup** - Email subscription form
-- **Social Links** - Facebook, Twitter, LinkedIn, Instagram, YouTube
+## B2B Marketing Company Bangalore Page
 
-**Contact Information**:
-- Address: Koramangala, Bangalore, Karnataka 560034
-- Phone: +91 63628 21368
-- Email: hello@frameleads.com
+**File:** `app/b2b-marketing-company-in-bangalore/page.tsx`
 
-**Legal Links**:
-- Privacy Policy
-- Terms of Service
-- Cookie Policy
-- Disclaimer
+**Structure:**
 
-## 🎨 Design System
+### Hero Section
+- **Badge:** "🏆 Premier B2B Digital Marketing Agency"
+- **Main Heading:** "Premier B2B Digital Marketing Agency in Bangalore | Frameleads"
+- **Subtitle:** B2B business growth transformation
+- **CTA Buttons:** "Get Free B2B Marketing Audit"
+- **Trust Indicators:** 500% Average ROI Increase, 300+ Qualified Leads Monthly, 98% Client Retention Rate
+- **Stats Display:** ROI metrics and lead generation statistics
 
-### Color Scheme
-- **Primary Background**: Gray-900 (#111827)
-- **Secondary Background**: Gray-800 (#1f2937)
-- **Accent Color**: Red-600 (#dc2626)
-- **Text Colors**: White, Gray-300, Gray-400
-- **Borders**: Gray-700, Gray-800
+### Why Choose Us Section
+- **Heading:** "Why Choose Frameleads as Your B2B Marketing Partner in Bangalore?"
+- **Content:** Data-driven approach and market knowledge
+- **Bangalore B2B Market Expertise:**
+  - Deep Local Knowledge: 5+ years serving Bangalore's B2B ecosystem
+  - Industry Specialization: Success across SaaS, manufacturing, fintech
+  - Decision-Maker Targeting: Expert at reaching C-level executives
+  - Regional Understanding: Knowledge of Bangalore's business districts
 
-### Typography
-- **Headings**: Bold, large sizes (4xl-7xl)
-- **Body Text**: Regular weight, gray colors
-- **Buttons**: Semibold, red background
+- **Proven B2B Marketing Results:**
+  - Lead Quality Excellence: 85% lead conversion rate
+  - Shorter Sales Cycles: 40% reduction in sales cycle length
+  - Pipeline Growth: 200-500% increase in qualified sales pipeline
+  - Revenue Impact: 300% average client revenue growth
 
-### Interactive Elements
-- Hover effects with color transitions
-- Scale transforms on buttons
-- Opacity changes on cards
-- Smooth transitions (300ms duration)
+### B2B Services Section
+- **Heading:** "Comprehensive B2B Digital Marketing Services in Bangalore"
+- **Services:**
+  1. **B2B Lead Generation & Demand Generation**
+     - Account-Based Marketing (ABM)
+     - LinkedIn Lead Generation
+     - Email Marketing Automation
+     - Webinar & Event Marketing
+     - Database Development
+     - Results: 300+ qualified leads monthly, 45% email open rates
 
-## 🚀 Key Features
+  2. **B2B Content Marketing & SEO Services**
+     - Technical Blog Content
+     - White Papers & Case Studies
+     - Video Content Marketing
+     - B2B SEO Optimization
+     - Sales Enablement Content
+     - Results: 400% organic traffic increase, 60% time-on-page improvement
 
-### SEO-Focused Content
-- Local SEO emphasis for Bangalore market
-- Technical SEO services
-- Content marketing strategies
-- Performance tracking and analytics
+  3. **Marketing Automation & Account-Based Marketing**
+     - Lead Scoring & Qualification
+     - Behavioral Trigger Campaigns
+     - Sales & Marketing Alignment
+     - Customer Journey Mapping
+     - ABM Platform Management
+     - Results: 85% lead conversion, 40% sales cycle reduction
 
-### Conversion Optimization
-- Multiple call-to-action buttons
-- Trust indicators and testimonials
-- Free consultation offers
-- Clear value propositions
+  4. **B2B Social Media & LinkedIn Marketing**
+     - LinkedIn Marketing optimization
+     - Twitter B2B Strategy
+     - YouTube Marketing
+     - Industry Forums participation
+     - Employee Advocacy programs
+     - Results: 300% LinkedIn engagement, 150% social media leads growth
 
-### Responsive Design
-- Mobile-first approach
-- Tablet and desktop optimizations
-- Flexible grid layouts
-- Touch-friendly interactions
+### B2B Process Section
+- **Heading:** "Our Proven B2B Marketing Process in Bangalore"
+- **Process Steps:**
+  1. **Strategic Discovery & Market Analysis** - Business audit and competitive intelligence
+  2. **Multi-Channel Campaign Development** - Integrated marketing campaigns
+  3. **Lead Nurturing & Sales Enablement** - Prospect conversion strategies
+  4. **Performance Optimization & ROI Tracking** - Continuous improvement
 
-### Performance
-- Next.js Image optimization
-- Tailwind CSS for efficient styling
-- Component-based architecture
-- TypeScript for type safety
+### Industries We Serve Section
+- **Heading:** "Industries We Serve in Bangalore's B2B Market"
+- **Industries:**
+  1. **Technology & SaaS Companies** - Software solution marketing
+  2. **Manufacturing & Industrial** - Digital transformation for manufacturers
+  3. **Professional Services** - Consulting and service positioning
+  4. **Healthcare Technology** - Healthcare B2B marketing
+  5. **Fintech & Financial Services** - Financial technology marketing
 
-## 📱 Responsive Breakpoints
+### B2B Case Studies Section
+- **Heading:** "B2B Marketing Success Stories from Bangalore Businesses"
+- **Case Studies:**
+  1. **SaaS Startup (Koramangala)** - 400% enterprise leads increase
+  2. **Manufacturing Company (Peenya)** - 300% online inquiries growth
+  3. **Professional Services Firm (UB City)** - 250% consultation requests increase
 
-- **Mobile**: Default (320px+)
-- **Tablet**: md (768px+)
-- **Desktop**: lg (1024px+)
-- **Large Desktop**: xl (1280px+)
+### Business Districts Section
+- **Heading:** "Bangalore Business Districts We Serve"
+- **Districts:**
+  1. **Central Business District** - UB City, Brigade Road, Commercial Street, MG Road
+  2. **IT Corridors** - Electronic City, Whitefield, Marathahalli, Sarjapur Road
+  3. **Emerging Business Hubs** - Koramangala, Indiranagar, HSR Layout, BTM Layout
+  4. **Industrial Areas** - Peenya, Bommanahalli, Rajajinagar, Yeshwanthpur
 
-## 🛠️ Technology Stack
+### FAQ Section
+- **Heading:** "Frequently Asked Questions About B2B Digital Marketing"
+- **FAQs:**
+  1. How long does it take to see results from B2B digital marketing in Bangalore?
+  2. What makes B2B marketing different from B2C marketing in Bangalore?
+  3. How do you measure B2B marketing success for Bangalore businesses?
+  4. What industries do you specialize in for B2B marketing in Bangalore?
+  5. Do you work with startups and large enterprises in Bangalore?
+  6. How do you ensure marketing qualified leads convert to sales?
 
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Custom component library
-- **Icons**: Lucide React
-- **Images**: Next.js Image component
+---
 
-## 📄 Additional Pages
+## Performance Marketing Company Bangalore Page
 
-The project includes additional pages that are referenced in the navigation:
-- `/about` - About page
-- `/contact` - Contact page
-- `/service` - Service page
-- `/seo-company-in-bangalore` - SEO company specific page
+**File:** `app/performance-marketing-company-in-bangalore/page.tsx`
 
-## 🎯 Target Audience
+**Structure:**
 
-- **Primary**: Businesses in Bangalore seeking SEO services
-- **Secondary**: Companies looking for digital marketing solutions
-- **Tertiary**: Startups and established businesses wanting to improve online presence
+### Hero Section
+- **Badge:** "🏆 Premier Performance Marketing Agency"
+- **Main Heading:** "Premier Performance Marketing Agency in Bangalore | Frameleads"
+- **Subtitle:** Performance-driven digital marketing services
+- **CTA Buttons:** "Get Free Performance Marketing Audit"
+- **Trust Indicators:** Performance metrics and ROI guarantees
+- **Stats Display:** Performance marketing results and client success metrics
 
-## 💼 Business Focus
+### Why Choose Us Section
+- **Heading:** "Why Choose Frameleads as Your Performance Marketing Partner in Bangalore?"
+- **Content:** Performance-driven approach and measurable results
+- **Performance Marketing Expertise:**
+  - Data-driven strategies and optimization
+  - ROI-focused campaign management
+  - Advanced analytics and tracking
+  - Conversion rate optimization expertise
 
-Frameleads positions itself as:
-- Bangalore's #1 SEO agency
-- Results-driven digital marketing
-- Local SEO specialists
-- Technical SEO experts
-- Content marketing strategists
+### Performance Marketing Services Section
+- **Heading:** "Comprehensive Performance Marketing Services in Bangalore"
+- **Services:**
+  1. **Google Ads & PPC Management**
+     - Search advertising optimization
+     - Display network campaigns
+     - Shopping ads for e-commerce
+     - Remarketing strategies
+     - Results: Improved click-through rates and conversion optimization
 
-The landing page effectively communicates the company's expertise in SEO, local search optimization, and digital marketing while building trust through testimonials and client logos. 
+  2. **Social Media Advertising**
+     - Facebook and Instagram ads
+     - LinkedIn B2B advertising
+     - YouTube video advertising
+     - Social media campaign optimization
+     - Results: Enhanced brand awareness and lead generation
+
+  3. **Conversion Rate Optimization (CRO)**
+     - Website optimization
+     - A/B testing and experimentation
+     - User experience improvement
+     - Landing page optimization
+     - Results: Increased conversion rates and revenue growth
+
+  4. **Analytics & Performance Tracking**
+     - Advanced analytics implementation
+     - Performance dashboard creation
+     - ROI tracking and reporting
+     - Attribution modeling
+     - Results: Comprehensive performance insights and optimization
+
+### Performance Marketing Process Section
+- **Heading:** "Our Proven Performance Marketing Process in Bangalore"
+- **Process Steps:**
+  1. **Performance Audit & Analysis** - Current performance assessment
+  2. **Strategy Development & Planning** - Performance-driven strategy creation
+  3. **Campaign Implementation & Optimization** - Execution and continuous improvement
+  4. **Performance Monitoring & ROI Tracking** - Results measurement and optimization
+
+### Industries We Serve Section
+- **Heading:** "Industries We Serve in Bangalore's Performance Marketing"
+- **Industries:**
+  1. **E-commerce & Retail** - Online sales optimization
+  2. **Technology & SaaS** - Lead generation and conversion
+  3. **Real Estate** - Property inquiry generation
+  4. **Healthcare & Wellness** - Patient acquisition campaigns
+  5. **Education & Training** - Student enrollment optimization
+
+### Performance Marketing Case Studies Section
+- **Heading:** "Performance Marketing Success Stories from Bangalore Businesses"
+- **Case Studies:**
+  1. **E-commerce Startup** - 300% increase in online sales
+  2. **SaaS Company** - 400% improvement in lead generation
+  3. **Real Estate Agency** - 250% increase in property inquiries
+
+### FAQ Section
+- **Heading:** "Frequently Asked Questions About Performance Marketing in Bangalore"
+- **FAQs:**
+  1. What is performance marketing and how does it differ from traditional marketing?
+  2. How quickly can I see results from performance marketing campaigns?
+  3. What metrics do you track for performance marketing success?
+  4. Do you work with small businesses and startups for performance marketing?
+  5. How do you ensure ROI on performance marketing investments?
+  6. What platforms do you specialize in for performance marketing?
+
+---
+
+## Common Elements Across All Pages
+
+### Navigation
+- **Navbar Component** - Consistent navigation across all pages
+- **Footer Component** - Standard footer with contact information
+
+### Contact CTA Sections
+- **Call-to-Action Components** - Strategic placement of contact forms and CTAs
+- **Contact Information** - Phone, email, and address details
+
+### SEO Optimization
+- **Structured Data (JSON-LD)** - Schema markup for search engines
+- **Meta Tags** - SEO-optimized titles and descriptions
+- **Local SEO Elements** - Bangalore-specific keywords and content
+
+### Design Elements
+- **Dark Theme** - Consistent gray-900 and gray-800 color scheme
+- **Gradient Text** - Blue to purple gradients for emphasis
+- **Card Components** - Consistent card-based layout
+- **Icon Integration** - Lucide React icons throughout
+- **Responsive Design** - Mobile-first responsive layouts
+
+---
+
+## Technical Implementation
+
+### Framework
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+
+### Components
+- **Reusable UI Components** - Button, Card, and other UI elements
+- **Page-Specific Components** - Hero, Testimonials, ContactCTA
+- **Layout Components** - Navbar, Footer
+
+### Performance Features
+- **Image Optimization** - Next.js Image component
+- **SEO Optimization** - Structured data and meta tags
+- **Responsive Design** - Mobile and desktop optimization
+
+---
+
+*This documentation provides a comprehensive overview of the content structure and headings for all page.tsx files in the Frameleads marketing website.* 
