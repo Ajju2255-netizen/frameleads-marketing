@@ -212,7 +212,7 @@ export default function SEOCompanyBangalorePage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Bangalore
               </span>{" "}
-              | 400% Traffic Growth Guaranteed
+              400% Traffic Growth Guaranteed
             </h1>
 
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
