@@ -158,6 +158,7 @@ export default function B2BMarketingCompanyBangalorePage() {
         "Industry recognition as innovation leader in digital adoption"
       ]
     },
+    
     {
       industry: "Professional Services Firm",
       location: "UB City",
