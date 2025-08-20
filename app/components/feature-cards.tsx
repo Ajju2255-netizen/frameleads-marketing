@@ -6,28 +6,28 @@ export default function FeatureCards() {
   const features = [
     {
       id: 1,
-      image: "/feature-1.jpg",
+      image: "/1.svg",
       title: "Search Engine Optimization (SEO)",
       description:
         "Dominate search rankings with our advanced SEO strategies. Our technical SEO experts optimize your website for maximum visibility, targeting high-converting keywords that drive qualified traffic and increase organic revenue by up to 400%.",
     },
     {
       id: 2,
-      image: "/feature-2.jpg",
+      image: "/2.svg",
       title: "Pay-Per-Click (PPC) Advertising",
       description:
         "Maximize your advertising ROI with expertly managed Google Ads, Facebook Ads, and LinkedIn campaigns. Our certified PPC specialists create data-driven campaigns that reduce cost-per-acquisition while increasing conversion rates.",
     },
     {
       id: 3,
-      image: "/feature-3.jpg",
+      image: "/3.svg",
       title: "Content Marketing & Strategy",
       description:
         "Engage your audience with compelling content that builds brand authority and drives conversions. Our content marketing experts create SEO-optimized blogs, whitepapers, and social media content that positions your brand as an industry leader.",
     },
     {
       id: 4,
-      image: "/feature-1.jpg",
+      image: "/4.svg",
       title: "Social Media Marketing",
       description:
         "Build a powerful social media presence that engages customers and drives sales. Our social media specialists create platform-specific strategies for Instagram, Facebook, LinkedIn, and Twitter that increase follower engagement and brand awareness.",

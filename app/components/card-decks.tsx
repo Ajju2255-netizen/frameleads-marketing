@@ -22,7 +22,7 @@ export default function CardDecks() {
       description:
         "Eliminate technical barriers that prevent your website from ranking higher and converting visitors. Our comprehensive technical SEO audit identifies and fixes site speed issues, mobile responsiveness problems, Core Web Vitals, and schema markup to boost your search performance and user experience.",
       cta: "Get Technical SEO Audit",
-      image: "/card-deck/deck-2.png",
+      image: "/card-deck/deck-2.jpg",
       imageAlt: "Technical SEO analysis and optimization report",
     },
     {
