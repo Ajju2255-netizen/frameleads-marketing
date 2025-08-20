@@ -296,10 +296,6 @@ export default function DigitalMarketingCompanyDubaiPage() {
                   Get Free Dubai Digital Marketing Audit
                 </Button>
               </Link>
-              <div className="flex items-center gap-2 text-gray-400">
-                <Phone className="h-5 w-5" />
-                <span>Call: +971-4-000-0000</span>
-              </div>
             </div>
 
             {/* Trust Indicators */}
@@ -337,7 +333,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
             </div>
             <div className="relative h-full">
               <Image
-                src="/placeholder.svg?height=500&width=600&text=Dubai+Marketing+Results"
+                src="/arab.svg?height=500&width=600&text=Dubai+Marketing+Results"
                 alt="Dubai digital marketing results dashboard"
                 fill
                 className="rounded-2xl shadow-2xl object-cover"
