@@ -103,7 +103,7 @@ export default function AcademyPage() {
         },
         offers: {
           "@type": "Offer",
-          price: "1499",
+          price: "1999",
           priceCurrency: "INR",
           availability: "https://schema.org/InStock",
           url: "https://frameleads.com/academy",
@@ -184,7 +184,7 @@ export default function AcademyPage() {
     const key = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_1234567890"
     const options = {
       key,
-      amount: 1499 * 100,
+      amount: 1999 * 100,
       currency: "INR",
       name: "Frameleads Academy",
       description: "Meta Ads Starter Kit",
@@ -780,9 +780,9 @@ export default function AcademyPage() {
               
               {/* Pricing Display */}
               <div className="flex items-center justify-center gap-4 mb-6">
-                <div className="text-2xl text-gray-400 line-through">₹9,999</div>
-                <div className="text-3xl text-white font-semibold">₹1,499</div>
-                <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-sm font-bold">85% OFF</div>
+                <div className="text-2xl text-gray-400 line-through">₹4,999</div>
+                <div className="text-3xl text-white font-semibold">₹1,999</div>
+                <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-sm font-bold">60% OFF</div>
               </div>
               
               {/* Guarantee */}
@@ -818,8 +818,19 @@ export default function AcademyPage() {
                     </div>
                     <div>
                       <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-green-500/30 group-hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-gray-400 mb-2">Limited-time price</div>
-                        <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text mb-2">₹1,499</div>
+                        <div className="text-gray-400 mb-2">Offer & Pricing Psychology</div>
+                        <ul className="text-sm text-gray-300 space-y-1 mb-4 text-left">
+                          <li className="flex items-center justify-between"><span>Calculator suite (5 tools)</span><span className="text-gray-400">₹7,500</span></li>
+                          <li className="flex items-center justify-between"><span>Targeting library (15+ niches)</span><span className="text-gray-400">₹5,000</span></li>
+                          <li className="flex items-center justify-between"><span>Retargeting & budget blueprints</span><span className="text-gray-400">₹4,000</span></li>
+                          <li className="flex items-center justify-between"><span>Checklists/templates & creative briefs</span><span className="text-gray-400">₹4,000</span></li>
+                          <li className="flex items-center justify-between"><span>Lifetime updates & community</span><span className="text-gray-400">₹3,500</span></li>
+                        </ul>
+                        <div className="text-sm text-gray-300 mb-2"><span className="text-gray-400">Total value ~</span><span className="text-white font-semibold">₹24,000</span><span className="text-gray-400"> → Today </span><span className="text-green-300 font-semibold">₹1,999</span></div>
+                        <div className="flex items-center justify-center gap-3 mb-2">
+                          <div className="text-lg text-gray-400 line-through">₹4,999</div>
+                          <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text">₹1,999</div>
+                        </div>
                         <div className="text-gray-400 mb-6">Instant download. Lifetime access.</div>
                         <Button onClick={handleBuyNow} className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 w-full text-black font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105">
                           <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
