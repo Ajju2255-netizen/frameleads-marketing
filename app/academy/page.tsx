@@ -295,7 +295,7 @@ export default function AcademyPage() {
 
               <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <span className="text-white">
-                Run Meta Ads Like an Agency
+                Scale Profitable Meta Ads in 24h
                 </span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-green-300 to-green-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.3)]">
@@ -304,7 +304,7 @@ export default function AcademyPage() {
               </h1>
 
               <p className={`text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                We've managed ads generating <span className="text-green-300 font-semibold">₹23 Cr+/month</span> in revenue. Now, access the same strategies in an affordable, plug-and-play digital toolkit designed for small businesses, D2C brands, and solopreneurs.
+                We've managed ads generating <span className="text-green-300 font-semibold">₹23 Cr+/month</span> in revenue. Now, access the same strategies, templates, calculators, targeting stacks & step-by-step launch plan, no fluff. In an affordable, plug-and-play digital toolkit designed for small businesses, D2C brands, and solopreneurs.
               </p>
 
               <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
