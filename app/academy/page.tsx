@@ -935,6 +935,7 @@ export default function AcademyPage() {
                 <div className="space-y-2">
                   <Link href="/academy/about" className="block text-gray-300 hover:text-green-400 transition-colors duration-300">About</Link>
                   <Link href="/academy/contact" className="block text-gray-300 hover:text-green-400 transition-colors duration-300">Contact</Link>
+                  <Link href="/academy/return-policy" className="block text-gray-300 hover:text-green-400 transition-colors duration-300">Return Policy</Link>
                   <Link href="/academy/terms" className="block text-gray-300 hover:text-green-400 transition-colors duration-300">Terms & Privacy</Link>
                 </div>
               </div>
