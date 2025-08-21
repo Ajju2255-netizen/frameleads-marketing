@@ -799,26 +799,29 @@ export default function AcademyPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                       <h3 className="text-2xl font-semibold text-white mb-4">What you get</h3>
-                      <ul className="space-y-2">
+                      <ul className="space-y-3">
                         {[
-                          "Complete PDF guide (launch to scale)",
-                          "Targeting lists for Indian audiences",
-                          "Creative & copy templates",
-                          "Step-by-step budget plan",
-                          "Bonus: Retargeting guide",
+                          "Ship ads with confidence in 48–72 hrs",
+                          "Know your numbers in minutes : calculate break-even ROAS/CPA, target ROAS, allowable CAC, and payback so you never overspend again",
+                          "Launch correctly the first time : pixel + CAPI + domain verification + AEM with pre-launch QA checklists",
+                          "Copy-paste audiences for India : plug-and-play interest stacks across healthcare, real estate, finance, SaaS, restaurants, auto, travel, AI tools, language prep, sustainability, crypto education, and more",
+                          "Make better creatives, faster : proven hook formulas + a simple production & testing checklist",
+                          "Manage like a pro : \"Kill-Keep-Scale\" rules, ABO→CBO scaling, and retargeting best practices",
+                          "Scale safely : weekly budget rules and 3 sample scaling roadmaps (eCom, coaching, local)",
+                          "Plus: swipe file, templates, and lifetime updates/community"
                         ].map((item, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-gray-300 group/item">
-                            <div className="p-1 bg-gradient-to-r from-green-500/20 to-green-400/20 rounded-full border border-green-500/30 group-hover/item:border-green-400/50 transition-all duration-300">
+                          <li key={idx} className="flex items-start gap-3 text-gray-300 group/item">
+                            <div className="p-1 bg-gradient-to-r from-green-500/20 to-green-400/20 rounded-full border border-green-500/30 group-hover/item:border-green-400/50 transition-all duration-300 flex-shrink-0 mt-0.5">
                               <CheckCircle className="h-3 w-3 text-green-400" />
                             </div>
-                            <span className="group-hover/item:text-white transition-colors duration-300">{item}</span>
+                            <span className="group-hover/item:text-white transition-colors duration-300 text-sm leading-relaxed">{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
                       <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-green-500/30 group-hover:border-green-400/50 transition-all duration-300">
-                        <div className="text-gray-400 mb-2">Offer & Pricing Psychology</div>
+                        <div className="text-gray-400 mb-2">Offer & Pricing</div>
                         <ul className="text-sm text-gray-300 space-y-1 mb-4 text-left">
                           <li className="flex items-center justify-between"><span>Calculator suite (5 tools)</span><span className="text-gray-400">₹7,500</span></li>
                           <li className="flex items-center justify-between"><span>Targeting library (15+ niches)</span><span className="text-gray-400">₹5,000</span></li>
