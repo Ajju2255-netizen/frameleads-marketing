@@ -96,6 +96,7 @@ export default function AcademyPage() {
         name: "Meta Ads Starter Kit",
         description:
           "Affordable, plug-and-play digital toolkit to run Meta Ads like an agency. Includes PDF guide, targeting lists, templates, and budget plans.",
+        image: "https://frameleads.com/story/story-cover.webp",
         brand: {
           "@type": "Brand",
           name: "Frameleads Academy",
@@ -106,6 +107,36 @@ export default function AcademyPage() {
           priceCurrency: "INR",
           availability: "https://schema.org/InStock",
           url: "https://frameleads.com/academy",
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0",
+              currency: "INR"
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "DAY"
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 0,
+                maxValue: 0,
+                unitCode: "DAY"
+              }
+            }
+          },
+          hasMerchantReturnPolicy: {
+            "@type": "MerchantReturnPolicy",
+            returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+            merchantReturnDays: 30,
+            returnMethod: "https://schema.org/ReturnByMail",
+            returnFees: "https://schema.org/FreeReturn"
+          }
         },
       },
       {
