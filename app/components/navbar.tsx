@@ -52,6 +52,13 @@ export default function Navbar() {
               >
                 About
               </Link>
+              <Link
+                href="/academy"
+                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
+                onClick={() => handleNavClick('academy')}
+              >
+                Academy
+              </Link>
             </div>
           </div>
 
