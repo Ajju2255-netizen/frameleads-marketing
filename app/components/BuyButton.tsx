@@ -48,7 +48,7 @@ export default function BuyButton({
       console.log("Starting checkout process...");
       console.log("Customer details:", customerDetails);
 
-      const res = await fetch("/api/create-order", {
+      const res = await fetch("https://frameleads-api.workajsal.workers.dev/api/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(customerDetails),

@@ -111,7 +111,7 @@ export default function CheckoutDrawer({
       console.log("Starting checkout process...");
       console.log("Customer details:", customerDetails);
 
-      const res = await fetch("/api/create-order", {
+      const res = await fetch("https://frameleads-api.workajsal.workers.dev/api/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(customerDetails),
@@ -123,7 +123,8 @@ export default function CheckoutDrawer({
         throw new Error(`Order creation failed: ${res.status} - ${errorText}`);
       }
       
-      const order = await res.json();
+      const response = await res.json();
+      const order = response.result;
       console.log("Order created:", order);
 
       // Ensure Razorpay script is loaded
@@ -173,6 +174,8 @@ export default function CheckoutDrawer({
       if (razorpayKey.length !== 23) {
         console.warn("Razorpay key length is unusual. Expected 23 characters, got:", razorpayKey.length);
       }
+
+      debugger;
 
       const options = {
         key: razorpayKey,
