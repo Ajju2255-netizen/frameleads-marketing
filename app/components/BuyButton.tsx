@@ -94,6 +94,7 @@ export default function BuyButton({
       if (!razorpayKey) {
         throw new Error("Razorpay key not found. Please check environment variables.");
       }
+      
 
       // Validate the key format
       if (!razorpayKey.startsWith('rzp_')) {
