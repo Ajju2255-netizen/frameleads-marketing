@@ -278,7 +278,7 @@ export default function CheckoutDrawer({
               </div>
 
               {/* Product Summary */}
-              <div className="p-6 border-b border-gray-200 bg-gray-50">
+              <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-gray-900">{productName}</h3>
@@ -303,7 +303,7 @@ export default function CheckoutDrawer({
                       type="text"
                       value={customerDetails.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`mt-1 ${errors.name ? 'border-red-500' : ''}`}
+                      className={`mt-1 bg-white text-gray-900 placeholder:text-gray-400 border border-gray-300 focus-visible:ring-emerald-500 focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:border-emerald-500 ${errors.name ? 'border-red-500' : ''}`}
                       placeholder="Enter your full name"
                     />
                     {errors.name && (
@@ -320,7 +320,7 @@ export default function CheckoutDrawer({
                       type="email"
                       value={customerDetails.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`mt-1 ${errors.email ? 'border-red-500' : ''}`}
+                      className={`mt-1 bg-white text-gray-900 placeholder:text-gray-400 border border-gray-300 focus-visible:ring-emerald-500 focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:border-emerald-500 ${errors.email ? 'border-red-500' : ''}`}
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -337,7 +337,7 @@ export default function CheckoutDrawer({
                       type="tel"
                       value={customerDetails.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`}
+                      className={`mt-1 bg-white text-gray-900 placeholder:text-gray-400 border border-gray-300 focus-visible:ring-emerald-500 focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:border-emerald-500 ${errors.phone ? 'border-red-500' : ''}`}
                       placeholder="10-digit mobile number"
                     />
                     {errors.phone && (
@@ -363,7 +363,7 @@ export default function CheckoutDrawer({
                     <h4 className="text-sm font-medium text-gray-700 mb-3">Payment Methods</h4>
                     <div className="grid grid-cols-2 gap-2">
                       {['UPI', 'Cards', 'Netbanking', 'EMI/Pay Later'].map((method) => (
-                        <div key={method} className="flex items-center space-x-2 p-2 bg-gray-50 rounded border">
+                        <div key={method} className="flex items-center space-x-2 p-2 rounded border">
                           <CreditCard className="h-4 w-4 text-gray-500" />
                           <span className="text-sm text-gray-700">{method}</span>
                         </div>
@@ -387,7 +387,7 @@ export default function CheckoutDrawer({
               </div>
 
               {/* Footer */}
-              <div className="p-6 border-t border-gray-200 bg-gray-50">
+              <div className="p-6 border-t border-gray-200">
                 <Button
                   onClick={handleProceedToPay}
                   disabled={loading}
