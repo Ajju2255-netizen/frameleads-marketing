@@ -117,9 +117,13 @@ export default function CheckoutDrawer({
         body: JSON.stringify(customerDetails),
       });
       
-      if (!res.ok) throw new Error("Order creation failed");
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("API Error:", res.status, errorText);
+        throw new Error(`Order creation failed: ${res.status} - ${errorText}`);
+      }
+      
       const order = await res.json();
-
       console.log("Order created:", order);
 
       // Ensure Razorpay script is loaded
@@ -148,13 +152,26 @@ export default function CheckoutDrawer({
       }
 
       const razorpayKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+      console.log("Razorpay Key available:", !!razorpayKey);
+      console.log("Razorpay Key length:", razorpayKey?.length);
       
       if (!razorpayKey) {
-        throw new Error("Razorpay key not found. Please check environment variables.");
+        throw new Error("Razorpay key not found. Please check NEXT_PUBLIC_RAZORPAY_KEY_ID environment variable.");
       }
 
       if (!razorpayKey.startsWith('rzp_')) {
         throw new Error("Invalid Razorpay key format. Key should start with 'rzp_'");
+      }
+
+      // Check if key is complete (should be around 20-25 characters after 'rzp_')
+      if (razorpayKey.length < 20) {
+        throw new Error("Razorpay key appears to be incomplete. Please check your API key configuration.");
+      }
+
+      // Test the key format
+      console.log("Testing Razorpay key format...");
+      if (razorpayKey.length !== 23) {
+        console.warn("Razorpay key length is unusual. Expected 23 characters, got:", razorpayKey.length);
       }
 
       const options = {
@@ -183,6 +200,8 @@ export default function CheckoutDrawer({
         method: { upi: true, card: true, netbanking: true, wallet: true, emi: true, paylater: true }
       };
 
+      console.log("Opening Razorpay with options:", options);
+
       // Wait a bit for the script to fully initialize
       await new Promise(resolve => setTimeout(resolve, 100));
 
@@ -194,7 +213,23 @@ export default function CheckoutDrawer({
       rzp.open();
     } catch (e) {
       console.error("Checkout error:", e);
-      alert("Could not start checkout. Please try again.");
+      
+      // Show a more user-friendly error message
+      const errorMessage = e instanceof Error ? e.message : 'Unknown error occurred';
+      
+      if (errorMessage.includes("authentication") || errorMessage.includes("incomplete")) {
+        const shouldContact = confirm(
+          "Payment system temporarily unavailable. Would you like to contact us for manual payment processing?"
+        );
+        if (shouldContact) {
+          // Open WhatsApp or email
+          const message = `Hi, I'd like to purchase the Meta Ads Playbook for ₹1,999. My details: ${customerDetails.name}, ${customerDetails.email}, ${customerDetails.phone}`;
+          const whatsappUrl = `https://wa.me/916362821368?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        }
+      } else {
+        alert(`Checkout Error: ${errorMessage}`);
+      }
     } finally {
       setLoading(false);
     }
