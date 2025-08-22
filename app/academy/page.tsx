@@ -3,10 +3,11 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import FloatingNotifications from "@/app/components/floating-notifications"
+import BuyButton from "@/app/components/BuyButton"
 import {
   CheckCircle,
   Target,
@@ -162,47 +163,7 @@ export default function AcademyPage() {
     ],
   }
 
-  const loadRazorpayScript = async (): Promise<boolean> => {
-    if (typeof window === "undefined") return false
-    if (document.getElementById("razorpay-sdk")) return true
-    return new Promise((resolve) => {
-      const script = document.createElement("script")
-      script.id = "razorpay-sdk"
-      script.src = "https://checkout.razorpay.com/v1/checkout.js"
-      script.onload = () => resolve(true)
-      script.onerror = () => resolve(false)
-      document.body.appendChild(script)
-    })
-  }
 
-  const handleBuyNow = useCallback(async () => {
-    const loaded = await loadRazorpayScript()
-    if (!loaded) {
-      window.location.href = "/contact"
-      return
-    }
-    const key = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_1234567890"
-    const options = {
-      key,
-      amount: 1999 * 100,
-      currency: "INR",
-      name: "Frameleads Academy",
-      description: "Meta Ads Starter Kit",
-      image: "/logos/brand-logo.png",
-      handler: function () {
-        window.location.href = "/thank-you?product=meta-ads-starter-kit"
-      },
-      prefill: {
-        email: "you@example.com",
-        contact: "+91 99999 99999",
-      },
-      theme: { color: "#00ff00" },
-      notes: { product: "Meta Ads Starter Kit" },
-    }
-    // @ts-ignore
-    const rzp = new window.Razorpay(options)
-    rzp.open()
-  }, [])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -265,12 +226,11 @@ export default function AcademyPage() {
                 >
                   Pricing
                 </button>
-                <Button
-                  onClick={handleBuyNow}
-                  className="bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Toolkit
-                </Button>
+                <BuyButton 
+                  buttonText="Get Toolkit"
+                  buttonClassName="bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                  showInputs={true}
+                />
               </div>
             </div>
           </div>
@@ -308,13 +268,11 @@ export default function AcademyPage() {
               </p>
 
               <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <Button
-                  onClick={handleBuyNow}
-                  className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105 border-0 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Download className="h-5 w-5 mr-2 relative z-10" /> Get the Toolkit Now
-                </Button>
+                <BuyButton 
+                  buttonText="Get Toolkit"
+                  buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105 border-0 overflow-hidden"
+                  showInputs={true}
+                />
                 <Link href="#whats-inside">
                   <Button
                     variant="outline"
@@ -489,10 +447,11 @@ export default function AcademyPage() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <Button onClick={handleBuyNow} className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                <span className="relative z-10">Buy Now – Start Running Ads Today</span>
-              </Button>
+              <BuyButton 
+                buttonText="Buy Now – Start Running Ads Today"
+                buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                showInputs={true}
+              />
             </div>
           </div>
         </section>
@@ -835,10 +794,11 @@ export default function AcademyPage() {
                           <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text">₹1,999</div>
                         </div>
                         <div className="text-gray-400 mb-6">Instant download. Lifetime access.</div>
-                        <Button onClick={handleBuyNow} className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 w-full text-black font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105">
-                          <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                          <Download className="h-5 w-5 mr-2 relative z-10" /> Get Instant Access
-                        </Button>
+                        <BuyButton 
+                          buttonText="Get Instant Access"
+                          buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 w-full text-black font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                          showInputs={true}
+                        />
                         
                         {/* Urgency + Social Proof Note */}
                         <div className="mt-4 p-3 bg-gradient-to-r from-green-500/10 to-green-400/10 rounded-lg border border-green-500/20">
@@ -927,10 +887,11 @@ export default function AcademyPage() {
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Ready to Run Profitable Ads?</h2>
                 <p className="text-lg text-gray-300 mb-8">Get the toolkit today and stop wasting money.</p>
-                <Button onClick={handleBuyNow} className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                  <span className="relative z-10">Buy Now & Download Instantly</span>
-                </Button>
+                <BuyButton 
+                  buttonText="Buy Now & Download Instantly"
+                  buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                  showInputs={true}
+                />
               </div>
             </Card>
           </div>
