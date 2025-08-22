@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import FloatingNotifications from "@/app/components/floating-notifications"
-import BuyButton from "@/app/components/BuyButton"
+import CheckoutDrawer from "@/app/components/CheckoutDrawer"
 import {
   CheckCircle,
   Target,
@@ -32,10 +32,19 @@ import {
 
 export default function AcademyPage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  const handleOpenCheckout = () => {
+    setIsCheckoutOpen(true)
+  }
+
+  const handleCloseCheckout = () => {
+    setIsCheckoutOpen(false)
+  }
 
   const toolkitItems = [
     {
@@ -226,11 +235,12 @@ export default function AcademyPage() {
                 >
                   Pricing
                 </button>
-                <BuyButton 
-                  buttonText="Get Toolkit"
-                  buttonClassName="bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
-                  showInputs={true}
-                />
+                <Button
+                  onClick={handleOpenCheckout}
+                  className="bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Toolkit
+                </Button>
               </div>
             </div>
           </div>
@@ -268,11 +278,12 @@ export default function AcademyPage() {
               </p>
 
               <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <BuyButton 
-                  buttonText="Get Toolkit"
-                  buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105 border-0 overflow-hidden"
-                  showInputs={true}
-                />
+                <Button
+                  onClick={handleOpenCheckout}
+                  className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105 border-0 overflow-hidden"
+                >
+                  Get Toolkit
+                </Button>
                 <Link href="#whats-inside">
                   <Button
                     variant="outline"
@@ -447,11 +458,12 @@ export default function AcademyPage() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <BuyButton 
-                buttonText="Buy Now – Start Running Ads Today"
-                buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
-                showInputs={true}
-              />
+              <Button
+                onClick={handleOpenCheckout}
+                className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-3 rounded-xl font-semibold shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+              >
+                Buy Now – Start Running Ads Today
+              </Button>
             </div>
           </div>
         </section>
@@ -794,11 +806,12 @@ export default function AcademyPage() {
                           <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text">₹1,999</div>
                         </div>
                         <div className="text-gray-400 mb-6">Instant download. Lifetime access.</div>
-                        <BuyButton 
-                          buttonText="Get Instant Access"
-                          buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 w-full text-black font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
-                          showInputs={true}
-                        />
+                        <Button
+                          onClick={handleOpenCheckout}
+                          className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 w-full text-black font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                        >
+                          Get Instant Access
+                        </Button>
                         
                         {/* Urgency + Social Proof Note */}
                         <div className="mt-4 p-3 bg-gradient-to-r from-green-500/10 to-green-400/10 rounded-lg border border-green-500/20">
@@ -887,11 +900,12 @@ export default function AcademyPage() {
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Ready to Run Profitable Ads?</h2>
                 <p className="text-lg text-gray-300 mb-8">Get the toolkit today and stop wasting money.</p>
-                <BuyButton 
-                  buttonText="Buy Now & Download Instantly"
-                  buttonClassName="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
-                  showInputs={true}
-                />
+                <Button
+                  onClick={handleOpenCheckout}
+                  className="group relative bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-300 text-black px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-105"
+                >
+                  Buy Now & Download Instantly
+                </Button>
               </div>
             </Card>
           </div>
@@ -951,6 +965,15 @@ export default function AcademyPage() {
             </div>
           </div>
         </footer>
+
+        {/* Checkout Drawer */}
+        <CheckoutDrawer
+          isOpen={isCheckoutOpen}
+          onClose={handleCloseCheckout}
+          productName="Frameleads Academy – Meta Ads Playbook"
+          productPrice="₹1,999"
+          productDescription="Complete toolkit to run profitable Meta Ads campaigns"
+        />
       </div>
     </>
   )
