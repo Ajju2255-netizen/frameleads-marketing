@@ -113,7 +113,7 @@ export default function AcademyPage() {
         },
         offers: {
           "@type": "Offer",
-          price: "1999",
+          price: "499",
           priceCurrency: "INR",
           availability: "https://schema.org/InStock",
           url: "https://frameleads.com/academy",
@@ -752,8 +752,8 @@ export default function AcademyPage() {
               {/* Pricing Display */}
               <div className="flex items-center justify-center gap-4 mb-6">
                 <div className="text-2xl text-gray-400 line-through">₹4,999</div>
-                <div className="text-3xl text-white font-semibold">₹1,999</div>
-                <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-sm font-bold">60% OFF</div>
+                <div className="text-3xl text-white font-semibold">₹499</div>
+                <div className="bg-red-500 text-white px-2 py-1 rounded-lg text-sm font-bold">90% OFF</div>
               </div>
               
               {/* Guarantee */}
@@ -800,10 +800,10 @@ export default function AcademyPage() {
                           <li className="flex items-center justify-between"><span>Checklists/templates & creative briefs</span><span className="text-gray-400">₹4,000</span></li>
                           <li className="flex items-center justify-between"><span>Lifetime updates & community</span><span className="text-gray-400">₹3,500</span></li>
                         </ul>
-                        <div className="text-sm text-gray-300 mb-2"><span className="text-gray-400">Total value ~</span><span className="text-white font-semibold">₹24,000</span><span className="text-gray-400"> → Today </span><span className="text-green-300 font-semibold">₹1,999</span></div>
+                        <div className="text-sm text-gray-300 mb-2"><span className="text-gray-400">Total value ~</span><span className="text-white font-semibold">₹24,000</span><span className="text-gray-400"> → Today </span><span className="text-green-300 font-semibold">₹499</span></div>
                         <div className="flex items-center justify-center gap-3 mb-2">
                           <div className="text-lg text-gray-400 line-through">₹4,999</div>
-                          <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text">₹1,999</div>
+                          <div className="text-5xl font-bold text-transparent bg-gradient-to-r from-green-400 to-green-300 bg-clip-text">₹499</div>
                         </div>
                         <div className="text-gray-400 mb-6">Instant download. Lifetime access.</div>
                         <Button
@@ -971,7 +971,7 @@ export default function AcademyPage() {
           isOpen={isCheckoutOpen}
           onClose={handleCloseCheckout}
           productName="Frameleads Academy – Meta Ads Playbook"
-          productPrice="₹1,999"
+          productPrice="₹499"
           productDescription="Complete toolkit to run profitable Meta Ads campaigns"
         />
       </div>
