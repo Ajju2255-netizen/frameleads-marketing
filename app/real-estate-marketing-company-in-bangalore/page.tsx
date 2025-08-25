@@ -7,6 +7,7 @@ import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import FloatingNotifications from "../components/floating-notifications"
 
 export default function RealEstateMarketingCompanyBangalorePage() {
   const bangaloreRealEstateAreas = [
@@ -331,39 +332,54 @@ export default function RealEstateMarketingCompanyBangalorePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <FloatingNotifications />
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32 pt-32">
+        {/* Background Gradient Lines - Hero Grid */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <div className="inline-block mb-6">
-              <span className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-700">
+            <div className="inline-block mb  -6">
+              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
                 🏆 #1 Real Estate Marketing Agency in Bangalore
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Best Real Estate Marketing Agency in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Best Real Estate Marketing Agency in {" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
                 Bangalore
               </span>{" "}
               | Proven 400% Lead Growth Results
             </h1>
 
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
               Transform your real estate business with Bangalore's leading digital marketing agency. We specialize in property lead generation, real estate SEO, and comprehensive digital marketing solutions for builders, developers, and real estate agents across Bangalore.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
                   Get Free Real Estate Marketing Audit
                 </Button>
               </Link>
               <Link href="#case-studies">
-                <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-4 text-lg font-semibold rounded-lg">
+                <Button variant="outline" className="group relative border-red-500/30 text-red-300 hover:bg-red-500/10 px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-xl bg-red-500/5 hover:border-red-400/50 transition-all duration-300">
                   View Our Case Studies
                 </Button>
               </Link>
@@ -372,40 +388,40 @@ export default function RealEstateMarketingCompanyBangalorePage() {
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>500+ Real Estate Clients Served</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>400% Average Lead Growth</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>5+ Years Bangalore Market Expertise</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>50+ Real Estate Projects Completed</span>
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="bg-slate-800/60 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-red-500/20">
               <h3 className="text-2xl font-bold text-white mb-6">🏠 Trusted by 500+ Real Estate Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">1000+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">1000+</div>
                   <div className="text-gray-400 text-sm">Property Campaigns</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">₹200 Cr+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">₹200 Cr+</div>
                   <div className="text-gray-400 text-sm">Property Sales Generated</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">85%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">85%</div>
                   <div className="text-gray-400 text-sm">Lead-to-Viewing Conversion</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">60%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">60%</div>
                   <div className="text-gray-400 text-sm">Reduction in Cost per Lead</div>
                 </div>
               </div>
@@ -415,14 +431,20 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Why Choose Frameleads as Your Real Estate Marketing Partner in Bangalore?
               </h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Frameleads stands out as Bangalore's premier real estate marketing agency with deep local market expertise and proven results. Our specialized team understands Bangalore's unique property market dynamics, from luxury apartments in Koramangala to commercial spaces in Electronic City.
               </p>
               
@@ -430,19 +452,19 @@ export default function RealEstateMarketingCompanyBangalorePage() {
                 <h3 className="text-2xl font-bold text-white mb-4">🏠 Real Estate Marketing Expertise</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Local Market Authority: 5+ years serving Bangalore's real estate ecosystem</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Proven Results: 400% average increase in qualified property leads</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Comprehensive Solutions: Full-service real estate digital marketing</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Industry Specialization: Residential, commercial, and luxury properties</span>
                   </div>
                 </div>
@@ -452,44 +474,53 @@ export default function RealEstateMarketingCompanyBangalorePage() {
                 <h3 className="text-2xl font-bold text-white mb-4">🏆 Bangalore Real Estate Market Knowledge</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Micro-Market Expertise: Understanding of area-specific buyer preferences</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Developer Relationships: Strong network within Bangalore's real estate community</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Regulatory Knowledge: Compliance with RERA guidelines and local regulations</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">Market Timing: Strategic campaign timing aligned with property buying seasons</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="relative h-full">
+            <div className="relative h-80 group rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
               <Image
                 src="/story/story-4.png"
                 alt="Real estate marketing results dashboard"
                 fill
-                className="rounded-2xl shadow-2xl object-cover"
+                className="shadow-2xl object-cover z-10"
               />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 group-hover:ring-red-400/50 z-20"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Real Estate Marketing Services Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diamond Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Real Estate Digital Marketing Services in Bangalore
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our specialized real estate marketing services are designed to deliver measurable results and drive property sales for developers, builders, and real estate agents across Bangalore.
             </p>
           </div>
@@ -498,10 +529,11 @@ export default function RealEstateMarketingCompanyBangalorePage() {
             {realEstateMarketingServices.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <Card key={index} className="bg-gray-800 border-gray-700">
-                  <CardContent className="p-8">
+                <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
-                      <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-500/25">
                         <IconComponent className="h-8 w-8 text-white" />
                       </div>
                       <div className="flex-1">
@@ -514,7 +546,7 @@ export default function RealEstateMarketingCompanyBangalorePage() {
                             <ul className="space-y-2">
                               {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center gap-2 text-gray-300">
-                                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                                  <CheckCircle className="h-4 w-4 text-red-500 flex-shrink-0" />
                                   <span>{feature}</span>
                                 </li>
                               ))}
@@ -543,22 +575,30 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* Real Estate Marketing Process Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Hexagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-1/4 h-px bg-gradient-to-r from-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 right-0 w-1/4 h-px bg-gradient-to-l from-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Proven Real Estate Marketing Process in Bangalore
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We follow a systematic real estate marketing approach specifically designed for Bangalore's property market, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {realEstateMarketingProcess.map((process, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 text-center relative z-10">
+                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {process.step}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
@@ -571,11 +611,11 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* Real Estate Industry Expertise */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Real Estate Industry Expertise in Bangalore</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our specialized expertise spans across all segments of Bangalore's real estate market, with deep understanding of unique marketing needs and buyer behavior in each sector.
             </p>
           </div>
@@ -584,9 +624,10 @@ export default function RealEstateMarketingCompanyBangalorePage() {
             {realEstateIndustryExpertise.map((industry, index) => {
               const IconComponent = industry.icon
               return (
-                <Card key={index} className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-4 text-center">{industry.title}</h3>
@@ -594,13 +635,13 @@ export default function RealEstateMarketingCompanyBangalorePage() {
                     <ul className="space-y-2 mb-4">
                       {industry.services.map((service, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-red-500 flex-shrink-0" />
                           <span>{service}</span>
                         </li>
                       ))}
                     </ul>
-                    <div className="bg-gray-700 rounded-lg p-3 mt-4">
-                      <p className="text-green-400 text-sm font-semibold text-center">{industry.results}</p>
+                    <div className="bg-slate-800/60 backdrop-blur-xl rounded-lg p-3 mt-4 border border-red-500/20">
+                      <p className="text-red-300 text-sm font-semibold text-center">{industry.results}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -611,19 +652,20 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* Real Estate Case Studies */}
-      <section id="case-studies" className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="case-studies" className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Real Estate Marketing Success Stories from Bangalore</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how we've helped local Bangalore real estate businesses achieve remarkable growth through strategic digital marketing campaigns.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {realEstateCaseStudies.map((study, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <div className="mb-4">
                     <h3 className="text-xl font-semibold text-white mb-2">{study.industry}</h3>
                     <p className="text-gray-400 text-sm mb-4">{study.location}</p>
@@ -658,19 +700,20 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* Bangalore Areas We Serve */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Bangalore Areas We Serve for Real Estate Marketing</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide comprehensive real estate marketing services across all major areas in Bangalore, helping property developers, builders, and agents maximize their digital presence and lead generation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {bangaloreRealEstateAreas.map((area, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <h3 className="text-lg font-semibold text-white mb-4">{area.category}</h3>
                   <p className="text-gray-400 text-sm mb-4">{area.description}</p>
                   <div className="space-y-2">
@@ -689,21 +732,22 @@ export default function RealEstateMarketingCompanyBangalorePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Frequently Asked Questions About Real Estate Marketing in Bangalore
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get answers to common questions about real estate marketing services in Bangalore and how Frameleads can help your property business achieve measurable results.
             </p>
           </div>
 
           <div className="space-y-6">
             {realEstateFaqData.map((faq, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
                   <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </CardContent>

@@ -7,6 +7,7 @@ import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import FloatingNotifications from "../components/floating-notifications"
 
 export default function B2BMarketingCompanyBangalorePage() {
   const bangaloreBusinessDistricts = [
@@ -257,97 +258,50 @@ export default function B2BMarketingCompanyBangalorePage() {
     }
   ]
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": "Frameleads - B2B Digital Marketing Agency",
-        "description": "Leading B2B digital marketing agency in Bangalore specializing in lead generation, SEO, and marketing automation for businesses.",
-        "url": "https://frameleads.com/b2b-marketing-company-in-bangalore",
-        "telephone": "+91-63628-21368",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Koramangala",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560034",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 12.9716,
-          "longitude": 77.5946
-        },
-        "areaServed": "Bangalore",
-        "priceRange": "$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "127"
-        },
-        "sameAs": [
-          "https://linkedin.com/company/frameleads",
-          "https://twitter.com/frameleads"
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": b2bFaqData.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://frameleads.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://frameleads.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ]
-  };
-
   return (
     <>
-    <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <FloatingNotifications />
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32 pt-32">
+        {/* Background Gradient Lines - Hero Grid */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6">
-              <span className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-700">
+              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
                 🏆 Premier B2B Digital Marketing Agency
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Premier B2B Digital Marketing Agency in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Premier B2B Digital Marketing Agency in {" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
                 Bangalore
-              </span>{" "}
-              | Framel<span className="text-red-600">ad</span>s
+              </span>
             </h1>
 
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
               Transform your B2B business growth with Bangalore's most results-driven digital marketing agency. Frameleads specializes in generating qualified leads, accelerating sales cycles, and driving measurable ROI for startups, SMEs, and enterprises across Bangalore.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
                   Get Free B2B Marketing Audit
                 </Button>
               </Link>
@@ -360,36 +314,36 @@ export default function B2BMarketingCompanyBangalorePage() {
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>500% Average ROI Increase</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>300+ Qualified Leads Monthly</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 text-red-500" />
                 <span>98% Client Retention Rate</span>
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="bg-slate-800/60 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-red-500/20">
               <h3 className="text-2xl font-bold text-white mb-6">🚀 Trusted by 500+ Bangalore B2B Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">500%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">500%</div>
                   <div className="text-gray-400 text-sm">Average ROI Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">300+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">300+</div>
                   <div className="text-gray-400 text-sm">Qualified Leads Generated</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">5+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">5+</div>
                   <div className="text-gray-400 text-sm">Years B2B Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-2">98%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">98%</div>
                   <div className="text-gray-400 text-sm">Client Retention Rate</div>
                 </div>
               </div>
@@ -399,81 +353,86 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Choose Framel<span className="text-red-600">ad</span>s as Your B2B Marketing Partner in Bangalore?
+                Why Choose Framel<span className="text-red-400">ad</span>s as Your B2B Marketing Partner in Bangalore?
               </h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 As Bangalore's leading B2B digital marketing agency, Frameleads understands the unique challenges facing business-to-business companies in India's Silicon Valley. Our data-driven approach combines deep market knowledge with cutting-edge marketing technology to deliver consistent, scalable growth for B2B businesses.
               </p>
               
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">🎯 Bangalore B2B Market Expertise</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Deep Local Knowledge: 5+ years serving Bangalore's diverse B2B ecosystem</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Industry Specialization: Proven success across SaaS, manufacturing, fintech</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Decision-Maker Targeting: Expert at reaching C-level executives</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Regional Understanding: Comprehensive knowledge of Bangalore's business districts</span>
-                  </div>
+                  {[
+                    whyChooseB2B[0],
+                    whyChooseB2B[1],
+                    whyChooseB2B[2],
+                    whyChooseB2B[3],
+                  ].map((point, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
+                      <span className="text-gray-300">{point}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">🏆 Proven B2B Marketing Results</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Lead Quality Excellence: 85% of generated leads convert to sales opportunities</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Shorter Sales Cycles: Average 40% reduction in B2B sales cycle length</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Pipeline Growth: Consistent 200-500% increase in qualified sales pipeline</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-300">Revenue Impact: Average client revenue growth of 300% within first year</span>
-                  </div>
+                  {[
+                    whyChooseB2B[4],
+                    whyChooseB2B[5],
+                    whyChooseB2B[6],
+                    whyChooseB2B[7],
+                  ].map((point, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
+                      <span className="text-gray-300">{point}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="relative h-full">
+            <div className="relative h-80 group rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
               <Image
                 src="/story/story-3.png"
                 alt="B2B marketing results dashboard"
                 fill
-                className="rounded-2xl shadow-2xl object-cover"
+                className="shadow-2xl object-cover z-10"
               />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 group-hover:ring-red-400/50 z-20"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* B2B Services Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diamond Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive B2B Digital Marketing Services in Bangalore
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our specialized B2B marketing services are designed to generate qualified leads, accelerate sales cycles, and drive measurable ROI for Bangalore businesses across all industries.
             </p>
           </div>
@@ -482,10 +441,11 @@ export default function B2BMarketingCompanyBangalorePage() {
             {b2bServices.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <Card key={index} className="bg-gray-800 border-gray-700">
-                  <CardContent className="p-8">
+                <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
-                      <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-500/25">
                         <IconComponent className="h-8 w-8 text-white" />
                       </div>
                       <div className="flex-1">
@@ -498,7 +458,7 @@ export default function B2BMarketingCompanyBangalorePage() {
                             <ul className="space-y-2">
                               {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center gap-2 text-gray-300">
-                                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                                  <CheckCircle className="h-4 w-4 text-red-500 flex-shrink-0" />
                                   <span>{feature}</span>
                                 </li>
                               ))}
@@ -527,22 +487,30 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* B2B Process Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Hexagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-1/4 h-px bg-gradient-to-r from-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 right-0 w-1/4 h-px bg-gradient-to-l from-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Proven B2B Marketing Process in Bangalore
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We follow a systematic B2B marketing approach specifically designed for Bangalore businesses, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {b2bProcess.map((process, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 text-center relative z-10">
+                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {process.step}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
@@ -555,11 +523,11 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Industries We Serve in Bangalore's B2B Market</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our specialized expertise spans across key B2B industries in Bangalore, with deep understanding of unique buying behaviors and decision-making processes in each sector.
             </p>
           </div>
@@ -568,9 +536,10 @@ export default function B2BMarketingCompanyBangalorePage() {
             {industriesWeServe.map((industry, index) => {
               const IconComponent = industry.icon
               return (
-                <Card key={index} className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-4 text-center">{industry.title}</h3>
@@ -578,7 +547,7 @@ export default function B2BMarketingCompanyBangalorePage() {
                     <ul className="space-y-2">
                       {industry.services.map((service, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-red-500 flex-shrink-0" />
                           <span>{service}</span>
                         </li>
                       ))}
@@ -592,19 +561,20 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* B2B Case Studies */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">B2B Marketing Success Stories from Bangalore Businesses</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how we've helped local Bangalore B2B businesses achieve remarkable growth through strategic digital marketing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {b2bCaseStudies.map((study, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <div className="mb-4">
                     <h3 className="text-xl font-semibold text-white mb-2">{study.industry}</h3>
                     <p className="text-gray-400 text-sm mb-4">{study.location}</p>
@@ -639,19 +609,20 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* Business Districts */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Bangalore Business Districts We Serve</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide comprehensive B2B marketing services across all major business districts in Bangalore, helping businesses in every area dominate their local market.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {bangaloreBusinessDistricts.map((district, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <h3 className="text-lg font-semibold text-white mb-4">{district.category}</h3>
                   <div className="space-y-2">
                     {district.areas.map((area, idx) => (
@@ -669,21 +640,22 @@ export default function B2BMarketingCompanyBangalorePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Frequently Asked Questions About B2B Digital Marketing
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get answers to common questions about B2B marketing services in Bangalore and how Frameleads can help your business grow.
             </p>
           </div>
 
           <div className="space-y-6">
             {b2bFaqData.map((faq, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
                   <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </CardContent>
