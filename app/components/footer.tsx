@@ -53,17 +53,19 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-black text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    <footer className="relative bg-black border-t border-red-500/20 py-12">
+      {/* Glowing Line Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mb-8 shadow-lg shadow-red-500/50"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <Link href="/" className="text-3xl font-bold text-white">
-              <Image src="/logos/brand-logo.png" alt="Frameleads" width={120} height={120} />
+              <Link href="/" className="text-3xl font-bold text-red-400">
+                <Image src="/logos/brand-logo.png" alt="Frameleads" width={120} height={120} />
               </Link>
-              <p className="text-gray-400 mt-4 leading-relaxed">
+              <p className="text-gray-300 mt-4 leading-relaxed">
                 India's leading digital marketing agency helping businesses achieve exponential growth through strategic SEO, 
                 PPC campaigns, and performance marketing. Serving India, USA, and UAE markets with proven ROI-driven strategies.
               </p>
@@ -71,16 +73,16 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center text-gray-400">
-                <MapPin className="h-5 w-5 mr-3 text-red-500" />
+              <div className="flex items-center text-gray-300">
+                <MapPin className="h-5 w-5 mr-3 text-red-400" />
                 <span>Electronic City, Bangalore, Karnataka, 560100</span>
               </div>
-              <div className="flex items-center text-gray-400">
-                <Phone className="h-5 w-5 mr-3 text-red-500" />
+              <div className="flex items-center text-gray-300">
+                <Phone className="h-5 w-5 mr-3 text-red-400" />
                 <span>+91 63628 21368</span>
               </div>
-              <div className="flex items-center text-gray-400">
-                <Mail className="h-5 w-5 mr-3 text-red-500" />
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-5 w-5 mr-3 text-red-400" />
                 <span>ajsal@frameleads.com</span>
               </div>
             </div>
@@ -93,10 +95,10 @@ export default function Footer() {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="w-10 h-10 bg-red-500/10 border border-red-500/30 rounded-full flex items-center justify-center text-red-400 hover:bg-red-500/20 hover:border-red-400/50 hover:shadow-lg hover:shadow-red-500/30 transition-all duration-300 group"
                     aria-label={social.name}
                   >
-                    <IconComponent className="h-6 w-6" />
+                    <IconComponent className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                   </Link>
                 )
               })}
@@ -105,11 +107,11 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-red-400 mb-4">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <Link href={service.href} className="text-gray-300 hover:text-red-400 transition-colors duration-300">
                     {service.name}
                   </Link>
                 </li>
@@ -119,11 +121,11 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+            <h3 className="text-lg font-semibold text-red-400 mb-4">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <Link href={item.href} className="text-gray-300 hover:text-red-400 transition-colors duration-300">
                     {item.name}
                   </Link>
                 </li>
@@ -133,11 +135,11 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold text-red-400 mb-4">Resources</h3>
             <ul className="space-y-3">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <Link href={resource.href} className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <Link href={resource.href} className="text-gray-300 hover:text-red-400 transition-colors duration-300">
                     {resource.name}
                   </Link>
                 </li>
@@ -147,46 +149,28 @@ export default function Footer() {
 
           {/* Newsletter Signup */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
-            <p className="text-gray-400 mb-4 text-sm">
+            <h3 className="text-lg font-semibold text-red-400 mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-4 text-sm">
               Get the latest digital marketing tips, industry insights, and exclusive offers delivered to your inbox.
             </p>
             <div className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="w-full px-4 py-2 bg-slate-800/50 border border-red-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-xl"
               />
               <Link href="/contact">
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition-colors duration-300">
+                <Button className="w-full bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white font-semibold py-2 rounded-lg shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
                   Subscribe
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-gray-400 text-sm">© {new Date().getFullYear()} Frameleads. All rights reserved.</div>
-
-            {/* Legal Links */}
-            <div className="flex flex-wrap justify-center md:justify-end space-x-6">
-              {legal.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+        {/* Bottom Line */}
+        <div className="text-center pt-8 border-t border-red-500/10">
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Frameleads. All rights reserved.</p>
         </div>
       </div>
     </footer>

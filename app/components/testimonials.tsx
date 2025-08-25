@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Star } from "lucide-react"
+import { Star, Sparkles } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 
@@ -13,6 +13,7 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "Frameleads transformed our online presence completely. Our organic traffic increased by 300% in just 6 months. Their digital marketing strategies are simply outstanding!",
+      results: "300% Traffic Increase"
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "Working with Frameleads was a game-changer. They helped us achieve 4x lead generation increase while reducing cost-per-lead by 35%. Their performance marketing expertise is unmatched!",
+      results: "4x Lead Generation"
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "The team at Frameleads is incredibly professional and results-driven. Our website now ranks on the first page for all our main keywords. ROI has been exceptional with 400% revenue growth!",
+      results: "400% Revenue Growth"
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "Frameleads helped us dominate local search results. Our store visits increased by 180% and online sales doubled. Their comprehensive digital marketing approach is unmatched!",
+      results: "180% Store Visits"
     },
     {
       id: 5,
@@ -49,6 +53,7 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "Outstanding results! Our website traffic grew from 5K to 50K monthly visitors. Frameleads' technical SEO audit and implementation was thorough and effective.",
+      results: "10x Traffic Growth"
     },
     {
       id: 6,
@@ -58,51 +63,34 @@ export default function Testimonials() {
       rating: 5,
       testimonial:
         "The content strategy and keyword research from Frameleads was spot-on. We're now ranking for over 200 keywords and our conversion rate improved by 120%.",
-    },
-    {
-      id: 7,
-      name: "Arjun Mehta",
-      position: "Owner, LocalBiz Pro",
-      image: "/testimonials/arjun-mehta.png",
-      rating: 5,
-      testimonial:
-        "Frameleads delivered exactly what they promised. Our Google My Business optimization and local citations helped us become the top choice in our area.",
-    },
-    {
-      id: 8,
-      name: "Deepika Joshi",
-      position: "Marketing Head, ScaleUp Inc",
-      image: "/testimonials/deepika-joshi.png",
-      rating: 5,
-      testimonial:
-        "Professional, transparent, and results-oriented. Frameleads helped us achieve first-page rankings for competitive keywords. Our organic leads increased 4x!",
-    },
-    {
-      id: 9,
-      name: "Rohit Gupta",
-      position: "Founder, NextGen Digital",
-      image: "/testimonials/rohit-gupta.png",
-      rating: 5,
-      testimonial:
-        "The best digital marketing agency in India! Their data-driven approach and monthly reports keep us informed. Our search visibility improved dramatically in just 4 months.",
+      results: "120% Conversion Rate"
     },
   ]
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Star key={index} className={`w-4 h-4 ${index < rating ? "text-yellow-400 fill-current" : "text-gray-600"}`} />
+      <Star key={index} className={`w-4 h-4 ${index < rating ? "text-amber-400 fill-current" : "text-gray-600"}`} />
     ))
   }
 
   return (
-    <section className="bg-gray-900 py-20 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20">
+      {/* Background Gradient Lines - Wave Pattern */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/18 to-transparent"></div>
+        <div className="absolute top-2/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+        <div className="absolute top-4/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/18 to-transparent"></div>
+        <div className="absolute top-5/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Client Success Stories: Proven Digital Marketing Results</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what business owners across India, USA, and UAE are saying about their
-            experience with Frameleads' digital marketing services.
+          <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real results from real businesses using our digital marketing strategies.
           </p>
         </div>
 
@@ -111,32 +99,38 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
-              className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-all duration-300 group h-full"
+              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
             >
-              <CardContent className="p-6 flex flex-col h-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-6 relative z-10">
                 {/* Rating Stars */}
                 <div className="flex items-center mb-4">{renderStars(testimonial.rating)}</div>
 
                 {/* Testimonial Text */}
-                <blockquote className="text-gray-300 leading-relaxed mb-6 flex-grow">
+                <blockquote className="text-gray-300 mb-4 italic leading-relaxed group-hover:text-white transition-colors duration-300">
                   "{testimonial.testimonial}"
                 </blockquote>
 
+                {/* Results Badge */}
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/20 to-red-400/20 px-3 py-1.5 rounded-full border border-red-500/30 mb-4">
+                  <Sparkles className="h-4 w-4 text-red-400" />
+                  <span className="text-red-300 text-sm font-medium">{testimonial.results}</span>
+                </div>
+
                 {/* Client Info */}
-                <div className="flex items-center">
-                  <div className="relative w-12 h-12 mr-4">
+                <div className="flex items-center gap-4">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-red-500/30 group-hover:border-red-400/50 transition-all duration-300">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover border-2 border-gray-600"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-red-300 transition-colors duration-300">
                       {testimonial.name}
-                    </h4>
+                    </h3>
                     <p className="text-gray-400 text-sm">{testimonial.position}</p>
                   </div>
                 </div>
@@ -146,10 +140,10 @@ export default function Testimonials() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <p className="text-gray-400 mb-6 text-lg">Ready to join our success stories?</p>
           <Link href="/contact">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
+            <button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
               Get Your Free Digital Marketing Consultation
             </button>
           </Link>

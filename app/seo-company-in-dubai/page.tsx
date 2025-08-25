@@ -3,11 +3,12 @@ import Footer from "../components/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, TrendingUp, Users, Award, CheckCircle, Phone } from "lucide-react"
+import { MapPin, TrendingUp, Users, Award, CheckCircle, Phone, Sparkles, Star } from "lucide-react"
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import type { Metadata } from "next"
+import FloatingNotifications from "../components/floating-notifications"
 
 export const metadata: Metadata = {
   title: "Best Digital Marketing Company in Dubai - Frameleads",
@@ -265,34 +266,49 @@ export default function DigitalMarketingCompanyDubaiPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <FloatingNotifications />
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gray-900 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32 pt-32">
+        {/* Background Gradient Lines - Hero Grid */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6">
-              <span className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-700">
+              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30 shadow-lg shadow-red-500/20">
                 🏆 Best Digital Marketing Company in Dubai
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Best Digital Marketing Company in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Best Digital Marketing Company in {" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
                 Dubai
               </span>{" "}
               500% ROI Growth Guaranteed
             </h1>
 
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-10">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
               Transform your business with Dubai's most trusted digital marketing agency. Frameleads delivers measurable results for 500+ UAE businesses through data-driven strategies, advanced analytics, and local market expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
                   Get Free Dubai Digital Marketing Audit
                 </Button>
               </Link>
@@ -302,7 +318,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
               {trustIndicators.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <CheckCircle className="w-4 h-4 text-red-500" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -312,45 +328,60 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Why Frameleads is the Top Digital Marketing Company in Dubai?
               </h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 As a premier digital marketing agency in Dubai, we combine deep UAE market knowledge with cutting-edge digital strategies. Our proven track record includes delivering 500% ROI growth for businesses across Emirates, from startups in DIFC to enterprises in Dubai Internet City.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {keyDifferentiators.map((point, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">{point}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative h-full">
+            <div className="relative h-80 group rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
               <Image
-                src="/arab.svg?height=500&width=600&text=Dubai+Marketing+Results"
+                src="/arab.svg"
                 alt="Dubai digital marketing results dashboard"
                 fill
-                className="rounded-2xl shadow-2xl object-cover"
+                className="shadow-2xl object-cover z-10"
               />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 group-hover:ring-red-400/50 z-20"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Diamond Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Digital Marketing Services in Dubai
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Full-funnel growth services across SEO, PPC, social media, and web development to capture, convert, and retain customers in the UAE market.
             </p>
           </div>
@@ -361,10 +392,11 @@ export default function DigitalMarketingCompanyDubaiPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-gray-800 border-gray-700 hover:bg-gray-750 transition-all duration-300 group"
+                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
                 >
-                  <CardContent className="p-6 text-center">
-                    <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-6 text-center relative z-10">
+                    <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-500/25 group-hover:shadow-red-500/40 transition-all duration-300">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
@@ -372,7 +404,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
                     <ul className="text-left text-gray-400 space-y-2">
                       {service.bullets.map((item: string, i: number) => (
                         <li key={i} className="flex gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -386,22 +418,30 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Gradient Lines - Hexagonal Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-1/4 h-px bg-gradient-to-r from-red-500/20 to-transparent"></div>
+          <div className="absolute top-1/2 right-0 w-1/4 h-px bg-gradient-to-l from-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Proven Digital Marketing Process for Dubai Businesses
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We follow a systematic, data-driven approach tailored for the UAE market to deliver repeatable and measurable growth.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((process, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 text-center relative z-10">
+                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {process.step}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
@@ -414,43 +454,43 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* Areas We Serve */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Dubai Areas We Serve</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide digital marketing services to businesses across Dubai's premium districts, growing commercial areas, and emerging markets.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-700 rounded-lg p-6">
+            <div className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-6 border border-red-500/20">
               <h3 className="text-white font-semibold mb-4">Premium Business Districts</h3>
               <div className="grid grid-cols-2 gap-3">
                 {dubaiPremiumDistricts.map((area, index) => (
-                  <div key={index} className="bg-gray-800 rounded px-3 py-2 text-sm flex items-center gap-2">
+                  <div key={index} className="bg-slate-900/60 rounded px-3 py-2 text-sm flex items-center gap-2 border border-red-500/10">
                     <MapPin className="h-4 w-4 text-red-500" />
                     <span className="text-gray-200">{area}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-gray-700 rounded-lg p-6">
+            <div className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-6 border border-red-500/20">
               <h3 className="text-white font-semibold mb-4">Growing Commercial Areas</h3>
               <div className="grid grid-cols-2 gap-3">
                 {dubaiGrowingAreas.map((area, index) => (
-                  <div key={index} className="bg-gray-800 rounded px-3 py-2 text-sm flex items-center gap-2">
+                  <div key={index} className="bg-slate-900/60 rounded px-3 py-2 text-sm flex items-center gap-2 border border-red-500/10">
                     <MapPin className="h-4 w-4 text-red-500" />
                     <span className="text-gray-200">{area}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-gray-700 rounded-lg p-6">
+            <div className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-6 border border-red-500/20">
               <h3 className="text-white font-semibold mb-4">Emerging Markets</h3>
               <div className="grid grid-cols-2 gap-3">
                 {dubaiEmergingMarkets.map((area, index) => (
-                  <div key={index} className="bg-gray-800 rounded px-3 py-2 text-sm flex items-center gap-2">
+                  <div key={index} className="bg-slate-900/60 rounded px-3 py-2 text-sm flex items-center gap-2 border border-red-500/10">
                     <MapPin className="h-4 w-4 text-red-500" />
                     <span className="text-gray-200">{area}</span>
                   </div>
@@ -462,7 +502,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
           <div className="text-center mt-12">
             <p className="text-gray-400 mb-6">Don't see your area listed? We serve all of Dubai!</p>
             <Link href="/contact">
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold">
+              <Button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
                 Check If We Serve Your Area
               </Button>
             </Link>
@@ -471,21 +511,22 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Dubai Digital Marketing Success Stories</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how we've helped UAE businesses achieve remarkable growth through strategic digital marketing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <div className="text-center mb-4">
-                    <div className="text-3xl font-bold text-red-500 mb-2">{study.result}</div>
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">{study.result}</div>
                     <h3 className="text-xl font-semibold text-white">{study.industry}</h3>
                     <p className="text-gray-400 text-sm">{study.location}</p>
                   </div>
@@ -502,51 +543,54 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Digital Marketing Pricing for Dubai Market</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transparent, flexible packages built for startups, SMEs, and enterprises in the UAE.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-gray-700">
-              <CardContent className="p-6">
+            <Card className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-6 relative z-10">
                 <h3 className="text-2xl font-semibold text-white mb-2">Startup Package</h3>
-                <p className="text-red-500 font-bold mb-4">AED 3,500/month</p>
+                <p className="text-red-400 font-bold mb-4">AED 3,500/month</p>
                 <p className="text-gray-400 mb-4">Perfect for new businesses entering Dubai market</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Local SEO optimization</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Google My Business setup</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Social media management (2 platforms)</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Monthly reporting</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Local SEO optimization</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Google My Business setup</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Social media management (2 platforms)</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Monthly reporting</li>
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-gray-900 border-gray-700">
-              <CardContent className="p-6">
+            <Card className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-6 relative z-10">
                 <h3 className="text-2xl font-semibold text-white mb-2">Growth Package</h3>
-                <p className="text-red-500 font-bold mb-4">AED 7,500/month</p>
+                <p className="text-red-400 font-bold mb-4">AED 7,500/month</p>
                 <p className="text-gray-400 mb-4">Ideal for established SMEs seeking expansion</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Comprehensive SEO strategy</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Google Ads management (AED 5,000 budget included)</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Multi-platform social media marketing</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Content creation in Arabic & English</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Comprehensive SEO strategy</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Google Ads management (AED 5,000 budget included)</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Multi-platform social media marketing</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Content creation in Arabic & English</li>
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-gray-900 border-gray-700">
-              <CardContent className="p-6">
+            <Card className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-6 relative z-10">
                 <h3 className="text-2xl font-semibold text-white mb-2">Enterprise Package</h3>
-                <p className="text-red-500 font-bold mb-4">AED 15,000/month</p>
+                <p className="text-red-400 font-bold mb-4">AED 15,000/month</p>
                 <p className="text-gray-400 mb-4">For large corporations and rapid scaling businesses</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Full-service digital marketing</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Advanced analytics and attribution modeling</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Dedicated account team</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-500 mt-1"/> Custom integrations and automation</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Full-service digital marketing</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Advanced analytics and attribution modeling</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Dedicated account team</li>
+                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-red-500 mt-1"/> Custom integrations and automation</li>
                 </ul>
               </CardContent>
             </Card>
@@ -555,21 +599,22 @@ export default function DigitalMarketingCompanyDubaiPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Frequently Asked Questions About Digital Marketing in Dubai
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get answers to common questions about the Dubai market and how Frameleads can help your business grow.
             </p>
           </div>
 
           <div className="space-y-6">
             {faqData.map((faq, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
                   <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
                   <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </CardContent>
@@ -591,23 +636,23 @@ export default function DigitalMarketingCompanyDubaiPage() {
       />
 
       {/* Internal and External Links for Trust & UX */}
-      <section className="bg-gray-900 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-white font-semibold mb-3">Helpful Internal Links</h3>
               <div className="flex flex-wrap gap-3 text-sm">
-                <Link href="/seo-company-in-dubai" className="text-blue-400 hover:underline">SEO Dubai</Link>
-                <Link href="/about" className="text-blue-400 hover:underline">digital marketing experts</Link>
-                <Link href="/contact" className="text-blue-400 hover:underline">get free audit</Link>
+                <Link href="/seo-company-in-dubai" className="text-red-400 hover:underline">SEO Dubai</Link>
+                <Link href="/about" className="text-red-400 hover:underline">digital marketing experts</Link>
+                <Link href="/contact" className="text-red-400 hover:underline">get free audit</Link>
               </div>
             </div>
             <div>
               <h3 className="text-white font-semibold mb-3">Trusted External Resources</h3>
               <div className="flex flex-wrap gap-3 text-sm">
-                <a href="https://www.dubaichamber.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dubai Chamber of Commerce</a>
-                <a href="https://www.google.com/partners/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Google Partner Directory</a>
-                <a href="https://www.statista.com/topics/8526/digital-advertising-in-the-middle-east/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">UAE Digital Marketing Reports</a>
+                <a href="https://www.dubaichamber.com/" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">Dubai Chamber of Commerce</a>
+                <a href="https://www.google.com/partners/" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">Google Partner Directory</a>
+                <a href="https://www.statista.com/topics/8526/digital-advertising-in-the-middle-east/" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">UAE Digital Marketing Reports</a>
               </div>
             </div>
           </div>

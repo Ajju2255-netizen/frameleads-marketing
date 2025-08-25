@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function CardDecks() {
   const cardDecks = [
@@ -38,14 +39,24 @@ export default function CardDecks() {
   ]
 
   return (
-    <section className="bg-gray-800 py-20 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 lg:py-32">
+      {/* Background Gradient Lines - Circuit Pattern */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-1/3 h-px bg-gradient-to-r from-red-500/25 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-px bg-gradient-to-l from-red-500/25 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-px bg-gradient-to-r from-red-500/25 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-px bg-gradient-to-l from-red-500/25 to-transparent"></div>
+        <div className="absolute top-1/3 left-0 w-px h-1/3 bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+        <div className="absolute top-1/3 right-0 w-px h-1/3 bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Comprehensive Digital Marketing Solutions for Every Business Need
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From performance marketing to technical optimization, we provide end-to-end digital marketing services that drive real
             results for businesses in India, USA, and UAE markets.
           </p>
@@ -64,7 +75,7 @@ export default function CardDecks() {
               <div className="flex-1 space-y-6">
                 {/* Eyebrow */}
                 <div className="inline-block">
-                  <span className="bg-gray-700 text-gray-300 px-4 py-2 rounded-full text-sm font-medium border border-gray-600">
+                  <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-4 py-2 rounded-full text-sm font-medium border border-red-500/30 shadow-lg shadow-red-500/20 hover:shadow-red-500/40 transition-all duration-300">
                     {card.eyebrow}
                   </span>
                 </div>
@@ -73,12 +84,12 @@ export default function CardDecks() {
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">{card.title}</h3>
 
                 {/* Description */}
-                <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">{card.description}</p>
+                <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">{card.description}</p>
 
                 {/* CTA */}
                 <div className="pt-4">
                   <Link href="/contact">
-                    <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105 group">
+                    <Button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105 group">
                       {card.cta}
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
@@ -88,15 +99,18 @@ export default function CardDecks() {
 
               {/* Image Side */}
               <div className="flex-1">
-                <div className="relative overflow-hidden rounded-2xl bg-gray-700 shadow-2xl">
-                  <Image
-                    src={card.image || "/placeholder.svg"}
-                    alt={card.imageAlt}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative overflow-hidden rounded-2xl bg-slate-800/50 backdrop-blur-xl border border-red-500/20 shadow-2xl group-hover:border-red-400/40 transition-all duration-300">
+                    <Image
+                      src={card.image || "/placeholder.svg"}
+                      alt={card.imageAlt}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,17 +118,21 @@ export default function CardDecks() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center mt-20 bg-gray-900 rounded-2xl p-12">
-          <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Digital Marketing Strategy?</h3>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our comprehensive digital marketing solutions can help your business achieve sustainable growth and
-            dominate search results across all channels.
-          </p>
-          <Link href="/contact">
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
-              Schedule Free Strategy Call
-            </Button>
-          </Link>
+        <div className="text-center mt-20">
+          <Card className="bg-gradient-to-br from-slate-900/80 to-black/80 backdrop-blur-xl border-red-500/30 hover:border-red-400/50 transition-all duration-500 p-12">
+            <CardContent className="p-0">
+              <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Digital Marketing Strategy?</h3>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our comprehensive digital marketing solutions can help your business achieve sustainable growth and
+                dominate search results across all channels.
+              </p>
+              <Link href="/contact">
+                <Button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
+                  Schedule Free Strategy Call
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
