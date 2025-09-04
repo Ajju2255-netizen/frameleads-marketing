@@ -10,7 +10,7 @@ export default function Footer() {
     { name: "PPC Management", href: "/services/ppc-management" },
     { name: "Content Marketing", href: "/services/content-marketing" },
     { name: "Social Media Marketing", href: "/services/social-media" },
-    { name: "Performance Marketing", href: "/services/performance-marketing" },
+    { name: "Performance Marketing", href: "/perforamance-marketing" },
     { name: "Creative Advertising Company in Bangalore", href: "/creative-advertising-company-in-bangalore" },
     { name: "B2B Marketing Company in Bangalore", href: "/b2b-marketing-company-in-bangalore" },
     { name: "Performance Marketing Company in Bangalore", href: "/performance-marketing-company-in-bangalore" },
