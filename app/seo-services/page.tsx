@@ -9,150 +9,147 @@ import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
 
+export const metadata = {
+  title: "Best SEO Company | Global SEO Services | 400% Traffic Growth",
+  description:
+    "Leading global SEO company with guaranteed 400% traffic growth. Expert technical SEO, local SEO, and content strategies. Get a free SEO audit now!",
+}
+
 export default function SEOCompanyBangalorePage() {
-  const bangaloreAreas = [
-    "Koramangala",
-    "Indiranagar", 
-    "Whitefield",
-    "Electronic City",
-    "Marathahalli",
-    "BTM Layout",
-    "Jayanagar",
-    "HSR Layout",
-    "Banashankari",
-    "Rajajinagar",
-    "Malleshwaram",
-    "Yelahanka",
+  const serviceRegions = [
+    "North America",
+    "Europe",
+    "Middle East",
+    "South Asia",
+    "Southeast Asia",
+    "Australia & New Zealand",
+    "Africa",
+    "Latin America",
   ]
 
   const seoServices = [
     {
       icon: MapPin,
       title: "Local SEO Services Bangalore",
-      description: "Dominate 'near me' searches with optimized Google My Business, local citations, and location-based keyword targeting for Bangalore businesses.",
+      description:
+        "Dominate local search results: GMB optimization, Bangalore citations, review management, local schema, and multi-location SEO for franchises.",
     },
     {
       icon: TrendingUp,
-      title: "Technical SEO Optimization",
-      description: "Complete website optimization including site speed, mobile responsiveness, and technical SEO audits for better search engine rankings.",
+      title: "Technical SEO Services",
+      description:
+        "Advanced technical optimization: Core Web Vitals, mobile-first indexing, XML sitemaps, schema, crawl/index fixes, SSL & security hardening.",
     },
     {
       icon: Users,
       title: "Content Marketing & SEO",
-      description: "SEO-optimized content creation that targets Bangalore-specific keywords and resonates with local audiences.",
+      description:
+        "Content that ranks & converts: SEO blog strategy, keyword-driven copy, internal linking, content gap analysis, performance tracking.",
     },
     {
       icon: Award,
       title: "E-commerce SEO Services",
-      description: "Specialized SEO for Bangalore e-commerce businesses to increase online sales and product visibility.",
+      description:
+        "Boost store visibility: product/category SEO, technical fixes, shopping feeds, CRO, and marketplace optimization for higher revenue.",
     },
   ]
 
   const seoProcess = [
     {
       step: "01",
-      title: "Bangalore SEO Audit & Analysis",
-      description: "Comprehensive analysis of your current SEO performance, competitor research, and keyword opportunities specific to Bangalore market.",
+      title: "Comprehensive SEO Audit",
+      description:
+        "50-point audit covering technical health, crawlability, indexation, content gaps, competitor analysis, and local SEO (GMB + citations).",
     },
     {
       step: "02", 
       title: "Strategic SEO Planning",
-      description: "Develop customized SEO strategy targeting high-converting keywords for your industry and location in Bangalore.",
+      description:
+        "Keyword mapping, content calendar, technical roadmap, and Bangalore-focused local tactics with clear milestones & ownership.",
     },
     {
       step: "03",
-      title: "Technical & On-Page Optimization",
-      description: "Implement technical SEO improvements, optimize content, and enhance website structure for better search visibility.",
+      title: "Implementation & Optimization",
+      description:
+        "On-page optimization, technical fixes, content production, and ethical link-building with measurable KPI improvements each month.",
     },
     {
       step: "04",
-      title: "Local SEO & Citation Building",
-      description: "Optimize Google My Business, build local citations, and improve local search rankings across Bangalore areas.",
+      title: "Monitoring & Scaling",
+      description:
+        "Performance tracking, ongoing optimization for algorithm changes, and scaling to new keywords, markets, and locations.",
     },
   ]
 
   const whyChooseUs = [
-    "5+ years serving Bangalore businesses with proven SEO results",
-    "500+ successful SEO clients across all industries in Bangalore",
-    "Deep understanding of Bangalore's competitive digital landscape",
-    "Google My Business optimization experts for local SEO",
-    "Technical SEO specialists with latest algorithm knowledge",
-    "Local citation building and NAP consistency management",
-    "Bangalore-focused content creation and keyword research",
-    "Regular SEO training and algorithm update implementation",
+    "500+ successful Bangalore SEO campaigns with measurable ROI",
+    "AI-powered, data-driven strategies focused on business outcomes",
+    "Award-winning team, certified partners, 8+ years of expertise",
+    "Full-stack technical SEO for maximum search visibility",
+    "Deep Bangalore market knowledge and consumer insights",
+    "24/7 monitoring, transparent reporting, dedicated account manager",
+    "Comprehensive competitor analysis and multi-location SEO",
+    "Proactive algorithm update implementation and training",
   ]
 
   const caseStudies = [
     {
-      industry: "Tech Startup",
-      location: "Koramangala",
-      result: "400% increase in organic traffic",
-      description: "Helped a SaaS startup achieve #1 rankings for competitive keywords in Bangalore's tech sector within 6 months.",
+      industry: "B2B SaaS Company",
+      location: "North America",
+      result: "450% increase in organic traffic",
+      description: "#1 rankings for 15 high-value B2B keywords in 6 months with comprehensive technical SEO and content strategy.",
     },
     {
-      industry: "Restaurant Chain", 
-      location: "Indiranagar & Whitefield",
-      result: "300% increase in foot traffic",
-      description: "Optimized local SEO for multi-location restaurant chain, dominating food delivery searches across Bangalore.",
+      industry: "Multi-Location Restaurant Chain", 
+      location: "Europe",
+      result: "250% increase in 'near me' visibility",
+      description: "Local SEO across 12 locations driving Top 3 local pack rankings and 40% growth in direct orders.",
     },
     {
-      industry: "Real Estate Agency",
-      location: "Electronic City",
-      result: "400% increase in property inquiries",
-      description: "Boosted online visibility for premium real estate agency, capturing high-value leads in Electronic City area.",
+      industry: "E-commerce Fashion Brand",
+      location: "APAC",
+      result: "320% increase in product page traffic",
+      description: "E-commerce SEO and CRO delivering 60% conversion improvement and 500+ ranking keywords expansion.",
     },
   ]
 
   const faqData = [
     {
-      question: "Why choose a Bangalore-based SEO company?",
-      answer: "A local SEO company in Bangalore provides deep market knowledge, understands local consumer behavior, and can optimize for Bangalore-specific keywords and local search patterns. Frameleads has 5+ years of experience serving Bangalore businesses with proven results."
+      question: "How much do SEO services cost in Bangalore?",
+      answer:
+        "SEO services typically range from ₹25,000 to ₹2,00,000 per month based on scope, competition, and goals. Packages start at ₹30,000/month for SMBs with custom enterprise solutions available.",
     },
     {
       question: "How long does it take to see SEO results in Bangalore?",
-      answer: "SEO results in Bangalore typically show initial improvements within 3-6 months, with significant growth achieved in 6-12 months. Local SEO can show faster results for 'near me' searches, while technical SEO builds long-term organic growth."
+      answer:
+        "Most businesses see early gains within 2–3 months and significant results by month 6. We guarantee measurable improvements within the first 90 days.",
     },
     {
       question: "What makes Frameleads the best SEO company in Bangalore?",
-      answer: "Frameleads stands out as the top SEO company in Bangalore due to our 500+ successful client projects, deep local market expertise, comprehensive service offering, and proven track record of delivering measurable ROI for Bangalore businesses."
+      answer:
+        "Proven 400% traffic growth, 300% average ROI in 6 months, local market expertise, transparent reporting, and dedicated Bangalore-based support.",
     },
     {
-      question: "Do you provide SEO services to startups in Bangalore?",
-      answer: "Yes! We specialize in startup SEO in Bangalore, understanding the unique challenges and opportunities in Bangalore's vibrant startup ecosystem. We offer flexible SEO packages designed specifically for growing businesses and startups."
+      question: "Do you provide local SEO services for multiple Bangalore locations?",
+      answer:
+        "Yes. We specialize in multi-location SEO including GMB optimization per location, area-specific content, citation building, and targeted local keywords.",
     },
     {
-      question: "What areas of Bangalore do you serve for SEO?",
-      answer: "We provide comprehensive SEO services across all Bangalore areas including Koramangala, Indiranagar, Whitefield, Electronic City, Marathahalli, BTM Layout, Jayanagar, HSR Layout, Banashankari, Rajajinagar, Malleshwaram, and Yelahanka."
-    }
+      question: "What industries do you serve in Bangalore?",
+      answer:
+        "IT & Software, Healthcare, Manufacturing, Real Estate, Retail & E-commerce, Financial Services, Education, Hospitality, Professional Services, and Startups.",
+    },
   ]
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
-        "name": "Frameleads",
-        "description": "Best SEO Company in Bangalore | 400% Traffic Growth Guaranteed",
-        "url": "https://frameleads.com/seo-company-in-bangalore",
+        "@type": "Organization",
+        "name": "Frameleads - Global SEO Company",
+        "description": "Leading global SEO company providing guaranteed traffic growth and first-page rankings",
+        "url": "https://frameleads.com/seo-services",
         "telephone": "+91 63628 21368",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "123 SEO Street, Koramangala",
-          "addressLocality": "Bangalore",
-          "addressRegion": "KA",
-          "postalCode": "560034",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 12.9716,
-          "longitude": 77.5946
-        },
-        "areaServed": bangaloreAreas.map(area => ({
-          "@type": "City",
-          "name": area,
-        })),
-        "priceRange": "$$$",
-        "openingHours": "Mo-Fr 09:00-18:00",
+        "areaServed": serviceRegions,
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "SEO Services",
@@ -164,7 +161,8 @@ export default function SEOCompanyBangalorePage() {
               "description": service.description
             }
           }))
-        }
+        },
+        "sameAs": ["https://linkedin.com/company/frameleads"]
       },
       {
         "@type": "FAQPage",
@@ -176,6 +174,19 @@ export default function SEOCompanyBangalorePage() {
             "text": faq.answer
           }
         }))
+      },
+      {
+        "@type": "Service",
+        "name": "Global SEO Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "Frameleads"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SEO Service Packages"
+        }
       },
       {
         "@type": "WebSite",
@@ -207,7 +218,7 @@ export default function SEOCompanyBangalorePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 pt-32">
+      <section className="relative py-20 lg:py-32 pt-32" id="hero">
         {/* Background Gradient Lines - Hero Grid */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
@@ -219,21 +230,26 @@ export default function SEOCompanyBangalorePage() {
           <div className="text-center">
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
-                🏆 #1 SEO Company in Bangalore
+                🏆 #1 Global SEO Company - 500+ Successful Projects
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Best SEO Company in {" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
-                Bangalore
-              </span>{" "}
-              400% Traffic Growth Guaranteed
+              Best SEO Company — 400% Traffic Growth Guaranteed
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
-              Dominate local search results and grow your Bangalore business with our proven SEO strategies. As the leading SEO company in Bangalore, we've helped 500+ local businesses achieve 400% traffic growth, rank higher on Google, and increase revenue through comprehensive technical SEO, local SEO optimization, and content marketing services.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Transform your business with expert global SEO services that deliver real results. Get more organic traffic, higher rankings, and increased revenue in as little as 90 days.
             </p>
+            <div className="max-w-4xl mx-auto text-left text-gray-300 mb-10">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Guaranteed 400% organic traffic growth in 6 months</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> First page rankings for high-value keywords</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> ROI-focused strategies with measurable KPIs</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Transparent reporting & dedicated account manager</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> 100% white-hat SEO techniques only</li>
+              </ul>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
@@ -241,33 +257,25 @@ export default function SEOCompanyBangalorePage() {
                   Get Free Bangalore SEO Audit
                 </Button>
               </Link>
-              <div className="flex items-center gap-2 text-gray-400">
-                <Phone className="h-5 w-5" />
-                <span>Call: +91 63628 21368</span>
-              </div>
+              <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-200 hover:text-white">
+                <Button variant="outline" className="border-red-500/40 text-gray-200 hover:text-white">
+                  <Phone className="h-5 w-5 mr-2" /> Call +91 63628 21368
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>500+ Bangalore clients</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>5+ years local experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>Guaranteed results</span>
-              </div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Trusted by 500+ businesses worldwide</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>5-star rated SEO agency</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Avg. 300% ROI in 6 months</span></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="why-us">
         {/* Background Gradient Lines - Diagonal Pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
@@ -277,9 +285,7 @@ export default function SEOCompanyBangalorePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Frameleads is the Best SEO Company in Bangalore?
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Why Frameleads is a Top-Rated Global SEO Agency</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 As the leading SEO company in Bangalore, we combine deep local market knowledge with cutting-edge technical SEO expertise. Our proven track record of delivering 400% traffic growth for Bangalore businesses makes us the preferred choice for local SEO services, technical SEO optimization, and comprehensive digital marketing solutions.
               </p>
@@ -307,7 +313,7 @@ export default function SEOCompanyBangalorePage() {
       </section>
 
       {/* Local Services Section */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="services">
         {/* Background Gradient Lines - Diamond Pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
@@ -317,9 +323,7 @@ export default function SEOCompanyBangalorePage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive SEO Services in Bangalore
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Comprehensive SEO Services in Bangalore</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our complete SEO services in Bangalore include technical SEO optimization, local SEO for 'near me' searches, content marketing, and e-commerce SEO. We help Bangalore businesses dominate search results and achieve sustainable organic growth.
             </p>
@@ -338,7 +342,7 @@ export default function SEOCompanyBangalorePage() {
                     <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-red-500/25 group-hover:shadow-red-500/40 transition-all duration-300">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{service.description}</p>
                   </CardContent>
                 </Card>
@@ -349,7 +353,7 @@ export default function SEOCompanyBangalorePage() {
       </section>
 
       {/* SEO Process Section */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="process">
         {/* Background Gradient Lines - Hexagonal Pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
@@ -359,9 +363,7 @@ export default function SEOCompanyBangalorePage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Proven SEO Process for Bangalore Businesses
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Proven 4-Step SEO Process</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We follow a systematic SEO approach specifically designed for the Bangalore market, combining technical expertise, local market knowledge, and data-driven strategies to deliver measurable results.
             </p>
@@ -385,18 +387,17 @@ export default function SEOCompanyBangalorePage() {
       </section>
 
       {/* Areas We Serve */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Areas We Serve in Bangalore</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">SEO Services Across the Globe</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive SEO services across all major areas of Bangalore, helping businesses in every
-              locality dominate local search results.
+              We provide comprehensive SEO services for businesses worldwide, across regions and industries, tailored to local market dynamics and languages.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {bangaloreAreas.map((area, index) => (
+            {serviceRegions.map((area, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-4 text-center border border-red-500/20 hover:border-red-400/40 transition-colors duration-300"
@@ -408,10 +409,10 @@ export default function SEOCompanyBangalorePage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-400 mb-6">Don't see your area listed? We serve all of Bangalore!</p>
+            <p className="text-gray-400 mb-6">Don't see your region listed? We serve businesses worldwide.</p>
             <Link href="/contact">
               <Button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
-                Check If We Serve Your Area
+                Check If We Serve Your Region
               </Button>
             </Link>
           </div>
@@ -419,10 +420,10 @@ export default function SEOCompanyBangalorePage() {
       </section>
 
       {/* Case Studies */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="case-studies">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Bangalore Success Stories</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Global SEO Success Stories</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how we've helped local Bangalore businesses achieve remarkable growth through strategic SEO.
             </p>
@@ -447,12 +448,10 @@ export default function SEOCompanyBangalorePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20">
+      <section className="relative py-20" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Frequently Asked Questions About SEO in Bangalore
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions About SEO Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get answers to common questions about SEO services in Bangalore and how Frameleads can help your business grow.
             </p>

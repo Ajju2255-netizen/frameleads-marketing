@@ -1,0 +1,427 @@
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { MapPin, CheckCircle, Phone } from "lucide-react"
+import Link from "next/link"
+import Testimonials from "../components/testimonials"
+import ContactCTA from "../components/contact-cta"
+import FloatingNotifications from "../components/floating-notifications"
+
+export const metadata = {
+  title: "Digital Marketing Services | 400% Growth Guaranteed",
+  description:
+    "Expert digital marketing services including SEO, PPC, social media & content marketing. Proven results for small businesses worldwide. Get free audit!",
+}
+
+export default function DigitalMarketingServicesPage() {
+  const serviceRegions = [
+    "North America",
+    "Asia",
+    "Europe",
+    "Latin America",
+    "Middle East",
+    "South Asia",
+  ]
+
+  const coreServices = [
+    {
+      title: "Search Engine Optimization (SEO)",
+      description:
+        "Technical SEO, on-page optimization, link building, and local SEO for multi-location businesses.",
+    },
+    {
+      title: "Pay-Per-Click Advertising (PPC)",
+      description:
+        "Google Ads, social ads, shopping ads, display and remarketing campaigns managed end-to-end.",
+    },
+    {
+      title: "Social Media Marketing",
+      description:
+        "Strategy, content creation, community management, and influencer collaborations across platforms.",
+    },
+    {
+      title: "Content Marketing",
+      description:
+        "Blog strategy, video, email marketing, and automated nurturing focused on ROI.",
+    },
+    {
+      title: "Analytics & Reporting",
+      description:
+        "Conversion tracking, performance monitoring, ROI measurement, and custom dashboards.",
+    },
+    {
+      title: "Web Design & Development",
+      description:
+        "Responsive sites, conversion rate optimization, landing pages, and e-commerce builds.",
+    },
+    {
+      title: "Digital Advertising Services",
+      description:
+        "Display, video, native, and programmatic media buying across global networks.",
+    },
+  ]
+
+  const processPhases = [
+    {
+      step: "01",
+      title: "Strategic Analysis",
+      description:
+        "Comprehensive digital audit, competitor analysis, market research, and KPI definition.",
+    },
+    {
+      step: "02",
+      title: "Strategy Development",
+      description:
+        "Multi-channel plan, content calendar, budget allocation, and timeline establishment.",
+    },
+    {
+      step: "03",
+      title: "Implementation & Optimization",
+      description:
+        "Launch, A/B testing, continuous optimization, and transparent performance tracking.",
+    },
+    {
+      step: "04",
+      title: "Scaling & Growth",
+      description:
+        "Refinement, budget scaling, new channel exploration, and long-term partnership.",
+    },
+  ]
+
+  const caseStudies = [
+    {
+      industry: "SaaS (North America)",
+      result: "300% increase in organic traffic",
+      description: "Integrated SEO + PPC delivering rapid pipeline growth in 6 months.",
+    },
+    {
+      industry: "Fintech (Europe)",
+      result: "250% boost in qualified leads",
+      description: "Multi-channel demand gen with CRO-led landing pages and content.",
+    },
+    {
+      industry: "E-commerce (APAC)",
+      result: "180% improvement in conversion rate",
+      description: "Full-funnel ads, email automation, and product SEO at scale.",
+    },
+  ]
+
+  const pricingTiers = [
+    { name: "Starter", price: "$2,500–$5,000", includes: "SEO + PPC + Reporting" },
+    { name: "Professional", price: "$5,000–$10,000", includes: "Multi-channel + Social Media" },
+    { name: "Enterprise", price: "$10,000+", includes: "Full-service + Dedicated Team" },
+  ]
+
+  const faqData = [
+    {
+      question: "What are the services of digital marketing?",
+      answer:
+        "SEO, PPC, social media marketing, content marketing, email marketing, web design, analytics, and cross-channel digital advertising.",
+    },
+    {
+      question: "What are 7 types of digital marketing?",
+      answer:
+        "SEO, PPC, Social Media, Content, Email, Mobile, and Marketing Analytics.",
+    },
+    {
+      question: "How much should I pay for digital marketing services?",
+      answer:
+        "Small businesses invest $2,500–$5,000 monthly; comprehensive programs for larger companies start at $10,000+. Expected ROI is typically 300–500%.",
+    },
+    {
+      question: "Is it worth paying for digital marketing?",
+      answer:
+        "Yes. Professional execution accelerates growth with measurable ROI across traffic, leads, and revenue.",
+    },
+    {
+      question: "How long does it take to see results?",
+      answer:
+        "PPC can be immediate; SEO takes 3–6 months; social and content build momentum within 1–3 months.",
+    },
+    {
+      question: "Do you offer services for small businesses?",
+      answer:
+        "Yes. Tailored packages maximize ROI for SMBs with flexible contracts and transparent pricing.",
+    },
+  ]
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FrameLeads Digital Marketing Services",
+    "description": "Comprehensive digital marketing services including SEO, PPC, social media marketing, and content marketing for businesses worldwide.",
+    "url": "https://frameleads.com/digital-marketing-services",
+    "telephone": "+1-XXX-XXX-XXXX",
+    "email": "hello@frameleads.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "Global" },
+    "serviceArea": serviceRegions,
+    "priceRange": "$$",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Marketing Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Search Engine Optimization (SEO)", "description": "Comprehensive SEO services to improve organic search rankings" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pay-Per-Click Advertising (PPC)", "description": "Google Ads and social media advertising management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Marketing", "description": "Social media strategy, content creation, and community management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Marketing", "description": "Strategic content creation and distribution" } }
+      ]
+    }
+  }
+
+  return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <FloatingNotifications />
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 pt-32" id="hero">
+        {/* Background Gradient Lines - Hero Grid */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            <div className="inline-block mb-6">
+              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
+                ⭐ 4.9/5 Rated • Google Partner • Serving 6 Global Regions
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+              Best Digital Marketing Services Company — 400% Traffic Growth Guaranteed
+            </h1>
+
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Transform your online presence with proven digital marketing services: expert SEO, PPC advertising, social media marketing, and content strategies that drive measurable growth.
+            </p>
+            <div className="max-w-4xl mx-auto text-left text-gray-300 mb-10">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> 400% organic growth target within 6–12 months</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Full-funnel SEO, PPC, Social, and Content</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> ROI-focused execution with transparent KPIs</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Dedicated account team and reporting cadence</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <Link href="/contact">
+                <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
+                  Get Your FREE Digital Marketing Audit
+                </Button>
+              </Link>
+              <Link href="tel:+1XXXXXXXXXX" className="flex items-center gap-2 text-gray-200 hover:text-white">
+                <Button variant="outline" className="border-red-500/40 text-gray-200 hover:text-white">
+                  <Phone className="h-5 w-5 mr-2" /> Call +1-XXX-XXX-XXXX
+                </Button>
+              </Link>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>4.9/5 rating (200+ reviews)</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Google Premier Partner</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Avg. 400% traffic growth</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Are Digital Marketing Services */}
+      <section className="relative py-20" id="what-is-digital-marketing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Are Digital Marketing Services?</h2>
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                Digital marketing services are a set of online strategies designed to reach, engage, and convert your target audience. Our full-service solutions combine data-driven SEO, PPC, social media, content, analytics, and CRO to grow revenue predictably.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {coreServices.map((service, index) => (
+                  <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50">
+                    <CardContent className="p-5">
+                      <h3 className="text-white font-semibold mb-1">{service.title}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div className="relative h-80 group rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
+              <Image src="/placeholder.jpg" alt="Digital marketing dashboard" fill className="shadow-2xl object-cover z-10" />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 group-hover:ring-red-400/50 z-20"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="relative py-20" id="process">
+        {/* Background Gradient Lines - Diamond Pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
+          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Proven 4-Step Digital Marketing Process</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A systematic approach designed for predictable growth and efficient scale across global markets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processPhases.map((phase, index) => (
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 text-center relative z-10">
+                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                    {phase.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{phase.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Geographic Coverage */}
+      <section className="relative py-20" id="areas">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Global Coverage, Local Expertise</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Serving businesses across North America, Asia, Europe, Latin America, Middle East, and South Asia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            {serviceRegions.map((area, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-4 text-center border border-red-500/20 hover:border-red-400/40 transition-colors duration-300">
+                <MapPin className="h-5 w-5 text-red-500 mx-auto mb-2" />
+                <span className="text-white font-medium">{area}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="relative py-20" id="pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Digital Marketing Services Pricing</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Custom pricing is available based on your goals and scope.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pricingTiers.map((tier) => (
+              <Card key={tier.name} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50">
+                <CardContent className="p-6 text-center">
+                  <h3 className="text-2xl font-semibold text-white mb-2">{tier.name}</h3>
+                  <div className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 text-3xl font-bold mb-2">{tier.price}</div>
+                  <p className="text-gray-400">{tier.includes}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="relative py-20" id="case-studies">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Case Studies & Success Stories</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Real results from growth-focused digital marketing programs.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
+                  <div className="text-center mb-4">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">{study.result}</div>
+                    <h3 className="text-xl font-semibold text-white">{study.industry}</h3>
+                    <p className="text-gray-400 text-sm">{study.location}</p>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">{study.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="relative py-20" id="faqs">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Answers to common questions about digital marketing services.</p>
+          </div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-6 relative z-10">
+                  <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Contact CTA */}
+      <ContactCTA
+        title="Ready to Transform Your Digital Presence?"
+        description="Get a free digital marketing audit and custom growth plan. Discover exactly how to improve performance across SEO, PPC, Social, and Content."
+        primaryButtonText="Get Free Audit"
+        secondaryButtonText="Schedule Consultation"
+      />
+
+      {/* Internal Links */}
+      <section className="relative py-12" id="internal-links">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+            <Link href="/seo-services" className="text-red-300 hover:text-red-200">SEO Services</Link>
+            <Link href="/ppc-management" className="text-red-300 hover:text-red-2 00">PPC Management</Link>
+            <Link href="/Social-media-marketing" className="text-red-300 hover:text-red-200">Social Media Marketing</Link>
+            <Link href="/content-marketing" className="text-red-300 hover:text-red-200">Content Marketing</Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+    </>
+  )
+}
