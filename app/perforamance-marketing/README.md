@@ -1,3 +1,44 @@
+## Overview of app/perforamance-marketing/page.tsx
+
+### Metadata
+- Title: Performance Marketing Agency - Drive ROI & Growth
+- Description: ROI-focused, data-driven services
+
+### Hero
+- Badge: “Results-Driven Performance Marketing Experts”
+- H1: “Performance Marketing Agency — Maximize ROI with Data-Driven Campaigns”
+- CTA: “Get Free Performance Marketing Audit” and phone contact
+- Trust: campaign count, years, conversion lift
+
+### What is Performance Marketing
+- Explains pay-for-results model and measurable outcomes
+- Bullet benefits: pay for results, tracking, scalability, transparent ROI
+- Supporting image block
+
+### Why Choose Our Services + Channels
+- Cards for primary channels: PPC, Social, Affiliate, Email, Programmatic
+- Each lists key sub-points
+
+### Process
+- Four steps: Audit & Analysis; Strategy; Implementation & Optimization; Analytics & Reporting
+
+### Solutions by Industry
+- Cards: E-commerce, B2B, SaaS, Local Business with bullet points
+
+### Platforms & Technology
+- Tools list: Google Ads/GA4, FB BM, Microsoft Ads, LinkedIn, Amazon
+- Attribution list: GA4, Adobe, HubSpot, SFMC, custom tracking
+
+### Case Studies
+- Three tiles: SaaS, E-commerce, B2B with high-level results and summaries
+
+### FAQ
+- Common questions on definition, metrics, timelines, industries, ROI reporting
+
+### Other
+- Structured data: MarketingAgency and FAQPage via JSON-LD script
+- Shared UI: `Navbar`, `Footer`, `Testimonials`, `ContactCTA`, `FloatingNotifications`
+
 # Performance Marketing Page Documentation
 
 ## Overview
