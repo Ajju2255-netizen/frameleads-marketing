@@ -10,63 +10,63 @@ import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
 
 export const metadata = {
-  title: "Performance Marketing Agency - Drive ROI & Growth",
+  title: "Social Media Marketing Agency | Drive ROI with Expert SMM Services",
   description:
-    "Expert performance marketing services delivering measurable results. ROI-focused campaigns, data-driven strategies, and proven growth for your business.",
+    "Leading social media marketing agency delivering measurable results. Expert social media management, advertising & strategy services. Get your free audit today!",
 }
 
 export default function PerformanceMarketingPage() {
-  const performanceBenefits = [
-    "Pay only for results — no wasted spend on impressions",
-    "Real-time performance tracking and insights",
-    "Scalable growth by doubling down on winning campaigns",
-    "Transparent ROI with clear attribution",
+  const coreBenefits = [
+    "Increased brand awareness across key platforms",
+    "Lead generation through conversion-focused funnels",
+    "Customer engagement and community building",
+    "Revenue growth via targeted campaigns and offers",
   ]
 
   const channels = [
     {
-      title: "Paid Search Marketing (PPC)",
+      title: "Social Media Strategy Development",
       points: [
-        "Google Ads optimization for conversion",
-        "Bing Ads with ROI focus",
-        "Advanced keyword and bid strategies",
-        "Landing page CRO",
+        "Platform-specific content strategies",
+        "Audience research and persona development",
+        "Competitive analysis and positioning",
+        "Content calendar and posting optimization",
       ],
     },
     {
-      title: "Social Media Performance Marketing",
+      title: "Social Media Management Services",
       points: [
-        "Facebook and Instagram optimization",
-        "LinkedIn B2B performance campaigns",
-        "TikTok and YouTube strategies",
-        "Cross-platform retargeting",
+        "Daily content creation and publishing",
+        "Community management and engagement",
+        "Brand voice development and consistency",
+        "Real-time monitoring and response",
       ],
     },
     {
-      title: "Affiliate Marketing Programs",
+      title: "Social Media Advertising",
       points: [
-        "Partner network development",
-        "Commission model optimization",
-        "Performance tracking and attribution",
-        "Affiliate recruitment and enablement",
+        "Facebook and Instagram targeted ads",
+        "LinkedIn B2B advertising campaigns",
+        "YouTube video advertising",
+        "TikTok and emerging platform ads",
       ],
     },
     {
-      title: "Email Marketing Performance",
+      title: "Influencer Marketing",
       points: [
-        "Automated conversion-focused journeys",
-        "Advanced segmentation",
-        "A/B testing and experimentation",
-        "Lifecycle marketing automation",
+        "Influencer identification and outreach",
+        "Campaign strategy and execution",
+        "Performance tracking and ROI analysis",
+        "Long-term partnership development",
       ],
     },
     {
-      title: "Programmatic Advertising",
+      title: "Social Analytics & Reporting",
       points: [
-        "Real-time bidding optimization",
-        "Audience targeting and lookalikes",
-        "Cross-device attribution",
-        "Dynamic creative optimization",
+        "Performance dashboards and KPIs",
+        "ROI tracking and attribution",
+        "Audience insights and behavior",
+        "Monthly optimization roadmaps",
       ],
     },
   ]
@@ -74,131 +74,129 @@ export default function PerformanceMarketingPage() {
   const process = [
     {
       step: "01",
-      title: "Performance Audit & Analysis",
+      title: "Social Media Audit & Strategy",
       description:
-        "Comprehensive audit of current digital performance, competitor insights, and identification of high-ROI opportunities across channels.",
+        "Complete analysis of your current presence, competitor benchmarking, and custom strategy aligned to business goals.",
     },
     {
       step: "02",
-      title: "Data-Driven Strategy Development",
+      title: "Content Creation & Management",
       description:
-        "Custom performance marketing strategy aligned to your goals and KPIs, with clear channel, audience, and budget plans.",
+        "Strategic content development with consistent brand messaging, engaging visuals, and optimized posting schedules.",
     },
     {
       step: "03",
-      title: "Implementation & Optimization",
+      title: "Paid Social Advertising",
       description:
-        "Launch multi-channel campaigns with continuous A/B testing, conversion optimization, and real-time performance tracking.",
+        "Targeted ad campaigns to maximize reach, engagement, and conversions with efficient CPC and strong ROAS.",
     },
     {
       step: "04",
-      title: "Analytics, Attribution & Reporting",
+      title: "Analytics & Optimization",
       description:
-        "Advanced attribution modeling and transparent ROI reporting with actionable insights for ongoing improvement.",
+        "Continuous monitoring, performance analysis, and refinement to ensure maximum ROI from social channels.",
     },
   ]
 
   const industries = [
     {
-      title: "E-commerce Performance Marketing",
+      title: "E-commerce Social Media Marketing",
       points: [
-        "Shopping campaign optimization",
-        "Product feed management",
-        "CAC reduction and LTV growth",
-        "Cart abandonment recovery",
+        "Product showcase campaigns",
+        "Shopping ads and conversion optimization",
+        "UGC strategies and testimonials",
+        "Seasonal and flash sale promotions",
       ],
     },
     {
-      title: "B2B Performance Marketing",
+      title: "B2B Social Media Marketing",
       points: [
-        "Lead generation optimization",
-        "Account-based marketing (ABM)",
-        "Funnel performance tracking",
-        "MQL quality and volume improvement",
+        "LinkedIn lead generation",
+        "Thought leadership and community",
+        "Webinar promotion",
+        "Account-based social campaigns",
       ],
     },
     {
-      title: "SaaS Performance Marketing",
+      title: "SaaS Social Media Marketing",
       points: [
-        "Trial-to-paid conversion uplift",
-        "Subscription model growth",
-        "Onboarding and retention",
-        "Churn reduction and activation",
+        "Feature announcements and demos",
+        "Customer success amplification",
+        "Free trial conversion optimization",
+        "Technical content and developer engagement",
       ],
     },
     {
-      title: "Local Business Performance Marketing",
+      title: "Local Business Social Media Marketing",
       points: [
-        "Google Business Profile optimization",
-        "Local search advertising",
-        "Geo-targeted campaigns",
-        "Store visit tracking",
+        "Geotargeted ads for local customers",
+        "Google Business Profile and local SEO",
+        "Community event promotion",
+        "Location-based content and engagement",
       ],
     },
   ]
 
   const platforms = [
-    "Google Ads & GA4",
-    "Facebook Business Manager",
-    "Microsoft Advertising",
-    "LinkedIn Campaign Manager",
-    "Amazon Advertising",
+    "Hootsuite, Buffer, Sprout Social",
+    "Meta Business Suite and LinkedIn Campaign Manager",
+    "Canva, Adobe Creative Suite",
+    "Video editing and production tools",
   ]
 
   const attribution = [
-    "GA4 Enhanced Measurement",
-    "Adobe Analytics",
-    "HubSpot",
-    "Salesforce Marketing Cloud",
-    "Custom UTM and server-side tracking",
+    "Google Analytics 4 and platform insights",
+    "Facebook/Instagram analytics",
+    "Custom UTM tracking",
+    "Cross-platform ROI attribution",
   ]
 
   const caseStudies = [
     {
-      industry: "SaaS Company",
-      result: "65% lower CPA, 180% higher trial-to-paid",
-      description:
-        "Multi-channel strategy across Google, LinkedIn, and email automation delivered cost-efficient acquisition and conversion uplift.",
-    },
-    {
       industry: "E-commerce Brand",
-      result: "250% revenue growth, 40% ROAS improvement",
+      result: "300% revenue increase",
       description:
-        "Google Shopping, Facebook, and affiliates scaled profitable growth and lifted customer lifetime value.",
+        "Influencer partnerships, UGC campaigns, and targeted ads delivered 300% revenue growth and 250% follower increase in 6 months.",
     },
     {
-      industry: "B2B Enterprise",
-      result: "200% more qualified leads, 50% lower CPL",
+      industry: "B2B SaaS Company",
+      result: "400% lead generation",
       description:
-        "ABM-led performance marketing via LinkedIn and Google Ads improved lead quality and conversion rates.",
+        "LinkedIn thought leadership and targeted ads generated 400% more qualified leads and cut CPL by 60%.",
+    },
+    {
+      industry: "Local Restaurant Chain",
+      result: "200% foot traffic",
+      description:
+        "Geotargeted ads, community engagement, and rich creative increased foot traffic by 200% across locations.",
     },
   ]
 
   const faqData = [
     {
-      question: "What is performance marketing and how does it differ?",
+      question: "What is a social media marketing agency?",
       answer:
-        "Performance marketing is a results-focused approach where you pay only when specific actions occur (clicks, leads, sales), unlike traditional marketing that charges for impressions or reach.",
+        "A specialized partner that grows your brand, engagement, and sales through strategic campaigns across platforms like Facebook, Instagram, LinkedIn, and TikTok.",
     },
     {
-      question: "What are the key performance marketing metrics?",
+      question: "How much does a social media marketing agency cost?",
       answer:
-        "Core metrics include CPA, ROAS, CTR, conversion rate, and customer lifetime value (CLV).",
+        "Typical retainers range $1,500–$10,000+ per month depending on scope, platforms, and ad spend. We customize packages for all sizes.",
     },
     {
-      question: "How fast can we see results?",
+      question: "What services are included?",
       answer:
-        "Initial results typically appear within 2–4 weeks, with significant optimization gains after 60–90 days of continuous testing and iteration.",
+        "Strategy, content creation, social management, paid advertising, influencer campaigns, community management, analytics, and reporting.",
     },
     {
-      question: "Which industries benefit most?",
+      question: "How long until we see results?",
       answer:
-        "E-commerce, SaaS, B2B, fintech, healthcare, professional services, and education see outstanding ROI from performance marketing.",
+        "Most brands see engagement lift in 2–4 weeks, with significant growth in followers, leads, and sales within 90 days of consistent work.",
     },
     {
-      question: "How do you ensure transparent ROI reporting?",
+      question: "Which platforms should we use?",
       answer:
-        "We provide real-time dashboards, monthly reports, and full-funnel attribution for complete clarity across channels.",
+        "It depends on your audience and goals. Facebook/Instagram fit most, LinkedIn for B2B, TikTok for younger demographics.",
     },
   ]
 
@@ -207,18 +205,11 @@ export default function PerformanceMarketingPage() {
     "@graph": [
       {
         "@type": "MarketingAgency",
-        "name": "Frameleads Performance Marketing",
-        "description": "Expert performance marketing services delivering measurable ROI through data-driven campaigns",
-        "url": "https://frameleads.com/performance-marketing",
-        "telephone": "+91 6362821368",
-        "serviceArea": ["India", "United Arab Emirates", "United States", "United Kingdom"],
-        "services": [
-          "Performance Marketing",
-          "PPC Management",
-          "Social Media Advertising",
-          "Affiliate Marketing",
-          "Conversion Optimization"
-        ]
+        "name": "FrameLeads Social Media Marketing Agency",
+        "description": "Professional social media marketing agency providing comprehensive SMM services including strategy, management, advertising, and analytics.",
+        "serviceType": ["Social Media Marketing", "Social Media Management", "Social Media Advertising", "SMM Consulting"],
+        "areaServed": ["North America", "Europe", "Asia", "Latin America", "Middle East", "South Asia"],
+        "url": "https://frameleads.com/social-media-marketing"
       },
       {
         "@type": "FAQPage",
@@ -264,22 +255,22 @@ export default function PerformanceMarketingPage() {
           <div className="text-center">
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
-                🎯 Results-Driven Performance Marketing Experts
+                🚀 Expert Social Media Marketing Agency
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              Performance Marketing Agency — Maximize ROI with Data-Driven Campaigns
+              Social Media Marketing Agency — Drive Growth with Data-Driven SMM Strategies
             </h1>
 
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
-              Transform your growth with performance marketing solutions that deliver measurable results. Our data-driven approach ensures every marketing dollar drives real ROI through strategic, performance-based campaigns.
+              Transform your brand's social presence into a powerful revenue engine. Our expert social media marketing services deliver measurable ROI through strategic content creation, targeted advertising, and comprehensive social media management.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
-                  Get Free Performance Marketing Audit
+                  Get Free Social Media Marketing Audit
                 </Button>
               </Link>
               <div className="flex items-center gap-2 text-gray-400">
@@ -292,22 +283,26 @@ export default function PerformanceMarketingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>500+ successful performance campaigns</span>
+                <span>500+ successful social campaigns</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>5+ years of ROI optimization</span>
+                <span>95% client retention rate</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-red-500" />
-                <span>Average 300% conversion lift</span>
+                <span>Certified social media experts</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-red-500" />
+                <span>Results within 30 days</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What is Performance Marketing */}
+      {/* What is Social Media Marketing */}
       <section className="relative py-20">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
@@ -317,13 +312,13 @@ export default function PerformanceMarketingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                What is Performance Marketing? Your Path to Measurable Growth
+                What is Social Media Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Performance marketing is a data-driven approach where you pay only for completed actions — clicks, leads, sales, or other conversions. Unlike traditional advertising, performance-based marketing focuses on measurable outcomes and accountable ROI.
+                Social media marketing is the strategic use of platforms to connect with your audience, build brand awareness, and drive business growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {performanceBenefits.map((point, index) => (
+                {coreBenefits.map((point, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
                     <span className="text-gray-300">{point}</span>
