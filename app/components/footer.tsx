@@ -7,7 +7,7 @@ export default function Footer() {
   const services = [
     { name: "Digital Marketing Services", href: "/services/digital-marketing" },
     { name: "SEO Services", href: "/services/seo" },
-    { name: "PPC Management", href: "/services/ppc-management" },
+    { name: "PPC Management", href: "/ppc-management" },
     { name: "Content Marketing", href: "/content-marketing" },
     { name: "Social Media Marketing", href: "/Social-media-marketing" },
     { name: "Performance Marketing", href: "/perforamance-marketing" },
