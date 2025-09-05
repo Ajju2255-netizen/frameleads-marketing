@@ -148,7 +148,7 @@ export default function SEOCompanyBangalorePage() {
         "name": "Frameleads - Global SEO Company",
         "description": "Leading global SEO company providing guaranteed traffic growth and first-page rankings",
         "url": "https://frameleads.com/seo-services",
-        "telephone": "+91 63628 21368",
+        "telephone": "+91 6362821368",
         "areaServed": serviceRegions,
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -259,7 +259,7 @@ export default function SEOCompanyBangalorePage() {
               </Link>
               <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-200 hover:text-white">
                 <Button variant="outline" className="border-red-500/40 text-gray-200 hover:text-white">
-                  <Phone className="h-5 w-5 mr-2" /> Call +91 63628 21368
+                  <Phone className="h-5 w-5 mr-2" /> Call +91 6362821368
                 </Button>
               </Link>
             </div>

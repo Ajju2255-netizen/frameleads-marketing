@@ -77,19 +77,19 @@ export default function Testimonials() {
     <section className="relative py-20">
       {/* Background Gradient Lines - Wave Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/18 to-transparent"></div>
-        <div className="absolute top-2/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
-        <div className="absolute top-4/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/18 to-transparent"></div>
-        <div className="absolute top-5/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
+        <div className="absolute top-1/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35]/18 to-transparent"></div>
+        <div className="absolute top-2/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35]/15 to-transparent"></div>
+        <div className="absolute top-4/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35]/18 to-transparent"></div>
+        <div className="absolute top-5/6 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35]/15 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-[#5A5A5A] mb-6 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] bg-clip-text text-transparent">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5A5A5A]/80 max-w-3xl mx-auto">
             Real results from real businesses using our digital marketing strategies.
           </p>
         </div>
@@ -99,27 +99,27 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.id}
-              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
+              className="group relative bg-white/80 backdrop-blur-xl border-[#FFE4D6]/30 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-6 relative z-10">
                 {/* Rating Stars */}
                 <div className="flex items-center mb-4">{renderStars(testimonial.rating)}</div>
 
                 {/* Testimonial Text */}
-                <blockquote className="text-gray-300 mb-4 italic leading-relaxed group-hover:text-white transition-colors duration-300">
+                <blockquote className="text-[#5A5A5A]/80 mb-4 italic leading-relaxed group-hover:text-[#5A5A5A] transition-colors duration-300">
                   "{testimonial.testimonial}"
                 </blockquote>
 
                 {/* Results Badge */}
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/20 to-red-400/20 px-3 py-1.5 rounded-full border border-red-500/30 mb-4">
-                  <Sparkles className="h-4 w-4 text-red-400" />
-                  <span className="text-red-300 text-sm font-medium">{testimonial.results}</span>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 px-3 py-1.5 rounded-full border border-[#FF6B35]/30 mb-4">
+                  <Sparkles className="h-4 w-4 text-[#FF6B35]" />
+                  <span className="text-[#FF6B35] text-sm font-medium">{testimonial.results}</span>
                 </div>
 
                 {/* Client Info */}
                 <div className="flex items-center gap-4">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-red-500/30 group-hover:border-red-400/50 transition-all duration-300">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#FF6B35]/30 group-hover:border-[#FF6B35]/50 transition-all duration-300">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
@@ -128,10 +128,10 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-red-300 transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-[#5A5A5A] group-hover:text-[#FF6B35] transition-colors duration-300">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-400 text-sm">{testimonial.position}</p>
+                    <p className="text-[#5A5A5A]/70 text-sm">{testimonial.position}</p>
                   </div>
                 </div>
               </CardContent>
@@ -141,9 +141,9 @@ export default function Testimonials() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <p className="text-gray-400 mb-6 text-lg">Ready to join our success stories?</p>
+          <p className="text-[#5A5A5A]/70 mb-6 text-lg">Ready to join our success stories?</p>
           <Link href="/contact">
-            <button className="bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
               Get Your Free Digital Marketing Consultation
             </button>
           </Link>

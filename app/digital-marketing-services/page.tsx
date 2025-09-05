@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect, useState } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import Image from "next/image"
@@ -9,13 +13,22 @@ import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
 
-export const metadata = {
-  title: "Digital Marketing Services | 400% Growth Guaranteed",
-  description:
-    "Expert digital marketing services including SEO, PPC, social media & content marketing. Proven results for small businesses worldwide. Get free audit!",
-}
 
 export default function DigitalMarketingServicesPage() {
+  const [isVisible, setIsVisible] = useState(false)
+  const { scrollYProgress } = useScroll()
+  
+  // Parallax transforms for background elements
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -200])
+  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 180])
+  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -90])
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   const serviceRegions = [
     "North America",
     "Asia",
@@ -153,8 +166,8 @@ export default function DigitalMarketingServicesPage() {
     "name": "FrameLeads Digital Marketing Services",
     "description": "Comprehensive digital marketing services including SEO, PPC, social media marketing, and content marketing for businesses worldwide.",
     "url": "https://frameleads.com/digital-marketing-services",
-    "telephone": "+1-XXX-XXX-XXXX",
-    "email": "hello@frameleads.com",
+    "telephone": "+91 6362821368",
+    "email": "ajsal@frameleads.com",
     "address": { "@type": "PostalAddress", "addressCountry": "Global" },
     "serviceArea": serviceRegions,
     "priceRange": "$$",
@@ -177,68 +190,206 @@ export default function DigitalMarketingServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
       <FloatingNotifications />
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      
+      {/* Organic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Subtle gradient overlays */}
+        <motion.div 
+          style={{ y: y1, rotate: rotate1 }}
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div 
+          style={{ y: y2, rotate: rotate2 }}
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.15, 0.3, 0.15],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 3
+          }}
+        />
+        
+        <motion.div 
+          style={{ y: y3 }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 6
+          }}
+        />
+
+        {/* Organic dotted patterns */}
+        <motion.div 
+          className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full"
+          animate={{
+            y: [0, -15, 0],
+            x: [0, 8, 0],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div 
+          className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full"
+          animate={{
+            y: [0, 12, 0],
+            x: [0, -10, 0],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        
+        <motion.div 
+          className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full"
+          animate={{
+            y: [0, -18, 0],
+            x: [0, 12, 0],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4
+          }}
+        />
+
+        {/* Subtle geometric shapes */}
+        <motion.div 
+          className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [45, 225, 45],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
+        
+        <motion.div 
+          className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full"
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 3
+          }}
+        />
+
+        {/* Layered transparency effects */}
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-[#FFE4D6]/8 to-transparent rounded-3xl blur-2xl"
+          animate={{
+            scale: [1, 1.05, 1],
+            rotate: [0, 3, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div 
+          className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-gradient-to-tl from-[#FFCAB0]/6 to-transparent rounded-2xl blur-2xl"
+          animate={{
+            scale: [1.05, 1, 1.05],
+            rotate: [0, -2, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 8
+          }}
+        />
       </div>
 
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32" id="hero">
-        {/* Background Gradient Lines - Hero Grid */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6">
-              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
+              <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
                 ⭐ 4.9/5 Rated • Google Partner • Serving 6 Global Regions
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
               Best Digital Marketing Services Company — 400% Traffic Growth Guaranteed
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform your online presence with proven digital marketing services: expert SEO, PPC advertising, social media marketing, and content strategies that drive measurable growth.
             </p>
-            <div className="max-w-4xl mx-auto text-left text-gray-300 mb-10">
+            <div className="max-w-4xl mx-auto text-left text-gray-600 mb-10">
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> 400% organic growth target within 6–12 months</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Full-funnel SEO, PPC, Social, and Content</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> ROI-focused execution with transparent KPIs</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-red-500 mt-0.5" /> Dedicated account team and reporting cadence</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 400% organic growth target within 6–12 months</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Full-funnel SEO, PPC, Social, and Content</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> ROI-focused execution with transparent KPIs</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Dedicated account team and reporting cadence</li>
               </ul>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
-                <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105">
+                <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
                   Get Your FREE Digital Marketing Audit
                 </Button>
               </Link>
-              <Link href="tel:+1XXXXXXXXXX" className="flex items-center gap-2 text-gray-200 hover:text-white">
-                <Button variant="outline" className="border-red-500/40 text-gray-200 hover:text-white">
-                  <Phone className="h-5 w-5 mr-2" /> Call +1-XXX-XXX-XXXX
+              <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+                <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
+                  <Phone className="h-5 w-5 mr-2" /> Call +91 63628 21368
                 </Button>
               </Link>
             </div>
 
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>4.9/5 rating (200+ reviews)</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Google Premier Partner</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-red-500" /><span>Avg. 400% traffic growth</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>4.9/5 rating (200+ reviews)</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Google Premier Partner</span></div>
+              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Avg. 400% traffic growth</span></div>
             </div>
           </div>
         </div>
@@ -249,25 +400,25 @@ export default function DigitalMarketingServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Are Digital Marketing Services?</h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What Are Digital Marketing Services?</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Digital marketing services are a set of online strategies designed to reach, engage, and convert your target audience. Our full-service solutions combine data-driven SEO, PPC, social media, content, analytics, and CRO to grow revenue predictably.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {coreServices.map((service, index) => (
-                  <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50">
+                  <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-5">
-                      <h3 className="text-white font-semibold mb-1">{service.title}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+                      <h3 className="text-gray-900 font-semibold mb-1">{service.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
             </div>
             <div className="relative h-80 group rounded-3xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
               <Image src="/placeholder.jpg" alt="Digital marketing dashboard" fill className="shadow-2xl object-cover z-10" />
-              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 group-hover:ring-red-400/50 z-20"></div>
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#FF6B35]/30 group-hover:ring-[#FF8A50]/50 z-20"></div>
             </div>
           </div>
         </div>
@@ -275,31 +426,24 @@ export default function DigitalMarketingServicesPage() {
 
       {/* Process Section */}
       <section className="relative py-20" id="process">
-        {/* Background Gradient Lines - Diamond Pattern */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
-          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
-          <div className="absolute top-1/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
-          <div className="absolute top-3/4 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-red-500/10 to-transparent"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Proven 4-Step Digital Marketing Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Proven 4-Step Digital Marketing Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A systematic approach designed for predictable growth and efficient scale across global markets.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processPhases.map((phase, index) => (
-              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 text-center relative z-10">
-                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {phase.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{phase.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{phase.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{phase.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -311,17 +455,17 @@ export default function DigitalMarketingServicesPage() {
       <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Global Coverage, Local Expertise</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Global Coverage, Local Expertise</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Serving businesses across North America, Asia, Europe, Latin America, Middle East, and South Asia.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {serviceRegions.map((area, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-xl rounded-lg p-4 text-center border border-red-500/20 hover:border-red-400/40 transition-colors duration-300">
-                <MapPin className="h-5 w-5 text-red-500 mx-auto mb-2" />
-                <span className="text-white font-medium">{area}</span>
+              <div key={index} className="bg-white/80 backdrop-blur-xl rounded-lg p-4 text-center border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                <MapPin className="h-5 w-5 text-[#FF6B35] mx-auto mb-2" />
+                <span className="text-gray-900 font-medium">{area}</span>
               </div>
             ))}
           </div>
@@ -332,16 +476,16 @@ export default function DigitalMarketingServicesPage() {
       <section className="relative py-20" id="pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Digital Marketing Services Pricing</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Custom pricing is available based on your goals and scope.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Digital Marketing Services Pricing</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Custom pricing is available based on your goals and scope.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricingTiers.map((tier) => (
-              <Card key={tier.name} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50">
+              <Card key={tier.name} className="bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{tier.name}</h3>
-                  <div className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 text-3xl font-bold mb-2">{tier.price}</div>
-                  <p className="text-gray-400">{tier.includes}</p>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
+                  <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-3xl font-bold mb-2">{tier.price}</div>
+                  <p className="text-gray-600">{tier.includes}</p>
                 </CardContent>
               </Card>
             ))}
@@ -353,21 +497,20 @@ export default function DigitalMarketingServicesPage() {
       <section className="relative py-20" id="case-studies">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Case Studies & Success Stories</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Real results from growth-focused digital marketing programs.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Case Studies & Success Stories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real results from growth-focused digital marketing programs.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
                   <div className="text-center mb-4">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-2">{study.result}</div>
-                    <h3 className="text-xl font-semibold text-white">{study.industry}</h3>
-                    <p className="text-gray-400 text-sm">{study.location}</p>
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">{study.result}</div>
+                    <h3 className="text-xl font-semibold text-gray-900">{study.industry}</h3>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{study.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{study.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -379,17 +522,17 @@ export default function DigitalMarketingServicesPage() {
       <section className="relative py-20" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Answers to common questions about digital marketing services.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Answers to common questions about digital marketing services.</p>
           </div>
 
           <div className="space-y-6">
             {faqData.map((faq, index) => (
-              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
-                  <h3 className="text-xl font-semibold text-white mb-4">{faq.question}</h3>
-                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -412,10 +555,10 @@ export default function DigitalMarketingServicesPage() {
       <section className="relative py-12" id="internal-links">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-            <Link href="/seo-services" className="text-red-300 hover:text-red-200">SEO Services</Link>
-            <Link href="/ppc-management" className="text-red-300 hover:text-red-2 00">PPC Management</Link>
-            <Link href="/Social-media-marketing" className="text-red-300 hover:text-red-200">Social Media Marketing</Link>
-            <Link href="/content-marketing" className="text-red-300 hover:text-red-200">Content Marketing</Link>
+            <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50]">SEO Services</Link>
+            <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50]">PPC Management</Link>
+            <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Social Media Marketing</Link>
+            <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Content Marketing</Link>
           </div>
         </div>
       </section>

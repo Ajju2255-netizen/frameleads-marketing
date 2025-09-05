@@ -47,7 +47,7 @@ export default function AboutPage() {
     "url": "https://frameleads.com/about",
     "logo": "https://frameleads.com/logos/brand-logo.png",
     "sameAs": ["https://linkedin.com/company/frameleads", "https://www.instagram.com/frameleads/"],
-    "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91 63628 21368", "contactType": "customer service", "areaServed": "Worldwide" }],
+    "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91 6362821368", "contactType": "customer service", "areaServed": "Worldwide" }],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" }
   }
 

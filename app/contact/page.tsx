@@ -23,12 +23,12 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 63628 21368", "+91 63628 21368", "Mon-Fri: 9AM-6PM"],
+      details: ["+91 6362821368", "+91 6362821368", "Mon-Fri: 9AM-6PM"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["hello@frameleads.com", "support@frameleads.com", "careers@frameleads.com"],
+      details: ["ajsal@frameleads.com", "support@frameleads.com", "careers@frameleads.com"],
     },
     {
       icon: Clock,
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input id="phone" name="phone" placeholder="+91 63628 21368" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                    <input id="phone" name="phone" placeholder="+91 6362821368" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
                   </div>
 
                   <div>
