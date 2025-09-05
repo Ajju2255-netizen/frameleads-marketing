@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette } from "lucide-react"
@@ -517,6 +516,106 @@ export default function DigitalMarketingInUnitedStatesPage() {
         </div>
       </section>
 
+      {/* Animated Statistics Section */}
+      <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across America</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across all US markets</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <TrendingUp className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">500%</div>
+                <div className="text-gray-600 text-sm">Average ROI Growth</div>
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
+                  <motion.div 
+                    className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 2, delay: 0.5 }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">500+</div>
+                <div className="text-gray-600 text-sm">US Clients Served</div>
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
+                  <motion.div 
+                    className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 2, delay: 0.7 }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">50+</div>
+                <div className="text-gray-600 text-sm">US Cities Covered</div>
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
+                  <motion.div 
+                    className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 2, delay: 0.9 }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <Target className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">98%</div>
+                <div className="text-gray-600 text-sm">Client Retention</div>
+                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
+                  <motion.div 
+                    className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "98%" }}
+                    transition={{ duration: 2, delay: 1.1 }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="relative py-20" id="why-choose-us">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -575,12 +674,13 @@ export default function DigitalMarketingInUnitedStatesPage() {
             </div>
             <div className="relative h-80 group rounded-3xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
-              <Image
-                src="/story/story-3.png"
-                alt="Performance marketing results dashboard"
-                fill
-                className="shadow-2xl object-cover z-10"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF8A50]/10 flex items-center justify-center z-10">
+                <div className="text-center">
+                  <BarChart3 className="h-16 w-16 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Dashboard</h3>
+                  <p className="text-gray-600">Real-time marketing analytics and insights</p>
+                </div>
+              </div>
               <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#FF6B35]/30 group-hover:ring-[#FF8A50]/50 z-20"></div>
             </div>
           </div>
@@ -603,13 +703,24 @@ export default function DigitalMarketingInUnitedStatesPage() {
             {digitalMarketingServices.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-8 relative z-10">
-                    <div className="flex items-start gap-6">
-                      <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#FF6B35]/25">
-                        <IconComponent className="h-8 w-8 text-white" />
-                      </div>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                >
+                  <Card className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <CardContent className="p-8 relative z-10">
+                      <div className="flex items-start gap-6">
+                        <motion.div 
+                          className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#FF6B35]/25"
+                          whileHover={{ rotate: 360, scale: 1.1 }}
+                          transition={{ duration: 0.6 }}
+                        >
+                          <IconComponent className="h-8 w-8 text-white" />
+                        </motion.div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
@@ -642,6 +753,7 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     </div>
                   </CardContent>
                 </Card>
+                </motion.div>
               )
             })}
           </div>
@@ -662,16 +774,44 @@ export default function DigitalMarketingInUnitedStatesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {digitalMarketingProcess.map((process, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 text-center relative z-10">
-                  <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
-                    {process.step}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{process.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{process.description}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.2,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  transition: { duration: 0.2 }
+                }}
+                className="group"
+              >
+                <Card className="relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-6 text-center relative z-10">
+                    <motion.div 
+                      className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {process.step}
+                    </motion.div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{process.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{process.description}</p>
+                    <motion.div
+                      className="w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-full mt-4"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: "100%" }}
+                      transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
+                    />
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -691,12 +831,24 @@ export default function DigitalMarketingInUnitedStatesPage() {
             {industriesWeServe.map((industry, index) => {
               const IconComponent = industry.icon
               return (
-                <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-6 relative z-10">
-                    <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  className="group"
+                >
+                  <Card className="relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 h-full">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <CardContent className="p-6 relative z-10">
+                      <motion.div 
+                        className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                        whileHover={{ rotate: 360, scale: 1.1 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <IconComponent className="h-8 w-8 text-white" />
+                      </motion.div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{industry.title}</h3>
                     <p className="text-gray-600 mb-6 text-center">{industry.description}</p>
                     <ul className="space-y-2 mb-4">
@@ -712,6 +864,7 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     </div>
                   </CardContent>
                 </Card>
+                </motion.div>
               )
             })}
           </div>
@@ -778,11 +931,26 @@ export default function DigitalMarketingInUnitedStatesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {usBusinessMarkets.map((district, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{district.category}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{district.description}</p>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group"
+              >
+                <Card className="relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardContent className="p-6 relative z-10">
+                    <motion.div
+                      whileHover={{ rotate: 360, scale: 1.2 }}
+                      transition={{ duration: 0.6 }}
+                      className="mb-4"
+                    >
+                      <MapPin className="h-6 w-6 text-[#FF6B35] group-hover:text-[#FF8A50] transition-colors duration-300" />
+                    </motion.div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{district.category}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{district.description}</p>
                   <div className="space-y-2">
                     {district.areas.map((area, idx) => (
                       <div key={idx} className="flex items-center gap-2">
@@ -793,6 +961,7 @@ export default function DigitalMarketingInUnitedStatesPage() {
                   </div>
                 </CardContent>
               </Card>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -873,9 +1042,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Content optimization & link building</span>
                   </div>
                 </div>
-                <Link href="/seo-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore SEO Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -904,9 +1073,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Social media creative campaigns</span>
                   </div>
                 </div>
-                <Link href="/creative-advertising-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore Creative Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -935,9 +1104,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Sales enablement & CRM integration</span>
                   </div>
                 </div>
-                <Link href="/b2b-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore B2B Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -966,9 +1135,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Lead nurturing automation</span>
                   </div>
                 </div>
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore Real Estate Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -997,9 +1166,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Web Design & Development</span>
                   </div>
                 </div>
-                <Link href="/digital-marketing-services" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore All Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -1028,9 +1197,9 @@ export default function DigitalMarketingInUnitedStatesPage() {
                     <span className="text-sm">Cultural adaptation strategies</span>
                   </div>
                 </div>
-                <Link href="/digital-marketing-in-dubai" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                <div className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold opacity-75 cursor-not-allowed">
                   Explore Global Services
-                </Link>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -1040,25 +1209,52 @@ export default function DigitalMarketingInUnitedStatesPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Resources & Tools</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <Link href="/free-marketing-audit" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Free Marketing Audit</Link>
+                <div className="block text-gray-500 font-medium mb-2 cursor-not-allowed">Free Marketing Audit</div>
                 <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance</p>
               </div>
               <div className="text-center">
-                <Link href="/tools/roi-calculator" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">ROI Calculator</Link>
+                <div className="block text-gray-500 font-medium mb-2 cursor-not-allowed">ROI Calculator</div>
                 <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation</p>
               </div>
               <div className="text-center">
-                <Link href="/resources/digital-marketing-guide" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Digital Marketing Guide</Link>
+                <div className="block text-gray-500 font-medium mb-2 cursor-not-allowed">Digital Marketing Guide</div>
                 <p className="text-sm text-gray-600">Comprehensive guide to digital marketing strategies and best practices</p>
               </div>
               <div className="text-center">
-                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">FrameLeads Academy</Link>
+                <div className="block text-gray-500 font-medium mb-2 cursor-not-allowed">FrameLeads Academy</div>
                 <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2, duration: 0.5 }}
+        className="fixed bottom-8 right-8 z-50"
+      >
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="relative"
+        >
+          <Link href="/contact">
+            <Button className="w-14 h-14 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-[#FF6B35]/50 transition-all duration-300">
+              <Phone className="h-6 w-6" />
+            </Button>
+          </Link>
+          <motion.div
+            className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            !
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
       <Footer />
     </div>
