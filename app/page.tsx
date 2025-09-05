@@ -208,7 +208,7 @@ export default function Home() {
               <div className="space-y-2">
                 <a href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Global SEO Services</a>
                 <a href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</a>
-                <a href="/seo-company-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Dubai</a>
+                <a href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</a>
               </div>
             </div>
 

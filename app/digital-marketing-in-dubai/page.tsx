@@ -13,7 +13,7 @@ import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
 
-export default function DigitalMarketingCompanyDubaiPage() {
+export default function DigitalMarketingInDubaiPage() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -212,7 +212,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
         "@type": "LocalBusiness",
         "name": "Frameleads",
         "description": "Best Digital Marketing Company in Dubai | 500% ROI Growth Guaranteed",
-        "url": "https://frameleads.com/seo-company-in-dubai",
+        "url": "https://frameleads.com/digital-marketing-in-dubai",
         "telephone": "+91 6362821368",
         "email": "ajsal@frameleads.com",
         "address": {
@@ -695,7 +695,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">SEO & Search</h3>
               <div className="space-y-3">
-                <Link href="/seo-company-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Dubai</Link>
+                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
                 <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
                 <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
                 <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
@@ -723,7 +723,7 @@ export default function DigitalMarketingCompanyDubaiPage() {
                 <Link href="/performance-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing Bangalore</Link>
                 <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising Bangalore</Link>
                 <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</Link>
-                <Link href="/seo-company-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Dubai</Link>
+                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
               </div>
             </div>
 
@@ -747,5 +747,3 @@ export default function DigitalMarketingCompanyDubaiPage() {
     </>
   )
 }
-
-
