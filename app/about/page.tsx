@@ -16,7 +16,7 @@ export default function AboutPage() {
     { number: "500+", label: "Happy Clients" },
     { number: "1,000+", label: "Projects Delivered" },
     { number: "4.9/5", label: "Average Rating" },
-    { number: "6 Regions", label: "Global Delivery" },
+    { number: "6+", label: "Regions Global Delivery" },
   ]
 
   const values = [
@@ -52,12 +52,24 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative pb-48">
       <FloatingNotifications />
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      
+      {/* Organic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Subtle gradient overlays */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Organic dotted patterns */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full animate-bounce"></div>
+        <div className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full animate-bounce delay-2000"></div>
+        
+        {/* Subtle geometric shapes */}
+        <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45 animate-spin"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full animate-pulse"></div>
       </div>
 
       <Navbar />
@@ -69,20 +81,20 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6">
-              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30">
+              <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
                 High-Trust Digital Marketing Agency • 500+ Success Stories
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">About Frameleads</h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">About Frameleads</h1>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               We help ambitious brands achieve predictable growth through expert SEO, PPC, Social Media, and Content Marketing. Our promise: measurable impact, transparent reporting, and a partner who acts like your in-house team.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-block">
-                <span className="inline-flex items-center justify-center bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300">Schedule Free Consultation</span>
+                <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">Schedule Free Consultation</span>
               </Link>
               <Link href="/case-studies" className="inline-block">
-                <span className="inline-flex items-center justify-center border border-red-500/40 text-gray-200 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">See Case Studies</span>
+                <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">See Case Studies</span>
               </Link>
             </div>
           </div>
@@ -95,12 +107,12 @@ export default function AboutPage() {
           {credibility.map((item, i) => {
             const Icon = item.icon
             return (
-              <div key={i} className="bg-slate-800/50 border border-red-500/20 rounded-xl p-5 backdrop-blur-xl">
-                <div className="flex items-center gap-3 text-white">
-                  <Icon className="h-5 w-5 text-red-400" />
+              <div key={i} className="bg-white/80 backdrop-blur-xl border border-[#FF6B35]/20 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3 text-gray-900">
+                  <Icon className="h-5 w-5 text-[#FF6B35]" />
                   <span className="font-semibold">{item.title}</span>
                 </div>
-                <p className="text-gray-400 text-sm mt-2">{item.text}</p>
+                <p className="text-gray-600 text-sm mt-2">{item.text}</p>
               </div>
             )
           })}
@@ -111,50 +123,52 @@ export default function AboutPage() {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Story</h2>
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>Founded in 2019, Frameleads began with a single mission: deliver compounding growth through search and performance marketing. Today, we operate globally while retaining a handcrafted, partner-first approach.</p>
               <p>Our frameworks combine technical SEO, world-class content, and full-funnel advertising to create durable advantages. We obsess over KPIs, iterate fast, and share outcomes with complete transparency.</p>
               <p>We believe great marketing is a force-multiplier for great businesses. If you bring ambition, we bring the systems to scale it.</p>
             </div>
           </div>
           <div className="relative h-80 md:h-[500px] rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-400/20 rounded-3xl blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-3xl blur-xl"></div>
             <Image src="/story/story-cover.webp" alt="Frameleads team at work" fill className="object-cover z-10" />
-            <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-red-500/30 z-20"></div>
+            <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#FF6B35]/30 z-20"></div>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="relative py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s, i) => (
-            <div key={i} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-300 mb-1">{s.number}</div>
-              <div className="text-gray-400">{s.label}</div>
-            </div>
-          ))}
+      <section className="relative py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center py-16 px-4 min-h-[180px] flex flex-col justify-center items-center">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-6 leading-none">{s.number}</div>
+                <div className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed text-center">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="relative py-20">
+      <section className="relative py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-xl text-gray-300">Principles that shape how we work and the outcomes we deliver.</p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-xl text-gray-600">Principles that shape how we work and the outcomes we deliver.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {values.map((v, i) => {
               const Icon = v.icon
               return (
-                <div key={i} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-2xl p-6 text-center backdrop-blur-xl">
-                  <div className="bg-gradient-to-r from-red-500 to-red-400 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-7 w-7 text-white" />
+                <div key={i} className="bg-white/80 backdrop-blur-xl border border-gray-200/50 rounded-2xl p-12 text-center shadow-lg hover:shadow-xl transition-all duration-300 min-h-[400px] flex flex-col justify-start">
+                  <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-8">
+                    <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">{v.title}</h3>
-                  <p className="text-gray-400 text-sm">{v.description}</p>
+                  <h3 className="text-gray-900 font-semibold text-xl mb-6">{v.title}</h3>
+                  <p className="text-gray-600 text-base leading-relaxed flex-grow">{v.description}</p>
                 </div>
               )
             })}
@@ -163,11 +177,11 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="relative py-20">
+      <section className="relative py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Leadership Team</h2>
-            <p className="text-xl text-gray-300">Hands-on leaders who partner with you from strategy to execution.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Leadership Team</h2>
+            <p className="text-xl text-gray-600">Hands-on leaders who partner with you from strategy to execution.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, i) => (
@@ -175,9 +189,9 @@ export default function AboutPage() {
                 <div className="relative mb-6">
                   <Image src={member.image || "/placeholder.svg"} alt={member.name} width={300} height={300} className="rounded-2xl mx-auto group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
-                <p className="text-red-400 font-medium mb-3">{member.position}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+                <p className="text-[#FF6B35] font-medium mb-3">{member.position}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -187,8 +201,8 @@ export default function AboutPage() {
       {/* Social Proof */}
       <section className="relative py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 text-gray-300">
-            <Handshake className="h-5 w-5 text-red-400" />
+          <div className="inline-flex items-center gap-2 text-gray-600">
+            <Handshake className="h-5 w-5 text-[#FF6B35]" />
             <span>Trusted by growth-focused brands worldwide</span>
           </div>
         </div>
@@ -199,21 +213,21 @@ export default function AboutPage() {
       {/* CTA + Internal Links */}
       <section className="relative py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Write Your Next Growth Story?</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-8">Get a free audit and a custom growth plan covering SEO, PPC, Social, and Content Marketing.</p>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Write Your Next Growth Story?</h3>
+          <p className="text-gray-600 max-w-3xl mx-auto mb-8">Get a free audit and a custom growth plan covering SEO, PPC, Social, and Content Marketing.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Link href="/contact" className="inline-block">
-              <span className="inline-flex items-center justify-center bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300">Get Free Audit</span>
+              <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">Get Free Audit</span>
             </Link>
             <Link href="/about" className="inline-block">
-              <span className="inline-flex items-center justify-center border border-red-500/40 text-gray-200 hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">Why Frameleads</span>
+              <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-3 rounded-xl font-semibold transition-all duration-300">Why Frameleads</span>
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-            <Link href="/seo-services" className="text-red-300 hover:text-red-200">SEO Services</Link>
-            <Link href="/ppc-management" className="text-red-300 hover:text-red-200">PPC Management</Link>
-            <Link href="/Social-media-marketing" className="text-red-300 hover:text-red-200">Social Media Marketing</Link>
-            <Link href="/content-marketing" className="text-red-300 hover:text-red-200">Content Marketing</Link>
+            <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50]">SEO Services</Link>
+            <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50]">PPC Management</Link>
+            <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Social Media Marketing</Link>
+            <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Content Marketing</Link>
           </div>
         </div>
       </section>

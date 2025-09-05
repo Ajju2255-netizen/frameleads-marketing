@@ -195,71 +195,53 @@ export default function Home() {
       <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Digital Marketing Solutions</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive digital marketing solutions designed to grow your business
+              Explore our comprehensive digital marketing services, industry specializations, and international offerings
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Core Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Core Digital Marketing Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization</h3>
-              <p className="text-gray-600 mb-4">Boost your organic visibility with our proven SEO strategies</p>
-              <div className="space-y-2">
-                <a href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Global SEO Services</a>
-                <a href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</a>
-                <a href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</a>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Digital Marketing Services</h3>
+              <div className="space-y-3">
+                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
+                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
+                <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
+                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
+                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
               </div>
             </div>
 
+            {/* Services in Bangalore */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Marketing</h3>
-              <p className="text-gray-600 mb-4">Complete digital marketing solutions for modern businesses</p>
-              <div className="space-y-2">
-                <a href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</a>
-                <a href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</a>
-                <a href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</a>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Services in Bangalore</h3>
+              <div className="space-y-3">
+                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
+                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising Bangalore</Link>
+                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
               </div>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Marketing</h3>
-              <p className="text-gray-600 mb-4">Drive immediate results with targeted advertising campaigns</p>
-              <div className="space-y-2">
-                <a href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</a>
-                <a href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</a>
-                <a href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</a>
-              </div>
-            </div>
-
+            {/* Industry Specializations */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Specializations</h3>
-              <p className="text-gray-600 mb-4">Tailored solutions for specific industries and markets</p>
-              <div className="space-y-2">
-                <a href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</a>
-                <a href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</a>
-                <a href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising</a>
+              <div className="space-y-3">
+                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
+                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing</Link>
               </div>
             </div>
 
+            {/* International Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Learning & Resources</h3>
-              <p className="text-gray-600 mb-4">Expand your knowledge with our educational resources</p>
-              <div className="space-y-2">
-                <a href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</a>
-                <a href="/academy/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About Academy</a>
-                <a href="/academy/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Academy Contact</a>
-              </div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Company Information</h3>
-              <p className="text-gray-600 mb-4">Learn more about FrameLeads and get in touch</p>
-              <div className="space-y-2">
-                <a href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</a>
-                <a href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Us</a>
-                <a href="/academy/terms" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Terms & Conditions</a>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">International Services</h3>
+              <div className="space-y-3">
+                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Dubai</Link>
+                <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
+                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Us</Link>
+                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</Link>
               </div>
             </div>
           </div>
