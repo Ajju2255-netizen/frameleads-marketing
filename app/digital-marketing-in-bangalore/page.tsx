@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap } from "lucide-react"
+import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette } from "lucide-react"
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
@@ -835,57 +835,225 @@ export default function DigitalMarketingInBangalorePage() {
         secondaryButtonText="Schedule Strategy Call"
       />
 
-      {/* Complete Digital Marketing Services Section */}
-      <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
+      {/* Comprehensive Digital Marketing Services in Bangalore */}
+      <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Digital Marketing Services in Bangalore</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive digital marketing services, industry specializations, and international offerings
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Digital Marketing Ecosystem in Bangalore</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              As Bangalore's leading digital marketing agency, we offer comprehensive services across all digital channels. 
+              Explore our specialized services designed specifically for Bangalore's diverse business landscape.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Primary Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* SEO Services in Bangalore */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services in Bangalore</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Dominate local search results with our comprehensive SEO strategies tailored for Bangalore businesses.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Local SEO optimization for Bangalore</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Technical SEO audits & fixes</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Content optimization & link building</span>
+                  </div>
+                </div>
+                <Link href="/seo-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore SEO Services
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Creative Advertising in Bangalore */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Palette className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising in Bangalore</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Captivate your audience with innovative creative campaigns that drive engagement and conversions.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Brand identity & visual design</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Video production & animation</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Social media creative campaigns</span>
+                  </div>
+                </div>
+                <Link href="/creative-advertising-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore Creative Services
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* B2B Marketing in Bangalore */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Building2 className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing in Bangalore</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Accelerate enterprise sales with targeted B2B marketing strategies for Bangalore's corporate ecosystem.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">LinkedIn marketing & lead generation</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Account-based marketing (ABM)</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Sales enablement & CRM integration</span>
+                  </div>
+                </div>
+                <Link href="/b2b-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore B2B Services
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Real Estate Marketing in Bangalore */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Building2 className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing in Bangalore</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Connect with property buyers through targeted digital marketing campaigns for Bangalore's real estate market.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Property listing optimization</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Virtual tour integration</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Lead nurturing automation</span>
+                  </div>
+                </div>
+                <Link href="/real-estate-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore Real Estate Services
+                </Link>
+              </CardContent>
+            </Card>
+
             {/* Core Digital Marketing Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Digital Marketing Services</h3>
-              <div className="space-y-3">
-                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
-                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
-                <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-              </div>
-            </div>
-
-            {/* Services in Bangalore */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Services in Bangalore</h3>
-              <div className="space-y-3">
-                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
-                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising Bangalore</Link>
-                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
-              </div>
-            </div>
-
-            {/* Industry Specializations */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Specializations</h3>
-              <div className="space-y-3">
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
-                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing</Link>
-              </div>
-            </div>
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Settings className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Core Digital Marketing</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Comprehensive digital marketing services covering all channels for maximum ROI and business growth.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">SEO & Content Marketing</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">PPC & Social Media Ads</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Web Design & Development</span>
+                  </div>
+                </div>
+                <Link href="/digital-marketing-services" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore All Services
+                </Link>
+              </CardContent>
+            </Card>
 
             {/* International Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">International Services</h3>
-              <div className="space-y-3">
-                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Dubai</Link>
-                <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
-                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Us</Link>
-                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</Link>
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Globe className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Global Expansion</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Expand your business globally with our international digital marketing expertise and local market knowledge.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Digital Marketing in Dubai</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Multi-market campaigns</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Cultural adaptation strategies</span>
+                  </div>
+                </div>
+                <Link href="/digital-marketing-in-dubai" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300">
+                  Explore Global Services
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Resources & Tools */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-gray-200/50">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Resources & Tools</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <Link href="/free-marketing-audit" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Free Marketing Audit</Link>
+                <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance</p>
+              </div>
+              <div className="text-center">
+                <Link href="/tools/roi-calculator" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">ROI Calculator</Link>
+                <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation</p>
+              </div>
+              <div className="text-center">
+                <Link href="/resources/digital-marketing-guide" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Digital Marketing Guide</Link>
+                <p className="text-sm text-gray-600">Comprehensive guide to digital marketing strategies and best practices</p>
+              </div>
+              <div className="text-center">
+                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">FrameLeads Academy</Link>
+                <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs</p>
               </div>
             </div>
           </div>
