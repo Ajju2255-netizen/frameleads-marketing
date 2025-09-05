@@ -305,10 +305,10 @@ export default function DigitalMarketingGuidePage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Digital marketing encompasses all marketing efforts that use electronic devices or the internet. Businesses leverage digital channels such as search engines, social media, email, and websites to connect with current and prospective customers.
+              Digital marketing encompasses all marketing efforts that use electronic devices or the internet. Businesses leverage digital channels such as <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">search engines</Link>, <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">social media</Link>, <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">email</Link>, and websites to connect with current and prospective customers.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Unlike traditional marketing, digital marketing allows for real-time interaction, precise targeting, and measurable results. This makes it not just more cost-effective, but also more accountable and data-driven than traditional marketing methods.
+              Unlike traditional marketing, digital marketing allows for real-time interaction, precise targeting, and measurable results. This makes it not just more cost-effective, but also more accountable and data-driven than traditional marketing methods. Learn more about our <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">comprehensive digital marketing services</Link>.
             </p>
             <div className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-2xl p-8 my-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits of Digital Marketing</h3>
@@ -317,28 +317,28 @@ export default function DigitalMarketingGuidePage() {
                   <CheckCircle className="h-6 w-6 text-[#FF6B35] mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Cost-Effective</h4>
-                    <p className="text-gray-600">Lower cost per acquisition compared to traditional marketing</p>
+                    <p className="text-gray-600">Lower cost per acquisition compared to traditional marketing. Our <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC management services</Link> help optimize your ad spend.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#FF6B35] mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Measurable Results</h4>
-                    <p className="text-gray-600">Track and measure every aspect of your campaigns</p>
+                    <p className="text-gray-600">Track and measure every aspect of your campaigns with detailed <Link href="https://analytics.google.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">Google Analytics</Link> reporting.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#FF6B35] mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Global Reach</h4>
-                    <p className="text-gray-600">Connect with customers worldwide 24/7</p>
+                    <p className="text-gray-600">Connect with customers worldwide 24/7. We serve clients in <Link href="/digital-marketing-in-dubai" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">Dubai</Link>, <Link href="/digital-marketing-in-bangalore" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">Bangalore</Link>, and globally.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#FF6B35] mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Personalization</h4>
-                    <p className="text-gray-600">Deliver targeted messages to specific audiences</p>
+                    <p className="text-gray-600">Deliver targeted messages to specific audiences through our <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">content marketing strategies</Link>.</p>
                   </div>
                 </div>
               </div>
@@ -457,6 +457,27 @@ export default function DigitalMarketingGuidePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{channel.title}</h3>
                   <p className="text-gray-600 mb-6">{channel.description}</p>
                   
+                  {channel.title === "SEO (Search Engine Optimization)" && (
+                    <p className="text-sm text-[#FF6B35] mb-4">
+                      <Link href="/seo-services" className="hover:text-[#FF8A50] font-medium">Explore our SEO services →</Link>
+                    </p>
+                  )}
+                  {channel.title === "PPC / Performance Marketing" && (
+                    <p className="text-sm text-[#FF6B35] mb-4">
+                      <Link href="/ppc-management" className="hover:text-[#FF8A50] font-medium">Learn about our PPC management →</Link>
+                    </p>
+                  )}
+                  {channel.title === "Social Media Marketing" && (
+                    <p className="text-sm text-[#FF6B35] mb-4">
+                      <Link href="/Social-media-marketing" className="hover:text-[#FF8A50] font-medium">Discover our social media strategies →</Link>
+                    </p>
+                  )}
+                  {channel.title === "Content Marketing" && (
+                    <p className="text-sm text-[#FF6B35] mb-4">
+                      <Link href="/content-marketing" className="hover:text-[#FF8A50] font-medium">See our content marketing approach →</Link>
+                    </p>
+                  )}
+                  
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Areas:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -538,7 +559,43 @@ export default function DigitalMarketingGuidePage() {
                   <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Star className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{tool.name}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">
+                    {tool.name === "Google Ads" ? (
+                      <Link href="https://ads.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "SEMrush" ? (
+                      <Link href="https://www.semrush.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "DataForSEO" ? (
+                      <Link href="https://dataforseo.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "Meta Ads" ? (
+                      <Link href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "HubSpot" ? (
+                      <Link href="https://www.hubspot.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "Google Analytics" ? (
+                      <Link href="https://analytics.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "Ahrefs" ? (
+                      <Link href="https://ahrefs.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : tool.name === "Mailchimp" ? (
+                      <Link href="https://mailchimp.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35]">
+                        {tool.name} <ExternalLink className="h-3 w-3 inline ml-1" />
+                      </Link>
+                    ) : (
+                      tool.name
+                    )}
+                  </h3>
                   <p className="text-sm text-[#FF6B35] mb-3">{tool.category}</p>
                   <p className="text-sm text-gray-600">{tool.description}</p>
                 </div>
@@ -563,6 +620,16 @@ export default function DigitalMarketingGuidePage() {
                 <div className="mb-6">
                   <h4 className="font-semibold text-[#FF6B35] mb-2">Primary Focus:</h4>
                   <p className="text-gray-600">{industry.focus}</p>
+                  {industry.industry === "Real Estate" && (
+                    <p className="text-sm text-[#FF6B35] mt-2">
+                      <Link href="/real-estate-marketing-company-in-bangalore" className="hover:text-[#FF8A50] font-medium">See our real estate marketing services →</Link>
+                    </p>
+                  )}
+                  {industry.industry === "E-commerce" && (
+                    <p className="text-sm text-[#FF6B35] mt-2">
+                      <Link href="/digital-marketing-services" className="hover:text-[#FF8A50] font-medium">Explore our e-commerce solutions →</Link>
+                    </p>
+                  )}
                 </div>
                 
                 <div className="mb-6">
@@ -608,6 +675,16 @@ export default function DigitalMarketingGuidePage() {
                 <div className="mb-6">
                   <h4 className="font-semibold text-[#FF6B35] mb-2">Market Characteristics:</h4>
                   <p className="text-gray-600">{region.characteristics}</p>
+                  {region.region === "India" && (
+                    <p className="text-sm text-[#FF6B35] mt-2">
+                      <Link href="/digital-marketing-in-bangalore" className="hover:text-[#FF8A50] font-medium">Our Bangalore digital marketing services →</Link>
+                    </p>
+                  )}
+                  {region.region === "UAE" && (
+                    <p className="text-sm text-[#FF6B35] mt-2">
+                      <Link href="/digital-marketing-in-dubai" className="hover:text-[#FF8A50] font-medium">Our Dubai digital marketing expertise →</Link>
+                    </p>
+                  )}
                 </div>
                 
                 <div className="mb-6">
@@ -710,9 +787,9 @@ export default function DigitalMarketingGuidePage() {
       <section className="relative py-20 bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Transform Your Digital Marketing?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Get a free consultation and discover how our expert team can help you achieve your digital marketing goals.
-          </p>
+                      <p className="text-xl text-gray-600 mb-8">
+              Get a free consultation and discover how our <Link href="/our-team" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">expert team</Link> can help you achieve your digital marketing goals. Learn more about our <Link href="/about" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">company</Link> and <Link href="/academy" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">training programs</Link>.
+            </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-block">
               <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">
