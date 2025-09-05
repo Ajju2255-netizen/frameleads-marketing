@@ -30,9 +30,8 @@ export default function Footer() {
 
   const resources = [
     { name: "Digital Marketing Guide", href: "/resources/digital-marketing-guide" },
-    { name: "Free Marketing Audit", href: "/free-audit" },
+    { name: "Free Marketing Audit", href: "/free-marketing-audit" },
     { name: "ROI Calculator", href: "/tools/roi-calculator" },
-    { name: "Webinars", href: "/webinars" },
     { name: "Templates", href: "/templates" },
     { name: "FAQ", href: "/faq" },
   ]
