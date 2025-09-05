@@ -220,6 +220,56 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Internal Links */}
+      <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ready to grow your business? Discover our comprehensive digital marketing solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Core Services */}
+            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Services</h3>
+              <div className="space-y-3">
+                <a href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</a>
+                <a href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</a>
+                <a href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</a>
+                <a href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</a>
+                <a href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</a>
+              </div>
+            </div>
+
+            {/* Location Services */}
+            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Location Services</h3>
+              <div className="space-y-3">
+                <a href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</a>
+                <a href="/seo-company-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Dubai</a>
+                <a href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</a>
+                <a href="/performance-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing Bangalore</a>
+                <a href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</a>
+              </div>
+            </div>
+
+            {/* Company & Academy */}
+            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Company & Academy</h3>
+              <div className="space-y-3">
+                <a href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</a>
+                <a href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</a>
+                <a href="/academy/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About Academy</a>
+                <a href="/academy/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Academy Contact</a>
+                <a href="/academy/terms" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Terms & Conditions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
