@@ -18,12 +18,12 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Our Office",
-      details: ["Koramangala, Bangalore", "Karnataka 560034", "India"],
+      details: ["Electronic City, Bangalore", "Karnataka 560100", "India"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 6362821368", "+91 6362821368", "Mon-Fri: 9AM-6PM"],
+      details: ["+91 6362821368", "Mon-Fri: 9AM-6PM"],
     },
     {
       icon: Mail,
@@ -61,41 +61,43 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden pb-48">
       <FloatingNotifications />
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-red-500/10 to-red-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      {/* Organic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Subtle gradient overlays */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Organic dotted patterns */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full animate-bounce"></div>
+        <div className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full animate-bounce delay-2000"></div>
+        
+        {/* Subtle geometric shapes */}
+        <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45 animate-spin"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full animate-pulse"></div>
       </div>
 
       <Navbar />
 
       {/* Hero */}
-      <section className="relative py-20 lg:py-32">
-        {/* Decorative grid lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
-          <div className="absolute top-0 left-2/3 w-px h-full bg-gradient-to-b from-transparent via-red-500/20 to-transparent"></div>
-        </div>
-
+      <section className="relative py-20 lg:py-32 pt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className={`inline-block mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="bg-gradient-to-r from-red-500/20 to-red-400/20 backdrop-blur-xl text-red-300 px-6 py-3 rounded-full text-sm font-medium border border-red-500/30 shadow-lg shadow-red-500/20">
+              <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
                 ✉️ Get in touch
               </span>
             </div>
 
-            <h1 className={`text-4xl md:text-6xl font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h1 className={`text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Contact Frameleads
             </h1>
 
-            <p className={`text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-2 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <p className={`text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-2 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Tell us about your project and growth goals. We typically respond within 24 hours.
             </p>
           </div>
@@ -104,47 +106,42 @@ export default function ContactPage() {
 
       {/* Contact Form & Info */}
       <section className="relative py-12">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-red-500/15 to-transparent"></div>
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
-            <Card className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
               <CardContent className="p-8 relative z-10">
-                <h2 className="text-2xl font-semibold text-white mb-6">Send us a message</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
-                      <input id="firstName" name="firstName" required placeholder="John" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                      <input id="firstName" name="firstName" required placeholder="John" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
-                      <input id="lastName" name="lastName" required placeholder="Doe" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                      <input id="lastName" name="lastName" required placeholder="Doe" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
-                    <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                    <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input id="phone" name="phone" placeholder="+91 6362821368" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                    <input id="phone" name="phone" placeholder="+91 6362821368" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                    <input id="company" name="company" placeholder="Your Company" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                    <input id="company" name="company" placeholder="Your Company" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interested In</label>
-                    <select id="service" name="service" className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
+                    <select id="service" name="service" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent">
                       <option value="">Select a service</option>
                       <option value="seo">SEO Services</option>
                       <option value="local-seo">Local SEO</option>
@@ -156,12 +153,11 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message *</label>
-                    <textarea id="message" name="message" rows={5} required placeholder="Tell us about your project and goals..." className="w-full px-4 py-3 bg-black/40 border border-red-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"></textarea>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                    <textarea id="message" name="message" rows={5} required placeholder="Tell us about your project and goals..." className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent resize-none"></textarea>
                   </div>
 
-                  <Button className="group relative bg-gradient-to-r from-red-500 to-red-400 hover:from-red-400 hover:to-red-300 w-full text-white font-semibold rounded-xl shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-105 py-4">
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-red-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                  <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] w-full text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105 py-4">
                     <Send className="h-5 w-5 mr-2 relative z-10" /> Send Message
                   </Button>
                 </form>
@@ -170,22 +166,21 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 to-red-300 bg-clip-text text-transparent">Contact Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon
                   return (
-                    <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
                       <CardContent className="p-6 relative z-10">
                         <div className="flex items-start gap-4">
-                          <div className="bg-gradient-to-r from-red-500 to-red-400 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/25">
+                          <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shadow-[#FF6B35]/25">
                             <IconComponent className="h-6 w-6 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-1">{info.title}</h3>
                             {info.details.map((detail, idx) => (
-                              <p key={idx} className="text-gray-400">{detail}</p>
+                              <p key={idx} className="text-gray-600">{detail}</p>
                             ))}
                           </div>
                         </div>
@@ -203,16 +198,15 @@ export default function ContactPage() {
       <section className="relative py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300">Quick answers to common questions about our services.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600">Quick answers to common questions about our services.</p>
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border-slate-700/50 hover:border-red-500/50 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-red-400/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
                 <CardContent className="p-6 relative z-10">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
