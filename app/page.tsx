@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Link from "next/link"
 import Navbar from "./components/navbar"
 import Hero from "./components/hero"
 import BrandLogos from "./components/brand-logos"
@@ -228,7 +229,7 @@ export default function Home() {
               <div className="space-y-2">
                 <a href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</a>
                 <a href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</a>
-                <a href="/performance-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing Bangalore</a>
+                <a href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</a>
               </div>
             </div>
 

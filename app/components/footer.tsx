@@ -11,12 +11,11 @@ export default function Footer() {
     { name: "Content Marketing", href: "/content-marketing" },
     { name: "Social Media Marketing", href: "/Social-media-marketing" },
     { name: "Performance Marketing", href: "/perforamance-marketing" },
-    { name: "Creative Advertising Company in Bangalore", href: "/creative-advertising-company-in-bangalore" },
-    { name: "B2B Marketing Company in Bangalore", href: "/b2b-marketing-company-in-bangalore" },
-    { name: "Performance Marketing Company in Bangalore", href: "/performance-marketing-company-in-bangalore" },
-    { name: "Real Estate Marketing Company in Bangalore", href: "/real-estate-marketing-company-in-bangalore" },
-    { name: "SEO Company in Bangalore", href: "/seo-company-in-bangalore" },
+  ]
+
+  const locations = [
     { name: "Digital Marketing in Dubai", href: "/digital-marketing-in-dubai" },
+    { name: "Digital Marketing in Bangalore", href: "/digital-marketing-in-bangalore" },
   ]
 
   const company = [
@@ -58,7 +57,7 @@ export default function Footer() {
       <div className="w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35] to-transparent mb-8 shadow-lg shadow-[#FF6B35]/50"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
@@ -113,6 +112,20 @@ export default function Footer() {
                 <li key={service.name}>
                   <Link href={service.href} className="text-[#5A5A5A]/80 hover:text-[#FF6B35] transition-colors duration-300">
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h3 className="text-lg font-semibold text-[#FF6B35] mb-4">Locations</h3>
+            <ul className="space-y-3">
+              {locations.map((location) => (
+                <li key={location.name}>
+                  <Link href={location.href} className="text-[#5A5A5A]/80 hover:text-[#FF6B35] transition-colors duration-300">
+                    {location.name}
                   </Link>
                 </li>
               ))}
