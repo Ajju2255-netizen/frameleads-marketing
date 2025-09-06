@@ -6,12 +6,12 @@ import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, PoundSterling } from "lucide-react"
+import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro } from "lucide-react"
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 
-export default function DigitalMarketingInUnitedKingdomPage() {
+export default function DigitalMarketingInGermanyPage() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -20,113 +20,118 @@ export default function DigitalMarketingInUnitedKingdomPage() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  const ukBusinessMarkets = [
+  const germanBusinessMarkets = [
     {
-      category: "London & South East",
-      areas: ["London", "Brighton", "Oxford", "Cambridge", "Reading", "Milton Keynes"],
-      description: "Premier financial services and tech startup digital marketing hub"
+      category: "Berlin & Brandenburg",
+      areas: ["Berlin", "Potsdam", "Cottbus", "Brandenburg", "Frankfurt (Oder)", "Eberswalde"],
+      description: "Premier startup and tech company digital marketing hub with focus on innovation and growth"
     },
     {
-      category: "Northern England", 
-      areas: ["Manchester", "Liverpool", "Leeds", "Sheffield", "Newcastle", "York"],
-      description: "Media, manufacturing and emerging tech digital marketing excellence"
+      category: "Bavaria & Munich Region", 
+      areas: ["München", "Nürnberg", "Augsburg", "Regensburg", "Würzburg", "Ingolstadt"],
+      description: "Traditional business and automotive industry digital marketing excellence"
     },
     {
-      category: "Midlands & Central",
-      areas: ["Birmingham", "Coventry", "Nottingham", "Leicester", "Derby", "Wolverhampton"],
-      description: "Manufacturing, automotive and B2B digital marketing specialists"
+      category: "North Germany",
+      areas: ["Hamburg", "Bremen", "Hannover", "Kiel", "Lübeck", "Braunschweig"],
+      description: "Media, logistics and international trade digital marketing specialists"
     },
     {
-      category: "Scotland & Wales",
-      areas: ["Edinburgh", "Glasgow", "Cardiff", "Swansea", "Aberdeen", "Inverness"],
-      description: "Financial services, renewable energy and cultural marketing expertise"
+      category: "Rhineland & West Germany",
+      areas: ["Köln", "Düsseldorf", "Essen", "Dortmund", "Duisburg", "Bochum"],
+      description: "Media, advertising and creative industry digital marketing focus"
+    },
+    {
+      category: "Southwest Germany",
+      areas: ["Stuttgart", "Frankfurt", "Mannheim", "Karlsruhe", "Freiburg", "Heidelberg"],
+      description: "Automotive, engineering and manufacturing digital marketing specialists"
     }
   ]
 
   const digitalMarketingServices = [
     {
       icon: TrendingUp,
-      title: "Search Engine Optimization (SEO) UK",
-      description: "Comprehensive SEO strategies tailored for UK search patterns, British consumer behavior, and local market dominance across England, Scotland, Wales, and Northern Ireland.",
+      title: "SEO Deutschland - Search Engine Optimization",
+      description: "Comprehensive SEO strategies tailored for German search patterns, consumer behavior, and local market dominance across Berlin, Munich, Hamburg, Frankfurt, and the entire DACH region.",
       features: [
-        "Local SEO optimization for UK regional markets",
-        "National SEO campaigns targeting British consumers",
-        "Technical SEO audits compliant with UK regulations",
-        "Google My Business optimization for UK businesses",
-        "Link building and domain authority improvement"
+        "German keyword research and optimization (deutsche Keyword-Optimierung)",
+        "Technical SEO audits for Google.de ranking factors",
+        "Local SEO for German cities and regions",
+        "German content optimization and creation",
+        "Backlink building from high-authority German websites"
       ],
       results: [
-        "340% increase in organic traffic from UK searches",
-        "Top 3 rankings for target keywords in UK",
-        "65% improvement in local search visibility across UK regions"
+        "340% increase in organic traffic from German searches",
+        "Top 3 rankings for target keywords in Germany",
+        "65% improvement in local search visibility across German regions"
       ]
     },
     {
-      icon: PoundSterling,
-      title: "Pay-Per-Click (PPC) Management UK",
-      description: "Strategic Google Ads and Microsoft Advertising campaigns optimized for UK audiences, British purchasing patterns, and regional market dynamics.",
+      icon: Euro,
+      title: "Google Ads Deutschland - PPC Management",
+      description: "Strategic Google Ads and Microsoft Advertising campaigns optimized for German audiences, purchasing patterns, and regional market dynamics across the DACH region.",
       features: [
-        "Google Ads management optimized for UK audiences",
-        "Microsoft Advertising (Bing) campaigns for UK market",
-        "Shopping campaigns for UK e-commerce businesses",
-        "YouTube Advertising for brand awareness and conversions",
-        "Remarketing strategies for UK website visitors"
+        "Google Ads campaigns targeting German keywords",
+        "Shopping campaigns for German e-commerce",
+        "YouTube advertising for German audiences",
+        "Regional targeting across German cities",
+        "Conversion optimization for German customers"
       ],
       results: [
-        "280% improvement in Quality Score for UK campaigns",
-        "40% reduction in cost-per-click for UK keywords",
-        "2.8x average return on ad spend (ROAS) in UK market"
+        "280% improvement in German PPC performance",
+        "45% reduction in cost-per-acquisition for German market",
+        "2.8x average return on ad spend (ROAS) in Germany"
       ]
     },
     {
       icon: MessageSquare,
-      title: "Social Media Marketing UK",
-      description: "Multi-platform social media marketing optimized for British audiences, UK cultural nuances, and diverse business objectives across the United Kingdom.",
+      title: "Social Media Marketing Deutschland",
+      description: "Multi-platform social media marketing optimized for German audiences, cultural nuances, and diverse business objectives across Germany and the DACH region.",
       features: [
-        "Facebook & Instagram marketing for UK audiences",
-        "LinkedIn B2B marketing for British enterprise clients",
-        "Twitter marketing for thought leadership and engagement",
-        "TikTok and emerging platform strategies for UK youth",
-        "Cross-platform campaign integration and optimization"
+        "Facebook and Instagram marketing for German audiences",
+        "LinkedIn B2B marketing in the DACH region",
+        "TikTok marketing for younger German demographics",
+        "XING optimization for German professional networking",
+        "YouTube content marketing in German language"
       ],
       results: [
-        "220% increase in social media conversions from UK users",
-        "55% lower cost-per-acquisition in UK market",
-        "380% improvement in engagement rates with British audiences"
+        "220% increase in social media conversions from German users",
+        "55% lower cost-per-acquisition in German market",
+        "380% improvement in engagement rates with German audiences"
       ]
     },
     {
       icon: Users,
-      title: "Content Marketing UK",
-      description: "Strategic content creation and distribution tailored for British audiences, UK cultural references, and regional preferences across the United Kingdom.",
+      title: "Content Marketing für deutsche Unternehmen",
+      description: "Strategic content creation and distribution tailored for German audiences, cultural references, and regional preferences across the German market.",
       features: [
-        "Blog content strategy optimized for UK search patterns",
-        "Video marketing and YouTube optimization for British viewers",
-        "Email marketing campaigns compliant with UK GDPR",
-        "Content distribution across UK-relevant platforms",
-        "Brand storytelling with British cultural understanding"
+        "Blog content in German language",
+        "Whitepapers and case studies for German B2B",
+        "Video content for German audiences",
+        "Email marketing campaigns in German",
+        "Thought leadership content for German market"
       ],
       results: [
-        "290% increase in content engagement from UK audiences",
-        "45% improvement in lead quality from British prospects",
-        "180% increase in brand awareness across UK regions"
+        "290% increase in content engagement from German audiences",
+        "45% improvement in lead quality from German prospects",
+        "180% increase in brand awareness across German regions"
       ]
     },
     {
       icon: Settings,
-      title: "Web Design & Development UK",
-      description: "Conversion-optimized website design and development tailored for UK users, British design preferences, and local market requirements.",
+      title: "Web Development for German Market",
+      description: "Conversion-optimized website design and development tailored for German users, design preferences, and local market requirements including GDPR compliance.",
       features: [
-        "Responsive web design optimized for UK devices",
-        "Conversion rate optimization (CRO) for British users",
-        "E-commerce development with UK payment systems",
-        "Website speed optimization for UK hosting",
-        "User experience (UX) design for British preferences"
+        "Responsive web design optimized for German devices",
+        "Conversion rate optimization (CRO) for German users",
+        "E-commerce development with German payment systems",
+        "Website speed optimization for German hosting",
+        "User experience (UX) design for German preferences"
       ],
       results: [
-        "80% average conversion rate improvement for UK visitors",
-        "35% reduction in bounce rate from British users",
-        "320% increase in lead generation from UK market"
+        "80% average conversion rate improvement for German visitors",
+        "35% reduction in bounce rate from German users",
+        "320% increase in lead generation from German market"
       ]
     }
   ]
@@ -134,71 +139,71 @@ export default function DigitalMarketingInUnitedKingdomPage() {
   const digitalMarketingProcess = [
     {
       step: "01",
-      title: "UK Market Analysis & Strategic Discovery",
-      description: "Comprehensive UK market audit including British consumer behavior analysis, competitive benchmarking across UK regions, target audience research for England, Scotland, Wales, and Northern Ireland, and goal setting aligned with UK business objectives."
+      title: "German Market Analysis & Strategy Development",
+      description: "Comprehensive German market audit including consumer behavior analysis, competitive benchmarking across German regions, target audience research for German demographics, and goal setting aligned with German business objectives."
     },
     {
       step: "02",
-      title: "Multi-Channel UK Digital Strategy Development",
-      description: "Integrated digital marketing strategy with SEO, PPC, social media, content marketing, and web development plans specifically tailored for the UK market, including regional variations and cultural considerations."
+      title: "Integrated Digital Marketing Strategy",
+      description: "Integrated digital marketing strategy with SEO, PPC, social media, content marketing, and web development plans specifically tailored for the German market, including regional variations and cultural considerations."
     },
     {
       step: "03",
-      title: "UK Campaign Launch & Optimization",
-      description: "Data-driven campaign execution with real-time performance monitoring across UK regions, A/B testing implementation for British audiences, and weekly optimization cycles for maximum ROI in the UK market."
+      title: "Campaign Execution & Optimization",
+      description: "Data-driven campaign execution with real-time performance monitoring across German regions, A/B testing implementation for German audiences, and weekly optimization cycles for maximum ROI in the German market."
     },
     {
       step: "04",
-      title: "Scale & Performance Enhancement UK",
-      description: "Continuous growth and optimization through UK campaign scaling, advanced automation implementation for British customers, and monthly strategic planning sessions focused on UK market expansion."
+      title: "Growth & Scaling",
+      description: "Continuous growth and optimization through German campaign scaling, advanced automation implementation for German customers, and monthly strategic planning sessions focused on German market expansion."
     }
   ]
 
   const whyChooseDigitalMarketing = [
-    "Comprehensive UK Digital Marketing: Full-service approach covering SEO, PPC, social media, content, and web development for British businesses",
-    "ROI-Focused UK Campaign Management: Every campaign optimized for measurable business outcomes in the UK market",
-    "Cross-Platform Integration: Seamless integration across all digital marketing channels with UK-specific optimization",
-    "Conversion Rate Optimization: Systematic A/B testing and landing page optimization for British users",
-    "Real-time Performance Monitoring: 24/7 campaign monitoring and optimization across UK time zones",
-    "UK Market Intelligence: 5+ years serving Britain's diverse business landscape across England, Scotland, Wales, and Northern Ireland",
-    "Industry-Specific UK Expertise: Proven success across UK SaaS, e-commerce, real estate, healthcare, and fintech sectors",
-    "British Startup Ecosystem Knowledge: Deep understanding of UK startup funding cycles, government grants, and growth patterns"
+    "Native German Market Expertise: Deep understanding of German consumer behavior, cultural nuances, and local search patterns",
+    "DACH Region Specialists: Comprehensive coverage across Germany, Austria, and Switzerland",
+    "Bilingual Optimization: Strategic targeting of both German and English keywords used by German audiences",
+    "Performance-Driven Results: Average 420% ROI increase for German clients",
+    "Google.de Optimization: Specialized expertise in German search engine landscape",
+    "GDPR Compliance: Full compliance with German data protection laws and regulations",
+    "Industry-Specific German Expertise: Proven success across German SaaS, e-commerce, manufacturing, healthcare, and fintech sectors",
+    "German Startup Ecosystem Knowledge: Deep understanding of German startup funding cycles, government grants, and growth patterns"
   ]
 
   const digitalMarketingCaseStudies = [
     {
-      industry: "London Fintech Startup",
-      location: "London, England",
-      challenge: "Early-stage B2B fintech needed to scale from 10 to 100 enterprise customers across UK",
-      solution: "Implemented comprehensive UK digital marketing strategy with SEO, PPC, social media, and content marketing",
+      industry: "Berlin Fintech Startup",
+      location: "Berlin, Germany",
+      challenge: "Early-stage B2B fintech needed to scale from 10 to 100 enterprise customers across German market",
+      solution: "Implemented comprehensive German digital marketing strategy with SEO, PPC, social media, and content marketing",
       results: [
-        "340% increase in qualified leads from UK market",
-        "£2.5M ARR growth in 12 months",
+        "340% increase in qualified leads from German market",
+        "€2.5M ARR growth in 12 months",
         "85% improvement in enterprise customer acquisition",
-        "3.2x return on advertising spend (ROAS) in UK"
+        "3.2x return on advertising spend (ROAS) in Germany"
       ]
     },
     {
-      industry: "Manchester Fashion E-commerce",
-      location: "Manchester, England",
-      challenge: "D2C fashion brand struggling with high customer acquisition costs and low ROAS in UK market",
-      solution: "Comprehensive UK digital marketing overhaul with SEO, social media, content marketing, and conversion optimization",
+      industry: "Munich E-commerce Brand",
+      location: "München, Germany",
+      challenge: "D2C lifestyle brand struggling with high customer acquisition costs and low ROAS in German market",
+      solution: "Comprehensive German digital marketing overhaul with SEO, social media, content marketing, and conversion optimization",
       results: [
-        "280% increase in organic traffic from UK searches",
-        "40% reduction in customer acquisition cost",
-        "250% improvement in lifetime value from British customers",
-        "4.8x return on advertising spend in UK market"
+        "280% increase in organic traffic from German searches",
+        "45% reduction in customer acquisition cost",
+        "250% improvement in lifetime value from German customers",
+        "4.8x return on advertising spend in German market"
       ]
     },
     {
-      industry: "Edinburgh Professional Services",
-      location: "Edinburgh, Scotland",
-      challenge: "Scottish law firm needed qualified client leads in competitive Edinburgh market",
-      solution: "Comprehensive UK digital marketing strategy with local SEO, PPC, social media, and lead nurturing automation",
+      industry: "Hamburg Manufacturing Company",
+      location: "Hamburg, Germany",
+      challenge: "B2B manufacturing company needed qualified leads in competitive German industrial market",
+      solution: "Comprehensive German B2B digital marketing strategy with LinkedIn, Google Ads, content marketing, and SEO",
       results: [
-        "190% increase in qualified inquiries from Scottish clients",
-        "60% faster sales cycle for UK prospects",
-        "£500,000 new business revenue within 6 months",
+        "380% increase in qualified B2B leads from German market",
+        "50% reduction in sales cycle length",
+        "€500,000 new business revenue within 8 months",
         "75% improvement in inquiry-to-client conversion rate"
       ]
     }
@@ -207,98 +212,98 @@ export default function DigitalMarketingInUnitedKingdomPage() {
   const industriesWeServe = [
     {
       icon: Building2,
-      title: "UK Technology & SaaS Companies",
-      description: "Transform your SaaS business with comprehensive digital marketing strategies designed for Britain's thriving innovation ecosystem and UK startup landscape.",
+      title: "German Technology & SaaS Companies",
+      description: "Transform your German tech business with comprehensive digital marketing strategies designed for Germany's thriving innovation ecosystem and startup landscape.",
       services: [
-        "B2B lead generation and enterprise sales enablement for UK market",
-        "Free trial conversions and freemium model optimization for British users",
-        "Product-led growth and user acquisition campaigns across UK regions",
-        "Competitive intelligence and market positioning in UK tech sector"
+        "B2B lead generation and enterprise sales enablement for German market",
+        "Free trial conversions and freemium model optimization for German users",
+        "Product-led growth and user acquisition campaigns across German regions",
+        "Competitive intelligence and market positioning in German tech sector"
       ],
-      results: "340% increase in qualified demo requests from UK, 60% improvement in trial-to-paid conversion for British users"
+      results: "340% increase in qualified demo requests from German market, 60% improvement in trial-to-paid conversion for German users"
     },
     {
       icon: ShoppingCart,
-      title: "UK E-commerce & D2C Brands",
-      description: "Scale your online business with comprehensive digital marketing campaigns optimized for British digital consumers and UK shopping behaviors.",
+      title: "German E-commerce & Retail",
+      description: "Scale your online business with comprehensive digital marketing campaigns optimized for German digital consumers and shopping behaviors.",
       services: [
-        "Shopping ads optimization and dynamic product ads for UK market",
-        "Customer acquisition funnels and retention campaigns for British buyers",
-        "Mobile commerce optimization and app install campaigns for UK users",
-        "Cross-border selling and international expansion from UK base"
+        "Shopping ads optimization and dynamic product ads for German market",
+        "Customer acquisition funnels and retention campaigns for German buyers",
+        "Mobile commerce optimization and app install campaigns for German users",
+        "Cross-border selling and international expansion from German base"
       ],
-      results: "320% increase in online sales from UK market, 40% improvement in return on ad spend (ROAS) for British campaigns"
+      results: "320% increase in online sales from German market, 40% improvement in return on ad spend (ROAS) for German campaigns"
     },
     {
       icon: Building2,
-      title: "UK Real Estate & Property Development",
-      description: "Connect with British property buyers through comprehensive digital marketing campaigns and virtual tour integration across England, Scotland, Wales, and Northern Ireland.",
+      title: "German Manufacturing & B2B Services",
+      description: "Drive lead generation for German manufacturing and B2B companies through targeted digital marketing campaigns focused on the DACH region.",
       services: [
-        "Property listing optimization and buyer persona targeting for UK market",
-        "Virtual tour integration and immersive experiences for British buyers",
-        "Luxury property marketing and affordable housing campaigns across UK regions",
-        "Commercial real estate lead generation for UK businesses"
+        "B2B lead generation and sales enablement for German manufacturing",
+        "LinkedIn marketing and professional networking for German B2B",
+        "Trade show and industry event digital marketing for German companies",
+        "Account-based marketing (ABM) for German enterprise clients"
       ],
-      results: "280% increase in property inquiries from UK buyers, 50% reduction in cost per qualified lead in British market"
+      results: "380% increase in qualified B2B leads from German market, 35% reduction in cost per lead for German B2B campaigns"
     },
     {
       icon: Heart,
-      title: "UK Healthcare & Wellness",
-      description: "Drive patient acquisition for UK healthcare providers through NHS-compliant, results-driven digital marketing across England, Scotland, Wales, and Northern Ireland.",
+      title: "German Healthcare",
+      description: "Drive patient acquisition for German healthcare providers through compliant, results-driven digital marketing across Germany.",
       services: [
-        "Patient acquisition campaigns and appointment booking optimization for UK healthcare",
-        "Telemedicine promotion and healthcare app marketing for British patients",
-        "Hospital marketing and clinic promotion campaigns across UK regions",
-        "Wellness and fitness industry digital transformation for UK market"
+        "Patient acquisition campaigns and appointment booking optimization for German healthcare",
+        "Telemedicine promotion and healthcare app marketing for German patients",
+        "Hospital marketing and clinic promotion campaigns across German regions",
+        "Wellness and fitness industry digital transformation for German market"
       ],
-      results: "220% increase in appointment bookings from UK patients, 45% improvement in patient acquisition cost for British healthcare providers"
+      results: "220% increase in appointment bookings from German patients, 45% improvement in patient acquisition cost for German healthcare providers"
     },
     {
       icon: GraduationCap,
-      title: "UK Education & Ed-Tech",
-      description: "Maximize enrollment for British educational institutions and ed-tech platforms with comprehensive digital marketing across England, Scotland, Wales, and Northern Ireland.",
+      title: "German Financial Services",
+      description: "Maximize client acquisition for German financial institutions and fintech companies with comprehensive digital marketing strategies.",
       services: [
-        "Student acquisition campaigns and course promotion for UK institutions",
-        "Parent targeting for K-12 and higher education across UK regions",
-        "Ed-tech platform growth and user acquisition for British students",
-        "Professional certification and skill development marketing for UK workforce"
+        "Client acquisition campaigns and lead generation for German financial services",
+        "Fintech marketing and digital banking promotion for German customers",
+        "Investment and wealth management digital marketing for German market",
+        "Insurance and financial planning marketing across German regions"
       ],
-      results: "380% increase in course enrollments from UK students, 35% reduction in student acquisition cost for British institutions"
+      results: "280% increase in qualified leads from German financial market, 50% improvement in conversion rates for German financial services"
     }
   ]
 
   const digitalMarketingFaqData = [
     {
-      question: "What makes Frameleads different from other digital marketing agencies in the UK?",
-      answer: "Frameleads provides comprehensive digital marketing services covering SEO, PPC, social media, content marketing, and web development specifically tailored for the UK market. Unlike agencies that specialize in just one area, we offer a full-service approach that ensures all your digital marketing channels work together seamlessly. In Britain's competitive market, this integrated approach delivers maximum ROI and business growth across England, Scotland, Wales, and Northern Ireland."
+      question: "What digital marketing services does Frameleads offer in Germany?",
+      answer: "Frameleads provides comprehensive digital marketing services covering SEO Deutschland, Google Ads, social media marketing, content marketing, and web development specifically tailored for the German market. Unlike agencies that specialize in just one area, we offer a full-service approach that ensures all your digital marketing channels work together seamlessly. In Germany's competitive market, this integrated approach delivers maximum ROI and business growth across the DACH region."
     },
     {
-      question: "How quickly can I see results from digital marketing campaigns in the UK?",
-      answer: "Digital marketing results vary by channel in the UK market. PPC campaigns show immediate results, SEO typically takes 3-6 months for significant improvements, while social media and content marketing show engagement within 2-4 weeks. We provide weekly performance updates to track progress across all channels with UK-specific metrics and British market insights."
+      question: "How long does it take to see digital marketing results in Germany?",
+      answer: "Digital marketing results vary by channel in the German market. PPC campaigns show immediate results, SEO typically takes 3-6 months for significant improvements, while social media and content marketing show engagement within 2-4 weeks. We provide weekly performance updates to track progress across all channels with German-specific metrics and DACH market insights."
     },
     {
-      question: "What should I budget for digital marketing services in the UK?",
-      answer: "UK digital marketing budgets vary based on your goals and market size. For comprehensive digital marketing including SEO, PPC, social media, and content, we recommend starting with £8,000-£15,000 monthly for small businesses and £40,000-£80,000+ for enterprise campaigns. Our management fees typically range from 15-20% of total marketing spend, with transparent UK pricing structures."
+      question: "What should I budget for digital marketing in Germany?",
+      answer: "German digital marketing budgets vary based on your goals and market size. For comprehensive digital marketing including SEO, PPC, social media, and content, we recommend starting with €6,000-€12,000 monthly for small businesses and €30,000-€60,000+ for enterprise campaigns. Our management fees typically range from 15-20% of total marketing spend, with transparent German pricing structures."
     },
     {
-      question: "Do you work with UK startups and early-stage companies?",
-      answer: "Absolutely! Britain's startup ecosystem is a core focus area, including London's fintech scene, Manchester's tech sector, and Edinburgh's innovation hubs. We offer flexible engagement models for early-stage companies, including performance-based pricing and growth-stage packages designed for UK startups, with knowledge of government grants and funding cycles."
+      question: "Do you work with German startups and SMEs?",
+      answer: "Absolutely! Germany's startup ecosystem is a core focus area, including Berlin's tech scene, Munich's innovation sector, and Hamburg's digital hubs. We offer flexible engagement models for early-stage companies, including performance-based pricing and growth-stage packages designed for German startups, with knowledge of German government grants and funding cycles."
     },
     {
-      question: "How do you measure digital marketing success and ROI in the UK?",
-      answer: "We track comprehensive metrics across all channels including organic traffic growth from UK searches, cost per acquisition (CPA) for British customers, return on advertising spend (ROAS) in UK market, conversion rates for British users, customer lifetime value (CLV) for UK clients, and attribution across all touchpoints. Monthly reports include UK business impact analysis and recommendations for optimization."
+      question: "How do you measure digital marketing success in Germany?",
+      answer: "We track comprehensive metrics across all channels including organic traffic growth from German searches, cost per acquisition (CPA) for German customers, return on advertising spend (ROAS) in German market, conversion rates for German users, customer lifetime value (CLV) for German clients, and attribution across all touchpoints. Monthly reports include German business impact analysis and recommendations for optimization."
     },
     {
-      question: "What digital marketing services do you offer in the United Kingdom?",
-      answer: "Our expertise spans comprehensive digital marketing including SEO, Google Ads (Search, Display, Shopping, YouTube), Facebook & Instagram marketing, LinkedIn marketing, content marketing, web design & development, and emerging platforms. Service selection depends on your target audience behavior and business objectives in the UK market, with regional variations for England, Scotland, Wales, and Northern Ireland."
+      question: "Which digital marketing channels work best in Germany?",
+      answer: "Our expertise spans comprehensive digital marketing including SEO Deutschland, Google Ads (Search, Display, Shopping, YouTube), Facebook & Instagram marketing, LinkedIn marketing for German B2B, content marketing in German language, web design & development, and emerging platforms. Service selection depends on your target audience behavior and business objectives in the German market, with regional variations across different German cities."
     },
     {
-      question: "Can you help optimize our existing digital marketing campaigns for the UK market?",
-      answer: "Yes, we offer comprehensive UK digital marketing audit and optimization services for existing campaigns. Our 30-day digital marketing audit identifies optimization opportunities across all channels specifically for the UK market and provides actionable recommendations for immediate improvement in campaign performance with British audiences."
+      question: "Can you optimize existing digital marketing campaigns for the German market?",
+      answer: "Yes, we offer comprehensive German digital marketing audit and optimization services for existing campaigns. Our 30-day digital marketing audit identifies optimization opportunities across all channels specifically for the German market and provides actionable recommendations for immediate improvement in campaign performance with German audiences."
     },
     {
-      question: "Do you provide digital marketing training for UK businesses?",
-      answer: "We offer comprehensive digital marketing training programs for British businesses, including SEO, Google Ads certification guidance, Facebook Blueprint training, content marketing, and custom workshops for your marketing team. Training can be conducted at your UK office or virtually, with sessions tailored to UK market dynamics and British business practices."
+      question: "Do you provide digital marketing training for German businesses?",
+      answer: "We offer comprehensive digital marketing training programs for German businesses, including SEO Deutschland, Google Ads certification guidance, Facebook Blueprint training, content marketing, and custom workshops for your marketing team. Training can be conducted at your German office or virtually, with sessions tailored to German market dynamics and DACH business practices."
     }
   ]
 
@@ -306,27 +311,27 @@ export default function DigitalMarketingInUnitedKingdomPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
-        "name": "Frameleads - Digital Marketing Agency UK",
-        "description": "Leading digital marketing agency in United Kingdom delivering 340% ROI growth. Expert SEO, Google Ads, Social Media & Web Development for UK businesses.",
-        "url": "https://frameleads.com/digital-marketing-in-united-kingdom",
-        "telephone": "+44 (0) 20 7946 0958",
-        "email": "uk@frameleads.com",
+        "@type": "ProfessionalService",
+        "name": "Frameleads Digital Marketing Germany",
+        "description": "Premier digital marketing agency in Germany specializing in SEO, PPC, social media marketing, and web development for German businesses. 420% ROI growth.",
+        "url": "https://frameleads.com/digital-marketing-in-germany",
+        "telephone": "+49-30-123-456-789",
+        "email": "deutschland@frameleads.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 Business Street",
-          "addressLocality": "London",
-          "addressRegion": "England",
-          "postalCode": "SW1A 1AA",
-          "addressCountry": "GB"
+          "streetAddress": "Unter den Linden 1",
+          "addressLocality": "Berlin",
+          "postalCode": "10117",
+          "addressCountry": "DE"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 51.5074,
-          "longitude": -0.1278
+          "latitude": 52.5200,
+          "longitude": 13.4050
         },
-        "areaServed": "United Kingdom",
-        "priceRange": "£££",
+        "areaServed": ["Germany", "Berlin", "Munich", "Hamburg", "Frankfurt", "Cologne", "Stuttgart"],
+        "serviceType": "Digital Marketing",
+        "priceRange": "€€€",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
@@ -446,20 +451,20 @@ export default function DigitalMarketingInUnitedKingdomPage() {
           >
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🏆 #1 Digital Marketing Agency in United Kingdom
+                🏆 #1 Digital Marketing Agency in Germany
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
               Premier Digital Marketing Agency in{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35] drop-shadow-[0_0_20px_rgba(255,107,53,0.3)]">
-                United Kingdom
+                Germany
               </span>{" "}
-              Delivering 340% ROI Growth
+              Delivering 420% ROI Growth
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Transform your digital presence with Britain's most trusted digital marketing agency. We specialize in comprehensive digital marketing strategies including SEO, PPC, social media marketing, content marketing, and web development that deliver measurable results for startups, SMEs, and enterprises across England, Scotland, Wales, and Northern Ireland.
+              Transform your German market presence with Europe's most trusted digital marketing agency. We specialize in comprehensive digitales Marketing strategies including SEO, PPC, social media marketing, content marketing, and web development that deliver measurable results for startups, SMEs, and enterprises across Berlin, Munich, Hamburg, Frankfurt, and the entire DACH region.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -468,9 +473,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
                   Get Free Digital Marketing Audit
                 </Button>
               </Link>
-              <Link href="tel:+442079460958" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Link href="tel:+4930123456789" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +44 (0) 20 7946 0958
+                  <Phone className="h-5 w-5 mr-2" /> Call +49 (0) 30 123 456 789
                 </Button>
               </Link>
             </div>
@@ -479,11 +484,11 @@ export default function DigitalMarketingInUnitedKingdomPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>340% Average ROI Increase</span>
+                <span>420% Average ROI Increase</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>250+ Qualified Leads Monthly</span>
+                <span>300+ Qualified Leads Monthly</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
@@ -491,27 +496,27 @@ export default function DigitalMarketingInUnitedKingdomPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>5+ Years Serving UK Businesses</span>
+                <span>5+ Years Serving German Businesses</span>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-[#FF6B35]/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 400+ UK Businesses</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 350+ German Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">800+</div>
-                  <div className="text-gray-600 text-sm">Successful UK Campaigns</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">700+</div>
+                  <div className="text-gray-600 text-sm">Successful German Campaigns</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">£40M+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">€35M+</div>
                   <div className="text-gray-600 text-sm">Ad Spend Managed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">80%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">85%</div>
                   <div className="text-gray-600 text-sm">Avg Conversion Rate Improvement</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">35%</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">40%</div>
                   <div className="text-gray-600 text-sm">Reduction in Customer Acquisition Cost</div>
                 </div>
               </div>
@@ -524,8 +529,8 @@ export default function DigitalMarketingInUnitedKingdomPage() {
       <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across United Kingdom</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across England, Scotland, Wales, and Northern Ireland</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across Germany</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across Germany's dynamic digital landscape</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -538,7 +543,7 @@ export default function DigitalMarketingInUnitedKingdomPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <TrendingUp className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">340%</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">420%</div>
                 <div className="text-gray-600 text-sm">Average ROI Growth</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
@@ -560,8 +565,8 @@ export default function DigitalMarketingInUnitedKingdomPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">400+</div>
-                <div className="text-gray-600 text-sm">UK Clients Served</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">350+</div>
+                <div className="text-gray-600 text-sm">German Clients Served</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
@@ -582,8 +587,8 @@ export default function DigitalMarketingInUnitedKingdomPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">40+</div>
-                <div className="text-gray-600 text-sm">UK Cities Covered</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">25+</div>
+                <div className="text-gray-600 text-sm">German Cities Covered</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
@@ -626,10 +631,10 @@ export default function DigitalMarketingInUnitedKingdomPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Why Choose Frameleads as Your Digital Marketing Partner in United Kingdom?
+                Why Choose Frameleads for Digital Marketing in Germany?
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Frameleads stands as Britain's premier digital marketing agency, combining deep UK market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures every pound of your marketing budget delivers maximum return on investment across all digital channels in England, Scotland, Wales, and Northern Ireland.
+                Frameleads stands as Germany's premier digital marketing agency, combining deep German market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures every euro of your marketing budget delivers maximum return on investment across all digital channels in the German-speaking market.
               </p>
               
               <div className="mb-8">
@@ -696,10 +701,10 @@ export default function DigitalMarketingInUnitedKingdomPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive Digital Marketing Services UK
+              Comprehensive Digital Marketing Services in Germany
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for British businesses across all industries in England, Scotland, Wales, and Northern Ireland.
+              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for German businesses across all industries throughout the DACH region.
             </p>
           </div>
 
@@ -769,10 +774,10 @@ export default function DigitalMarketingInUnitedKingdomPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Proven UK Digital Marketing Process
+              Our Proven Digital Marketing Process for German Businesses
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic digital marketing approach specifically designed for UK businesses, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across England, Scotland, Wales, and Northern Ireland.
+              We follow a systematic digital marketing approach specifically designed for German businesses, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across the DACH region.
             </p>
           </div>
 
@@ -825,9 +830,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industries We Serve Across United Kingdom</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise in Germany</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our specialized expertise spans across key industries in the United Kingdom, with deep understanding of unique digital marketing needs and business objectives in each sector across England, Scotland, Wales, and Northern Ireland.
+              Our specialized expertise spans across key industries in Germany, with deep understanding of unique digital marketing needs and business objectives in each sector across the German market.
             </p>
           </div>
 
@@ -879,9 +884,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
       <section id="case-studies" className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Digital Marketing Success Stories from Leading UK Markets</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Success Stories from German Businesses</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we've helped British businesses achieve remarkable growth through strategic digital marketing campaigns across England, Scotland, Wales, and Northern Ireland.
+              See how we've helped German businesses achieve remarkable growth through strategic digital marketing campaigns across the DACH region.
             </p>
           </div>
 
@@ -927,14 +932,14 @@ export default function DigitalMarketingInUnitedKingdomPage() {
       <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Digital Marketing Services Across Major UK Cities</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">German Cities We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive digital marketing services across all major British business hubs, helping businesses in every region maximize their digital presence and ROI across England, Scotland, Wales, and Northern Ireland.
+              We provide comprehensive digital marketing services across all major German business hubs, helping businesses in every region maximize their digital presence and ROI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {ukBusinessMarkets.map((district, index) => (
+            {germanBusinessMarkets.map((district, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -976,10 +981,10 @@ export default function DigitalMarketingInUnitedKingdomPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions - Digital Marketing in UK
+              Frequently Asked Questions About Digital Marketing in Germany
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about digital marketing services in the United Kingdom and how Frameleads can help your business achieve measurable results across England, Scotland, Wales, and Northern Ireland.
+              Get answers to common questions about digital marketing services in Germany and how Frameleads can help your business achieve measurable results across the DACH region.
             </p>
           </div>
 
@@ -1002,20 +1007,20 @@ export default function DigitalMarketingInUnitedKingdomPage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Transform Your Digital Presence in the UK?"
-        description="Partner with Frameleads, Britain's most trusted digital marketing agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth in the competitive UK market across England, Scotland, Wales, and Northern Ireland."
-        primaryButtonText="Get Free UK Digital Marketing Audit"
-        secondaryButtonText="Schedule UK Strategy Call"
+        title="Ready to Transform Your Digital Presence in Germany?"
+        description="Partner with Frameleads, Germany's most trusted digital marketing agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth in the competitive German market across the entire DACH region."
+        primaryButtonText="Get Free German Digital Marketing Audit"
+        secondaryButtonText="Schedule German Strategy Call"
       />
 
       {/* Comprehensive Digital Marketing Services in Bangalore */}
       <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Digital Marketing Ecosystem in United Kingdom</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Digital Marketing Ecosystem in Germany</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              As Britain's leading digital marketing agency, we offer comprehensive services across all digital channels. 
-              Explore our specialized services designed specifically for the diverse UK business landscape across England, Scotland, Wales, and Northern Ireland.
+              As Germany's leading digital marketing agency, we offer comprehensive services across all digital channels. 
+              Explore our specialized services designed specifically for the diverse German business landscape across the DACH region.
             </p>
           </div>
           
@@ -1028,14 +1033,14 @@ export default function DigitalMarketingInUnitedKingdomPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services UK</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services Germany</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Dominate search results with our comprehensive SEO strategies tailored for UK businesses.
+                  Dominate search results with our comprehensive SEO strategies tailored for German businesses.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Local SEO optimization for UK cities</span>
+                    <span className="text-sm">Local SEO optimization for German cities</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -1059,9 +1064,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Palette className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising UK</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising Germany</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Captivate your British audience with innovative creative campaigns that drive engagement and conversions.
+                  Captivate your German audience with innovative creative campaigns that drive engagement and conversions.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1090,9 +1095,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing UK</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing Germany</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Accelerate enterprise sales with targeted B2B marketing strategies for Britain's corporate ecosystem.
+                  Accelerate enterprise sales with targeted B2B marketing strategies for Germany's corporate ecosystem.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1121,9 +1126,9 @@ export default function DigitalMarketingInUnitedKingdomPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing UK</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing Germany</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Connect with property buyers through targeted digital marketing campaigns for Britain's real estate market.
+                  Connect with property buyers through targeted digital marketing campaigns for Germany's real estate market.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1214,26 +1219,26 @@ export default function DigitalMarketingInUnitedKingdomPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
                 <Link href="/free-marketing-audit" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free UK Marketing Audit</div>
-                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the UK market</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free German Marketing Audit</div>
+                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the German market</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/tools/roi-calculator" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">ROI Calculator</div>
-                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for UK campaigns</p>
+                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for German campaigns</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/resources/digital-marketing-guide" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Digital Marketing Guide</div>
-                  <p className="text-sm text-gray-600">Comprehensive guide to digital marketing strategies and best practices for UK businesses</p>
+                  <p className="text-sm text-gray-600">Comprehensive guide to digital marketing strategies and best practices for German businesses</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/academy" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">FrameLeads Academy</div>
-                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for UK market</p>
+                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for German market</p>
                 </Link>
               </div>
             </div>

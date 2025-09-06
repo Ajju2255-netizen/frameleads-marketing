@@ -18,6 +18,7 @@ export default function Footer() {
     { name: "Digital Marketing in Bangalore", href: "/digital-marketing-in-bangalore" },
     { name: "Digital Marketing in United States", href: "/digital-marketing-in-unitedstates" },
     { name: "Digital Marketing in United Kingdom", href: "/digital-marketing-in-unitedkingdom" },
+    { name: "Digital Marketing in Germany", href: "/digital-marketing-in-germany" },
   ]
 
   const company = [
