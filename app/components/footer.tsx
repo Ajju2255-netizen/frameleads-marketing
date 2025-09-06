@@ -20,6 +20,7 @@ export default function Footer() {
     { name: "LinkedIn Ads", href: "/linkedin-ads" },
     { name: "TikTok Ads", href: "/tiktok-ads" },
     { name: "Snapchat Ads", href: "/snapchat-ads" },
+    { name: "Taboola Ads", href: "/taboola-ads" },
   ]
 
   const locations = [
@@ -38,6 +39,7 @@ export default function Footer() {
     { name: "Digital Marketing in France", href: "/digital-marketing-in-france" },
     { name: "Digital Marketing in Brazil", href: "/digital-marketing-in-brazil" },
   ]
+  
 
   const company = [
     { name: "About Us", href: "/about" },
