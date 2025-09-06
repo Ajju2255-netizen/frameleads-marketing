@@ -108,7 +108,25 @@ export default function Footer() {
               </p>
             </div>
 
-
+            {/* Newsletter */}
+            <div className="mt-6">
+              <h3 className="text-sm font-bold text-[#2D2D2D] mb-3">Stay Updated</h3>
+              <p className="text-[#5A5A5A] mb-3 text-xs leading-relaxed">
+                Get the latest digital marketing tips and insights delivered to your inbox.
+              </p>
+              <div className="flex flex-col gap-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-3 py-2 bg-white/80 border border-[#FFE4D6]/30 rounded-lg text-[#5A5A5A] placeholder-[#5A5A5A]/50 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent backdrop-blur-xl text-xs"
+                />
+                <Link href="/contact">
+                  <Button className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-semibold px-4 py-2 rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105 text-xs">
+                    Subscribe
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Services & Platforms */}
@@ -177,12 +195,15 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Tools</h3>
+            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/tools/roi-calculator" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">ROI Calculator</Link></li>
-              <li><Link href="/tools/seo-audit" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">SEO Audit Tool</Link></li>
-              <li><Link href="/tools/keyword-research" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Keyword Research</Link></li>
-              <li><Link href="/tools/competitor-analysis" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Competitor Analysis</Link></li>
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -190,10 +211,19 @@ export default function Footer() {
           <div>
             <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Support</h3>
             <ul className="space-y-2 mb-6">
-              <li><Link href="/contact" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Help Center</Link></li>
               <li><Link href="/contact" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Contact Us</Link></li>
-              <li><Link href="/academy" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Training</Link></li>
               <li><Link href="/blog" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Blog</Link></li>
+            </ul>
+
+            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Legal</h3>
+            <ul className="space-y-2 mb-6">
+              {legal.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             {/* Contact Info */}
@@ -231,58 +261,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="pt-8 border-t border-[#FFE4D6]/30">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6">
-            {/* Company Info */}
-            <div>
-              <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Company</h3>
-              <ul className="space-y-2">
-                {company.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Legal</h3>
-              <ul className="space-y-2">
-                {legal.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Newsletter */}
-            <div className="md:col-span-2">
-              <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Stay Updated</h3>
-              <p className="text-[#5A5A5A] mb-4 text-sm">
-                Get the latest digital marketing tips, industry insights, and exclusive offers delivered to your inbox.
-              </p>
-              <div className="flex gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-white/80 border border-[#FFE4D6]/30 rounded-lg text-[#5A5A5A] placeholder-[#5A5A5A]/50 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent backdrop-blur-xl text-sm"
-                />
-                <Link href="/contact">
-                  <Button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-semibold px-6 py-2 rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                    Subscribe
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Line */}
         <div className="text-center pt-8 border-t border-[#FFE4D6]/30">
