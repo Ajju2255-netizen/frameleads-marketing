@@ -17,6 +17,7 @@ export default function Footer() {
     { name: "Google Ads", href: "/google-ads" },
     { name: "Meta Ads", href: "/Meta-ads" },
     { name: "YouTube Ads", href: "/youtube-ads" },
+    { name: "LinkedIn Ads", href: "/linkedin-ads" },
   ]
 
   const locations = [
