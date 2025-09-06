@@ -20,6 +20,7 @@ export default function Footer() {
     { name: "Digital Marketing in United Kingdom", href: "/digital-marketing-in-unitedkingdom" },
     { name: "Digital Marketing in Germany", href: "/digital-marketing-in-germany" },
     { name: "Digital Marketing in France", href: "/digital-marketing-in-france" },
+    { name: "Digital Marketing in Brazil", href: "/digital-marketing-in-brazil" },
   ]
 
   const company = [
