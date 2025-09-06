@@ -20,6 +20,7 @@ export default function Footer() {
     { name: "LinkedIn Ads", href: "/linkedin-ads" },
     { name: "TikTok Ads", href: "/tiktok-ads" },
     { name: "Snapchat Ads", href: "/snapchat-ads" },
+    { name: "Pinterest Ads", href: "/pinterest-ads" },
     { name: "Taboola Ads", href: "/taboola-ads" },
   ]
 
