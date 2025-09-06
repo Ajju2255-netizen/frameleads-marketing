@@ -18,6 +18,7 @@ export default function Footer() {
     { name: "Digital Marketing in Singapore", href: "/digital-marketing-in-singapore" },
     { name: "Digital Marketing in Australia", href: "/digital-marketing-in-australia" },
     { name: "Digital Marketing in Saudi Arabia", href: "/digital-marketing-in-saudi-arabia" },
+    { name: "Digital Marketing in UAE", href: "/digital-marketing-in-uae" },
     { name: "Digital Marketing in Bangalore", href: "/digital-marketing-in-bangalore" },
     { name: "Digital Marketing in United States", href: "/digital-marketing-in-unitedstates" },
     { name: "Digital Marketing in United Kingdom", href: "/digital-marketing-in-unitedkingdom" },
