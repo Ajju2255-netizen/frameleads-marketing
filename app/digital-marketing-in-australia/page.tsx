@@ -11,7 +11,7 @@ import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 
-export default function DigitalMarketingInSingaporePage() {
+export default function DigitalMarketingInAustraliaPage() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -20,123 +20,123 @@ export default function DigitalMarketingInSingaporePage() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  const singaporeBusinessMarkets = [
+  const australianBusinessMarkets = [
     {
-      category: "Central Business District (CBD) - Financial Hub",
-      areas: ["Raffles Place", "Marina Bay", "Shenton Way", "Tanjong Pagar", "Anson Road", "Robinson Road"],
-      description: "Singapore's premier financial district with focus on banking, fintech, and international corporations requiring sophisticated digital marketing strategies"
+      category: "Sydney CBD - Financial & Business Hub",
+      areas: ["Sydney CBD", "Circular Quay", "Martin Place", "Barangaroo", "Pyrmont", "Ultimo"],
+      description: "Australia's premier financial district with focus on banking, fintech, and international corporations requiring sophisticated digital marketing strategies for the Sydney market"
     },
     {
-      category: "Orchard Road - Retail & Luxury Marketing", 
-      areas: ["Orchard Road", "Scotts Road", "Tanglin", "River Valley", "Cairnhill", "Emerald Hill"],
-      description: "Premium retail and luxury brand digital marketing specialists for high-end consumer engagement and e-commerce optimization"
+      category: "Melbourne CBD - Creative & Professional Services", 
+      areas: ["Melbourne CBD", "Southbank", "Docklands", "Carlton", "Fitzroy", "South Yarra"],
+      description: "Creative and professional services digital marketing specialists for Melbourne's diverse business landscape and cultural hub"
     },
     {
-      category: "Jurong East - Industrial & Manufacturing",
-      areas: ["Jurong East", "Jurong West", "Tuas", "Pioneer", "Boon Lay", "Taman Jurong"],
-      description: "Industrial B2B digital marketing expertise for manufacturing, logistics, and supply chain companies in Singapore's industrial heartland"
+      category: "Brisbane - Emerging Tech & Innovation",
+      areas: ["Brisbane CBD", "Fortitude Valley", "South Brisbane", "New Farm", "Teneriffe", "Kangaroo Point"],
+      description: "Tech and innovation digital marketing expertise for Brisbane's growing startup ecosystem and emerging industries"
     },
     {
-      category: "Changi - Aviation & Logistics Hub",
-      areas: ["Changi", "Tampines", "Pasir Ris", "Simei", "Bedok", "Eunos"],
-      description: "Aviation, logistics, and trade digital marketing specialists serving Singapore's gateway to Southeast Asia"
+      category: "Perth - Mining & Resources Hub",
+      areas: ["Perth CBD", "West Perth", "East Perth", "Subiaco", "Leederville", "Northbridge"],
+      description: "Mining, resources, and energy sector digital marketing specialists serving Western Australia's prosperous market"
     },
     {
-      category: "Woodlands - Northern Gateway",
-      areas: ["Woodlands", "Sembawang", "Yishun", "Admiralty", "Marsiling", "Kranji"],
-      description: "Cross-border digital marketing expertise for companies expanding from Singapore to Malaysia and regional markets"
+      category: "Adelaide - Manufacturing & Education",
+      areas: ["Adelaide CBD", "North Adelaide", "Glenelg", "Norwood", "Unley", "Prospect"],
+      description: "Manufacturing, education, and healthcare digital marketing expertise for South Australia's business center"
     },
     {
-      category: "Sentosa & Harbourfront - Tourism & Hospitality",
-      areas: ["Sentosa", "Harbourfront", "Telok Blangah", "Mount Faber", "Keppel Bay", "VivoCity"],
-      description: "Tourism, hospitality, and entertainment digital marketing specialists for Singapore's leisure and tourism sector"
+      category: "Gold Coast - Tourism & Lifestyle",
+      areas: ["Surfers Paradise", "Broadbeach", "Southport", "Main Beach", "Burleigh Heads", "Coolangatta"],
+      description: "Tourism, hospitality, and lifestyle digital marketing specialists for Australia's premier tourist destination"
     }
   ]
 
   const digitalMarketingServices = [
     {
       icon: TrendingUp,
-      title: "SEO Singapore - Search Engine Optimization for Singapore Market Dominance",
-      description: "Comprehensive SEO strategies specifically designed for Singapore's competitive digital landscape, targeting high-value keywords and local search optimization across all Singapore regions.",
+      title: "SEO Australia - Search Engine Optimization for Australian Market Dominance",
+      description: "Comprehensive SEO strategies specifically designed for Australia's competitive digital landscape, targeting high-value keywords and local search optimization across all Australian cities.",
       features: [
-        "Local SEO Singapore: Google My Business optimization for Singapore businesses",
-        "Technical SEO: Website optimization for Singapore users and Google.com.sg",
-        "Keyword Research: Targeting high-volume Singapore-specific terms",
-        "Competitor Analysis: Comprehensive analysis of Singapore market competitors",
-        "Content Optimization: Singapore-focused content strategy and optimization"
+        "Local SEO Australia: Google My Business optimization for Australian businesses",
+        "Technical SEO: Website optimization for Australian users and Google.com.au",
+        "Keyword Research: Targeting high-volume Australia-specific terms",
+        "Competitor Analysis: Comprehensive analysis of Australian market competitors",
+        "Content Optimization: Australia-focused content strategy and optimization"
       ],
       results: [
-        "300% increase in organic traffic from Singapore searches",
-        "Top 3 rankings for target keywords in Singapore",
-        "85% improvement in local visibility across Singapore regions"
+        "250% increase in organic traffic from Australian searches",
+        "Top 3 rankings for target keywords in Australia",
+        "85% improvement in local visibility across Australian cities"
       ]
     },
     {
       icon: DollarSign,
-      title: "Google Ads Singapore - PPC Advertising Optimized for Singapore Audiences",
-      description: "Strategic Google Ads and Microsoft Advertising campaigns optimized for Singapore audiences, purchasing behaviors, and regional market dynamics across Singapore.",
+      title: "Google Ads Australia - PPC Advertising Optimized for Australian Audiences",
+      description: "Strategic Google Ads and Microsoft Advertising campaigns optimized for Australian audiences, purchasing behaviors, and regional market dynamics across Australia.",
       features: [
-        "Singapore Market Targeting: Geo-targeted campaigns for Singapore regions",
-        "Local Competition Analysis: Strategic bidding for Singapore market keywords",
-        "Conversion Optimization: Landing pages optimized for Singapore consumers",
-        "Multi-language Support: English, Mandarin, Malay, and Tamil ad campaigns",
-        "Singapore Payment Integration: Local payment methods and banking systems"
+        "Australian Market Targeting: Geo-targeted campaigns for Australian cities",
+        "Local Competition Analysis: Strategic bidding for Australian market keywords",
+        "Conversion Optimization: Landing pages optimized for Australian consumers",
+        "Multi-platform Support: Google Ads, Facebook, LinkedIn, and Microsoft Advertising",
+        "Australian Payment Integration: Local payment methods and banking systems"
       ],
       results: [
-        "250% improvement in Singapore PPC performance",
-        "40% reduction in cost-per-acquisition for Singapore market",
-        "3.2x average return on ad spend (ROAS) in Singapore"
+        "180% improvement in Australian PPC performance",
+        "40% reduction in cost-per-acquisition for Australian market",
+        "3.2x average return on ad spend (ROAS) in Australia"
       ]
     },
     {
       icon: MessageSquare,
-      title: "Social Media Marketing Singapore - Multi-Platform Singapore Audience Engagement",
-      description: "Multi-platform social media marketing optimized for Singapore audiences, cultural nuances, and diverse business objectives across Singapore's digital ecosystem.",
+      title: "Social Media Marketing Australia - Multi-Platform Australian Audience Engagement",
+      description: "Multi-platform social media marketing optimized for Australian audiences, cultural nuances, and diverse business objectives across Australia's digital ecosystem.",
       features: [
-        "LinkedIn Marketing: B2B networking and lead generation for Singapore market",
-        "Instagram Marketing: Visual storytelling for Singapore lifestyle brands",
+        "LinkedIn Marketing: B2B networking and lead generation for Australian market",
+        "Instagram Marketing: Visual storytelling for Australian lifestyle brands",
         "Facebook Marketing: Community building and local engagement strategies",
-        "TikTok Marketing: Engaging young Singapore demographics",
-        "WeChat Marketing: Essential for Chinese-speaking Singapore market"
+        "TikTok Marketing: Engaging young Australian demographics",
+        "YouTube Marketing: Video content for Australian audiences"
       ],
       results: [
-        "280% increase in social media conversions from Singapore users",
-        "50% lower cost-per-acquisition on Singapore market",
-        "350% improvement in engagement rates with Singapore audiences"
+        "280% increase in social media conversions from Australian users",
+        "50% lower cost-per-acquisition on Australian market",
+        "350% improvement in engagement rates with Australian audiences"
       ]
     },
     {
       icon: Users,
-      title: "Content Marketing Singapore - Strategic Content Creation for Singapore Market",
-      description: "Strategic content creation and distribution tailored to Singapore audiences, cultural references, and regional preferences across the Singapore market.",
+      title: "Content Marketing Australia - Strategic Content Creation for Australian Market",
+      description: "Strategic content creation and distribution tailored to Australian audiences, cultural references, and regional preferences across the Australian market.",
       features: [
-        "Multi-language Content: English, Mandarin, Malay content creation",
-        "Singapore Market Insights: Industry-specific content for Singapore businesses",
-        "Cultural Adaptation: Content that resonates with Singapore values and trends",
-        "SEO-Optimized Content: Long-form content targeting Singapore keywords",
-        "Video Content: YouTube and social media content for Singapore audiences"
+        "Australian Market Insights: Industry-specific content for Australian businesses",
+        "Cultural Adaptation: Content that resonates with Australian values and trends",
+        "SEO-Optimized Content: Long-form content targeting Australian keywords",
+        "Video Content: YouTube and social media content for Australian audiences",
+        "Local Content: City-specific content for Sydney, Melbourne, Brisbane, Perth, Adelaide"
       ],
       results: [
-        "320% increase in content engagement from Singapore audiences",
-        "55% improvement in lead quality from Singapore prospects",
-        "200% increase in brand awareness across Singapore regions"
+        "320% increase in content engagement from Australian audiences",
+        "55% improvement in lead quality from Australian prospects",
+        "200% increase in brand awareness across Australian cities"
       ]
     },
     {
       icon: Settings,
-      title: "Web Development for Singapore Market Success",
-      description: "Development of conversion-optimized websites adapted for Singapore users, design preferences, and local market requirements including Singapore compliance standards.",
+      title: "Web Development for Australian Market Success",
+      description: "Development of conversion-optimized websites adapted for Australian users, design preferences, and local market requirements including Australian compliance standards.",
       features: [
-        "Responsive Web Design: Optimized for Singapore devices and internet speeds",
-        "Conversion Rate Optimization (CRO): For Singapore user behavior patterns",
-        "E-commerce Development: With Singapore payment systems and banking integration",
-        "Site Speed Optimization: For Singapore hosting and CDN performance",
-        "User Experience (UX) Design: Tailored to Singapore preferences and culture"
+        "Responsive Web Design: Optimized for Australian devices and internet speeds",
+        "Conversion Rate Optimization (CRO): For Australian user behavior patterns",
+        "E-commerce Development: With Australian payment systems and banking integration",
+        "Site Speed Optimization: For Australian hosting and CDN performance",
+        "User Experience (UX) Design: Tailored to Australian preferences and culture"
       ],
       results: [
-        "90% average improvement in conversion rate for Singapore visitors",
-        "40% reduction in bounce rate for Singapore users",
-        "380% increase in lead generation from Singapore market"
+        "90% average improvement in conversion rate for Australian visitors",
+        "40% reduction in bounce rate for Australian users",
+        "380% increase in lead generation from Australian market"
       ]
     }
   ]
@@ -144,71 +144,71 @@ export default function DigitalMarketingInSingaporePage() {
   const digitalMarketingProcess = [
     {
       step: "01",
-      title: "Singapore Market Analysis & Strategy Development",
-      description: "Comprehensive Singapore market audit including consumer behavior analysis, competitive benchmarking across Singapore regions, target audience research for Singapore demographics, and goal setting aligned with Singapore business objectives."
+      title: "Australian Market Analysis & Strategy Development",
+      description: "Comprehensive Australian market audit including consumer behavior analysis, competitive benchmarking across Australian cities, target audience research for Australian demographics, and goal setting aligned with Australian business objectives."
     },
     {
       step: "02",
-      title: "Integrated Digital Marketing Strategy for Singapore",
-      description: "Comprehensive digital marketing strategy with SEO, PPC, social media, content marketing, and web development plans specifically adapted for the Singapore market, including regional variations and cultural considerations."
+      title: "Integrated Digital Marketing Strategy for Australia",
+      description: "Comprehensive digital marketing strategy with SEO, PPC, social media, content marketing, and web development plans specifically adapted for the Australian market, including regional variations and cultural considerations."
     },
     {
       step: "03",
       title: "Data-Driven Campaign Execution",
-      description: "Data-driven campaign execution with real-time performance monitoring across Singapore regions, A/B testing implementation for Singapore audiences, and weekly optimization cycles for maximum ROI in the Singapore market."
+      description: "Data-driven campaign execution with real-time performance monitoring across Australian cities, A/B testing implementation for Australian audiences, and weekly optimization cycles for maximum ROI in the Australian market."
     },
     {
       step: "04",
-      title: "Continuous Growth & Singapore Market Expansion",
-      description: "Continuous growth and optimization through scaling Singapore campaigns, implementing advanced automation for Singapore clients, and monthly strategic planning sessions focused on Singapore market expansion."
+      title: "Continuous Growth & Australian Market Expansion",
+      description: "Continuous growth and optimization through scaling Australian campaigns, implementing advanced automation for Australian clients, and monthly strategic planning sessions focused on Australian market expansion."
     }
   ]
 
   const whyChooseDigitalMarketing = [
-    "Native Singapore Market Expertise: Deep understanding of Singapore consumer behavior, cultural nuances, and local search patterns",
-    "Singapore Specialists: Complete coverage across CBD, Orchard Road, Jurong East, Changi, Woodlands, and all Singapore regions",
-    "Multi-language Optimization: Strategic targeting of English, Mandarin, Malay, and Tamil keywords used by Singapore audiences",
-    "Performance-Driven Results: 400% average ROI increase for Singapore clients",
-    "Google.com.sg Optimization: Specialized expertise in Singapore search engine landscape",
-    "Singapore Compliance: Full compliance with PDPA and Singapore data protection regulations",
-    "Singapore Industry-Specific Expertise: Proven success in fintech, healthcare, real estate, e-commerce, and technology sectors in Singapore",
-    "Singapore Startup Ecosystem Knowledge: Deep understanding of Singapore startup funding cycles, government grants, and growth patterns"
+    "Native Australian Market Expertise: Deep understanding of Australian consumer behavior, cultural nuances, and local search patterns",
+    "Australian Specialists: Complete coverage across Sydney, Melbourne, Brisbane, Perth, Adelaide, and all Australian cities",
+    "Local Market Intelligence: Strategic targeting of Australian-specific keywords and search behaviors",
+    "Performance-Driven Results: 300% average ROI increase for Australian clients",
+    "Google.com.au Optimization: Specialized expertise in Australian search engine landscape",
+    "Australian Compliance: Full compliance with Australian Consumer Law and data protection regulations",
+    "Australian Industry-Specific Expertise: Proven success in mining, healthcare, real estate, e-commerce, and technology sectors in Australia",
+    "Australian Business Ecosystem Knowledge: Deep understanding of Australian business cycles, government grants, and growth patterns"
   ]
 
   const digitalMarketingCaseStudies = [
     {
-      industry: "CBD Fintech Startup",
-      location: "Singapore CBD",
-      challenge: "Early-stage B2B fintech needed to scale from 15 to 150 enterprise clients in the Singapore market",
-      solution: "Comprehensive Singapore digital marketing strategy with SEO, PPC, social media, and content marketing",
+      industry: "Sydney Fintech Startup",
+      location: "Sydney CBD",
+      challenge: "Early-stage B2B fintech needed to scale from 15 to 150 enterprise clients in the Australian market",
+      solution: "Comprehensive Australian digital marketing strategy with SEO, PPC, social media, and content marketing",
       results: [
-        "380% increase in qualified leads from Singapore market",
-        "S$15M ARR growth in 12 months",
+        "380% increase in qualified leads from Australian market",
+        "A$15M ARR growth in 12 months",
         "90% improvement in enterprise client acquisition",
-        "3.5x return on ad spend (ROAS) in Singapore"
+        "3.5x return on ad spend (ROAS) in Australia"
       ]
     },
     {
-      industry: "Orchard Road E-commerce Brand",
-      location: "Singapore Orchard Road",
-      challenge: "D2C luxury brand struggling with high customer acquisition costs and low ROAS in Singapore market",
-      solution: "Complete Singapore digital marketing overhaul with SEO, social media, content marketing, and conversion optimization",
+      industry: "Melbourne E-commerce Brand",
+      location: "Melbourne CBD",
+      challenge: "D2C lifestyle brand struggling with high customer acquisition costs and low ROAS in Australian market",
+      solution: "Complete Australian digital marketing overhaul with SEO, social media, content marketing, and conversion optimization",
       results: [
-        "350% increase in organic traffic from Singapore searches",
+        "350% increase in organic traffic from Australian searches",
         "50% reduction in customer acquisition cost",
-        "280% improvement in customer lifetime value for Singapore clients",
-        "5.2x return on ad spend on Singapore market"
+        "280% improvement in customer lifetime value for Australian clients",
+        "5.2x return on ad spend on Australian market"
       ]
     },
     {
-      industry: "Jurong East Manufacturing Company",
-      location: "Singapore Jurong East",
-      challenge: "B2B manufacturing company needed qualified leads in Singapore's competitive industrial market",
-      solution: "Comprehensive B2B Singapore digital marketing strategy with LinkedIn, Google Ads, content marketing, and SEO",
+      industry: "Perth Mining Company",
+      location: "Perth CBD",
+      challenge: "B2B mining company needed qualified leads in Australia's competitive resources market",
+      solution: "Comprehensive B2B Australian digital marketing strategy with LinkedIn, Google Ads, content marketing, and SEO",
       results: [
-        "420% increase in qualified B2B leads from Singapore market",
+        "420% increase in qualified B2B leads from Australian market",
         "45% reduction in sales cycle duration",
-        "S$3.2M in new business revenue in 8 months",
+        "A$3.2M in new business revenue in 8 months",
         "80% improvement in inquiry-to-client conversion rate"
       ]
     }
@@ -217,98 +217,98 @@ export default function DigitalMarketingInSingaporePage() {
   const industriesWeServe = [
     {
       icon: Building2,
-      title: "Technology & SaaS Companies in Singapore",
-      description: "Transform your Singapore tech presence with comprehensive digital marketing strategies designed for Singapore's thriving innovation ecosystem and startup landscape.",
+      title: "Technology & SaaS Companies in Australia",
+      description: "Transform your Australian tech presence with comprehensive digital marketing strategies designed for Australia's thriving innovation ecosystem and startup landscape.",
       services: [
-        "B2B lead generation and enterprise sales enablement for Singapore market",
-        "Free trial conversions and freemium model optimization for Singapore users",
-        "Product-led growth and user acquisition campaigns across Singapore regions",
-        "Competitive intelligence and market positioning in Singapore tech sector"
+        "B2B lead generation and enterprise sales enablement for Australian market",
+        "Free trial conversions and freemium model optimization for Australian users",
+        "Product-led growth and user acquisition campaigns across Australian cities",
+        "Competitive intelligence and market positioning in Australian tech sector"
       ],
-      results: "380% increase in qualified demo requests from Singapore market, 65% improvement in trial-to-paid conversion for Singapore users"
+      results: "380% increase in qualified demo requests from Australian market, 65% improvement in trial-to-paid conversion for Australian users"
     },
     {
       icon: ShoppingCart,
-      title: "E-commerce & D2C Brands in Singapore",
-      description: "Scale your online business with comprehensive digital marketing campaigns optimized for Singapore digital consumers and purchasing behaviors.",
+      title: "E-commerce & D2C Brands in Australia",
+      description: "Scale your online business with comprehensive digital marketing campaigns optimized for Australian digital consumers and purchasing behaviors.",
       services: [
-        "Shopping ads optimization and dynamic product ads for Singapore market",
-        "Customer acquisition funnels and retention campaigns for Singapore buyers",
-        "Mobile commerce optimization and app install campaigns for Singapore users",
-        "Cross-border selling and international expansion from Singapore base"
+        "Shopping ads optimization and dynamic product ads for Australian market",
+        "Customer acquisition funnels and retention campaigns for Australian buyers",
+        "Mobile commerce optimization and app install campaigns for Australian users",
+        "Cross-border selling and international expansion from Australian base"
       ],
-      results: "350% increase in online sales from Singapore market, 45% improvement in return on ad spend (ROAS) for Singapore campaigns"
+      results: "350% increase in online sales from Australian market, 45% improvement in return on ad spend (ROAS) for Australian campaigns"
     },
     {
       icon: Building2,
-      title: "B2B Manufacturing & Industrial Companies",
-      description: "Generate qualified leads for Singapore manufacturing and B2B companies through targeted digital marketing campaigns focused on Singapore's industrial sector.",
+      title: "Mining & Resources Companies",
+      description: "Generate qualified leads for Australian mining and resources companies through targeted digital marketing campaigns focused on Australia's industrial sector.",
       services: [
-        "B2B lead generation and sales enablement for Singapore manufacturing",
-        "LinkedIn marketing and professional networking for Singapore B2B",
-        "Digital marketing for trade shows and industrial events of Singapore companies",
-        "Account-based marketing (ABM) for Singapore enterprise clients"
+        "B2B lead generation and sales enablement for Australian mining",
+        "LinkedIn marketing and professional networking for Australian B2B",
+        "Digital marketing for trade shows and industrial events of Australian companies",
+        "Account-based marketing (ABM) for Australian enterprise clients"
       ],
-      results: "420% increase in qualified B2B leads from Singapore market, 40% reduction in cost-per-lead for Singapore B2B campaigns"
+      results: "420% increase in qualified B2B leads from Australian market, 40% reduction in cost-per-lead for Australian B2B campaigns"
     },
     {
       icon: Heart,
-      title: "Healthcare & Medical Practices in Singapore",
-      description: "Drive patient acquisition for Singapore healthcare providers through compliant, results-driven digital marketing across Singapore.",
+      title: "Healthcare & Medical Practices in Australia",
+      description: "Drive patient acquisition for Australian healthcare providers through compliant, results-driven digital marketing across Australia.",
       services: [
-        "Patient acquisition campaigns and appointment booking optimization for Singapore healthcare",
-        "Telemedicine promotion and health app marketing for Singapore patients",
-        "Hospital marketing campaigns and clinic promotion across Singapore regions",
-        "Digital transformation of wellness and fitness industry for Singapore market"
+        "Patient acquisition campaigns and appointment booking optimization for Australian healthcare",
+        "Telemedicine promotion and health app marketing for Australian patients",
+        "Hospital marketing campaigns and clinic promotion across Australian cities",
+        "Digital transformation of wellness and fitness industry for Australian market"
       ],
-      results: "250% increase in appointment bookings from Singapore patients, 50% improvement in patient acquisition cost for Singapore healthcare providers"
+      results: "250% increase in appointment bookings from Australian patients, 50% improvement in patient acquisition cost for Australian healthcare providers"
     },
     {
       icon: GraduationCap,
-      title: "Financial Services & Fintech in Singapore",
-      description: "Maximize customer acquisition for Singapore financial institutions and fintech companies with comprehensive digital marketing strategies.",
+      title: "Financial Services & Fintech in Australia",
+      description: "Maximize customer acquisition for Australian financial institutions and fintech companies with comprehensive digital marketing strategies.",
       services: [
-        "Customer acquisition campaigns and lead generation for Singapore financial services",
-        "Fintech marketing and digital banking promotion for Singapore clients",
-        "Investment digital marketing and wealth management for Singapore market",
-        "Insurance marketing and financial planning across Singapore regions"
+        "Customer acquisition campaigns and lead generation for Australian financial services",
+        "Fintech marketing and digital banking promotion for Australian clients",
+        "Investment digital marketing and wealth management for Australian market",
+        "Insurance marketing and financial planning across Australian cities"
       ],
-      results: "320% increase in qualified leads from Singapore financial market, 55% improvement in conversion rates for Singapore financial services"
+      results: "320% increase in qualified leads from Australian financial market, 55% improvement in conversion rates for Australian financial services"
     }
   ]
 
   const digitalMarketingFaqData = [
     {
-      question: "What makes digital marketing in Singapore unique?",
-      answer: "Singapore presents unique opportunities with its highly digitalized population, multi-cultural market (English, Mandarin, Malay, Tamil), strong B2B ecosystem, and strategic position as Southeast Asia's business hub. Cultural considerations, multi-language optimization, and regional expansion opportunities across ASEAN require specialized expertise."
+      question: "What makes digital marketing in Australia unique?",
+      answer: "Australia presents unique opportunities with its highly digitalized population, diverse market across major cities, strong B2B ecosystem, and strategic position in the Asia-Pacific region. Cultural considerations, time zone optimization, and regional expansion opportunities across Australian states require specialized expertise."
     },
     {
-      question: "How long does it take to see results from Singapore digital marketing?",
-      answer: "Singapore digital marketing results vary by channel. PPC campaigns show immediate results, SEO typically takes 3-6 months for significant improvements, while social media and content marketing show engagement within 2-4 weeks. We provide weekly performance updates to track progress across all channels with Singapore-specific metrics and Singapore market insights."
+      question: "How long does it take to see results from Australian digital marketing?",
+      answer: "Australian digital marketing results vary by channel. PPC campaigns show immediate results, SEO typically takes 3-6 months for significant improvements, while social media and content marketing show engagement within 2-4 weeks. We provide weekly performance updates to track progress across all channels with Australian-specific metrics and Australian market insights."
     },
     {
-      question: "What's the typical budget for digital marketing in Singapore?",
-      answer: "Singapore digital marketing budgets vary based on your goals and market size. For comprehensive digital marketing including SEO, PPC, social media, and content, we recommend starting with S$4,000-S$8,000 monthly for small businesses and S$25,000+ for enterprise campaigns. Our management fees typically range from 15-20% of total marketing spend, with transparent Singapore pricing structures."
+      question: "What's the typical budget for digital marketing in Australia?",
+      answer: "Australian digital marketing budgets vary based on your goals and market size. For comprehensive digital marketing including SEO, PPC, social media, and content, we recommend starting with A$2,500-A$5,000 monthly for small businesses and A$10,000+ for enterprise campaigns. Our management fees typically range from 15-20% of total marketing spend, with transparent Australian pricing structures."
     },
     {
-      question: "Do you work with Singapore startups?",
-      answer: "Absolutely! The Singapore startup ecosystem is a central focus area, including CBD's fintech scene, innovative companies in Jurong East, and emerging digital hubs. We offer flexible engagement models for early-stage companies, including performance-based pricing and growth packages designed for Singapore startups, with knowledge of Singapore government grants and funding cycles."
+      question: "Do you work with Australian startups?",
+      answer: "Absolutely! The Australian startup ecosystem is a central focus area, including Sydney's fintech scene, Melbourne's creative industries, and Brisbane's emerging tech hubs. We offer flexible engagement models for early-stage companies, including performance-based pricing and growth packages designed for Australian startups, with knowledge of Australian government grants and funding cycles."
     },
     {
-      question: "What results can I expect from Singapore digital marketing?",
-      answer: "We track comprehensive metrics across all channels including organic traffic growth from Singapore searches, cost-per-acquisition (CPA) for Singapore customers, return on ad spend (ROAS) in Singapore market, conversion rates for Singapore users, customer lifetime value (CLV) for Singapore clients, and attribution across all touchpoints. Monthly reports include Singapore business impact analysis and optimization recommendations."
+      question: "What results can I expect from Australian digital marketing?",
+      answer: "We track comprehensive metrics across all channels including organic traffic growth from Australian searches, cost-per-acquisition (CPA) for Australian customers, return on ad spend (ROAS) in Australian market, conversion rates for Australian users, customer lifetime value (CLV) for Australian clients, and attribution across all touchpoints. Monthly reports include Australian business impact analysis and optimization recommendations."
     },
     {
-      question: "Which digital marketing channels work best in Singapore?",
-      answer: "Our expertise covers comprehensive digital marketing including SEO Singapore, Google Ads (Search, Display, Shopping, YouTube), Facebook & Instagram marketing, LinkedIn for Singapore B2B, content marketing in multiple languages, web design & development, and emerging platforms like TikTok. Channel selection depends on your target audience behavior and business objectives in the Singapore market, with regional variations across different Singapore areas."
+      question: "Which digital marketing channels work best in Australia?",
+      answer: "Our expertise covers comprehensive digital marketing including SEO Australia, Google Ads (Search, Display, Shopping, YouTube), Facebook & Instagram marketing, LinkedIn for Australian B2B, content marketing, web design & development, and emerging platforms like TikTok. Channel selection depends on your target audience behavior and business objectives in the Australian market, with regional variations across different Australian cities."
     },
     {
-      question: "Can you optimize existing digital marketing campaigns for the Singapore market?",
-      answer: "Yes, we offer comprehensive Singapore digital marketing audit and optimization services for existing campaigns. Our 30-day Singapore digital marketing audit identifies optimization opportunities across all channels specifically for the Singapore market and provides actionable recommendations for immediate campaign performance improvement with Singapore audiences."
+      question: "Can you optimize existing digital marketing campaigns for the Australian market?",
+      answer: "Yes, we offer comprehensive Australian digital marketing audit and optimization services for existing campaigns. Our 30-day Australian digital marketing audit identifies optimization opportunities across all channels specifically for the Australian market and provides actionable recommendations for immediate campaign performance improvement with Australian audiences."
     },
     {
-      question: "Do you offer digital marketing training for Singapore companies?",
-      answer: "We offer comprehensive digital marketing training programs for Singapore companies, including SEO Singapore, Google Ads certification guidance, Facebook Blueprint training, content marketing, and customized workshops for your marketing team. Training can be conducted at your Singapore office or virtually, with sessions adapted to Singapore market dynamics and business practices."
+      question: "Do you offer digital marketing training for Australian companies?",
+      answer: "We offer comprehensive digital marketing training programs for Australian companies, including SEO Australia, Google Ads certification guidance, Facebook Blueprint training, content marketing, and customized workshops for your marketing team. Training can be conducted at your Australian office or virtually, with sessions adapted to Australian market dynamics and business practices."
     }
   ]
 
@@ -317,25 +317,25 @@ export default function DigitalMarketingInSingaporePage() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "name": "Frameleads Digital Marketing Singapore",
-        "description": "Premier digital marketing agency in Singapore specializing in SEO, PPC, social media marketing, and web development for Singapore businesses. 400% ROI growth.",
-        "url": "https://frameleads.com/digital-marketing-in-singapore",
-        "telephone": "+65-8888-8888",
-        "email": "singapore@frameleads.com",
+        "name": "Frameleads Digital Marketing Agency Australia",
+        "description": "Premier digital marketing agency in Australia specializing in SEO, PPC, social media marketing, and web development for Australian businesses. 300% ROI growth.",
+        "url": "https://frameleads.com/digital-marketing-in-australia",
+        "telephone": "1300-XXX-XXX",
+        "email": "hello@frameleads.com.au",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1 Raffles Place, #40-02",
-          "addressLocality": "Singapore",
-          "addressRegion": "Singapore",
-          "postalCode": "048616",
-          "addressCountry": "SG"
+          "streetAddress": "Level 15, 1 Macquarie Place",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "postalCode": "2000",
+          "addressCountry": "AU"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 1.284582,
-          "longitude": 103.851547
+          "latitude": -33.8688,
+          "longitude": 151.2093
         },
-        "areaServed": ["Singapore", "CBD", "Orchard Road", "Jurong East", "Changi", "Woodlands", "Sentosa"],
+        "areaServed": ["Australia", "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"],
         "serviceType": "Digital Marketing",
         "priceRange": "$$$",
         "aggregateRating": {
@@ -344,7 +344,7 @@ export default function DigitalMarketingInSingaporePage() {
           "reviewCount": "127"
         },
         "sameAs": [
-          "https://linkedin.com/company/frameleads",
+          "https://linkedin.com/company/frameleads-australia",
           "https://twitter.com/frameleads"
         ]
       },
@@ -457,31 +457,31 @@ export default function DigitalMarketingInSingaporePage() {
           >
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🏆 #1 Digital Marketing Agency in Singapore
+                🏆 #1 Digital Marketing Agency in Australia
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Digital Marketing in Singapore - Expert Services for{" "}
+              Digital Marketing Agency Australia - Premier ROI-Driven Solutions for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35] drop-shadow-[0_0_20px_rgba(255,107,53,0.3)]">
-                Singapore Businesses
+                Australian Businesses
               </span>{" "}
-              Delivering 400% ROI Growth
+              Delivering 300% ROI Growth
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Accelerate your growth in Singapore's dynamic digital market with proven digital marketing strategies. Our specialized agency combines international expertise with deep local Singapore market knowledge, delivering measurable results for startups, SMEs, and enterprises across Singapore.
+              Transform your Australian business with data-driven digital marketing excellence. Our specialized agency combines international expertise with deep local Australian market knowledge, delivering measurable results for startups, SMEs, and enterprises across Sydney, Melbourne, Brisbane, Perth, and Adelaide.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Your Free Singapore Market Audit
+                  Get Your Free Australian Market Audit
                 </Button>
               </Link>
-              <Link href="tel:+6588888888" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Link href="tel:1300XXX" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +65 8888-8888
+                  <Phone className="h-5 w-5 mr-2" /> Call 1300-XXX-XXX
                 </Button>
               </Link>
             </div>
@@ -490,31 +490,31 @@ export default function DigitalMarketingInSingaporePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>400% Average ROI Increase</span>
+                <span>300% Average ROI Increase</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>350+ Qualified Leads Monthly</span>
+                <span>500+ Australian Businesses Served</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>98% Client Retention Rate</span>
+                <span>95% Client Retention Rate</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>5+ Years Serving Singapore Businesses</span>
+                <span>5+ Years Serving Australian Businesses</span>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-[#FF6B35]/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 400+ Singapore Businesses</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 500+ Australian Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">800+</div>
-                  <div className="text-gray-600 text-sm">Successful Singapore Campaigns</div>
+                  <div className="text-gray-600 text-sm">Successful Australian Campaigns</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">S$120M+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">A$120M+</div>
                   <div className="text-gray-600 text-sm">Advertising Budget Managed</div>
                 </div>
                 <div className="text-center">
@@ -535,8 +535,8 @@ export default function DigitalMarketingInSingaporePage() {
       <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across Singapore</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across Singapore's dynamic digital landscape</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across Australia</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across Australia's dynamic digital landscape</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -549,7 +549,7 @@ export default function DigitalMarketingInSingaporePage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <TrendingUp className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">400%</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">300%</div>
                 <div className="text-gray-600 text-sm">Average ROI Growth</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
@@ -571,8 +571,8 @@ export default function DigitalMarketingInSingaporePage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">400+</div>
-                <div className="text-gray-600 text-sm">Singapore Clients Served</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">500+</div>
+                <div className="text-gray-600 text-sm">Australian Clients Served</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
@@ -594,7 +594,7 @@ export default function DigitalMarketingInSingaporePage() {
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">6+</div>
-                <div className="text-gray-600 text-sm">Singapore Regions Covered</div>
+                <div className="text-gray-600 text-sm">Australian Cities Covered</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
@@ -615,7 +615,7 @@ export default function DigitalMarketingInSingaporePage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Target className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">98%</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">95%</div>
                 <div className="text-gray-600 text-sm">Client Retention</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
@@ -637,10 +637,10 @@ export default function DigitalMarketingInSingaporePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Why Choose Frameleads for Digital Marketing in Singapore?
+                Why Choose Frameleads for Digital Marketing in Australia?
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Frameleads positions itself as Singapore's premier international digital marketing agency, combining deep Singapore market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures that every dollar of your marketing budget delivers maximum return on investment across all digital channels in the Singapore market.
+                Frameleads positions itself as Australia's premier international digital marketing agency, combining deep Australian market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures that every dollar of your marketing budget delivers maximum return on investment across all digital channels in the Australian market.
               </p>
               
               <div className="mb-8">
@@ -666,23 +666,23 @@ export default function DigitalMarketingInSingaporePage() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Singapore Market Specialization</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Australian Market Specialization</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Local Market Intelligence: 5+ years serving Singapore's diverse business landscape</span>
+                    <span className="text-gray-600">Local Market Intelligence: 5+ years serving Australia's diverse business landscape</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Industry-Specific Expertise: Singapore SaaS, e-commerce, real estate, healthcare, fintech</span>
+                    <span className="text-gray-600">Industry-Specific Expertise: Australian SaaS, e-commerce, mining, healthcare, fintech</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Singapore Startup Ecosystem Knowledge: Deep understanding of Singapore startup funding cycles</span>
+                    <span className="text-gray-600">Australian Startup Ecosystem Knowledge: Deep understanding of Australian startup funding cycles</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Regional Targeting Excellence: Hyper-local targeting for major Singapore regions</span>
+                    <span className="text-gray-600">Regional Targeting Excellence: Hyper-local targeting for major Australian cities</span>
                   </div>
                 </div>
               </div>
@@ -707,10 +707,10 @@ export default function DigitalMarketingInSingaporePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive Digital Marketing Services for Singapore Market Success
+              Comprehensive Digital Marketing Services for Australian Market Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for Singapore companies across all industries throughout Singapore.
+              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for Australian companies across all industries throughout Australia.
             </p>
           </div>
 
@@ -775,15 +775,151 @@ export default function DigitalMarketingInSingaporePage() {
         </div>
       </section>
 
+      {/* Australian Digital Marketing Pricing */}
+      <section className="relative py-20" id="pricing">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Australian Digital Marketing Pricing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transparent pricing packages designed for Australian businesses of all sizes. All packages include Australian GST and are priced in Australian dollars.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Starter Package */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">A$2,500</div>
+                  <div className="text-gray-600">per month</div>
+                  <p className="text-sm text-gray-500 mt-2">Perfect for small Australian businesses</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Local SEO optimization</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Google Ads management (A$2,000 ad spend included)</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Social media management (2 platforms)</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Monthly reporting and consultation</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Australian business hours support</span>
+                  </li>
+                </ul>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Growth Package */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-[#FF6B35]/50 hover:border-[#FF6B35] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/30 ring-2 ring-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-xl"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="text-center mb-6">
+                  <div className="inline-block bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">Most Popular</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Growth Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">A$5,000</div>
+                  <div className="text-gray-600">per month</div>
+                  <p className="text-sm text-gray-500 mt-2">Ideal for expanding Australian companies</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Comprehensive SEO strategy</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Multi-platform PPC management (A$5,000 ad spend included)</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Full social media marketing</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Content marketing and creation</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Dedicated Australian account manager</span>
+                  </li>
+                </ul>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Package */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">A$10,000+</div>
+                  <div className="text-gray-600">per month</div>
+                  <p className="text-sm text-gray-500 mt-2">For large Australian organizations</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Custom digital marketing strategy</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Advanced analytics and attribution</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Multi-location campaign management</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Priority support and consultation</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span>Quarterly business reviews</span>
+                  </li>
+                </ul>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">*All packages include Australian GST and are priced in Australian dollars</p>
+            <p className="text-sm text-gray-500">Need a custom package? <Link href="/contact" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300">Contact us for a tailored solution</Link></p>
+          </div>
+        </div>
+      </section>
+
       {/* Performance Marketing Process Section */}
       <section className="relative py-20" id="process">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Proven Singapore Digital Marketing Process
+              Our Proven Australian Digital Marketing Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic digital marketing approach specifically designed for Singapore companies, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across Singapore.
+              We follow a systematic digital marketing approach specifically designed for Australian companies, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across Australia.
             </p>
           </div>
 
@@ -836,9 +972,9 @@ export default function DigitalMarketingInSingaporePage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise Across Singapore Market Sectors</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise Across Australian Market Sectors</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our specialized expertise extends across key industries in Singapore, with deep understanding of unique digital marketing needs and business objectives in each sector throughout the Singapore market.
+              Our specialized expertise extends across key industries in Australia, with deep understanding of unique digital marketing needs and business objectives in each sector throughout the Australian market.
             </p>
           </div>
 
@@ -890,9 +1026,9 @@ export default function DigitalMarketingInSingaporePage() {
       <section id="case-studies" className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Singapore Client Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Australian Client Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how we've helped Singapore companies achieve remarkable growth through strategic digital marketing campaigns across Singapore.
+              Discover how we've helped Australian companies achieve remarkable growth through strategic digital marketing campaigns across Australia.
             </p>
           </div>
 
@@ -938,14 +1074,14 @@ export default function DigitalMarketingInSingaporePage() {
       <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Singapore Regions We Serve</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Australian Cities We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive digital marketing services across all major Singapore business districts, helping companies in each region maximize their digital presence and ROI.
+              We provide comprehensive digital marketing services across all major Australian cities, helping companies in each region maximize their digital presence and ROI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {singaporeBusinessMarkets.map((district, index) => (
+            {australianBusinessMarkets.map((district, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -987,10 +1123,10 @@ export default function DigitalMarketingInSingaporePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions - Digital Marketing in Singapore
+              Frequently Asked Questions - Digital Marketing in Australia
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about digital marketing services in Singapore and how Frameleads can help your business achieve measurable results across Singapore.
+              Get answers to common questions about digital marketing services in Australia and how Frameleads can help your business achieve measurable results across Australia.
             </p>
           </div>
 
@@ -1013,20 +1149,20 @@ export default function DigitalMarketingInSingaporePage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Transform Your Digital Presence in Singapore?"
-        description="Partner with Frameleads, Singapore's most trusted international digital marketing agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth in Singapore's competitive market."
-        primaryButtonText="Get Your Free Singapore Market Audit"
-        secondaryButtonText="Schedule Your Strategic Singapore Call"
+        title="Ready to Transform Your Digital Presence in Australia?"
+        description="Partner with Frameleads, Australia's most trusted international digital marketing agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth in Australia's competitive market."
+        primaryButtonText="Get Your Free Australian Market Audit"
+        secondaryButtonText="Schedule Your Strategic Australian Call"
       />
 
       {/* Comprehensive Digital Marketing Services in Singapore */}
       <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Singapore Digital Marketing Ecosystem</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Australian Digital Marketing Ecosystem</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              As Singapore's premier international digital marketing agency, we offer comprehensive services across all digital channels. 
-              Explore our specialized services designed specifically for Singapore's diverse business landscape.
+              As Australia's premier international digital marketing agency, we offer comprehensive services across all digital channels. 
+              Explore our specialized services designed specifically for Australia's diverse business landscape.
             </p>
           </div>
           
@@ -1039,14 +1175,14 @@ export default function DigitalMarketingInSingaporePage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services Singapore</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services Australia</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Dominate search results with our comprehensive SEO strategies adapted for Singapore businesses.
+                  Dominate search results with our comprehensive SEO strategies adapted for Australian businesses.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Local SEO optimization for Singapore regions</span>
+                    <span className="text-sm">Local SEO optimization for Australian cities</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -1070,9 +1206,9 @@ export default function DigitalMarketingInSingaporePage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Palette className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising Singapore</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising Australia</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Captivate your Singapore audience with innovative creative campaigns that drive engagement and conversions.
+                  Captivate your Australian audience with innovative creative campaigns that drive engagement and conversions.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1101,9 +1237,9 @@ export default function DigitalMarketingInSingaporePage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing Singapore</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing Australia</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Accelerate enterprise sales with targeted B2B marketing strategies for Singapore's corporate ecosystem.
+                  Accelerate enterprise sales with targeted B2B marketing strategies for Australia's corporate ecosystem.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1132,9 +1268,9 @@ export default function DigitalMarketingInSingaporePage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing Singapore</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing Australia</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Connect with property buyers through targeted digital marketing campaigns for Singapore's real estate market.
+                  Connect with property buyers through targeted digital marketing campaigns for Australia's real estate market.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
@@ -1225,26 +1361,26 @@ export default function DigitalMarketingInSingaporePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
                 <Link href="/free-marketing-audit" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free Singapore Market Audit</div>
-                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the Singapore market</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free Australian Market Audit</div>
+                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the Australian market</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/tools/roi-calculator" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">ROI Calculator</div>
-                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for Singapore campaigns</p>
+                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for Australian campaigns</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/resources/digital-marketing-guide" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Digital Marketing Guide</div>
-                  <p className="text-sm text-gray-600">Complete guide to digital marketing strategies and best practices for Singapore businesses</p>
+                  <p className="text-sm text-gray-600">Complete guide to digital marketing strategies and best practices for Australian businesses</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/academy" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">FrameLeads Academy</div>
-                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for the Singapore market</p>
+                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for the Australian market</p>
                 </Link>
               </div>
             </div>
