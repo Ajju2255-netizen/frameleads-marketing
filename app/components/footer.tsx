@@ -16,6 +16,7 @@ export default function Footer() {
   const advertisingPlatforms = [
     { name: "Google Ads", href: "/google-ads" },
     { name: "Meta Ads", href: "/Meta-ads" },
+    { name: "YouTube Ads", href: "/youtube-ads" },
   ]
 
   const locations = [
