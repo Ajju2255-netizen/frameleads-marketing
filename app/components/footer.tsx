@@ -15,6 +15,7 @@ export default function Footer() {
 
   const locations = [
     { name: "Digital Marketing in Dubai", href: "/digital-marketing-in-dubai" },
+    { name: "Digital Marketing in Singapore", href: "/digital-marketing-in-singapore" },
     { name: "Digital Marketing in Bangalore", href: "/digital-marketing-in-bangalore" },
     { name: "Digital Marketing in United States", href: "/digital-marketing-in-unitedstates" },
     { name: "Digital Marketing in United Kingdom", href: "/digital-marketing-in-unitedkingdom" },
