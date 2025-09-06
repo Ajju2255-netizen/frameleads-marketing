@@ -21,6 +21,7 @@ export default function Footer() {
     { name: "TikTok Ads", href: "/tiktok-ads" },
     { name: "Snapchat Ads", href: "/snapchat-ads" },
     { name: "Pinterest Ads", href: "/pinterest-ads" },
+    { name: "Shopify Ads", href: "/shopify-ads" },
     { name: "Taboola Ads", href: "/taboola-ads" },
   ]
 
