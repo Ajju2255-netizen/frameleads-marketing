@@ -19,6 +19,7 @@ export default function Footer() {
     { name: "YouTube Ads", href: "/youtube-ads" },
     { name: "LinkedIn Ads", href: "/linkedin-ads" },
     { name: "TikTok Ads", href: "/tiktok-ads" },
+    { name: "Snapchat Ads", href: "/snapchat-ads" },
   ]
 
   const locations = [
