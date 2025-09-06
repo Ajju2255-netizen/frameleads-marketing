@@ -130,10 +130,10 @@ export default function FeatureCards() {
 
                   {/* CTA Button */}
                   <div className="px-6 pb-6">
-                    <Link href={feature.link} className="flex items-center gap-2 text-[#FF6B35] font-semibold text-sm group-hover:gap-3 transition-all duration-300 cursor-pointer hover:text-[#FF8A50]">
+                    <div className="flex items-center gap-2 text-[#FF6B35] font-semibold text-sm group-hover:gap-3 transition-all duration-300 cursor-pointer hover:text-[#FF8A50]">
                       <span>Learn More</span>
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+                    </div>
                   </div>
 
                   {/* Decorative Bottom Border */}
