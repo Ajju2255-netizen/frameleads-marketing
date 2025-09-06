@@ -12,7 +12,7 @@ import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 
-export default function DigitalMarketingInIndiaPage() {
+export default function MetaAdsPage() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -21,196 +21,197 @@ export default function DigitalMarketingInIndiaPage() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  const indianBusinessMarkets = [
+  
+  const metaAdsServices = [
     {
-      category: "Mumbai - Financial & Commercial Capital",
-      areas: ["Bandra Kurla Complex", "Nariman Point", "Andheri East", "Powai", "Goregaon", "Malad"],
-      description: "Mumbai's status as India's financial capital requires sophisticated digital marketing strategies for BFSI, entertainment, and enterprise clients"
+      category: "Facebook Ads Management",
+      areas: ["Campaign Strategy", "Audience Targeting", "Creative Development", "Performance Optimization", "A/B Testing", "Conversion Tracking"],
+      description: "Comprehensive Facebook advertising management with advanced targeting, creative optimization, and performance tracking for maximum ROI"
     },
     {
-      category: "Delhi NCR - Political & Business Hub", 
-      areas: ["Connaught Place", "Gurgaon", "Noida", "Greater Noida", "Faridabad", "Ghaziabad"],
-      description: "Delhi NCR's diverse business environment demands comprehensive digital marketing approaches for India's most cosmopolitan market"
+      category: "Instagram Ads Services", 
+      areas: ["Stories Ads", "Reels Advertising", "Shopping Integration", "Influencer Partnerships", "Visual Content", "Engagement Optimization"],
+      description: "Professional Instagram advertising solutions leveraging visual-first approach and shopping integrations to boost brand awareness and conversions"
     },
     {
-      category: "Bangalore - Technology & Innovation Center",
-      areas: ["Electronic City", "Whitefield", "Koramangala", "Indiranagar", "HSR Layout", "Marathahalli"],
-      description: "Bangalore's tech ecosystem requires specialized digital marketing strategies for India's Silicon Valley and IT powerhouse"
+      category: "Meta Business Solutions",
+      areas: ["Advantage+ Campaigns", "Conversions API", "Cross-Platform Remarketing", "Automated Bidding", "Catalog Management", "Attribution Modeling"],
+      description: "Complete Meta advertising ecosystem management including advanced AI-driven campaigns and privacy-compliant tracking solutions"
     },
     {
-      category: "Chennai - Manufacturing & IT Hub",
-      areas: ["T. Nagar", "Anna Nagar", "Velachery", "OMR", "Guindy", "Tambaram"],
-      description: "Chennai's manufacturing and IT focus demands robust B2B digital marketing strategies for India's southern business gateway"
+      category: "E-commerce Meta Advertising",
+      areas: ["Dynamic Product Ads", "Shopping Campaigns", "Catalog Optimization", "Abandoned Cart Remarketing", "Social Commerce", "Conversion Optimization"],
+      description: "Specialized e-commerce Meta advertising strategies designed to drive online sales and customer retention through targeted campaigns"
     },
     {
-      category: "Hyderabad - Emerging Tech Hub",
-      areas: ["HITEC City", "Gachibowli", "Banjara Hills", "Jubilee Hills", "Secunderabad", "Kondapur"],
-      description: "Hyderabad's growing tech ecosystem requires innovative digital marketing strategies for India's fastest-growing IT destination"
+      category: "B2B Meta Marketing",
+      areas: ["LinkedIn Integration", "Account-Based Marketing", "Lead Generation", "Professional Targeting", "Sales Funnel Optimization", "Lead Nurturing"],
+      description: "B2B-focused Meta advertising strategies combining LinkedIn integration with Facebook and Instagram for comprehensive lead generation"
     },
     {
-      category: "Pune - Education & IT Center",
-      areas: ["Hinjewadi", "Koregaon Park", "Baner", "Aundh", "Viman Nagar", "Kharadi"],
-      description: "Pune's education and IT focus demands targeted digital marketing strategies for India's Oxford of the East"
+      category: "Creative Development & Testing",
+      areas: ["Ad Creative Design", "Video Production", "A/B Testing Programs", "Content Localization", "Brand Consistency", "Performance Optimization"],
+      description: "Professional creative development and systematic testing programs to identify high-performing ad variations and optimize conversion rates"
     }
   ]
 
-  const digitalMarketingServices = [
-    {
-      icon: Search,
-      title: "SEO Services India - Search Engine Optimization for Indian Market",
-      description: "Comprehensive SEO strategies optimized for Google India, targeting high-value Indian keywords and local search optimization across all major Indian cities and regions.",
-      features: [
-        "Technical SEO Audits: Complete website analysis and optimization",
-        "Keyword Research: High-volume Indian search terms and phrases",
-        "Local SEO Optimization: City-specific targeting for Indian markets",
-        "Content Marketing: India-focused content creation and optimization",
-        "Link Building: High-authority Indian website partnerships"
-      ],
-      results: [
-        "300% increase in organic traffic within 6 months",
-        "Top 3 Google rankings for target keywords",
-        "85% improvement in local search visibility"
-      ]
-    },
+  const metaAdsServicesList = [
     {
       icon: BarChart3,
-      title: "PPC Services India - Pay-Per-Click Advertising for Maximum ROI",
-      description: "Strategic Google Ads and social media PPC campaigns optimized for the Indian market, delivering immediate results and measurable ROI for Indian businesses.",
+      title: "Facebook Ads Management - Expert Campaign Optimization",
+      description: "Strategic Facebook advertising campaigns optimized for your target audience, featuring advanced targeting, compelling creative development, and continuous performance optimization to drive qualified leads and sales.",
       features: [
-        "Google Ads Management: Comprehensive paid search campaigns",
-        "Facebook & Instagram Advertising: Social media PPC optimization",
-        "LinkedIn B2B Campaigns: Professional network advertising",
-        "YouTube Video Advertising: Video content promotion",
-        "Shopping Campaigns: E-commerce PPC optimization"
+        "Advanced Audience Targeting: Demographic, behavioral, and interest-based targeting",
+        "Creative Development: Professional ad creative design and video production",
+        "Campaign Optimization: Real-time performance monitoring and bid optimization",
+        "A/B Testing Programs: Systematic creative and audience testing",
+        "Conversion Tracking: Facebook Pixel setup and custom event tracking"
       ],
       results: [
-        "15:1 average return on ad spend (ROAS)",
-        "50% reduction in cost-per-acquisition",
-        "250% increase in qualified leads"
+        "340% increase in qualified demo requests",
+        "68% reduction in cost-per-acquisition",
+        "180% improvement in trial-to-paid conversion rate"
       ]
     },
     {
       icon: MessageSquare,
-      title: "Social Media Marketing India - Build Brand Presence Across Platforms",
-      description: "Comprehensive social media marketing strategies for Indian audiences across Facebook, Instagram, LinkedIn, Twitter, and YouTube, driving engagement and conversions.",
+      title: "Instagram Ads Services - Visual-First Advertising Solutions",
+      description: "Professional Instagram advertising solutions leveraging the platform's visual-first approach, Stories ads, Reels advertising, and shopping integrations to boost brand awareness and conversions.",
       features: [
-        "Facebook Marketing: Community building and engagement",
-        "Instagram Growth: Visual content and influencer partnerships",
-        "LinkedIn B2B Marketing: Professional network expansion",
-        "Twitter Brand Building: Real-time engagement and customer service",
-        "YouTube Channel Optimization: Video content strategy"
+        "Stories & Reels Advertising: Engaging short-form video content",
+        "Shopping Integration: Seamless e-commerce experience",
+        "Influencer Partnerships: Strategic brand collaborations",
+        "Visual Content Creation: Professional photography and video production",
+        "Engagement Optimization: Community building and brand awareness"
       ],
       results: [
-        "400% increase in social media engagement",
-        "200% improvement in brand awareness",
-        "150% increase in social media conversions"
+        "275% increase in online sales revenue",
+        "55% improvement in return on ad spend (ROAS)",
+        "120% boost in brand awareness metrics"
+      ]
+    },
+    {
+      icon: Settings,
+      title: "Meta Business Solutions - Complete Advertising Ecosystem",
+      description: "Complete Meta advertising management including Advantage+ campaigns, automated bidding strategies, Facebook Conversions API implementation, and cross-platform remarketing for maximum reach and efficiency.",
+      features: [
+        "Advantage+ Campaigns: AI-powered campaign optimization",
+        "Conversions API Setup: Privacy-first tracking implementation",
+        "Cross-Platform Remarketing: Facebook, Instagram, and Messenger integration",
+        "Automated Bidding: AI-driven bid optimization strategies",
+        "Attribution Modeling: Multi-touch customer journey analysis"
+      ],
+      results: [
+        "290% increase in appointment bookings",
+        "45% reduction in cost-per-lead",
+        "85% improvement in patient engagement"
+      ]
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-commerce Meta Advertising - Drive Online Sales",
+      description: "Comprehensive e-commerce advertising solutions including dynamic product ads, shopping campaigns, catalog optimization, and abandoned cart remarketing to drive online sales and customer retention.",
+      features: [
+        "Dynamic Product Ads: Automated product promotion",
+        "Shopping Campaigns: Catalog-based advertising",
+        "Abandoned Cart Remarketing: Re-engage potential customers",
+        "Social Commerce Integration: In-app purchasing optimization",
+        "Conversion Rate Optimization: Sales funnel improvement"
+      ],
+      results: [
+        "250% increase in e-commerce revenue",
+        "60% improvement in cart abandonment recovery",
+        "90% increase in repeat purchase rate"
       ]
     },
     {
       icon: Users,
-      title: "Content Marketing India - Engaging Content for Indian Audiences",
-      description: "Strategic content marketing solutions tailored for Indian consumers, including blog writing, video content, and multi-language content creation in regional languages.",
+      title: "B2B Meta Marketing - Professional Lead Generation",
+      description: "Specialized B2B Meta advertising strategies combining LinkedIn integration with Facebook and Instagram for comprehensive lead generation and account-based marketing approaches.",
       features: [
-        "Blog Writing: India-focused content creation",
-        "Video Content Production: Engaging visual storytelling",
-        "Email Marketing: Automated nurture campaigns",
-        "WhatsApp Marketing: Direct customer communication",
-        "Regional Content: Multi-language content in Hindi, Tamil, Telugu, etc."
+        "LinkedIn Integration: Professional network advertising",
+        "Account-Based Marketing: Targeted enterprise campaigns",
+        "Lead Generation: High-quality prospect acquisition",
+        "Sales Funnel Optimization: Lead nurturing and conversion",
+        "Professional Targeting: Industry and job-title specific campaigns"
       ],
       results: [
-        "250% increase in content engagement",
-        "180% improvement in lead generation",
-        "120% increase in time spent on website"
-      ]
-    },
-    {
-      icon: Monitor,
-      title: "Web Design & Development India - Mobile-First Solutions",
-      description: "Responsive web design and development services optimized for Indian users, with mobile-first approach and multi-language support for diverse Indian markets.",
-      features: [
-        "Responsive Web Design: Mobile-optimized websites",
-        "E-commerce Development: Online store creation",
-        "Website Speed Optimization: Fast loading times",
-        "Conversion Rate Optimization: User experience improvement",
-        "Multi-language Support: Regional language integration"
-      ],
-      results: [
-        "60% improvement in website conversion rates",
-        "40% increase in mobile traffic",
-        "90% improvement in page load speed"
+        "320% increase in qualified B2B leads",
+        "40% reduction in cost-per-lead",
+        "85% improvement in lead-to-client conversion rate"
       ]
     }
   ]
 
-  const digitalMarketingProcess = [
+  const metaAdsProcess = [
     {
       step: "01",
-      title: "India Market Analysis & Strategy",
-      description: "Comprehensive India market audit including consumer behavior analysis, competitive benchmarking across Indian platforms, target audience research for Indian demographics, and goal setting aligned with India business objectives."
+      title: "Strategic Discovery & Audit",
+      description: "Comprehensive Meta account analysis including current advertising performance evaluation, competitor analysis, target audience research, and goal setting aligned with business objectives."
     },
     {
       step: "02",
-      title: "Platform Strategy Development",
-      description: "Comprehensive digital marketing strategy with Google, Facebook, Instagram, LinkedIn, and e-commerce platform plans specifically adapted for the Indian market, including cultural considerations and regional preferences."
+      title: "Campaign Strategy Development",
+      description: "Custom Meta advertising strategy with platform selection, budget allocation across Facebook, Instagram, and Messenger, audience segmentation, and creative strategy planning."
     },
     {
       step: "03",
-      title: "Campaign Execution & Management",
-      description: "Data-driven campaign execution with real-time performance monitoring across Indian platforms, A/B testing implementation for Indian audiences, and weekly optimization cycles for maximum ROI in the Indian market."
+      title: "Campaign Launch & Implementation",
+      description: "Professional campaign execution with ad account setup, creative production, campaign launch with performance monitoring, and real-time optimization protocols."
     },
     {
       step: "04",
-      title: "Growth & Optimization",
-      description: "Continuous growth and optimization through scaling Indian campaigns, implementing advanced automation for Indian clients, and monthly strategic planning sessions focused on India market expansion."
+      title: "Optimization & Scale",
+      description: "Continuous performance enhancement through daily monitoring, audience refinement, budget reallocation based on performance data, and scaling successful campaigns for maximum ROI."
     }
   ]
 
-  const whyChooseDigitalMarketing = [
-    "Native Indian Market Expertise: Deep understanding of Indian consumer behavior, cultural nuances, and platform-specific patterns",
-    "India Platform Specialists: Complete coverage across Google, Facebook, Instagram, LinkedIn, and all major Indian platforms",
-    "Local Market Intelligence: Strategic targeting of India-specific keywords and search behaviors in English and regional languages",
-    "Performance-Driven Results: 300% average ROI increase for Indian market clients",
-    "Multi-language Expertise: Specialized expertise in Hindi, Tamil, Telugu, Bengali, and other regional languages for content marketing",
-    "India Compliance: Full compliance with Indian regulations, data protection laws, and advertising standards",
-    "India Industry-Specific Expertise: Proven success in technology, e-commerce, healthcare, financial services, and manufacturing sectors in India",
-    "Cultural Sensitivity: Deep understanding of Indian business culture, values, and regional preferences across all states"
+  const whyChooseMetaAds = [
+    "Meta Platform Expertise: Deep understanding of Facebook, Instagram, and Messenger advertising algorithms and best practices",
+    "AI-Powered Optimization: Advanced Advantage+ campaigns and automated bidding strategies for superior performance",
+    "Privacy-First Approach: Facebook Conversions API implementation and privacy-compliant tracking solutions",
+    "Performance-Driven Results: 300% average ROI increase with data-driven campaign optimization",
+    "Creative Excellence: Professional ad creative development and systematic A/B testing programs",
+    "Cross-Platform Integration: Unified advertising strategies across Facebook, Instagram, and Messenger platforms",
+    "Industry-Specific Expertise: Proven success in technology, e-commerce, healthcare, finance, and B2B sectors",
+    "Transparent Reporting: Real-time performance tracking with detailed analytics and optimization recommendations"
   ]
 
-  const digitalMarketingCaseStudies = [
+  const metaAdsCaseStudies = [
     {
-      industry: "E-commerce Fashion Brand",
-      location: "Mumbai, India",
-      challenge: "Online fashion retailer needed to increase brand awareness and compete with established players in Indian market",
-      solution: "Comprehensive India digital marketing strategy with Google Ads, Facebook, Instagram, and e-commerce optimization",
+      industry: "Technology Startup",
+      location: "Global",
+      challenge: "SaaS company needed to reduce customer acquisition cost while scaling user base through Meta advertising",
+      solution: "Comprehensive Meta advertising strategy with Advantage+ campaigns, conversion optimization, and creative testing",
       results: [
-        "300% increase in brand awareness across Indian platforms",
-        "₹2.5 crores revenue growth in first year",
-        "85% improvement in social commerce conversion rates",
-        "4.5x return on ad spend (ROAS) in India"
+        "340% increase in qualified demo requests",
+        "68% reduction in cost-per-acquisition",
+        "180% improvement in trial-to-paid conversion rate",
+        "4.2x return on ad spend (ROAS)"
       ]
     },
     {
-      industry: "Healthcare Technology",
-      location: "Bangalore, India",
-      challenge: "HealthTech startup struggling with high customer acquisition costs and low brand recognition in Indian market",
-      solution: "Complete India digital marketing overhaul with Google Ads, LinkedIn, content marketing, and SEO optimization",
+      industry: "E-commerce Brand",
+      location: "Global",
+      challenge: "Online retailer struggling with ROAS and brand awareness in competitive market",
+      solution: "Advanced Meta advertising with dynamic product ads, lookalike audiences, and creative optimization",
       results: [
-        "250% increase in qualified leads from Indian market",
-        "60% improvement in customer acquisition cost",
-        "280% improvement in brand recognition among Indian consumers",
-        "3.8x return on ad spend in Indian market"
+        "275% increase in online sales revenue",
+        "55% improvement in return on ad spend (ROAS)",
+        "120% boost in brand awareness metrics",
+        "90% increase in repeat purchase rate"
       ]
     },
     {
-      industry: "B2B Manufacturing Company",
-      location: "Chennai, India",
-      challenge: "Manufacturing company needed to establish online presence and generate leads in India's competitive B2B market",
-      solution: "Comprehensive B2B India digital marketing strategy with LinkedIn, Google Ads, SEO, and content marketing",
+      industry: "Healthcare Provider",
+      location: "Global",
+      challenge: "Medical practice needed to increase patient acquisition while maintaining compliance",
+      solution: "HIPAA-compliant Meta advertising strategy with local targeting and educational content",
       results: [
-        "400% increase in qualified B2B leads from Indian market",
-        "45% reduction in cost-per-lead for Indian B2B campaigns",
-        "₹1.2 crores in new business revenue in 8 months",
-        "85% improvement in lead-to-client conversion rate"
+        "290% increase in appointment bookings",
+        "45% reduction in cost-per-lead",
+        "85% improvement in patient engagement",
+        "3.8x return on ad spend"
       ]
     }
   ]
@@ -218,98 +219,98 @@ export default function DigitalMarketingInIndiaPage() {
   const industriesWeServe = [
     {
       icon: Building2,
-      title: "Technology & SaaS Companies in India",
-      description: "Transform your tech presence in India with comprehensive digital marketing strategies designed for India's thriving innovation ecosystem and digital transformation.",
+      title: "Technology & SaaS Companies",
+      description: "Transform your tech presence with comprehensive Meta advertising strategies designed for B2B lead generation and product-led growth campaigns.",
       services: [
-        "B2B lead generation through LinkedIn and Google Ads for Indian market",
-        "Product-led growth campaigns on Indian platforms and marketplaces",
-        "Competitive intelligence and market positioning in Indian tech sector",
-        "Regulatory compliance and data protection for Indian operations"
+        "B2B lead generation through LinkedIn-Meta integration",
+        "Product-led growth campaigns on Facebook and Instagram",
+        "Competitive intelligence and market positioning",
+        "Regulatory compliance and data protection"
       ],
-      results: "350% increase in qualified demo requests from Indian market, 70% improvement in trial-to-paid conversion for Indian users"
+      results: "350% increase in qualified demo requests, 70% improvement in trial-to-paid conversion"
     },
     {
       icon: ShoppingCart,
-      title: "E-commerce & D2C Brands in India",
-      description: "Scale your business in India with comprehensive digital marketing campaigns optimized for Indian consumers and purchasing behaviors.",
+      title: "E-commerce & D2C Brands",
+      description: "Scale your business with comprehensive Meta advertising campaigns optimized for social commerce and conversion optimization.",
       services: [
-        "Amazon India and Flipkart store setup and optimization",
+        "Dynamic product ads and shopping campaigns",
         "Facebook and Instagram social commerce integration",
-        "UPI and digital payment solutions integration",
-        "Cultural adaptation and brand localization for Indian market"
+        "Abandoned cart remarketing and retargeting",
+        "Creative optimization and A/B testing"
       ],
-      results: "280% increase in online sales from Indian market, 55% improvement in return on ad spend (ROAS) for Indian campaigns"
+      results: "280% increase in online sales, 55% improvement in return on ad spend (ROAS)"
     },
     {
       icon: Building2,
-      title: "Manufacturing & B2B Services",
-      description: "Generate qualified leads for Indian manufacturing and B2B services through targeted digital marketing campaigns focused on India's industrial ecosystem.",
+      title: "B2B Services & Manufacturing",
+      description: "Generate qualified leads for B2B services through targeted Meta advertising campaigns focused on professional networks and decision-makers.",
       services: [
-        "B2B lead generation through LinkedIn and Google Ads",
-        "Professional network marketing for Indian business networking",
-        "Trade show and industry event marketing in India",
-        "Account-based marketing (ABM) for Indian enterprise clients"
+        "LinkedIn-Meta integration for B2B targeting",
+        "Account-based marketing (ABM) campaigns",
+        "Professional network marketing strategies",
+        "Lead nurturing and conversion optimization"
       ],
-      results: "320% increase in qualified B2B leads from Indian market, 40% reduction in cost-per-lead for Indian B2B campaigns"
+      results: "320% increase in qualified B2B leads, 40% reduction in cost-per-lead"
     },
     {
       icon: Heart,
-      title: "Healthcare & Medical Devices in India",
-      description: "Drive patient acquisition for healthcare providers through compliant, results-driven digital marketing across Indian platforms.",
+      title: "Healthcare & Medical Devices",
+      description: "Drive patient acquisition for healthcare providers through compliant, results-driven Meta advertising across Facebook and Instagram.",
       services: [
-        "Patient acquisition campaigns through Google Ads and Facebook",
+        "HIPAA-compliant patient acquisition campaigns",
         "Medical device marketing and regulatory compliance",
         "Healthcare professional education and engagement",
-        "Digital health app marketing and telemedicine promotion"
+        "Local targeting and community outreach"
       ],
-      results: "250% increase in patient engagement from Indian market, 50% improvement in patient acquisition cost for Indian healthcare providers"
+      results: "250% increase in patient engagement, 50% improvement in patient acquisition cost"
     },
     {
       icon: GraduationCap,
-      title: "Financial Services & Fintech in India",
-      description: "Maximize customer acquisition for financial institutions and fintech companies with comprehensive digital marketing strategies adapted for Indian regulations.",
+      title: "Financial Services & Fintech",
+      description: "Maximize customer acquisition for financial institutions and fintech companies with compliant Meta advertising strategies.",
       services: [
-        "Customer acquisition through UPI and digital payment integration",
-        "Fintech marketing and digital banking promotion for Indian clients",
-        "Investment and wealth management marketing for Indian market",
-        "Regulatory compliance and financial advertising in India"
+        "Compliant financial services advertising",
+        "Fintech marketing and digital banking promotion",
+        "Investment and wealth management marketing",
+        "Regulatory compliance and financial advertising"
       ],
-      results: "300% increase in qualified leads from Indian financial market, 60% improvement in conversion rates for Indian financial services"
+      results: "300% increase in qualified leads, 60% improvement in conversion rates"
     }
   ]
 
-  const digitalMarketingFaqData = [
+  const metaAdsFaqData = [
     {
-      question: "How is digital marketing in India different from other markets?",
-      answer: "Digital marketing in India requires understanding of diverse consumer behaviors across 29 states, multiple languages, and varying internet penetration. The market is mobile-first, price-sensitive, and requires cultural localization. Indian consumers have unique preferences, purchasing patterns, and regional differences compared to Western markets."
+      question: "What makes Meta Ads different from other advertising platforms?",
+      answer: "Meta advertising offers unparalleled targeting precision with access to over 3 billion users across Facebook, Instagram, and Messenger. The platform's advanced AI-driven optimization tools, extensive creative formats, and robust analytics make it ideal for businesses seeking measurable ROI and precise audience targeting."
     },
     {
-      question: "What platforms are most important for India digital marketing?",
-      answer: "Essential platforms include Google (search and YouTube), Facebook and Instagram (social media), LinkedIn (B2B), WhatsApp (messaging), and e-commerce platforms like Amazon India and Flipkart. Each platform serves different purposes and requires specialized strategies for maximum effectiveness in the Indian market."
+      question: "How much should I budget for Meta advertising?",
+      answer: "Meta advertising budgets vary based on business size, industry, and objectives. We typically recommend starting with $3,000-5,000 monthly for small businesses and $10,000+ for enterprises. Our management fees range from 15-20% of total ad spend, with transparent pricing and no hidden costs."
     },
     {
-      question: "What's the typical digital marketing budget for Indian businesses?",
-      answer: "India digital marketing budgets vary based on business size and goals. For comprehensive digital marketing including SEO, PPC, social media, and content marketing, we recommend starting with ₹25,000-50,000 monthly for small businesses and ₹1,00,000+ for enterprises. Our management fees typically range from 15-20% of total marketing spend, with transparent pricing structures for Indian market campaigns."
+      question: "What's the difference between Facebook Ads and Meta Ads?",
+      answer: "Meta Ads encompasses the entire Meta ecosystem including Facebook, Instagram, Messenger, and Audience Network. While Facebook Ads refers specifically to advertising on Facebook, Meta Ads provides cross-platform advertising opportunities with unified campaign management and optimization."
     },
     {
-      question: "Do you work with small businesses and startups in India?",
-      answer: "Yes! We have special packages starting from ₹25,000/month designed specifically for startups and small businesses. We understand the unique challenges faced by Indian SMEs and provide cost-effective digital marketing solutions that deliver measurable ROI within their budget constraints."
+      question: "How long does it take to see results from Meta advertising?",
+      answer: "Initial results typically appear within 7-14 days for traffic and engagement campaigns. Lead generation and conversion campaigns usually show significant results within 30-60 days as Meta's algorithm optimizes delivery and audiences mature. Long-term growth and brand awareness campaigns achieve optimal performance in 90+ days."
     },
     {
-      question: "How long does it take to see results from India marketing campaigns?",
-      answer: "Initial results typically appear within 30-60 days, with significant growth achieved in 3-6 months as brand awareness builds and campaigns optimize. Indian consumers require trust-building time, so longer-term strategies often yield better results than quick campaigns. PPC and social media can show immediate results, while SEO takes 3-6 months."
+      question: "Do you provide Meta Ads management for international markets?",
+      answer: "Yes, we specialize in international Meta advertising campaigns with expertise in multi-market targeting, cultural adaptation, currency optimization, and local compliance requirements. Our team manages campaigns across North America, Europe, Asia-Pacific, and emerging markets."
     },
     {
-      question: "Which digital marketing channels work best in India?",
-      answer: "Our expertise covers comprehensive digital marketing including Google Ads, Facebook/Instagram advertising, LinkedIn B2B marketing, SEO, content marketing, and e-commerce optimization. Channel selection depends on your target audience behavior and business objectives in the Indian market, with platform-specific optimization strategies."
+      question: "What industries do you serve with Meta advertising?",
+      answer: "Our Meta advertising expertise covers technology, e-commerce, healthcare, finance, education, real estate, professional services, and B2B sectors. We adapt our strategies to industry-specific regulations, audience behaviors, and conversion optimization requirements."
     },
     {
-      question: "How do we measure success in India digital marketing?",
-      answer: "Key metrics include organic traffic growth, keyword rankings, lead quality, conversion rates, and revenue attribution through Indian payment systems. We track Google Analytics, social media engagement, email marketing performance, and e-commerce conversion rates with detailed monthly reporting in Indian Rupees."
+      question: "How do you measure Meta Ads success and ROI?",
+      answer: "We track comprehensive metrics including reach, engagement, click-through rates, conversion rates, cost-per-acquisition, return on ad spend (ROAS), and lifetime value. Our monthly reports include detailed performance analysis, optimization recommendations, and strategic insights for continuous improvement."
     },
     {
-      question: "Can you create content in regional Indian languages?",
-      answer: "Absolutely! We create content in Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, and other regional languages. Our team includes native speakers and cultural experts who understand local preferences, dialects, and cultural nuances to create authentic, engaging content for diverse Indian audiences."
+      question: "Can you help with Facebook Conversions API implementation?",
+      answer: "Absolutely. We provide complete Facebook Conversions API setup and management to ensure privacy-compliant tracking, improved data accuracy, and optimal campaign performance despite iOS updates and browser privacy changes."
     }
   ]
 
@@ -318,40 +319,52 @@ export default function DigitalMarketingInIndiaPage() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "name": "Frameleads Digital Marketing Agency India",
-        "description": "Premier digital marketing agency specializing in India market, SEO services, PPC advertising, social media marketing, and e-commerce solutions for Indian businesses. 300% ROI growth.",
-        "url": "https://frameleads.com/digital-marketing-in-india",
-        "telephone": "+91-98765-43210",
-        "email": "hello@frameleads.com",
+        "name": "Frameleads Meta Ads Agency",
+        "description": "Professional Meta advertising management for Facebook, Instagram, and Messenger platforms. Expert campaign optimization delivering measurable ROI growth.",
+        "url": "https://frameleads.com/meta-ads",
+        "logo": "https://frameleads.com/logo.png",
+        "image": "https://frameleads.com/meta-ads-agency.jpg",
+        "priceRange": "$2500-$10000",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 MG Road",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560001",
-          "addressCountry": "IN"
+          "addressCountry": "Global"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 12.9716,
-          "longitude": 77.5946
+          "latitude": "Global Service"
         },
-        "areaServed": ["India", "Mumbai", "Delhi", "Bangalore", "Chennai", "Hyderabad", "Pune", "Kolkata", "Ahmedabad"],
-        "serviceType": "Digital Marketing",
-        "priceRange": "₹25,000 - ₹1,00,000",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "127"
-        },
+        "telephone": "+1-555-123-4567",
+        "email": "hello@frameleads.com",
         "sameAs": [
-          "https://linkedin.com/company/frameleads-india",
-          "https://facebook.com/frameleadsindia"
-        ]
+          "https://facebook.com/frameleads",
+          "https://linkedin.com/company/frameleads"
+        ],
+        "serviceType": "Meta Advertising Management",
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Meta Advertising Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Facebook Ads Management"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Instagram Advertising"
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "FAQPage",
-        "mainEntity": digitalMarketingFaqData.map(faq => ({
+        "mainEntity": metaAdsFaqData.map(faq => ({
           "@type": "Question",
           "name": faq.question,
           "acceptedAnswer": {
@@ -375,19 +388,19 @@ export default function DigitalMarketingInIndiaPage() {
   return (
     <>
     <Head>
-      <title>Premier Digital Marketing Agency in India | Frameleads</title>
-      <meta name="description" content="Leading digital marketing agency in India offering SEO, PPC, social media marketing & web design. Boost your business with proven strategies. Get free consultation today!" />
-      <meta name="keywords" content="digital marketing agency India, best digital marketing company India, SEO services India, digital marketing in India, digital marketing services India, PPC services India, digital marketing consultant India" />
+      <title>Meta Ads Agency | Facebook & Instagram Advertising Experts | Frameleads</title>
+      <meta name="description" content="Expert Meta Ads management for Facebook & Instagram. Drive 300% ROI growth with our data-driven advertising strategies. Get your free audit today!" />
+      <meta name="keywords" content="Meta Ads Agency, Facebook Ads Management, Instagram Ads Services, Meta Advertising Agency, Facebook Ads Agency, Meta Ads Management, Facebook Marketing Agency, Instagram Marketing Services" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://frameleads.com/digital-marketing-in-india" />
-      <meta property="og:title" content="Premier Digital Marketing Agency in India | Frameleads" />
-      <meta property="og:description" content="Leading digital marketing agency in India offering SEO, PPC, social media marketing & web design. Boost your business with proven strategies. Get free consultation today!" />
-      <meta property="og:url" content="https://frameleads.com/digital-marketing-in-india" />
+      <link rel="canonical" href="https://frameleads.com/meta-ads" />
+      <meta property="og:title" content="Meta Ads Agency | Facebook & Instagram Advertising Experts | Frameleads" />
+      <meta property="og:description" content="Expert Meta Ads management for Facebook & Instagram. Drive 300% ROI growth with our data-driven advertising strategies. Get your free audit today!" />
+      <meta property="og:url" content="https://frameleads.com/meta-ads" />
       <meta property="og:type" content="website" />
-      <meta property="og:locale" content="en_IN" />
+      <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Premier Digital Marketing Agency in India | Frameleads" />
-      <meta name="twitter:description" content="Leading digital marketing agency in India offering SEO, PPC, social media marketing & web design. Boost your business with proven strategies. Get free consultation today!" />
+      <meta name="twitter:title" content="Meta Ads Agency | Facebook & Instagram Advertising Experts | Frameleads" />
+      <meta name="twitter:description" content="Expert Meta Ads management for Facebook & Instagram. Drive 300% ROI growth with our data-driven advertising strategies. Get your free audit today!" />
     </Head>
     <script
       type="application/ld+json"
@@ -473,31 +486,31 @@ export default function DigitalMarketingInIndiaPage() {
           >
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🏆 #1 Digital Marketing Agency in India for Indian Businesses
+                🏆 #1 Meta Ads Agency for Facebook & Instagram Advertising
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Premier Digital Marketing Agency in India - Drive Growth with{" "}
+              Premier Meta Ads Agency - Expert Facebook & Instagram{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35] drop-shadow-[0_0_20px_rgba(255,107,53,0.3)]">
-                Expert Solutions
+                Advertising Solutions
               </span>{" "}
               Delivering 300% ROI Growth
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Transform your business with India's leading digital marketing agency. Our specialized team combines global expertise with deep local Indian market knowledge, delivering measurable results for businesses across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, and all major Indian cities.
+              Transform your business with expert Meta advertising management. Our specialized team combines cutting-edge advertising technology with deep platform expertise to deliver exceptional results across Facebook, Instagram, and Messenger platforms worldwide.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Your Free India Market Audit
+                  Get Your Free Meta Ads Audit
                 </Button>
               </Link>
-              <Link href="tel:+91-98765-43210" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Link href="tel:+1-555-123-4567" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +91-98765-43210
+                  <Phone className="h-5 w-5 mr-2" /> Call +1-555-123-4567
                 </Button>
               </Link>
             </div>
@@ -510,7 +523,7 @@ export default function DigitalMarketingInIndiaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>500+ Indian Businesses Served</span>
+                <span>500+ Global Businesses Served</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
@@ -518,19 +531,19 @@ export default function DigitalMarketingInIndiaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>8+ Years India Market Expertise</span>
+                <span>8+ Years Meta Platform Expertise</span>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-[#FF6B35]/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 500+ Indian Businesses</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 500+ Global Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">300+</div>
-                  <div className="text-gray-600 text-sm">Successful India Campaigns</div>
+                  <div className="text-gray-600 text-sm">Successful Meta Campaigns</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹2 Cr+</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$2M+</div>
                   <div className="text-gray-600 text-sm">Revenue Generated for Clients</div>
                 </div>
                 <div className="text-center">
@@ -551,8 +564,8 @@ export default function DigitalMarketingInIndiaPage() {
       <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across India</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for Indian businesses across India's dynamic digital landscape</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across Global Markets</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses worldwide across Facebook, Instagram, and Messenger platforms</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -588,7 +601,7 @@ export default function DigitalMarketingInIndiaPage() {
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">500+</div>
-                <div className="text-gray-600 text-sm">Indian Businesses Served</div>
+                <div className="text-gray-600 text-sm">Global Businesses Served</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
@@ -610,7 +623,7 @@ export default function DigitalMarketingInIndiaPage() {
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">25+</div>
-                <div className="text-gray-600 text-sm">Indian Cities Covered</div>
+                <div className="text-gray-600 text-sm">Countries Served</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
@@ -653,52 +666,52 @@ export default function DigitalMarketingInIndiaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Why Choose Frameleads for Digital Marketing in India?
+                Why Choose Frameleads for Meta Advertising?
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Frameleads positions itself as the premier digital marketing agency for Indian businesses, combining deep Indian market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures that every rupee of your marketing budget delivers maximum return on investment across all Indian platforms and digital channels.
+                Frameleads positions itself as the premier Meta advertising agency, combining deep platform expertise with cutting-edge advertising technology. Our comprehensive approach ensures that every dollar of your advertising budget delivers maximum return on investment across Facebook, Instagram, and Messenger platforms.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 India Digital Marketing Expertise</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Meta Platform Expertise</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Platform-Specific Analytics: Google, Facebook, Instagram attribution modeling</span>
+                    <span className="text-gray-600">Platform-Specific Analytics: Facebook, Instagram, Messenger attribution modeling</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">ROI-Focused Campaign Management: Measurable business results in India</span>
+                    <span className="text-gray-600">ROI-Focused Campaign Management: Measurable business results across Meta platforms</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Cross-Platform Integration: Google, Facebook, Instagram, LinkedIn</span>
+                    <span className="text-gray-600">Cross-Platform Integration: Facebook, Instagram, Messenger unified campaigns</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Conversion Rate Optimization: Indian platform-specific A/B testing</span>
+                    <span className="text-gray-600">Conversion Rate Optimization: Meta platform-specific A/B testing</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 India Market Specialization</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Meta Advertising Specialization</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Local Market Intelligence: 8+ years serving India's diverse business landscape</span>
+                    <span className="text-gray-600">AI-Powered Optimization: Advantage+ campaigns and automated bidding strategies</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Industry-Specific Expertise: Indian tech, e-commerce, manufacturing, healthcare, fintech</span>
+                    <span className="text-gray-600">Industry-Specific Expertise: Tech, e-commerce, healthcare, finance, B2B sectors</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Cultural Sensitivity: Deep understanding of Indian business culture and values</span>
+                    <span className="text-gray-600">Privacy-First Approach: Facebook Conversions API and compliant tracking</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Regional Targeting Excellence: Hyper-local targeting for all Indian cities</span>
+                    <span className="text-gray-600">Creative Excellence: Professional ad development and systematic testing</span>
                   </div>
                 </div>
               </div>
@@ -723,15 +736,15 @@ export default function DigitalMarketingInIndiaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive Digital Marketing Services for India Market Success
+              Comprehensive Meta Advertising Services for Global Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for Indian companies across all industries and platforms.
+              Our comprehensive Meta advertising services are designed to deliver measurable ROI and drive business growth for companies worldwide across Facebook, Instagram, and Messenger platforms.
             </p>
           </div>
 
           <div className="space-y-12">
-            {digitalMarketingServices.map((service, index) => {
+            {metaAdsServicesList.map((service, index) => {
               const IconComponent = service.icon
               return (
                 <motion.div
@@ -796,10 +809,10 @@ export default function DigitalMarketingInIndiaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              India Digital Marketing Pricing
+              Meta Advertising Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transparent pricing packages designed for Indian businesses. All packages include platform setup, content creation, and cultural adaptation services.
+              Transparent pricing packages designed for businesses worldwide. All packages include platform setup, creative development, and campaign optimization services.
             </p>
           </div>
 
@@ -810,30 +823,30 @@ export default function DigitalMarketingInIndiaPage() {
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Startup Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹25,000</div>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$2,500</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">Perfect for small Indian businesses and startups</p>
+                  <p className="text-sm text-gray-500 mt-2">Perfect for growing businesses and startups</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>SEO optimization (10 keywords)</span>
+                    <span>Facebook and Instagram ads management</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Social media management (2 platforms)</span>
+                    <span>Basic audience research and targeting</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Google Ads management (₹10,000 ad spend included)</span>
+                    <span>Monthly performance reporting</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Monthly reporting and consultation</span>
+                    <span>Creative development support</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Email support</span>
+                    <span>Meta Pixel setup and optimization</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
@@ -848,31 +861,31 @@ export default function DigitalMarketingInIndiaPage() {
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <div className="inline-block bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">Most Popular</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Growth Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹50,000</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$5,000</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">Ideal for expanding Indian companies</p>
+                  <p className="text-sm text-gray-500 mt-2">Ideal for established businesses seeking growth</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Comprehensive SEO and PPC strategy</span>
+                    <span>Advanced Meta advertising strategies</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Multi-platform management (Google, Facebook, Instagram, LinkedIn)</span>
+                    <span>Comprehensive creative testing programs</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>E-commerce setup (Amazon India, Flipkart)</span>
+                    <span>Facebook Conversions API implementation</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Content creation and cultural adaptation</span>
+                    <span>Weekly optimization and reporting</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Dedicated India market account manager</span>
+                    <span>Dedicated account management</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
@@ -887,14 +900,14 @@ export default function DigitalMarketingInIndiaPage() {
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹1,00,000+</div>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$10,000+</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">For large Indian organizations</p>
+                  <p className="text-sm text-gray-500 mt-2">For large organizations</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Custom India market strategy</span>
+                    <span>Custom Meta advertising strategy</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -902,7 +915,7 @@ export default function DigitalMarketingInIndiaPage() {
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Multi-city campaign management across India</span>
+                    <span>Multi-market campaign management</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -932,15 +945,15 @@ export default function DigitalMarketingInIndiaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Proven India Digital Marketing Process
+              Our Proven Meta Advertising Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic digital marketing approach specifically designed for Indian businesses, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across all Indian platforms.
+              We follow a systematic Meta advertising approach combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across Facebook, Instagram, and Messenger platforms.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {digitalMarketingProcess.map((process, index) => (
+            {metaAdsProcess.map((process, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -988,9 +1001,9 @@ export default function DigitalMarketingInIndiaPage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise Across China Market Sectors</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise Across Global Market Sectors</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our specialized expertise extends across key industries in China, with deep understanding of unique digital marketing needs and business objectives in each sector throughout the Chinese market.
+              Our specialized expertise extends across key industries worldwide, with deep understanding of unique Meta advertising needs and business objectives in each sector.
             </p>
           </div>
 
@@ -1042,14 +1055,14 @@ export default function DigitalMarketingInIndiaPage() {
       <section id="case-studies" className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">India Client Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Meta Advertising Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how we've helped Indian companies achieve remarkable growth through strategic digital marketing campaigns across India.
+              Discover how we've helped companies worldwide achieve remarkable growth through strategic Meta advertising campaigns across Facebook, Instagram, and Messenger.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {digitalMarketingCaseStudies.map((study, index) => (
+            {metaAdsCaseStudies.map((study, index) => (
               <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
@@ -1090,14 +1103,14 @@ export default function DigitalMarketingInIndiaPage() {
       <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Indian Cities We Serve</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Meta Advertising Services We Offer</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive digital marketing services across all major Indian cities, helping businesses in each region maximize their digital presence and ROI.
+              We provide comprehensive Meta advertising services across Facebook, Instagram, and Messenger platforms, helping businesses worldwide maximize their social media presence and ROI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {indianBusinessMarkets.map((district, index) => (
+            {metaAdsServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -1116,10 +1129,10 @@ export default function DigitalMarketingInIndiaPage() {
                     >
                       <MapPin className="h-6 w-6 text-[#FF6B35] group-hover:text-[#FF8A50] transition-colors duration-300" />
                     </motion.div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{district.category}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{district.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{service.category}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{service.description}</p>
                   <div className="space-y-2">
-                    {district.areas.map((area, idx) => (
+                    {service.areas.map((area, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-[#FF6B35]" />
                         <span className="text-gray-600 text-sm">{area}</span>
@@ -1139,15 +1152,15 @@ export default function DigitalMarketingInIndiaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions - Digital Marketing in India
+              Frequently Asked Questions - Meta Advertising
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about digital marketing services in India and how Frameleads can help your business achieve measurable results across Indian platforms.
+              Get answers to common questions about Meta advertising services and how Frameleads can help your business achieve measurable results across Facebook, Instagram, and Messenger platforms.
             </p>
           </div>
 
           <div className="space-y-6">
-            {digitalMarketingFaqData.map((faq, index) => (
+            {metaAdsFaqData.map((faq, index) => (
               <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
@@ -1165,20 +1178,20 @@ export default function DigitalMarketingInIndiaPage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Transform Your Digital Presence in India?"
-        description="Partner with Frameleads, the most trusted digital marketing agency for Indian businesses. Get your free audit and discover how we can help you achieve measurable ROI and business growth in India's competitive market."
-        primaryButtonText="Get Your Free India Market Audit"
-        secondaryButtonText="Schedule Your Strategic India Call"
+        title="Ready to Transform Your Meta Advertising Strategy?"
+        description="Partner with Frameleads, the most trusted Meta advertising agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth across Facebook, Instagram, and Messenger platforms."
+        primaryButtonText="Get Your Free Meta Ads Audit"
+        secondaryButtonText="Schedule Your Strategic Meta Call"
       />
 
       {/* Comprehensive Digital Marketing Services in Singapore */}
       <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete India Digital Marketing Ecosystem</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Meta Advertising Ecosystem</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              As the premier digital marketing agency for Indian businesses, we offer comprehensive services across all Indian platforms. 
-              Explore our specialized services designed specifically for India's diverse business landscape.
+              As the premier Meta advertising agency, we offer comprehensive services across Facebook, Instagram, and Messenger platforms. 
+              Explore our specialized services designed specifically for global business success.
             </p>
           </div>
           
@@ -1191,26 +1204,26 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Search className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Facebook Ads Management</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Dominate Google search results with our comprehensive SEO strategies for Indian businesses.
+                  Dominate Facebook advertising with our comprehensive campaign strategies for global businesses.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Technical SEO audits and optimization</span>
+                    <span className="text-sm">Advanced audience targeting and optimization</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Local SEO for Indian cities</span>
+                    <span className="text-sm">Creative development and A/B testing</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Content marketing in regional languages</span>
+                    <span className="text-sm">Conversion tracking and optimization</span>
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore SEO Services
+                  Explore Facebook Ads
                 </Link>
               </CardContent>
             </Card>
@@ -1222,18 +1235,18 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <MessageSquare className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Social Media Marketing India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Instagram Ads Services</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Build your brand presence across Facebook, Instagram, LinkedIn, and Twitter with engaging content that drives conversions.
+                  Build your brand presence on Instagram with engaging visual content and Stories ads that drive conversions.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Facebook & Instagram marketing</span>
+                    <span className="text-sm">Stories & Reels advertising</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">LinkedIn B2B marketing</span>
+                    <span className="text-sm">Shopping integration</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -1241,7 +1254,7 @@ export default function DigitalMarketingInIndiaPage() {
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Social Media Services
+                  Explore Instagram Ads
                 </Link>
               </CardContent>
             </Card>
@@ -1253,26 +1266,26 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">PPC Services India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Meta Business Solutions</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Maximize your ROI with targeted Google Ads and social media advertising campaigns for Indian businesses.
+                  Maximize your ROI with comprehensive Meta advertising solutions including Advantage+ campaigns and Conversions API.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Google Ads campaign management</span>
+                    <span className="text-sm">Advantage+ campaigns</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Facebook & Instagram advertising</span>
+                    <span className="text-sm">Facebook Conversions API</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">LinkedIn B2B campaigns</span>
+                    <span className="text-sm">Cross-platform remarketing</span>
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore PPC Services
+                  Explore Meta Solutions
                 </Link>
               </CardContent>
             </Card>
@@ -1284,26 +1297,26 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <ShoppingBag className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Services India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Meta Advertising</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Connect with Indian consumers through targeted e-commerce campaigns and marketplace optimization.
+                  Drive online sales through targeted Meta advertising campaigns and social commerce optimization.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Amazon India & Flipkart setup</span>
+                    <span className="text-sm">Dynamic product ads</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Payment integration (UPI, Razorpay)</span>
+                    <span className="text-sm">Shopping campaigns</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Cultural adaptation & localization</span>
+                    <span className="text-sm">Abandoned cart remarketing</span>
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore E-commerce Services
+                  Explore E-commerce Ads
                 </Link>
               </CardContent>
             </Card>
@@ -1315,14 +1328,14 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Content Marketing India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Development</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Engage your Indian audience with compelling content in English and regional languages that drives conversions.
+                  Engage your audience with compelling ad creatives and video content that drives conversions across Meta platforms.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Blog writing in Hindi & English</span>
+                    <span className="text-sm">Ad creative design</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -1330,11 +1343,11 @@ export default function DigitalMarketingInIndiaPage() {
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Email & WhatsApp marketing</span>
+                    <span className="text-sm">A/B testing programs</span>
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Content Services
+                  Explore Creative Services
                 </Link>
               </CardContent>
             </Card>
@@ -1346,26 +1359,26 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Monitor className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Web Design India</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Meta Marketing</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Create powerful websites optimized for Indian users with mobile-first design and multi-language support.
+                  Drive B2B leads through targeted Meta advertising campaigns and LinkedIn integration strategies.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Responsive web design</span>
+                    <span className="text-sm">LinkedIn-Meta integration</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">E-commerce development</span>
+                    <span className="text-sm">Account-based marketing</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Multi-language support</span>
+                    <span className="text-sm">Lead generation campaigns</span>
                   </div>
                 </div>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Web Design Services
+                  Explore B2B Marketing
                 </Link>
               </CardContent>
             </Card>
@@ -1377,26 +1390,26 @@ export default function DigitalMarketingInIndiaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
                 <Link href="/free-marketing-audit" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free India Market Audit</div>
-                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the Indian market</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free Meta Ads Audit</div>
+                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current Meta advertising performance across Facebook, Instagram, and Messenger</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/tools/roi-calculator" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">India ROI Calculator</div>
-                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for Indian campaigns</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Meta ROI Calculator</div>
+                  <p className="text-sm text-gray-600">Calculate your Meta advertising ROI and optimize your budget allocation for Facebook and Instagram campaigns</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/resources/digital-marketing-guide" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">India Marketing Guide</div>
-                  <p className="text-sm text-gray-600">Complete guide to digital marketing strategies and best practices for Indian businesses</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Meta Ads Guide</div>
+                  <p className="text-sm text-gray-600">Complete guide to Meta advertising strategies and best practices for Facebook, Instagram, and Messenger</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/academy" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">FrameLeads Academy</div>
-                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for the Indian market</p>
+                  <p className="text-sm text-gray-600">Learn Meta advertising with our expert-led courses and training programs for Facebook, Instagram, and Messenger</p>
                 </Link>
               </div>
             </div>
