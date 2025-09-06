@@ -99,8 +99,8 @@ export default function Footer() {
           {/* Brand & CTA Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <Link href="/" className="text-3xl font-bold text-[#FF6B35]">
-                <Image src="/logos/brand-logo.png" alt="Frameleads" width={120} height={120} />
+              <Link href="/" className="text-3xl font-bold">
+                <span className="text-[#2D3748]">FRAMELE</span><span className="text-[#FF6B35]">ADS</span>
               </Link>
               <p className="text-[#5A5A5A] mt-4 leading-relaxed text-sm">
                 India's leading digital marketing agency helping businesses achieve exponential growth through strategic SEO, 

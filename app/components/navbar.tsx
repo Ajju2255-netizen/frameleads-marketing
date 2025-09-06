@@ -23,8 +23,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-[#FF6B35]" onClick={() => handleNavClick('home')}>
-              <Image src="/logos/brand-logo.png" alt="Frameleads" width={120} height={120} />
+            <Link href="/" className="text-2xl font-bold" onClick={() => handleNavClick('home')}>
+              <span className="text-[#2D3748]">FRAMELE</span><span className="text-[#FF6B35]">ADS</span>
             </Link>
           </div>
 
