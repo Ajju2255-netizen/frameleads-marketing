@@ -31,97 +31,109 @@ export default function IndustriesPage() {
     {
       name: "Technology & SaaS",
       icon: Monitor,
-      description: "Digital marketing solutions for technology companies and SaaS platforms",
-      services: ["Product Marketing", "User Acquisition", "Growth Hacking", "Technical SEO", "Performance Marketing"],
-      results: "300% average increase in user acquisition",
+      description: "Specialized digital marketing solutions for technology companies and SaaS platforms with technical expertise",
+      services: ["Product Marketing", "User Acquisition Growth", "Technical SEO Optimization", "SaaS Performance Marketing", "Developer Community Building"],
+      results: "300% average increase in qualified user acquisition",
+      compliance: "GDPR, data privacy, international regulations",
       color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "E-commerce & Retail",
-      icon: ShoppingCart,
-      description: "Comprehensive e-commerce marketing strategies for online retailers",
-      services: ["Product Listing Ads", "Shopping Campaigns", "Conversion Optimization", "Inventory Marketing", "Seasonal Campaigns"],
-      results: "250% improvement in ROAS",
-      color: "from-green-500 to-emerald-500"
     },
     {
       name: "Healthcare & Medical",
       icon: Heart,
-      description: "HIPAA-compliant marketing solutions for healthcare providers",
-      services: ["Patient Acquisition", "Medical SEO", "Healthcare PPC", "Local Marketing", "Compliance Marketing"],
-      results: "180% increase in patient appointments",
+      description: "HIPAA-compliant marketing solutions for healthcare providers with medical expertise",
+      services: ["Patient Acquisition Campaigns", "Medical SEO Services", "Healthcare PPC Management", "Local Medical Marketing", "HIPAA-Compliant Strategies"],
+      results: "180% increase in patient appointment bookings",
+      compliance: "HIPAA, medical advertising guidelines, patient privacy",
       color: "from-red-500 to-pink-500"
     },
     {
       name: "Financial Services",
       icon: Briefcase,
-      description: "Secure and compliant marketing for financial institutions",
-      services: ["Lead Generation", "Financial SEO", "Compliance Marketing", "Trust Building", "Risk Management"],
-      results: "220% improvement in qualified leads",
+      description: "Secure and compliant marketing for financial institutions with regulatory expertise",
+      services: ["Financial Lead Generation", "Banking SEO Services", "Compliance Marketing", "Trust-Building Campaigns", "Risk Management Communications"],
+      results: "220% improvement in qualified financial leads",
+      compliance: "SEC regulations, financial advertising compliance, data security",
       color: "from-yellow-500 to-orange-500"
+    },
+    {
+      name: "E-commerce & Retail",
+      icon: ShoppingCart,
+      description: "Comprehensive e-commerce marketing strategies for online retailers with conversion expertise",
+      services: ["Product Listing Optimization", "Shopping Campaign Management", "Conversion Rate Optimization", "Inventory Marketing", "Seasonal Campaign Planning"],
+      results: "250% improvement in Return on Ad Spend (ROAS)",
+      compliance: "Consumer protection, advertising standards, international trade",
+      color: "from-green-500 to-emerald-500"
     },
     {
       name: "Real Estate",
       icon: Home,
-      description: "Property marketing solutions for real estate professionals",
-      services: ["Property Listings", "Local SEO", "Lead Generation", "Virtual Tours", "Market Analysis"],
-      results: "350% increase in property inquiries",
+      description: "Property marketing solutions for real estate professionals with local market expertise",
+      services: ["Property Listing Optimization", "Local Real Estate SEO", "Lead Generation Systems", "Virtual Tour Marketing", "Market Analysis Reports"],
+      results: "350% increase in qualified property inquiries",
+      compliance: "Real estate regulations, fair housing compliance, local licensing",
       color: "from-purple-500 to-indigo-500"
     },
     {
       name: "Manufacturing",
       icon: Factory,
-      description: "B2B marketing strategies for manufacturing companies",
-      services: ["Industrial SEO", "B2B Lead Generation", "Trade Show Marketing", "Supply Chain Marketing", "Technical Content"],
-      results: "280% improvement in B2B leads",
+      description: "B2B marketing strategies for manufacturing companies with industrial expertise",
+      services: ["Industrial SEO Services", "B2B Lead Generation", "Trade Show Marketing", "Supply Chain Communications", "Technical Content Marketing"],
+      results: "280% improvement in B2B manufacturing leads",
+      compliance: "Industrial regulations, safety standards, international trade",
       color: "from-gray-500 to-slate-500"
     },
     {
       name: "Education & Training",
       icon: GraduationCap,
-      description: "Educational marketing for schools, universities, and training institutes",
-      services: ["Student Recruitment", "Educational SEO", "Course Marketing", "Alumni Engagement", "Institutional Branding"],
-      results: "200% increase in student enrollment",
+      description: "Educational marketing for schools, universities, and training institutes with academic expertise",
+      services: ["Student Recruitment Campaigns", "Educational SEO", "Course Marketing Strategies", "Alumni Engagement", "Institutional Branding"],
+      results: "200% increase in student enrollment rates",
+      compliance: "Educational regulations, student privacy, accreditation standards",
       color: "from-indigo-500 to-blue-500"
     },
     {
       name: "Automotive",
       icon: Car,
-      description: "Marketing solutions for automotive dealers and manufacturers",
-      services: ["Vehicle Marketing", "Dealer SEO", "Local Automotive Marketing", "Service Marketing", "Fleet Marketing"],
-      results: "240% improvement in vehicle sales",
+      description: "Marketing solutions for automotive dealers and manufacturers with automotive expertise",
+      services: ["Vehicle Marketing Campaigns", "Automotive Dealer SEO", "Local Service Marketing", "Fleet Marketing Solutions", "Parts & Service Promotion"],
+      results: "240% improvement in vehicle sales conversion",
+      compliance: "Automotive regulations, safety standards, dealer compliance",
       color: "from-orange-500 to-red-500"
     },
     {
       name: "Food & Beverage",
       icon: UtensilsCrossed,
-      description: "Restaurant and food service marketing strategies",
-      services: ["Restaurant SEO", "Local Food Marketing", "Delivery Optimization", "Menu Marketing", "Food Photography"],
-      results: "190% increase in restaurant bookings",
+      description: "Restaurant and food service marketing strategies with culinary expertise",
+      services: ["Restaurant SEO Services", "Local Food Marketing", "Delivery Platform Optimization", "Menu Marketing", "Food Photography & Content"],
+      results: "190% increase in restaurant reservation bookings",
+      compliance: "Food safety regulations, health department guidelines, labeling requirements",
       color: "from-amber-500 to-yellow-500"
     },
     {
       name: "Travel & Hospitality",
       icon: Plane,
-      description: "Tourism and hospitality marketing solutions",
-      services: ["Travel SEO", "Hotel Marketing", "Destination Marketing", "Booking Optimization", "Travel Content"],
-      results: "260% improvement in bookings",
+      description: "Tourism and hospitality marketing solutions with travel industry expertise",
+      services: ["Travel SEO Optimization", "Hotel Marketing Campaigns", "Destination Marketing", "Booking System Optimization", "Travel Content Strategy"],
+      results: "260% improvement in booking conversions",
+      compliance: "Tourism regulations, accessibility requirements, international travel laws",
       color: "from-teal-500 to-cyan-500"
     },
     {
       name: "Gaming & Entertainment",
       icon: Gamepad2,
-      description: "Marketing for gaming companies and entertainment platforms",
-      services: ["Gaming SEO", "User Acquisition", "Community Building", "Influencer Marketing", "Gaming Content"],
-      results: "320% increase in user engagement",
+      description: "Marketing for gaming companies and entertainment platforms with gaming expertise",
+      services: ["Gaming SEO Strategies", "User Acquisition Campaigns", "Community Building", "Influencer Marketing Programs", "Gaming Content Creation"],
+      results: "320% increase in user engagement metrics",
+      compliance: "Gaming regulations, content ratings, international gaming laws",
       color: "from-pink-500 to-purple-500"
     },
     {
       name: "Professional Services",
       icon: Wrench,
-      description: "Marketing for law firms, consulting, and professional services",
-      services: ["Professional SEO", "Client Acquisition", "Thought Leadership", "Service Marketing", "Reputation Management"],
-      results: "210% improvement in client acquisition",
+      description: "Marketing for law firms, consulting, and professional services with professional expertise",
+      services: ["Professional SEO Services", "Client Acquisition Systems", "Thought Leadership Development", "Service-Based Marketing", "Online Reputation Management"],
+      results: "210% improvement in qualified client acquisition",
+      compliance: "Professional licensing, ethical guidelines, industry standards",
       color: "from-slate-500 to-gray-500"
     }
   ]
@@ -138,8 +150,8 @@ export default function IndustriesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Industry-Specific Digital Marketing Services",
-    "description": "Comprehensive digital marketing solutions tailored for specific industries including technology, healthcare, finance, e-commerce, and more.",
+    "name": "Industry-Specific Digital Marketing Solutions",
+    "description": "Specialized digital marketing strategies for 12+ industries with proven compliance expertise. Our industry-specialized digital marketing solutions deliver superior results by addressing unique sector challenges, regulations, and customer behaviors.",
     "url": "https://frameleads.com/industries",
     "telephone": "+91 6362821368",
     "email": "ajsal@frameleads.com",
@@ -148,18 +160,18 @@ export default function IndustriesPage() {
       "name": "FrameLeads",
       "url": "https://frameleads.com"
     },
-    "serviceType": "Industry-Specific Digital Marketing",
-    "areaServed": serviceRegions,
+    "serviceType": "Digital Marketing",
+    "areaServed": "Global",
     "priceRange": "$2000-$50000",
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Industry-Specific Marketing Services",
+      "name": "Industry Marketing Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technology Marketing", "description": "Digital marketing solutions for technology companies and SaaS platforms" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Healthcare Marketing", "description": "HIPAA-compliant marketing solutions for healthcare providers" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Marketing", "description": "Comprehensive e-commerce marketing strategies for online retailers" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financial Services Marketing", "description": "Secure and compliant marketing for financial institutions" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Healthcare Digital Marketing", "description": "HIPAA-compliant marketing solutions for healthcare providers with medical expertise" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technology Marketing Solutions", "description": "Specialized digital marketing solutions for technology companies and SaaS platforms with technical expertise" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financial Services Marketing", "description": "Secure and compliant marketing for financial institutions with regulatory expertise" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Marketing Strategies", "description": "Comprehensive e-commerce marketing strategies for online retailers with conversion expertise" } }
       ]
     }
   }
@@ -234,25 +246,25 @@ export default function IndustriesPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Industry-Specific Digital Marketing Solutions That Drive Results
+              Industry-Specific Digital Marketing Solutions That Drive Measurable Results
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-              Tailored digital marketing strategies designed for your specific industry. From technology and healthcare to e-commerce and manufacturing, we understand the unique challenges and opportunities in your sector.
+              Specialized marketing strategies for 12+ industries with proven compliance expertise. Our industry-specialized digital marketing solutions deliver superior results by addressing unique sector challenges, regulations, and customer behaviors.
             </p>
             <div className="max-w-4xl mx-auto text-left text-gray-600 mb-10">
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Industry-specific expertise across 12+ sectors</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 250% average improvement in industry KPIs</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Compliance-aware marketing strategies</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Proven results across diverse industries</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Industry-specialized expertise across 12+ verticals</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 250% average improvement in sector-specific KPIs</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Compliance-first marketing strategies</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Proven results in regulated industries</li>
               </ul>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Your Industry-Specific Strategy
+                  Get Free Industry Analysis
                 </Button>
               </Link>
               <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
@@ -276,9 +288,9 @@ export default function IndustriesPage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industries We Serve</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Digital Marketing Services by Industry Sector</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our industry-specific expertise helps businesses across diverse sectors achieve their digital marketing goals with tailored strategies and proven results.
+              Our industry-specific digital marketing solutions are tailored to meet the unique challenges and opportunities within each sector. Explore our specialized services below:
             </p>
           </div>
           
@@ -308,8 +320,11 @@ export default function IndustriesPage() {
                         </div>
                       ))}
                     </div>
-                    <div className="text-sm font-semibold text-[#FF6B35] mb-4">
+                    <div className="text-sm font-semibold text-[#FF6B35] mb-2">
                       {industry.results}
+                    </div>
+                    <div className="text-xs text-gray-500 mb-4">
+                      <strong>Compliance:</strong> {industry.compliance}
                     </div>
                     <div className="mt-6">
                       <Button className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-semibold py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -328,9 +343,9 @@ export default function IndustriesPage() {
       <section className="relative py-20 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Industry-Specific Marketing Matters</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Specialized Digital Marketing for Your Industry?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Generic marketing strategies don't work for every industry. Our specialized approach ensures your marketing resonates with your target audience and complies with industry regulations.
+              Industry-specific digital marketing delivers superior results because it addresses the unique challenges, regulations, and customer behaviors within each sector. Generic marketing approaches fail to account for industry compliance requirements, specialized terminology, and sector-specific customer journey patterns.
             </p>
           </div>
           
@@ -344,8 +359,8 @@ export default function IndustriesPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Target className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Industry Expertise</h3>
-                <p className="text-gray-600 text-sm">Deep understanding of industry-specific challenges, regulations, and opportunities</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Deep Industry Knowledge Matters</h3>
+                <p className="text-gray-600 text-sm">Our industry-specialized marketing consultants understand the nuances of your sector, from regulatory compliance requirements to industry-specific customer pain points. This expertise ensures your marketing campaigns resonate with your target audience while maintaining full compliance with industry standards.</p>
               </div>
             </motion.div>
             
@@ -358,8 +373,8 @@ export default function IndustriesPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Targeted Messaging</h3>
-                <p className="text-gray-600 text-sm">Content and campaigns that speak directly to your industry's pain points and needs</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Compliance-First Marketing Approach</h3>
+                <p className="text-gray-600 text-sm">Different industries face varying regulatory requirements. Our compliance-aware marketing strategies ensure your campaigns meet sector-specific guidelines while maximizing performance, particularly crucial for healthcare, financial services, and other regulated industries.</p>
               </div>
             </motion.div>
             
@@ -372,8 +387,8 @@ export default function IndustriesPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Shield className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Compliance Focus</h3>
-                <p className="text-gray-600 text-sm">Marketing strategies that adhere to industry regulations and best practices</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Track Record Across Sectors</h3>
+                <p className="text-gray-600 text-sm">With documented success across 12+ industries, our specialized approach consistently delivers measurable improvements in industry-relevant KPIs, from patient acquisition rates to B2B lead quality.</p>
               </div>
             </motion.div>
           </div>
@@ -385,63 +400,63 @@ export default function IndustriesPage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Grow Your Industry-Specific Business?"
-        description="Get a free industry analysis and custom marketing strategy. Discover how our specialized approach can help your business dominate your market."
+        title="Get Your Free Industry Marketing Analysis"
+        description="Our industry-specialized marketing consultants will analyze your current digital presence and create a custom strategy tailored to your sector's unique requirements and opportunities."
         primaryButtonText="Get Free Industry Analysis"
-        secondaryButtonText="Schedule Strategy Call"
+        secondaryButtonText="Schedule Strategy Consultation"
       />
 
       {/* Internal Links */}
       <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Industry Marketing Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Specialized Marketing Services</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive industry-specific services, case studies, and related digital marketing offerings
+              Discover our comprehensive industry-specific services, case studies, and related digital marketing offerings
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Industry-Specific Services */}
+            {/* Industry-Focused Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Services</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry-Focused Services</h3>
               <div className="space-y-3">
-                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing</Link>
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
-                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">E-commerce Marketing</Link>
-                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Healthcare Marketing</Link>
+                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Solutions</Link>
+                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing Services</Link>
+                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">E-commerce Marketing Strategies</Link>
+                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Healthcare Marketing Compliance</Link>
               </div>
             </div>
 
-            {/* Core Services */}
+            {/* Core Digital Marketing Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Services</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Digital Marketing Services</h3>
               <div className="space-y-3">
                 <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
-                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-                <Link href="/analytics-and-automations" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Analytics & Automation</Link>
+                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services & Optimization</Link>
+                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management & Strategy</Link>
+                <Link href="/analytics-and-automations" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Analytics & Marketing Automation</Link>
               </div>
             </div>
 
-            {/* Locations */}
+            {/* Global Service Locations */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Locations</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Service Locations</h3>
               <div className="space-y-3">
-                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Bangalore</Link>
-                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Dubai</Link>
-                <Link href="/digital-marketing-in-singapore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Singapore</Link>
-                <Link href="/digital-marketing-in-australia" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing in Australia</Link>
+                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
+                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
+                <Link href="/digital-marketing-in-singapore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Singapore</Link>
+                <Link href="/digital-marketing-in-australia" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Australia</Link>
               </div>
             </div>
 
-            {/* Company & Support */}
+            {/* Company & Resources */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Company & Support</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Company & Resources</h3>
               <div className="space-y-3">
                 <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
-                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Us</Link>
-                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</Link>
+                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Our Team</Link>
+                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Marketing Academy</Link>
                 <Link href="/free-marketing-audit" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Free Marketing Audit</Link>
               </div>
             </div>
