@@ -23,6 +23,7 @@ export default function Footer() {
     { name: "Pinterest Ads", href: "/pinterest-ads" },
     { name: "Shopify Ads", href: "/shopify-ads" },
     { name: "Baidu Ads", href: "/baidu-ads" },
+    { name: "Yandex Ads", href: "/yandex-ads" },
     { name: "Taboola Ads", href: "/taboola-ads" },
   ]
 
