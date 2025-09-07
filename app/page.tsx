@@ -229,6 +229,8 @@ export default function Home() {
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Specializations</h3>
               <div className="space-y-3">
+                <Link href="/technology-and-saas" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Technology & SaaS</Link>
+                <Link href="/healthcare-and-medical" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Healthcare & Medical</Link>
                 <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
                 <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing</Link>
               </div>

@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2025-09-07T09:40:47.868Z
+  // Auto-generated page data - Updated: 2025-09-07T09:49:03.078Z
   const pageData = {
   "services": [
     {
@@ -224,6 +224,11 @@ export default function SitemapPage() {
       "description": "Digital Marketing For Technology And Saas - Frameleads digital marketing services"
     },
     {
+      "path": "/healthcare-and-medical",
+      "name": "Healthcare And Medical",
+      "description": "Healthcare And Medical - Frameleads digital marketing services"
+    },
+    {
       "path": "/real-estate-marketing-company-in-bangalore",
       "name": "Real Estate Marketing Company In Bangalore",
       "description": "Real Estate Marketing Company In Bangalore - Frameleads digital marketing services"
@@ -306,11 +311,6 @@ export default function SitemapPage() {
       "path": "/contact",
       "name": "Contact",
       "description": "Contact us for digital marketing services"
-    },
-    {
-      "path": "/healthcare-and-medical",
-      "name": "Healthcare And Medical",
-      "description": "Healthcare And Medical - Frameleads digital marketing services"
     },
     {
       "path": "/industries",
@@ -489,7 +489,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {totalPages}
+                {Object.values(pageData).flat().length}
               </div>
               <div className="text-gray-600 text-sm">Total Pages</div>
             </motion.div>

@@ -8,6 +8,7 @@
     "lint": "next lint",
     "start": "next start",
     "generate-sitemap": "node scripts/generate-sitemap.js",
+    "watch-sitemap": "node scripts/watch-sitemap.js",
     "generate-xml-sitemap": "node scripts/generate-xml-sitemap.js",
     "submit-to-google": "node scripts/google-indexing.js",
     "setup-google-indexing": "node scripts/setup-google-indexing.js",

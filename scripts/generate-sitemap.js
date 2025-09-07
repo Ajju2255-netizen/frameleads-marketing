@@ -60,7 +60,7 @@ const PAGE_CATEGORIES = {
     title: 'Industries',
     icon: 'Building2',
     description: 'Industry-specific services',
-    patterns: ['b2b-marketing-company-in-bangalore', 'real-estate-marketing-company-in-bangalore', 'seo-company-in-bangalore', 'creative-advertising-company-in-bangalore', 'digital-marketing-for-technology-and-saas']
+    patterns: ['b2b-marketing-company-in-bangalore', 'real-estate-marketing-company-in-bangalore', 'seo-company-in-bangalore', 'creative-advertising-company-in-bangalore', 'digital-marketing-for-technology-and-saas', 'healthcare-and-medical']
   },
   company: {
     title: 'Company',
@@ -403,7 +403,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {totalPages}
+                {Object.values(pageData).flat().length}
               </div>
               <div className="text-gray-600 text-sm">Total Pages</div>
             </motion.div>
