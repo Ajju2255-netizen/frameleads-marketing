@@ -1,0 +1,12 @@
+{"timestamp":"2025-09-07T09:40:47.760Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-09-07T09:40:47.764Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-09-07T09:40:47.765Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-09-07T09:40:47.887Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (122ms)","data":null}
+{"timestamp":"2025-09-07T09:40:47.888Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-09-07T09:40:48.022Z","level":"success","message":"✅ Completed: Generate XML Sitemap (134ms)","data":null}
+{"timestamp":"2025-09-07T09:40:48.022Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-09-07T09:40:48.180Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-09-07T09:40:48.170Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-09-07T09:40:48.172Z] INFO: 🔑 Getting access token...\n[2025-09-07T09:40:48.172Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/scripts/google-indexing.js\"\n"}}
+{"timestamp":"2025-09-07T09:40:48.181Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-09-07T09:40:48.182Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-09-07T09:40:48.182Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-09-07T09:40:48.183Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}

@@ -1,0 +1,3 @@
+{"timestamp":"2025-09-07T09:40:48.170Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-09-07T09:40:48.172Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-09-07T09:40:48.172Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/scripts/google-indexing.js"}

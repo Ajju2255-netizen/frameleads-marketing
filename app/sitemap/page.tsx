@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2025-09-07T08:22:45.285Z
+  // Auto-generated page data - Updated: 2025-09-07T09:40:47.868Z
   const pageData = {
   "services": [
     {
@@ -308,6 +308,11 @@ export default function SitemapPage() {
       "description": "Contact us for digital marketing services"
     },
     {
+      "path": "/healthcare-and-medical",
+      "name": "Healthcare And Medical",
+      "description": "Healthcare And Medical - Frameleads digital marketing services"
+    },
+    {
       "path": "/industries",
       "name": "Industries",
       "description": "Industries we serve"
@@ -326,6 +331,11 @@ export default function SitemapPage() {
       "path": "/sitemap",
       "name": "Sitemap",
       "description": "Complete website sitemap and navigation"
+    },
+    {
+      "path": "/technology-and-saas",
+      "name": "Technology And Saas",
+      "description": "Technology And Saas - Frameleads digital marketing services"
     }
   ]
 };

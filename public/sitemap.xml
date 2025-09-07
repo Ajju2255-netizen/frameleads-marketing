@@ -229,6 +229,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://frameleads.com/healthcare-and-medical</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://frameleads.com/industries</loc>
     <lastmod>2025-09-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -322,6 +328,12 @@
     <loc>https://frameleads.com/taboola-ads</loc>
     <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://frameleads.com/technology-and-saas</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-09-07T09:40:47.760Z",
+  "totalDuration": 421,
+  "status": "partial",
+  "steps": [
+    {
+      "step": "Generate HTML Sitemap",
+      "status": "success",
+      "duration": 122,
+      "output": "> my-v0-project@0.1.0 generate-sitemap\n> node scripts/generate-sitemap.js\n\n🚀 Starting automatic sitemap generation...\n📁 Scanning app directory for pages...\n✅ Found 61 pages\n📂 Categorizing pages...\n  services: 12 pages\n  advertisingPlatforms: 11 pages\n  locations: 14 pages\n  industries: 5 pages\n  company: 4 pages\n  resources: 3 pages\n  academy: 5 pages\n  legal: 0 pages\n  main: 7 pages\n📝 Generating sitemap content...\n✅ Sitemap generated successfully: ./app/sitemap/page.tsx\n\n📊 Summary:\n  Total pages: 61\n  Generated: 2025-09-07T09:40:47.882Z\n  Output: ./app/sitemap/page.tsx",
+      "timestamp": "2025-09-07T09:40:47.888Z"
+    },
+    {
+      "step": "Generate XML Sitemap",
+      "status": "success",
+      "duration": 134,
+      "output": "> my-v0-project@0.1.0 generate-xml-sitemap\n> node scripts/generate-xml-sitemap.js\n\n🚀 Starting XML sitemap generation...\n📄 Getting all pages...\n✅ Found 62 pages\n📝 Generating XML sitemap content...\n✅ XML sitemap generated successfully: ./public/sitemap.xml\n\n📊 Summary:\n  Total pages: 62\n  Site URL: https://frameleads.com\n  Last modified: 2025-09-07\n  Output: ./public/sitemap.xml\n\n📋 Sample URLs:\n  1. / (Priority: 1, Change: weekly)\n  2. /Meta-ads (Priority: 0.8, Change: weekly)\n  3. /Social-media-marketing (Priority: 0.8, Change: weekly)\n  4. /about (Priority: 0.9, Change: monthly)\n  5. /academy (Priority: 0.8, Change: monthly)\n  6. /academy/about (Priority: 0.7, Change: monthly)\n  7. /academy/contact (Priority: 0.7, Change: monthly)\n  8. /academy/return-policy (Priority: 0.6, Change: yearly)\n  9. /academy/terms (Priority: 0.6, Change: yearly)\n  10. /academy/thank-you (Priority: 0.6, Change: yearly)\n  ... and 52 more pages",
+      "timestamp": "2025-09-07T09:40:48.022Z"
+    },
+    {
+      "step": "Submit to Google",
+      "status": "error",
+      "duration": 0,
+      "error": "Command failed: npm run submit-to-google",
+      "output": "\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-09-07T09:40:48.170Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-09-07T09:40:48.172Z] INFO: 🔑 Getting access token...\n[2025-09-07T09:40:48.172Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/scripts/google-indexing.js\"\n",
+      "timestamp": "2025-09-07T09:40:48.181Z"
+    }
+  ],
+  "summary": {
+    "totalSteps": 3,
+    "successfulSteps": 2,
+    "failedSteps": 1,
+    "successRate": "66.67%"
+  }
+}
