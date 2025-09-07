@@ -11,6 +11,7 @@ export default function Footer() {
     { name: "Content Marketing", href: "/content-marketing" },
     { name: "Social Media Marketing", href: "/Social-media-marketing" },
     { name: "WhatsApp Marketing", href: "/whatsapp-marketing" },
+    { name: "Analytics and Automation", href: "/analytics-and-automations" },
     { name: "Conversion Rate Optimization", href: "/conversion-rate-optimization" },
     { name: "Performance Marketing", href: "/perforamance-marketing" },
     { name: "Email Marketing & Automation", href: "/email-marketing-and-automation-services" },
@@ -57,7 +58,6 @@ export default function Footer() {
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
   ]
 
   const resources = [
@@ -228,7 +228,6 @@ export default function Footer() {
             <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Support</h3>
             <ul className="space-y-2 mb-6">
               <li><Link href="/contact" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Contact Us</Link></li>
-              <li><Link href="/blog" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Blog</Link></li>
             </ul>
 
             <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Legal</h3>
