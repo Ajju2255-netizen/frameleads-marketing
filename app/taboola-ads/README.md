@@ -1,100 +1,41 @@
-# Digital Marketing in United States - Page Documentation
+# Taboola Ads - Page Documentation
 
 ## Overview
-This directory contains the page component for Frameleads' digital marketing services targeting the United States market.
+This directory contains the page component for Frameleads' taboola advertising services. This page provides advertising services for a specific platform or channel.
 
-## Current Status
-⚠️ **IMPORTANT NOTICE**: The current `page.tsx` file appears to be a copy of the Bangalore digital marketing page and needs to be updated to properly target the United States market.
+## Page Details
 
-### Issues Identified
-1. **Function Name Mismatch**: The component is named `DigitalMarketingInBangalorePage` but should be `DigitalMarketingInUnitedStatesPage`
-2. **Content Mismatch**: All content references Bangalore instead of United States
-3. **Location Data**: Business districts, areas, and local references are all Bangalore-specific
-4. **Currency**: Pricing is in Indian Rupees (₹) instead of US Dollars ($)
-5. **Contact Information**: Phone numbers and addresses are India-specific
-6. **SEO Data**: Schema markup and meta information references Bangalore
+### Component Name
+`TaboolaAdsPage`
 
-## Required Updates for United States Market
+### Page Type
+Platform Specific
 
-### 1. Component Structure
-```typescript
-export default function DigitalMarketingInUnitedStatesPage() {
-  // Component implementation
-}
-```
+### Target Audience
+- Businesses wanting to advertise on specific platforms
+- Companies looking for platform-specific marketing
+- Organizations seeking targeted advertising
 
-### 2. Content Updates Needed
+## Key Features
 
-#### Hero Section
-- Change "Premier Digital Marketing Agency in Bangalore" to "Premier Digital Marketing Agency in United States"
-- Update trust indicators to reflect US market metrics
-- Modify contact information to US phone numbers and addresses
+### 1. Platform Expertise
+- Deep knowledge of platform-specific advertising
+- Optimized campaign strategies
+- Platform best practices
 
-#### Business Areas/Districts
-Replace Bangalore business districts with major US business hubs:
-- **East Coast**: New York, Boston, Washington DC, Miami
-- **West Coast**: San Francisco, Los Angeles, Seattle, San Diego
-- **Central**: Chicago, Dallas, Austin, Denver
-- **Emerging Markets**: Phoenix, Atlanta, Nashville, Charlotte
+### 2. Advanced Targeting
+- Precise audience targeting
+- Demographic and interest-based targeting
+- Lookalike and custom audiences
 
-#### Services Content
-- Update all service descriptions to reference US market dynamics
-- Modify case studies to include US-based success stories
-- Update industry-specific content for US market characteristics
+### 3. Performance Optimization
+- Continuous campaign optimization
+- A/B testing and experimentation
+- ROI and performance tracking
 
-#### Pricing & Budgets
-- Convert all pricing from Indian Rupees to US Dollars
-- Adjust budget recommendations for US market standards
-- Update currency symbols throughout the content
+## Technical Implementation
 
-#### Contact Information
-- Update phone numbers to US format (+1-XXX-XXX-XXXX)
-- Change address to US location
-- Update email and contact details
-
-#### SEO & Schema Markup
-- Update JSON-LD structured data for US market
-- Change location references in schema
-- Update meta descriptions and titles for US SEO
-
-### 3. Market-Specific Considerations
-
-#### Target Industries
-- Technology & SaaS (Silicon Valley focus)
-- E-commerce & D2C brands
-- Healthcare & Medical practices
-- Financial services
-- Real estate
-- Education & EdTech
-- Manufacturing & B2B
-
-#### Regional Targeting
-- Multi-state campaign management
-- Time zone considerations
-- Cultural adaptation for different US regions
-- Compliance with US advertising regulations (FTC, etc.)
-
-#### Competitive Landscape
-- Reference US-based competitors
-- Highlight advantages over local US agencies
-- Emphasize cost-effectiveness compared to US market rates
-
-## Implementation Checklist
-
-- [ ] Rename component function
-- [ ] Update hero section content
-- [ ] Replace business districts with US cities
-- [ ] Update all service descriptions
-- [ ] Convert pricing to USD
-- [ ] Update contact information
-- [ ] Modify case studies for US market
-- [ ] Update FAQ section
-- [ ] Fix schema markup
-- [ ] Update meta tags and SEO content
-- [ ] Test responsive design
-- [ ] Verify all links work correctly
-
-## Dependencies
+### Dependencies
 - Next.js 15.2.4
 - React 18
 - Framer Motion for animations
@@ -102,17 +43,25 @@ Replace Bangalore business districts with major US business hubs:
 - Tailwind CSS for styling
 - Custom UI components from `@/components/ui/`
 
+### SEO Optimization
+- Optimized meta tags and descriptions
+- Schema markup for better search visibility
+- Mobile-responsive design
+- Fast loading performance
+
 ## File Structure
 ```
-digital-marketing-in-unitedstates/
-├── page.tsx          # Main page component (needs updating)
+taboola-ads/
+├── page.tsx          # Main page component
 └── README.md         # This documentation file
 ```
 
 ## Related Pages
-- `/digital-marketing-in-bangalore/` - Original Bangalore page
-- `/digital-marketing-in-dubai/` - Dubai market page
-- `/digital-marketing-services/` - General services page
+- `/google-ads/` - Google Ads services
+- `/Meta-ads/` - Meta Ads services
+- `/linkedin-ads/` - LinkedIn Ads services
+- `/sitemap/` - Complete website navigation
+- `/contact/` - Contact us for more information
 
 ## Notes
-This page should serve as a comprehensive landing page for Frameleads' digital marketing services targeting the United States market, emphasizing the agency's ability to deliver results for US-based businesses while maintaining competitive pricing and local market expertise.
+This page focuses on advertising services for a specific platform, providing detailed information about our expertise and capabilities in platform-specific marketing.

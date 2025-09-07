@@ -1,22 +1,21 @@
-# Real Estate Marketing Company In Bangalore - Page Documentation
+# Contact - Page Documentation
 
 ## Overview
-This directory contains the page component for Frameleads' real estate marketing company services in bangalore. This page provides specialized digital marketing solutions tailored to specific industries.
+This directory contains the page component for Frameleads' contact frameleads - get in touch. This page provides information about Frameleads as a company.
 
 ## Page Details
 
 ### Component Name
-`RealEstateMarketingCompanyBangalorePage`
+`ContactPage`
 
 ### Page Type
-Industry Specific
+Company Page
 
 ### Target Audience
-- Real estate developers
-- Property management companies
-- Real estate agents
-- Construction companies
-- Property investment firms
+- Businesses of all sizes
+- Companies looking to improve their digital presence
+- Organizations seeking marketing expertise
+- Entrepreneurs and startups
 
 ## Key Features
 
@@ -53,7 +52,7 @@ Industry Specific
 
 ## File Structure
 ```
-real-estate-marketing-company-in-bangalore/
+contact/
 ├── page.tsx          # Main page component
 └── README.md         # This documentation file
 ```
@@ -63,4 +62,4 @@ real-estate-marketing-company-in-bangalore/
 - `/contact/` - Contact us for more information
 
 ## Notes
-This page provides comprehensive information about our digital marketing services and how we can help businesses achieve their online marketing goals.
+This page provides important information about Frameleads as a company, our values, team, and how we can help businesses succeed.

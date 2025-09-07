@@ -1,38 +1,68 @@
-## Overview of app/Social-media-marketing/page.tsx
+# Social Media Marketing - Page Documentation
 
-### Metadata
-- Title: Performance Marketing Agency - Drive ROI & Growth
-- Description: Measurable, ROI-focused performance services
+## Overview
+This directory contains the page component for Frameleads' social media marketing services. This page focuses on a specific digital marketing service with detailed information and offerings.
 
-### Hero
-- Badge: “Results-Driven Performance Marketing Experts”
-- H1: “Performance Marketing Agency — Maximize ROI with Data-Driven Campaigns”
-- CTA: “Get Free Performance Marketing Audit” and phone contact
-- Trust badges
+## Page Details
 
-### What is Performance Marketing
-- Definition and benefits grid
-- Decorative image card
+### Component Name
+`PerformanceMarketingPage`
 
-### Why Choose Our Services + Channels
-- Channel cards: PPC, Social, Affiliate, Email, Programmatic with bullet points
+### Page Type
+Service Specific
 
-### Process
-- Four steps from audit to analytics/reporting
+### Target Audience
+- Businesses looking for specific digital marketing services
+- Companies wanting to improve their online presence
+- Organizations seeking marketing expertise
 
-### Solutions by Industry
-- E-commerce, B2B, SaaS, Local Business cards with bullets
+## Key Features
 
-### Platforms & Technology
-- Tools and attribution platforms lists
+### 1. Specialized Service Focus
+- Deep expertise in specific digital marketing area
+- Industry best practices and methodologies
+- Proven results and case studies
 
-### Case Studies
-- Three result tiles with industry and description
+### 2. Comprehensive Service Delivery
+- Strategy development and planning
+- Implementation and execution
+- Monitoring and optimization
+- Reporting and analytics
 
-### FAQ
-- Five common questions and concise answers
+### 3. Client Success Focus
+- Customized solutions for each client
+- Regular performance reviews
+- Continuous improvement and optimization
 
-### Shared elements
-- JSON-LD `MarketingAgency` and `FAQPage`, `Navbar`, `Footer`, `Testimonials`, `ContactCTA`, `FloatingNotifications`
+## Technical Implementation
 
+### Dependencies
+- Next.js 15.2.4
+- React 18
+- Framer Motion for animations
+- Lucide React for icons
+- Tailwind CSS for styling
+- Custom UI components from `@/components/ui/`
 
+### SEO Optimization
+- Optimized meta tags and descriptions
+- Schema markup for better search visibility
+- Mobile-responsive design
+- Fast loading performance
+
+## File Structure
+```
+Social-media-marketing/
+├── page.tsx          # Main page component
+└── README.md         # This documentation file
+```
+
+## Related Pages
+- `/digital-marketing-services/` - Complete digital marketing services
+- `/seo-services/` - SEO services
+- `/content-marketing/` - Content marketing services
+- `/sitemap/` - Complete website navigation
+- `/contact/` - Contact us for more information
+
+## Notes
+This page provides detailed information about our specialized digital marketing service, including features, benefits, and how it can help businesses achieve their marketing goals.

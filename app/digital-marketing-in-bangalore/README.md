@@ -1,18 +1,18 @@
-# Digital Marketing In Unitedstates - Page Documentation
+# Digital Marketing In Bangalore - Page Documentation
 
 ## Overview
-This directory contains the page component for Frameleads' digital marketing services in unitedstates. This page targets businesses in a specific geographic location.
+This directory contains the page component for Frameleads' digital marketing services in bangalore. This page targets businesses in a specific geographic location.
 
 ## Page Details
 
 ### Component Name
-`DigitalMarketingInUnitedStatesPage`
+`DigitalMarketingInBangalorePage`
 
 ### Page Type
 Location Specific
 
 ### Target Audience
-- Businesses in Unitedstates
+- Businesses in Bangalore
 - Local companies
 - Regional businesses
 - International companies with local presence
@@ -53,7 +53,7 @@ Location Specific
 
 ## File Structure
 ```
-digital-marketing-in-unitedstates/
+digital-marketing-in-bangalore/
 ├── page.tsx          # Main page component
 └── README.md         # This documentation file
 ```

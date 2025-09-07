@@ -1,18 +1,18 @@
-# Digital Marketing In Unitedstates - Page Documentation
+# Digital Marketing In Dubai - Page Documentation
 
 ## Overview
-This directory contains the page component for Frameleads' digital marketing services in unitedstates. This page targets businesses in a specific geographic location.
+This directory contains the page component for Frameleads' digital marketing services in dubai. This page targets businesses in a specific geographic location.
 
 ## Page Details
 
 ### Component Name
-`DigitalMarketingInUnitedStatesPage`
+`DigitalMarketingInDubaiPage`
 
 ### Page Type
 Location Specific
 
 ### Target Audience
-- Businesses in Unitedstates
+- Businesses in Dubai
 - Local companies
 - Regional businesses
 - International companies with local presence
@@ -53,7 +53,7 @@ Location Specific
 
 ## File Structure
 ```
-digital-marketing-in-unitedstates/
+digital-marketing-in-dubai/
 ├── page.tsx          # Main page component
 └── README.md         # This documentation file
 ```

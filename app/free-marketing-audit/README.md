@@ -1,22 +1,21 @@
-# Real Estate Marketing Company In Bangalore - Page Documentation
+# Free Marketing Audit - Page Documentation
 
 ## Overview
-This directory contains the page component for Frameleads' real estate marketing company services in bangalore. This page provides specialized digital marketing solutions tailored to specific industries.
+This directory contains the page component for Frameleads' digital marketing services. This page provides comprehensive digital marketing services and information.
 
 ## Page Details
 
 ### Component Name
-`RealEstateMarketingCompanyBangalorePage`
+`FreeMarketingAuditPage`
 
 ### Page Type
-Industry Specific
+General
 
 ### Target Audience
-- Real estate developers
-- Property management companies
-- Real estate agents
-- Construction companies
-- Property investment firms
+- Businesses of all sizes
+- Companies looking to improve their digital presence
+- Organizations seeking marketing expertise
+- Entrepreneurs and startups
 
 ## Key Features
 
@@ -53,7 +52,7 @@ Industry Specific
 
 ## File Structure
 ```
-real-estate-marketing-company-in-bangalore/
+free-marketing-audit/
 ├── page.tsx          # Main page component
 └── README.md         # This documentation file
 ```

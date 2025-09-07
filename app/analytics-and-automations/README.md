@@ -1,33 +1,68 @@
-## Overview of app/seo-company-in-bangalore/page.tsx
+# Analytics And Automations - Page Documentation
 
-### Page focus
-- Local SEO company landing page for Bangalore covering hero, why us, services, process, areas, case studies, and FAQ with JSON-LD.
+## Overview
+This directory contains the page component for Frameleads' analytics and marketing automation. This page focuses on a specific digital marketing service with detailed information and offerings.
 
-### Hero
-- Badge: “#1 SEO Company in Bangalore”
-- H1: “Best SEO Company in Bangalore — 400% Traffic Growth Guaranteed”
-- CTA: Free Bangalore SEO Audit and phone contact
-- Trust indicators
+## Page Details
 
-### Why Choose Us
-- Bullet list of Bangalore SEO differentiators and supporting image
+### Component Name
+`AnalyticsAndAutomationsPage`
 
-### Services
-- Cards: Local SEO, Technical SEO, Content Marketing, E-commerce SEO
+### Page Type
+Service Specific
 
-### SEO Process
-- Four-step process: Audit, Strategy, Technical/On-Page, Local & Citations
+### Target Audience
+- Businesses looking for specific digital marketing services
+- Companies wanting to improve their online presence
+- Organizations seeking marketing expertise
 
-### Areas We Serve
-- Grid of Bangalore areas with `MapPin` icons
+## Key Features
 
-### Case Studies
-- Tech Startup, Restaurant Chain, Real Estate Agency with results and descriptions
+### 1. Specialized Service Focus
+- Deep expertise in specific digital marketing area
+- Industry best practices and methodologies
+- Proven results and case studies
 
-### FAQ
-- Five SEO FAQs tailored to Bangalore
+### 2. Comprehensive Service Delivery
+- Strategy development and planning
+- Implementation and execution
+- Monitoring and optimization
+- Reporting and analytics
 
-### Structured data
-- JSON-LD for `LocalBusiness`, `OfferCatalog`, and `FAQPage`
+### 3. Client Success Focus
+- Customized solutions for each client
+- Regular performance reviews
+- Continuous improvement and optimization
 
+## Technical Implementation
 
+### Dependencies
+- Next.js 15.2.4
+- React 18
+- Framer Motion for animations
+- Lucide React for icons
+- Tailwind CSS for styling
+- Custom UI components from `@/components/ui/`
+
+### SEO Optimization
+- Optimized meta tags and descriptions
+- Schema markup for better search visibility
+- Mobile-responsive design
+- Fast loading performance
+
+## File Structure
+```
+analytics-and-automations/
+├── page.tsx          # Main page component
+└── README.md         # This documentation file
+```
+
+## Related Pages
+- `/digital-marketing-services/` - Complete digital marketing services
+- `/seo-services/` - SEO services
+- `/content-marketing/` - Content marketing services
+- `/sitemap/` - Complete website navigation
+- `/contact/` - Contact us for more information
+
+## Notes
+This page provides detailed information about our specialized digital marketing service, including features, benefits, and how it can help businesses achieve their marketing goals.

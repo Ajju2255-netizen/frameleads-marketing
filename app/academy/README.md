@@ -1,49 +1,65 @@
-## Overview of app/academy/page.tsx
+# Academy - Page Documentation
 
-### Page purpose
-- Product landing page for “Meta Ads Starter Kit” with animated sections, proofs, what’s inside, testimonials, pricing, about, FAQ, and checkout drawer.
+## Overview
+This directory contains the page component for Frameleads' frameleads academy - digital marketing training. This page provides information about Frameleads as a company.
 
-### Hero
-- Badge: “Plug and Play Meta Ads Mastery”
-- H1: “Scale Profitable Meta Ads in 24h — Without Paying Agency Fees”
-- CTAs: Get Toolkit, See What's Inside
-- Rating badge and mockup image
+## Page Details
 
-### Trusted By
-- Brand logos grid and KPI stats
+### Component Name
+`AcademyPage`
 
-### Problem
-- Pain points: agency fees, wrong targeting, limited budgets with illustrative image
+### Page Type
+Company Page
 
-### Solution Intro
-- Introduces toolkit with three cards: PDF Guide, Targeting Lists, Templates, plus CTA
+### Target Audience
+- Businesses of all sizes
+- Companies looking to improve their digital presence
+- Organizations seeking marketing expertise
+- Entrepreneurs and startups
 
-### Results
-- Metrics grid and proof images (screenshots cards)
+## Key Features
 
-### What's Inside
-- Five-item toolkit list with icons and descriptions
+### 1. Comprehensive Digital Marketing
+- Full-service digital marketing solutions
+- Multi-channel marketing strategies
+- Integrated marketing approach
 
-### Testimonials
-- Six testimonial cards with names, roles, quotes, and result tags
+### 2. Proven Results
+- Track record of successful campaigns
+- Measurable ROI and performance metrics
+- Client success stories and case studies
 
-### Why This Works
-- Four rationale bullets and a proof chart image card
+### 3. Expert Team
+- Experienced digital marketing professionals
+- Industry expertise and knowledge
+- Continuous learning and adaptation
 
-### Pricing
-- Offer details, value breakdown, final CTA, urgency and assurance notes
+## Technical Implementation
 
-### About
-- Founder bio about Ajsal Abbas with portrait image
+### Dependencies
+- Next.js 15.2.4
+- React 18
+- Framer Motion for animations
+- Lucide React for icons
+- Tailwind CSS for styling
+- Custom UI components from `@/components/ui/`
 
-### FAQ
-- Four FAQs answering common pre-purchase questions
+### SEO Optimization
+- Optimized meta tags and descriptions
+- Schema markup for better search visibility
+- Mobile-responsive design
+- Fast loading performance
 
-### Footer
-- Quick links, contact, social links, and copyright
+## File Structure
+```
+academy/
+├── page.tsx          # Main page component
+└── README.md         # This documentation file
+```
 
-### Technical
-- JSON-LD for `Product`, `FAQPage`, and `WebSite`
-- Uses `CheckoutDrawer` for purchase flow
+## Related Pages
+- `/sitemap/` - Complete website navigation
+- `/contact/` - Contact us for more information
 
-
+## Notes
+This page provides important information about Frameleads as a company, our values, team, and how we can help businesses succeed.
