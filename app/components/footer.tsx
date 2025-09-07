@@ -193,6 +193,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/technology-and-saas" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Technology & SaaS</Link></li>
               <li><Link href="/healthcare-and-medical" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Healthcare & Medical</Link></li>
+              <li><Link href="/financial-services" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Financial Services</Link></li>
               <li><Link href="/b2b-marketing-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">B2B Marketing</Link></li>
               <li><Link href="/real-estate-marketing-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Real Estate</Link></li>
               <li><Link href="/seo-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">E-commerce</Link></li>

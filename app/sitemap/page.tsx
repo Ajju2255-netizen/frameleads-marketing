@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2025-09-07T09:51:46.136Z
+  // Auto-generated page data - Updated: 2025-09-07T10:24:47.110Z
   const pageData = {
   "services": [
     {
@@ -311,6 +311,11 @@ export default function SitemapPage() {
       "path": "/contact",
       "name": "Contact",
       "description": "Contact us for digital marketing services"
+    },
+    {
+      "path": "/financial-services",
+      "name": "Financial Services",
+      "description": "Financial Services - Frameleads digital marketing services"
     },
     {
       "path": "/industries",
