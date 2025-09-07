@@ -11,6 +11,7 @@ export default function Footer() {
     { name: "Content Marketing", href: "/content-marketing" },
     { name: "Social Media Marketing", href: "/Social-media-marketing" },
     { name: "Performance Marketing", href: "/perforamance-marketing" },
+    { name: "Branding Services", href: "/branding" },
   ]
 
   const advertisingPlatforms = [
