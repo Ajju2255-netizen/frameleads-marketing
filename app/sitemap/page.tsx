@@ -14,107 +14,333 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  const services = [
-    { name: "Digital Marketing Services", href: "/digital-marketing-services", description: "Comprehensive digital marketing solutions" },
-    { name: "SEO Services", href: "/seo-services", description: "Search engine optimization services" },
-    { name: "PPC Management", href: "/ppc management", description: "Pay-per-click advertising management" },
-    { name: "Content Marketing", href: "/content-marketing", description: "Strategic content creation and marketing" },
-    { name: "Social Media Marketing", href: "/Social-media-marketing", description: "Social media strategy and management" },
-    { name: "WhatsApp Marketing", href: "/whatsapp-marketing", description: "WhatsApp business marketing solutions" },
-    { name: "Analytics and Automation", href: "/analytics-and-automations", description: "Data analytics and marketing automation" },
-    { name: "Conversion Rate Optimization", href: "/conversion-rate-optimization", description: "CRO strategies and implementation" },
-    { name: "Performance Marketing", href: "/perforamance-marketing", description: "Performance-driven marketing campaigns" },
-    { name: "Email Marketing & Automation", href: "/email-marketing-and-automation-services", description: "Email marketing and automation services" },
-    { name: "Branding Services", href: "/branding", description: "Brand strategy and design services" },
-    { name: "Website Development", href: "/website-development", description: "Custom website development" },
+  // Auto-generated page data - Updated: 2025-09-07T08:22:45.285Z
+  const pageData = {
+  "services": [
+    {
+      "path": "/Social-media-marketing",
+      "name": "Social Media Marketing",
+      "description": "Social Media Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/analytics-and-automations",
+      "name": "Analytics And Automations",
+      "description": "Analytics And Automations - Frameleads digital marketing services"
+    },
+    {
+      "path": "/branding",
+      "name": "Branding",
+      "description": "Branding - Frameleads digital marketing services"
+    },
+    {
+      "path": "/content-marketing",
+      "name": "Content Marketing",
+      "description": "Content Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/conversion-rate-optimization",
+      "name": "Conversion Rate Optimization",
+      "description": "Conversion Rate Optimization - Frameleads digital marketing services"
+    },
+    {
+      "path": "/digital-marketing-services",
+      "name": "Digital Marketing Services",
+      "description": "Digital Marketing Services - Frameleads digital marketing services"
+    },
+    {
+      "path": "/email-marketing-and-automation-services",
+      "name": "Email Marketing And Automation Services",
+      "description": "Email Marketing And Automation Services - Frameleads digital marketing services"
+    },
+    {
+      "path": "/perforamance-marketing",
+      "name": "Perforamance Marketing",
+      "description": "Perforamance Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/ppc management",
+      "name": "Ppc management",
+      "description": "Ppc management - Frameleads digital marketing services"
+    },
+    {
+      "path": "/seo-services",
+      "name": "Seo Services",
+      "description": "Seo Services - Frameleads digital marketing services"
+    },
+    {
+      "path": "/website-development",
+      "name": "Website Development",
+      "description": "Website Development - Frameleads digital marketing services"
+    },
+    {
+      "path": "/whatsapp-marketing",
+      "name": "Whatsapp Marketing",
+      "description": "Whatsapp Marketing - Frameleads digital marketing services"
+    }
+  ],
+  "advertisingPlatforms": [
+    {
+      "path": "/Meta-ads",
+      "name": "Meta Ads",
+      "description": "Meta advertising management"
+    },
+    {
+      "path": "/baidu-ads",
+      "name": "Baidu Ads",
+      "description": "baidu advertising management"
+    },
+    {
+      "path": "/google-ads",
+      "name": "Google Ads",
+      "description": "google advertising management"
+    },
+    {
+      "path": "/linkedin-ads",
+      "name": "Linkedin Ads",
+      "description": "linkedin advertising management"
+    },
+    {
+      "path": "/pinterest-ads",
+      "name": "Pinterest Ads",
+      "description": "pinterest advertising management"
+    },
+    {
+      "path": "/shopify-ads",
+      "name": "Shopify Ads",
+      "description": "shopify advertising management"
+    },
+    {
+      "path": "/snapchat-ads",
+      "name": "Snapchat Ads",
+      "description": "snapchat advertising management"
+    },
+    {
+      "path": "/taboola-ads",
+      "name": "Taboola Ads",
+      "description": "taboola advertising management"
+    },
+    {
+      "path": "/tiktok-ads",
+      "name": "Tiktok Ads",
+      "description": "tiktok advertising management"
+    },
+    {
+      "path": "/yandex-ads",
+      "name": "Yandex Ads",
+      "description": "yandex advertising management"
+    },
+    {
+      "path": "/youtube-ads",
+      "name": "Youtube Ads",
+      "description": "youtube advertising management"
+    }
+  ],
+  "locations": [
+    {
+      "path": "/digital-marketing-in-australia",
+      "name": "Digital Marketing In Australia",
+      "description": "Digital marketing services in australia"
+    },
+    {
+      "path": "/digital-marketing-in-bangalore",
+      "name": "Digital Marketing In Bangalore",
+      "description": "Digital marketing services in bangalore"
+    },
+    {
+      "path": "/digital-marketing-in-brazil",
+      "name": "Digital Marketing In Brazil",
+      "description": "Digital marketing services in brazil"
+    },
+    {
+      "path": "/digital-marketing-in-canada",
+      "name": "Digital Marketing In Canada",
+      "description": "Digital marketing services in canada"
+    },
+    {
+      "path": "/digital-marketing-in-china",
+      "name": "Digital Marketing In China",
+      "description": "Digital marketing services in china"
+    },
+    {
+      "path": "/digital-marketing-in-dubai",
+      "name": "Digital Marketing In Dubai",
+      "description": "Digital marketing services in dubai"
+    },
+    {
+      "path": "/digital-marketing-in-france",
+      "name": "Digital Marketing In France",
+      "description": "Digital marketing services in france"
+    },
+    {
+      "path": "/digital-marketing-in-germany",
+      "name": "Digital Marketing In Germany",
+      "description": "Digital marketing services in germany"
+    },
+    {
+      "path": "/digital-marketing-in-india",
+      "name": "Digital Marketing In India",
+      "description": "Digital marketing services in india"
+    },
+    {
+      "path": "/digital-marketing-in-saudi-arabia",
+      "name": "Digital Marketing In Saudi Arabia",
+      "description": "Digital marketing services in saudi arabia"
+    },
+    {
+      "path": "/digital-marketing-in-singapore",
+      "name": "Digital Marketing In Singapore",
+      "description": "Digital marketing services in singapore"
+    },
+    {
+      "path": "/digital-marketing-in-uae",
+      "name": "Digital Marketing In Uae",
+      "description": "Digital marketing services in uae"
+    },
+    {
+      "path": "/digital-marketing-in-unitedkingdom",
+      "name": "Digital Marketing In Unitedkingdom",
+      "description": "Digital marketing services in unitedkingdom"
+    },
+    {
+      "path": "/digital-marketing-in-unitedstates",
+      "name": "Digital Marketing In Unitedstates",
+      "description": "Digital marketing services in unitedstates"
+    }
+  ],
+  "industries": [
+    {
+      "path": "/b2b-marketing-company-in-bangalore",
+      "name": "B2b Marketing Company In Bangalore",
+      "description": "B2b Marketing Company In Bangalore - Frameleads digital marketing services"
+    },
+    {
+      "path": "/creative-advertising-company-in-bangalore",
+      "name": "Creative Advertising Company In Bangalore",
+      "description": "Creative Advertising Company In Bangalore - Frameleads digital marketing services"
+    },
+    {
+      "path": "/digital-marketing-for-technology-and-saas",
+      "name": "Digital Marketing For Technology And Saas",
+      "description": "Digital Marketing For Technology And Saas - Frameleads digital marketing services"
+    },
+    {
+      "path": "/real-estate-marketing-company-in-bangalore",
+      "name": "Real Estate Marketing Company In Bangalore",
+      "description": "Real Estate Marketing Company In Bangalore - Frameleads digital marketing services"
+    },
+    {
+      "path": "/seo-company-in-bangalore",
+      "name": "Seo Company In Bangalore",
+      "description": "Seo Company In Bangalore - Frameleads digital marketing services"
+    }
+  ],
+  "company": [
+    {
+      "path": "/about",
+      "name": "About",
+      "description": "Learn about Frameleads digital marketing agency"
+    },
+    {
+      "path": "/academy/about",
+      "name": "Academy - About",
+      "description": "Digital marketing academy and training"
+    },
+    {
+      "path": "/careers",
+      "name": "Careers",
+      "description": "Join our digital marketing team"
+    },
+    {
+      "path": "/our-team",
+      "name": "Our Team",
+      "description": "Our Team - Frameleads digital marketing services"
+    }
+  ],
+  "resources": [
+    {
+      "path": "/free-marketing-audit",
+      "name": "Free Marketing Audit",
+      "description": "Get a free marketing audit"
+    },
+    {
+      "path": "/resources/digital-marketing-guide",
+      "name": "Resources - Digital Marketing Guide",
+      "description": "Comprehensive digital marketing guide"
+    },
+    {
+      "path": "/tools/roi-calculator",
+      "name": "Tools - Roi Calculator",
+      "description": "Calculate your marketing ROI"
+    }
+  ],
+  "academy": [
+    {
+      "path": "/academy/contact",
+      "name": "Academy - Contact",
+      "description": "Digital marketing academy and training"
+    },
+    {
+      "path": "/academy",
+      "name": "Academy",
+      "description": "Digital marketing academy and training"
+    },
+    {
+      "path": "/academy/return-policy",
+      "name": "Academy - Return Policy",
+      "description": "Digital marketing academy and training"
+    },
+    {
+      "path": "/academy/terms",
+      "name": "Academy - Terms",
+      "description": "Digital marketing academy and training"
+    },
+    {
+      "path": "/academy/thank-you",
+      "name": "Academy - Thank You",
+      "description": "Digital marketing academy and training"
+    }
+  ],
+  "legal": [],
+  "main": [
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "description": "Contact us for digital marketing services"
+    },
+    {
+      "path": "/industries",
+      "name": "Industries",
+      "description": "Industries we serve"
+    },
+    {
+      "path": "/locations",
+      "name": "Locations",
+      "description": "All our global locations"
+    },
+    {
+      "path": "/page.tsx",
+      "name": "Page.tsx",
+      "description": "Page.tsx - Frameleads digital marketing services"
+    },
+    {
+      "path": "/sitemap",
+      "name": "Sitemap",
+      "description": "Complete website sitemap and navigation"
+    }
   ]
-
-  const advertisingPlatforms = [
-    { name: "Google Ads", href: "/google-ads", description: "Google advertising management" },
-    { name: "Meta Ads", href: "/Meta-ads", description: "Facebook and Instagram advertising" },
-    { name: "YouTube Ads", href: "/youtube-ads", description: "YouTube advertising campaigns" },
-    { name: "LinkedIn Ads", href: "/linkedin-ads", description: "LinkedIn advertising solutions" },
-    { name: "TikTok Ads", href: "/tiktok-ads", description: "TikTok advertising management" },
-    { name: "Snapchat Ads", href: "/snapchat-ads", description: "Snapchat advertising campaigns" },
-    { name: "Pinterest Ads", href: "/pinterest-ads", description: "Pinterest advertising solutions" },
-    { name: "Shopify Ads", href: "/shopify-ads", description: "Shopify advertising management" },
-    { name: "Baidu Ads", href: "/baidu-ads", description: "Baidu advertising for China market" },
-    { name: "Yandex Ads", href: "/yandex-ads", description: "Yandex advertising for Russian market" },
-    { name: "Taboola Ads", href: "/taboola-ads", description: "Taboola native advertising" },
-  ]
-
-  const locations = [
-    { name: "Digital Marketing in India", href: "/digital-marketing-in-india", description: "Digital marketing services in India" },
-    { name: "Digital Marketing in Dubai", href: "/digital-marketing-in-dubai", description: "Digital marketing services in Dubai" },
-    { name: "Digital Marketing in Singapore", href: "/digital-marketing-in-singapore", description: "Digital marketing services in Singapore" },
-    { name: "Digital Marketing in Australia", href: "/digital-marketing-in-australia", description: "Digital marketing services in Australia" },
-    { name: "Digital Marketing in Saudi Arabia", href: "/digital-marketing-in-saudi-arabia", description: "Digital marketing services in Saudi Arabia" },
-    { name: "Digital Marketing in UAE", href: "/digital-marketing-in-uae", description: "Digital marketing services in UAE" },
-    { name: "Digital Marketing in Canada", href: "/digital-marketing-in-canada", description: "Digital marketing services in Canada" },
-    { name: "Digital Marketing in China", href: "/digital-marketing-in-china", description: "Digital marketing services in China" },
-    { name: "Digital Marketing in Bangalore", href: "/digital-marketing-in-bangalore", description: "Digital marketing services in Bangalore" },
-    { name: "Digital Marketing in United States", href: "/digital-marketing-in-unitedstates", description: "Digital marketing services in United States" },
-    { name: "Digital Marketing in United Kingdom", href: "/digital-marketing-in-unitedkingdom", description: "Digital marketing services in United Kingdom" },
-    { name: "Digital Marketing in Germany", href: "/digital-marketing-in-germany", description: "Digital marketing services in Germany" },
-    { name: "Digital Marketing in France", href: "/digital-marketing-in-france", description: "Digital marketing services in France" },
-    { name: "Digital Marketing in Brazil", href: "/digital-marketing-in-brazil", description: "Digital marketing services in Brazil" },
-  ]
-
-  const company = [
-    { name: "About Us", href: "/about", description: "Learn about Frameleads" },
-    { name: "Academy", href: "/academy", description: "Digital marketing academy" },
-    { name: "Our Team", href: "/our-team", description: "Meet our team" },
-    { name: "Careers", href: "/careers", description: "Join our team" },
-  ]
-
-  const resources = [
-    { name: "Digital Marketing Guide", href: "/resources/digital-marketing-guide", description: "Comprehensive digital marketing guide" },
-    { name: "Free Marketing Audit", href: "/free-marketing-audit", description: "Get a free marketing audit" },
-    { name: "ROI Calculator", href: "/tools/roi-calculator", description: "Calculate your marketing ROI" },
-  ]
-
-  const industries = [
-    { name: "B2B Marketing Company in Bangalore", href: "/b2b-marketing-company-in-bangalore", description: "B2B marketing services" },
-    { name: "Real Estate Marketing Company in Bangalore", href: "/real-estate-marketing-company-in-bangalore", description: "Real estate marketing services" },
-    { name: "SEO Company in Bangalore", href: "/seo-company-in-bangalore", description: "SEO services in Bangalore" },
-    { name: "Creative Advertising Company in Bangalore", href: "/creative-advertising-company-in-bangalore", description: "Creative advertising services" },
-    { name: "Digital Marketing for Technology and SaaS", href: "/digital-marketing-for-technology-and-saas", description: "Tech and SaaS marketing" },
-  ]
-
-  const legal = [
-    { name: "Privacy Policy", href: "/privacy", description: "Privacy policy and data protection" },
-    { name: "Terms of Service", href: "/terms", description: "Terms and conditions" },
-    { name: "Cookie Policy", href: "/cookies", description: "Cookie usage policy" },
-    { name: "Disclaimer", href: "/disclaimer", description: "Website disclaimer" },
-  ]
-
-  const mainPages = [
-    { name: "Home", href: "/", description: "Frameleads homepage" },
-    { name: "Contact", href: "/contact", description: "Contact us" },
-    { name: "Locations", href: "/locations", description: "All locations" },
-    { name: "Industries", href: "/industries", description: "Industries we serve" },
-  ]
-
-  const academyPages = [
-    { name: "Academy Home", href: "/academy", description: "Digital marketing academy" },
-    { name: "Academy About", href: "/academy/about", description: "About our academy" },
-    { name: "Academy Contact", href: "/academy/contact", description: "Contact academy" },
-    { name: "Academy Terms", href: "/academy/terms", description: "Academy terms" },
-    { name: "Academy Return Policy", href: "/academy/return-policy", description: "Academy return policy" },
-    { name: "Academy Thank You", href: "/academy/thank-you", description: "Thank you page" },
-  ]
+};
 
   const sections = [
-    { title: "Main Pages", items: mainPages, icon: Home },
-    { title: "Services", items: services, icon: Target },
-    { title: "Advertising Platforms", items: advertisingPlatforms, icon: Zap },
-    { title: "Locations", items: locations, icon: MapPin },
-    { title: "Industries", items: industries, icon: Building2 },
-    { title: "Company", items: company, icon: Users },
-    { title: "Resources", items: resources, icon: BookOpen },
-    { title: "Academy", items: academyPages, icon: GraduationCap },
-    { title: "Legal", items: legal, icon: Shield },
-  ]
+    { title: "Main Pages", items: pageData.main, icon: Home },
+    { title: "Services", items: pageData.services, icon: Target },
+    { title: "Advertising Platforms", items: pageData.advertisingPlatforms, icon: Zap },
+    { title: "Locations", items: pageData.locations, icon: MapPin },
+    { title: "Industries", items: pageData.industries, icon: Building2 },
+    { title: "Company", items: pageData.company, icon: Users },
+    { title: "Resources", items: pageData.resources, icon: BookOpen },
+    { title: "Academy", items: pageData.academy, icon: GraduationCap },
+    { title: "Legal", items: pageData.legal, icon: Shield },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
@@ -138,6 +364,9 @@ export default function SitemapPage() {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
+            <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
+              🔄 Auto-generated • Last updated: 9/7/2025
+            </div>
           </motion.div>
         </div>
       </section>
@@ -160,19 +389,22 @@ export default function SitemapPage() {
                     <div className="w-10 h-10 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-lg flex items-center justify-center">
                       <IconComponent className="w-5 h-5 text-[#FF6B35]" />
                     </div>
-                    <h2 className="text-xl font-bold text-[#2D2D2D]">{section.title}</h2>
+                    <div>
+                      <h2 className="text-xl font-bold text-[#2D2D2D]">{section.title}</h2>
+                      <p className="text-sm text-[#5A5A5A]/70">{section.items.length} pages</p>
+                    </div>
                   </div>
                   
                   <div className="space-y-3">
                     {section.items.map((item, itemIndex) => (
                       <motion.div
-                        key={item.name}
+                        key={item.path}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
                         transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (itemIndex * 0.05) }}
                       >
                         <Link 
-                          href={item.href}
+                          href={item.path}
                           className="group flex items-start gap-3 p-3 rounded-lg hover:bg-[#FF6B35]/5 transition-all duration-300"
                         >
                           <ArrowRight className="w-4 h-4 text-[#FF6B35]/60 group-hover:text-[#FF6B35] group-hover:translate-x-1 transition-all duration-300 mt-0.5 flex-shrink-0" />
@@ -211,7 +443,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {services.length + advertisingPlatforms.length}
+                {pageData.services.length + pageData.advertisingPlatforms.length}
               </div>
               <div className="text-gray-600 text-sm">Services & Platforms</div>
             </motion.div>
@@ -223,7 +455,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {locations.length}
+                {pageData.locations.length}
               </div>
               <div className="text-gray-600 text-sm">Global Locations</div>
             </motion.div>
@@ -235,7 +467,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {industries.length}
+                {pageData.industries.length}
               </div>
               <div className="text-gray-600 text-sm">Industries Served</div>
             </motion.div>
@@ -247,7 +479,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">
-                {sections.reduce((total, section) => total + section.items.length, 0)}
+                {totalPages}
               </div>
               <div className="text-gray-600 text-sm">Total Pages</div>
             </motion.div>

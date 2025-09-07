@@ -1,0 +1,21 @@
+#!/bin/sh
+# Pre-commit hook to automatically generate sitemap when content changes
+
+echo "🔍 Checking for content changes..."
+
+# Check if any files in the app directory have changed
+if git diff --cached --name-only | grep -q "^app/"; then
+    echo "📝 Content changes detected, generating sitemap..."
+    
+    # Generate the sitemap
+    npm run generate-sitemap
+    
+    # Add the updated sitemap to the commit
+    git add app/sitemap/page.tsx
+    
+    echo "✅ Sitemap updated and added to commit"
+else
+    echo "ℹ️  No content changes detected, skipping sitemap generation"
+fi
+
+exit 0
