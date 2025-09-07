@@ -12,6 +12,7 @@ import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
+import ReviewRating from "../components/review-rating"
 
 export default function SEOCompanyBangalorePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -414,10 +415,15 @@ export default function SEOCompanyBangalorePage() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Trusted by 500+ businesses worldwide</span></div>
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>5-star rated SEO agency</span></div>
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Avg. 300% ROI in 6 months</span></div>
+            </div>
+
+            {/* Review Rating Component */}
+            <div className="mb-8">
+              <ReviewRating className="max-w-4xl mx-auto" />
             </div>
           </div>
         </div>

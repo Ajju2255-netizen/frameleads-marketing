@@ -73,6 +73,7 @@ export default function Footer() {
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Disclaimer", href: "/disclaimer" },
+    { name: "Sitemap", href: "/sitemap" },
   ]
 
   const socialLinks = [
@@ -230,16 +231,6 @@ export default function Footer() {
               <li><Link href="/contact" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Contact Us</Link></li>
             </ul>
 
-            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Legal</h3>
-            <ul className="space-y-2 mb-6">
-              {legal.map((item) => (
-                <li key={item.name}>
-                  <Link href={item.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
 
             {/* Contact Info */}
             <div className="space-y-3">
@@ -278,8 +269,20 @@ export default function Footer() {
 
 
         {/* Bottom Line */}
-        <div className="text-center pt-8 border-t border-[#FFE4D6]/30">
-          <p className="text-[#5A5A5A]/60 text-sm">© {new Date().getFullYear()} Frameleads. All rights reserved.</p>
+        <div className="pt-8 border-t border-[#FFE4D6]/30">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-[#5A5A5A]/60 text-sm">© {new Date().getFullYear()} Frameleads. All rights reserved.</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+              {legal.map((item, index) => (
+                <div key={item.name} className="flex items-center">
+                  <Link href={item.href} className="text-[#5A5A5A]/60 hover:text-[#FF6B35] transition-colors duration-300">
+                    {item.name}
+                  </Link>
+                  {index < legal.length - 1 && <span className="mx-2 text-[#5A5A5A]/40">|</span>}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

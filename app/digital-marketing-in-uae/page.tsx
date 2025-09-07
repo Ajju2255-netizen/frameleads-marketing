@@ -11,6 +11,7 @@ import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import ReviewRating from "../components/review-rating"
 
 export default function DigitalMarketingInUAEPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -510,6 +511,11 @@ export default function DigitalMarketingInUAEPage() {
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
                 <span>5+ Years Serving UAE Businesses</span>
               </div>
+            </div>
+
+            {/* Review Rating Component */}
+            <div className="mb-8">
+              <ReviewRating className="max-w-4xl mx-auto" />
             </div>
 
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-[#FF6B35]/20">

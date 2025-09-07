@@ -12,6 +12,7 @@ import Testimonials from "./components/testimonials"
 import CardDecks from "./components/card-decks"
 import Footer from "./components/footer"
 import FloatingNotifications from "./components/floating-notifications"
+import ReviewRating from "./components/review-rating"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -185,6 +186,14 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      
+      {/* Review Rating Section */}
+      <section className="relative py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ReviewRating className="max-w-4xl mx-auto" />
+        </div>
+      </section>
+      
       <BrandLogos />
       <FeatureCards />
       <ServicesSteps />

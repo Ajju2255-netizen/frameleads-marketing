@@ -11,6 +11,7 @@ import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
 import FloatingNotifications from "../components/floating-notifications"
+import ReviewRating from "../components/review-rating"
 
 
 export default function DigitalMarketingServicesPage() {
@@ -385,10 +386,15 @@ export default function DigitalMarketingServicesPage() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>4.9/5 rating (200+ reviews)</span></div>
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Google Premier Partner</span></div>
               <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Avg. 400% traffic growth</span></div>
+            </div>
+
+            {/* Review Rating Component */}
+            <div className="mb-8">
+              <ReviewRating className="max-w-4xl mx-auto" />
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { MapPin, TrendingUp, Users, Award, CheckCircle, Phone } from "lucide-rea
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import ReviewRating from "../components/review-rating"
 import FloatingNotifications from "../components/floating-notifications"
 
 export default function ContentMarketingPage() {
@@ -302,7 +303,7 @@ export default function ContentMarketingPage() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
                 <span>500+ successful campaigns</span>
@@ -315,6 +316,11 @@ export default function ContentMarketingPage() {
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
                 <span>Global, multi‑industry expertise</span>
               </div>
+            </div>
+
+            {/* Review Rating Component */}
+            <div className="mb-8">
+              <ReviewRating className="max-w-4xl mx-auto" />
             </div>
           </motion.div>
         </div>

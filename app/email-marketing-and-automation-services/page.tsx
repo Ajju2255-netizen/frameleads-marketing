@@ -11,6 +11,7 @@ import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import ReviewRating from "../components/review-rating"
 
 export default function EmailMarketingAutomationPage() {
   const [isVisible, setIsVisible] = useState(false)
