@@ -10,7 +10,7 @@ interface BuyButtonProps {
 }
 
 export default function BuyButton({ 
-  buttonText = "Buy Now — ₹1,999", 
+  buttonText = "Get Started", 
   buttonClassName = "w-full py-3 rounded bg-emerald-500 text-white",
   showInputs = true 
 }: BuyButtonProps) {

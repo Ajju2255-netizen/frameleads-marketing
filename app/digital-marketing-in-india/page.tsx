@@ -816,8 +816,8 @@ export default function DigitalMarketingInIndiaPage() {
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Startup Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹25,000</div>
-                  <div className="text-gray-600">per month</div>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">Custom Pricing</div>
+                  <div className="text-gray-600">Tailored to your goals</div>
                   <p className="text-sm text-gray-500 mt-2">Perfect for small Indian businesses and startups</p>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -831,7 +831,7 @@ export default function DigitalMarketingInIndiaPage() {
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Google Ads management (₹10,000 ad spend included)</span>
+                    <span>Google Ads management (ad spend flexible)</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
@@ -855,8 +855,8 @@ export default function DigitalMarketingInIndiaPage() {
                 <div className="text-center mb-6">
                   <div className="inline-block bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">Most Popular</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Growth Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹50,000</div>
-                  <div className="text-gray-600">per month</div>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">Custom Pricing</div>
+                  <div className="text-gray-600">Tailored to your goals</div>
                   <p className="text-sm text-gray-500 mt-2">Ideal for expanding Indian companies</p>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -893,8 +893,8 @@ export default function DigitalMarketingInIndiaPage() {
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">₹1,00,000+</div>
-                  <div className="text-gray-600">per month</div>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">Custom Pricing</div>
+                  <div className="text-gray-600">Tailored to your goals</div>
                   <p className="text-sm text-gray-500 mt-2">For large Indian organizations</p>
                 </div>
                 <ul className="space-y-3 mb-8">
