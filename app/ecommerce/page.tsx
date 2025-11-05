@@ -7,12 +7,13 @@ import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro } from "lucide-react"
+import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Video, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro, MessageCircle, Search, ShoppingBag, BarChart, ArrowRight, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, ExternalLink, Brain, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, LineChart, Percent, Calculator, BookOpen, FileText, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Trophy, Medal, Home, Coffee, Code, Database, Server, Wrench, Cpu, HardDrive, Network, Terminal, GitBranch, ShieldCheck, Stethoscope, UserCheck, ClipboardList, CreditCard, Banknote, TrendingUp as TrendingUpIcon, Building, PiggyBank, Wallet, Receipt, Coins, Landmark } from "lucide-react"
 import Link from "next/link"
 import Testimonials from "../components/testimonials"
 import ContactCTA from "../components/contact-cta"
+import ReviewRating from "../components/review-rating"
 
-export default function DigitalMarketingInSaudiArabiaPage() {
+export default function EcommercePage() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -21,337 +22,405 @@ export default function DigitalMarketingInSaudiArabiaPage() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-  const saudiBusinessMarkets = [
+  
+  const ecommerceMarketingServices = [
     {
-      category: "Riyadh - Government & Corporate Hub",
-      areas: ["Riyadh CBD", "King Fahd Road", "Olaya District", "Al Malaz", "Al Nakheel", "Al Wurud"],
-      description: "Saudi Arabia's capital and business center with focus on government, finance, and corporate sectors requiring sophisticated digital marketing strategies for the Riyadh market"
+      category: "E-commerce SEO Services",
+      areas: ["Online Store SEO Optimization", "E-commerce Content Marketing", "Product Page SEO", "E-commerce Keyword Research", "Technical SEO for Online Stores", "E-commerce Directory Submissions"],
+      description: "Drive organic growth with e-commerce SEO that helps customers find your online store and products when they're ready to buy"
     },
     {
-      category: "Jeddah - Commercial & Tourism Gateway", 
-      areas: ["Jeddah CBD", "Al Hamra", "Al Rawdah", "Al Shati", "Al Balad", "Al Salamah"],
-      description: "Commercial and tourism digital marketing specialists for Jeddah's diverse business landscape and cultural hub"
+      category: "E-commerce PPC Management", 
+      areas: ["Google Ads for E-commerce", "Amazon Advertising Management", "Social Commerce Advertising", "E-commerce Conversion Tracking", "Shopping Campaigns", "Retail Media Advertising"],
+      description: "Drive immediate sales with specialized e-commerce PPC campaigns that capture high-intent shopping searches and maximize ROI"
     },
     {
-      category: "Dammam - Energy & Industrial Hub",
-      areas: ["Dammam CBD", "Al Khobar", "Dhahran", "Al Jubail", "Ras Tanura", "Al Qatif"],
-      description: "Energy, petrochemical, and industrial sector digital marketing expertise for Eastern Province's growing business ecosystem"
+      category: "E-commerce Content Marketing",
+      areas: ["Product Content Creation", "E-commerce Blog Writing", "Email Marketing for Online Stores", "Social Commerce Content", "Product Video Content", "Customer Success Stories"],
+      description: "Build brand authority and drive sales with engaging content that showcases your products and builds customer trust"
     },
     {
-      category: "Mecca - Religious Tourism & Services",
-      areas: ["Mecca CBD", "Al Aziziyah", "Al Shara'i", "Al Misfalah", "Al Nuzha", "Al Mansour"],
-      description: "Religious tourism and hospitality digital marketing specialists serving Mecca's unique market and pilgrimage services"
+      category: "E-commerce Website Design & Development",
+      areas: ["Online Store Design", "E-commerce Platform Integration", "Mobile Commerce Optimization", "Checkout Optimization", "E-commerce Website Accessibility", "Customer Experience Systems"],
+      description: "Create a high-converting online store that provides an exceptional shopping experience and drives sales"
     },
     {
-      category: "Medina - Heritage & Cultural Tourism",
-      areas: ["Medina CBD", "Al Qiblatain", "Al Ansar", "Al Qurban", "Al Hijra", "Al Mada'in"],
-      description: "Heritage, cultural tourism, and hospitality digital marketing expertise for Medina's religious and cultural center"
+      category: "E-commerce Reputation Management",
+      areas: ["Customer Review Management", "Online Reputation Monitoring", "E-commerce Crisis Communication", "Brand Management", "Customer Testimonial Programs", "Social Commerce Management"],
+      description: "Protect and enhance your online store's reputation with professional reputation management services that build customer trust"
     },
     {
-      category: "NEOM - Future City & Innovation",
-      areas: ["NEOM City", "The Line", "Oxagon", "Trojena", "Sindalah", "Aquellum"],
-      description: "Future city and innovation digital marketing specialists for NEOM's cutting-edge business ecosystem and Vision 2030 projects"
+      category: "E-commerce Analytics & Performance Optimization",
+      areas: ["Customer Acquisition Tracking", "E-commerce ROI Analysis", "Online Store Conversion Optimization", "E-commerce Marketing Attribution", "Customer Journey Analytics", "Sales Performance Reporting"],
+      description: "Track and optimize your e-commerce marketing performance with detailed analytics that drive sales growth and customer acquisition"
     }
   ]
 
-  const digitalMarketingServices = [
+  const ecommerceMarketingServicesList = [
+    {
+      icon: FileText,
+      title: "E-commerce SEO Services",
+      description: "Drive organic growth with e-commerce SEO that helps customers find your online store and products when they're ready to buy. Our e-commerce-focused SEO strategies target shopping keywords and product search to increase your store's visibility.",
+      features: [
+        "Online Store SEO: Google Business Profile optimization for e-commerce businesses",
+        "Product Content Optimization: SEO-optimized product descriptions and category pages",
+        "E-commerce Technical SEO: Site speed, mobile optimization, and structured data",
+        "E-commerce Directory Submissions: Listings in shopping and product directories",
+        "E-commerce Keyword Research: Target high-intent shopping and product search terms"
+      ],
+      results: [
+        "320% increase in organic search traffic",
+        "280% improvement in product page rankings",
+        "240% growth in online sales"
+      ]
+    },
+    {
+      icon: Target,
+      title: "E-commerce PPC Management",
+      description: "Drive immediate sales with specialized e-commerce PPC campaigns that capture high-intent shopping searches. Our e-commerce advertising strategies maximize ROI while driving qualified traffic to your online store.",
+      features: [
+        "Google Ads for E-commerce: Shopping campaigns and search ads for online stores",
+        "Amazon Advertising Management: Sponsored products and brand campaigns",
+        "Social Commerce Advertising: Facebook, Instagram, and TikTok shopping ads",
+        "E-commerce Conversion Tracking: Sales tracking and ROI optimization",
+        "E-commerce Remarketing Campaigns: Re-engage customers who visited your store"
+      ],
+      results: [
+        "180% increase in online sales",
+        "65% improvement in conversion rates",
+        "45% reduction in cost per acquisition"
+      ]
+    },
     {
       icon: TrendingUp,
-      title: "SEO Saudi Arabia - Search Engine Optimization for KSA Market Dominance",
-      description: "Comprehensive SEO strategies specifically designed for Saudi Arabia's competitive digital landscape, targeting high-value Arabic and English keywords and local search optimization across all Saudi cities.",
+      title: "E-commerce Content Marketing",
+      description: "Build brand authority and drive sales with engaging content that showcases your products and builds customer trust. Our content marketing strategies educate customers while driving organic growth and sales.",
       features: [
-        "Local SEO Saudi Arabia: Google My Business optimization for Saudi businesses",
-        "Arabic SEO: Technical optimization for Arabic content and search behavior",
-        "Keyword Research: Targeting high-volume Saudi-specific terms in Arabic and English",
-        "Competitor Analysis: Comprehensive analysis of Saudi market competitors",
-        "Content Optimization: Saudi-focused content strategy with cultural adaptation"
+        "Product Content Creation: SEO-optimized product descriptions and category content",
+        "E-commerce Blog Writing: Product guides, buying guides, and industry insights",
+        "Email Marketing for Online Stores: Automated campaigns and customer nurturing",
+        "Social Commerce Content: Instagram, TikTok, and Facebook shopping content",
+        "Customer Success Stories: Product reviews and customer testimonials"
       ],
       results: [
-        "250% increase in organic traffic from Saudi searches",
-        "Top 3 rankings for target keywords in Saudi Arabia",
-        "85% improvement in local visibility across Saudi cities"
+        "220% increase in customer engagement",
+        "180% improvement in website time on page",
+        "150% growth in email subscribers"
       ]
     },
     {
-      icon: DollarSign,
-      title: "Google Ads Saudi Arabia - PPC Advertising Optimized for Saudi Audiences",
-      description: "Strategic Google Ads and Microsoft Advertising campaigns optimized for Saudi audiences, purchasing behaviors, and regional market dynamics across the Kingdom of Saudi Arabia.",
+      icon: Crown,
+      title: "E-commerce Website Design & Development",
+      description: "Create a high-converting online store that provides an exceptional shopping experience and drives sales. Our e-commerce website design focuses on conversion optimization and user experience.",
       features: [
-        "Saudi Market Targeting: Geo-targeted campaigns for Saudi cities",
-        "Arabic Language Ads: Culturally-adapted ad copy in Arabic and English",
-        "Conversion Optimization: Landing pages optimized for Saudi consumers",
-        "Multi-platform Support: Google Ads, Facebook, LinkedIn, and Snapchat",
-        "Saudi Payment Integration: Local payment methods and banking systems"
+        "Online Store Design: Custom e-commerce website design and development",
+        "E-commerce Platform Integration: Shopify, WooCommerce, Magento, and BigCommerce",
+        "Mobile Commerce Optimization: Mobile-first design for mobile shoppers",
+        "Checkout Optimization: Streamlined checkout process to reduce cart abandonment",
+        "E-commerce Website Accessibility: ADA-compliant design for all customers"
       ],
       results: [
-        "180% improvement in Saudi PPC performance",
-        "40% reduction in cost-per-acquisition for Saudi market",
-        "3.2x average return on ad spend (ROAS) in Saudi Arabia"
+        "350% increase in online sales",
+        "280% improvement in conversion rates",
+        "220% growth in average order value"
       ]
     },
     {
-      icon: MessageSquare,
-      title: "Social Media Marketing Saudi Arabia - Multi-Platform Saudi Audience Engagement",
-      description: "Multi-platform social media marketing optimized for Saudi audiences, cultural nuances, and diverse business objectives across Saudi Arabia's digital ecosystem.",
+      icon: Zap,
+      title: "E-commerce Reputation Management",
+      description: "Protect and enhance your online store's reputation with professional reputation management services. We help you build trust with customers through strategic review management and positive content creation.",
       features: [
-        "Instagram Marketing: Visual storytelling for Saudi lifestyle brands (85% penetration)",
-        "Twitter/X Marketing: High engagement strategies for Saudi market",
-        "LinkedIn Marketing: B2B networking and lead generation for Saudi companies",
-        "TikTok Marketing: Engaging young Saudi demographics",
-        "Snapchat Marketing: Popular among Saudi millennials and Gen Z"
+        "Customer Review Management: Monitor and respond to reviews across all platforms",
+        "Online Reputation Monitoring: Track mentions and sentiment across the web",
+        "E-commerce Crisis Communication: Professional communication during challenging times",
+        "E-commerce Brand Management: Consistent brand messaging across all channels",
+        "Customer Testimonial Programs: Generate authentic positive content and reviews"
       ],
       results: [
-        "280% increase in social media conversions from Saudi users",
-        "50% lower cost-per-acquisition on Saudi market",
-        "350% improvement in engagement rates with Saudi audiences"
+        "280% increase in positive online reviews",
+        "200% improvement in online reputation score",
+        "160% growth in customer trust indicators"
       ]
     },
     {
-      icon: Users,
-      title: "Content Marketing Saudi Arabia - Strategic Content Creation for Saudi Market",
-      description: "Strategic content creation and distribution tailored to Saudi audiences, cultural references, and regional preferences across the Saudi market with Arabic and English content.",
+      icon: BarChart3,
+      title: "E-commerce Analytics & Performance Optimization",
+      description: "Track and optimize your e-commerce marketing performance with detailed analytics that drive sales growth. Our e-commerce analytics provide actionable insights for data-driven marketing decisions.",
       features: [
-        "Arabic Content Creation: Industry-specific content for Saudi businesses",
-        "Cultural Adaptation: Content that resonates with Saudi values and Vision 2030",
-        "SEO-Optimized Content: Long-form content targeting Saudi keywords",
-        "Video Content: YouTube and social media content for Saudi audiences",
-        "Local Content: City-specific content for Riyadh, Jeddah, Dammam, Mecca, Medina"
+        "Customer Acquisition Tracking: Monitor and optimize customer acquisition costs",
+        "E-commerce ROI Analysis: Track return on investment for marketing campaigns",
+        "Online Store Conversion Optimization: A/B testing for checkout and product pages",
+        "E-commerce Marketing Attribution: Understand which channels drive the most sales",
+        "Sales Performance Reporting: Detailed analytics that track sales and revenue"
       ],
       results: [
-        "320% increase in content engagement from Saudi audiences",
-        "55% improvement in lead quality from Saudi prospects",
-        "200% increase in brand awareness across Saudi cities"
-      ]
-    },
-    {
-      icon: Settings,
-      title: "Web Development for Saudi Market Success",
-      description: "Development of conversion-optimized websites adapted for Saudi users, design preferences, and local market requirements including Saudi compliance standards and Arabic language support.",
-      features: [
-        "Responsive Web Design: Optimized for Saudi devices and internet speeds",
-        "Arabic Language Support: RTL design and Arabic content optimization",
-        "Conversion Rate Optimization (CRO): For Saudi user behavior patterns",
-        "E-commerce Development: With Saudi payment systems and banking integration",
-        "User Experience (UX) Design: Tailored to Saudi preferences and culture"
-      ],
-      results: [
-        "90% average improvement in conversion rate for Saudi visitors",
-        "40% reduction in bounce rate for Saudi users",
-        "380% increase in lead generation from Saudi market"
+        "55% reduction in customer acquisition costs",
+        "320% improvement in marketing ROI",
+        "280% increase in online sales conversion rates"
       ]
     }
   ]
 
-  const digitalMarketingProcess = [
+  const ecommerceMarketingProcess = [
     {
       step: "01",
-      title: "Saudi Market Analysis & Strategy Development",
-      description: "Comprehensive Saudi market audit including consumer behavior analysis, competitive benchmarking across Saudi cities, target audience research for Saudi demographics, and goal setting aligned with Saudi business objectives and Vision 2030."
+      title: "E-commerce Marketing Assessment",
+      description: "We begin every e-commerce marketing engagement with a comprehensive assessment of your current marketing, competitive analysis, and customer persona development. This strategic foundation ensures your marketing aligns with your business goals and customer needs."
     },
     {
       step: "02",
-      title: "Integrated Digital Marketing Strategy for Saudi Arabia",
-      description: "Comprehensive digital marketing strategy with SEO, PPC, social media, content marketing, and web development plans specifically adapted for the Saudi market, including regional variations and cultural considerations."
+      title: "E-commerce Setup & Optimization",
+      description: "Our team optimizes your online store, product pages, and digital assets for sales conversion. We implement e-commerce-specific SEO, customer communication systems, and conversion optimization."
     },
     {
       step: "03",
-      title: "Data-Driven Campaign Execution",
-      description: "Data-driven campaign execution with real-time performance monitoring across Saudi cities, A/B testing implementation for Saudi audiences, and weekly optimization cycles for maximum ROI in the Saudi market."
+      title: "E-commerce Campaign Launch & Management",
+      description: "We deploy multi-channel e-commerce marketing campaigns across content, paid advertising, and customer engagement. Continuous optimization and sales tracking ensure maximum customer acquisition and revenue growth."
     },
     {
       step: "04",
-      title: "Continuous Growth & Saudi Market Expansion",
-      description: "Continuous growth and optimization through scaling Saudi campaigns, implementing advanced automation for Saudi clients, and monthly strategic planning sessions focused on Saudi market expansion."
+      title: "Sales Growth & Business Scaling",
+      description: "We focus on scaling successful campaigns, expanding customer acquisition channels, and optimizing for long-term business growth. Our data-driven approach ensures continuous improvement and sustainable sales growth."
     }
   ]
 
-  const whyChooseDigitalMarketing = [
-    "Native Saudi Market Expertise: Deep understanding of Saudi consumer behavior, cultural nuances, and local search patterns",
-    "Saudi Specialists: Complete coverage across Riyadh, Jeddah, Dammam, Mecca, Medina, and all Saudi cities",
-    "Local Market Intelligence: Strategic targeting of Saudi-specific keywords and search behaviors in Arabic and English",
-    "Performance-Driven Results: 300% average ROI increase for Saudi clients",
-    "Arabic Language Expertise: Specialized expertise in Arabic SEO and content marketing",
-    "Saudi Compliance: Full compliance with Saudi regulations and data protection laws",
-    "Saudi Industry-Specific Expertise: Proven success in energy, healthcare, real estate, e-commerce, and technology sectors in Saudi Arabia",
-    "Vision 2030 Alignment: Deep understanding of Saudi business transformation and economic diversification goals"
+  const whyChooseEcommerceMarketing = [
+    "Proven Results: Our e-commerce clients see average 320% increase in online sales and 55% reduction in customer acquisition costs",
+    "Expert Team: Specialized e-commerce marketing experts with deep online retail, marketplace, and digital commerce experience",
+    "E-commerce Focus: All our marketing services are designed specifically for online stores and e-commerce businesses",
+    "Comprehensive Solutions: Complete e-commerce marketing from strategy to execution with transparent pricing starting from $2,500",
+    "Industry Expertise: Deep understanding of e-commerce marketing across fashion, beauty, electronics, home goods, and food industries",
+    "Sales-Driven Strategy: Performance analytics, customer journey tracking, and conversion optimization for measurable sales growth",
+    "Platform Expertise: Experience with Shopify, WooCommerce, Magento, BigCommerce, Amazon, and other major e-commerce platforms",
+    "Flexible Engagement: Project-based and ongoing marketing options with no long-term contracts required"
   ]
 
-  const digitalMarketingCaseStudies = [
-    {
-      industry: "Riyadh B2B Tech Company",
-      location: "Riyadh CBD",
-      challenge: "Early-stage B2B tech company needed to scale from 15 to 150 enterprise clients in the Saudi market",
-      solution: "Comprehensive Saudi digital marketing strategy with SEO, PPC, social media, and content marketing in Arabic and English",
-      results: [
-        "380% increase in qualified leads from Saudi market",
-        "SAR 15M ARR growth in 12 months",
-        "90% improvement in enterprise client acquisition",
-        "3.5x return on ad spend (ROAS) in Saudi Arabia"
-      ]
-    },
-    {
-      industry: "Jeddah E-commerce Brand",
-      location: "Jeddah CBD",
-      challenge: "D2C lifestyle brand struggling with high customer acquisition costs and low ROAS in Saudi market",
-      solution: "Complete Saudi digital marketing overhaul with SEO, social media, content marketing, and conversion optimization",
-      results: [
-        "350% increase in organic traffic from Saudi searches",
-        "50% reduction in customer acquisition cost",
-        "280% improvement in customer lifetime value for Saudi clients",
-        "5.2x return on ad spend on Saudi market"
-      ]
-    },
-    {
-      industry: "Dammam Energy Company",
-      location: "Dammam CBD",
-      challenge: "B2B energy company needed qualified leads in Saudi Arabia's competitive energy market",
-      solution: "Comprehensive B2B Saudi digital marketing strategy with LinkedIn, Google Ads, content marketing, and SEO",
-      results: [
-        "420% increase in qualified B2B leads from Saudi market",
-        "45% reduction in sales cycle duration",
-        "SAR 3.2M in new business revenue in 8 months",
-        "80% improvement in inquiry-to-client conversion rate"
-      ]
-    }
-  ]
-
-  const industriesWeServe = [
-    {
-      icon: Building2,
-      title: "Technology & SaaS Companies in Saudi Arabia",
-      description: "Transform your Saudi tech presence with comprehensive digital marketing strategies designed for Saudi Arabia's thriving innovation ecosystem and Vision 2030 transformation.",
-      services: [
-        "B2B lead generation and enterprise sales enablement for Saudi market",
-        "Free trial conversions and freemium model optimization for Saudi users",
-        "Product-led growth and user acquisition campaigns across Saudi cities",
-        "Competitive intelligence and market positioning in Saudi tech sector"
-      ],
-      results: "380% increase in qualified demo requests from Saudi market, 65% improvement in trial-to-paid conversion for Saudi users"
-    },
+  const ecommerceIndustriesWeServe = [
     {
       icon: ShoppingCart,
-      title: "E-commerce & D2C Brands in Saudi Arabia",
-      description: "Scale your online business with comprehensive digital marketing campaigns optimized for Saudi digital consumers and purchasing behaviors.",
+      title: "Fashion & Apparel",
+      description: "Comprehensive e-commerce marketing for fashion brands and apparel retailers that need to attract customers, build brand awareness, and compete in competitive fashion markets.",
       services: [
-        "Shopping ads optimization and dynamic product ads for Saudi market",
-        "Customer acquisition funnels and retention campaigns for Saudi buyers",
-        "Mobile commerce optimization and app install campaigns for Saudi users",
-        "Cross-border selling and international expansion from Saudi base"
+        "Fashion e-commerce marketing",
+        "Apparel brand promotion",
+        "Fashion social commerce",
+        "Fashion influencer marketing",
+        "Fashion brand reputation management"
       ],
-      results: "350% increase in online sales from Saudi market, 45% improvement in return on ad spend (ROAS) for Saudi campaigns"
-    },
-    {
-      icon: Building2,
-      title: "Energy & Petrochemical Companies",
-      description: "Generate qualified leads for Saudi energy and petrochemical companies through targeted digital marketing campaigns focused on Saudi Arabia's industrial sector.",
-      services: [
-        "B2B lead generation and sales enablement for Saudi energy sector",
-        "LinkedIn marketing and professional networking for Saudi B2B",
-        "Digital marketing for trade shows and industrial events of Saudi companies",
-        "Account-based marketing (ABM) for Saudi enterprise clients"
-      ],
-      results: "420% increase in qualified B2B leads from Saudi market, 40% reduction in cost-per-lead for Saudi B2B campaigns"
+      results: "350% increase in online sales, 280% improvement in brand visibility"
     },
     {
       icon: Heart,
-      title: "Healthcare & Medical Practices in Saudi Arabia",
-      description: "Drive patient acquisition for Saudi healthcare providers through compliant, results-driven digital marketing across Saudi Arabia.",
+      title: "Beauty & Personal Care",
+      description: "Specialized e-commerce marketing for beauty brands and personal care companies that need to attract customers and build strong brand relationships.",
       services: [
-        "Patient acquisition campaigns and appointment booking optimization for Saudi healthcare",
-        "Telemedicine promotion and health app marketing for Saudi patients",
-        "Hospital marketing campaigns and clinic promotion across Saudi cities",
-        "Digital transformation of wellness and fitness industry for Saudi market"
+        "Beauty brand marketing",
+        "Personal care promotion",
+        "Beauty influencer marketing",
+        "Beauty social commerce",
+        "Beauty brand SEO"
       ],
-      results: "250% increase in appointment bookings from Saudi patients, 50% improvement in patient acquisition cost for Saudi healthcare providers"
+      results: "320% increase in online sales, 240% growth in brand engagement"
     },
     {
-      icon: GraduationCap,
-      title: "Financial Services & Fintech in Saudi Arabia",
-      description: "Maximize customer acquisition for Saudi financial institutions and fintech companies with comprehensive digital marketing strategies.",
+      icon: Monitor,
+      title: "Electronics & Technology",
+      description: "Targeted e-commerce marketing for electronics and technology companies that need to attract customers for both consumer and B2B products.",
       services: [
-        "Customer acquisition campaigns and lead generation for Saudi financial services",
-        "Fintech marketing and digital banking promotion for Saudi clients",
-        "Investment digital marketing and wealth management for Saudi market",
-        "Insurance marketing and financial planning across Saudi cities"
+        "Electronics e-commerce marketing",
+        "Tech product promotion",
+        "Electronics SEO optimization",
+        "Tech influencer marketing",
+        "Electronics lead generation"
       ],
-      results: "320% increase in qualified leads from Saudi financial market, 55% improvement in conversion rates for Saudi financial services"
+      results: "380% increase in online sales, 260% improvement in product visibility"
+    },
+    {
+      icon: Home,
+      title: "Home & Garden",
+      description: "Innovative e-commerce marketing for home and garden retailers that need to reach homeowners and build brand trust.",
+      services: [
+        "Home goods e-commerce marketing",
+        "Garden product promotion",
+        "Home decor marketing",
+        "Home goods SEO optimization",
+        "Home brand marketing"
+      ],
+      results: "290% increase in online sales, 220% growth in customer engagement"
+    },
+    {
+      icon: Coffee,
+      title: "Food & Beverage",
+      description: "Expert e-commerce marketing for food and beverage companies who need to attract customers seeking quality products and unique flavors.",
+      services: [
+        "Food e-commerce marketing",
+        "Beverage brand promotion",
+        "Food product SEO",
+        "Customer acquisition campaigns",
+        "Food brand marketing"
+      ],
+      results: "260% increase in online sales, 190% improvement in customer retention"
+    },
+    {
+      icon: ShoppingBag,
+      title: "Health & Wellness",
+      description: "Specialized e-commerce marketing for health and wellness companies that need to reach health-conscious consumers and fitness enthusiasts.",
+      services: [
+        "Health product marketing",
+        "Wellness brand promotion",
+        "Health e-commerce SEO",
+        "Fitness product campaigns",
+        "Wellness brand marketing"
+      ],
+      results: "310% increase in online sales, 230% growth in customer engagement"
     }
   ]
 
-  const digitalMarketingFaqData = [
+  const ecommerceMarketingCaseStudies = [
     {
-      question: "What makes digital marketing in Saudi Arabia unique?",
-      answer: "Saudi Arabia presents unique opportunities with its Vision 2030 transformation, high mobile penetration (95%), diverse market across major cities, strong B2B ecosystem, and strategic position in the Middle East. Cultural considerations, Arabic language requirements, and regional expansion opportunities across Saudi cities require specialized expertise."
+      industry: "Fashion E-commerce Brand",
+      location: "California, United States",
+      challenge: "Mid-size fashion brand was struggling with declining online sales and increased competition from larger fashion retailers in the market",
+      solution: "Developed comprehensive e-commerce marketing strategy including complete website redesign, product SEO optimization, targeted PPC campaigns, and social commerce content marketing",
+      results: [
+        "350% increase in online sales",
+        "280% improvement in product page rankings",
+        "220% growth in website organic traffic",
+        "55% reduction in cost per customer acquisition"
+      ]
     },
     {
-      question: "How long does it take to see results from Saudi digital marketing?",
-      answer: "Saudi digital marketing results vary by channel. PPC campaigns show immediate results, SEO typically takes 3-6 months for significant improvements, while social media and content marketing show engagement within 2-4 weeks. We provide weekly performance updates to track progress across all channels with Saudi-specific metrics and Saudi market insights."
+      industry: "Electronics Online Store",
+      location: "Texas, United States",
+      challenge: "Electronics retailer needed to expand customer base while competing against established online electronics stores in a saturated market",
+      solution: "Implemented e-commerce SEO, product content marketing, conversion optimization, and customer review management to build trust and attract new customers",
+      results: [
+        "380% increase in online sales",
+        "320% improvement in search engine rankings",
+        "280% growth in organic website traffic",
+        "65% increase in conversion rates"
+      ]
     },
     {
-      question: "What's the typical budget for digital marketing in Saudi Arabia?",
-      answer: "Saudi digital marketing budgets vary based on your goals and market size. For comprehensive digital marketing including SEO, PPC, social media, and content, we recommend starting with SAR 7,500-SAR 15,000 monthly for small businesses and SAR 30,000+ for enterprise campaigns. Our management fees typically range from 15-20% of total marketing spend, with transparent Saudi pricing structures."
-    },
-    {
-      question: "Do you work with Saudi startups?",
-      answer: "Absolutely! The Saudi startup ecosystem is a central focus area, including Riyadh's fintech scene, Jeddah's creative industries, and NEOM's emerging tech hubs. We offer flexible engagement models for early-stage companies, including performance-based pricing and growth packages designed for Saudi startups, with knowledge of Saudi government grants and Vision 2030 funding cycles."
-    },
-    {
-      question: "What results can I expect from Saudi digital marketing?",
-      answer: "We track comprehensive metrics across all channels including organic traffic growth from Saudi searches, cost-per-acquisition (CPA) for Saudi customers, return on ad spend (ROAS) in Saudi market, conversion rates for Saudi users, customer lifetime value (CLV) for Saudi clients, and attribution across all touchpoints. Monthly reports include Saudi business impact analysis and optimization recommendations."
-    },
-    {
-      question: "Which digital marketing channels work best in Saudi Arabia?",
-      answer: "Our expertise covers comprehensive digital marketing including SEO Saudi Arabia, Google Ads (Search, Display, Shopping, YouTube), Instagram & Twitter marketing, LinkedIn for Saudi B2B, content marketing, web design & development, and emerging platforms like TikTok and Snapchat. Channel selection depends on your target audience behavior and business objectives in the Saudi market, with regional variations across different Saudi cities."
-    },
-    {
-      question: "Can you optimize existing digital marketing campaigns for the Saudi market?",
-      answer: "Yes, we offer comprehensive Saudi digital marketing audit and optimization services for existing campaigns. Our 30-day Saudi digital marketing audit identifies optimization opportunities across all channels specifically for the Saudi market and provides actionable recommendations for immediate campaign performance improvement with Saudi audiences."
-    },
-    {
-      question: "Do you offer digital marketing training for Saudi companies?",
-      answer: "We offer comprehensive digital marketing training programs for Saudi companies, including SEO Saudi Arabia, Google Ads certification guidance, Facebook Blueprint training, content marketing, and customized workshops for your marketing team. Training can be conducted at your Saudi office or virtually, with sessions adapted to Saudi market dynamics and business practices."
+      industry: "Multi-Platform Beauty Brand",
+      location: "New York, United States",
+      challenge: "Beauty brand wanted to standardize marketing across all e-commerce platforms while maintaining brand consistency and increasing product sales",
+      solution: "Created unified e-commerce marketing strategy, centralized content creation, platform-specific SEO optimization, and implemented customer acquisition campaigns across all channels",
+      results: [
+        "420% return on marketing investment",
+        "320% increase in online product sales",
+        "290% improvement in brand visibility",
+        "50% reduction in marketing costs per platform"
+      ]
     }
   ]
+
+  const ecommerceMarketingFaqData = [
+    {
+      question: "What makes e-commerce marketing different from other industries?",
+      answer: "E-commerce marketing requires understanding online shopping behavior, product search patterns, conversion optimization, and the unique customer journey from product discovery to purchase. We focus on building trust, optimizing for sales conversion, and ensuring all marketing activities drive qualified traffic and maximize ROI while building customer loyalty."
+    },
+    {
+      question: "How do you optimize for e-commerce conversion rates?",
+      answer: "All our e-commerce marketing services are designed with conversion optimization at the forefront. We use data-driven practices, implement advanced tracking and analytics that measure sales performance, create conversion-focused content that drives purchases, and provide regular optimization audits to ensure ongoing improvement in sales conversion rates."
+    },
+    {
+      question: "What's the typical timeline to see results for e-commerce marketing?",
+      answer: "Immediate (0-30 days): Website optimization and conversion improvements. Short-term (1-3 months): Paid advertising results and sales growth. Medium-term (3-6 months): SEO traffic growth and content marketing impact. Long-term (6+ months): Sustainable organic growth and brand recognition in your market."
+    },
+    {
+      question: "Do you work with small e-commerce businesses?",
+      answer: "Yes! We have specific packages designed for small e-commerce businesses, focusing on cost-effective marketing strategies that drive sales growth without breaking the budget. Our starter packages begin at $2,500/month and include essential e-commerce marketing services tailored for smaller online stores."
+    },
+    {
+      question: "How do you handle e-commerce platform integration?",
+      answer: "Our team includes e-commerce marketing specialists who understand various e-commerce platforms, including Shopify, WooCommerce, Magento, BigCommerce, Amazon, and others. We ensure all marketing strategies are optimized for your specific platform while effectively promoting your products and building customer trust."
+    },
+    {
+      question: "What's included in your e-commerce marketing services?",
+      answer: "Our comprehensive e-commerce marketing includes conversion-optimized SEO, e-commerce PPC management, product content marketing, online store design, customer review management, e-commerce analytics, and ongoing strategy optimization. We provide end-to-end marketing support tailored to your online store's specific needs and customer demographics."
+    },
+    {
+      question: "How do you approach content marketing for e-commerce businesses?",
+      answer: "We create conversion-focused content that educates customers about your products and services, develop product education resources, write e-commerce blog posts that establish your expertise, create product-specific landing pages, and develop customer success stories that build trust and drive sales."
+    },
+    {
+      question: "What types of e-commerce businesses do you serve?",
+      answer: "Our e-commerce marketing expertise covers fashion brands, beauty companies, electronics retailers, home goods stores, food and beverage companies, health and wellness brands, and multi-category online stores. We adapt our marketing approach to each industry's unique requirements and customer needs."
+    }
+  ]
+
+
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "name": "Frameleads Digital Marketing Agency Saudi Arabia",
-        "description": "Premier digital marketing agency in Saudi Arabia specializing in SEO, PPC, social media marketing, and web development for Saudi businesses. 300% ROI growth.",
-        "url": "https://frameleads.com/digital-marketing-in-saudi-arabia",
-        "telephone": "+966-11-XXX-XXXX",
-        "email": "saudi@frameleads.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "King Fahd Road",
-          "addressLocality": "Riyadh",
-          "addressRegion": "Riyadh Province",
-          "postalCode": "12345",
-          "addressCountry": "SA"
+        "name": "Frameleads E-commerce Marketing",
+        "description": "Specialized digital marketing agency for e-commerce businesses and online retailers. Drive sales growth with conversion-optimized SEO, PPC, and content marketing strategies.",
+        "url": "https://frameleads.com/ecommerce",
+        "provider": {
+          "@type": "Organization",
+          "name": "Frameleads",
+          "logo": "https://frameleads.com/logo.png",
+          "image": "https://frameleads.com/ecommerce-marketing-agency.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Innovation Drive",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94107",
+            "addressCountry": "US"
+          },
+          "telephone": "+1-800-FRAMELEADS",
+          "email": "ecommerce@frameleads.com",
+          "sameAs": [
+            "https://facebook.com/frameleads",
+            "https://linkedin.com/company/frameleads"
+          ]
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 24.7136,
-          "longitude": 46.6753
+        "serviceType": "Digital Marketing for E-commerce",
+        "areaServed": ["United States", "Global"],
+        "offers": {
+          "@type": "Offer",
+          "priceRange": "$2500-$20000",
+          "description": "Professional e-commerce marketing with conversion optimization and transparent pricing"
         },
-        "areaServed": ["Saudi Arabia", "Riyadh", "Jeddah", "Dammam", "Mecca", "Medina", "NEOM"],
-        "serviceType": "Digital Marketing",
-        "priceRange": "$$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "127"
-        },
-        "sameAs": [
-          "https://linkedin.com/company/frameleads-saudi",
-          "https://twitter.com/frameleads"
-        ]
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "E-commerce Marketing",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-commerce SEO Services",
+                "description": "Drive organic growth with conversion-optimized SEO for online stores"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-commerce PPC Management",
+                "description": "Accelerate sales growth with e-commerce advertising campaigns"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-commerce Content Marketing",
+                "description": "Build brand authority and drive sales with product content"
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "FAQPage",
-        "mainEntity": digitalMarketingFaqData.map(faq => ({
+        "mainEntity": ecommerceMarketingFaqData.map(faq => ({
           "@type": "Question",
           "name": faq.question,
           "acceptedAnswer": {
@@ -375,19 +444,19 @@ export default function DigitalMarketingInSaudiArabiaPage() {
   return (
     <>
     <Head>
-      <title>Digital Marketing Agency Saudi Arabia | Frameleads KSA</title>
-      <meta name="description" content="Leading digital marketing agency in Saudi Arabia. Expert SEO, PPC, social media services in Riyadh, Jeddah. Proven ROI for KSA businesses. Get free audit." />
-      <meta name="keywords" content="digital marketing Saudi Arabia, digital marketing agency Saudi Arabia, SEO Saudi Arabia, PPC Saudi Arabia, social media marketing Saudi Arabia, digital marketing Riyadh, digital marketing Jeddah, digital marketing Dammam, marketing agency KSA" />
+      <title>Digital Marketing for E-commerce & Retail | Drive Sales Growth with Expert E-commerce Marketing Services | Frameleads</title>
+      <meta name="description" content="Transform your online store with proven e-commerce marketing strategies. Our specialized team delivers conversion-optimized SEO, PPC, and content marketing that drives sales growth and builds customer trust. Get your free consultation today." />
+      <meta name="keywords" content="digital marketing for ecommerce, ecommerce digital marketing, ecommerce marketing services, retail digital marketing, online store marketing, ecommerce SEO services, digital marketing agency for ecommerce, ecommerce PPC management, retail marketing agency, ecommerce conversion optimization, shopify digital marketing services, amazon advertising management services, ecommerce email marketing automation, social commerce marketing strategy, retail media advertising services" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://frameleads.com/digital-marketing-in-saudi-arabia" />
-      <meta property="og:title" content="Digital Marketing Agency Saudi Arabia | Frameleads KSA" />
-      <meta property="og:description" content="Leading digital marketing agency in Saudi Arabia. Expert SEO, PPC, social media services in Riyadh, Jeddah. Proven ROI for KSA businesses. Get free audit." />
-      <meta property="og:url" content="https://frameleads.com/digital-marketing-in-saudi-arabia" />
+      <link rel="canonical" href="https://frameleads.com/ecommerce" />
+      <meta property="og:title" content="Digital Marketing for E-commerce & Retail | Drive Sales Growth with Expert E-commerce Marketing Services | Frameleads" />
+      <meta property="og:description" content="Transform your online store with proven e-commerce marketing strategies. Our specialized team delivers conversion-optimized SEO, PPC, and content marketing that drives sales growth and builds customer trust. Get your free consultation today." />
+      <meta property="og:url" content="https://frameleads.com/ecommerce" />
       <meta property="og:type" content="website" />
-      <meta property="og:locale" content="en_SA" />
+      <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Digital Marketing Agency Saudi Arabia | Frameleads KSA" />
-      <meta name="twitter:description" content="Leading digital marketing agency in Saudi Arabia. Expert SEO, PPC, social media services in Riyadh, Jeddah. Proven ROI for KSA businesses. Get free audit." />
+      <meta name="twitter:title" content="Digital Marketing for E-commerce & Retail | Drive Sales Growth with Expert E-commerce Marketing Services | Frameleads" />
+      <meta name="twitter:description" content="Transform your online store with proven e-commerce marketing strategies. Our specialized team delivers conversion-optimized SEO, PPC, and content marketing that drives sales growth and builds customer trust. Get your free consultation today." />
     </Head>
     <script
       type="application/ld+json"
@@ -473,31 +542,31 @@ export default function DigitalMarketingInSaudiArabiaPage() {
           >
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🏆 #1 Digital Marketing Agency in Saudi Arabia
+                🛒 Premier Digital Marketing for E-commerce & Retail - 320% Online Sales Increase
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Digital Marketing Agency Saudi Arabia - Premier ROI-Driven Solutions for{" "}
+              Digital Marketing for E-commerce & Retail |{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35] drop-shadow-[0_0_20px_rgba(255,107,53,0.3)]">
-                Saudi Businesses
+                Transform Your Online Store Into a Sales Magnet
               </span>{" "}
-              Delivering 300% ROI Growth
+              With Conversion-Optimized Strategies That Drive Sales Growth & Build Customer Trust
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Transform your Saudi business with data-driven digital marketing excellence. Our specialized agency combines international expertise with deep local Saudi market knowledge, delivering measurable results for startups, SMEs, and enterprises across Riyadh, Jeddah, Dammam, Mecca, and Medina.
+              The global e-commerce market is projected to reach $8.1 trillion by 2026, with 87% of consumers beginning their shopping journey with an online search. With 73% of consumers preferring to shop on mobile devices, you need a specialized digital marketing partner who understands conversion optimization and the unique challenges of e-commerce marketing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Your Free Saudi Market Audit
+                  Get Free E-commerce Marketing Consultation - Start Today
                 </Button>
               </Link>
-              <Link href="tel:+96611XXXXXXX" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <Link href="tel:+1-800-FRAMELEADS" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +966-11-XXX-XXXX
+                  <Phone className="h-5 w-5 mr-2" /> Call +1-800-FRAMELEADS
                 </Button>
               </Link>
             </div>
@@ -506,40 +575,40 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>300% Average ROI Increase</span>
+                <span>✓ Proven Results: 320% Online Sales Increase</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>500+ Saudi Businesses Served</span>
+                <span>✓ Expert Team: Specialized E-commerce Marketing Experts</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>95% Client Retention Rate</span>
+                <span>✓ Conversion Optimized: Starting $2,500</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>5+ Years Serving Saudi Businesses</span>
+                <span>✓ 200+ Successful E-commerce Marketing Campaigns</span>
               </div>
             </div>
 
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 max-w-4xl mx-auto border border-[#FF6B35]/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">🚀 Trusted by 500+ Saudi Businesses</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">🛒 Key Results We Deliver for E-commerce Businesses</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">800+</div>
-                  <div className="text-gray-600 text-sm">Successful Saudi Campaigns</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">320%</div>
+                  <div className="text-gray-600 text-sm">Increase in Online Sales</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">SAR 120M+</div>
-                  <div className="text-gray-600 text-sm">Advertising Budget Managed</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">55%</div>
+                  <div className="text-gray-600 text-sm">Reduction in Customer Acquisition Costs</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">90%</div>
-                  <div className="text-gray-600 text-sm">Average Conversion Rate Improvement</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">280%</div>
+                  <div className="text-gray-600 text-sm">Improvement in Product Page Rankings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">45%</div>
-                  <div className="text-gray-600 text-sm">Customer Acquisition Cost Reduction</div>
+                  <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">220%</div>
+                  <div className="text-gray-600 text-sm">Growth in Website Organic Traffic</div>
                 </div>
               </div>
             </div>
@@ -551,8 +620,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
       <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Results Across Saudi Arabia</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our data-driven approach delivers measurable growth for businesses across Saudi Arabia's dynamic digital landscape</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven E-commerce Marketing Results Across All Retail Industries</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our conversion-optimized e-commerce marketing approach delivers measurable growth for online stores through strategic content marketing, paid advertising, and comprehensive sales optimization</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -565,8 +634,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <TrendingUp className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">300%</div>
-                <div className="text-gray-600 text-sm">Average ROI Growth</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">320%</div>
+                <div className="text-gray-600 text-sm">Increase in Online Sales</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
@@ -587,8 +656,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">500+</div>
-                <div className="text-gray-600 text-sm">Saudi Clients Served</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">55%</div>
+                <div className="text-gray-600 text-sm">Reduction in Customer Acquisition Costs</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
@@ -609,8 +678,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">6+</div>
-                <div className="text-gray-600 text-sm">Saudi Cities Covered</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">280%</div>
+                <div className="text-gray-600 text-sm">Improvement in Product Page Rankings</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
@@ -631,8 +700,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             >
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Target className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">95%</div>
-                <div className="text-gray-600 text-sm">Client Retention</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">220%</div>
+                <div className="text-gray-600 text-sm">Growth in Website Organic Traffic</div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
                   <motion.div 
                     className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
@@ -653,52 +722,52 @@ export default function DigitalMarketingInSaudiArabiaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Why Choose Frameleads for Digital Marketing in Saudi Arabia?
+                Why Choose Frameleads for E-commerce Marketing?
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Frameleads positions itself as Saudi Arabia's premier international digital marketing agency, combining deep Saudi market knowledge with cutting-edge digital marketing expertise. Our comprehensive approach ensures that every riyal of your marketing budget delivers maximum return on investment across all digital channels in the Saudi market.
+                Frameleads positions itself as the premier digital marketing agency for e-commerce businesses, combining specialized e-commerce marketing expertise with deep understanding of conversion optimization and online retail challenges. Our comprehensive approach ensures that every aspect of your marketing delivers maximum impact while driving sales growth and customer acquisition.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Digital Marketing Expertise</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🛒 E-commerce Marketing Expertise</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Advanced Analytics & Attribution: Multi-touch attribution modeling</span>
+                    <span className="text-gray-600">Proven Results: 320% increase in online sales and 55% reduction in customer acquisition costs for our e-commerce clients</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">ROI-Focused Campaign Management: Measurable business results</span>
+                    <span className="text-gray-600">Expert Team: Specialized e-commerce marketing experts with deep online retail, marketplace, and digital commerce experience</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Cross-Platform Integration: Google Ads, Facebook, LinkedIn</span>
+                    <span className="text-gray-600">E-commerce Focus: All our marketing services are designed specifically for online stores and e-commerce businesses</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Conversion Rate Optimization: Systematic A/B testing</span>
+                    <span className="text-gray-600">Industry Expertise: Deep understanding across fashion, beauty, electronics, home goods, food, and multi-category online stores</span>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 Saudi Market Specialization</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">🏆 E-commerce Marketing Specialization</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Local Market Intelligence: 5+ years serving Saudi Arabia's diverse business landscape</span>
+                    <span className="text-gray-600">Comprehensive Solutions: Starting from $2,500 with transparent pricing and proven results across all e-commerce marketing stages</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Industry-Specific Expertise: Saudi SaaS, e-commerce, energy, healthcare, fintech</span>
+                    <span className="text-gray-600">Sales-Driven Strategy: We understand the unique challenges of marketing e-commerce businesses while maximizing conversion rates</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Vision 2030 Alignment: Deep understanding of Saudi transformation and NEOM projects</span>
+                    <span className="text-gray-600">Customer-Focused Strategy: Performance analytics, customer journey tracking, and conversion optimization for measurable sales growth</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Regional Targeting Excellence: Hyper-local targeting for major Saudi cities</span>
+                    <span className="text-gray-600">Platform Expertise: Experience with Shopify, WooCommerce, Magento, BigCommerce, Amazon, and other major e-commerce platforms</span>
                   </div>
                 </div>
               </div>
@@ -708,8 +777,8 @@ export default function DigitalMarketingInSaudiArabiaPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF8A50]/10 flex items-center justify-center z-10">
                 <div className="text-center">
                   <BarChart3 className="h-16 w-16 text-[#FF6B35] mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Performance Dashboard</h3>
-                  <p className="text-gray-600">Real-time marketing analytics and insights</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">E-commerce Marketing Dashboard</h3>
+                  <p className="text-gray-600">Real-time marketing analytics and performance insights for optimal sales growth</p>
                 </div>
               </div>
               <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#FF6B35]/30 group-hover:ring-[#FF8A50]/50 z-20"></div>
@@ -718,20 +787,21 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         </div>
       </section>
 
-      {/* Performance Marketing Services Section */}
+
+      {/* Technology Marketing Services Section */}
       <section className="relative py-20" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive Digital Marketing Services for Saudi Market Success
+              Specialized E-commerce Marketing for Maximum Sales Growth
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive digital marketing services are designed to deliver measurable ROI and drive business growth for Saudi companies across all industries throughout Saudi Arabia.
+              Our comprehensive e-commerce marketing services are designed to deliver sales success and drive business growth through conversion-optimized content marketing, paid advertising, and comprehensive optimization solutions.
             </p>
           </div>
 
           <div className="space-y-12">
-            {digitalMarketingServices.map((service, index) => {
+            {ecommerceMarketingServicesList.map((service, index) => {
               const IconComponent = service.icon
               return (
                 <motion.div
@@ -791,49 +861,49 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         </div>
       </section>
 
-      {/* Australian Digital Marketing Pricing */}
+      {/* Technology Marketing Pricing */}
       <section className="relative py-20" id="pricing">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Saudi Digital Marketing Pricing
+              Transparent E-commerce Marketing Pricing & Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transparent pricing packages designed for Saudi businesses of all sizes. All packages include 15% VAT and are priced in Saudi Riyals.
+              Professional e-commerce marketing packages designed for online stores and e-commerce businesses of all sizes. All packages include conversion-optimized content marketing, paid advertising, and comprehensive optimization with transparent pricing and proven results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Starter Package */}
+            {/* Starter Financial Package */}
             <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">SAR 7,500</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter E-commerce Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$2,500</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">Perfect for small Saudi businesses</p>
+                  <p className="text-sm text-gray-500 mt-2">Perfect for small e-commerce businesses and online stores</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Local SEO optimization</span>
+                    <span>E-commerce website optimization</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Google Ads management (SAR 5,000 ad spend included)</span>
+                    <span>E-commerce content marketing (4-6 articles/month)</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Social media management (2 platforms)</span>
+                    <span>E-commerce SEO optimization</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Monthly reporting and consultation</span>
+                    <span>Google Business Profile optimization</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Saudi business hours support</span>
+                    <span>Monthly performance reporting</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
@@ -842,37 +912,37 @@ export default function DigitalMarketingInSaudiArabiaPage() {
               </CardContent>
             </Card>
 
-            {/* Growth Package */}
+            {/* Professional Financial Package */}
             <Card className="group relative bg-white/90 backdrop-blur-xl border-[#FF6B35]/50 hover:border-[#FF6B35] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/30 ring-2 ring-[#FF6B35]/20">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-xl"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
                   <div className="inline-block bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">Most Popular</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Growth Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">SAR 15,000</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional E-commerce Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$5,500</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">Ideal for expanding Saudi companies</p>
+                  <p className="text-sm text-gray-500 mt-2">Ideal for growing e-commerce businesses and online retailers</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Comprehensive SEO strategy</span>
+                    <span>Everything in Starter package</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Multi-platform PPC management (SAR 10,000 ad spend included)</span>
+                    <span>Advanced e-commerce SEO and content marketing</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Full social media marketing</span>
+                    <span>Multi-channel e-commerce PPC management</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Content marketing and creation</span>
+                    <span>E-commerce reputation management</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Dedicated Saudi account manager</span>
+                    <span>Bi-weekly strategy calls and optimization</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
@@ -881,36 +951,36 @@ export default function DigitalMarketingInSaudiArabiaPage() {
               </CardContent>
             </Card>
 
-            {/* Enterprise Package */}
+            {/* Enterprise Financial Package */}
             <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Package</h3>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">SAR 30,000+</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise E-commerce Package</h3>
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">$10,500+</div>
                   <div className="text-gray-600">per month</div>
-                  <p className="text-sm text-gray-500 mt-2">For large Saudi organizations</p>
+                  <p className="text-sm text-gray-500 mt-2">For large e-commerce businesses, multi-platform retailers, and comprehensive e-commerce marketing solutions</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Custom digital marketing strategy</span>
+                    <span>Everything in Professional package</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Advanced analytics and attribution</span>
+                    <span>Full-funnel e-commerce marketing strategy</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Multi-location campaign management</span>
+                    <span>Multi-platform e-commerce marketing coordination</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Priority support and consultation</span>
+                    <span>Advanced e-commerce analytics and attribution</span>
                   </li>
                   <li className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span>Quarterly business reviews</span>
+                    <span>Dedicated e-commerce marketing team</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
@@ -921,26 +991,26 @@ export default function DigitalMarketingInSaudiArabiaPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">*All packages include 15% VAT and are priced in Saudi Riyals</p>
-            <p className="text-sm text-gray-500">Need a custom package? <Link href="/contact" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300">Contact us for a tailored solution</Link></p>
+            <p className="text-gray-600 mb-4">*All packages include free consultation, strategy development, and 30-day optimization period</p>
+            <p className="text-sm text-gray-500">Need a custom package? <Link href="/contact" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300">Contact us for a tailored e-commerce marketing solution</Link></p>
           </div>
         </div>
       </section>
 
-      {/* Performance Marketing Process Section */}
+      {/* Technology Marketing Process Section */}
       <section className="relative py-20" id="process">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Proven Saudi Digital Marketing Process
+              Our Proven E-commerce Marketing Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic digital marketing approach specifically designed for Saudi companies, combining strategic planning, execution excellence, and continuous optimization to deliver measurable results across Saudi Arabia.
+              We follow a systematic e-commerce marketing approach combining strategic planning, conversion-optimized execution, and comprehensive optimization to deliver measurable results through content marketing, paid advertising, and sales growth solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {digitalMarketingProcess.map((process, index) => (
+            {ecommerceMarketingProcess.map((process, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -988,14 +1058,14 @@ export default function DigitalMarketingInSaudiArabiaPage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industry Expertise Across Saudi Market Sectors</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Specialized E-commerce Marketing Expertise Across Key Retail Industries</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our specialized expertise extends across key industries in Saudi Arabia, with deep understanding of unique digital marketing needs and business objectives in each sector throughout the Saudi market.
+              Our specialized expertise extends across key retail sectors, with deep understanding of unique marketing needs and industry-specific requirements for each e-commerce vertical.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industriesWeServe.map((industry, index) => {
+            {ecommerceIndustriesWeServe.map((industry, index) => {
               const IconComponent = industry.icon
               return (
                 <motion.div
@@ -1038,18 +1108,18 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         </div>
       </section>
 
-      {/* Performance Marketing Case Studies */}
+      {/* Technology Marketing Case Studies */}
       <section id="case-studies" className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Saudi Client Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">E-commerce Marketing Success Stories: Real Results from Real Online Stores</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how we've helped Saudi companies achieve remarkable growth through strategic digital marketing campaigns across Saudi Arabia.
+              Discover how we've helped e-commerce businesses achieve remarkable growth through strategic marketing, conversion-optimized strategies, and comprehensive sales growth solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {digitalMarketingCaseStudies.map((study, index) => (
+            {ecommerceMarketingCaseStudies.map((study, index) => (
               <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
@@ -1086,18 +1156,18 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         </div>
       </section>
 
-      {/* Business Districts */}
+      {/* Technology Marketing Services Areas */}
       <section className="relative py-20" id="areas">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Saudi Cities We Serve</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">E-commerce Marketing Services We Offer</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive digital marketing services across all major Saudi cities, helping companies in each region maximize their digital presence and ROI.
+              We provide comprehensive e-commerce marketing across content marketing, paid advertising, reputation management, and sales optimization, helping online stores create high-performing marketing strategies that drive growth and customer acquisition.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {saudiBusinessMarkets.map((district, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ecommerceMarketingServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -1116,10 +1186,10 @@ export default function DigitalMarketingInSaudiArabiaPage() {
                     >
                       <MapPin className="h-6 w-6 text-[#FF6B35] group-hover:text-[#FF8A50] transition-colors duration-300" />
                     </motion.div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{district.category}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{district.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{service.category}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{service.description}</p>
                   <div className="space-y-2">
-                    {district.areas.map((area, idx) => (
+                    {service.areas.map((area, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-[#FF6B35]" />
                         <span className="text-gray-600 text-sm">{area}</span>
@@ -1139,15 +1209,15 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions - Digital Marketing in Saudi Arabia
+              Frequently Asked Questions About E-commerce Marketing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about digital marketing services in Saudi Arabia and how Frameleads can help your business achieve measurable results across Saudi Arabia.
+              Get answers to common questions about professional e-commerce marketing and how Frameleads can help your online store achieve measurable results through strategic marketing, conversion-optimized strategies, and comprehensive sales growth solutions.
             </p>
           </div>
 
           <div className="space-y-6">
-            {digitalMarketingFaqData.map((faq, index) => (
+            {ecommerceMarketingFaqData.map((faq, index) => (
               <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="p-6 relative z-10">
@@ -1165,207 +1235,207 @@ export default function DigitalMarketingInSaudiArabiaPage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Transform Your Digital Presence in Saudi Arabia?"
-        description="Partner with Frameleads, Saudi Arabia's most trusted international digital marketing agency. Get your free audit and discover how we can help you achieve measurable ROI and business growth in Saudi Arabia's competitive market."
-        primaryButtonText="Get Your Free Saudi Market Audit"
-        secondaryButtonText="Schedule Your Strategic Saudi Call"
+        title="Ready to Transform Your Online Store with Expert E-commerce Marketing Services?"
+        description="Partner with Frameleads, the most trusted e-commerce marketing agency. Get your free e-commerce marketing consultation and discover how we can help you achieve measurable growth and sales success through strategic content marketing, paid advertising, and comprehensive optimization."
+        primaryButtonText="Start Your E-commerce Marketing Transformation Today - Free Consultation"
+        secondaryButtonText="Get Your Free E-commerce Marketing Strategy Session"
       />
 
-      {/* Comprehensive Digital Marketing Services in Singapore */}
+      {/* Comprehensive Technology Marketing Services */}
       <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete Saudi Digital Marketing Ecosystem</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Complete E-commerce Marketing Ecosystem</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              As Saudi Arabia's premier international digital marketing agency, we offer comprehensive services across all digital channels. 
-              Explore our specialized services designed specifically for Saudi Arabia's diverse business landscape.
+              As the premier <strong>e-commerce marketing agency</strong>, we offer comprehensive services across <strong>Content Marketing</strong>, <strong>Paid Advertising</strong>, <strong>Reputation Management</strong>, and <strong>Sales Optimization</strong>. 
+              Explore our specialized services designed specifically for online stores and e-commerce businesses for sales growth and customer acquisition success.
             </p>
           </div>
           
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* SEO Services in Saudi Arabia */}
+            {/* Content Marketing & SEO */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <FileText className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Content Marketing & SEO</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Drive organic growth with conversion-optimized content that educates customers and converts prospects into sales through strategic e-commerce content marketing.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Product-focused content creation</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce SEO optimization</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Product education resources</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore E-commerce Content Marketing
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Paid Advertising & PPC */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Target className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce PPC & Paid Advertising</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Accelerate sales growth with conversion-optimized advertising campaigns that maximize return on ad spend while minimizing customer acquisition costs.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Google Ads for E-commerce</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce social media advertising</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce lead generation</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore E-commerce PPC
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Marketing Automation & Lead Nurturing */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Zap className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Reputation Management</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Protect and enhance your online store's reputation with professional reputation management services that build customer trust and drive sales.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Customer review management</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Online reputation monitoring</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce crisis communication</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore Reputation Management
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Analytics & Performance Optimization */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <BarChart3 className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Analytics & Performance Optimization</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Track and optimize e-commerce-critical metrics including customer acquisition cost, sales conversion rates, and customer lifetime value with advanced analytics.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Customer acquisition tracking</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce ROI analysis</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Sales performance reporting</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore E-commerce Analytics
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Brand Positioning & Thought Leadership */}
+            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardContent className="p-8 relative z-10">
+                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Crown className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">E-commerce Website Design & Development</h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  Create a professional, high-converting online store that builds customer trust and drives sales with conversion-optimized e-commerce website design.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Conversion-optimized web design</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">E-commerce platform integration</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
+                    <span className="text-sm">Mobile commerce optimization</span>
+                  </div>
+                </div>
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore E-commerce Web Design
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Growth Marketing & Conversion Optimization */}
             <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-8 relative z-10">
                 <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">SEO Services Saudi Arabia</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Customer Acquisition & Conversion Optimization</h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Dominate search results with our comprehensive SEO strategies adapted for Saudi businesses.
+                  Transform website visitors into customers with data-driven optimization of every touchpoint in your customer journey from awareness to purchase.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Local SEO optimization for Saudi cities</span>
+                    <span className="text-sm">E-commerce landing page optimization</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Arabic SEO & technical optimization</span>
+                    <span className="text-sm">A/B testing for checkout optimization</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Content optimization & link building</span>
+                    <span className="text-sm">Customer conversion optimization</span>
                   </div>
                 </div>
-                <Link href="/seo-services" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore SEO Services
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Creative Advertising in Saudi Arabia */}
-            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Palette className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Creative Advertising Saudi Arabia</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Captivate your Saudi audience with innovative creative campaigns that drive engagement and conversions.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Brand identity & visual design</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Video production & animation</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Social media creative campaigns</span>
-                  </div>
-                </div>
-                <Link href="/creative-advertising-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Creative Services
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* B2B Marketing in Saudi Arabia */}
-            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Building2 className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">B2B Marketing Saudi Arabia</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Accelerate enterprise sales with targeted B2B marketing strategies for Saudi Arabia's corporate ecosystem.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">LinkedIn marketing & lead generation</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Account-based marketing (ABM)</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Sales enablement & CRM integration</span>
-                  </div>
-                </div>
-                <Link href="/b2b-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore B2B Services
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Real Estate Marketing in Saudi Arabia */}
-            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Building2 className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Real Estate Marketing Saudi Arabia</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Connect with property buyers through targeted digital marketing campaigns for Saudi Arabia's real estate market.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Property listing optimization</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Virtual tour integration</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Lead nurturing automation</span>
-                  </div>
-                </div>
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Real Estate Services
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Core Digital Marketing Services */}
-            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Settings className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Core Digital Marketing</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Comprehensive digital marketing services covering all channels for maximum ROI and business growth.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">SEO & Content Marketing</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">PPC & Social Media Ads</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Web Design & Development</span>
-                  </div>
-                </div>
-                <Link href="/digital-marketing-services" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore All Services
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* International Services */}
-            <Card className="group relative bg-white/90 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF6B35]/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Globe className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">International Marketing</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Expand your business globally with our international digital marketing expertise and local market knowledge.
-                </p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Digital Marketing in Dubai</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Multi-market campaigns</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <CheckCircle className="h-4 w-4 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-sm">Cultural adaptation strategies</span>
-                  </div>
-                </div>
-                <Link href="/digital-marketing-in-dubai" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
-                  Explore Global Services
+                <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white px-6 py-3 rounded-xl font-semibold hover:from-[#FF8A50] hover:to-[#FF6B35] transition-all duration-300 transform hover:scale-105">
+                  Explore Customer Acquisition
                 </Link>
               </CardContent>
             </Card>
@@ -1377,26 +1447,26 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
                 <Link href="/contact" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free Saudi Market Audit</div>
-                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance in the Saudi market</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free E-commerce Marketing Audit</div>
+                  <p className="text-sm text-gray-600">Get a comprehensive analysis of your current e-commerce marketing performance and sales growth opportunities</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/tools/roi-calculator" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">ROI Calculator</div>
-                  <p className="text-sm text-gray-600">Calculate your digital marketing ROI and optimize your budget allocation for Saudi campaigns</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">E-commerce ROI Calculator</div>
+                  <p className="text-sm text-gray-600">Calculate your e-commerce marketing ROI and optimize your investment for maximum sales growth</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/resources/digital-marketing-guide" className="block">
-                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Digital Marketing Guide</div>
-                  <p className="text-sm text-gray-600">Complete guide to digital marketing strategies and best practices for Saudi businesses</p>
+                  <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">E-commerce Marketing Guide</div>
+                  <p className="text-sm text-gray-600">Complete guide to e-commerce marketing strategies and conversion-optimized best practices for online stores</p>
                 </Link>
               </div>
               <div className="text-center group">
                 <Link href="/academy" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">FrameLeads Academy</div>
-                  <p className="text-sm text-gray-600">Learn digital marketing with our expert-led courses and training programs for the Saudi market</p>
+                  <p className="text-sm text-gray-600">Learn e-commerce marketing with our expert-led courses and training programs for online store growth</p>
                 </Link>
               </div>
             </div>
@@ -1418,7 +1488,7 @@ export default function DigitalMarketingInSaudiArabiaPage() {
         >
           <Link href="/contact">
             <Button className="w-14 h-14 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-[#FF6B35]/50 transition-all duration-300">
-              <Phone className="h-6 w-6" />
+              <Rocket className="h-6 w-6" />
             </Button>
           </Link>
           <motion.div
@@ -1426,7 +1496,7 @@ export default function DigitalMarketingInSaudiArabiaPage() {
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            !
+            💰
           </motion.div>
         </motion.div>
       </motion.div>

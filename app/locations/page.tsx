@@ -147,7 +147,7 @@ export default function LocationsPage() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="/free-marketing-audit">
+            <Link href="/contact">
               <Button variant="outline" className="border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300">
                 Get Free Audit
               </Button>

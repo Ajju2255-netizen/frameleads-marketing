@@ -1512,7 +1512,7 @@ export default function TaboolaAdsPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Resources & Tools</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
-                <Link href="/free-marketing-audit" className="block">
+                <Link href="/contact" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Free Taboola Ads Audit</div>
                   <p className="text-sm text-gray-600">Get a comprehensive analysis of your current Taboola advertising performance across Native Ads, Realize Platform, and Advanced Targeting</p>
                 </Link>

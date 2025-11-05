@@ -1218,7 +1218,7 @@ export default function DigitalMarketingInFrancePage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Ressources & Outils Supplémentaires</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center group">
-                <Link href="/free-marketing-audit" className="block">
+                <Link href="/contact" className="block">
                   <div className="text-[#FF6B35] font-medium mb-2 group-hover:text-[#FF8A50] transition-colors duration-300">Audit Marketing Français Gratuit</div>
                   <p className="text-sm text-gray-600">Obtenez une analyse complète de votre performance marketing digital actuelle sur le marché français</p>
                 </Link>

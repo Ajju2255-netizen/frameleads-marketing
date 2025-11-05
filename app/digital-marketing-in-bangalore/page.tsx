@@ -1046,7 +1046,7 @@ export default function DigitalMarketingInBangalorePage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Resources & Tools</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <Link href="/free-marketing-audit" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Free Marketing Audit</Link>
+                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium mb-2">Free Marketing Audit</Link>
                 <p className="text-sm text-gray-600">Get a comprehensive analysis of your current digital marketing performance</p>
               </div>
               <div className="text-center">

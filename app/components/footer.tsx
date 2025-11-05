@@ -56,13 +56,13 @@ export default function Footer() {
     { name: "Academy", href: "/academy" },
     { name: "Our Team", href: "/our-team" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/blog" },
+    { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },
   ]
 
   const resources = [
     { name: "Digital Marketing Guide", href: "/resources/digital-marketing-guide" },
-    { name: "Free Marketing Audit", href: "/free-marketing-audit" },
+    { name: "Free Marketing Audit", href: "/contact" },
     { name: "ROI Calculator", href: "/tools/roi-calculator" },
     { name: "Templates", href: "/templates" },
     { name: "FAQ", href: "/faq" },
@@ -97,7 +97,7 @@ export default function Footer() {
               <p className="text-[#5A5A5A] text-sm">Get a free marketing audit and consultation with our digital marketing experts</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/free-marketing-audit">
+              <Link href="/contact">
                 <Button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-bold px-8 py-3 rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
                   Get Free Audit →
                 </Button>
@@ -194,10 +194,6 @@ export default function Footer() {
               <li><Link href="/technology-and-saas" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Technology & SaaS</Link></li>
               <li><Link href="/healthcare-and-medical" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Healthcare & Medical</Link></li>
               <li><Link href="/financial-services" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Financial Services</Link></li>
-              <li><Link href="/b2b-marketing-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">B2B Marketing</Link></li>
-              <li><Link href="/real-estate-marketing-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Real Estate</Link></li>
-              <li><Link href="/seo-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">E-commerce</Link></li>
-              <li><Link href="/creative-advertising-company-in-bangalore" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Creative Agencies</Link></li>
               <li><Link href="/industries" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300 text-sm font-medium">More industries →</Link></li>
             </ul>
           </div>

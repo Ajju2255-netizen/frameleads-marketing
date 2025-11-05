@@ -325,7 +325,7 @@ export default function ROICalculatorPage() {
                   <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-blue-800">
                     <p className="font-semibold mb-1">Need help with your campaign data?</p>
-                    <p>Get a free <Link href="/free-marketing-audit" className="text-blue-600 hover:text-blue-800 font-medium">marketing audit</Link> to analyze your current performance and optimize your ROI.</p>
+                    <p>Get a free <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">marketing audit</Link> to analyze your current performance and optimize your ROI.</p>
                   </div>
                 </div>
               </div>
@@ -549,7 +549,7 @@ export default function ROICalculatorPage() {
             <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">comprehensive digital marketing services</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/free-marketing-audit" className="inline-block">
+            <Link href="/contact" className="inline-block">
               <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">
                 Get Free Audit
                 <ArrowRight className="h-5 w-5 ml-2" />

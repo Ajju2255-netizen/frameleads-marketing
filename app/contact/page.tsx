@@ -112,52 +112,26 @@ export default function ContactPage() {
             <Card className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
               <CardContent className="p-8 relative z-10">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                      <input id="firstName" name="firstName" required placeholder="John" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                      <input id="lastName" name="lastName" required placeholder="Doe" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
-                    </div>
+                <form action="https://formspree.io/f/xgvpgwyb" method="POST" className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                    <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input id="phone" name="phone" placeholder="+91 6362821368" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message:</label>
+                    <textarea id="message" name="message" rows={5} placeholder="Your Message" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent resize-none"></textarea>
                   </div>
 
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
-                    <input id="company" name="company" placeholder="Your Company" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
-                  </div>
+                  <input type="hidden" name="_subject" value="New Message from Frameleads Website" />
+                  <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
-                    <select id="service" name="service" className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent">
-                      <option value="">Select a service</option>
-                      <option value="seo">SEO Services</option>
-                      <option value="local-seo">Local SEO</option>
-                      <option value="technical-seo">Technical SEO</option>
-                      <option value="content-marketing">Content Marketing</option>
-                      <option value="google-ads">Google Ads</option>
-                      <option value="social-media">Social Media Marketing</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                    <textarea id="message" name="message" rows={5} required placeholder="Tell us about your project and goals..." className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent resize-none"></textarea>
-                  </div>
-
-                  <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] w-full text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105 py-4">
+                  <Button type="submit" className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] w-full text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105 py-4">
                     <Send className="h-5 w-5 mr-2 relative z-10" /> Send Message
                   </Button>
                 </form>
