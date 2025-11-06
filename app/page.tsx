@@ -218,13 +218,15 @@ export default function Home() {
                   <div key={src + idx} className="group relative rounded-2xl overflow-hidden border border-[#FF6B35]/10 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-lg transition-all duration-300">
                     {/* Creative gradient accent */}
                     <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-full blur-3xl" />
-                    <div className="relative w-full h-64 p-4 flex items-center justify-center">
+                    {/* 16:9 container to keep varied screenshots neatly scaled */}
+                    <div className="relative w-full">
+                      <div className="pt-[56.25%]" />
                       <Image
                         src={src}
                         alt={`Real-time result ${idx + 1}`}
-                        width={1000}
-                        height={700}
-                        className="max-h-full max-w-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="absolute inset-0 object-contain p-4 group-hover:scale-[1.02] transition-transform duration-300"
                         priority={idx === 0}
                       />
                     </div>
