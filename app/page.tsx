@@ -197,13 +197,19 @@ export default function Home() {
           </div>
 
           {(() => {
-            // Only use dedicated results images
+            // Use all 11 images from public/Results in the specified order
             const screenshots = [
-              "/google ss.svg",
-              "/orders 50 ss.svg",
-              "/sales ss.svg",
-              "/conversion loss ss.svg",
-              "/9cr academy ss.svg",
+              "/Results/updated 9cr.png",
+              "/Results/Screenshot_33.png",
+              "/Results/Screenshot_32.png",
+              "/Results/Screenshot_31.png",
+              "/Results/Screenshot_30.png",
+              "/Results/Screenshot_29.png",
+              "/Results/Screenshot 2025-11-04 at 2.41.17 PM.png",
+              "/Results/28 days seo results.png",
+              "/Results/24 hours seo result.png",
+              "/Results/7 days seo results.png",
+              "/Results/3 months seo results.png",
             ]
             return (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
