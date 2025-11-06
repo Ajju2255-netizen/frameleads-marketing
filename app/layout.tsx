@@ -8,9 +8,9 @@ import { GA_MEASUREMENT_ID } from "../lib/analytics"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Frameleads - Best SEO Company in Bangalore",
+  title: "Frameleads | Best Digital Marketing Agency with Shark Tank India Experience",
   description:
-    "Drive organic traffic and boost your search rankings with Bangalore's most trusted SEO experts. Get proven results with Frameleads.",
+    "Performance marketing agency trusted by brands on Shark Tank India. SEO, PPC, Social, and CRO that drive 300%+ ROI growth. Get your free marketing audit.",
   generator: 'frameleads',
   icons: {
     icon: '/favicon.png',
