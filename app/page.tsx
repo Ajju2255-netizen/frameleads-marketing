@@ -187,45 +187,38 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BrandLogos />
-      <FeatureCards />
-      <ServicesSteps />
-      <Testimonials />
-      <CardDecks />
-      
-      {/* Real-Time Results Screenshots */}
+
+      {/* Real-Time Results Screenshots (placed right after trusted brands) */}
       <section className="relative py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Real-Time Results</h2>
-            <p className="text-lg text-gray-600">A snapshot of live dashboards and recent wins</p>
+            <p className="text-lg text-gray-600">Live snapshots from campaigns and analytics</p>
           </div>
 
           {(() => {
+            // Only use dedicated results images
             const screenshots = [
-              "/story/story-2.png",
-              "/story/story-3.png",
-              "/story/story-4.png",
-              "/story/story-5.jpg",
               "/google ss.svg",
               "/orders 50 ss.svg",
               "/sales ss.svg",
               "/conversion loss ss.svg",
               "/9cr academy ss.svg",
-              "/feature-1.jpg",
-              "/feature-2.jpg",
             ]
             return (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {screenshots.slice(0, 11).map((src, idx) => (
-                  <div key={src + idx} className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/60 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-                    <div className="relative w-full h-56 sm:h-60">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {screenshots.map((src, idx) => (
+                  <div key={src + idx} className="group relative rounded-2xl overflow-hidden border border-[#FF6B35]/10 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-lg transition-all duration-300">
+                    {/* Creative gradient accent */}
+                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-full blur-3xl" />
+                    <div className="relative w-full h-64 p-4 flex items-center justify-center">
                       <Image
                         src={src}
-                        alt={`Real-time results screenshot ${idx + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                        priority={idx < 2}
+                        alt={`Real-time result ${idx + 1}`}
+                        width={1000}
+                        height={700}
+                        className="max-h-full max-w-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                        priority={idx === 0}
                       />
                     </div>
                   </div>
@@ -236,6 +229,11 @@ export default function Home() {
         </div>
       </section>
 
+      <FeatureCards />
+      <ServicesSteps />
+      <Testimonials />
+      <CardDecks />
+      
       {/* Internal Links Section */}
       <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
