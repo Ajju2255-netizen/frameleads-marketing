@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Image from "next/image"
 import Link from "next/link"
 import Navbar from "./components/navbar"
 import Hero from "./components/hero"
@@ -191,6 +192,50 @@ export default function Home() {
       <Testimonials />
       <CardDecks />
       
+      {/* Real-Time Results Screenshots */}
+      <section className="relative py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Real-Time Results</h2>
+            <p className="text-lg text-gray-600">A snapshot of live dashboards and recent wins</p>
+          </div>
+
+          {(() => {
+            const screenshots = [
+              "/story/story-2.png",
+              "/story/story-3.png",
+              "/story/story-4.png",
+              "/story/story-5.jpg",
+              "/google ss.svg",
+              "/orders 50 ss.svg",
+              "/sales ss.svg",
+              "/conversion loss ss.svg",
+              "/9cr academy ss.svg",
+              "/feature-1.jpg",
+              "/feature-2.jpg",
+            ]
+            return (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {screenshots.slice(0, 11).map((src, idx) => (
+                  <div key={src + idx} className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/60 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div className="relative w-full h-56 sm:h-60">
+                      <Image
+                        src={src}
+                        alt={`Real-time results screenshot ${idx + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                        priority={idx < 2}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
+        </div>
+      </section>
+
       {/* Internal Links Section */}
       <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
