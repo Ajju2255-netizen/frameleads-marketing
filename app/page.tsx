@@ -199,8 +199,9 @@ export default function Home() {
           {(() => {
             // Use all 11 images from public/Results in the specified order
             const screenshots = [
+              "/Results/1.png",
+              "/Results/2.png",
               "/Results/updated 9cr.png",
-              "/Results/Screenshot_33.png",
               "/Results/Screenshot_32.png",
               "/Results/Screenshot_31.png",
               "/Results/Screenshot_30.png",
