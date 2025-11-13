@@ -211,7 +211,6 @@ export default function Home() {
               "/Results/10.png",
               "/Results/11.png",
               "/Results/12.png",
-              "/Results/screenshot-2025-11-04-24117.png",
             ]
             return (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
