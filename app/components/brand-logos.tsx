@@ -2,33 +2,6 @@ import Image from "next/image"
 import { Star } from "lucide-react"
 
 export default function BrandLogos() {
-  const brands = [
-    {
-      name: "Brand 1",
-      logo: "/brand-logos/logo001.svg",
-    },
-    {
-      name: "Brand 2",
-      logo: "/brand-logos/logo002.svg",
-    },
-    {
-      name: "Brand 3",
-      logo: "/brand-logos/logo003.svg",
-    },
-    {
-      name: "Brand 4",
-      logo: "/brand-logos/logo004.svg",
-    },
-    {
-      name: "Brand 5",
-      logo: "/brand-logos/logo005.svg",
-    },
-    {
-      name: "Brand 6",
-      logo: "/brand-logos/logo006.svg",
-    },
-  ]
-
   return (
     <section className="relative py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -41,21 +14,19 @@ export default function BrandLogos() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {brands.map((brand, index) => (
-            <div key={brand.name} className="group relative">
-              <div className="relative h-16 md:h-20 flex items-center justify-center p-4">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                <Image
-                  src={brand.logo}
-                  alt={`${brand.name} logo`}
-                  width={80}
-                  height={80}
-                  className="h-12 md:h-16 w-auto object-contain opacity-60 group-hover:opacity-100 transition-all duration-300"
-                />
-              </div>
-            </div>
-          ))}
+        <div className="relative rounded-3xl border border-[#FF6B35]/10 bg-white/70 backdrop-blur-xl shadow-lg overflow-hidden">
+          <div className="absolute -top-32 -right-32 w-72 h-72 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF8A50]/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-72 h-72 bg-gradient-to-br from-[#FF6B35]/8 to-[#FF8A50]/8 rounded-full blur-3xl" />
+          <div className="relative">
+            <Image
+              src="/logos/logo-single-client.png"
+              alt="Client logos collage"
+              width={1600}
+              height={900}
+              className="w-full h-auto object-contain"
+              priority
+            />
+          </div>
         </div>
         
         <div className="text-center mt-12">
