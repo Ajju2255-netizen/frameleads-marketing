@@ -201,7 +201,7 @@ export default function Home() {
             const screenshots = [
               "/Results/1.png",
               "/Results/2.png",
-              "/Results/updated-9cr.png",
+              "/Results/3.png",
               "/Results/Screenshot_32.png",
               "/Results/Screenshot_31.png",
               "/Results/Screenshot_30.png",
