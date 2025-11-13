@@ -122,8 +122,8 @@ export default function Navbar() {
               </Link>
               <Link href="/contact" onClick={() => handleNavClick('cta')}>
                 <Button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Free Audit
-                </Button>
+                Get Free Audit
+              </Button>
               </Link>
             </div>
           </div>
