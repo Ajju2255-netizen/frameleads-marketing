@@ -58,7 +58,7 @@ export default function BlogsListingPage() {
               >
                 <Link href={`/blogs/${post.slug}`} className="relative aspect-video w-full overflow-hidden block">
                   <Image
-                    src={post.banner || "/blogs/banner.jpg"}
+                    src={post.banner || "/blogs/placeholder.png"}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
