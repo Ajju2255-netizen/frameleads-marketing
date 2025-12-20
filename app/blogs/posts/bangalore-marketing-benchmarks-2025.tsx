@@ -91,7 +91,7 @@ export const Content = () => (
             <div>
                 <h4 className="text-[#2D2D2D] font-bold mb-1">Founder&apos;s Insight</h4>
                 <p className="text-[#5A5A5A] text-sm italic">
-                    Why FrameLeads built this report: We audited 50+ Bangalore ad accounts in 2024 and found a consistent 30% waste in &quot;Auto-bidding&quot; settings. This data is the result of that real-world experience.
+                    Why FrameLeads built this report: We audited 50+ Bangalore ad accounts in 2025 and found a consistent 30% waste in &quot;Auto-bidding&quot; settings. This data is the result of that real-world experience.
                 </p>
             </div>
         </div>

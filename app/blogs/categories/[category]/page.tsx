@@ -79,14 +79,14 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
                   key={post.slug}
                   className="group border border-[#FFE4D6] rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#FF6B35]/10 transition-all bg-white"
                 >
-                  <div className="relative aspect-video w-full overflow-hidden">
+                  <Link href={`/blogs/${post.slug}`} className="relative aspect-video w-full overflow-hidden block">
                     <Image
                       src="/blogs/banner.jpg"
                       alt={post.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                  </div>
+                  </Link>
                   <div className="p-6">
                     <div className="flex items-center gap-2 text-xs text-[#5A5A5A]">
                       <span>{post.readTime}</span>
