@@ -37,7 +37,7 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
   // Filter posts by categorySlug
   const posts = (allPosts
     .map(p => p.post)
-    .filter((p) => p.categorySlug === category)) as Array<{
+    .filter((p) => p && p.categorySlug === category)) as Array<{
       slug: string;
       title: string;
       tag: string;

@@ -8,12 +8,14 @@ interface BlogPostPageProps {
 }
 
 export function generateStaticParams() {
-  return allPosts.map((p) => ({ slug: p.post.slug }))
+  return allPosts
+    .filter(p => p && p.post && p.post.slug)
+    .map((p) => ({ slug: p.post.slug.trim() }))
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const params = await props.params
-  const { slug } = params
+  const slug = params.slug
 
   const postData = getPostBySlug(slug)
 
