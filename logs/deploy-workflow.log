@@ -46,3 +46,15 @@
 {"timestamp":"2025-12-20T10:24:14.533Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
 {"timestamp":"2025-12-20T10:24:14.533Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
 {"timestamp":"2025-12-20T10:24:14.533Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-20T10:34:22.726Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-20T10:34:22.729Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-20T10:34:22.729Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-20T10:34:22.914Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (185ms)","data":null}
+{"timestamp":"2025-12-20T10:34:22.914Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-20T10:34:23.092Z","level":"success","message":"✅ Completed: Generate XML Sitemap (178ms)","data":null}
+{"timestamp":"2025-12-20T10:34:23.092Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-20T10:34:23.277Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-20T10:34:23.268Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-20T10:34:23.270Z] INFO: 🔑 Getting access token...\n[2025-12-20T10:34:23.271Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js\"\n"}}
+{"timestamp":"2025-12-20T10:34:23.277Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-20T10:34:23.278Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-20T10:34:23.278Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-20T10:34:23.278Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}

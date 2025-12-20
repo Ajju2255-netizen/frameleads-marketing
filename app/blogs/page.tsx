@@ -29,6 +29,8 @@ export default function BlogsListingPage() {
         return "paid-social"
       case "Real Estate Marketing":
         return "performance-marketing"
+      case "SaaS Marketing":
+        return "performance-marketing"
       default:
         return ""
     }
