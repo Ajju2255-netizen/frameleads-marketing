@@ -31,8 +31,12 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     )
   }
 
-  // @ts-ignore - jsonLd might not exist on all posts
-  const { post, Content, jsonLd } = postData
+  // @ts-ignore - banner might not exist on all posts
+  const { post, Content, jsonLd } = postData as {
+    post: { title: string; tag: string; readTime: string; summary: string; banner?: string };
+    Content: any;
+    jsonLd: any
+  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -54,15 +58,17 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           </h1>
           <p className="text-[#5A5A5A] mt-4 text-base max-w-3xl">{post.summary}</p>
 
-          <div className="mt-8 relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-[#FFE4D6]">
-            <Image
-              src="/blogs/banner.jpg"
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {post.banner && (
+            <div className="mt-8 relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-[#FFE4D6]">
+              <Image
+                src={post.banner}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 

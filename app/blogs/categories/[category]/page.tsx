@@ -35,9 +35,16 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
   const meta = categoryMeta[category]
 
   // Filter posts by categorySlug
-  const posts = allPosts
+  const posts = (allPosts
     .map(p => p.post)
-    .filter((p) => p.categorySlug === category)
+    .filter((p) => p.categorySlug === category)) as Array<{
+      slug: string;
+      title: string;
+      tag: string;
+      summary: string;
+      readTime: string;
+      banner?: string;
+    }>
 
   if (!meta) {
     return (
@@ -81,7 +88,7 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
                 >
                   <Link href={`/blogs/${post.slug}`} className="relative aspect-video w-full overflow-hidden block">
                     <Image
-                      src="/blogs/banner.jpg"
+                      src={post.banner || "/blogs/banner.jpg"}
                       alt={post.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"

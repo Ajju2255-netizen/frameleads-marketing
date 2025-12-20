@@ -7,6 +7,7 @@ export const post = {
     tag: "Paid Social",
     categorySlug: "paid-social",
     readTime: "5 min read",
+    banner: undefined,
 }
 
 export const Content = () => (

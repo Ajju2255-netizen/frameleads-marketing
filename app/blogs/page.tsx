@@ -9,7 +9,14 @@ export const metadata = {
 
 import { allPosts } from "./posts"
 
-const posts = allPosts.map((p) => p.post)
+const posts = allPosts.map((p) => p.post) as Array<{
+  slug: string;
+  title: string;
+  tag: string;
+  summary: string;
+  readTime: string;
+  banner?: string;
+}>
 
 export default function BlogsListingPage() {
   const getCategorySlug = (tag: string) => {
@@ -51,7 +58,7 @@ export default function BlogsListingPage() {
               >
                 <Link href={`/blogs/${post.slug}`} className="relative aspect-video w-full overflow-hidden block">
                   <Image
-                    src="/blogs/banner.jpg"
+                    src={post.banner || "/blogs/banner.jpg"}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
