@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
 import Image from "next/image"
@@ -174,7 +172,7 @@ export default function FreeMarketingAuditPage() {
         <div className="absolute bottom-60 right-1/3 w-14 h-14 bg-[#FF8A50]/10 rounded-full animate-pulse"></div>
       </div>
 
-      <Navbar />
+      
       <FloatingNotifications />
 
       {/* Hero Section */}
@@ -288,7 +286,7 @@ export default function FreeMarketingAuditPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

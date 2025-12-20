@@ -1,8 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Navbar from "../../components/navbar"
-import Footer from "../../components/footer"
 import FloatingNotifications from "../../components/floating-notifications"
 import Link from "next/link"
 import { 
@@ -172,7 +170,7 @@ export default function ROICalculatorPage() {
         <div className="absolute bottom-60 right-1/3 w-14 h-14 bg-[#FF8A50]/10 rounded-full animate-pulse"></div>
       </div>
 
-      <Navbar />
+      
       <FloatingNotifications />
 
       {/* Hero Section */}
@@ -565,7 +563,7 @@ export default function ROICalculatorPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

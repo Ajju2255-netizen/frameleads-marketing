@@ -1,8 +1,6 @@
 import Link from "next/link"
 import { MapPin, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
 
 export default function LocationsPage() {
   const locations = [
@@ -52,7 +50,7 @@ export default function LocationsPage() {
 
   return (
     <>
-      <Navbar />
+      
       <div className="min-h-screen bg-gradient-to-br from-[#FFE4D6]/20 to-white">
       {/* Hero Section */}
       <div className="relative pt-20 pb-16 bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10">
@@ -156,7 +154,7 @@ export default function LocationsPage() {
         </div>
       </div>
       </div>
-      <Footer />
+      
     </>
   )
 }

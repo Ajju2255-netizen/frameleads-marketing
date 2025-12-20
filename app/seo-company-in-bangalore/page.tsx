@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -273,7 +271,7 @@ export default function SEOCompanyBangalorePage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -593,7 +591,7 @@ export default function SEOCompanyBangalorePage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
     </>
   )

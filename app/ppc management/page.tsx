@@ -1,5 +1,3 @@
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -190,7 +188,7 @@ export default function ContentMarketingPage() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-red-400/5 to-red-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -456,7 +454,7 @@ export default function ContentMarketingPage() {
         secondaryButtonText="Schedule Content Strategy Consultation"
       />
 
-      <Footer />
+      
     </div>
     </>
   )

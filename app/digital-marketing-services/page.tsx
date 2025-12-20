@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, CheckCircle, Phone, TrendingUp, Users, Award, Target, Zap, BarChart3 } from "lucide-react"
@@ -344,7 +342,7 @@ export default function DigitalMarketingServicesPage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32" id="hero">
@@ -958,7 +956,7 @@ export default function DigitalMarketingServicesPage() {
         </motion.div>
       </motion.div>
 
-      <Footer />
+      
     </div>
     </>
   )

@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro } from "lucide-react"
@@ -438,7 +436,7 @@ export default function DigitalMarketingInFrancePage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -1273,7 +1271,7 @@ export default function DigitalMarketingInFrancePage() {
         </motion.div>
       </motion.div>
 
-      <Footer />
+      
     </div>
     </>
   )

@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Head from "next/head"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Video, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro, Smartphone as Mobile, MessageCircle, Search, ShoppingBag, Users as People, BarChart, ArrowRight, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, Zap as Lightning } from "lucide-react"
@@ -510,7 +508,7 @@ export default function SnapchatAdsPage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -1481,7 +1479,7 @@ export default function SnapchatAdsPage() {
         </motion.div>
       </motion.div>
 
-      <Footer />
+      
     </div>
     </>
   )

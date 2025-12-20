@@ -4,6 +4,8 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import GoogleAnalyticsComponent from "./components/google-analytics"
 import { GA_MEASUREMENT_ID } from "../lib/analytics"
+import Navbar from "./components/navbar"
+import Footer from "./components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
+        <Navbar />
         {children}
+        <Footer />
         <GoogleAnalyticsComponent GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
       </body>
     </html>

@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Head from "next/head"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Video, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro, Smartphone as Mobile, MessageCircle, Search, ShoppingBag, Users as People, BarChart, ArrowRight, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, Zap as Lightning, ExternalLink, Brain, Target as TargetIcon, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, PieChart as PieChartIcon, LineChart, DollarSign as DollarIcon, Percent, Calculator, BookOpen, FileText, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Award as AwardIcon, Trophy, Medal, Crown as CrownIcon, Star as StarIcon, ThumbsUp as ThumbsUpIcon, MessageSquare as MessageSquareIcon, Share2 as Share2Icon, Download as DownloadIcon, ExternalLink as ExternalLinkIcon, ArrowRight as ArrowRightIcon, Play as PlayIcon, Eye as EyeIcon, BarChart as BarChartIcon, Search as SearchIcon, ShoppingBag as ShoppingBagIcon, Users as UsersIcon, Building2 as Building2Icon, Briefcase as BriefcaseIcon, Shield as ShieldIcon, Globe as GlobeIcon, DollarSign as DollarSignIcon, PieChart as PieChartIcon, Settings as SettingsIcon, Monitor as MonitorIcon, Smartphone as SmartphoneIcon, ShoppingCart as ShoppingCartIcon, Heart as HeartIcon, GraduationCap as GraduationCapIcon, Palette as PaletteIcon, Crown as CrownIcon, Euro as EuroIcon, Mobile as MobileIcon, MessageCircle as MessageCircleIcon, Search as SearchIcon, ShoppingBag as ShoppingBagIcon, People as PeopleIcon, BarChart as BarChartIcon, ArrowRight as ArrowRightIcon, Play as PlayIcon, Eye as EyeIcon, ThumbsUp as ThumbsUpIcon, Share2 as Share2Icon, Download as DownloadIcon, PlayCircle as PlayCircleIcon, Sparkles as SparklesIcon, Megaphone as MegaphoneIcon, Camera as CameraIcon, Music as MusicIcon, Hash as HashIcon, Lightning as LightningIcon, Home, Coffee } from "lucide-react"
@@ -532,7 +530,7 @@ export default function ShopifyAdsPage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -1577,7 +1575,7 @@ export default function ShopifyAdsPage() {
         </motion.div>
       </motion.div>
 
-      <Footer />
+      
     </div>
     </>
   )

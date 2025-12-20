@@ -5,17 +5,36 @@ export const metadata = {
   description: "Browse blog posts by category such as Performance Marketing, SEO, and Paid Social.",
 }
 
-const categories = [
-  { slug: "performance-marketing", name: "Performance Marketing", description: "Acquisition frameworks, media buying, and measurement", count: 1 },
-  { slug: "seo", name: "SEO", description: "Technical SEO, content strategy, and entity optimization", count: 1 },
-  { slug: "paid-social", name: "Paid Social", description: "Creative strategy, hooks, and platform insights", count: 1 },
+import { allPosts } from "../posts"
+
+const categoryMeta = [
+  {
+    slug: "performance-marketing",
+    name: "Performance Marketing",
+    description: "Acquisition frameworks, media buying, and measurement",
+  },
+  {
+    slug: "seo",
+    name: "SEO",
+    description: "Technical SEO, content strategy, and entity optimization",
+  },
+  {
+    slug: "paid-social",
+    name: "Paid Social",
+    description: "Creative strategy, hooks, and platform insights",
+  },
 ]
+
+const categories = categoryMeta.map((c) => ({
+  ...c,
+  count: allPosts.filter((p) => p.post.categorySlug === c.slug).length,
+}))
 
 export default function BlogCategoriesPage() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-b from-[#FFF6F2] to-white border-b border-[#FFE4D6]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
           <h1 className="text-3xl md:text-5xl font-bold text-[#2D2D2D] leading-tight">Blog Categories</h1>
           <p className="text-[#5A5A5A] mt-4 text-base max-w-2xl">
             Explore topics by category and dive deeper into the areas that matter most to your growth.
@@ -37,6 +56,7 @@ export default function BlogCategoriesPage() {
           ))}
         </div>
       </section>
+
     </main>
   )
 }

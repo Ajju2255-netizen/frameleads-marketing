@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, CheckCircle, Phone, TrendingUp, Users, Award, Target, Zap, BarChart3, Search, Monitor, MousePointer, Clock, DollarSign, ArrowUpRight, Database, Brain, Settings, Shield } from "lucide-react"
@@ -360,7 +358,7 @@ export default function AnalyticsAndAutomationsPage() {
         />
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32" id="hero">
@@ -978,7 +976,7 @@ export default function AnalyticsAndAutomationsPage() {
         </motion.div>
       </motion.div>
 
-      <Footer />
+      
     </div>
     </>
   )
