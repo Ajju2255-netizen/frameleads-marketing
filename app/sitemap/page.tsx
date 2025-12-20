@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 import Link from "next/link"
 import { ArrowRight, ExternalLink, Search, MapPin, Building2, FileText, Users, Globe, Target, Zap, BarChart3, Mail, Phone, Calendar, Award, BookOpen, Calculator, Shield, Heart, GraduationCap, Palette, Crown, Euro, MessageCircle, ShoppingBag, BarChart, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, ExternalLink as ExternalLinkIcon, Brain, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, LineChart, Percent, Calculator as CalcIcon, BookOpen as BookIcon, FileText as FileIcon, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Trophy, Medal, Home, Coffee, Code, Database, Server, Wrench, Cpu, HardDrive, Network, Terminal, GitBranch, ShieldCheck, Zap as ZapIcon } from "lucide-react"
 
@@ -12,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2025-09-23T11:05:49.052Z
+  // Auto-generated page data - Updated: 2025-12-20T10:24:14.111Z
   const pageData = {
   "services": [
     {
@@ -303,8 +305,44 @@ export default function SitemapPage() {
       "description": "Digital marketing academy and training"
     }
   ],
-  "legal": [],
+  "legal": [
+    {
+      "path": "/cookies",
+      "name": "Cookies",
+      "description": "Cookie usage policy"
+    },
+    {
+      "path": "/privacy",
+      "name": "Privacy",
+      "description": "Privacy policy and data protection"
+    },
+    {
+      "path": "/terms",
+      "name": "Terms",
+      "description": "Terms and conditions"
+    }
+  ],
   "main": [
+    {
+      "path": "/blogs/[slug]",
+      "name": "Blogs - [slug]",
+      "description": "Blogs - [slug] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs/categories/[category]",
+      "name": "Blogs - Categories - [category]",
+      "description": "Blogs - Categories - [category] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs/categories",
+      "name": "Blogs - Categories",
+      "description": "Blogs - Categories - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs",
+      "name": "Blogs",
+      "description": "Blogs - Frameleads digital marketing services"
+    },
     {
       "path": "/contact",
       "name": "Contact",
@@ -362,7 +400,7 @@ export default function SitemapPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
-      
+      <Navbar />
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -383,7 +421,7 @@ export default function SitemapPage() {
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
             <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-              🔄 Auto-generated • Last updated: 9/23/2025
+              🔄 Auto-generated • Last updated: 12/20/2025
             </div>
           </motion.div>
         </div>
@@ -505,7 +543,7 @@ export default function SitemapPage() {
         </div>
       </section>
 
-      
+      <Footer />
     </div>
   )
 }

@@ -10,7 +10,7 @@ export const post = {
     tag: "Real Estate Marketing",
     categorySlug: "performance-marketing",
     readTime: "6 min read",
-    banner: "/blogs/banner.jpg",
+    banner: "/blogs/bangalore-real-estate-neighborhood-marketing.jpg",
 }
 
 export const jsonLd = {
@@ -196,7 +196,7 @@ export const Content = () => (
         </div>
 
         <section id="faqs" className="mt-16 pt-10 border-t border-[#FFE4D6]">
-            <h2 className="text-3xl font-bold text-[#2D2D2D] mb-8">Voice-Optimized &quot;Hyper-Local&quot; FAQs</h2>
+            <h2 className="text-3xl font-bold text-[#2D2D2D] mb-8">FAQs</h2>
 
             <div className="space-y-8">
                 <div>

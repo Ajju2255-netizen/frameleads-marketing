@@ -1,29 +1,29 @@
 {
-  "timestamp": "2025-09-07T09:51:46.024Z",
-  "totalDuration": 373,
+  "timestamp": "2025-12-20T10:24:13.926Z",
+  "totalDuration": 606,
   "status": "partial",
   "steps": [
     {
       "step": "Generate HTML Sitemap",
       "status": "success",
-      "duration": 123,
-      "output": "> my-v0-project@0.1.0 generate-sitemap\n> node scripts/generate-sitemap.js\n\n🚀 Starting automatic sitemap generation...\n📁 Scanning app directory for pages...\n✅ Found 61 pages\n📂 Categorizing pages...\n  services: 12 pages\n  advertisingPlatforms: 11 pages\n  locations: 14 pages\n  industries: 6 pages\n  company: 4 pages\n  resources: 3 pages\n  academy: 5 pages\n  legal: 0 pages\n  main: 6 pages\n📝 Generating sitemap content...\n✅ Sitemap generated successfully: ./app/sitemap/page.tsx\n\n📊 Summary:\n  Total pages: 61\n  Generated: 2025-09-07T09:51:46.146Z\n  Output: ./app/sitemap/page.tsx",
-      "timestamp": "2025-09-07T09:51:46.152Z"
+      "duration": 206,
+      "output": "> my-v0-project@0.1.0 generate-sitemap\n> node scripts/generate-sitemap.js\n\n🚀 Starting automatic sitemap generation...\n📁 Scanning app directory for pages...\n✅ Found 70 pages\n📂 Categorizing pages...\n  services: 12 pages\n  advertisingPlatforms: 11 pages\n  locations: 14 pages\n  industries: 6 pages\n  company: 4 pages\n  resources: 3 pages\n  academy: 5 pages\n  legal: 3 pages\n  main: 12 pages\n📝 Generating sitemap content...\n✅ Sitemap generated successfully: ./app/sitemap/page.tsx\n\n📊 Summary:\n  Total pages: 70\n  Generated: 2025-12-20T10:24:14.130Z\n  Output: ./app/sitemap/page.tsx",
+      "timestamp": "2025-12-20T10:24:14.137Z"
     },
     {
       "step": "Generate XML Sitemap",
       "status": "success",
-      "duration": 108,
-      "output": "> my-v0-project@0.1.0 generate-xml-sitemap\n> node scripts/generate-xml-sitemap.js\n\n🚀 Starting XML sitemap generation...\n📄 Getting all pages...\n✅ Found 62 pages\n📝 Generating XML sitemap content...\n✅ XML sitemap generated successfully: ./public/sitemap.xml\n\n📊 Summary:\n  Total pages: 62\n  Site URL: https://frameleads.com\n  Last modified: 2025-09-07\n  Output: ./public/sitemap.xml\n\n📋 Sample URLs:\n  1. / (Priority: 1, Change: weekly)\n  2. /Meta-ads (Priority: 0.8, Change: weekly)\n  3. /Social-media-marketing (Priority: 0.8, Change: weekly)\n  4. /about (Priority: 0.9, Change: monthly)\n  5. /academy (Priority: 0.8, Change: monthly)\n  6. /academy/about (Priority: 0.7, Change: monthly)\n  7. /academy/contact (Priority: 0.7, Change: monthly)\n  8. /academy/return-policy (Priority: 0.6, Change: yearly)\n  9. /academy/terms (Priority: 0.6, Change: yearly)\n  10. /academy/thank-you (Priority: 0.6, Change: yearly)\n  ... and 52 more pages",
-      "timestamp": "2025-09-07T09:51:46.260Z"
+      "duration": 189,
+      "output": "> my-v0-project@0.1.0 generate-xml-sitemap\n> node scripts/generate-xml-sitemap.js\n\n🚀 Starting XML sitemap generation...\n📄 Getting all pages...\n✅ Found 71 pages\n📝 Generating XML sitemap content...\n✅ XML sitemap generated successfully: ./public/sitemap.xml\n\n📊 Summary:\n  Total pages: 71\n  Site URL: https://frameleads.com\n  Last modified: 2025-12-20\n  Output: ./public/sitemap.xml\n\n📋 Sample URLs:\n  1. / (Priority: 1, Change: weekly)\n  2. /Meta-ads (Priority: 0.8, Change: weekly)\n  3. /Social-media-marketing (Priority: 0.8, Change: weekly)\n  4. /about (Priority: 0.9, Change: monthly)\n  5. /academy (Priority: 0.8, Change: monthly)\n  6. /academy/about (Priority: 0.7, Change: monthly)\n  7. /academy/contact (Priority: 0.7, Change: monthly)\n  8. /academy/return-policy (Priority: 0.6, Change: yearly)\n  9. /academy/terms (Priority: 0.6, Change: yearly)\n  10. /academy/thank-you (Priority: 0.6, Change: yearly)\n  ... and 61 more pages",
+      "timestamp": "2025-12-20T10:24:14.328Z"
     },
     {
       "step": "Submit to Google",
       "status": "error",
       "duration": 0,
       "error": "Command failed: npm run submit-to-google",
-      "output": "\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-09-07T09:51:46.386Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-09-07T09:51:46.389Z] INFO: 🔑 Getting access token...\n[2025-09-07T09:51:46.389Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/scripts/google-indexing.js\"\n",
-      "timestamp": "2025-09-07T09:51:46.396Z"
+      "output": "\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-20T10:24:14.518Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-20T10:24:14.521Z] INFO: 🔑 Getting access token...\n[2025-12-20T10:24:14.524Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js\"\n",
+      "timestamp": "2025-12-20T10:24:14.532Z"
     }
   ],
   "summary": {
