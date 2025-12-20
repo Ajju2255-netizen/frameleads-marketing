@@ -13,6 +13,17 @@ export function generateStaticParams() {
     .map((p) => ({ slug: p.post.slug.trim() }))
 }
 
+export async function generateMetadata(props: BlogPostPageProps) {
+  const params = await props.params
+  const postData = getPostBySlug(params.slug)
+  if (!postData) return { title: "Post Not Found" }
+
+  return {
+    title: `${postData.post.title} | FrameLeads`,
+    description: postData.post.summary,
+  }
+}
+
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const params = await props.params
   const slug = params.slug
