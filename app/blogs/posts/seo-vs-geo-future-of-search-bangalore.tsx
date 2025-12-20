@@ -55,7 +55,7 @@ export const Content = () => (
         </div>
 
         <p className="text-lg leading-relaxed text-[#5A5A5A]">
-            At FrameLeads, we specialize in Generative Engine Optimization (GEO)—the science of making your brand the primary source for AI-driven answers.
+            At FrameLeads, we specialize in Generative Engine Optimization (GEO) the science of making your brand the primary source for AI-driven answers.
         </p>
 
         {/* Founder's Insight Box */}
@@ -64,7 +64,7 @@ export const Content = () => (
                 💡
             </div>
             <div>
-                <h4 className="text-[#2D2D2D] font-bold mb-1">GEO Insight</h4>
+                <h4 className="text-[#2D2D2D] font-bold mb-1">Founders GEO Insight</h4>
                 <p className="text-[#5A5A5A] text-sm italic">
                     While SEO focuses on convincing an algorithm to rank a link, GEO focuses on convincing a Large Language Model (LLM) to cite your brand as an authority.
                 </p>
@@ -182,7 +182,7 @@ export const Content = () => (
         </ul>
 
         <h2 id="faq" className="text-2xl font-bold mt-16 mb-8 text-[#2D2D2D] scroll-mt-24 border-t pt-12">
-            4. Voice & AI-Optimized FAQ: Navigating the Future
+            4. FAQ: Navigating the Future
         </h2>
         <p className="mb-8 text-[#5A5A5A]">
             Phased for conversational AI models and voice search intent.
@@ -199,7 +199,7 @@ export const Content = () => (
             <div className="bg-[#FAFAFA] p-6 rounded-2xl border border-[#E5E5E5]">
                 <h3 className="text-xl font-bold text-[#2D2D2D] mb-4">Q: How do I make my Bangalore business show up in Google AI Overviews?</h3>
                 <p className="text-[#5A5A5A] leading-relaxed">
-                    A: To appear in Google AI Overviews, your content must provide &quot;Information Gain&quot;—original insights not found elsewhere. FrameLeads achieves this by structuring your site with high-authority data tables, expert author bios (E-E-A-T), and &quot;conversational&quot; FAQs that match how people talk to AI.
+                    A: To appear in Google AI Overviews, your content must provide &quot;Information Gain&quot; original insights not found elsewhere. FrameLeads achieves this by structuring your site with high-authority data tables, expert author bios (E-E-A-T), and &quot;conversational&quot; FAQs that match how people talk to AI.
                 </p>
             </div>
 
