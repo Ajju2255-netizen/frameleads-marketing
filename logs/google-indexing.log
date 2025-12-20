@@ -13,3 +13,6 @@
 {"timestamp":"2025-12-20T10:34:23.268Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
 {"timestamp":"2025-12-20T10:34:23.270Z","level":"info","message":"🔑 Getting access token...","data":null}
 {"timestamp":"2025-12-20T10:34:23.271Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js"}
+{"timestamp":"2025-12-20T10:39:56.479Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-20T10:39:56.481Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-20T10:39:56.482Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js"}

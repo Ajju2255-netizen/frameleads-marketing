@@ -10,7 +10,7 @@ export const post = {
     tag: "SaaS Marketing",
     categorySlug: "performance-marketing",
     readTime: "6 min read",
-    banner: "/blogs/saas-churn-reduction.png",
+    banner: "/blogs/saas-churn-reduction.jpg",
 }
 
 export const jsonLd = {
