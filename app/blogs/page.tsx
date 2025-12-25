@@ -31,6 +31,10 @@ export default function BlogsListingPage() {
         return "performance-marketing"
       case "SaaS Marketing":
         return "performance-marketing"
+      case "Data Privacy":
+        return "performance-marketing"
+      case "Meta Ads":
+        return "performance-marketing"
       default:
         return ""
     }

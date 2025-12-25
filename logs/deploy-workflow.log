@@ -70,3 +70,167 @@
 {"timestamp":"2025-12-20T10:39:56.489Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
 {"timestamp":"2025-12-20T10:39:56.489Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
 {"timestamp":"2025-12-20T10:39:56.489Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:09:40.265Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:09:40.267Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:09:40.267Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:09:40.441Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (173ms)","data":null}
+{"timestamp":"2025-12-25T05:09:40.442Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:09:40.575Z","level":"success","message":"✅ Completed: Generate XML Sitemap (133ms)","data":null}
+{"timestamp":"2025-12-25T05:09:40.576Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:09:40.788Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:09:40.778Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:09:40.780Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:09:40.781Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js\"\n"}}
+{"timestamp":"2025-12-25T05:09:40.789Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:09:40.790Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:09:40.790Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:09:40.790Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:19:15.375Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:19:15.377Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:19:15.377Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:19:15.546Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (169ms)","data":null}
+{"timestamp":"2025-12-25T05:19:15.547Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:19:15.698Z","level":"success","message":"✅ Completed: Generate XML Sitemap (151ms)","data":null}
+{"timestamp":"2025-12-25T05:19:15.699Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:19:15.856Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:19:15.848Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:19:15.850Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:19:15.851Z] ERROR: ❌ Error during Google indexing:\n\"Cannot find module 'jsonwebtoken'\\nRequire stack:\\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js\"\n"}}
+{"timestamp":"2025-12-25T05:19:15.856Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:19:15.857Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:19:15.857Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:19:15.857Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:32:43.926Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:32:43.928Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:32:43.928Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:32:44.105Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (176ms)","data":null}
+{"timestamp":"2025-12-25T05:32:44.105Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:32:44.254Z","level":"success","message":"✅ Completed: Generate XML Sitemap (148ms)","data":null}
+{"timestamp":"2025-12-25T05:32:44.256Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:32:44.455Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:32:44.419Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:32:44.421Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:32:44.450Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T05:32:44.456Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:32:44.456Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:32:44.456Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:32:44.457Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:33:29.444Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:33:29.446Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:33:29.446Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:33:29.610Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (163ms)","data":null}
+{"timestamp":"2025-12-25T05:33:29.611Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:33:29.760Z","level":"success","message":"✅ Completed: Generate XML Sitemap (149ms)","data":null}
+{"timestamp":"2025-12-25T05:33:29.761Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:33:29.936Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:33:29.899Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:33:29.902Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:33:29.929Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T05:33:29.937Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:33:29.937Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:33:29.937Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:33:29.937Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:37:44.255Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:37:44.257Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:37:44.257Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:37:44.420Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (163ms)","data":null}
+{"timestamp":"2025-12-25T05:37:44.420Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:37:44.592Z","level":"success","message":"✅ Completed: Generate XML Sitemap (172ms)","data":null}
+{"timestamp":"2025-12-25T05:37:44.592Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:37:44.773Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:37:44.729Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:37:44.731Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:37:44.765Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T05:37:44.773Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:37:44.774Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:37:44.774Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:37:44.775Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:38:37.680Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:38:37.681Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:38:37.682Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:38:37.854Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (172ms)","data":null}
+{"timestamp":"2025-12-25T05:38:37.855Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:38:38.010Z","level":"success","message":"✅ Completed: Generate XML Sitemap (155ms)","data":null}
+{"timestamp":"2025-12-25T05:38:38.010Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:38:38.215Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:38:38.166Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:38:38.170Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:38:38.207Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T05:38:38.216Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:38:38.217Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:38:38.217Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:38:38.217Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T05:40:02.769Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T05:40:02.771Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T05:40:02.771Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:40:02.962Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (190ms)","data":null}
+{"timestamp":"2025-12-25T05:40:02.963Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T05:40:03.141Z","level":"success","message":"✅ Completed: Generate XML Sitemap (178ms)","data":null}
+{"timestamp":"2025-12-25T05:40:03.142Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T05:40:03.356Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T05:40:03.313Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T05:40:03.316Z] INFO: 🔑 Getting access token...\n[2025-12-25T05:40:03.347Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T05:40:03.357Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T05:40:03.357Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T05:40:03.357Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T05:40:03.358Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T06:01:48.266Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T06:01:48.268Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T06:01:48.268Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T06:01:48.443Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (175ms)","data":null}
+{"timestamp":"2025-12-25T06:01:48.443Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T06:01:48.584Z","level":"success","message":"✅ Completed: Generate XML Sitemap (140ms)","data":null}
+{"timestamp":"2025-12-25T06:01:48.584Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T06:01:48.769Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T06:01:48.734Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T06:01:48.736Z] INFO: 🔑 Getting access token...\n[2025-12-25T06:01:48.764Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T06:01:48.770Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T06:01:48.770Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T06:01:48.770Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T06:01:48.770Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T07:12:32.161Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:12:32.164Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:12:32.164Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:12:32.376Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (212ms)","data":null}
+{"timestamp":"2025-12-25T07:12:32.377Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:12:32.551Z","level":"success","message":"✅ Completed: Generate XML Sitemap (174ms)","data":null}
+{"timestamp":"2025-12-25T07:12:32.552Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:12:32.845Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T07:12:32.775Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T07:12:32.778Z] INFO: 🔑 Getting access token...\n[2025-12-25T07:12:32.835Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T07:12:32.846Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T07:12:32.847Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T07:12:32.847Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:12:32.848Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T07:14:56.591Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:14:56.593Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:14:56.593Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:14:56.806Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (213ms)","data":null}
+{"timestamp":"2025-12-25T07:14:56.807Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:14:57.005Z","level":"success","message":"✅ Completed: Generate XML Sitemap (197ms)","data":null}
+{"timestamp":"2025-12-25T07:14:57.006Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:14:57.313Z","level":"error","message":"❌ Failed: Submit to Google","data":{"error":"Command failed: npm run submit-to-google","output":"\n> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2025-12-25T07:14:57.251Z] INFO: 🚀 Starting Google Search Console indexing...\n[2025-12-25T07:14:57.254Z] INFO: 🔑 Getting access token...\n[2025-12-25T07:14:57.303Z] ERROR: ❌ Error during Google indexing:\n\"secretOrPrivateKey must be an asymmetric key when using RS256\"\n"}}
+{"timestamp":"2025-12-25T07:14:57.314Z","level":"info","message":"⚠️  Non-critical step failed: Submit to Google, continuing...","data":null}
+{"timestamp":"2025-12-25T07:14:57.315Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":2,"failedSteps":1,"successRate":"66.67%"}}
+{"timestamp":"2025-12-25T07:14:57.315Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:14:57.315Z","level":"info","message":"⚠️  Deployment workflow completed with some non-critical failures","data":null}
+{"timestamp":"2025-12-25T07:19:34.150Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:19:34.154Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:19:34.154Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:19:34.386Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (231ms)","data":null}
+{"timestamp":"2025-12-25T07:19:34.386Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:19:34.552Z","level":"success","message":"✅ Completed: Generate XML Sitemap (166ms)","data":null}
+{"timestamp":"2025-12-25T07:19:34.553Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:19:34.725Z","level":"success","message":"✅ Completed: Submit to Google (172ms)","data":null}
+{"timestamp":"2025-12-25T07:19:34.725Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":3,"failedSteps":0,"successRate":"100.00%"}}
+{"timestamp":"2025-12-25T07:19:34.726Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:19:34.726Z","level":"success","message":"🎉 Deployment workflow completed successfully!","data":null}
+{"timestamp":"2025-12-25T07:25:59.213Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:25:59.216Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:25:59.216Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:25:59.400Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (184ms)","data":null}
+{"timestamp":"2025-12-25T07:25:59.400Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:25:59.563Z","level":"success","message":"✅ Completed: Generate XML Sitemap (163ms)","data":null}
+{"timestamp":"2025-12-25T07:25:59.564Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:25:59.758Z","level":"success","message":"✅ Completed: Submit to Google (194ms)","data":null}
+{"timestamp":"2025-12-25T07:25:59.759Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":3,"failedSteps":0,"successRate":"100.00%"}}
+{"timestamp":"2025-12-25T07:25:59.760Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:25:59.760Z","level":"success","message":"🎉 Deployment workflow completed successfully!","data":null}
+{"timestamp":"2025-12-25T07:29:20.876Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:29:20.878Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:29:20.878Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:29:21.054Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (176ms)","data":null}
+{"timestamp":"2025-12-25T07:29:21.054Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:29:21.212Z","level":"success","message":"✅ Completed: Generate XML Sitemap (157ms)","data":null}
+{"timestamp":"2025-12-25T07:29:21.214Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:29:21.391Z","level":"success","message":"✅ Completed: Submit to Google (177ms)","data":null}
+{"timestamp":"2025-12-25T07:29:21.392Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":3,"failedSteps":0,"successRate":"100.00%"}}
+{"timestamp":"2025-12-25T07:29:21.393Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:29:21.393Z","level":"success","message":"🎉 Deployment workflow completed successfully!","data":null}
+{"timestamp":"2025-12-25T07:37:52.048Z","level":"info","message":"🎯 Starting deployment workflow...","data":null}
+{"timestamp":"2025-12-25T07:37:52.050Z","level":"info","message":"📋 Running 3 steps","data":null}
+{"timestamp":"2025-12-25T07:37:52.051Z","level":"info","message":"🚀 Starting: Generate HTML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:37:52.250Z","level":"success","message":"✅ Completed: Generate HTML Sitemap (199ms)","data":null}
+{"timestamp":"2025-12-25T07:37:52.250Z","level":"info","message":"🚀 Starting: Generate XML Sitemap","data":null}
+{"timestamp":"2025-12-25T07:37:52.448Z","level":"success","message":"✅ Completed: Generate XML Sitemap (197ms)","data":null}
+{"timestamp":"2025-12-25T07:37:52.448Z","level":"info","message":"🚀 Starting: Submit to Google","data":null}
+{"timestamp":"2025-12-25T07:37:52.663Z","level":"success","message":"✅ Completed: Submit to Google (214ms)","data":null}
+{"timestamp":"2025-12-25T07:37:52.664Z","level":"info","message":"📊 Deployment Workflow Summary:","data":{"totalSteps":3,"successfulSteps":3,"failedSteps":0,"successRate":"100.00%"}}
+{"timestamp":"2025-12-25T07:37:52.664Z","level":"info","message":"📁 Report saved to: ./logs/deployment-report.json","data":null}
+{"timestamp":"2025-12-25T07:37:52.664Z","level":"success","message":"🎉 Deployment workflow completed successfully!","data":null}

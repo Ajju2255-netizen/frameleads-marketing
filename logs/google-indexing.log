@@ -16,3 +16,41 @@
 {"timestamp":"2025-12-20T10:39:56.479Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
 {"timestamp":"2025-12-20T10:39:56.481Z","level":"info","message":"🔑 Getting access token...","data":null}
 {"timestamp":"2025-12-20T10:39:56.482Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js"}
+{"timestamp":"2025-12-25T05:09:40.778Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:09:40.780Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:09:40.781Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js"}
+{"timestamp":"2025-12-25T05:19:15.848Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:19:15.850Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:19:15.851Z","level":"error","message":"❌ Error during Google indexing:","data":"Cannot find module 'jsonwebtoken'\nRequire stack:\n- /Users/ajju-mac/Documents/GitHub/frameleads-marketing/frameleads-marketing/scripts/google-indexing.js"}
+{"timestamp":"2025-12-25T05:32:44.419Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:32:44.421Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:32:44.450Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T05:33:29.899Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:33:29.902Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:33:29.929Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T05:37:44.729Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:37:44.731Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:37:44.765Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T05:38:38.166Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:38:38.170Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:38:38.207Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T05:40:03.313Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T05:40:03.316Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T05:40:03.347Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T06:01:48.734Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T06:01:48.736Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T06:01:48.764Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T07:12:32.775Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:12:32.778Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T07:12:32.835Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T07:14:57.251Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:14:57.254Z","level":"info","message":"🔑 Getting access token...","data":null}
+{"timestamp":"2025-12-25T07:14:57.303Z","level":"error","message":"❌ Error during Google indexing:","data":"secretOrPrivateKey must be an asymmetric key when using RS256"}
+{"timestamp":"2025-12-25T07:19:34.716Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:19:34.718Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
+{"timestamp":"2025-12-25T07:25:59.748Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:25:59.751Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
+{"timestamp":"2025-12-25T07:29:21.384Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:29:21.386Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
+{"timestamp":"2025-12-25T07:37:52.650Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2025-12-25T07:37:52.654Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
