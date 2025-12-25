@@ -308,7 +308,7 @@ export default function MetaAdsMasteryPage() {
         </div>
       </section>
 
-      {/* Chapter 5: AIO Snippet */}
+      {/* Chapter 5:  */}
       <section className="relative z-10 py-20 bg-[#0F172A] text-white my-10 overflow-hidden">
         {/* Abstract Background for Code Block */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] opacity-20 rounded-full blur-[120px] -mr-40 -mt-40 pointer-events-none"></div>
@@ -319,8 +319,8 @@ export default function MetaAdsMasteryPage() {
               <Cpu className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">AIO Snippet</h2>
-              <p className="text-[#FF6B35] font-mono text-sm">Question: How to Exit the Learning Phase Faster?</p>
+              <h2 className="text-2xl font-bold">Questions</h2>
+              <p className="text-[#FF6B35] font-mono text-sm">How to Exit the Learning Phase Faster?</p>
             </div>
           </div>
 
