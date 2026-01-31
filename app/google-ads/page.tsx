@@ -102,7 +102,7 @@ export default function GoogleAdsPage() {
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10 relative overflow-hidden mb-10">
           <div className="absolute top-0 left-0 w-2 h-full bg-red-500/80"></div>
           <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Without constant technical oversight, Google&apos;s &quot;Auto-Apply&quot; settings default to spending your budget on <strong>low-intent placements</strong>.
+            Without constant technical oversight, Google&apos;s &quot;Auto Apply&quot; settings default to spending your budget on <strong>low intent placements</strong>.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group bg-[#FDF8F5] p-6 rounded-2xl border border-gray-100 hover:border-red-400/30 hover:shadow-lg transition-all duration-300">
@@ -130,13 +130,13 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
-      {/* The Solution: Antigravity Framework */}
+      {/* The Solution: Frameleads Framework */}
       <section className="relative z-10 py-16 bg-white border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
               <Cpu className="w-8 h-8 text-[#FF6B35]" />
-              The Solution: Antigravity Framework
+              The Solution: Frameleads Framework
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
               Our 3-pillar system that transforms your Google Ads from a cost center into a revenue engine.
@@ -154,11 +154,11 @@ export default function GoogleAdsPage() {
               </div>
               <div className="md:w-3/4 border-l border-gray-200 md:pl-8">
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  We don't just bid on keywords; we bid on <strong className="text-gray-900">Customer Logic</strong>. Our systems map the semantic relationship between a user's problem and your solution, ensuring your ad appears exactly when the &quot;intent-to-buy&quot; peaks.
+                  We don't just bid on keywords; we bid on <strong className="text-gray-900">Customer Logic</strong>. Our systems map the semantic relationship between a user's problem and your solution, ensuring your ad appears exactly when the &quot;intent to buy&quot; peaks.
                 </p>
                 <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>AI-powered intent analysis</span>
+                  <span>AI powered intent analysis</span>
                 </div>
               </div>
             </div>
@@ -169,15 +169,15 @@ export default function GoogleAdsPage() {
                 <span className="inline-flex items-center justify-center px-4 py-1.5 bg-[#FF6B35]/10 text-[#FF6B35] rounded-full text-sm font-bold mb-3 w-fit border border-[#FF6B35]/20">
                   02
                 </span>
-                <h3 className="text-xl font-bold text-gray-900">Performance Max (PMax) Guardrails</h3>
+                <h3 className="text-xl font-bold text-gray-900">Performance Max Guardrails</h3>
               </div>
               <div className="md:w-3/4 border-l border-gray-200 md:pl-8">
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Google's PMax is a &quot;black box&quot;—unless you know how to steer it. We implement <strong className="text-gray-900">Asset Group Segmentation</strong> and <strong className="text-gray-900">Negative Geo-Fencing</strong> to force Google's AI to find high-value users, not just &quot;cheap&quot; volume.
+                  Google's PMax is a &quot;black box&quot; unless you know how to steer it. We implement <strong className="text-gray-900">Asset Group Segmentation</strong> and <strong className="text-gray-900">Negative Geo Fencing</strong> to force Google's AI to find high value users, not just &quot;cheap&quot; volume.
                 </p>
                 <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Full control over black-box automation</span>
+                  <span>Full control over black box automation</span>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function GoogleAdsPage() {
                 <span className="inline-flex items-center justify-center px-4 py-1.5 bg-[#FF6B35]/10 text-[#FF6B35] rounded-full text-sm font-bold mb-3 w-fit border border-[#FF6B35]/20">
                   03
                 </span>
-                <h3 className="text-xl font-bold text-gray-900">The Lead-to-Profit Bridge</h3>
+                <h3 className="text-xl font-bold text-gray-900">The Lead to Profit Bridge</h3>
               </div>
               <div className="md:w-3/4 border-l border-gray-200 md:pl-8">
                 <p className="text-gray-600 leading-relaxed mb-4">
@@ -196,7 +196,7 @@ export default function GoogleAdsPage() {
                 </p>
                 <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Revenue-optimized bidding</span>
+                  <span>Revenue optimized bidding</span>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function GoogleAdsPage() {
           Comparison: Static vs. Frameleads
         </h2>
         <p className="text-lg text-gray-600 mb-8">
-          See the difference between a typical agency approach and the Antigravity method.
+          See the difference between a typical agency approach and the Frameleads method.
         </p>
 
         <div className="overflow-hidden border border-gray-200 rounded-2xl shadow-sm bg-white">
@@ -221,19 +221,19 @@ export default function GoogleAdsPage() {
                 <tr className="bg-gray-50 border-b border-gray-100">
                   <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Metric</th>
                   <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Typical Agency (Static)</th>
-                  <th className="px-6 py-4 text-xs font-bold text-[#FF6B35] uppercase tracking-wider">Frameleads (Antigravity)</th>
+                  <th className="px-6 py-4 text-xs font-bold text-[#FF6B35] uppercase tracking-wider">Frameleads (Dynamic)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-5 text-sm font-bold text-gray-900">Optimization</td>
-                  <td className="px-6 py-5 text-sm text-gray-600">Bi-Weekly Manual Tweaks</td>
-                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">Real-time Agentic Logic</span></td>
+                  <td className="px-6 py-5 text-sm text-gray-600">Bi Weekly Manual Tweaks</td>
+                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">Real time Agentic Logic</span></td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-5 text-sm font-bold text-gray-900">Bidding</td>
                   <td className="px-6 py-5 text-sm text-gray-600">Maximize Clicks (Volume)</td>
-                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">Value-Based Bidding (Profit)</span></td>
+                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">Value Based Bidding (Profit)</span></td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-5 text-sm font-bold text-gray-900">Transparency</td>
@@ -243,7 +243,7 @@ export default function GoogleAdsPage() {
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-5 text-sm font-bold text-gray-900">Creative</td>
                   <td className="px-6 py-5 text-sm text-gray-600">Set and Forget</td>
-                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">High-Frequency Iteration</span></td>
+                  <td className="px-6 py-5"><span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#FF6B35]/10 text-[#FF6B35]">High Frequency Iteration</span></td>
                 </tr>
               </tbody>
             </table>
@@ -274,13 +274,13 @@ export default function GoogleAdsPage() {
               <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Search className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Search: High-Intent Capture</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Search: High Intent Capture</h3>
               <p className="text-gray-400 leading-relaxed mb-4">
                 Dominate the top of the SERP. We use <strong className="text-white">Alpha/Beta structures</strong> to isolate your most profitable search terms and aggressively scale their impression share.
               </p>
               <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                 <TrendingUp className="w-4 h-4" />
-                <span>Precision keyword targeting</span>
+                <span>Precision Keyword Targeting</span>
               </div>
             </div>
 
@@ -295,7 +295,7 @@ export default function GoogleAdsPage() {
               </p>
               <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                 <Activity className="w-4 h-4" />
-                <span>Engagement-driven funnels</span>
+                <span>Engagement Driven Funnels</span>
               </div>
             </div>
 
@@ -306,11 +306,11 @@ export default function GoogleAdsPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Shopping: ROAS Maximization</h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                For E-commerce, every cent counts. We optimize your <strong className="text-white">GMC (Google Merchant Center)</strong> feed at the granular level, ensuring your best-selling products get the most oxygen.
+                For E commerce, every cent counts. We optimize your <strong className="text-white">GMC (Google Merchant Center)</strong> feed at the granular level, ensuring your best selling products get the most oxygen.
               </p>
               <div className="flex items-center gap-2 text-[#FF6B35] font-medium text-sm">
                 <LineChart className="w-4 h-4" />
-                <span>Profit-first optimization</span>
+                <span>Profit First Optimization</span>
               </div>
             </div>
           </div>
@@ -339,10 +339,10 @@ export default function GoogleAdsPage() {
             <div className="absolute top-0 left-0 w-1 h-full bg-[#FF6B35]"></div>
             <h4 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-[#FF6B35] transition-colors flex items-center gap-2">
               <Clock className="w-5 h-5 text-[#FF6B35]" />
-              How long until we see the &quot;Antigravity Lift&quot;?
+              How long until we see the Performance Lift?
             </h4>
             <p className="text-gray-600 leading-relaxed">
-              Initial stabilization occurs in <strong className="text-gray-900">14 days</strong>. Full algorithmic &quot;learning&quot; and scaling typically peak at the <strong className="text-gray-900">45-60 day mark</strong>.
+              Initial stabilization occurs in <strong className="text-gray-900">14 days</strong>. Full algorithmic &quot;learning&quot; and scaling typically peak at the <strong className="text-gray-900">45 to 60 day mark</strong>.
             </p>
           </div>
         </div>
