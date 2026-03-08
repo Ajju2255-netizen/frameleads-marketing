@@ -34,7 +34,8 @@ import {
   Activity,
   Award,
   Lock,
-  Database
+  Database,
+  Pin
 } from 'lucide-react'
 
 // JSON-LD Structured Data for TikTok Ad Services
@@ -564,14 +565,14 @@ export default function TikTokAdsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
+                { label: 'Snapchat Ads', href: '/snapchat-ads', icon: Smartphone, desc: 'AR Commerce Engine.' },
                 { label: 'Meta Ads', href: '/Meta-ads', icon: Share2, desc: 'Creative-Led Growth.' },
                 { label: 'YouTube Ads', href: '/youtube-ads', icon: Video, desc: 'Visual Intent Engine.' },
                 { label: 'LinkedIn Ads', href: '/linkedin-ads', icon: Target, desc: 'B2B Precision Pipeline.' },
                 { label: 'Google Ads', href: '/google-ads', icon: Play, desc: 'Value-Based Bidding.' },
                 { label: 'Web Engineering', href: '/website-development', icon: Code, desc: 'Architecture of Authority.' },
-                { label: 'SEO Dominance', href: '/seo-services', icon: SearchIcon, desc: 'Search authority hub.' },
-                { label: 'Branding', href: '/branding', icon: Palette, desc: 'Market-Dominant Identity.' },
-                { label: 'Analytics', href: '/analytics-and-automations', icon: Cpu, desc: 'Unified Intelligence.' }
+                { label: 'Pinterest Ads', href: '/pinterest-ads', icon: Pin, desc: 'Predictive Commerce.' },
+                { label: 'SEO Dominance', href: '/seo-services', icon: SearchIcon, desc: 'Search authority hub.' }
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-transparent hover:border-[#FF6B35]/30 hover:bg-white hover:shadow-2xl transition-all duration-500">
                   <link.icon className={`w-12 h-12 text-[#FF6B35] mx-auto mb-6 transition-transform group-hover:scale-110`} />

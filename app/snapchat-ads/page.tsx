@@ -29,7 +29,8 @@ import {
   Linkedin,
   Users,
   ShoppingBag,
-  Share2
+  Share2,
+  Pin
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Snapchat Ad Services
@@ -523,7 +524,8 @@ export default function SnapchatAdsPage() {
                 { label: 'Google Ads', href: '/google-ads', icon: Zap, desc: 'Value-Based Bidding.' },
                 { label: 'Web Engineering', href: '/website-development', icon: Code, desc: 'Architecture of Authority.' },
                 { label: 'SEO Dominance', href: '/seo-services', icon: Search, desc: 'Search authority hub.' },
-                { label: 'Branding', href: '/branding', icon: Palette, desc: 'Market-Dominant Identity.' }
+                { label: 'Branding', href: '/branding', icon: Palette, desc: 'Market-Dominant Identity.' },
+                { label: 'Pinterest Ads', href: '/pinterest-ads', icon: Pin, desc: 'Predictive Commerce.' }
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-transparent hover:border-[#FF6B35]/30 hover:bg-white hover:shadow-2xl transition-all duration-500 text-left">
                   <link.icon className={`w-12 h-12 text-[#FF6B35] mx-auto mb-6 transition-transform group-hover:scale-110`} />

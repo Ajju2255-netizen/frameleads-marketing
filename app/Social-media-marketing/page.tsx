@@ -25,7 +25,8 @@ import {
   Mail,
   Palette,
   Linkedin,
-  Music
+  Music,
+  Pin
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Social Media Marketing
@@ -559,6 +560,12 @@ export default function SocialMediaMarketingPage() {
                 <Smartphone className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Snapchat Ads</h3>
                 <p className="text-gray-600 text-sm">AR Commerce Engine.</p>
+              </Link>
+
+              <Link href="/pinterest-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Pin className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Pinterest Ads</h3>
+                <p className="text-gray-600 text-sm">Predictive Commerce.</p>
               </Link>
             </div>
           </div>

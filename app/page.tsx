@@ -263,6 +263,7 @@ export default function Home() {
                 <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
                 <Link href="/tiktok-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">TikTok Ads</Link>
                 <Link href="/snapchat-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Snapchat Ads</Link>
+                <Link href="/pinterest-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Pinterest Ads</Link>
               </div>
             </div>
 
