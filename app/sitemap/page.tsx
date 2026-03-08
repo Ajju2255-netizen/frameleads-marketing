@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2026-03-08T17:17:57.402Z
+  // Auto-generated page data - Updated: 2026-03-08T17:21:21.443Z
   const pageData = {
   "services": [
     {

@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-03-08T17:17:57.268Z",
-  "totalDuration": 427,
+  "timestamp": "2026-03-08T17:21:21.310Z",
+  "totalDuration": 459,
   "status": "success",
   "steps": [
     {
       "step": "Generate HTML Sitemap",
       "status": "success",
-      "duration": 154,
-      "output": "> my-v0-project@0.1.0 generate-sitemap\n> node scripts/generate-sitemap.js\n\n🚀 Starting automatic sitemap generation...\n📁 Scanning app directory for pages...\n✅ Found 71 pages\n📂 Categorizing pages...\n  services: 12 pages\n  advertisingPlatforms: 11 pages\n  locations: 14 pages\n  industries: 6 pages\n  company: 4 pages\n  resources: 3 pages\n  academy: 5 pages\n  legal: 3 pages\n  main: 13 pages\n📝 Generating sitemap content...\n✅ Sitemap generated successfully: ./app/sitemap/page.tsx\n\n📊 Summary:\n  Total pages: 71\n  Generated: 2026-03-08T17:17:57.416Z\n  Output: ./app/sitemap/page.tsx",
-      "timestamp": "2026-03-08T17:17:57.424Z"
+      "duration": 147,
+      "output": "> my-v0-project@0.1.0 generate-sitemap\n> node scripts/generate-sitemap.js\n\n🚀 Starting automatic sitemap generation...\n📁 Scanning app directory for pages...\n✅ Found 71 pages\n📂 Categorizing pages...\n  services: 12 pages\n  advertisingPlatforms: 11 pages\n  locations: 14 pages\n  industries: 6 pages\n  company: 4 pages\n  resources: 3 pages\n  academy: 5 pages\n  legal: 3 pages\n  main: 13 pages\n📝 Generating sitemap content...\n✅ Sitemap generated successfully: ./app/sitemap/page.tsx\n\n📊 Summary:\n  Total pages: 71\n  Generated: 2026-03-08T17:21:21.454Z\n  Output: ./app/sitemap/page.tsx",
+      "timestamp": "2026-03-08T17:21:21.460Z"
     },
     {
       "step": "Generate XML Sitemap",
       "status": "success",
-      "duration": 135,
+      "duration": 142,
       "output": "> my-v0-project@0.1.0 generate-xml-sitemap\n> node scripts/generate-xml-sitemap.js\n\n🚀 Starting XML sitemap generation...\n📄 Getting all pages...\n✅ Found 72 pages\n📝 Generating XML sitemap content...\n✅ XML sitemap generated successfully: ./public/sitemap.xml\n\n📊 Summary:\n  Total pages: 72\n  Site URL: https://frameleads.com\n  Last modified: 2026-03-08\n  Output: ./public/sitemap.xml\n\n📋 Sample URLs:\n  1. / (Priority: 1, Change: weekly)\n  2. /Meta-ads (Priority: 0.8, Change: weekly)\n  3. /Social-media-marketing (Priority: 0.8, Change: weekly)\n  4. /about (Priority: 0.9, Change: monthly)\n  5. /academy (Priority: 0.8, Change: monthly)\n  6. /academy/about (Priority: 0.7, Change: monthly)\n  7. /academy/contact (Priority: 0.7, Change: monthly)\n  8. /academy/return-policy (Priority: 0.6, Change: yearly)\n  9. /academy/terms (Priority: 0.6, Change: yearly)\n  10. /academy/thank-you (Priority: 0.6, Change: yearly)\n  ... and 62 more pages",
-      "timestamp": "2026-03-08T17:17:57.559Z"
+      "timestamp": "2026-03-08T17:21:21.602Z"
     },
     {
       "step": "Submit to Google",
       "status": "success",
-      "duration": 136,
-      "output": "> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2026-03-08T17:17:57.687Z] INFO: 🚀 Starting Google Search Console indexing...\n[2026-03-08T17:17:57.690Z] INFO: ⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.",
-      "timestamp": "2026-03-08T17:17:57.695Z"
+      "duration": 166,
+      "output": "> my-v0-project@0.1.0 submit-to-google\n> node scripts/google-indexing.js\n\n[2026-03-08T17:21:21.762Z] INFO: 🚀 Starting Google Search Console indexing...\n[2026-03-08T17:21:21.764Z] INFO: ⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.",
+      "timestamp": "2026-03-08T17:21:21.769Z"
     }
   ],
   "summary": {
