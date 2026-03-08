@@ -54,3 +54,5 @@
 {"timestamp":"2025-12-25T07:29:21.386Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
 {"timestamp":"2025-12-25T07:37:52.650Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
 {"timestamp":"2025-12-25T07:37:52.654Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}
+{"timestamp":"2026-03-08T10:03:41.711Z","level":"info","message":"🚀 Starting Google Search Console indexing...","data":null}
+{"timestamp":"2026-03-08T10:03:41.713Z","level":"info","message":"⚠️ Placeholder credentials detected in config/google-indexing.json. Skipping indexing.","data":null}

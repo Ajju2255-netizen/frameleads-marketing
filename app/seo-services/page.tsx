@@ -1,669 +1,807 @@
-'use client'
+import Link from 'next/link'
+import {
+  Zap,
+  Target,
+  CheckCircle2,
+  ArrowRight,
+  TrendingUp,
+  ShieldCheck,
+  BarChart3,
+  Search,
+  Layers,
+  Brain,
+  Link2,
+  FileText,
+  Gauge,
+  Globe,
+  Flame,
+  Award,
+  Server,
+  Sparkles,
+  Database,
+  Users,
+  Play,
+  Clock,
+  DollarSign,
+  Activity,
+  PenTool,
+  Share2,
+  MessageCircle,
+  Mail,
+  Cpu,
+  Palette,
+  Code,
+  Video,
+  Linkedin,
+  Music,
+  Smartphone
+} from 'lucide-react'
 
-import { useEffect, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock } from "lucide-react"
-import Link from "next/link"
-import Testimonials from "../components/testimonials"
-import ContactCTA from "../components/contact-cta"
-import FloatingNotifications from "../components/floating-notifications"
-import ReviewRating from "../components/review-rating"
+export const metadata = {
+  title: 'SEO Services | Rank in AI Overviews & Search | Frameleads',
+  description: 'Dominate the search landscape. Frameleads provides AI-optimized SEO services focused on Topical Authority, technical excellence, and revenue growth. Get your audit.',
+  keywords: ['SEO Services', 'AIO Optimization', 'AI Overview SEO', 'Topical Authority', 'Technical SEO', 'Entity SEO', 'Semantic SEO'],
+  openGraph: {
+    title: 'SEO Services | Rank in AI Overviews & Search | Frameleads',
+    description: 'Dominate the search landscape. Frameleads provides AI-optimized SEO services focused on Topical Authority, technical excellence, and revenue growth. Get your audit.',
+    type: 'website',
+    images: ['/og-seo-services.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Services | Rank in AI Overviews & Search | Frameleads',
+    description: 'Dominate the search landscape with AI-optimized SEO services focused on Topical Authority and revenue growth.',
+  }
+}
 
-export default function SEOCompanyBangalorePage() {
-  const [isVisible, setIsVisible] = useState(false)
-  const { scrollYProgress } = useScroll()
-  
-  // Parallax transforms for background elements
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -200])
-  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 180])
-  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -90])
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-  const serviceRegions = [
-    "North America",
-    "Europe",
-    "Middle East",
-    "South Asia",
-    "Southeast Asia",
-    "Australia & New Zealand",
-    "Africa",
-    "Latin America",
-  ]
-
-  const seoServices = [
-    {
-      icon: MapPin,
-      title: "International SEO Services",
-      description:
-        "Dominate global search results: multi-country SEO, hreflang implementation, local market optimization, and international keyword targeting across 6 continents.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Technical SEO Services",
-      description:
-        "Advanced technical optimization: Core Web Vitals, mobile-first indexing, XML sitemaps, schema, crawl/index fixes, SSL & security hardening.",
-    },
-    {
-      icon: Users,
-      title: "Content Marketing & SEO",
-      description:
-        "Content that ranks & converts: SEO blog strategy, keyword-driven copy, internal linking, content gap analysis, performance tracking.",
-    },
-    {
-      icon: Award,
-      title: "E-commerce SEO Services",
-      description:
-        "Boost store visibility: product/category SEO, technical fixes, shopping feeds, CRO, and marketplace optimization for higher revenue.",
-    },
-  ]
-
-  const seoProcess = [
-    {
-      step: "01",
-      title: "Comprehensive Global SEO Audit",
-      description:
-        "50-point international audit covering technical health, crawlability, indexation, content gaps, competitor analysis, and multi-country SEO optimization.",
-    },
-    {
-      step: "02", 
-      title: "Strategic International SEO Planning",
-      description:
-        "Global keyword mapping, multi-language content calendar, technical roadmap, and international market tactics with clear milestones & ownership.",
-    },
-    {
-      step: "03",
-      title: "Implementation & Optimization",
-      description:
-        "On-page optimization, technical fixes, content production, and ethical link-building with measurable KPI improvements each month across global markets.",
-    },
-    {
-      step: "04",
-      title: "Monitoring & Scaling",
-      description:
-        "Performance tracking, ongoing optimization for algorithm changes, and scaling to new keywords, markets, and international locations.",
-    },
-  ]
-
-  const whyChooseUs = [
-    "500+ successful global SEO campaigns across 6 continents",
-    "AI-powered, data-driven strategies focused on business outcomes",
-    "Award-winning team, certified partners, 8+ years of expertise",
-    "Full-stack technical SEO for maximum search visibility",
-    "Deep international market knowledge and consumer insights",
-    "24/7 monitoring, transparent reporting, dedicated account manager",
-    "Comprehensive competitor analysis and multi-country SEO",
-    "Proactive algorithm update implementation and training",
-  ]
-
-  const caseStudies = [
-    {
-      industry: "B2B SaaS Company",
-      location: "North America",
-      result: "450% increase in organic traffic",
-      description: "#1 rankings for 15 high-value B2B keywords in 6 months with comprehensive technical SEO and content strategy.",
-    },
-    {
-      industry: "Multi-Location Restaurant Chain", 
-      location: "Europe",
-      result: "250% increase in 'near me' visibility",
-      description: "Local SEO across 12 locations driving Top 3 local pack rankings and 40% growth in direct orders.",
-    },
-    {
-      industry: "E-commerce Fashion Brand",
-      location: "APAC",
-      result: "320% increase in product page traffic",
-      description: "E-commerce SEO and CRO delivering 60% conversion improvement and 500+ ranking keywords expansion.",
-    },
-  ]
-
-  const faqData = [
-    {
-      question: "How much do international SEO services cost?",
-      answer:
-        "Global SEO services typically range from $2,500 to $15,000 per month based on scope, competition, and target markets. Packages start at $3,000/month for SMBs with custom enterprise solutions available.",
-    },
-    {
-      question: "How long does it take to see international SEO results?",
-      answer:
-        "Most businesses see early gains within 2–3 months and significant results by month 6. We guarantee measurable improvements within the first 90 days across global markets.",
-    },
-    {
-      question: "What makes Frameleads the best global SEO company?",
-      answer:
-        "Proven 400% traffic growth, 300% average ROI in 6 months, international market expertise, transparent reporting, and dedicated global support across 6 continents.",
-    },
-    {
-      question: "Do you provide SEO services for multiple countries?",
-      answer:
-        "Yes. We specialize in multi-country SEO including hreflang implementation, country-specific content, local market optimization, and targeted international keywords.",
-    },
-    {
-      question: "What industries do you serve globally?",
-      answer:
-        "IT & Software, Healthcare, Manufacturing, Real Estate, Retail & E-commerce, Financial Services, Education, Hospitality, Professional Services, and Startups across 6 continents.",
-    },
-  ]
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
+// JSON-LD Structured Data for SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Frameleads SEO Services",
+  "description": "AI-optimized SEO services focused on Topical Authority, technical excellence, and revenue growth.",
+  "url": "https://frameleads.com/seo-services",
+  "telephone": "+91 6362821368",
+  "email": "ajsal@frameleads.com",
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SEO Services",
+    "itemListElement": [
       {
-        "@type": "Organization",
-        "name": "Frameleads - Global SEO Company",
-        "description": "Leading global SEO company providing guaranteed traffic growth and first-page rankings",
-        "url": "https://frameleads.com/seo-services",
-        "telephone": "+91 6362821368",
-        "areaServed": serviceRegions,
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "SEO Services",
-          "itemListElement": seoServices.map(service => ({
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": service.title,
-              "description": service.description
-            }
-          }))
-        },
-        "sameAs": ["https://linkedin.com/company/frameleads"]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqData.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      },
-      {
-        "@type": "Service",
-        "name": "Global SEO Services",
-        "provider": {
-          "@type": "Organization",
-          "name": "Frameleads"
-        },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "SEO Service Packages"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Technical Foundation SEO",
+          "description": "Core Web Vitals optimization, Semantic HTML, Schema markup, and crawl budget optimization"
         }
       },
       {
-        "@type": "WebSite",
-        "url": "https://frameleads.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://frameleads.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Topical Authority Building",
+          "description": "Topic clustering, search intent mapping, and AI-assisted content creation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Digital PR & Link Acquisition",
+          "description": "Ethical link acquisition and brand mentions from high-authority publications"
         }
       }
     ]
-  };
+  }
+}
 
+// FAQ Schema for Rich Snippets
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to see SEO results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technical fixes provide a 'lift' in 30 days. Full topical authority typically takes 4 to 6 months to dominate high-competition keywords and AI Overviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SEO still work with AI Search?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but it has changed. AI search engines need 'structured data' and 'authoritative sources' to pull from. Our SEO makes your site the preferred source for those AI answers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did my traffic drop after a Google Core Update?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google's recent updates penalize thin, unhelpful content. If your traffic dropped, your site may lack Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T). We diagnose the drop and rebuild your topical authority to recover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you write content or just do technical SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. Technical SEO ensures Google can crawl your site, but content is what makes you rank. We build comprehensive topic clusters and authoritative content that search engines and users love."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Topical Authority?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Topical Authority is the measure of a website's credibility in a specific subject area. Instead of ranking for single keywords, we help you dominate entire topics by creating content that answers every possible user query in that niche."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Frameleads handle Local SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We optimize your Google Business Profile, build local citations, and create geo-specific landing pages that help you capture intent from users searching for services in your specific area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 'Information Gain' in SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Information Gain is a Google patent that rewards content providing unique value or data not found in other top-ranking pages. We focus on original research and proprietary insights to ensure your content stands out to both users and algorithms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you optimize for Google's AI Overviews (AIO)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Optimization for AIO involves structuring content with clear semantic headers, implementing specific JSON-LD schemas, and providing direct, high-density answers to complex user queries that LLMs can easily parse and cite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Entity-Based SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entity-Based SEO moves away from simple keyword matching to mapping your brand as a specific 'entity' within Google's Knowledge Graph. This builds deeper trust and helps search engines understand the context and relationships of your services."
+      }
+    }
+  ]
+}
+
+export default function SEOServicesPage() {
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
-      <FloatingNotifications />
-      
-      {/* Organic Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle gradient overlays */}
-        <motion.div 
-          style={{ y: y1, rotate: rotate1 }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          style={{ y: y2, rotate: rotate2 }}
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.15, 0.3, 0.15],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-        
-        <motion.div 
-          style={{ y: y3 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 6
-          }}
-        />
-
-        {/* Organic dotted patterns */}
-        <motion.div 
-          className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full"
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 8, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full"
-          animate={{
-            y: [0, 12, 0],
-            x: [0, -10, 0],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full"
-          animate={{
-            y: [0, -18, 0],
-            x: [0, 12, 0],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4
-          }}
-        />
-
-        {/* Subtle geometric shapes */}
-        <motion.div 
-          className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45"
-          animate={{
-            y: [0, -20, 0],
-            rotate: [45, 225, 45],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full"
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-
-        {/* Layered transparency effects */}
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-[#FFE4D6]/8 to-transparent rounded-3xl blur-2xl"
-          animate={{
-            scale: [1, 1.05, 1],
-            rotate: [0, 3, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-gradient-to-tl from-[#FFCAB0]/6 to-transparent rounded-2xl blur-2xl"
-          animate={{
-            scale: [1.05, 1, 1.05],
-            rotate: [0, -2, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 8
-          }}
-        />
-      </div>
-
-      
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 pt-32" id="hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="inline-block mb-6">
-              <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🏆 #1 Global SEO Company - 500+ Successful Projects
-              </span>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Global SEO Services — 400% Traffic Growth Guaranteed
-            </h1>
-
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transform your business with expert international SEO services that deliver real results. Get more organic traffic, higher rankings, and increased revenue across global markets in as little as 90 days.
-            </p>
-            <div className="max-w-4xl mx-auto text-left text-gray-600 mb-10">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Guaranteed 400% organic traffic growth in 6 months</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> First page rankings for high-value keywords</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> ROI-focused strategies with measurable KPIs</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Transparent reporting & dedicated account manager</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 100% white-hat SEO techniques only</li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href="/contact">
-                <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Free Global SEO Audit
-                </Button>
-              </Link>
-              <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
-                <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +91 6362821368
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 mb-8">
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Trusted by 500+ businesses worldwide</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>5-star rated SEO agency</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Avg. 300% ROI in 6 months</span></div>
-            </div>
-
-            {/* Review Rating Component */}
-            <div className="mb-8">
-              <ReviewRating className="max-w-4xl mx-auto" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="relative py-20" id="why-us">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Why Frameleads is a Top-Rated Global SEO Agency</h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                As a leading international SEO company, we combine deep global market knowledge with cutting-edge technical SEO expertise. Our proven track record of delivering 400% traffic growth for businesses across 6 continents makes us the preferred choice for international SEO services, technical SEO optimization, and comprehensive digital marketing solutions.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {whyChooseUs.map((point, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">{point}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative h-80 group rounded-3xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
-              <Image
-                src="/placeholder.jpg"
-                alt="Bangalore SEO results dashboard"
-                fill
-                className="shadow-2xl object-cover z-10"
-              />
-              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#FF6B35]/30 group-hover:ring-[#FF8A50]/50 z-20"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Local Services Section */}
-      <section className="relative py-20" id="services">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Comprehensive Global SEO Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our complete international SEO services include technical SEO optimization, multi-country SEO, content marketing, and e-commerce SEO. We help businesses worldwide dominate search results and achieve sustainable organic growth across global markets.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {seoServices.map((service, index) => {
-              const IconComponent = service.icon
-              return (
-                <Card
-                  key={index}
-                  className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-6 text-center relative z-10">
-                    <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#FF6B35]/25 group-hover:shadow-[#FF6B35]/40 transition-all duration-300">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Process Section */}
-      <section className="relative py-20" id="process">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Proven 4-Step Global SEO Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic international SEO approach designed for global markets, combining technical expertise, international market knowledge, and data-driven strategies to deliver measurable results across continents.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {seoProcess.map((process, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 text-center relative z-10">
-                  <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
-                    {process.step}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{process.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{process.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Areas We Serve */}
-      <section className="relative py-20" id="areas">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">SEO Services Across the Globe</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive SEO services for businesses worldwide, across regions and industries, tailored to local market dynamics and languages.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {serviceRegions.map((area, index) => (
-              <div
-                key={index}
-                className="bg-white/80 backdrop-blur-xl rounded-lg p-4 text-center border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <MapPin className="h-5 w-5 text-[#FF6B35] mx-auto mb-2" />
-                <span className="text-gray-900 font-medium">{area}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Don't see your region listed? We serve businesses worldwide.</p>
-            <Link href="/contact">
-              <Button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                Check If We Serve Your Region
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="relative py-20" id="case-studies">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Global SEO Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we've helped businesses worldwide achieve remarkable growth through strategic international SEO.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <div className="text-center mb-4">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">{study.result}</div>
-                    <h3 className="text-xl font-semibold text-gray-900">{study.industry}</h3>
-                    <p className="text-gray-500 text-sm">{study.location}</p>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">{study.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="relative py-20" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions About Global SEO Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about international SEO services and how Frameleads can help your business grow globally.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqData.map((faq, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Local Testimonials */}
-      <Testimonials />
-
-      {/* Contact CTA */}
-      <ContactCTA
-        title="Ready to Dominate Global Search Results?"
-        description="Join 500+ successful businesses worldwide that trust Frameleads for their international SEO needs. Get your free audit and discover how we can help you outrank your competitors globally."
-        primaryButtonText="Get Free Global SEO Audit"
-        secondaryButtonText="Schedule Consultation"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Internal Links */}
-      <section className="relative py-16" id="internal-links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Global Digital Marketing Solutions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              International SEO is just the beginning. Explore our full suite of global digital marketing services to maximize your online presence worldwide
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* SEO & Related Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">SEO & Search</h3>
-              <div className="space-y-3">
-                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
-                <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
-                <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-              </div>
-            </div>
+      <div className="min-h-screen bg-[#FDF8F5] text-slate-800 font-sans selection:bg-[#FF6B35] selection:text-white pb-20">
 
-            {/* Digital Marketing Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Marketing</h3>
-              <div className="space-y-3">
-                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
-                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising</Link>
-              </div>
-            </div>
-
-            {/* Industry & Location Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry & Location</h3>
-              <div className="space-y-3">
-                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</Link>
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
-                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
-                <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
-              </div>
-            </div>
-          </div>
+        {/* Organic Background Elements */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute -top-[10%] -right-[10%] w-[50vw] h-[50vw] bg-[#FF6B35] opacity-[0.03] rounded-full blur-[100px]" />
+          <div className="absolute top-[20%] -left-[10%] w-[40vw] h-[40vw] bg-[#FF9055] opacity-[0.03] rounded-full blur-[100px]" />
+          <div className="absolute bottom-[10%] right-[10%] w-[30vw] h-[30vw] bg-[#FF6B35] opacity-[0.04] rounded-full blur-[100px]" />
         </div>
-      </section>
 
-      
-    </div>
+        {/* Hero Section: The Long-Term Dominance */}
+        <header className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white/80 backdrop-blur-sm border-b border-[#FF6B35]/10">
+          <div className="max-w-5xl mx-auto relative z-10 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] font-medium text-sm mb-8 border border-[#FF6B35]/20 animate-fade-in-up">
+              <Sparkles className="w-4 h-4" />
+              <span>Semantic Authority Builders</span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-8 leading-[1.1]">
+              Don&apos;t Just Rank. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055]">Own the Search Landscape.</span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-10">
+              Traditional SEO is dying. <span className="font-semibold text-gray-900">Frameleads builds Semantic Authority.</span> We combine technical precision with AI-optimized content to ensure your brand is the &quot;First Answer&quot; in Google&apos;s AI Overviews and organic results.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6B35] to-[#FF9055] text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 hover:scale-105 transition-all duration-300">
+                <Search className="w-5 h-5" />
+                Get a Free SEO Visibility Map
+              </Link>
+            </div>
+
+            {/* Trust Bar */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-600 font-medium">
+              <div className="flex items-center gap-2">
+                <Brain className="w-5 h-5 text-[#FF6B35]" />
+                <span>AI Overview Optimized</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Target className="w-5 h-5 text-[#FF6B35]" />
+                <span>Entity-First Strategy</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-[#FF6B35]" />
+                <span>Revenue-Driven Results</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Section 1: The New Era of SEO */}
+        <section className="relative z-10 py-20 bg-white border-b border-gray-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
+                <Globe className="w-8 h-8 text-[#FF6B35]" />
+                The New Era of SEO
+              </h2>
+              <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                From <span className="font-semibold text-gray-900">&quot;Keywords&quot;</span> to <span className="font-semibold text-gray-900">&quot;Entities&quot;</span>
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#F8F9FA] to-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-lg mb-12">
+              <p className="text-xl text-gray-700 leading-relaxed text-center max-w-4xl mx-auto mb-12">
+                Google no longer ranks pages just for having a keyword 10 times. It ranks <strong className="text-gray-900">Entities</strong> that provide the most comprehensive answer.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* AIO Integration */}
+                <div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
+                  <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Brain className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">AIO Integration</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We optimize your site&apos;s architecture so <strong className="text-gray-900">Google Gemini and SearchGPT</strong> cite you as the primary source.
+                  </p>
+                </div>
+
+                {/* Information Gain */}
+                <div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
+                  <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Sparkles className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Information Gain</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We create content that <strong className="text-gray-900">adds new value</strong> to the web, not just rehashing what&apos;s already on Page 1.
+                  </p>
+                </div>
+
+                {/* Revenue First */}
+                <div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
+                  <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <DollarSign className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Revenue First</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We don&apos;t track &quot;Top 10&quot; rankings for useless terms. We track <strong className="text-gray-900">conversions from organic intent</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: The Three Pillars of Frameleads SEO */}
+        <section className="relative z-10 py-20" id="pillars">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
+                <Layers className="w-8 h-8 text-[#FF6B35]" />
+                The Three Pillars of Frameleads SEO
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Our proven framework for dominating search in the AI era.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {/* Pillar 01. Technical Foundation */}
+              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="lg:w-1/3 bg-gradient-to-br from-[#FF6B35] to-[#FF9055] p-8 lg:p-12 text-white">
+                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-white/20 rounded-full text-sm font-bold mb-4 border border-white/30">
+                      01
+                    </span>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Technical Foundation</h3>
+                    <p className="text-white/90 font-medium">
+                      The Core: <span className="font-bold">We treat your website like a high-performance engine. If it&apos;s slow, it won&apos;t rank.</span>
+                    </p>
+                  </div>
+                  <div className="lg:w-2/3 p-8 lg:p-12">
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Gauge className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Core Web Vitals</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed"><strong className="text-gray-900">100/100 scores</strong> for LCP and INP.</p>
+                      </div>
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Server className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Semantic HTML & Schema</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">We &quot;speak&quot; to Google in its native language using <strong className="text-gray-900">JSON-LD</strong>.</p>
+                      </div>
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Database className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Crawl Budget Optimization</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Ensuring Google&apos;s bots spend time on your <strong className="text-gray-900">money pages</strong>, not your junk pages.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pillar 02. Topical Authority */}
+              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="lg:w-1/3 bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 text-white">
+                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-[#FF6B35] rounded-full text-sm font-bold mb-4">
+                      02
+                    </span>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Topical Authority</h3>
+                    <p className="text-white/90 font-medium">
+                      The Content: <span className="font-bold">We don&apos;t write &quot;blogs.&quot; We build Content Powerhouses.</span>
+                    </p>
+                  </div>
+                  <div className="lg:w-2/3 p-8 lg:p-12">
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Layers className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Topic Clustering</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">We create a <strong className="text-gray-900">web of interconnected articles</strong> that prove your expertise in your niche.</p>
+                      </div>
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Target className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Search Intent Mapping</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Matching content to the user&apos;s specific stage—from <strong className="text-gray-900">&quot;Problem Aware&quot; to &quot;Ready to Buy.&quot;</strong></p>
+                      </div>
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Brain className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">AI-Assisted, Human-Perfected</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Using AI for scale, but human experts for the <strong className="text-gray-900">&quot;E-E-A-T&quot;</strong> that Google craves.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pillar 03. Digital PR Bridge */}
+              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="lg:w-1/3 bg-gradient-to-br from-[#10B981] to-[#059669] p-8 lg:p-12 text-white">
+                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-white/20 rounded-full text-sm font-bold mb-4 border border-white/30">
+                      03
+                    </span>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">The Digital PR Bridge</h3>
+                    <p className="text-white/90 font-medium">
+                      The Trust: <span className="font-bold">Backlinks are still the &quot;votes&quot; of the internet, but quality is everything.</span>
+                    </p>
+                  </div>
+                  <div className="lg:w-2/3 p-8 lg:p-12">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <ShieldCheck className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Ethical Link Acquisition</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed"><strong className="text-gray-900">No PBNs. No spam.</strong> Only high-authority mentions from real publications in your industry.</p>
+                      </div>
+                      <div className="group">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
+                            <Users className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
+                          </div>
+                          <h4 className="font-bold text-gray-900">Brand Mentions</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">Building your <strong className="text-gray-900">&quot;Social Proof&quot;</strong> across the web so Google views you as a trusted leader.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: SEO for the AI-First World (The "AIO" Advantage) */}
+        <section className="relative z-10 py-20 bg-[#0F172A] overflow-hidden">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] opacity-20 rounded-full blur-[120px] -mr-40 -mt-40 pointer-events-none" />
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center justify-center gap-3">
+                <Sparkles className="w-8 h-8 text-[#FF6B35]" />
+                SEO for the AI-First World
+              </h2>
+              <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                The <span className="font-semibold text-[#FF6B35]">&quot;AIO&quot; Advantage</span> — How Frameleads SEO differs from traditional approaches.
+              </p>
+            </div>
+
+            {/* Comparison Table */}
+            <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="px-6 py-5 text-left text-sm font-bold text-white">Feature</th>
+                      <th className="px-6 py-5 text-left text-sm font-bold text-gray-400">Old SEO (Pre-2024)</th>
+                      <th className="px-6 py-5 text-left text-sm font-bold text-[#FF6B35]">Frameleads SEO (2026+)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-5 text-white font-medium">Primary Goal</td>
+                      <td className="px-6 py-5 text-gray-400">Keyword Rankings</td>
+                      <td className="px-6 py-5 text-white font-semibold flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                        SGE/AIO Citations
+                      </td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-5 text-white font-medium">Strategy</td>
+                      <td className="px-6 py-5 text-gray-400">Backlink Quantity</td>
+                      <td className="px-6 py-5 text-white font-semibold flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                        Topical Depth & Authority
+                      </td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-5 text-white font-medium">Content</td>
+                      <td className="px-6 py-5 text-gray-400">500-word filler</td>
+                      <td className="px-6 py-5 text-white font-semibold flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                        Expert-Led &quot;Deep Answers&quot;
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-5 text-white font-medium">KPIs</td>
+                      <td className="px-6 py-5 text-gray-400">Traffic Volume</td>
+                      <td className="px-6 py-5 text-white font-semibold flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                        Revenue & SQLs
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: SEO FAQ (Rich Snippet Optimization) */}
+        <section className="relative z-10 py-20" id="faq">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
+                <FileText className="w-8 h-8 text-[#FF6B35]" />
+                SEO FAQ
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Answers to the questions smart marketers ask.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Clock className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      How long does it take to see SEO results?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Technical fixes provide a <strong className="text-gray-900">&quot;lift&quot; in 30 days</strong>. Full topical authority typically takes <strong className="text-gray-900">4 to 6 months</strong> to dominate high-competition keywords and AI Overviews.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Brain className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      Does SEO still work with AI Search?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      <strong className="text-gray-900">Yes, but it has changed.</strong> AI search engines need &quot;structured data&quot; and &quot;authoritative sources&quot; to pull from. Our SEO makes your site the <strong className="text-gray-900">preferred source</strong> for those AI answers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <TrendingUp className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      Why did my traffic drop after a Google Core Update?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Google&apos;s recent updates penalize thin, unhelpful content. If your traffic dropped, your site may lack <strong className="text-gray-900">Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T)</strong>. We diagnose the drop and rebuild your topical authority to recover.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Search className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      Do you write content or just do technical SEO?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      <strong className="text-gray-900">Both.</strong> Technical SEO ensures Google can crawl your site, but content is what makes you rank. We build comprehensive topic clusters and authoritative content that search engines and users love.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Database className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      What is Topical Authority?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Topical Authority is the measure of a website&apos;s credibility in a specific subject area. Instead of ranking for single keywords, we help you dominate <strong className="text-gray-900">entire topics</strong> by creating content that answers every possible user query in that niche.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Sparkles className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      What is &quot;Information Gain&quot; and why is it mandatory?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Information Gain rewards content that provides <strong className="text-gray-900">unique data or perspectives</strong> not found in other results. We move beyond &quot;paraphrasing Page 1&quot; to ensure your site is recognized as an original authority.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Brain className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      How do you optimize for Google&apos;s AI Overviews (AIO)?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We use <strong className="text-gray-900">Semantic Structuring</strong> and specific JSON-LD schemas to make your data easily digestible for LLMs. Our goal is to secure your brand as a citation in AI-generated answers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
+                <div className="flex items-start gap-4 pl-4">
+                  <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                    <Database className="w-5 h-5 text-[#FF6B35]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors">
+                      What is &quot;Entity-Based SEO&quot;?
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      It&apos;s the process of mapping your brand as a <strong className="text-gray-900">Trusted Entity</strong> in Google&apos;s Knowledge Graph. This builds deeper authority than keyword-only strategies and protects your rankings during core updates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA: The Strategy Call */}
+        <footer className="relative z-10 max-w-4xl mx-auto px-6 py-16 mt-12">
+          <div className="bg-gradient-to-br from-[#FF6B35] to-[#FF9055] rounded-3xl overflow-hidden relative shadow-2xl shadow-[#FF6B35]/25">
+            {/* Abstract Background */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white opacity-10 rounded-full blur-[80px] -mr-20 -mt-20 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0F172A] opacity-10 rounded-full blur-[60px] -ml-10 -mb-10 pointer-events-none" />
+
+            <div className="relative z-10 p-12 md:p-16 text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white font-medium text-sm mb-6 border border-white/30">
+                <Flame className="w-4 h-4" />
+                <span>Ready to dominate search?</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Stop Guessing.<br />Start Growing.
+              </h2>
+              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
+                Our SEO audit reveals exactly why your competitors are outranking you and provides a <strong>12-month roadmap</strong> to overtake them.
+              </p>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-[#FF6B35] font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                Claim My SEO Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <p className="text-white/70 text-sm mt-6">
+                No commitment. Just clarity.
+              </p>
+            </div>
+          </div>
+        </footer>
+
+        {/* Internal Link Silo Section */}
+        <section className="relative z-10 py-16 max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Our Digital Marketing Services</h2>
+              <p className="text-gray-600">Discover how our full-stack approach drives sustainable growth.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/digital-marketing-services" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <BarChart3 className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Digital Marketing</h3>
+                <p className="text-gray-600 text-sm">Full-funnel growth architecture.</p>
+              </Link>
+
+              <Link href="/google-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Target className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Google Ads</h3>
+                <p className="text-gray-600 text-sm">Value-Based Bidding & Yield.</p>
+              </Link>
+
+              <Link href="/ppc-management" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Activity className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">PPC Management</h3>
+                <p className="text-gray-600 text-sm">Revenue orchestration.</p>
+              </Link>
+
+              <Link href="/content-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <PenTool className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Content Marketing</h3>
+                <p className="text-gray-600 text-sm">Entity-based authority.</p>
+              </Link>
+
+              <Link href="/Social-media-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Share2 className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Social Marketing</h3>
+                <p className="text-gray-600 text-sm">Conversion-first architecture.</p>
+              </Link>
+
+              <Link href="/whatsapp-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#25D366]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <MessageCircle className="w-10 h-10 text-[#25D366] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#25D366] transition-colors mb-2">WhatsApp Marketing</h3>
+                <p className="text-gray-600 text-sm">Conversational ROI.</p>
+              </Link>
+
+              <Link href="/analytics-and-automations" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Cpu className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Data & Automation</h3>
+                <p className="text-gray-600 text-sm">Unified Data Intelligence.</p>
+              </Link>
+
+              <Link href="/conversion-rate-optimization" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Zap className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">CRO Optimization</h3>
+                <p className="text-gray-600 text-sm">Behavioral revenue lift.</p>
+              </Link>
+
+              <Link href="/perforamance-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <TrendingUp className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Performance Marketing</h3>
+                <p className="text-gray-600 text-sm">Real-time revenue convergence.</p>
+              </Link>
+
+              <Link href="/email-marketing-and-automation-services" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Mail className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Email Automation</h3>
+                <p className="text-gray-600 text-sm">Lifecycle revenue engine.</p>
+              </Link>
+
+              <Link href="/branding" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Palette className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Brand Strategy</h3>
+                <p className="text-gray-600 text-sm">Market-Dominant Identity.</p>
+              </Link>
+
+              <Link href="/website-development" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Code className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Web Engineering</h3>
+                <p className="text-gray-600 text-sm">Architecture of Authority.</p>
+              </Link>
+
+              <Link href="/youtube-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Video className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">YouTube Ads</h3>
+                <p className="text-gray-600 text-sm">Visual Intent Engine.</p>
+              </Link>
+
+              <Link href="/linkedin-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Linkedin className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">LinkedIn Ads</h3>
+                <p className="text-gray-600 text-sm">B2B Precision Pipeline.</p>
+              </Link>
+
+              <Link href="/tiktok-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Music className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">TikTok Ads</h3>
+                <p className="text-gray-600 text-sm">Entertainment Commerce.</p>
+              </Link>
+
+              <Link href="/snapchat-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                <Smartphone className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Snapchat Ads</h3>
+                <p className="text-gray-600 text-sm">AR Commerce Engine.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </>
   )
 }

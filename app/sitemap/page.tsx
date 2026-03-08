@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2025-12-25T07:37:52.218Z
+  // Auto-generated page data - Updated: 2026-03-08T10:03:41.416Z
   const pageData = {
   "services": [
     {
@@ -374,6 +374,11 @@ export default function SitemapPage() {
       "description": "Page.tsx - Frameleads digital marketing services"
     },
     {
+      "path": "/ppc-management",
+      "name": "Ppc Management",
+      "description": "Ppc Management - Frameleads digital marketing services"
+    },
+    {
       "path": "/sitemap",
       "name": "Sitemap",
       "description": "Complete website sitemap and navigation"
@@ -421,7 +426,7 @@ export default function SitemapPage() {
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
             <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-              🔄 Auto-generated • Last updated: 12/25/2025
+              🔄 Auto-generated • Last updated: 3/8/2026
             </div>
           </motion.div>
         </div>

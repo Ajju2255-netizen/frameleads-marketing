@@ -261,6 +261,8 @@ export default function Home() {
                 <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
                 <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
                 <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
+                <Link href="/tiktok-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">TikTok Ads</Link>
+                <Link href="/snapchat-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Snapchat Ads</Link>
               </div>
             </div>
 

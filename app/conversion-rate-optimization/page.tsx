@@ -1,971 +1,506 @@
 'use client'
 
-import { useEffect, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, CheckCircle, Phone, TrendingUp, Users, Award, Target, Zap, BarChart3, Search, Monitor, MousePointer, Clock, DollarSign, ArrowUpRight } from "lucide-react"
-import Link from "next/link"
-import Testimonials from "../components/testimonials"
-import ContactCTA from "../components/contact-cta"
-import FloatingNotifications from "../components/floating-notifications"
+import Link from 'next/link'
+import {
+  BarChart3,
+  Search,
+  Zap,
+  Target,
+  Activity,
+  ChevronRight,
+  MousePointer2,
+  PieChart,
+  Repeat,
+  ArrowRight,
+  CheckCircle2,
+  LineChart,
+  Cpu,
+  Globe,
+  PenTool,
+  Share2,
+  MessageCircle,
+  Eye,
+  Microscope,
+  Brain,
+  ShieldCheck,
+  ZapOff,
+  Flame,
+  Layout,
+  MousePointerClick,
+  Mail,
+  Palette
+} from 'lucide-react'
 
-
-export default function ConversionRateOptimizationPage() {
-  const [isVisible, setIsVisible] = useState(false)
-  const { scrollYProgress } = useScroll()
-  
-  // Parallax transforms for background elements
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -200])
-  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 180])
-  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -90])
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
-  const serviceRegions = [
-    "North America",
-    "Asia",
-    "Europe",
-    "Latin America",
-    "Middle East",
-    "South Asia",
-  ]
-
-  const coreServices = [
-    {
-      title: "Conversion Rate Optimization Audit",
-      description:
-        "Complete website analysis including conversion funnel assessment, user experience evaluation, and technical performance review.",
-    },
-    {
-      title: "A/B Testing & Multivariate Testing",
-      description:
-        "Scientific approach to optimization with hypothesis-driven testing, statistical significance validation, and continuous optimization cycles.",
-    },
-    {
-      title: "Landing Page Conversion Optimization",
-      description:
-        "High-converting landing pages with mobile-responsive design, conversion-focused copywriting, and trust signal integration.",
-    },
-    {
-      title: "E-commerce Conversion Rate Optimization",
-      description:
-        "Specialized e-commerce CRO including product page optimization, shopping cart improvement, and checkout process streamlining.",
-    },
-    {
-      title: "User Experience (UX) Optimization",
-      description:
-        "Enhance user journey with behavior analysis, heat mapping, session recordings, and navigation improvements.",
-    },
-    {
-      title: "Mobile Conversion Optimization",
-      description:
-        "Mobile-first approach with touch-friendly interfaces, fast loading times, and mobile-specific user behavior optimization.",
-    },
-    {
-      title: "Conversion Funnel Analysis",
-      description:
-        "Comprehensive funnel mapping, bottleneck identification, and strategic improvements to maximize conversion rates.",
-    },
-  ]
-
-  const processPhases = [
-    {
-      step: "01",
-      title: "Research & Analysis",
-      description:
-        "Deep dive into your business with current conversion rate baseline, user behavior analysis, competitive research, and technical audit.",
-    },
-    {
-      step: "02",
-      title: "Strategy Development",
-      description:
-        "Data-driven strategy creation with hypothesis formation, test prioritization, implementation planning, and success metrics definition.",
-    },
-    {
-      step: "03",
-      title: "Implementation & Testing",
-      description:
-        "Execute optimization tests with A/B test setup, performance monitoring, data collection, and statistical analysis.",
-    },
-    {
-      step: "04",
-      title: "Analysis & Optimization",
-      description:
-        "Continuous improvement with results interpretation, winning variation implementation, new hypothesis generation, and ongoing optimization.",
-    },
-  ]
-
-  const caseStudies = [
-    {
-      industry: "E-commerce Platform",
-      result: "35% increase in conversion rate",
-      description: "CRO optimization strategy helped online retailer achieve 65% reduction in cart abandonment and 85% improvement in checkout completion.",
-    },
-    {
-      industry: "SaaS Company",
-      result: "42% increase in trial signups",
-      description: "Landing page optimization and A/B testing resulted in 90% faster user onboarding and 300% improvement in feature adoption rates.",
-    },
-    {
-      industry: "Lead Generation Business",
-      result: "28% increase in form conversions",
-      description: "Form optimization and user experience improvements led to higher quality leads and 40% reduction in cost per acquisition.",
-    },
-  ]
-
-  const pricingTiers = [
-    { name: "Starter CRO Package", price: "$2,497/month", includes: "CRO audit, 2 A/B tests per month, Monthly reporting, Email support" },
-    { name: "Professional CRO Package", price: "$4,997/month", includes: "Comprehensive CRO audit, 4 A/B tests per month, Landing page optimization, Heat mapping analysis" },
-    { name: "Enterprise CRO Package", price: "$9,997/month", includes: "Full-scale CRO program, Unlimited testing, Dedicated CRO specialist, Custom dashboard" },
-  ]
-
-  const faqData = [
-    {
-      question: "What is a good conversion rate?",
-      answer:
-        "Conversion rates vary by industry, but the average across all industries is 2.35%. E-commerce sites typically see 1-3%, while SaaS companies often achieve 5-10%. The key is improving your baseline, regardless of industry averages.",
-    },
-    {
-      question: "How long does it take to see CRO results?",
-      answer:
-        "Most clients see initial improvements within 30-60 days. However, significant results typically appear after 90 days of consistent testing and optimization. CRO is an ongoing process that compounds over time.",
-    },
-    {
-      question: "What's the difference between CRO and SEO?",
-      answer:
-        "SEO focuses on bringing more traffic to your website, while CRO optimizes the traffic you already have. Both are crucial for online success, but CRO provides immediate ROI improvements from existing visitors.",
-    },
-    {
-      question: "Do I need a lot of traffic for CRO to work?",
-      answer:
-        "While more traffic provides faster results, CRO can benefit any website. We can implement qualitative improvements immediately and run statistical tests once sufficient traffic is available.",
-    },
-    {
-      question: "How do you measure CRO success?",
-      answer:
-        "We track multiple metrics including conversion rate, revenue per visitor, average order value, customer lifetime value, and overall ROI. Success is measured against your specific business goals.",
-    },
-    {
-      question: "Can CRO help with mobile conversions?",
-      answer:
-        "Absolutely! Mobile conversion optimization is a key focus area. We optimize for touch interfaces, loading speeds, and mobile-specific user behaviors to improve mobile conversion rates.",
-    },
-  ]
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Conversion Rate Optimization Services",
-    "description": "Professional conversion rate optimization services including CRO audits, A/B testing, landing page optimization, and UX improvements for businesses worldwide.",
-    "url": "https://frameleads.com/conversion-rate-optimization",
-    "telephone": "+91 6362821368",
-    "email": "ajsal@frameleads.com",
-    "provider": {
-      "@type": "Organization",
-      "name": "FrameLeads",
-      "url": "https://frameleads.com"
-    },
-    "serviceType": "Conversion Rate Optimization",
-    "areaServed": serviceRegions,
-    "priceRange": "$2497-$9997",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Conversion Rate Optimization Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRO Audit", "description": "Complete website conversion analysis and optimization recommendations" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "A/B Testing", "description": "Scientific testing and optimization of website elements" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page Optimization", "description": "High-converting landing page design and optimization" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UX Optimization", "description": "User experience improvements and conversion funnel optimization" } }
-      ]
-    }
+// JSON-LD Structured Data for CRO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Conversion Rate Optimization & UX Engineering",
+  "provider": {
+    "@type": "Organization",
+    "name": "Frameleads",
+    "url": "https://frameleads.com/conversion-rate-optimization"
+  },
+  "description": "Scientific A/B testing, Heatmapping, and User Psychology services to increase website revenue and lead generation.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "CRO Solutions Portfolio",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "A/B & Multivariate Split Testing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "User Behavior & Heatmap Analysis" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page Psychological Audits" } }
+    ]
   }
+}
 
+// FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a 'Good' Conversion Rate for my industry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While average rates vary (2% for E-commerce, 5-10% for B2B Lead Gen), Frameleads focuses on Incremental Lift. A 1% increase in conversion rate for a business doing $1M in revenue is an extra $10,000/month without spending a penny more on ads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does CRO affect my SEO and Google Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CRO is a massive ranking factor. Google tracks User Signals (Dwell Time, Bounce Rate). If users stay on your site and convert, Google views your page as 'High Quality,' which lowers your PPC Cost-Per-Click and boosts your Organic Rankings."
+      }
+    }
+  ]
+}
+
+export default function ConversionOptimizationPage() {
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
-      <FloatingNotifications />
-      
-      {/* Organic Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle gradient overlays */}
-        <motion.div 
-          style={{ y: y1, rotate: rotate1 }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          style={{ y: y2, rotate: rotate2 }}
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.15, 0.3, 0.15],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-        
-        <motion.div 
-          style={{ y: y3 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 6
-          }}
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
-        {/* Organic dotted patterns */}
-        <motion.div 
-          className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full"
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 8, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full"
-          animate={{
-            y: [0, 12, 0],
-            x: [0, -10, 0],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full"
-          animate={{
-            y: [0, -18, 0],
-            x: [0, 12, 0],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4
-          }}
-        />
+      <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-[#FF6B35] selection:text-white pb-20">
 
-        {/* Subtle geometric shapes */}
-        <motion.div 
-          className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45"
-          animate={{
-            y: [0, -20, 0],
-            rotate: [45, 225, 45],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full"
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
+        {/* 1. Conversion Intelligence Snapshot */}
+        <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-[#0F172A] overflow-hidden">
+          {/* Animated Background Gradients */}
+          <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#FF6B35] opacity-[0.05] rounded-full blur-[120px] -mr-40 -mt-40 animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] bg-[#FF8A50] opacity-[0.05] rounded-full blur-[120px] -ml-40 -mb-40 animate-pulse delay-700" />
 
-        {/* Layered transparency effects */}
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-[#FFE4D6]/8 to-transparent rounded-3xl blur-2xl"
-          animate={{
-            scale: [1, 1.05, 1],
-            rotate: [0, 3, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div 
-          className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-gradient-to-tl from-[#FFCAB0]/6 to-transparent rounded-2xl blur-2xl"
-          animate={{
-            scale: [1.05, 1, 1.05],
-            rotate: [0, -2, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 8
-          }}
-        />
-      </div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            {/* Optimization Logic Box */}
+            <div className="bg-[#1E293B]/60 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-[#FF6B35]/30 transition-all duration-500">
+              {/* Decorative Data Lines */}
+              <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-[#FF6B35] to-transparent animate-scan" style={{ animationDelay: '1s' }} />
+                <div className="absolute top-0 left-2/4 w-[1px] h-full bg-gradient-to-b from-transparent via-[#FF8A50] to-transparent animate-scan" style={{ animationDelay: '3s' }} />
+                <div className="absolute top-0 left-3/4 w-[1px] h-full bg-gradient-to-b from-transparent via-[#FF6B35] to-transparent animate-scan" style={{ animationDelay: '5s' }} />
+              </div>
 
-      
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 pt-32" id="hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="inline-block mb-6">
-              <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                ⭐ 4.9/5 Rated • CRO Specialists • 35% Average Conversion Increase
-              </span>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Professional Conversion Rate Optimization Services That Boost Your Revenue
-            </h1>
-
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transform your website visitors into paying customers with our expert conversion rate optimization services. Turn more of your existing traffic into sales through data-driven testing and strategic improvements.
-            </p>
-            <div className="max-w-4xl mx-auto text-left text-gray-600 mb-10">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 35% average increase in conversion rates within 90 days</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 223% average ROI from CRO investments</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Data-driven A/B testing and optimization</li>
-                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Maximize revenue from existing traffic</li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link href="/contact">
-                <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Your FREE CRO Audit
-                </Button>
-              </Link>
-              <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
-                <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                  <Phone className="h-5 w-5 mr-2" /> Call +91 63628 21368
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>4.9/5 rating (200+ reviews)</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>CRO Specialists</span></div>
-              <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>35% average conversion increase</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Animated Statistics Section */}
-      <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our CRO Agency?</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Data-driven conversion rate optimization that maximizes revenue from your existing website traffic</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <motion.div 
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <TrendingUp className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">35%</div>
-                <div className="text-gray-600 text-sm">Average Conversion Increase</div>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
-                  <motion.div 
-                    className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 2, delay: 0.5 }}
-                  />
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 bg-[#FF6B35]/10 rounded-2xl flex items-center justify-center border border-[#FF6B35]/30 shadow-lg shadow-[#FF6B35]/10">
+                  <Activity className="w-7 h-7 text-[#FF6B35]" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-sm font-black uppercase tracking-[0.3em] text-[#FF6B35]">Conversion Intelligence</span>
+                  <span className="text-[10px] text-gray-500 font-mono tracking-tighter">OPTIMIZATION NODE: 2026.CRO.FRAMELEADS</span>
                 </div>
               </div>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">223%</div>
-                <div className="text-gray-600 text-sm">Average ROI</div>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
-                  <motion.div 
-                    className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 2, delay: 0.7 }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Award className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">500+</div>
-                <div className="text-gray-600 text-sm">Businesses Optimized</div>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
-                  <motion.div 
-                    className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 2, delay: 0.9 }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <Target className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] mb-2">90</div>
-                <div className="text-gray-600 text-sm">Days to Results</div>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-3">
-                  <motion.div 
-                    className="bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "98%" }}
-                    transition={{ duration: 2, delay: 1.1 }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* What is Conversion Rate Optimization */}
-      <section className="relative py-20" id="what-is-cro">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What is Conversion Rate Optimization?</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Conversion rate optimization (CRO) is the systematic process of increasing the percentage of website visitors who complete desired actions. Whether it's making a purchase, filling out a form, or subscribing to a newsletter, CRO helps you get more value from your existing traffic without spending more on advertising.
+              <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-snug font-medium tracking-tight mb-8">
+                Frameleads transforms passive traffic into active revenue through <strong className="text-[#FF6B35]">Behavioral Heuristics</strong> and Predictive UX Testing. Our 2026 framework focuses on <strong className="text-[#FF8A50]">INP Optimization</strong> and Algorithmic Personalization, resulting in an average <strong className="text-white underline decoration-[#FF6B35] decoration-2">40% increase in lead-to-sale conversion</strong>.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {coreServices.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.02, y: -5 }}
-                  >
-                    <Card className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <CardContent className="p-5 relative z-10">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-white font-bold text-sm">{index + 1}</span>
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-gray-900 font-semibold mb-2 group-hover:text-[#FF6B35] transition-colors duration-300">{service.title}</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                {[
+                  { label: "Lead Lift", val: "+40%", color: "#FF6B35" },
+                  { label: "UX Confidence", val: "95%+", color: "#FF8A50" },
+                  { label: "INP Speed", val: "< 200ms", color: "#10B981" },
+                  { label: "Revenue ROI", val: "2.5x", color: "#F59E0B" }
+                ].map((stat, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">{stat.label}</div>
+                    <div className="text-xl font-black" style={{ color: stat.color }}>{stat.val}</div>
+                  </div>
                 ))}
               </div>
             </div>
-            {/* Key CRO Statistics */}
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-2xl p-6 border border-[#FF6B35]/20">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-full flex items-center justify-center text-white text-sm font-bold">1</span>
-                  CRO Performance Metrics
-                </h3>
-                <p className="text-gray-600 mb-4">Key statistics that demonstrate the power of conversion rate optimization</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex justify-between"><span>Average ROI:</span><span className="font-semibold text-[#FF6B35]">223%</span></div>
-                  <div className="flex justify-between"><span>Conversion Increase:</span><span className="font-semibold text-[#FF6B35]">35%</span></div>
-                  <div className="flex justify-between"><span>Testing Success Rate:</span><span className="font-semibold text-[#FF6B35]">68%</span></div>
-                  <div className="flex justify-between"><span>Time to Results:</span><span className="font-semibold text-[#FF6B35]">90 days</span></div>
+          </div>
+        </section>
+
+        {/* 2. The Hero: The Revenue Multiplier */}
+        <section className="relative py-24 px-4 bg-white overflow-hidden text-center">
+          <div className="max-w-6xl mx-auto relative z-10">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[1.2] tracking-tight mb-10 flex flex-col items-center">
+              <span>Double Your Revenue Without</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] pb-2">Increasing Your Ad Spend.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-14">
+              Stop pouring water into a leaky bucket. Frameleads uses <strong className="text-gray-900">Scientific A/B Testing</strong> and Neuromarketing to turn your existing traffic into a high-velocity sales machine.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0F172A] text-white font-bold text-lg rounded-2xl shadow-2xl hover:bg-slate-900 hover:scale-105 transition-all duration-300 group">
+                Get a Free Conversion Audit <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-white" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Pillar 1: Behavioral Data & Heatmapping */}
+        <section className="relative z-10 py-24 bg-[#F8FAFC]">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row gap-20 items-center">
+              <div className="lg:w-1/2">
+                <div className="w-16 h-1 bg-[#FF6B35] mb-8" />
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+                  Decoding the &quot;Silent Bounces&quot; with Visual Analytics
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-10">
+                  We don&apos;t guess why users leave; we watch them. We use a &quot;Triangulation&quot; method to find the truth behind every bounce.
+                </p>
+
+                <div className="space-y-8">
+                  <div className="flex gap-5 group">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#FF6B35] transition-colors shadow-xl border border-gray-100">
+                      <Flame className="w-6 h-6 text-[#FF6B35] group-hover:text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-xl mb-2">Heatmapping & Click-Tracking</h3>
+                      <p className="text-gray-600">We identify &quot;Dead Clicks&quot;—where users expect an interaction but find none, indicating UI friction.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-5 group">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#FF6B35] transition-colors shadow-xl border border-gray-100">
+                      <Eye className="w-6 h-6 text-[#FF6B35] group-hover:text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-xl mb-2">Session Replays</h3>
+                      <p className="text-gray-600">We watch real users navigate your site to find the exact moment of frustration or cognitive load spikes.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-5 group">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#FF6B35] transition-colors shadow-xl border border-gray-100">
+                      <Layout className="w-6 h-6 text-[#FF6B35] group-hover:text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-xl mb-2">Form Analytics</h3>
+                      <p className="text-gray-600">Identifying which specific field in your checkout or lead form is causing users to abandon the process.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div className="lg:w-1/2 relative group">
+                <div className="bg-[#0F172A] rounded-[3rem] p-8 md:p-12 shadow-2xl border border-white/5 aspect-square flex flex-col items-center justify-center overflow-hidden relative">
+                  {/* Heatmap Simulation Layer */}
+                  <div className="absolute inset-0 z-0 opacity-40">
+                    <div className="absolute top-[10%] left-[20%] w-40 h-40 bg-red-500 rounded-full blur-[60px] animate-pulse" />
+                    <div className="absolute top-[40%] left-[60%] w-24 h-24 bg-yellow-500 rounded-full blur-[40px] animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute bottom-[20%] left-[30%] w-32 h-32 bg-[#FF6B35] rounded-full blur-[50px] animate-pulse" style={{ animationDelay: '2s' }} />
+                  </div>
 
-              <div className="bg-gradient-to-r from-[#FF8A50]/5 to-[#FF6B35]/5 rounded-2xl p-6 border border-[#FF8A50]/20">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-gradient-to-r from-[#FF8A50] to-[#FF6B35] rounded-full flex items-center justify-center text-white text-sm font-bold">2</span>
-                  CRO Testing Elements
-                </h3>
-                <p className="text-gray-600 mb-4">Comprehensive testing across all critical website elements</p>
-                <div className="flex flex-wrap gap-2">
-                  {['Headlines & Copy', 'Call-to-Action Buttons', 'Page Layouts', 'Forms & Checkout', 'Product Descriptions', 'Pricing Displays', 'Navigation', 'Mobile Experience'].map((feature) => (
-                    <span key={feature} className="px-3 py-1 bg-white/60 rounded-full text-xs font-medium text-gray-700 border border-gray-200">
-                      {feature}
-                    </span>
+                  {/* UI Mockup Elements */}
+                  <div className="relative z-10 w-full space-y-4 opacity-30">
+                    <div className="h-4 bg-white/20 rounded-full w-1/3" />
+                    <div className="h-64 bg-white/5 rounded-3xl border border-white/10" />
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="h-20 bg-white/5 rounded-2xl" />
+                      <div className="h-20 bg-white/5 rounded-2xl" />
+                      <div className="h-20 bg-white/5 rounded-2xl" />
+                    </div>
+                  </div>
+
+                  {/* Analytics Overlays */}
+                  <div className="absolute top-10 right-10 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 z-20">
+                    <div className="text-[10px] text-gray-400 uppercase mb-1">Dwell Time</div>
+                    <div className="text-xl font-bold text-white">04:12m</div>
+                  </div>
+
+                  <div className="absolute bottom-10 left-10 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 z-20">
+                    <div className="text-[10px] text-gray-400 uppercase mb-1">Bounce Risk</div>
+                    <div className="text-xl font-bold text-red-400">High (72%)</div>
+                  </div>
+
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                    <div className="relative">
+                      <div className="absolute -inset-8 bg-[#FF6B35]/20 rounded-full blur-2xl animate-ping" />
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                        <MousePointerClick className="w-8 h-8 text-[#FF6B35]" />
+                      </div>
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-[#FF6B35] text-white text-[10px] font-black px-3 py-1 rounded-full whitespace-nowrap">
+                        DEAD CLICK DETECTED
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tracking Lines */}
+                  <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
+                    <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gradient-to-b from-transparent via-white to-transparent" />
+                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Pillar 2: Scientific A/B Testing */}
+        <section className="relative z-10 py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row-reverse gap-20 items-center">
+              <div className="lg:w-1/2">
+                <div className="w-16 h-1 bg-[#FF8A50] mb-8" />
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+                  The &quot;Champion vs. Challenger&quot; Framework
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-10">
+                  Every change we make is backed by a statistical hypothesis. We never redesign based on a hunch; we prove it with math.
+                </p>
+
+                <div className="grid gap-6">
+                  {[
+                    { title: "Hypothesis Generation", desc: "We predict how changing headlines or social proof will increase conversion.", icon: Microscope },
+                    { title: "The Split Test", desc: "Running Control against Variation simultaneously to see the real-world winner.", icon: Repeat },
+                    { title: "Statistical Significance", desc: "We only declare a winner when we are 95%+ certain of the result.", icon: ShieldCheck }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-xl flex gap-6 hover:border-[#FF8A50]/30 transition-all group">
+                      <div className="w-12 h-12 bg-[#FF8A50]/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#FF8A50] transition-colors">
+                        <item.icon className="w-6 h-6 text-[#FF8A50] group-hover:text-white transition-colors" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 text-xl mb-1">{item.title}</h4>
+                        <p className="text-gray-600">{item.desc}</p>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
+              <div className="lg:w-1/2 relative">
+                <div className="bg-[#F8FAFC] rounded-[3rem] p-6 md:p-12 shadow-inner border border-gray-200 aspect-[4/3] flex items-center justify-center gap-6 md:gap-10">
+                  {/* Card 1: CHAMPION (Previously Control) */}
+                  <div className="w-1/2 h-full bg-white rounded-[2rem] shadow-xl flex flex-col p-6 border-2 border-gray-100 relative group overflow-hidden">
+                    <div className="flex justify-between items-center mb-6">
+                      <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Champion</span>
+                      <div className="w-2 h-2 bg-gray-300 rounded-full" />
+                    </div>
+                    <div className="space-y-3 mb-8">
+                      <div className="h-3 bg-gray-100 rounded-full w-full" />
+                      <div className="h-3 bg-gray-100 rounded-full w-5/6" />
+                      <div className="h-3 bg-gray-100 rounded-full w-4/6" />
+                    </div>
+                    <div className="mt-auto">
+                      <div className="h-10 bg-gray-200 rounded-xl w-full flex items-center justify-center text-[10px] font-bold text-gray-400">BUY NOW</div>
+                      <div className="mt-4 flex justify-between text-[10px] font-bold text-gray-400 italic">
+                        <span>CR: 2.1%</span>
+                        <span>(Baseline)</span>
+                      </div>
+                    </div>
+                  </div>
 
-              <div className="bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-2xl p-6 border border-[#FF6B35]/20">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <span className="w-8 h-8 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-full flex items-center justify-center text-white text-sm font-bold">3</span>
-                  CRO Best Practices
-                </h3>
-                <p className="text-gray-600 mb-4">Proven strategies for maximizing conversion rates</p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                    <span>Mobile-first optimization</span>
+                  {/* Card 2: CHALLENGER */}
+                  <div className="w-1/2 h-full bg-white rounded-[2rem] shadow-2xl flex flex-col p-6 border-2 border-[#FF6B35]/30 relative group overflow-hidden">
+                    {/* Winning Glow */}
+                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#FF6B35] opacity-10 rounded-full blur-3xl" />
+
+                    <div className="flex justify-between items-center mb-6">
+                      <span className="text-[10px] font-black text-[#FF6B35] uppercase tracking-widest">Challenger</span>
+                      <div className="w-2 h-2 bg-[#FF6B35] rounded-full animate-pulse" />
+                    </div>
+                    <div className="space-y-3 mb-8">
+                      <div className="h-3 bg-orange-50 rounded-full w-full border border-orange-100" />
+                      <div className="h-3 bg-orange-50 rounded-full w-5/6 border border-orange-100" />
+                      <div className="h-3 bg-orange-50 rounded-full w-4/6 border border-orange-100" />
+                    </div>
+                    <div className="mt-auto">
+                      <div className="h-10 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-xl w-full flex items-center justify-center text-[10px] font-black text-white shadow-lg">
+                        GRAB OFFER <Zap className="w-3 h-3 ml-1 fill-white" />
+                      </div>
+                      <div className="mt-4 flex justify-between text-[10px] font-bold text-[#FF6B35]">
+                        <span>CR: 3.8%</span>
+                        <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full">+81% LIFT</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                    <span>Trust signal integration</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                    <span>Simplified user experience</span>
+
+                  {/* Legend Overlay */}
+                  <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full border border-gray-200 text-[10px] font-bold text-gray-500 shadow-sm z-20">
+                    STATISTICAL CONFIDENCE: 98.4%
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Industries We Serve */}
-      <section className="relative py-20 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Industries We Serve with CRO</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our conversion rate optimization solutions are tailored for businesses across various industries
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: 'SaaS & Technology', icon: TrendingUp, description: 'Optimize trial conversions and feature adoption', features: ['Free Trial Optimization', 'Pricing Page Improvements', 'Demo Request Optimization', 'Feature Adoption Enhancement'] },
-              { name: 'E-commerce & Retail', icon: Target, description: 'Maximize online sales and revenue', features: ['Product Page Optimization', 'Cart Abandonment Reduction', 'Checkout Optimization', 'Revenue per Visitor Increase'] },
-              { name: 'Lead Generation', icon: Users, description: 'Improve form conversions and lead quality', features: ['Form Conversion Improvement', 'Landing Page Optimization', 'CTA Effectiveness', 'Lead Quality Enhancement'] },
-              { name: 'Professional Services', icon: BarChart3, description: 'Convert more prospects into clients', features: ['Contact Form Optimization', 'Service Page Improvements', 'Consultation Booking Increase', 'Trust Building Elements'] },
-              { name: 'Healthcare & Medical', icon: Zap, description: 'Enhance patient engagement and bookings', features: ['Appointment Booking Optimization', 'Patient Portal Improvements', 'Service Page Optimization', 'Trust Signal Integration'] },
-              { name: 'Financial Services', icon: Award, description: 'Build trust and increase conversions', features: ['Application Form Optimization', 'Trust Signal Integration', 'Security Badge Placement', 'Conversion Funnel Analysis'] }
-            ].map((service, index) => (
-              <motion.div
-                key={service.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className="group cursor-pointer"
-              >
-                <Card className="bg-white/90 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-6 text-center relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF6B35] transition-colors duration-300">{service.name}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <div className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-[#FF6B35] flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-6">
-                      <Button className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-semibold py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        Learn More
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* 5. Pillar 3: Psychological Triggers */}
+        <section className="relative z-10 py-32 bg-[#0F172A] text-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black mb-6">The Neuromarketing Edge</h2>
+              <p className="text-xl text-white/60 max-w-3xl mx-auto">Conversion is psychology. We apply Cialdini&apos;s Principles of Persuasion to build instant trust.</p>
+            </div>
 
-      {/* Process Section */}
-      <section className="relative py-20" id="process">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Proven 4-Step CRO Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A systematic approach designed for predictable growth and efficient conversion rate optimization implementation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processPhases.map((phase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.2,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -10,
-                  transition: { duration: 0.2 }
-                }}
-                className="group"
-              >
-                <Card className="relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <CardContent className="p-6 text-center relative z-10">
-                    <motion.div 
-                      className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {phase.step}
-                    </motion.div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-[#FF6B35] transition-colors duration-300">{phase.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{phase.description}</p>
-                    <motion.div
-                      className="w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-full mt-4"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "100%" }}
-                      transition={{ duration: 1, delay: index * 0.2 + 0.5 }}
-                    />
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CRO Benefits */}
-      <section className="relative py-20" id="benefits">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Conversion Rate Optimization Works</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the key advantages that make CRO the most effective way to maximize revenue from existing traffic.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Immediate ROI", description: "Get more value from your existing website traffic", icon: DollarSign },
-              { title: "Data-Driven Results", description: "Every optimization backed by comprehensive analytics", icon: BarChart3 },
-              { title: "Scalable Growth", description: "Systematic improvements that compound over time", icon: TrendingUp },
-              { title: "Cost-Effective", description: "Lower cost per acquisition than paid advertising", icon: Target }
-            ].map((benefit, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="group cursor-pointer"
-              >
-                <div className="bg-white/80 backdrop-blur-xl rounded-lg p-6 text-center border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                  <motion.div
-                    whileHover={{ rotate: 360, scale: 1.2 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <benefit.icon className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:text-[#FF8A50] transition-colors duration-300" />
-                  </motion.div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-[#FF6B35] transition-colors duration-300">{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm">{benefit.description}</p>
-                  <motion.div
-                    className="w-full h-0.5 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] rounded-full mt-4"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="relative py-20" id="pricing">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">CRO Pricing & Packages</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose the perfect conversion rate optimization package for your business needs.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pricingTiers.map((tier) => (
-              <Card key={tier.name} className="bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
-                  <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-3xl font-bold mb-2">{tier.price}</div>
-                  <p className="text-gray-600">{tier.includes}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="relative py-20" id="case-studies">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Success Stories & Case Studies</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real results from our conversion rate optimization campaigns across different industries.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <div className="text-center mb-4">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] mb-2">{study.result}</div>
-                    <h3 className="text-xl font-semibold text-gray-900">{study.industry}</h3>
+            <div className="grid md:grid-cols-3 gap-12">
+              {[
+                { title: "Social Proof 2.0", desc: "Moving beyond generic testimonials to 'Social Pulse' notifications and verified cues.", icon: Share2 },
+                { title: "Loss Aversion", desc: "Using strategic urgency and scarcity without being manipulative to drive action.", icon: Zap },
+                { title: "Cognitive Ease", desc: "Simplifying 'Choice Architecture' so users never have to think about their next move.", icon: Brain }
+              ].map((item, idx) => (
+                <div key={idx} className="group flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-white/5 rounded-3xl flex items-center justify-center mb-8 border border-white/10 group-hover:border-[#FF6B35]/50 transition-all group-hover:bg-[#FF6B35]/10">
+                    <item.icon className="w-10 h-10 text-[#FF6B35]" />
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{study.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="relative py-20" id="faqs">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Answers to common questions about conversion rate optimization services.</p>
-          </div>
-
-          <div className="space-y-6">
-            {faqData.map((faq, index) => (
-              <Card key={index} className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Advanced CRO Features */}
-      <section className="relative py-20 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Advanced CRO Tools & Technologies</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful tools and technologies to maximize your conversion rate optimization success
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <BarChart3 className="h-8 w-8 text-[#FF6B35]" />
-                <span className="text-2xl font-bold text-[#FF6B35]">35%</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Average Conversion Increase</h3>
-              <p className="text-gray-600 text-sm">Typical improvement in conversion rates</p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <Target className="h-8 w-8 text-[#FF8A50]" />
-                <span className="text-2xl font-bold text-[#FF8A50]">223%</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Average ROI</h3>
-              <p className="text-gray-600 text-sm">Return on CRO investment</p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <Zap className="h-8 w-8 text-[#FF6B35]" />
-                <span className="text-2xl font-bold text-[#FF6B35]">90</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Days to Results</h3>
-              <p className="text-gray-600 text-sm">Typical timeframe for significant improvements</p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <TrendingUp className="h-8 w-8 text-[#FF8A50]" />
-                <span className="text-2xl font-bold text-[#FF8A50]">68%</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Testing Success Rate</h3>
-              <p className="text-gray-600 text-sm">Percentage of tests that show positive results</p>
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-white/40 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Testimonials */}
-      <Testimonials />
+        {/* 6. The "Conversion Lift" Matrix */}
+        <section className="relative z-10 py-32 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-16 text-center">The Conversion Lift Matrix</h2>
 
-      {/* Contact CTA */}
-      <ContactCTA
-        title="Ready to Boost Your Conversion Rates?"
-        description="Get a free CRO audit and custom strategy. Discover exactly how to turn more visitors into customers and maximize revenue from your existing traffic."
-        primaryButtonText="Get Free CRO Audit"
-        secondaryButtonText="Schedule Strategy Call"
-      />
-
-      {/* Internal Links */}
-      <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Conversion Rate Optimization Solutions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive CRO services, industry specializations, and related digital marketing offerings
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* CRO & Optimization Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">CRO & Optimization Services</h3>
-              <div className="space-y-3">
-                <Link href="/conversion-rate-optimization" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Conversion Rate Optimization</Link>
-                <Link href="/website-development" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Website Development</Link>
-                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
-                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
-              </div>
-            </div>
-
-            {/* Industry Applications */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Applications</h3>
-              <div className="space-y-3">
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate CRO</Link>
-                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Lead Generation</Link>
-                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">E-commerce Optimization</Link>
-                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Healthcare CRO</Link>
-              </div>
-            </div>
-
-            {/* Related Services */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Services</h3>
-              <div className="space-y-3">
-                <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-                <Link href="/website-development" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Website Development</Link>
-                <Link href="/branding" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Branding Services</Link>
-              </div>
-            </div>
-
-            {/* Company & Support */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Company & Support</h3>
-              <div className="space-y-3">
-                <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
-                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Us</Link>
-                <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</Link>
-                <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Free Marketing Audit</Link>
-              </div>
+            <div className="overflow-x-auto rounded-[3rem] bg-[#0F172A] shadow-2xl">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-white/5">
+                    <th className="px-10 py-8 text-sm font-bold uppercase tracking-wider text-gray-400">Element</th>
+                    <th className="px-10 py-8 text-sm font-bold uppercase tracking-wider text-gray-400">Standard Web Design</th>
+                    <th className="px-10 py-8 text-sm font-bold uppercase tracking-wider text-[#FF6B35]">Frameleads CRO Engine</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                  {[
+                    { item: "Design Logic", standard: "Aesthetic Preference", cro: "Data-Backed Performance" },
+                    { item: "Mobile UX", standard: "Responsive Only", cro: "Mobile-First Interaction (INP)" },
+                    { item: "Call-to-Action", standard: "Single / Static", cro: "Dynamic / Intent-Based" },
+                    { item: "Copywriting", standard: "Feature-Focused", cro: "Benefit & Objection-Based" },
+                    { item: "Load Speed", standard: "3 - 5 Seconds", cro: "< 1.5 Seconds (LCP Optimized)" }
+                  ].map((row, idx) => (
+                    <tr key={idx} className="hover:bg-white/5 transition-colors">
+                      <td className="px-10 py-8 font-bold text-gray-100">{row.item}</td>
+                      <td className="px-10 py-8 text-gray-400 italic">{row.standard}</td>
+                      <td className="px-10 py-8 text-[#FF6B35] font-black">{row.cro}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Floating Action Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
-        className="fixed bottom-8 right-8 z-50"
-      >
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="relative"
-        >
-          <Link href="/contact">
-            <Button className="w-14 h-14 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-[#FF6B35]/50 transition-all duration-300">
-              <Phone className="h-6 w-6" />
-            </Button>
-          </Link>
-          <motion.div
-            className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            !
-          </motion.div>
-        </motion.div>
-      </motion.div>
+        {/* 7. Deep-Dive FAQ */}
+        <section className="py-24 bg-[#F8FAFC]">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-16 text-center">Optimizing Knowledge</h2>
 
-      
-    </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "What is a 'Good' Conversion Rate for my industry?",
+                  a: "While averages vary (2% for E-com, 5-10% for B2B), we focus on Incremental Lift. A 1% increase for a $1M business is an extra $10k/month without spending a penny more on ads."
+                },
+                {
+                  q: "How does CRO affect my SEO and Google Ads?",
+                  a: "CRO is a massive ranking factor. If users stay and convert, Google views your page as 'High Quality,' which lowers your PPC Cost-Per-Click and boosts Organic Rankings."
+                },
+                {
+                  q: "What tools do you use for heatmapping and testing?",
+                  a: "We utilize enterprise-level tools like Hotjar, Microsoft Clarity, and VWO. This allows us to gather both qualitative and quantitative data for every hypothesis."
+                }
+              ].map((faq, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 shadow-xl rounded-[2.5rem] p-10 hover:shadow-2xl transition-all group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">{faq.q}</h3>
+                  <p className="text-gray-600 text-lg leading-relaxed pl-4">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 9. Final Call to Action */}
+        <section className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+          <div className="bg-[#0F172A] rounded-[3.5rem] overflow-hidden relative shadow-2xl p-12 md:p-24 text-center">
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] opacity-10 rounded-full blur-[120px] -mr-60 -mt-60 pointer-events-none" />
+
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1]">
+                Is Your Website Your Best Salesman or <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50]">Your Biggest Bottleneck?</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Most websites are designed to look pretty, not to sell. Our Conversion Leak Audit identifies the exact friction points costing you sales right now.
+              </p>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] text-white font-black text-xl rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
+                Claim My Free Conversion Audit <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform text-white" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Link Silo Section */}
+        <section className="relative z-10 py-16 max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-[3rem] shadow-xl border border-gray-100 p-8 md:p-16">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-black text-gray-900 mb-4">Complete Your Technical Ecosystem</h2>
+              <p className="text-gray-600">Sync your conversion intelligence with high-performance tracking and search dominance.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+              {[
+                { label: 'Google Ads', href: '/google-ads', icon: Target, desc: 'Value-Based Bidding & Yield.' },
+                { label: 'PPC Management', href: '/ppc-management', icon: Activity, desc: 'Revenue orchestration.' },
+                { label: 'SEO Dominance', href: '/seo-services', icon: Search, desc: 'Search authority framework.' },
+                { label: 'Social Marketing', href: '/Social-media-marketing', icon: Share2, desc: 'Conversion-first architecture.' },
+                { label: 'Content Strategy', href: '/content-marketing', icon: PenTool, desc: 'Entity-based authority.' },
+                { label: 'WhatsApp Marketing', href: '/whatsapp-marketing', icon: MessageCircle, desc: 'Conversational ROI.' },
+                { label: 'Data & Automation', href: '/analytics-and-automations', icon: Cpu, desc: 'Unified Data Intelligence.' },
+                { label: 'Digital Marketing', href: '/digital-marketing-services', icon: BarChart3, desc: 'Full-funnel architecture.' },
+                { label: 'Email Automation', href: '/email-marketing-and-automation-services', icon: Mail, desc: 'Lifecycle revenue engine.' },
+                { label: 'Brand Strategy', href: '/branding', icon: Palette, desc: 'Market-Dominant Identity.' }
+              ].map((link, i) => (
+                <Link key={i} href={link.href} className="group p-8 bg-gradient-to-br from-[#F8F9FA] to-white rounded-3xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-2xl transition-all duration-500">
+                  <link.icon className={`w-12 h-12 ${link.label === 'WhatsApp Marketing' ? 'text-[#25D366]' : 'text-[#FF6B35]'} mx-auto mb-6`} />
+                  <h3 className={`text-xl font-bold text-gray-900 ${link.label === 'WhatsApp Marketing' ? 'group-hover:text-[#25D366]' : 'group-hover:text-[#FF6B35]'} transition-colors mb-2`}>{link.label}</h3>
+                  <p className="text-gray-600 text-sm">{link.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <style jsx global>{`
+        @keyframes scan {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100%); }
+        }
+        .animate-scan {
+          animation: scan 8s linear infinite;
+        }
+        @keyframes progress {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+        .animate-progress {
+          animation: progress 2s ease-in-out infinite;
+        }
+      `}</style>
     </>
   )
 }

@@ -1,114 +1,138 @@
 import Link from 'next/link'
 import {
-  Zap,
   Target,
   Database,
   CheckCircle2,
-  ArrowRight,
-  TrendingUp,
   ShieldCheck,
   BarChart3,
   Search,
   Layers,
-  Brain,
   Link2,
-  FileText,
   DollarSign,
-  Palette,
-  AlertTriangle,
   MousePointer,
-  LineChart,
-  Users,
   Gauge,
   Globe,
-  Flame,
-  Award,
-  XCircle
+  Cpu,
+  Bot,
+  Activity,
+  ChevronRight,
+  TrendingUp,
+  Users,
+  Brain,
+  Zap,
+  PenTool,
+  Share2,
+  MessageCircle,
+  Mail,
+  Palette,
+  Code,
+  Video,
+  Linkedin,
+  Music,
+  Smartphone
 } from 'lucide-react'
+import RoiChart from './RoiChart'
 
 export const metadata = {
-  title: 'Digital Marketing Services | Performance-Driven Growth | Frameleads',
-  description: 'Stop renting traffic. Frameleads builds revenue ecosystems through AI-optimized SEO, high-intent PPC, and conversion-first design. Get your growth audit today.',
-  keywords: ['Digital Marketing Services', 'SEO Services', 'PPC Management', 'AIO Optimization', 'CRO', 'Revenue Ecosystem', 'Performance Marketing'],
+  title: 'Digital Marketing Services 2026 | Agentic SEO & VBB | Frameleads',
+  description: 'Frameleads is a performance agency integrating Semantic SEO and Value-Based Bidding. Reduce CAC by 34% with our 2026 Growth Hub architecture.',
+  keywords: ['Digital Marketing Services', 'Agentic SEO', 'Value-Based Bidding', 'Semantic Entity Mapping', 'Generative Engine Optimization', 'GEO', 'CRO'],
   openGraph: {
-    title: 'Digital Marketing Services | Performance-Driven Growth | Frameleads',
-    description: 'Stop renting traffic. Frameleads builds revenue ecosystems through AI-optimized SEO, high-intent PPC, and conversion-first design. Get your growth audit today.',
+    title: 'Digital Marketing Services 2026 | Agentic SEO & VBB | Frameleads',
+    description: 'Frameleads is a performance agency integrating Semantic SEO and Value-Based Bidding.',
     type: 'website',
     images: ['/og-digital-marketing-services.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Services | Performance-Driven Growth | Frameleads',
-    description: 'Stop renting traffic. Frameleads builds revenue ecosystems through AI-optimized SEO, high-intent PPC, and conversion-first design.',
+    title: 'Digital Marketing Services 2026 | Agentic SEO & VBB | Frameleads',
+    description: 'Frameleads is a performance agency integrating Semantic SEO and Value-Based Bidding.',
   }
 }
 
-// JSON-LD Structured Data for SEO
-const jsonLd = {
+// Technical Schema Infrastructure (The "AIO Passport")
+const jsonLdService = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Frameleads Digital Marketing Services",
-  "description": "Performance-driven digital marketing services including SEO, AIO, PPC, and CRO to build revenue ecosystems.",
+  "name": "Frameleads",
   "url": "https://frameleads.com/digital-marketing-services",
-  "telephone": "+91 6362821368",
-  "email": "ajsal@frameleads.com",
-  "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "200"
+  "logo": "https://frameleads.com/logo.png",
+  "description": "High-performance digital marketing agency specializing in GEO, AIO, and Value-Based PPC.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressCountry": "IN"
   },
+  "knowsAbout": ["Generative Engine Optimization", "Google Ads Management", "AIO Strategy", "Entity SEO", "Value-Based Bidding"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Digital Marketing Services",
+    "name": "Digital Marketing Ecosystem",
     "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Search Engine Optimization (SEO & AIO)",
-          "description": "Dominating AI Overviews and Organic Search with technical authority and topical clusters"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Performance Marketing (Google & Meta Ads)",
-          "description": "Value-based bidding and creative velocity for instant, profitable visibility"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Conversion Rate Optimization (CRO)",
-          "description": "Heatmap analysis and A/B testing to turn traffic into transactions"
-        }
-      }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Search Intelligence (SEO & GEO)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "High-Velocity Paid Media (Google & Meta)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion Engineering (CRO & UX)" } }
     ]
   }
 }
 
-// FAQ Schema for "People Also Ask" optimization
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do you measure the success of a marketing campaign?",
+      "name": "How long does it take for GEO (Generative Engine Optimization) to work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We focus on MER (Marketing Efficiency Ratio) and LTV (Lifetime Value). While most agencies report on vanity metrics like impressions, we report on the actual cost to acquire a paying customer."
+        "text": "Unlike traditional SEO, GEO results can appear in weeks as LLMs (Large Language Models) refresh their training data and real-time search capabilities. Our goal is to secure your first AI citation within 45 days."
       }
     },
     {
       "@type": "Question",
-      "name": "Will my brand appear in Google's AI Overviews?",
+      "name": "Why is my Google Ads CPA rising even with more clicks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our SEO strategy includes Schema Markup and Entity Linking, which are the primary triggers for being cited in AI-generated search results."
+        "text": "This is usually caused by 'Signal Noise.' If you don't use Offline Conversion Tracking, Google’s AI optimizes for 'easy clicks' rather than 'hard sales.' We fix the signal bridge to lower your effective CPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Value-Based Bidding (VBB)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VBB is a Google Ads strategy that uses machine learning to bid more aggressively on users likely to have a high Lifetime Value (LTV), rather than just anyone who clicks an ad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Frameleads bridge the signal gap between ads and revenue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We integrate your CRM directly with ad platforms like Google and Meta. This allows us to feed real sales data back into the bidding algorithms, training the AI to target conversion types that actually drive your bottom line."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 'Data Orchestration' in digital marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data Orchestration is the process of unifying tracking signals across all platforms (Search, Social, Display) and your CRM. This ensures that every marketing dollar is tracked through the entire journey, preventing data silos and double-counting of conversions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I expect in the first 90 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first 30 days are dedicated to 'Signal Audit' and setup. By day 60, we achieve 'Algorithmic Stabilization,' where we see consistent CPA reductions. By day 90, we transition into scale mode, leveraging stabilized bidding models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which advertising channels do you manage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide full-stack management for Google Ads (Search, PMax, YouTube), Meta Ads (Facebook & Instagram), LinkedIn Ads, and Microsoft Ads, all unified under our profit-driven orchestration framework."
       }
     }
   ]
@@ -117,490 +141,476 @@ const faqSchema = {
 export default function DigitalMarketingServicesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="min-h-screen bg-[#FDF8F5] text-slate-800 font-sans selection:bg-[#FF6B35] selection:text-white pb-20">
+      {/* Frameleads Light Theme Base */}
+      <div className="min-h-screen bg-[#FDF8F5] text-slate-800 font-sans selection:bg-[#FF6B35] selection:text-white pb-32 overflow-x-hidden">
 
-        {/* Organic Background Elements */}
+        {/* Abstract Ambient Glows */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="absolute -top-[10%] -right-[10%] w-[50vw] h-[50vw] bg-[#FF6B35] opacity-[0.03] rounded-full blur-[100px]" />
-          <div className="absolute top-[20%] -left-[10%] w-[40vw] h-[40vw] bg-[#FF9055] opacity-[0.03] rounded-full blur-[100px]" />
-          <div className="absolute bottom-[10%] right-[10%] w-[30vw] h-[30vw] bg-[#FF6B35] opacity-[0.04] rounded-full blur-[100px]" />
+          <div className="absolute top-[0%] left-[-10%] w-[50vw] h-[50vw] bg-[#FF6B35] opacity-[0.03] rounded-full blur-[120px]" />
+          <div className="absolute top-[40%] right-[-10%] w-[40vw] h-[40vw] bg-[#FF9055] opacity-[0.03] rounded-full blur-[120px]" />
         </div>
 
-        {/* Hero Section: The Authority Hook */}
-        <header className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white/80 backdrop-blur-sm border-b border-[#FF6B35]/10">
-          <div className="max-w-5xl mx-auto relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] font-medium text-sm mb-8 border border-[#FF6B35]/20 animate-fade-in-up">
-              <Flame className="w-4 h-4" />
-              <span>Performance-Driven Growth Agency</span>
-            </div>
+        {/* Hero Section */}
+        <header className="relative pt-40 pb-24 px-4 sm:px-6 lg:px-8 border-b border-[#FF6B35]/10 bg-white/80 backdrop-blur-xl z-20">
+          <div className="max-w-6xl mx-auto text-center relative">
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-8 leading-[1.1]">
-              Marketing That Scales With <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055]">Logic, Not Just Luck.</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gray-900 mb-8 leading-[1]">
+              Architect Your <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055]">Unfair Advantage.</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-10">
-              Most agencies buy clicks. <span className="font-semibold text-gray-900">We build revenue ecosystems.</span> Frameleads integrates SEO, high-intent PPC, and conversion-first design to dominate the search landscape.
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
+              We bypass broken funnels and outdated keywords. Welcome to the <strong className="text-gray-900">AI-First Marketing Ecosystem</strong>. Lower CAC. Higher LTV. Infinite Scale.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF6B35] to-[#FF9055] text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 hover:scale-105 transition-all duration-300">
-                <Zap className="w-5 h-5" />
-                Get a Free Growth Blueprint
-              </Link>
-              <Link href="#case-studies" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border border-gray-200 hover:border-[#FF6B35]/30 hover:text-[#FF6B35] transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link href="#roi-calculator" className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#FF6B35] to-[#FF9055] text-white font-bold tracking-wide rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 hover:scale-105 transition-all duration-300">
                 <BarChart3 className="w-5 h-5" />
-                View Our Performance Data
+                Open Growth Calculator
               </Link>
-            </div>
-
-            {/* Trust Bar */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-600 font-medium">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#FF6B35]" />
-                <span>Google Premier Partner</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Target className="w-5 h-5 text-[#FF6B35]" />
-                <span>Meta Business Partner</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <LineChart className="w-5 h-5 text-[#FF6B35]" />
-                <span>ROI-Driven Analytics</span>
-              </div>
             </div>
           </div>
         </header>
 
-        {/* Section 1: The "Digital Intelligence" Framework */}
-        <section className="relative z-10 py-20 bg-white border-b border-gray-100">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
-                <Brain className="w-8 h-8 text-[#FF6B35]" />
-                Why Frameleads Outperforms the Standard Agency
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                The Frameleads <span className="font-semibold text-gray-900">Semantic Engine</span>: Our proprietary framework for predictable growth.
-              </p>
-            </div>
+        {/* Main Pillar Layout */}
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 outline-none relative z-10">
+          <div className="flex flex-col lg:flex-row gap-16">
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Data-Backed Strategy */}
-              <div className="group bg-gradient-to-br from-[#F8F9FA] to-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Database className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Data-Backed Strategy</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  We don&apos;t guess. We use <strong className="text-gray-900">predictive analytics</strong> to identify where your customers are before they search.
-                </p>
+            {/* Sticky Sidebar Navigation */}
+            <nav className="lg:w-72 flex-shrink-0 order-2 lg:order-1 hidden lg:block">
+              <div className="sticky top-32 bg-white border border-gray-100 rounded-2xl p-6 shadow-xl">
+                <h4 className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-6 px-4">Navigation_</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="#summary" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <Bot className="w-4 h-4" />
+                      Summary
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#search-intelligence" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <Globe className="w-4 h-4" />
+                      Search Intelligence
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#paid-media" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <Target className="w-4 h-4" />
+                      Paid Media (VBB)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#conversion-engineering" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <MousePointer className="w-4 h-4" />
+                      Conversion Engineering
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#roi-calculator" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <BarChart3 className="w-4 h-4" />
+                      Interactive Chart
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#faq" className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-600 hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 rounded-xl transition-all">
+                      <Search className="w-4 h-4" />
+                      FAQ
+                    </Link>
+                  </li>
+                </ul>
               </div>
+            </nav>
 
-              {/* The Signal Bridge */}
-              <div className="group bg-gradient-to-br from-[#F8F9FA] to-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Link2 className="w-7 h-7 text-white" />
+            {/* Content Area */}
+            <main className="lg:flex-1 order-1 lg:order-2 space-y-32">
+
+              {/* 1. Summary */}
+              <section id="summary" className="scroll-mt-32">
+                <aside className="bg-gradient-to-r from-gray-50 to-white p-8 md:p-10 rounded-3xl border-l-4 border-[#FF6B35] relative overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#FF6B35]/5 rounded-full blur-[50px] pointer-events-none" />
+                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+                    Frameleads is a specialized performance agency integrating Semantic SEO and Value-Based Bidding to eliminate &quot;Ghost Clicks&quot; in digital advertising. Our framework bridges the gap between ad platform signals and real-world CRM revenue, achieving an average <strong className="text-[#FF6B35]">34% reduction in Customer Acquisition Cost (CAC)</strong> for mid-market brands.
+                  </p>
+                </aside>
+              </section>
+
+              {/* 2. Search Intelligence (SEO & GEO) */}
+              <section id="search-intelligence" className="scroll-mt-32 border-t border-gray-200 pt-16 relative">
+                <div className="absolute left-[-2rem] top-32 w-1.5 h-32 bg-gradient-to-b from-transparent via-[#FF6B35] to-transparent opacity-50 hidden lg:block" />
+                <div className="flex items-center gap-4 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Search Intelligence (SEO & GEO)</h2>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">The Signal Bridge</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  We connect your CRM directly to your ad platforms. This teaches Google and Meta to find you <strong className="text-gray-900">Buyers, not just Leads</strong>.
-                </p>
-              </div>
+                <p className="text-2xl text-gray-500 font-medium mb-12">From Blue Links to AI Citations.</p>
 
-              {/* Full-Funnel Content */}
-              <div className="group bg-gradient-to-br from-[#F8F9FA] to-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-[#FF6B35]/30">
-                <div className="w-14 h-14 bg-[#FF6B35] rounded-2xl shadow-lg shadow-[#FF6B35]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <FileText className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Full-Funnel Content</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  From <strong className="text-gray-900">AIO-optimized blogs</strong> to high-converting landing pages, we own every touchpoint of the customer journey.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 2: Our Growth Verticals (Service Blocks) */}
-        <section className="relative z-10 py-20" id="services">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
-                <Layers className="w-8 h-8 text-[#FF6B35]" />
-                Our Growth Verticals
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Specialized strategies designed to maximize every channel.
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {/* 01. SEO & AIO */}
-              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
-                <div className="flex flex-col lg:flex-row">
-                  <div className="lg:w-1/3 bg-gradient-to-br from-[#FF6B35] to-[#FF9055] p-8 lg:p-12 text-white">
-                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-white/20 rounded-full text-sm font-bold mb-4 border border-white/30">
-                      01
-                    </span>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Search Engine Optimization (SEO & AIO)</h3>
-                    <p className="text-white/90 font-medium">
-                      The Goal: <span className="font-bold">Dominating the AI Overview and the Organic 10.</span>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-[#FF6B35]/30 hover:shadow-lg transition-all">
+                    <div className="mb-6 flex items-center justify-between">
+                      <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center">
+                        <Activity className="w-6 h-6 text-[#FF6B35]" />
+                      </div>
+                    </div>
+                    <strong className="text-gray-900 block text-lg mb-2 font-mono uppercase tracking-wide">The Problem</strong>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      60% of searches are now <strong className="text-gray-900">&quot;Zero-Click&quot;</strong>—users get answers from AI without visiting a site. Explore our <Link href="/seo-services" className="text-[#FF6B35] font-semibold hover:underline">advanced SEO strategies</Link> to stay ahead.
                     </p>
                   </div>
-                  <div className="lg:w-2/3 p-8 lg:p-12">
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <Gauge className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">Technical Authority</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We fix your site&apos;s core vitals and architecture for <strong className="text-gray-900">0.5s load times</strong>.</p>
-                      </div>
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <Layers className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">Topical Clusters</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We build <strong className="text-gray-900">&quot;Authority Hubs&quot;</strong> that prove to Google you are the definitive expert in your niche.</p>
-                      </div>
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <Brain className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">SGE Optimization</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We structure your content specifically to be <strong className="text-gray-900">cited by AI search engines</strong>.</p>
-                      </div>
-                    </div>
-                    <div className="mt-8 pt-6 border-t border-gray-100">
-                      <Link href="/seo-services" className="inline-flex items-center gap-2 text-[#FF6B35] font-semibold hover:gap-3 transition-all duration-300">
-                        Learn more about SEO Services
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* 02. Performance Marketing */}
-              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
-                <div className="flex flex-col lg:flex-row">
-                  <div className="lg:w-1/3 bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 text-white">
-                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-[#FF6B35] rounded-full text-sm font-bold mb-4">
-                      02
-                    </span>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Performance Marketing (Google & Meta Ads)</h3>
-                    <p className="text-white/90 font-medium">
-                      The Goal: <span className="font-bold">Instant, Profitable Visibility.</span>
+                  <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group hover:border-[#FF6B35]/30 hover:shadow-lg transition-all">
+                    <div className="mb-6 flex items-center justify-between">
+                      <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center">
+                        <Globe className="w-6 h-6 text-[#FF6B35]" />
+                      </div>
+                    </div>
+                    <strong className="text-gray-900 block text-lg mb-2 font-mono uppercase tracking-wide">The Strategy</strong>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      We move beyond keywords to Entity-Based SEO. We map your brand as a <strong className="text-gray-900">&quot;Trusted Authority&quot;</strong> in Google&apos;s Knowledge Graph.
                     </p>
                   </div>
-                  <div className="lg:w-2/3 p-8 lg:p-12">
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <DollarSign className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">Value-Based Bidding</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We optimize for <strong className="text-gray-900">your profit margins</strong>, not just click-through rates.</p>
-                      </div>
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <Palette className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">Creative Velocity</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">Our design team produces <strong className="text-gray-900">high-frequency ad variations</strong> to prevent audience fatigue.</p>
-                      </div>
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <ShieldCheck className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">PMax Guardrails</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We apply human intelligence to Google&apos;s automation to ensure your budget isn&apos;t wasted on <strong className="text-gray-900">&quot;Ghost Clicks.&quot;</strong></p>
-                      </div>
-                    </div>
-                    <div className="mt-8 pt-6 border-t border-gray-100">
-                      <Link href="/google-ads" className="inline-flex items-center gap-2 text-[#FF6B35] font-semibold hover:gap-3 transition-all duration-300">
-                        Learn more about Google Ads
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* 03. CRO */}
-              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
-                <div className="flex flex-col lg:flex-row">
-                  <div className="lg:w-1/3 bg-gradient-to-br from-[#10B981] to-[#059669] p-8 lg:p-12 text-white">
-                    <span className="inline-flex items-center justify-center px-4 py-1.5 bg-white/20 rounded-full text-sm font-bold mb-4 border border-white/30">
-                      03
-                    </span>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4">Conversion Rate Optimization (CRO)</h3>
-                    <p className="text-white/90 font-medium">
-                      The Goal: <span className="font-bold">Turning Traffic into Transactions.</span>
+                  <div className="md:col-span-2 bg-gradient-to-br from-[#FFF5F0] to-[#FDF8F5] p-8 md:p-12 rounded-3xl border border-[#FF6B35]/20 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6B35]/10 rounded-full blur-[40px] pointer-events-none" />
+                    <strong className="text-[#FF6B35] block text-lg mb-4 font-mono uppercase tracking-wide flex items-center gap-3 relative z-10">
+                      <Cpu className="w-5 h-5" /> The Action
+                    </strong>
+                    <p className="text-gray-800 leading-relaxed text-xl md:text-2xl font-serif italic relative z-10">
+                      &quot;We structure your technical data so that when a user asks ChatGPT or Gemini for a recommendation, Frameleads clients are the answer.&quot;
                     </p>
                   </div>
-                  <div className="lg:w-2/3 p-8 lg:p-12">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <MousePointer className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">Heatmap Analysis</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">We track where users get stuck and <strong className="text-gray-900">re-engineer the UI</strong> to remove friction.</p>
-                      </div>
-                      <div className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center group-hover:bg-[#FF6B35] transition-colors duration-300">
-                            <BarChart3 className="w-5 h-5 text-[#FF6B35] group-hover:text-white transition-colors duration-300" />
-                          </div>
-                          <h4 className="font-bold text-gray-900">A/B Testing</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm leading-relaxed">Constant iteration of headlines, buttons, and layouts to <strong className="text-gray-900">maximize every dollar of traffic</strong>.</p>
-                      </div>
+                </div>
+              </section>
+
+              {/* 3. High-Velocity Paid Media */}
+              <section id="paid-media" className="scroll-mt-32 border-t border-gray-200 pt-16 relative">
+                <div className="absolute left-[-2rem] top-32 w-1.5 h-32 bg-gradient-to-b from-transparent via-[#FF6B35] to-transparent opacity-50 hidden lg:block" />
+                <div className="flex items-center gap-4 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">High-Velocity Paid Media (Google & Meta)</h2>
+                </div>
+                <p className="text-2xl text-gray-500 font-medium mb-12">Bidding on Profit, Not Just Clicks.</p>
+
+                <div className="space-y-6">
+                  <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-start group hover:border-[#FF6B35]/30 hover:shadow-lg transition-all">
+                    <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                      <DollarSign className="w-8 h-8 text-[#FF6B35]" />
                     </div>
-                    <div className="mt-8 pt-6 border-t border-gray-100">
-                      <Link href="/conversion-rate-optimization" className="inline-flex items-center gap-2 text-[#FF6B35] font-semibold hover:gap-3 transition-all duration-300">
-                        Learn more about CRO Services
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Value-Based Bidding (VBB)</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        We don&apos;t just optimize for a $5 lead. We feed your actual sales data back to Google&apos;s AI to find the <strong className="text-gray-900">$50,000 customer</strong> through high-performance <Link href="/google-ads" className="text-[#FF6B35] font-semibold hover:underline">Google Ads management</Link>.
+                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Dynamic Stats Ticker */}
-        <section className="relative z-10 py-16 bg-[#0F172A] overflow-hidden">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] opacity-20 rounded-full blur-[120px] -mr-40 -mt-40 pointer-events-none" />
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055] mb-2">
-                  $50M+
-                </div>
-                <p className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">Total Managed Spend</p>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055] mb-2">
-                  42%
-                </div>
-                <p className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">Avg. CPA Reduction</p>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055] mb-2">
-                  4.5x
-                </div>
-                <p className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">Average ROAS</p>
-              </div>
-              <div className="group">
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055] mb-2">
-                  200+
-                </div>
-                <p className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors">Brands Scaled</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: The "Deep Answer" FAQ */}
-        <section className="relative z-10 py-20" id="faq">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3">
-                <Search className="w-8 h-8 text-[#FF6B35]" />
-                The &quot;Deep Answer&quot; FAQ
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Real answers to the questions that matter.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
-                <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors pl-4">
-                  How do you measure the success of a marketing campaign?
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-4">
-                  We focus on <strong className="text-gray-900">MER (Marketing Efficiency Ratio)</strong> and <strong className="text-gray-900">LTV (Lifetime Value)</strong>. While most agencies report on vanity metrics like impressions, we report on the actual cost to acquire a paying customer. This is the only metric that matters for sustainable growth.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#FF6B35] to-[#FF9055]" />
-                <h3 className="font-bold text-gray-900 text-xl mb-4 group-hover:text-[#FF6B35] transition-colors pl-4">
-                  Will my brand appear in Google&apos;s AI Overviews?
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-4">
-                  Our SEO strategy includes <strong className="text-gray-900">Schema Markup</strong> and <strong className="text-gray-900">Entity Linking</strong>, which are the primary triggers for being cited in AI-generated search results. We structure your content to be the definitive source that AI engines want to quote.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: Social Proof & Velocity */}
-        <section className="relative z-10 py-20 bg-gradient-to-br from-[#F8F9FA] to-white" id="case-studies">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                We don&apos;t work with everyone.
-              </h2>
-              <p className="text-xl text-gray-600">
-                We work with brands ready to lead.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Case Study 1 */}
-              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 hover:shadow-2xl transition-all duration-500 group">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#FF6B35] to-[#FF9055] rounded-2xl flex items-center justify-center">
-                    <TrendingUp className="w-7 h-7 text-white" />
+                  <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-start group hover:border-[#FF6B35]/30 hover:shadow-lg transition-all">
+                    <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                      <ShieldCheck className="w-8 h-8 text-[#FF6B35]" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Performance Max Guardrails</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        Most agencies let Google&apos;s AI run wild. We apply human-led &quot;Negative Keyword&quot; and &quot;Placement&quot; filters and specialized <Link href="/Meta-ads" className="text-[#FF6B35] font-semibold hover:underline">Meta Ads strategies</Link> to ensure your budget isn&apos;t spent on junk mobile games.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-sm text-[#FF6B35] font-medium">B2B SaaS</span>
-                    <h3 className="text-xl font-bold text-gray-900">90-Day Transformation</h3>
+
+                  <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-start group hover:border-[#FF6B35]/30 hover:shadow-lg transition-all">
+                    <div className="w-16 h-16 bg-[#FF6B35]/10 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                      <Link2 className="w-8 h-8 text-[#FF6B35]" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">The Signal Bridge</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">
+                        We integrate your CRM (Salesforce, HubSpot, etc.) directly into the ad auction. The feedback loop is instantaneous.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  How we reduced CPA by <strong className="text-gray-900">42%</strong> for a B2B SaaS client in 90 days through systematic value-based bidding and creative testing.
-                </p>
-                <div className="flex items-center gap-2 text-[#FF6B35] font-semibold">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>42% CPA Reduction</span>
-                </div>
-              </div>
+              </section>
 
-              {/* Case Study 2 */}
-              <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 hover:shadow-2xl transition-all duration-500 group">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#10B981] to-[#059669] rounded-2xl flex items-center justify-center">
-                    <DollarSign className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <span className="text-sm text-[#10B981] font-medium">E-commerce</span>
-                    <h3 className="text-xl font-bold text-gray-900">Scale at Efficiency</h3>
-                  </div>
+              {/* 4. Conversion Engineering */}
+              <section id="conversion-engineering" className="scroll-mt-32 border-t border-gray-200 pt-16 relative">
+                <div className="absolute left-[-2rem] top-32 w-1.5 h-32 bg-gradient-to-b from-transparent via-[#FF6B35] to-transparent opacity-50 hidden lg:block" />
+                <div className="flex items-center gap-4 mb-4">
+                  <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Conversion Engineering (CRO & UX)</h2>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Scaling an E-commerce brand from <strong className="text-gray-900">$10k to $150k</strong> monthly spend while maintaining a healthy <strong className="text-gray-900">4.5x ROAS</strong>.
-                </p>
-                <div className="flex items-center gap-2 text-[#10B981] font-semibold">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>4.5x ROAS at Scale</span>
-                </div>
-              </div>
-            </div>
+                <p className="text-2xl text-gray-500 font-medium mb-12">Traffic is a Commodity. Conversions are a Competitive Advantage.</p>
 
-            {/* Anti-Persona Callout */}
-            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-3xl p-8 border border-red-100">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <XCircle className="w-6 h-6 text-red-600" />
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-lg transition-all">
+                    <div className="absolute right-0 top-0 w-32 h-32 bg-[#FF6B35]/5 rounded-bl-[100px]" />
+                    <div className="w-14 h-14 bg-[#FF6B35]/10 rounded-2xl flex items-center justify-center mb-6">
+                      <Gauge className="w-7 h-7 text-[#FF6B35]" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Kinetic UI Design</h4>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Every millisecond matters. We optimize for <strong className="text-gray-900">INP (Interaction to Next Paint)</strong> to ensure your site feels instantaneous on 5G connections. Speed dictates trust.
+                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-lg transition-all">
+                    <div className="absolute right-0 top-0 w-32 h-32 bg-[#FF6B35]/5 rounded-bl-[100px]" />
+                    <div className="w-14 h-14 bg-[#FF6B35]/10 rounded-2xl flex items-center justify-center mb-6">
+                      <Layers className="w-7 h-7 text-[#FF6B35]" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Frictionless Funnels</h4>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      We use AI heatmap analysis to identify exactly where users drop off and re-engineer the visual hierarchy and flow to <strong className="text-gray-900">remove cognitive load</strong>.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Who We Don&apos;t Work With</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We don&apos;t work with brands looking for <strong className="text-gray-900">&quot;quick fixes&quot;</strong> or bot-driven traffic. Our methodology is designed for serious businesses that understand sustainable growth requires systematic execution. If you want shortcuts, we&apos;re not the right fit.
+              </section>
+
+              {/* 5. The "Information Gain" Comparison Table (Now isolated cards) */}
+              <section className="scroll-mt-32 pt-16 border-t border-gray-200">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Evolution of Search & Growth</h2>
+                  <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                    This data-heavy insight proves why traditional marketing models are breaking down in the generative AI era.
                   </p>
                 </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Traditional Marketing */}
+                  <div className="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                    <h3 className="text-xl font-bold text-gray-500 uppercase tracking-widest mb-6 border-b border-gray-100 pb-4">Traditional Marketing (2020)</h3>
+                    <ul className="space-y-6">
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Search Focus</span>
+                        <span className="text-gray-600">Keywords & Backlinks</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Ad Targeting</span>
+                        <span className="text-gray-600">Interest & Demographics</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Data Logic</span>
+                        <span className="text-gray-600">Pixel Tracking</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Content Goal</span>
+                        <span className="text-gray-600">Traffic Volume</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Frameleads Growth Hub */}
+                  <div className="bg-[#FFF5F0] p-8 rounded-3xl border border-[#FF6B35]/20 shadow-sm relative overflow-hidden hover:shadow-md transition-all">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6B35]/10 rounded-full blur-[40px] pointer-events-none" />
+                    <h3 className="text-xl font-bold text-[#FF6B35] uppercase tracking-widest mb-6 border-b border-[#FF6B35]/10 pb-4 relative z-10">Frameleads Growth Hub (2026)</h3>
+                    <ul className="space-y-6 relative z-10">
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Search Focus</span>
+                        <span className="text-gray-800 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF6B35]" /> Entities & AI Citations</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Ad Targeting</span>
+                        <span className="text-gray-800 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF6B35]" /> Algorithmic Predictive Intent</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Data Logic</span>
+                        <span className="text-gray-800 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF6B35]" /> First-Party Signal Bridging</span>
+                      </li>
+                      <li>
+                        <span className="block text-sm font-bold text-gray-900 mb-1">Content Goal</span>
+                        <span className="text-gray-800 flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF6B35]" /> Information Gain & Trust</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* 6. Interactive ROI vs Spend Chart */}
+              <section id="roi-calculator" className="scroll-mt-32 pt-16 border-t border-gray-200">
+                <RoiChart />
+              </section>
+
+              {/* 7. FAQ */}
+              <section id="faq" className="scroll-mt-32 pt-24 border-t border-gray-200">
+                <div className="flex items-center gap-3 mb-10">
+                  <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">FAQ</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">How long does it take for GEO (Generative Engine Optimization) to work?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      Unlike traditional SEO, GEO results can appear in weeks as LLMs (Large Language Models) refresh their training data and real-time search capabilities. Our goal is to secure your first AI citation within 45 days.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">Why is my Google Ads CPA rising even with more clicks?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      This is usually caused by <strong className="text-gray-900">&quot;Signal Noise.&quot;</strong> If you don&apos;t use Offline Conversion Tracking, Google&apos;s AI optimizes for &quot;easy clicks&quot; rather than &quot;hard sales.&quot; We fix the signal bridge to lower your effective CPA.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">What is Value-Based Bidding (VBB)?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      VBB is a Google Ads strategy that uses machine learning to bid more aggressively on users likely to have a <strong className="text-gray-900">high Lifetime Value (LTV)</strong>, rather than just anyone who clicks an ad.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden text-left">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">What is &quot;Data Orchestration&quot; and why do I need it?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      Data Orchestration is the process of unifying tracking signals across all platforms (Search, Social, Display) and your CRM. This ensures that every marketing dollar is tracked through the <strong className="text-gray-900">entire customer journey</strong>, preventing data silos and double-counting of conversions.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden text-left">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">What results can I expect in the first 90 days?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      The first 30 days are focused on &quot;Signal Audit&quot; and technical setup. By day 60, we reach <strong className="text-gray-900">Algorithmic Stabilization</strong>, where we typically see a 20-30% drop in CPA. By day 90, we are in full scale mode, utilizing your stabilized bidding models to drive maximum volume.
+                    </p>
+                  </div>
+
+                  <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 lg:p-10 hover:shadow-lg transition-all relative overflow-hidden text-left">
+                    <div className="absolute top-0 left-0 w-1.5 h-full bg-[#FF6B35]" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 pl-4">Which advertising channels do you manage?</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed pl-4">
+                      We provide full-stack management for <strong className="text-gray-900">Google Ads (Search, PMax, YouTube), Meta Ads (Facebook & Instagram), LinkedIn Ads, and Microsoft Ads</strong>. All channels are unified under our single profit-driven orchestration framework.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Final CTA */}
+              <section className="pt-24 mt-24 border-t border-gray-200 relative z-10">
+                <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-[2.5rem] overflow-hidden relative shadow-2xl p-12 md:p-20 text-center">
+                  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF6B35] opacity-20 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none" />
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 relative z-10">
+                    System Override. <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF9055]">Initialize Scale.</span>
+                  </h2>
+                  <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10 relative z-10">
+                    Deploy the exact 2026 blueprint driving 8-figure revenue architectures.
+                  </p>
+                  <Link href="/contact" className="relative z-10 inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#FF6B35] to-[#FF9055] text-white font-bold text-lg rounded-xl shadow-xl hover:scale-105 transition-all duration-300">
+                    Request System Audit <ChevronRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </section>
+
+            </main>
+          </div>
+
+          {/* Internal Link Silo Section */}
+          <section className="relative z-10 py-16 max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12">
+              <div className="text-center mb-10">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Our Advanced Solutions</h2>
+                <p className="text-gray-600">Discover localized and specialized strategies for every growth stage.</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/seo-services" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Search className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">SEO Dominance</h3>
+                  <p className="text-gray-600 text-sm">Search authority framework.</p>
+                </Link>
+
+                <Link href="/google-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Target className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Google Ads</h3>
+                  <p className="text-gray-600 text-sm">Value-Based Bidding & Yield.</p>
+                </Link>
+
+                <Link href="/ppc-management" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Activity className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">PPC Management</h3>
+                  <p className="text-gray-600 text-sm">Revenue orchestration.</p>
+                </Link>
+
+                <Link href="/content-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <PenTool className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Content Marketing</h3>
+                  <p className="text-gray-600 text-sm">Entity-based authority.</p>
+                </Link>
+
+                <Link href="/Social-media-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Share2 className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Social Marketing</h3>
+                  <p className="text-gray-600 text-sm">Conversion-first architecture.</p>
+                </Link>
+
+                <Link href="/whatsapp-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#25D366]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <MessageCircle className="w-10 h-10 text-[#25D366] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#25D366] transition-colors mb-2">WhatsApp Marketing</h3>
+                  <p className="text-gray-600 text-sm">Conversational ROI.</p>
+                </Link>
+
+                <Link href="/analytics-and-automations" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Cpu className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Data & Automation</h3>
+                  <p className="text-gray-600 text-sm">Unified Data Intelligence.</p>
+                </Link>
+
+                <Link href="/conversion-rate-optimization" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Zap className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">CRO Optimization</h3>
+                  <p className="text-gray-600 text-sm">Behavioral revenue lift.</p>
+                </Link>
+
+                <Link href="/perforamance-marketing" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <TrendingUp className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Performance Marketing</h3>
+                  <p className="text-gray-600 text-sm">Real-time revenue convergence.</p>
+                </Link>
+
+                <Link href="/email-marketing-and-automation-services" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Mail className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Email Automation</h3>
+                  <p className="text-gray-600 text-sm">Lifecycle revenue engine.</p>
+                </Link>
+
+                <Link href="/branding" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Palette className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Brand Strategy</h3>
+                  <p className="text-gray-600 text-sm">Market-Dominant Identity.</p>
+                </Link>
+
+                <Link href="/website-development" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Code className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Web Engineering</h3>
+                  <p className="text-gray-600 text-sm">Architecture of Authority.</p>
+                </Link>
+
+                <Link href="/youtube-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Video className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">YouTube Ads</h3>
+                  <p className="text-gray-600 text-sm">Visual Intent Engine.</p>
+                </Link>
+
+                <Link href="/linkedin-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Linkedin className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">LinkedIn Ads</h3>
+                  <p className="text-gray-600 text-sm">B2B Precision Pipeline.</p>
+                </Link>
+
+                <Link href="/tiktok-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Music className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">TikTok Ads</h3>
+                  <p className="text-gray-600 text-sm">Entertainment Commerce.</p>
+                </Link>
+
+                <Link href="/snapchat-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300 text-center">
+                  <Smartphone className="w-10 h-10 text-[#FF6B35] mx-auto mb-4" />
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors mb-2">Snapchat Ads</h3>
+                  <p className="text-gray-600 text-sm">AR Commerce Engine.</p>
+                </Link>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA: The Next Step */}
-        <footer className="relative z-10 max-w-4xl mx-auto px-6 py-16 mt-12">
-          <div className="bg-gradient-to-br from-[#FF6B35] to-[#FF9055] rounded-3xl overflow-hidden relative shadow-2xl shadow-[#FF6B35]/25">
-            {/* Abstract Background */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-white opacity-10 rounded-full blur-[80px] -mr-20 -mt-20 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0F172A] opacity-10 rounded-full blur-[60px] -ml-10 -mb-10 pointer-events-none" />
-
-            <div className="relative z-10 p-12 md:p-16 text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white font-medium text-sm mb-6 border border-white/30">
-                <Award className="w-4 h-4" />
-                <span>Ready to build your growth engine?</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                Get a Technical Audit of Your<br />Current Digital Presence.
-              </h2>
-              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">
-                No fluff, just data. Discover exactly where you&apos;re losing revenue and how to fix it.
-              </p>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-[#FF6B35] font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                Request Your Growth Audit
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <p className="text-white/70 text-sm mt-6">
-                No commitment. Just clarity.
-              </p>
-            </div>
-          </div>
-        </footer>
-
-        {/* Internal Link Silo Section */}
-        <section className="relative z-10 py-16 max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 md:p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Our Deep-Dive Services</h2>
-              <p className="text-gray-600">Visit our specialized pages to learn more about each service vertical.</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/seo-services" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center gap-3 mb-3">
-                  <Search className="w-6 h-6 text-[#FF6B35]" />
-                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors">SEO Services</h3>
-                </div>
-                <p className="text-gray-600 text-sm">Technical SEO, content strategy, and AI optimization.</p>
-              </Link>
-
-              <Link href="/google-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center gap-3 mb-3">
-                  <Target className="w-6 h-6 text-[#FF6B35]" />
-                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors">Google Ads</h3>
-                </div>
-                <p className="text-gray-600 text-sm">Performance Max, Search, and Shopping campaigns.</p>
-              </Link>
-
-              <Link href="/Meta-ads" className="group p-6 bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center gap-3 mb-3">
-                  <Users className="w-6 h-6 text-[#FF6B35]" />
-                  <h3 className="font-bold text-gray-900 group-hover:text-[#FF6B35] transition-colors">Meta Ads</h3>
-                </div>
-                <p className="text-gray-600 text-sm">Facebook & Instagram advertising mastery.</p>
-              </Link>
-            </div>
-          </div>
-        </section>
-
+          </section>
+        </div>
       </div>
     </>
   )
