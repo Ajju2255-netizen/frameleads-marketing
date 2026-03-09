@@ -112,7 +112,7 @@ export default function SnapchatAdsPage() {
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-b-2xl z-20" />
 
                     {/* Snapchat Mockup Content */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-slate-900 to-[#FF6B35]/20 flex flex-col items-center justify-center p-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-slate-900 to-[#FF6B35]/20 flex flex-col items-center justify-center p-6">
                       <div className="w-20 h-20 bg-[#FF6B35] rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(255,107,53,0.5)]">
                         <Camera className="w-10 h-10 text-white" />
                       </div>
@@ -287,7 +287,7 @@ export default function SnapchatAdsPage() {
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: "82%" }}
-                            className="h-full bg-blue-400"
+                            className="h-full bg-[#FF6B35]/70"
                           />
                         </div>
                       </div>

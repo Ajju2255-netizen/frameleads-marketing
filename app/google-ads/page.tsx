@@ -1,3 +1,7 @@
+'use client'
+
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import {
   Orbit,
@@ -31,19 +35,11 @@ import {
   Linkedin,
   Music,
   Smartphone,
-  Pin
+  Pin,
+  Plus,
+  Minus
 } from 'lucide-react'
 
-export const metadata = {
-  title: 'PPC Management Services 2026 | Value-Based Bidding & ROAS | Frameleads',
-  description: 'Frameleads provides Value-Based Bidding (VBB) and Signal-Bridge Integration for Google and Meta Ads. Optimize for Profit-Per-Click with our 2026 framework.',
-  keywords: ['PPC Management Services', 'Google Ads Agency', 'Performance Max Optimization', 'Value-Based Bidding', 'VBB', 'Offline Conversion Tracking', 'OCT'],
-  openGraph: {
-    title: 'PPC Management Services 2026 | Value-Based Bidding & ROAS | Frameleads',
-    description: 'Stop buying traffic. Start engineering revenue with Value-Based Bidding and Signal-Bridge Integration.',
-    images: ['/og-ppc-services.png'],
-  }
-}
 
 // Technical JSON-LD Schema (The "PPC Passport")
 const jsonLd = {
@@ -145,6 +141,42 @@ const faqSchema = {
 }
 
 export default function GoogleAdsPage() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null)
+
+  const faqs = [
+    {
+      q: "What is the difference between 'Clicks' and 'Qualified Signals'?",
+      a: "A click is just traffic. A Qualified Signal is a conversion action—like a demo booked or a high-value purchase—that is sent back to the ad platform to train its machine learning. Without signals, PPC is just gambling. We refine those signals to ensure the AI works for YOU."
+    },
+    {
+      q: "How do you handle Google's Performance Max (PMax) 'Black Box'?",
+      a: "We apply 'Human Guardrails.' We use script-based negative keyword lists and placement exclusions to prevent your ads from showing on kids' YouTube channels or low-quality mobile apps. We force the black box to be transparent."
+    },
+    {
+      q: "How do you stop 'Ghost Clicks' (Fraudulent Traffic)?",
+      a: "We use server-side verification and whitelisted placement lists. By comparing ad clicks against actual server hits and CRM entries, we can identify and exclude IP ranges that show bot-like behavior, saving your budget for real humans."
+    },
+    {
+      q: "Do I need a large budget for Value-Based Bidding?",
+      a: "Not necessarily, but VBB requires statistically significant signal data. We recommend it for brands with at least 30 conversions per month to allow the algorithm to learn effectively."
+    },
+    {
+      q: "How is 2026 PPC different from traditional PPC?",
+      a: "Traditional PPC was about winning the click. 2026 PPC is about winning the algorithm. We focus on training the machine learning models with high-quality data rather than just bidding on broad keywords."
+    },
+    {
+      q: "What is 'Signal Noise' and how do you reduce it?",
+      a: "Signal Noise occurs when an ad platform optimizes for low-quality actions (like bot clicks or junk leads). We reduce this by integrating your CRM, ensuring only 'Sales-Qualified' signals are fed back into the bidding algorithm."
+    },
+    {
+      q: "Do you manage YouTube Ads as part of Google Ads?",
+      a: "Yes, YouTube is a critical part of our 'Kinetic Funnel.' We optimize YouTube campaigns for View-Through ROI and brand lift, ensuring video spend directly supports your search and social conversion goals."
+    },
+    {
+      q: "What are Google Ads Scripts and why do you use them?",
+      a: "Scripts are small pieces of code that automate complex tasks. We use proprietary scripts to manage 'Negative Keyword Guardrails,' hourly budget pacing, and multi-channel reporting that standard platform tools can't handle."
+    }
+  ]
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -428,68 +460,70 @@ export default function GoogleAdsPage() {
         </section>
 
         {/* 7. Deep-Dive FAQ */}
-        <section id="faq" className="scroll-mt-32 py-24 bg-white border-t border-gray-100">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="flex items-center gap-4 mb-16 justify-center">
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">FAQ</h2>
+        <section id="faq" className="scroll-mt-32 py-40 px-6 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight mb-8">
+                Algorithmic Performance <br />
+                <span className="text-[#FF6B35]">FAQ.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium italic">Strategic intelligence for the machine-learning era.</p>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">What is the difference between &quot;Clicks&quot; and &quot;Qualified Signals&quot;?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  A click is just traffic. A <strong className="text-gray-900">Qualified Signal</strong> is a conversion action like a demo booked or a high-value purchase that is sent back to the ad platform to train its machine learning. Without signals, PPC is just gambling. We refine those signals to ensure the AI works for YOU.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">How do you handle Google&apos;s Performance Max (PMax) &quot;Black Box&quot;?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  We apply <strong className="text-gray-900">&quot;Human Guardrails.&quot;</strong> We use script-based negative keyword lists and placement exclusions to prevent your ads from showing on kids&apos; YouTube channels or low-quality mobile apps. We force the black box to be transparent.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">How do you stop &quot;Ghost Clicks&quot;?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  We use <strong className="text-gray-900">server-side verification</strong> and whitelisted placement lists. By comparing ad clicks against actual server hits and CRM entries, we identify and exclude IP ranges that show bot-like behavior, saving your budget for real humans.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">Do I need a large budget for Value-Based Bidding?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  Not necessarily, but VBB requires statistically significant signal data. We recommend it for brands with at least <strong className="text-gray-900">30 conversions per month</strong> to allow the algorithm to learn effectively.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">What is &quot;Signal Noise&quot; and how do you reduce it?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  Signal Noise occurs when an ad platform optimizes for low-quality actions (like bot clicks or junk leads). We reduce this by <strong className="text-gray-900">integrating your CRM</strong>, ensuring only &quot;Sales-Qualified&quot; signals are fed back into the bidding algorithm.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">Do you manage YouTube Ads as part of Google Ads?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  Yes, YouTube is a critical part of our &quot;Kinetic Funnel.&quot; We optimize YouTube campaigns for <strong className="text-gray-900">View-Through ROI and brand lift</strong>, ensuring video spend directly supports your search and social conversion goals.
-                </p>
-              </div>
-
-              <div className="bg-white border border-gray-100 shadow-sm rounded-[2rem] p-8 md:p-12 hover:shadow-xl hover:border-[#FF6B35]/20 transition-all relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 pl-4">What are Google Ads Scripts and why do you use them?</h3>
-                <p className="text-gray-600 text-lg leading-relaxed pl-4">
-                  Scripts are small pieces of code that automate complex tasks. We use <strong className="text-gray-900">proprietary scripts</strong> to manage &quot;Negative Keyword Guardrails,&quot; hourly budget pacing, and multi-channel reporting that standard platform tools can&apos;t handle.
-                </p>
-              </div>
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                    ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                    : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-gray-900" : "text-slate-600 group-hover:text-gray-900"}`}>
+                        {faq.q}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                      >
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
+                            {faq.a}
+                          </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Signal Integrity Verified</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -498,7 +532,7 @@ export default function GoogleAdsPage() {
         <footer className="relative z-10 max-w-6xl mx-auto px-6 py-24">
           <div className="bg-[#0F172A] rounded-[3rem] overflow-hidden relative shadow-2xl p-12 md:p-24 text-center">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF6B35] opacity-20 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#FF6B35] opacity-5 rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none" />
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1]">

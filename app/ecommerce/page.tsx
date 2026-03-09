@@ -127,7 +127,7 @@ export default function EcommercePage() {
                   <span>MODE: PERFORMANCE_SCALING</span>
                   <div className="flex gap-4">
                     <Activity className="w-3 h-3 text-[#FF6B35] animate-pulse" />
-                    <Repeat className="w-3 h-3 text-emerald-400" />
+                    <Repeat className="w-3 h-3 text-[#FF6B35]/70" />
                   </div>
                 </div>
               </div>
@@ -278,14 +278,14 @@ export default function EcommercePage() {
                     <div className="flex items-center justify-between">
                       <div className="text-white font-black text-2xl tracking-tighter uppercase">Merchant_Center_Bridge</div>
                       <div className="flex gap-2">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                        <div className="text-emerald-500 font-mono text-[10px]">SYNC_ACTIVE</div>
+                        <div className="w-2 h-2 rounded-full bg-[#FF6B35] animate-ping" />
+                        <div className="text-[#FF6B35] font-mono text-[10px]">SYNC_ACTIVE</div>
                       </div>
                     </div>
                     {['Summer_Linen_Fit_2026', 'Material: Eco_Hemp', 'Occasion: Wedding_Casual'].map((tag, i) => (
                       <div key={i} className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-between group hover:bg-white/10 transition-all">
                         <span className="text-[#FF6B35] font-mono text-xs">{tag}</span>
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <CheckCircle2 className="w-4 h-4 text-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     ))}
                     <div className="mt-8 p-6 bg-[#FF6B35]/10 rounded-3xl border border-[#FF6B35]/20">
@@ -358,9 +358,9 @@ export default function EcommercePage() {
                 <div className="grid grid-cols-2 gap-8">
                   {[
                     { label: 'Repeat Rate', val: '+30% Growth', color: 'text-[#FF6B35]' },
-                    { label: 'AOV Increase', val: '20% Post-Upsell', color: 'text-emerald-400' },
-                    { label: 'Retention Flow', val: 'AI Predictive', color: 'text-sky-400' },
-                    { label: 'Market MER', val: '4.0 Target', color: 'text-purple-400' }
+                    { label: 'AOV Increase', val: '20% Post-Upsell', color: 'text-[#FF6B35]' },
+                    { label: 'Retention Flow', val: 'AI Predictive', color: 'text-slate-300' },
+                    { label: 'Market MER', val: '4.0 Target', color: 'text-[#FF6B35]/80' }
                   ].map((stat, i) => (
                     <div key={i} className="p-8 bg-white/5 rounded-[2.5rem] border border-white/5 hover:bg-white/10 transition-colors">
                       <div className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">{stat.label}</div>
@@ -439,21 +439,45 @@ export default function EcommercePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 px-6 bg-white relative">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-black text-[#0F172A] mb-20 tracking-tighter text-center">E-commerce ROI Deep-Dive</h2>
-            <div className="space-y-6">
+        <section className="py-40 px-6 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-black text-[#0F172A] mb-8 tracking-tighter">
+                E-commerce ROI <br />
+                <span className="text-[#FF6B35]">Deep-Dive.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium">Strategic intelligence for scaling storefronts in 2026.</p>
+            </div>
+
+            <div className="space-y-4">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b-4 border-[#0F172A]">
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                    ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                    : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full py-10 flex items-center justify-between text-left group"
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
                   >
-                    <h3 className="text-2xl md:text-3xl font-black text-[#0F172A] transition-colors group-hover:text-[#FF6B35]">
-                      {faq.question}
-                    </h3>
-                    <div className="flex-shrink-0 ml-4 p-2 bg-[#0F172A] text-white rounded-full">
-                      {openFaq === i ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.question}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
                     </div>
                   </button>
                   <AnimatePresence>
@@ -462,17 +486,22 @@ export default function EcommercePage() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
+                        transition={{ duration: 0.4, ease: "circOut" }}
                       >
-                        <div className="pb-10">
-                          <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
                             {faq.answer}
                           </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <Zap className="w-4 h-4" />
+                            <span>Actionable Strategy Insight</span>
+                          </div>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

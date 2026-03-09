@@ -139,7 +139,7 @@ export default function LinkedInAdsPage() {
                   </div>
                   <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#FF6B35]/30 transition-all">
                     <div className="text-[10px] text-slate-400 font-bold uppercase mb-1">CAPI Fidelity</div>
-                    <div className="text-3xl font-black text-green-500">100%</div>
+                    <div className="text-3xl font-black text-[#FF6B35]">100%</div>
                   </div>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function LinkedInAdsPage() {
                       <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full bg-red-400" />
                         <div className="w-3 h-3 rounded-full bg-amber-400" />
-                        <div className="w-3 h-3 rounded-full bg-emerald-400" />
+                        <div className="w-3 h-3 rounded-full bg-[#FF6B35]" />
                       </div>
                       <div className="px-4 py-1.5 bg-white/10 rounded-full text-[10px] font-black text-[#FF6B35] uppercase tracking-widest border border-white/10">
                         ABM_ORCHESTRATOR.v4
@@ -383,7 +383,7 @@ export default function LinkedInAdsPage() {
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-green-50 rounded-2xl flex items-center justify-center">
-                        <Fingerprint className="w-6 h-6 text-green-500" />
+                        <Fingerprint className="w-6 h-6 text-[#FF6B35]" />
                       </div>
                       <div>
                         <div className="text-[10px] font-black text-slate-400 uppercase">Lead Quality</div>

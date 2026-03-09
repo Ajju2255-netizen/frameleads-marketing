@@ -134,18 +134,18 @@ export default function PinterestAdsPage() {
                       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                       className="absolute bottom-6 right-4 w-28 h-36 bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 flex flex-col"
                     >
-                      <div className="w-full h-20 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center">
-                        <Sparkles className="w-6 h-6 text-emerald-600" />
+                      <div className="w-full h-20 bg-gradient-to-br from-[#FF6B35]/20 to-slate-200/20 flex items-center justify-center">
+                        <Sparkles className="w-6 h-6 text-[#FF6B35]" />
                       </div>
                       <div className="p-3 bg-white flex-1 flex flex-col justify-center space-y-1">
                         <div className="text-[10px] font-black text-slate-800 uppercase leading-tight">Spring '26</div>
-                        <div className="text-[9px] font-bold text-emerald-500">+145% Search</div>
+                        <div className="text-[9px] font-bold text-[#FF6B35]">+145% Search</div>
                       </div>
                     </motion.div>
 
                     {/* Center Pin */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-56 bg-white rounded-3xl shadow-2xl flex flex-col p-3 z-10 border border-slate-100">
-                      <div className="relative w-full flex-1 bg-gradient-to-br from-indigo-50 to-[#FF6B35]/10 rounded-2xl mb-3 overflow-hidden flex items-center justify-center border border-white">
+                      <div className="relative w-full flex-1 bg-gradient-to-br from-slate-50 to-[#FF6B35]/10 rounded-2xl mb-3 overflow-hidden flex items-center justify-center border border-white">
                         <div className="absolute top-2 right-2 px-3 py-1 bg-[#E60023] text-white text-[9px] font-black rounded-full shadow-md">Save</div>
                         <Target className="w-12 h-12 text-[#FF6B35]" />
                       </div>
@@ -191,7 +191,7 @@ export default function PinterestAdsPage() {
                     </div>
                     <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#FF6B35]/30 transition-all">
                       <div className="text-[10px] text-slate-400 font-bold uppercase mb-1">Planning Window Capture</div>
-                      <div className="text-3xl font-black text-green-500">45 Days</div>
+                      <div className="text-3xl font-black text-[#FF6B35]">45 Days</div>
                     </div>
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export default function PinterestAdsPage() {
                     <div className="mb-10">
                       <div className="text-slate-400 text-xs font-bold uppercase mb-2">Trend Signal Growth (45 Days Out)</div>
                       <div className="text-5xl md:text-6xl font-black text-white tracking-tighter flex items-baseline gap-2">
-                        +342% <span className="text-green-400 text-sm font-bold tracking-normal">Early Adopter Bonus</span>
+                        +342% <span className="text-[#FF6B35] text-sm font-bold tracking-normal">Early Adopter Bonus</span>
                       </div>
                     </div>
 
@@ -301,7 +301,7 @@ export default function PinterestAdsPage() {
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
                         <div className="text-[10px] text-slate-500 font-black uppercase mb-1">CPM Advantage</div>
-                        <div className="text-xl font-bold text-green-400">-72%</div>
+                        <div className="text-xl font-bold text-[#FF6B35]">-72%</div>
                       </div>
                       <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
                         <div className="text-[10px] text-slate-500 font-black uppercase mb-1">Information Gain</div>
@@ -363,7 +363,7 @@ export default function PinterestAdsPage() {
                 <div className="relative bg-white rounded-[3rem] p-8 md:p-12 shadow-[0_48px_96px_-16px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden text-left">
                   <div className="flex items-center justify-between mb-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+                      <div className="w-10 h-10 bg-[#FF6B35]/20 rounded-xl flex items-center justify-center">
                         <CheckCircle2 className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -380,7 +380,7 @@ export default function PinterestAdsPage() {
                       <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-xl flex justify-between items-center border border-white/50">
                         <div>
                           <div className="text-[11px] font-black text-slate-900 uppercase">Premium Tote</div>
-                          <div className="text-[9px] font-bold text-green-500 uppercase tracking-widest">In Stock</div>
+                          <div className="text-[9px] font-bold text-[#FF6B35] uppercase tracking-widest">In Stock</div>
                         </div>
                         <div className="text-sm font-black text-[#0F172A]">$129
                           <span className="text-slate-400 line-through text-[9px] ml-1 block font-normal">$149</span>
@@ -403,10 +403,10 @@ export default function PinterestAdsPage() {
 
                   <div className="bg-green-50 p-4 rounded-2xl border border-green-100 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Database className="w-4 h-4 text-green-500" />
-                      <span className="text-[10px] font-black text-green-700 uppercase">INVENTORY: SYNCED (Real-Time)</span>
+                      <Database className="w-4 h-4 text-[#FF6B35]" />
+                      <span className="text-[10px] font-black text-[#FF6B35] uppercase">INVENTORY: SYNCED (Real-Time)</span>
                     </div>
-                    <div className="text-[10px] font-mono text-green-500 font-bold">100% MATCH</div>
+                    <div className="text-[10px] font-mono text-[#FF6B35] font-bold">100% MATCH</div>
                   </div>
                 </div>
 

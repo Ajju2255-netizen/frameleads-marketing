@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import {
   ChevronRight,
@@ -42,7 +43,10 @@ import {
   Fingerprint,
   Layers,
   Activity,
-  Award
+  Award,
+  Plus,
+  Minus,
+  ShieldCheck
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Yandex Ads Service
@@ -92,6 +96,27 @@ const faqSchema = {
 }
 
 export default function YandexAdsPage() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null)
+
+  const faqs = [
+    {
+      q: "Do I need a Russian website to run Yandex Ads in 2026?",
+      a: "While not mandatory, it is highly recommended. Russian users overwhelmingly prefer localized content. Frameleads provides Neural Localization, using YandexGPT to translate and transcreate your landing pages to ensure they resonate with local cultural expectations."
+    },
+    {
+      q: "How does Yandex 'Pay-per-Conversion' work?",
+      a: "You set a target price you are willing to pay for a sale (e.g., $10). Yandex then shows your ads for free until a conversion is recorded via Metrica. At that point, you are charged the $10. This makes Yandex one of the lowest-risk platforms for international brands."
+    },
+    {
+      q: "What is the YAN and how does it compare to GDN?",
+      a: "The Yandex Advertising Network (YAN) includes 55,000+ premium partners, including major Russian media outlets and services. It typically offers higher quality placements and better viewability metrics than the standard Google Display Network in the CIS region."
+    },
+    {
+      q: "Is YandexART compliant with my brand guidelines?",
+      a: "Yes. We set AI 'Guardrails' within the YandexART API that restrict color palettes, logo placement, and stylistic choices, ensuring every generated asset is 100% brand-compliant while benefiting from neural optimization."
+    }
+  ]
+
   return (
     <>
       <script
@@ -151,9 +176,9 @@ export default function YandexAdsPage() {
                     {/* Data Streams */}
                     <div className="space-y-4 relative z-10">
                       {[
-                        { label: 'YandexART_Gen', val: 'ACTIVE', color: 'text-green-400' },
+                        { label: 'YandexART_Gen', val: 'ACTIVE', color: 'text-[#FF6B35]' },
                         { label: 'Increment_Profit', val: '+25%', color: 'text-[#FF6B35]' },
-                        { label: 'Ecomm+_Status', val: 'OPTIMIZED', color: 'text-blue-400' }
+                        { label: 'Ecomm+_Status', val: 'OPTIMIZED', color: 'text-slate-400' }
                       ].map((item, i) => (
                         <div key={i} className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-2xl border border-white/5">
                           <span className="text-[9px] text-slate-400 font-black uppercase tracking-widest">{item.label}</span>
@@ -507,34 +532,66 @@ export default function YandexAdsPage() {
         </section>
 
         {/* 7. Deep-Dive FAQ */}
-        <section className="py-32 bg-[#F9FAFB]">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter mb-20 text-left uppercase">Yandex Neural Era FAQ</h2>
+        <section className="py-40 px-6 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="space-y-8">
-              {[
-                {
-                  q: "Do I need a Russian website to run Yandex Ads in 2026?",
-                  a: "While not mandatory, it is highly recommended. Russian users overwhelmingly prefer localized content. Frameleads provides Neural Localization, using YandexGPT to translate and transcreate your landing pages to ensure they resonate with local cultural expectations."
-                },
-                {
-                  q: "How does Yandex 'Pay-per-Conversion' work?",
-                  a: "You set a target price you are willing to pay for a sale (e.g., $10). Yandex then shows your ads for free until a conversion is recorded via Metrica. At that point, you are charged the $10. This makes Yandex one of the lowest-risk platforms for international brands."
-                },
-                {
-                  q: "What is the YAN and how does it compare to GDN?",
-                  a: "The Yandex Advertising Network (YAN) includes 55,000+ premium partners, including major Russian media outlets and services. It typically offers higher quality placements and better viewability metrics than the standard Google Display Network in the CIS region."
-                },
-                {
-                  q: "Is YandexART compliant with my brand guidelines?",
-                  a: "Yes. We set AI 'Guardrails' within the YandexART API that restrict color palettes, logo placement, and stylistic choices, ensuring every generated asset is 100% brand-compliant while benefiting from neural optimization."
-                }
-              ].map((faq, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 shadow-xl rounded-[3rem] p-12 hover:shadow-2xl transition-all group relative overflow-hidden text-left">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl font-black text-[#0F172A] mb-6 uppercase tracking-tighter">{faq.q}</h3>
-                  <p className="text-slate-500 text-lg leading-relaxed font-medium italic">{faq.a}</p>
-                </div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tighter mb-8 uppercase">Yandex Neural Era <span className="text-[#FF6B35]">FAQ.</span></h2>
+              <p className="text-xl text-slate-500 font-medium italic">Strategic intelligence for Eurasian market expansion.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                    ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                    : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.q}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                      >
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl font-bold italic">
+                            {faq.a}
+                          </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Eurasian Market Compliance Verified</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>

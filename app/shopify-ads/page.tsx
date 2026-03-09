@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import {
   ChevronRight,
@@ -30,7 +31,10 @@ import {
   Activity,
   RefreshCw,
   Cpu,
-  Globe
+  Globe,
+  Plus,
+  Minus,
+  ShieldCheck
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Shopify Ads Service
@@ -65,7 +69,7 @@ const faqSchema = {
       "name": "Why did my ad performance drop after the Shopify January 2026 update?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Shopify moved all marketing pixels to an 'Optimized' data-sharing setting. If your store has a few slow days, Shopify may pause the signal to your ad platforms to protect data privacy. This starves the Meta and Google algorithms of data. We fix this by moving to a Custom Pixel/Server-Side setup that keeps the signal Always On."
+        "text": "Shopify moved all marketing pixels to an 'Optimized' data-sharing setting. If your store has a few slow days, Shopify may 'pause' the signal to your ad platforms to protect data privacy. This starves the Meta and Google algorithms of data. We fix this by moving to a Custom Pixel/Server-Side setup that keeps the signal 'Always On.'"
       }
     },
     {
@@ -73,14 +77,41 @@ const faqSchema = {
       "name": "Is Performance Max better than Standard Shopping for Shopify?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For most stores, PMax is superior for scale, but Standard Shopping is better for control. We often run a Hybrid model: Standard Shopping for Hero products to control exact keywords, and PMax for Catch-All growth to find new audiences across YouTube and Gmail."
+        "text": "For most stores, PMax is superior for scale, but Standard Shopping is better for control. We often run a 'Hybrid' model: Standard Shopping for your 'Hero' products to control exact keywords, and PMax for 'Catch-All' growth to find new audiences across YouTube and Gmail."
       }
     }
   ]
 }
 
-
 export default function ShopifyAdsPage() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null)
+
+  const faqs = [
+    {
+      q: "Why did my ad performance drop after the Shopify January 2026 update?",
+      a: "Shopify moved all marketing pixels to an 'Optimized' data-sharing setting. If your store has a few slow days, Shopify may 'pause' the signal to your ad platforms to protect data privacy. This starves the Meta and Google algorithms of data. We fix this by moving to a Custom Pixel/Server-Side setup that keeps the signal 'Always On.'"
+    },
+    {
+      q: "Is Performance Max better than Standard Shopping for Shopify?",
+      a: "For most stores, PMax is superior for scale, but Standard Shopping is better for control. We often run a 'Hybrid' model: Standard Shopping for your 'Hero' products to control exact keywords, and PMax for 'Catch-All' growth to find new audiences across YouTube and Gmail."
+    },
+    {
+      q: "What is MER and why is it better than ROAS for Shopify?",
+      a: "MER (Marketing Efficiency Ratio) = Total Revenue / Total Ad Spend across ALL channels. Platform-reported ROAS (e.g., Meta claiming 8x) is often inflated due to overlap and attribution windows. MER gives you the real, unmanipulated view of how much revenue every ad dollar generates across your entire business."
+    },
+    {
+      q: "How does Shopify Audiences help my targeting?",
+      a: "Shopify Audiences is a collective intelligence tool that pools anonymized purchase behavior data from thousands of Shopify merchants. This allows you to build lookalike audiences of people who actually buy products like yours — not just people who browse. We integrate this data directly into Meta and Google campaigns for lower CPAs."
+    },
+    {
+      q: "How long does it take to see results after migrating to Server-Side CAPI?",
+      a: "Most clients see an immediate 15-30% lift in attributed conversions within the first 7 days of CAPI migration — not because more sales happened, but because the tracking was recovering sales that were already happening but were previously invisible to the platform algorithms. Better data = lower CPAs within 2-3 weeks."
+    },
+    {
+      q: "Can you manage both my Google and Meta campaigns for Shopify?",
+      a: "Absolutely — and this is specifically where we excel. Running Google PMax and Meta Advantage+ in isolation creates 'Attribution Wars' where both platforms claim credit for the same sale. We manage them together under a unified MER framework so they complement rather than cannibalize each other."
+    }
+  ]
   return (
     <>
       <script
@@ -519,42 +550,69 @@ export default function ShopifyAdsPage() {
         </section>
 
         {/* 7. FAQ */}
-        <section className="py-32 bg-slate-50">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-20 text-left">Shopify Tracking & Ad Strategy FAQ</h2>
+        <section className="py-40 px-6 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="space-y-8">
-              {[
-                {
-                  q: "Why did my ad performance drop after the Shopify January 2026 update?",
-                  a: "Shopify moved all marketing pixels to an 'Optimized' data-sharing setting. If your store has a few slow days, Shopify may 'pause' the signal to your ad platforms to protect data privacy. This starves the Meta and Google algorithms of data. We fix this by moving to a Custom Pixel/Server-Side setup that keeps the signal 'Always On.'"
-                },
-                {
-                  q: "Is Performance Max better than Standard Shopping for Shopify?",
-                  a: "For most stores, PMax is superior for scale, but Standard Shopping is better for control. We often run a 'Hybrid' model: Standard Shopping for your 'Hero' products to control exact keywords, and PMax for 'Catch-All' growth to find new audiences across YouTube and Gmail."
-                },
-                {
-                  q: "What is MER and why is it better than ROAS for Shopify?",
-                  a: "MER (Marketing Efficiency Ratio) = Total Revenue / Total Ad Spend across ALL channels. Platform-reported ROAS (e.g., Meta claiming 8x) is often inflated due to overlap and attribution windows. MER gives you the real, unmanipulated view of how much revenue every ad dollar generates across your entire business."
-                },
-                {
-                  q: "How does Shopify Audiences help my targeting?",
-                  a: "Shopify Audiences is a collective intelligence tool that pools anonymized purchase behavior data from thousands of Shopify merchants. This allows you to build lookalike audiences of people who actually buy products like yours — not just people who browse. We integrate this data directly into Meta and Google campaigns for lower CPAs."
-                },
-                {
-                  q: "How long does it take to see results after migrating to Server-Side CAPI?",
-                  a: "Most clients see an immediate 15-30% lift in attributed conversions within the first 7 days of CAPI migration — not because more sales happened, but because the tracking was recovering sales that were already happening but were previously invisible to the platform algorithms. Better data = lower CPAs within 2-3 weeks."
-                },
-                {
-                  q: "Can you manage both my Google and Meta campaigns for Shopify?",
-                  a: "Absolutely — and this is specifically where we excel. Running Google PMax and Meta Advantage+ in isolation creates 'Attribution Wars' where both platforms claim credit for the same sale. We manage them together under a unified MER framework so they complement rather than cannibalize each other."
-                }
-              ].map((faq, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 shadow-xl rounded-[3rem] p-12 hover:shadow-2xl transition-all group relative overflow-hidden text-left">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl font-extrabold text-[#0F172A] mb-6">{faq.q}</h3>
-                  <p className="text-slate-500 text-lg leading-relaxed">{faq.a}</p>
-                </div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-8">
+                Shopify Tracking & <br />
+                <span className="text-[#FF6B35]">Ad Strategy FAQ.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium italic">Solving the most critical conversion challenges for 2026.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                      ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                      : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.q}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                      >
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
+                            {faq.a}
+                          </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Signal Integrity Verified</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>

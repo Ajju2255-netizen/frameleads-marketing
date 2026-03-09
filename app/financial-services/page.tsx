@@ -452,21 +452,45 @@ export default function FinancialPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-32 px-6 bg-white relative">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-black text-[#0F172A] mb-20 tracking-tighter text-center">Financial Marketing Deep-Dive</h2>
-            <div className="space-y-6">
+        <section className="py-40 px-6 bg-slate-50 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-black text-[#0F172A] mb-8 tracking-tighter">
+                Financial Marketing <br />
+                <span className="text-[#FF6B35]">Deep-Dive.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium">Strategic intelligence for institutional growth in 2026.</p>
+            </div>
+
+            <div className="space-y-4">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b-4 border-[#0F172A]">
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                      ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                      : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full py-10 flex items-center justify-between text-left group"
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
                   >
-                    <h3 className="text-2xl md:text-3xl font-black text-[#0F172A] transition-colors group-hover:text-[#FF6B35]">
-                      {faq.question}
-                    </h3>
-                    <div className="flex-shrink-0 ml-4 p-2 bg-[#0F172A] text-white rounded-full">
-                      {openFaq === i ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.question}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
                     </div>
                   </button>
                   <AnimatePresence>
@@ -475,17 +499,22 @@ export default function FinancialPage() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
+                        transition={{ duration: 0.4, ease: "circOut" }}
                       >
-                        <div className="pb-10">
-                          <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
                             {faq.answer}
                           </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Institutional Authority Verified</span>
+                          </div>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

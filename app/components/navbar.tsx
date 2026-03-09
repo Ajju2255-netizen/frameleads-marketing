@@ -33,14 +33,14 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="text-[#5A5A5A] hover:text-[#FF6B35] px-3 py-2 text-sm font-medium transition-colors duration-300"
                 onClick={() => handleNavClick('home')}
               >
                 Home
               </Link>
-              
+
               {/* Industries Dropdown */}
               <div className="relative">
                 <button
@@ -52,9 +52,9 @@ export default function Navbar() {
                   Industries
                   <ChevronDown className="h-4 w-4" />
                 </button>
-                
+
                 {isIndustriesOpen && (
-                  <div 
+                  <div
                     className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-xl border border-[#FFE4D6]/30 rounded-lg shadow-lg shadow-[#FF6B35]/10 py-2 z-50"
                     onMouseEnter={() => setIsIndustriesOpen(true)}
                     onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -87,6 +87,41 @@ export default function Navbar() {
                     >
                       Real Estate
                     </Link>
+                    <Link
+                      href="/automotive-marketing"
+                      className="block px-4 py-2 text-sm text-[#5A5A5A] hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 transition-colors duration-300"
+                      onClick={() => handleNavClick('automotive')}
+                    >
+                      Automotive Marketing
+                    </Link>
+                    <Link
+                      href="/food-beverage-marketing"
+                      className="block px-4 py-2 text-sm text-[#5A5A5A] hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 transition-colors duration-300"
+                      onClick={() => handleNavClick('food-beverage')}
+                    >
+                      Food & Beverage
+                    </Link>
+                    <Link
+                      href="/travel-hospitality-marketing"
+                      className="block px-4 py-2 text-sm text-[#5A5A5A] hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 transition-colors duration-300"
+                      onClick={() => handleNavClick('travel-hospitality')}
+                    >
+                      Travel & Hospitality
+                    </Link>
+                    <Link
+                      href="/gaming-marketing"
+                      className="block px-4 py-2 text-sm text-[#5A5A5A] hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 transition-colors duration-300"
+                      onClick={() => handleNavClick('gaming')}
+                    >
+                      Gaming & Entertainment
+                    </Link>
+                    <Link
+                      href="/professional-services-marketing"
+                      className="block px-4 py-2 text-sm text-[#5A5A5A] hover:text-[#FF6B35] hover:bg-[#FF6B35]/5 transition-colors duration-300"
+                      onClick={() => handleNavClick('professional-services')}
+                    >
+                      Professional Services
+                    </Link>
                     <div className="border-t border-[#FFE4D6]/30 my-1"></div>
                     <Link
                       href="/industries"
@@ -98,7 +133,7 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              
+
               <Link
                 href="/contact"
                 className="text-[#5A5A5A] hover:text-[#FF6B35] px-3 py-2 text-sm font-medium transition-colors duration-300"
@@ -122,17 +157,17 @@ export default function Navbar() {
               </Link>
               <Link href="/contact" onClick={() => handleNavClick('cta')}>
                 <Button className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-4 py-2 text-sm font-semibold rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                Get Free Audit
-              </Button>
+                  Get Free Audit
+                </Button>
               </Link>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button 
-              variant="ghost" 
-              size="sm" 
+            <Button
+              variant="ghost"
+              size="sm"
               className="text-[#5A5A5A] hover:text-[#FF6B35]"
               onClick={handleMobileMenuClick}
             >

@@ -140,7 +140,7 @@ export default function YouTubeAdsPage() {
                   </div>
                   <div className="p-4 bg-white/5 border border-white/10 rounded-2xl">
                     <div className="text-[10px] text-slate-500 font-bold uppercase mb-1">AIO Visibility</div>
-                    <div className="text-2xl font-black text-blue-400">HIGH</div>
+                    <div className="text-2xl font-black text-[#FF6B35]">HIGH</div>
                   </div>
                 </div>
               </div>

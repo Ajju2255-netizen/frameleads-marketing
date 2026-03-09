@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import {
   Triangle,
@@ -36,7 +37,9 @@ import {
   Music,
   Pin,
   Smartphone,
-  ShoppingBag
+  ShoppingBag,
+  Plus,
+  Minus
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Meta Ads Services
@@ -86,6 +89,22 @@ const faqSchema = {
 }
 
 export default function MetaAdsPage() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null)
+
+  const faqs = [
+    {
+      q: "Why is my Meta Ads ROAS dropping even though my CTR is high?",
+      a: "This is often a Signal-to-Creative Gap. A high CTR means your ad is interesting, but if your ROAS is low, you are likely attracting the wrong 'Type' of clicker. We solve this by adjusting the 'Call to Action' and improving your CAPI match quality to find users with higher purchase intent."
+    },
+    {
+      q: "How do Reels ads differ from Newsfeed ads?",
+      a: "Reels ads are Engagement-First. They require a faster pace, vertical (9:16) formatting, and 'Sound-On' creative. While Newsfeed ads are great for direct-response, Reels ads are the primary driver of Discovery and Top-of-Funnel growth in 2026."
+    },
+    {
+      q: "Is interest targeting completely dead?",
+      a: "Not entirely, but its efficacy has halved. We use broad targeting for scale and interest-based for niche testing or when first launching a brand to give the algorithm its initial 'starting north' before letting the creative do the heavy lifting."
+    }
+  ]
   return (
     <>
       <script
@@ -335,30 +354,69 @@ export default function MetaAdsPage() {
         </section>
 
         {/* 7. Deep-Dive FAQ */}
-        <section className="py-32 bg-[#FDF8F5]">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-20 text-center">Social Intelligence FAQ</h2>
+        <section id="faq" className="scroll-mt-32 py-40 px-6 bg-[#FDF8F5] relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="space-y-8">
-              {[
-                {
-                  q: "Why is my Meta Ads ROAS dropping even though my CTR is high?",
-                  a: "This is often a Signal-to-Creative Gap. A high CTR means your ad is interesting, but if your ROAS is low, you are likely attracting the wrong 'Type' of clicker. We solve this by adjusting the 'Call to Action' and improving your CAPI match quality to find users with higher purchase intent."
-                },
-                {
-                  q: "How do Reels ads differ from Newsfeed ads?",
-                  a: "Reels ads are Engagement-First. They require a faster pace, vertical (9:16) formatting, and 'Sound-On' creative. While Newsfeed ads are great for direct-response, Reels ads are the primary driver of Discovery and Top-of-Funnel growth in 2026."
-                },
-                {
-                  q: "Is interest targeting completely dead?",
-                  a: "Not entirely, but its efficacy has halved. We use broad targeting for scale and interest-based for niche testing or when first launching a brand to give the algorithm its initial 'starting north' before letting the creative do the heavy lifting."
-                }
-              ].map((faq, idx) => (
-                <div key={idx} className="bg-white border border-[#FFE2D9] shadow-xl rounded-[3rem] p-12 hover:shadow-2xl transition-all group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl font-extrabold text-[#0F172A] mb-6">{faq.q}</h3>
-                  <p className="text-slate-500 text-lg leading-relaxed">{faq.a}</p>
-                </div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-8">
+                Social Intelligence <br />
+                <span className="text-[#FF6B35]">FAQ.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium italic">Scaling revenue through algorithmic mastery.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                      ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                      : "bg-white/50 border-[#FFE2D9] hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.q}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                      >
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
+                            {faq.a}
+                          </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Signal Integrity Verified</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>

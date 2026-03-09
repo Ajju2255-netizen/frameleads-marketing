@@ -122,7 +122,7 @@ export default function BaiduAdsPage() {
                         <Globe className="w-4 h-4 text-[#FF6B35]" />
                         <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">CHINA_ACCESS</span>
                       </div>
-                      <div className="px-2 py-0.5 bg-green-500/20 border border-green-500/20 rounded-full text-[9px] text-green-400 font-black uppercase">ICP_VERIFIED</div>
+                      <div className="px-2 py-0.5 bg-[#FF6B35]/20 border border-[#FF6B35]/20 rounded-full text-[9px] text-[#FF6B35] font-black uppercase">ICP_VERIFIED</div>
                     </div>
 
                     {/* Network Nodes map visual */}
@@ -130,8 +130,8 @@ export default function BaiduAdsPage() {
                       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
                       <div className="relative flex items-center justify-center gap-4">
                         <div className="w-3 h-3 bg-[#FF6B35] rounded-full animate-ping" />
-                        <div className="h-px w-12 bg-gradient-to-r from-[#FF6B35] to-blue-500" />
-                        <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                        <div className="h-px w-12 bg-gradient-to-r from-[#FF6B35] to-slate-500" />
+                        <div className="w-2 h-2 bg-slate-500 rounded-full" />
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 text-center">
                         <span className="text-[8px] text-slate-500 font-mono">Bypassing_Great_Firewall...</span>
@@ -142,7 +142,7 @@ export default function BaiduAdsPage() {
                     <div className="space-y-4 relative z-10">
                       <div className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-2xl border border-white/5">
                         <span className="text-[9px] text-slate-400 font-black uppercase tracking-widest">Latency</span>
-                        <span className="text-[11px] font-mono text-green-400 font-bold">42ms_LOCAL</span>
+                        <span className="text-[11px] font-mono text-[#FF6B35] font-bold">42ms_LOCAL</span>
                       </div>
                       <div className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-2xl border border-white/5">
                         <span className="text-[9px] text-slate-400 font-black uppercase tracking-widest">Lead_Quality</span>
@@ -264,9 +264,9 @@ export default function BaiduAdsPage() {
               <div className="lg:w-1/2 relative">
                 <div className="relative bg-slate-50 rounded-[4rem] p-12 border border-slate-100 shadow-2xl overflow-hidden group">
                   <div className="flex items-center gap-4 mb-10 bg-white p-6 rounded-[2rem] border border-slate-100 shadow-lg">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl">V</div>
+                    <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-full flex items-center justify-center text-[#FF6B35] font-bold text-xl">V</div>
                     <div>
-                      <div className="font-black text-slate-900 leading-none">Your Brand Name <span className="text-blue-500 ml-1">✓</span></div>
+                      <div className="font-black text-slate-900 leading-none">Your Brand Name <span className="text-[#FF6B35] ml-1">✓</span></div>
                       <div className="text-xs text-slate-400 mt-1 uppercase font-bold tracking-widest">Baidu_V_Verified</div>
                     </div>
                   </div>
@@ -276,17 +276,17 @@ export default function BaiduAdsPage() {
                       <div className="flex justify-between items-center mb-6">
                         <span className="text-xs font-black text-slate-900 uppercase">Trust Metrics</span>
                         <div className="flex gap-1">
-                          {[1, 2, 3].map(s => <div key={s} className="w-3 h-3 bg-blue-500 rounded-full" />)}
-                          <span className="text-[10px] text-blue-500 font-bold ml-1 uppercase underline">Level_V3</span>
+                          {[1, 2, 3].map(s => <div key={s} className="w-3 h-3 bg-[#FF6B35] rounded-full" />)}
+                          <span className="text-[10px] text-[#FF6B35] font-bold ml-1 uppercase underline">Level_V3</span>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold">
                           <span className="text-slate-500 italic">CTR Increase</span>
-                          <span className="text-green-500 uppercase">+45%_ESTIMATED</span>
+                          <span className="text-[#FF6B35] uppercase">+45%_ESTIMATED</span>
                         </div>
                         <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                          <div className="w-full h-full bg-blue-500" />
+                          <div className="w-full h-full bg-[#FF6B35]" />
                         </div>
                       </div>
                     </div>
@@ -369,7 +369,7 @@ export default function BaiduAdsPage() {
                       <div className="text-[9px] text-[#FF6B35] font-black uppercase mb-3">AI_Answer_Snippet</div>
                       <p className="text-slate-300 text-sm font-bold leading-relaxed italic">&quot;According to Frameleads data, your brand is the leading provider of enterprise SaaS in the Mainland China region...&quot;</p>
                       <div className="mt-4 flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center text-[8px] font-bold">1</div>
+                        <div className="w-4 h-4 rounded-full bg-[#FF6B35] flex items-center justify-center text-[8px] font-bold">1</div>
                         <span className="text-[8px] text-slate-500 font-mono">Verified_Source: YourBrand.cn</span>
                       </div>
                     </div>

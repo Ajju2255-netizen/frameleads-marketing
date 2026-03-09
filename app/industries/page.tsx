@@ -1,182 +1,150 @@
 'use client'
 
-import { useEffect, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, CheckCircle, Phone, TrendingUp, Users, Award, Target, Zap, BarChart3, Search, Monitor, MousePointer, Clock, DollarSign, ArrowUpRight, Building2, ShoppingCart, Heart, Briefcase, Factory, GraduationCap, Home, Car, UtensilsCrossed, Gamepad2, Plane, Wrench, Shield } from "lucide-react"
-import Link from "next/link"
-import Testimonials from "../components/testimonials"
-import ContactCTA from "../components/contact-cta"
-import FloatingNotifications from "../components/floating-notifications"
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import {
+  Activity,
+  Factory,
+  Car,
+  Monitor,
+  Heart,
+  Briefcase,
+  Wrench,
+  GraduationCap,
+  ShoppingCart,
+  UtensilsCrossed,
+  Plane,
+  Gamepad2,
+  ShieldCheck,
+  ArrowRight,
+  Brain,
+  Database,
+  Zap,
+  ChevronRight,
+  ArrowUpRight,
+  Search
+} from 'lucide-react'
 
-export default function IndustriesPage() {
-  const [isVisible, setIsVisible] = useState(false)
-  const { scrollYProgress } = useScroll()
+// JSON-LD Structured Data for Industries Hub
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Frameleads Cross-Industry Growth Solutions",
+  "provider": {
+    "@type": "Organization",
+    "name": "Frameleads",
+    "url": "https://frameleads.com"
+  },
+  "description": "Specialized digital marketing and growth engineering across Manufacturing, Healthcare, SaaS, Retail, and Financial sectors.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Industry Verticals",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "B2B Industrial Growth" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Healthcare Patient Acquisition" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Velocity Scaling" } }
+    ]
+  }
+}
 
-  // Parallax transforms for background elements
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -200])
-  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 180])
-  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -90])
+export default function IndustriesHubPage() {
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
+    setMounted(true)
   }, [])
 
-  const industries = [
+  const industryList = [
     {
-      name: "Technology & SaaS",
-      icon: Monitor,
-      path: "/technology-and-saas",
-      description: "Specialized digital marketing solutions for technology companies and SaaS platforms with technical expertise",
-      services: ["Product Marketing", "User Acquisition Growth", "Technical SEO Optimization", "SaaS Performance Marketing", "Developer Community Building"],
-      results: "300% average increase in qualified user acquisition",
-      compliance: "GDPR, data privacy, international regulations",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "Healthcare & Medical",
-      icon: Heart,
-      path: "/healthcare-and-medical",
-      description: "HIPAA-compliant marketing solutions for healthcare providers with medical expertise",
-      services: ["Patient Acquisition Campaigns", "Medical SEO Services", "Healthcare PPC Management", "Local Medical Marketing", "HIPAA-Compliant Strategies"],
-      results: "180% increase in patient appointment bookings",
-      compliance: "HIPAA, medical advertising guidelines, patient privacy",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      name: "Financial Services",
-      icon: Briefcase,
-      path: "/financial-services",
-      description: "Secure and compliant marketing for financial institutions with regulatory expertise",
-      services: ["Financial Lead Generation", "Banking SEO Services", "Compliance Marketing", "Trust-Building Campaigns", "Risk Management Communications"],
-      results: "220% improvement in qualified financial leads",
-      compliance: "SEC regulations, financial advertising compliance, data security",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      name: "E-commerce & Retail",
-      icon: ShoppingCart,
-      path: "/ecommerce",
-      description: "Comprehensive e-commerce marketing strategies for online retailers with conversion expertise",
-      services: ["Product Listing Optimization", "Shopping Campaign Management", "Conversion Rate Optimization", "Inventory Marketing", "Seasonal Campaign Planning"],
-      results: "250% improvement in Return on Ad Spend (ROAS)",
-      compliance: "Consumer protection, advertising standards, international trade",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      name: "Real Estate",
-      icon: Home,
-      description: "Property marketing solutions for real estate professionals with local market expertise",
-      services: ["Property Listing Optimization", "Local Real Estate SEO", "Lead Generation Systems", "Virtual Tour Marketing", "Market Analysis Reports"],
-      results: "350% increase in qualified property inquiries",
-      compliance: "Real estate regulations, fair housing compliance, local licensing",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      name: "Manufacturing",
+      title: "Manufacturing & Industrial",
       icon: Factory,
-      description: "B2B marketing strategies for manufacturing companies with industrial expertise",
-      services: ["Industrial SEO Services", "B2B Lead Generation", "Trade Show Marketing", "Supply Chain Communications", "Technical Content Marketing"],
-      results: "280% improvement in B2B manufacturing leads",
-      compliance: "Industrial regulations, safety standards, international trade",
-      color: "from-gray-500 to-slate-500"
+      link: "/manufacturing-and-industrial",
+      lever: "RFQ Orchestration",
+      category: "Industrial & Technical",
+      desc: "Optimizing for the \"Supply Chain Discovery\" era through component-level indexing and RFQ orchestration."
     },
     {
-      name: "Education & Training",
-      icon: GraduationCap,
-      description: "Educational marketing for schools, universities, and training institutes with academic expertise",
-      services: ["Student Recruitment Campaigns", "Educational SEO", "Course Marketing Strategies", "Alumni Engagement", "Institutional Branding"],
-      results: "200% increase in student enrollment rates",
-      compliance: "Educational regulations, student privacy, accreditation standards",
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      name: "Automotive",
+      title: "Automotive & Mobility",
       icon: Car,
-      description: "Marketing solutions for automotive dealers and manufacturers with automotive expertise",
-      services: ["Vehicle Marketing Campaigns", "Automotive Dealer SEO", "Local Service Marketing", "Fleet Marketing Solutions", "Parts & Service Promotion"],
-      results: "240% improvement in vehicle sales conversion",
-      compliance: "Automotive regulations, safety standards, dealer compliance",
-      color: "from-orange-500 to-red-500"
+      link: "/automotive-marketing",
+      lever: "Showroom-Ready Leads",
+      category: "Industrial & Technical",
+      desc: "Driving \"Showroom-Ready\" appointments through real-time VDP (Vehicle Detail Page) sync and EV-specific education hubs."
     },
     {
-      name: "Food & Beverage",
-      icon: UtensilsCrossed,
-      description: "Restaurant and food service marketing strategies with culinary expertise",
-      services: ["Restaurant SEO Services", "Local Food Marketing", "Delivery Platform Optimization", "Menu Marketing", "Food Photography & Content"],
-      results: "190% increase in restaurant reservation bookings",
-      compliance: "Food safety regulations, health department guidelines, labeling requirements",
-      color: "from-amber-500 to-yellow-500"
+      title: "Technology & SaaS",
+      icon: Monitor,
+      link: "/technology-and-saas",
+      lever: "Product-Led Growth",
+      category: "Industrial & Technical",
+      desc: "Scaling recurring revenue through Product-Led Growth (PLG) and LTV:CAC optimization."
     },
     {
-      name: "Travel & Hospitality",
-      icon: Plane,
-      description: "Tourism and hospitality marketing solutions with travel industry expertise",
-      services: ["Travel SEO Optimization", "Hotel Marketing Campaigns", "Destination Marketing", "Booking System Optimization", "Travel Content Strategy"],
-      results: "260% improvement in booking conversions",
-      compliance: "Tourism regulations, accessibility requirements, international travel laws",
-      color: "from-teal-500 to-cyan-500"
+      title: "Healthcare & Medical",
+      icon: Heart,
+      link: "/healthcare-and-medical",
+      lever: "Patient Trust (HIPAA)",
+      category: "High-Trust & Professional",
+      desc: "Patient-centric discovery built on a foundation of HIPAA compliance and clinical E-E-A-T."
     },
     {
-      name: "Gaming & Entertainment",
-      icon: Gamepad2,
-      description: "Marketing for gaming companies and entertainment platforms with gaming expertise",
-      services: ["Gaming SEO Strategies", "User Acquisition Campaigns", "Community Building", "Influencer Marketing Programs", "Gaming Content Creation"],
-      results: "320% increase in user engagement metrics",
-      compliance: "Gaming regulations, content ratings, international gaming laws",
-      color: "from-pink-500 to-purple-500"
+      title: "Financial Services",
+      icon: Briefcase,
+      link: "/financial-services",
+      lever: "Authority Building",
+      category: "High-Trust & Professional",
+      desc: "Precision wealth-management growth focusing on high-net-worth intent and regulatory-safe attribution."
     },
     {
-      name: "Professional Services",
+      title: "Professional Services",
       icon: Wrench,
-      description: "Marketing for law firms, consulting, and professional services with professional expertise",
-      services: ["Professional SEO Services", "Client Acquisition Systems", "Thought Leadership Development", "Service-Based Marketing", "Online Reputation Management"],
-      results: "210% improvement in qualified client acquisition",
-      compliance: "Professional licensing, ethical guidelines, industry standards",
-      color: "from-slate-500 to-gray-500"
-    }
-  ]
-
-  const serviceRegions = [
-    "North America",
-    "Asia",
-    "Europe",
-    "Latin America",
-    "Middle East",
-    "South Asia",
-  ]
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Industry-Specific Digital Marketing Solutions",
-    "description": "Specialized digital marketing strategies for 12+ industries with proven compliance expertise. Our industry-specialized digital marketing solutions deliver superior results by addressing unique sector challenges, regulations, and customer behaviors.",
-    "url": "https://frameleads.com/industries",
-    "telephone": "+91 6362821368",
-    "email": "ajsal@frameleads.com",
-    "provider": {
-      "@type": "Organization",
-      "name": "FrameLeads",
-      "url": "https://frameleads.com"
+      link: "/professional-services-marketing",
+      lever: "Entity-Based SEO",
+      category: "High-Trust & Professional",
+      desc: "Positioning consultancies and law firms as \"First-Cited\" authorities through entity-based SEO."
     },
-    "serviceType": "Digital Marketing",
-    "areaServed": "Global",
-    "priceRange": "$2000-$50000",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Industry Marketing Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Healthcare Digital Marketing", "description": "HIPAA-compliant marketing solutions for healthcare providers with medical expertise" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technology Marketing Solutions", "description": "Specialized digital marketing solutions for technology companies and SaaS platforms with technical expertise" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financial Services Marketing", "description": "Secure and compliant marketing for financial institutions with regulatory expertise" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Marketing Strategies", "description": "Comprehensive e-commerce marketing strategies for online retailers with conversion expertise" } }
-      ]
+    {
+      title: "Education & EdTech",
+      icon: GraduationCap,
+      link: "/education-and-training",
+      lever: "Enrollment Engineering",
+      category: "High-Trust & Professional",
+      desc: "Enrollment-first engineering that bridges the gap between curriculum depth and career outcomes."
+    },
+    {
+      title: "E-commerce & Retail",
+      icon: ShoppingCart,
+      link: "/ecommerce",
+      lever: "MER Scaling",
+      category: "Lifestyle, Retail & Ent.",
+      desc: "High-velocity retail scaling using Server-Side CAPI and profit-first MER tracking."
+    },
+    {
+      title: "Food & Beverage",
+      icon: UtensilsCrossed,
+      link: "/food-beverage-marketing",
+      lever: "Craving-to-Commerce",
+      category: "Lifestyle, Retail & Ent.",
+      desc: "Craving-to-commerce engineering for CPG brands and multi-unit restaurant groups."
+    },
+    {
+      title: "Travel & Hospitality",
+      icon: Plane,
+      link: "/travel-hospitality-marketing",
+      lever: "Identity-Based SEO",
+      category: "Lifestyle, Retail & Ent.",
+      desc: "Personalized journey architecture for boutique stays and luxury tour operators."
+    },
+    {
+      title: "Gaming & Entertainment",
+      icon: Gamepad2,
+      link: "/gaming-marketing",
+      lever: "Player LTV & Retention",
+      category: "Lifestyle, Retail & Ent.",
+      desc: "Player-first retention loops and community-led growth for titles and streaming platforms."
     }
-  }
+  ]
 
   return (
     <>
@@ -184,317 +152,195 @@ export default function IndustriesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
-        <FloatingNotifications />
 
-        {/* Organic Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Subtle gradient overlays */}
-          <motion.div
-            style={{ y: y1, rotate: rotate1 }}
-            className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
+      <div className="min-h-screen bg-[#FDFDFD] text-slate-900 font-sans selection:bg-[#FF6B35] selection:text-white pb-0 overflow-x-hidden">
 
-          <motion.div
-            style={{ y: y2, rotate: rotate2 }}
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl"
-            animate={{
-              scale: [1.1, 1, 1.1],
-              opacity: [0.15, 0.3, 0.15],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 3
-            }}
-          />
+        {/* 1. Sector Intelligence Command Center (Hero) */}
+        <section className="relative pt-32 pb-24 px-4 overflow-hidden flex flex-col justify-center">
+          {/* Background Grid & Glows */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-[#FF6B35]/5 rounded-full blur-[120px] mix-blend-multiply" />
+            <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[100px] mix-blend-multiply" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_10%,transparent_100%)]" />
+          </div>
 
-          <motion.div
-            style={{ y: y3 }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.1, 0.2, 0.1],
-            }}
-            transition={{
-              duration: 18,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 6
-            }}
-          />
-        </div>
+          <div className="max-w-7xl mx-auto relative z-10 w-full">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
 
+              {/* Left Text Content */}
+              <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#FF6B35]/10 border border-[#FF6B35]/20 rounded-full text-[#FF6B35] text-xs font-black uppercase tracking-[0.2em] mb-8">
+                  <Database className="w-4 h-4" /> Global Sector Intelligence
+                </div>
+                <h1 className="text-5xl md:text-7xl font-black text-[#0F172A] leading-[1.05] tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#0F172A] to-slate-700">
+                  Growth Engineering <br />
+                  Across 15+ Sectors.
+                </h1>
+                <p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed mb-10 max-w-2xl">
+                  We combine Proprietary AI Stacks with Deep-Vertical Data to solve the <span className="text-[#FF6B35] italic">&quot;Conversion Gap&quot;</span> unique to each industry.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="#verticals" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#0F172A] text-white font-black text-lg rounded-[2rem] shadow-[0_15px_30px_-10px_rgba(15,23,42,0.3)] hover:scale-105 transition-all duration-300">
+                    Explore Verticals <ChevronRight className="w-5 h-5 text-[#FF6B35]" />
+                  </Link>
+                </div>
+              </motion.div>
 
+              {/* Right UI Dashboard / Snippet */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-1 bg-gradient-to-tr from-[#FF6B35] to-orange-300 rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+                <div className="bg-white border border-slate-100 rounded-[2rem] shadow-2xl relative overflow-hidden flex flex-col group-hover:scale-[1.01] transition-transform duration-700">
+                  {/* Console Header */}
+                  <div className="bg-[#0F172A] px-6 py-4 flex items-center justify-between border-b border-white/5">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-[#FF6B35]" />
+                      <div className="w-3 h-3 rounded-full bg-slate-600" />
+                      <div className="w-3 h-3 rounded-full bg-slate-600" />
+                    </div>
+                    <div className="text-xs font-mono text-slate-400 font-bold tracking-widest uppercase italic">Ecosystem_Overview</div>
+                    <Activity className="w-4 h-4 text-[#FF6B35]" />
+                  </div>
+                  <div className="p-8 md:p-10 flex-1 flex flex-col justify-center">
+                    <h3 className="text-2xl font-black text-[#0F172A] mb-6 tracking-tight">Frameleads Industry Ecosystem</h3>
+                    <p className="text-slate-500 leading-relaxed font-medium mb-8 text-lg">
+                      From HIPAA-compliant medical leads to high-velocity e-commerce signal integrity, our framework ensures your growth is driven by <strong className="text-[#0F172A]">Institutional Authority</strong> and <strong className="text-[#FF6B35]">Technical Precision</strong>.
+                    </p>
+                    <div className="space-y-4">
+                      {[
+                        { label: 'Nano Banana AI Stack', status: 'ACTIVE', progress: 100 },
+                        { label: 'ElevenLabs Integration', status: 'SYNCED', progress: 100 },
+                        { label: 'Cross-Vertical Data Lake', status: 'PROCESSING', progress: 78 }
+                      ].map((item, i) => (
+                        <div key={i}>
+                          <div className="flex justify-between text-[10px] font-mono font-black text-slate-400 uppercase tracking-widest mb-2">
+                            <span>{item.label}</span>
+                            <span className={item.progress === 100 ? "text-[#FF6B35]" : "text-[#0F172A]"}>{item.status}</span>
+                          </div>
+                          <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div className="h-full bg-[#FF6B35] shadow-[0_0_10px_rgba(255,107,53,0.5)]" style={{ width: `${item.progress}%` }} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
 
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 pt-32" id="hero">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center">
-              <div className="inline-block mb-6">
-                <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                  ⭐ 4.9/5 Rated • Industry Specialists • 12+ Industries Served
-                </span>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-                Industry-Specific Digital Marketing Solutions That Drive Measurable Results
-              </h1>
-
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-                Specialized marketing strategies for 12+ industries with proven compliance expertise. Our industry-specialized digital marketing solutions deliver superior results by addressing unique sector challenges, regulations, and customer behaviors.
-              </p>
-              <div className="max-w-4xl mx-auto text-left text-gray-600 mb-10">
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
-                  <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Industry-specialized expertise across 12+ verticals</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> 250% average improvement in sector-specific KPIs</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Compliance-first marketing strategies</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-[#FF6B35] mt-0.5" /> Proven results in regulated industries</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <Link href="/contact">
-                  <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                    Get Free Industry Analysis
-                  </Button>
-                </Link>
-                <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
-                  <Button variant="outline" className="border-[#FF6B35]/40 text-gray-600 hover:text-gray-900">
-                    <Phone className="h-5 w-5 mr-2" /> Call +91 63628 21368
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
-                <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>4.9/5 rating (200+ reviews)</span></div>
-                <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>Industry Specialists</span></div>
-                <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#FF6B35]" /><span>12+ industries served</span></div>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Industries Grid */}
-        <section className="relative py-20" id="industries">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Digital Marketing Services by Industry Sector</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our industry-specific digital marketing solutions are tailored to meet the unique challenges and opportunities within each sector. Explore our specialized services below:
+        {/* 2. Seamless Industry Listing */}
+        <section id="verticals" className="relative py-32 bg-[#F8FAFC] border-y border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 z-10 relative">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-black text-[#0F172A] tracking-tighter mb-6 leading-none">
+                Our Growth Verticals
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">
+                Choose your vertical to explore our structured marketing strategy for your industry.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={industry.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  className="group cursor-pointer"
-                >
-                  <Link href={industry.path || "/contact"}>
-                    <Card className="bg-white/90 backdrop-blur-xl border-gray-200/50 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <CardContent className="p-6 text-center relative z-10">
-                        <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                          <industry.icon className="h-8 w-8 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF6B35] transition-colors duration-300">{industry.name}</h3>
-                        <p className="text-gray-600 mb-4">{industry.description}</p>
-                        <div className="space-y-2 mb-4">
-                          {industry.services.map((service, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-[#FF6B35] flex-shrink-0" />
-                              <span>{service}</span>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="text-sm font-semibold text-[#FF6B35] mb-2">
-                          {industry.results}
-                        </div>
-                        <div className="text-xs text-gray-500 mb-4">
-                          <strong>Compliance:</strong> {industry.compliance}
-                        </div>
-                        <div className="mt-6">
-                          <Button className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white font-semibold py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                            Learn More
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
+            {/* Flat Grid Listing */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industryList.map((item, idx) => (
+                <Link href={item.link} key={idx} className="block group">
+                  <div className="bg-white border border-slate-100 p-10 rounded-[2.5rem] h-full flex flex-col hover:border-[#FF6B35]/30 hover:shadow-2xl transition-all duration-500 relative overflow-hidden transform group-hover:-translate-y-1">
+
+                    {/* Hover Overlay Element */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#FF6B35]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1 duration-300">
+                      <ArrowUpRight className="w-7 h-7 text-[#FF6B35]" />
+                    </div>
+
+                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#FF6B35] transition-colors duration-300 border border-slate-100 group-hover:border-transparent">
+                      <item.icon className="w-8 h-8 text-[#0F172A] group-hover:text-white" />
+                    </div>
+
+                    <h3 className="text-2xl font-black text-[#0F172A] mb-4 tracking-tight leading-tight group-hover:text-[#FF6B35] transition-colors">
+                      {item.title}
+                    </h3>
+
+                    <div className="inline-block px-3 py-1 bg-slate-100 rounded-lg text-xs font-bold text-slate-500 mb-6 w-max">
+                      {item.category}
+                    </div>
+
+                    <p className="text-slate-500 font-medium leading-relaxed flex-1 text-lg">
+                      {item.desc}
+                    </p>
+
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Why Industry-Specific Marketing Matters */}
-        <section className="relative py-20 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Specialized Digital Marketing for Your Industry?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Industry-specific digital marketing delivers superior results because it addresses the unique challenges, regulations, and customer behaviors within each sector. Generic marketing approaches fail to account for industry compliance requirements, specialized terminology, and sector-specific customer journey patterns.
+        {/* 3. Why Frameleads Dominates "Vertical Search" */}
+        <section className="relative py-32 bg-[#0F172A] overflow-hidden border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-black text-white leading-[1.0] tracking-tighter mb-6">
+                Why We Dominate the <br />
+                <span className="text-[#FF6B35]">&quot;Vertical Search&quot; Era</span>
+              </h2>
+              <p className="text-xl text-slate-400 max-w-3xl mx-auto font-medium">
+                In 2026, a "generalist" agency is a liability. Frameleads wins because we deploy <strong className="text-white">Cross-Pollinated Insights</strong> to outmaneuver narrow-focus competitors.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <Target className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Deep Industry Knowledge Matters</h3>
-                  <p className="text-gray-600 text-sm">Our industry-specialized marketing consultants understand the nuances of your sector, from regulatory compliance requirements to industry-specific customer pain points. This expertise ensures your marketing campaigns resonate with your target audience while maintaining full compliance with industry standards.</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { title: "The Data Advantage", desc: "We take the high-velocity retention loops from Gaming & Esports and seamlessly apply them to SaaS onboarding pipelines.", icon: Brain },
+                { title: "The Trust Advantage", desc: "We take the extreme compliance rigor from Healthcare (HIPAA) and apply it to Financial Services and B2B Wealth Management.", icon: ShieldCheck },
+                { title: "The Velocity Advantage", desc: "We take the instant-checkout speed from Food & Beverage and apply it to Automotive lead captures.", icon: Zap }
+              ].map((item, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 p-12 rounded-[3.5rem] hover:border-[#FF6B35]/40 hover:-translate-y-2 transition-all duration-500 group">
+                  <div className="w-20 h-20 bg-white/5 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-[#FF6B35] transition-colors duration-500 backdrop-blur-md">
+                    <item.icon className="w-10 h-10 text-[#FF6B35] group-hover:text-white" />
+                  </div>
+                  <h3 className="text-3xl font-black text-white mb-6 tracking-tight leading-tight">{item.title}</h3>
+                  <p className="text-slate-400 text-lg font-medium leading-relaxed">{item.desc}</p>
                 </div>
-              </motion.div>
-
-              <motion.div
-                className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF8A50]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <Users className="h-8 w-8 text-[#FF8A50] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Compliance-First Marketing Approach</h3>
-                  <p className="text-gray-600 text-sm">Different industries face varying regulatory requirements. Our compliance-aware marketing strategies ensure your campaigns meet sector-specific guidelines while maximizing performance, particularly crucial for healthcare, financial services, and other regulated industries.</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-[#FF6B35]/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <Shield className="h-8 w-8 text-[#FF6B35] mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Track Record Across Sectors</h3>
-                  <p className="text-gray-600 text-sm">With documented success across 12+ industries, our specialized approach consistently delivers measurable improvements in industry-relevant KPIs, from patient acquisition rates to B2B lead quality.</p>
-                </div>
-              </motion.div>
+              ))}
             </div>
           </div>
+          {/* Floating Glows */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6B35]/10 rounded-full blur-[100px] pointer-events-none" />
         </section>
 
-        {/* Testimonials */}
-        <Testimonials />
+        {/* 4. Final CTA */}
+        <section className="relative z-10 max-w-7xl mx-auto px-6 py-32">
+          <div className="bg-white border border-slate-100 rounded-[5rem] overflow-hidden relative shadow-2xl text-center px-6 py-24 md:py-32">
+            {/* Glow Behind CTA */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FF6B35]/5 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none" />
 
-        {/* Contact CTA */}
-        <ContactCTA
-          title="Get Your Free Industry Marketing Analysis"
-          description="Our industry-specialized marketing consultants will analyze your current digital presence and create a custom strategy tailored to your sector's unique requirements and opportunities."
-          primaryButtonText="Get Free Industry Analysis"
-          secondaryButtonText="Schedule Strategy Consultation"
-        />
-
-        {/* Internal Links */}
-        <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Specialized Marketing Services</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Discover our comprehensive industry-specific services, case studies, and related digital marketing offerings
+            <div className="relative z-10 max-w-4xl mx-auto">
+              <div className="flex justify-center mb-10">
+                <div className="p-6 bg-slate-50 rounded-[2rem] border border-[#FF6B35]/20 text-[#FF6B35]">
+                  <Search className="w-12 h-12" />
+                </div>
+              </div>
+              <h2 className="text-5xl md:text-8xl font-black text-[#0F172A] mb-8 leading-[0.9] tracking-tighter">
+                Specialized Growth for a <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8A50]">Fragmented World.</span>
+              </h2>
+              <p className="text-xl md:text-3xl text-slate-500 mb-16 leading-relaxed font-medium">
+                Don&apos;t settle for a &quot;one-size-fits-all&quot; strategy. Our Growth Audits analyze your competitors, verify technical compliance, and build a <span className="text-[#0F172A] font-black underline decoration-[#FF6B35]/50">90-day roadmap tailored to your market</span>.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Industry-Focused Services */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry-Focused Services</h3>
-                <div className="space-y-3">
-                  <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Solutions</Link>
-                  <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing Services</Link>
-                  <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">E-commerce Marketing Strategies</Link>
-                  <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Healthcare Marketing Compliance</Link>
-                </div>
-              </div>
-
-              {/* Core Digital Marketing Services */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Digital Marketing Services</h3>
-                <div className="space-y-3">
-                  <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
-                  <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services & Optimization</Link>
-                  <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management & Strategy</Link>
-                  <Link href="/analytics-and-automations" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Analytics & Marketing Automation</Link>
-                </div>
-              </div>
-
-              {/* Global Service Locations */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Service Locations</h3>
-                <div className="space-y-3">
-                  <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
-                  <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
-                  <Link href="/digital-marketing-in-singapore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Singapore</Link>
-                  <Link href="/digital-marketing-in-australia" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Australia</Link>
-                </div>
-              </div>
-
-              {/* Company & Resources */}
-              <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Company & Resources</h3>
-                <div className="space-y-3">
-                  <Link href="/about" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">About FrameLeads</Link>
-                  <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Contact Our Team</Link>
-                  <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Marketing Academy</Link>
-                  <Link href="/contact" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Free Marketing Audit</Link>
-                </div>
-              </div>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-8 bg-[#0F172A] text-white font-black text-2xl rounded-[3rem] shadow-[0_20px_40px_-12px_rgba(15,23,42,0.4)] hover:scale-105 transition-all duration-300 group">
+                Start Your Industry Audit <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform text-[#FF6B35]" />
+              </Link>
             </div>
           </div>
         </section>
-
-        {/* Floating Action Button */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 2, duration: 0.5 }}
-          className="fixed bottom-8 right-8 z-50"
-        >
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="relative"
-          >
-            <Link href="/contact">
-              <Button className="w-14 h-14 bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-[#FF6B35]/50 transition-all duration-300">
-                <Phone className="h-6 w-6" />
-              </Button>
-            </Link>
-            <motion.div
-              className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              !
-            </motion.div>
-          </motion.div>
-        </motion.div>
-
 
       </div>
     </>

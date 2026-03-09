@@ -280,24 +280,24 @@ export default function ContentMarketingPage() {
               </div>
 
               <div className="bg-white p-8 rounded-[2rem] border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-xl transition-all group">
-                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20 group-hover:bg-blue-500 transition-colors">
-                  <MessageSquare className="w-7 h-7 text-blue-500 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#FF6B35]/10 rounded-2xl flex items-center justify-center mb-6 border border-[#FF6B35]/20 group-hover:bg-[#FF6B35] transition-colors">
+                  <MessageSquare className="w-7 h-7 text-[#FF6B35] group-hover:text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-xl mb-4">Micro-Content</h3>
                 <p className="text-gray-600 leading-relaxed">Breaking the pillar into 5 LinkedIn carousels and 10 X (Twitter) threads.</p>
               </div>
 
               <div className="bg-white p-8 rounded-[2rem] border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-xl transition-all group">
-                <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/20 group-hover:bg-purple-500 transition-colors">
-                  <Zap className="w-7 h-7 text-purple-500 group-hover:text-white" />
+                <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 border border-slate-200 group-hover:bg-[#0F172A] transition-colors">
+                  <Zap className="w-7 h-7 text-[#0F172A] group-hover:text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-xl mb-4">Visual Data</h3>
                 <p className="text-gray-600 leading-relaxed">Infographics and charts optimized for Google Image Search and Pinterest.</p>
               </div>
 
               <div className="bg-white p-8 rounded-[2rem] border border-gray-200 hover:border-[#FF6B35]/30 hover:shadow-xl transition-all group">
-                <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:bg-emerald-500 transition-colors">
-                  <BarChart3 className="w-7 h-7 text-emerald-500 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#FF6B35]/10 rounded-2xl flex items-center justify-center mb-6 border border-[#FF6B35]/20 group-hover:bg-[#FF6B35] transition-colors">
+                  <BarChart3 className="w-7 h-7 text-[#FF6B35] group-hover:text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-xl mb-4">Interactive Assets</h3>
                 <p className="text-gray-600 leading-relaxed">Quizzes, calculators, and templates that drive high Dwell Time (a massive ranking signal).</p>
@@ -425,7 +425,7 @@ export default function ContentMarketingPage() {
         <section className="relative z-10 max-w-6xl mx-auto px-6 py-24">
           <div className="bg-[#0F172A] rounded-[3rem] overflow-hidden relative shadow-2xl p-12 md:p-24 text-center">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF6B35] opacity-20 rounded-full blur-[100px] -mr-40 -mt-40 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500 opacity-10 rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0F172A] opacity-10 rounded-full blur-[100px] -ml-40 -mb-40 pointer-events-none" />
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1]">

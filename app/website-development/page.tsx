@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import {
   Code,
@@ -33,7 +34,9 @@ import {
   Linkedin,
   Music,
   Smartphone,
-  Pin
+  Pin,
+  Plus,
+  Minus
 } from 'lucide-react'
 
 // JSON-LD Structured Data for Web Development Services
@@ -83,6 +86,22 @@ const faqSchema = {
 }
 
 export default function WebDevPage() {
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null)
+
+  const faqs = [
+    {
+      q: "What is a 'Headless' Website and why does it matter in 2026?",
+      a: "A Headless website decouples the frontend (what users see) from the backend (where content is managed). This allows for extreme speed, better security, and the ability to push your content to any device (mobile, web, IoT, or AI agents) via a single API."
+    },
+    {
+      q: "How does web development impact my Google Ads and SEO?",
+      a: "Website speed and structure are direct ranking factors. A faster site improves your Quality Score in Google Ads (lowering your CPC) and increases your Dwell Time in organic search, signaling to Google that your site provides a superior user experience."
+    },
+    {
+      q: "Can you migrate my existing content to a new architectural hub?",
+      a: "Yes. We handle seamless content migrations from WordPress, Shopify, and custom CMSs. Our process ensures 100% SEO preservation by implementing exact 301 redirect mapping and semantic data parity."
+    }
+  ]
   return (
     <>
       <script
@@ -367,30 +386,69 @@ export default function WebDevPage() {
         </section>
 
         {/* 7. Deep-Dive FAQ */}
-        <section className="py-32 bg-[#F8FAFC]">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-20 text-center">Technical Engineering FAQ</h2>
+        <section id="faq" className="scroll-mt-32 py-40 px-6 bg-[#F8FAFC] relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="space-y-8">
-              {[
-                {
-                  q: "What is a 'Headless' Website and why does it matter in 2026?",
-                  a: "A Headless website decouples the frontend (what users see) from the backend (where content is managed). This allows for extreme speed, better security, and the ability to push your content to any device (mobile, web, IoT, or AI agents) via a single API."
-                },
-                {
-                  q: "How does web development impact my Google Ads and SEO?",
-                  a: "Website speed and structure are direct ranking factors. A faster site improves your Quality Score in Google Ads (lowering your CPC) and increases your Dwell Time in organic search, signaling to Google that your site provides a superior user experience."
-                },
-                {
-                  q: "Can you migrate my existing content to a new architectural hub?",
-                  a: "Yes. We handle seamless content migrations from WordPress, Shopify, and custom CMSs. Our process ensures 100% SEO preservation by implementing exact 301 redirect mapping and semantic data parity."
-                }
-              ].map((faq, idx) => (
-                <div key={idx} className="bg-white border border-slate-100 shadow-xl rounded-[3rem] p-12 hover:shadow-2xl transition-all group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-2xl font-extrabold text-[#0F172A] mb-6">{faq.q}</h3>
-                  <p className="text-slate-500 text-lg leading-relaxed">{faq.a}</p>
-                </div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] tracking-tight mb-8">
+                Technical <br />
+                <span className="text-[#FF6B35]">FAQ.</span>
+              </h2>
+              <p className="text-xl text-slate-500 font-medium italic">Engineering the future of semantic enterprise hubs.</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`group rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${openFaq === i
+                      ? "bg-white border-[#FF6B35]/30 shadow-2xl scale-[1.02]"
+                      : "bg-white/50 border-slate-100 hover:border-[#FF6B35]/20 hover:bg-white"
+                    }`}
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className={`text-sm font-mono font-bold transition-colors ${openFaq === i ? "text-[#FF6B35]" : "text-slate-400"}`}>
+                        0{i + 1}
+                      </span>
+                      <h3 className={`text-2xl md:text-3xl font-black transition-colors ${openFaq === i ? "text-[#0F172A]" : "text-slate-600 group-hover:text-[#0F172A]"}`}>
+                        {faq.q}
+                      </h3>
+                    </div>
+                    <div className={`flex-shrink-0 ml-4 p-4 rounded-full transition-all duration-500 ${openFaq === i ? "bg-[#FF6B35] text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-[#FF6B35]/10 group-hover:text-[#FF6B35]"
+                      }`}>
+                      <Plus className={`w-6 h-6 transition-transform duration-500 ${openFaq === i ? "rotate-45" : ""}`} />
+                    </div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "circOut" }}
+                      >
+                        <div className="px-8 md:px-12 pb-12 ml-14 md:ml-20">
+                          <div className="w-full h-px bg-slate-100 mb-8" />
+                          <p className="text-xl text-slate-600 leading-relaxed font-medium max-w-3xl">
+                            {faq.a}
+                          </p>
+                          <div className="mt-8 flex items-center gap-4 text-[#FF6B35] font-bold text-sm uppercase tracking-widest">
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>Technical Integrity Verified</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>

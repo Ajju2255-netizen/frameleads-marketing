@@ -171,7 +171,7 @@ export default function TikTokAdsPage() {
                     </div>
                     <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#FF6B35]/30 transition-all">
                       <div className="text-[10px] text-slate-400 font-bold uppercase mb-1">Checkout Friction</div>
-                      <div className="text-3xl font-black text-green-500">ELIMINATED</div>
+                      <div className="text-3xl font-black text-[#FF6B35]">ELIMINATED</div>
                     </div>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function TikTokAdsPage() {
                     <div className="mb-10">
                       <div className="text-slate-400 text-xs font-bold uppercase mb-2">Total Shop GMV (24h)</div>
                       <div className="text-5xl md:text-6xl font-black text-white tracking-tighter flex items-baseline gap-2">
-                        $142,850 <span className="text-green-400 text-sm font-bold tracking-normal">↑ 42%</span>
+                        $142,850 <span className="text-[#FF6B35] text-sm font-bold tracking-normal">↑ 42%</span>
                       </div>
                     </div>
 
@@ -277,7 +277,7 @@ export default function TikTokAdsPage() {
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: "92.1%" }}
-                            className="h-full bg-blue-400"
+                            className="h-full bg-[#FF6B35]/70"
                           />
                         </div>
                       </div>
@@ -371,8 +371,8 @@ export default function TikTokAdsPage() {
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <div className="text-[9px] font-black text-emerald-600 uppercase">Processing...</div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35] animate-pulse" />
+                      <div className="text-[9px] font-black text-[#FF6B35] uppercase">Processing...</div>
                     </div>
                   </div>
 

@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react"
 import FloatingNotifications from "../../components/floating-notifications"
 import Link from "next/link"
-import { 
-  Calculator, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  MousePointer, 
-  Target, 
-  BarChart3, 
-  PieChart, 
-  ArrowRight, 
+import {
+  Calculator,
+  TrendingUp,
+  DollarSign,
+  Users,
+  MousePointer,
+  Target,
+  BarChart3,
+  PieChart,
+  ArrowRight,
   ExternalLink,
   Download,
   RefreshCw,
@@ -20,6 +20,11 @@ import {
   CheckCircle,
   AlertCircle
 } from "lucide-react"
+interface ChartData {
+  spendVsRevenue: { name: string; value: number; color: string }[]
+  roiTrend: { month: string; roi: number }[]
+  cplTrend: { month: string; cpl: number }[]
+}
 
 export default function ROICalculatorPage() {
   const [formData, setFormData] = useState({
@@ -40,7 +45,7 @@ export default function ROICalculatorPage() {
     roi: 0
   })
 
-  const [chartData, setChartData] = useState({
+  const [chartData, setChartData] = useState<ChartData>({
     spendVsRevenue: [],
     roiTrend: [],
     cplTrend: []
@@ -89,7 +94,7 @@ export default function ROICalculatorPage() {
     // Spend vs Revenue chart data
     const spendVsRevenue = [
       { name: 'Ad Spend', value: spend, color: '#FF6B35' },
-      { name: 'Revenue', value: revenue, color: '#10B981' }
+      { name: 'Revenue', value: revenue, color: '#FF8A50' }
     ]
 
     // ROI trend data (simulated over 6 months)
@@ -148,7 +153,7 @@ export default function ROICalculatorPage() {
       results: results,
       timestamp: new Date().toISOString()
     }
-    
+
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -170,7 +175,7 @@ export default function ROICalculatorPage() {
         <div className="absolute bottom-60 right-1/3 w-14 h-14 bg-[#FF8A50]/10 rounded-full animate-pulse"></div>
       </div>
 
-      
+
       <FloatingNotifications />
 
       {/* Hero Section */}
@@ -185,8 +190,8 @@ export default function ROICalculatorPage() {
               <span className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] bg-clip-text text-transparent"> Marketing ROI</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Measure the effectiveness of your digital marketing campaigns with our comprehensive ROI calculator. 
-              Get instant insights into your <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">PPC performance</Link>, 
+              Measure the effectiveness of your digital marketing campaigns with our comprehensive ROI calculator.
+              Get instant insights into your <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">PPC performance</Link>,
               <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">SEO results</Link>, and{' '}
               <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">social media campaigns</Link>.
             </p>
@@ -318,12 +323,12 @@ export default function ROICalculatorPage() {
                 </div>
               </form>
 
-              <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+              <div className="mt-8 p-4 bg-[#FF6B35]/5 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div className="text-sm text-blue-800">
+                  <Info className="h-5 w-5 text-[#FF6B35] mt-0.5 flex-shrink-0" />
+                  <div className="text-sm text-slate-600">
                     <p className="font-semibold mb-1">Need help with your campaign data?</p>
-                    <p>Get a free <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">marketing audit</Link> to analyze your current performance and optimize your ROI.</p>
+                    <p>Get a free <Link href="/contact" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">marketing audit</Link> to analyze your current performance and optimize your ROI.</p>
                   </div>
                 </div>
               </div>
@@ -344,28 +349,28 @@ export default function ROICalculatorPage() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-6 bg-green-50 rounded-lg">
-                    <div className="text-3xl font-bold text-green-600 mb-2">${results.cpc}</div>
+                  <div className="text-center p-6 bg-[#FF6B35]/10 rounded-lg">
+                    <div className="text-3xl font-bold text-[#FF6B35] mb-2">${results.cpc}</div>
                     <div className="text-sm font-medium text-gray-700">Cost Per Click</div>
                   </div>
-                  <div className="text-center p-6 bg-blue-50 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">${results.cpl}</div>
+                  <div className="text-center p-6 bg-[#FF6B35]/5 rounded-lg">
+                    <div className="text-3xl font-bold text-[#FF6B35] mb-2">${results.cpl}</div>
                     <div className="text-sm font-medium text-gray-700">Cost Per Lead</div>
                   </div>
-                  <div className="text-center p-6 bg-purple-50 rounded-lg">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">{results.customers}</div>
+                  <div className="text-center p-6 bg-slate-50 rounded-lg">
+                    <div className="text-3xl font-bold text-[#0F172A] mb-2">{results.customers}</div>
                     <div className="text-sm font-medium text-gray-700">Customers</div>
                   </div>
                   <div className="text-center p-6 bg-orange-50 rounded-lg">
                     <div className="text-3xl font-bold text-orange-600 mb-3">${results.revenue.toLocaleString()}</div>
                     <div className="text-sm font-medium text-gray-700 leading-tight">Revenue</div>
                   </div>
-                  <div className="text-center p-6 bg-red-50 rounded-lg">
-                    <div className="text-3xl font-bold text-red-600 mb-2">${results.cac}</div>
+                  <div className="text-center p-6 bg-slate-50 rounded-lg">
+                    <div className="text-3xl font-bold text-[#0F172A] mb-2">${results.cac}</div>
                     <div className="text-sm font-medium text-gray-700">Customer Acquisition Cost</div>
                   </div>
-                  <div className="text-center p-6 bg-indigo-50 rounded-lg">
-                    <div className={`text-3xl font-bold mb-2 ${results.roi >= 0 ? 'text-indigo-600' : 'text-red-600'}`}>
+                  <div className="text-center p-6 bg-[#FF6B35]/10 rounded-lg">
+                    <div className={`text-3xl font-bold mb-2 ${results.roi >= 0 ? 'text-[#FF6B35]' : 'text-red-600'}`}>
                       {results.roi}%
                     </div>
                     <div className="text-sm font-medium text-gray-700">ROI</div>
@@ -378,9 +383,9 @@ export default function ROICalculatorPage() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-6">Performance Analysis</h4>
                 <div className="space-y-4">
                   {results.roi > 0 ? (
-                    <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm font-medium text-green-800">Positive ROI - Campaign is profitable</span>
+                    <div className="flex items-start gap-3 p-3 bg-[#FF6B35]/10 rounded-lg">
+                      <CheckCircle className="h-5 w-5 text-[#FF6B35] mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-medium text-[#FF6B35]">Positive ROI - Campaign is profitable</span>
                     </div>
                   ) : (
                     <div className="flex items-start gap-3 p-3 bg-red-50 rounded-lg">
@@ -388,11 +393,11 @@ export default function ROICalculatorPage() {
                       <span className="text-sm font-medium text-red-800">Negative ROI - Campaign needs optimization</span>
                     </div>
                   )}
-                  
+
                   {results.cpc < 2 ? (
-                    <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm font-medium text-green-800">Good CPC - Cost per click is efficient</span>
+                    <div className="flex items-start gap-3 p-3 bg-[#FF6B35]/10 rounded-lg">
+                      <CheckCircle className="h-5 w-5 text-[#FF6B35] mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-medium text-[#FF6B35]">Good CPC - Cost per click is efficient</span>
                     </div>
                   ) : (
                     <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg">
@@ -402,9 +407,9 @@ export default function ROICalculatorPage() {
                   )}
 
                   {results.cpl < 50 ? (
-                    <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm font-medium text-green-800">Efficient CPL - Lead cost is reasonable</span>
+                    <div className="flex items-start gap-3 p-3 bg-[#FF6B35]/10 rounded-lg">
+                      <CheckCircle className="h-5 w-5 text-[#FF6B35] mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-medium text-[#FF6B35]">Efficient CPL - Lead cost is reasonable</span>
                     </div>
                   ) : (
                     <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg">
@@ -460,7 +465,7 @@ export default function ROICalculatorPage() {
                       className="w-10 rounded-t-lg transition-all duration-500 shadow-lg"
                       style={{
                         height: `${Math.max(40, (item.roi / Math.max(...chartData.roiTrend.map(d => d.roi))) * 240)}px`,
-                        backgroundColor: item.roi >= 0 ? '#10B981' : '#EF4444'
+                        backgroundColor: item.roi >= 0 ? '#FF6B35' : '#1A1D23'
                       }}
                     ></div>
                     <div className="mt-4 text-center">
@@ -542,7 +547,7 @@ export default function ROICalculatorPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Need Help Optimizing Your ROI?</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Our <Link href="/our-team" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">expert team</Link> can help you 
+            Our <Link href="/our-team" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">expert team</Link> can help you
             improve your marketing ROI with proven strategies and{' '}
             <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">comprehensive digital marketing services</Link>.
           </p>
@@ -563,7 +568,7 @@ export default function ROICalculatorPage() {
         </div>
       </section>
 
-      
+
     </div>
   )
 }
