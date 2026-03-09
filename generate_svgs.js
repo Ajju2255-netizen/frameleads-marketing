@@ -209,6 +209,33 @@ const icons = {
     <!-- Dynamic rising background vectors -->
     <line x1="-120" y1="50" x2="-80" y2="10" stroke-width="1" opacity="0.3"/>
     <line x1="80" y1="-10" x2="120" y2="-50" stroke-width="1" opacity="0.3"/>
+  `,
+
+  'startup_growth_blog.svg': `
+    <!-- Architectural grid and blueprint structure -->
+    <path d="M-80,-60 L-40,-60 L-40,-20 L0,-20 L0,20 L40,20 L40,60 L80,60" stroke-width="2" stroke-dasharray="2 4" opacity="0.4"/>
+    <path d="M-80,-20 L-40,-20 L-40,20 L0,20 L0,60 L40,60 L40,100" stroke-width="2" stroke-dasharray="2 4" opacity="0.2"/>
+    
+    <!-- Central technical growth pillar / bridge -->
+    <rect x="-20" y="-80" width="40" height="160" rx="4" stroke-width="1.5" opacity="0.6" />
+    <path d="M-20,0 L20,0 M-20,-40 L20,-40 M-20,40 L20,40" stroke-width="1.5" />
+    
+    <!-- Rising exponential curve intersecting the architecture -->
+    <path d="M-100,60 Q-40,40 20,-20 T100,-80" fill="none" stroke-width="2" />
+    
+    <!-- Arrow head at the top of curve -->
+    <polyline points="70,-80 100,-80 100,-50" stroke-width="2" fill="none" stroke-linejoin="round" />
+    
+    <!-- Technical nodes & data points -->
+    ${circ(-65, 45, 3)}
+    ${circ(-15, 5, 4)}
+    ${circ(45, -45, 3)}
+    
+    <!-- Connection lines -->
+    <line x1="-15" y1="5" x2="-50" y2="-20" stroke-width="1" opacity="0.5" />
+    <line x1="45" y1="-45" x2="20" y2="-60" stroke-width="1" opacity="0.5" />
+    ${circ(-50, -20, 2)}
+    ${circ(20, -60, 2)}
   `
 };
 
