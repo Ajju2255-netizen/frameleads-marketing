@@ -217,9 +217,6 @@ export default function ShopifyAdsPage() {
               <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-[#FF6B35] text-white font-black text-xl rounded-3xl shadow-[0_20px_40px_-12px_rgba(255,107,53,0.3)] hover:scale-105 transition-all duration-300 group">
                 Audit My Shopify Signal Quality <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-white border-2 border-slate-200 text-slate-800 font-black text-xl rounded-3xl hover:border-[#FF6B35]/40 hover:shadow-xl transition-all duration-300">
-                View the 10x Scaling Framework
-              </Link>
             </div>
           </div>
         </section>

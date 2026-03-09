@@ -97,7 +97,7 @@ export default function BaiduAdsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="min-h-screen bg-[#FDFDFD] text-slate-900 font-sans selection:bg-[#E60012] selection:text-white pb-20 overflow-x-hidden">
+      <div className="min-h-screen bg-[#FDFDFD] text-slate-900 font-sans selection:bg-[#FF6B35] selection:text-white pb-20 overflow-x-hidden">
 
         {/* 1. China Market Snapshot — Global Business UI */}
         <section className="relative pt-32 pb-16 px-4">
@@ -105,21 +105,21 @@ export default function BaiduAdsPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white border-t-4 border-[#E60012] shadow-[0_48px_96px_-16px_rgba(230,0,18,0.12)] rounded-[3rem] p-8 md:p-12 relative overflow-hidden"
+              className="bg-white border-t-4 border-[#FF6B35] shadow-[0_48px_96px_-16px_rgba(255,107,53,0.12)] rounded-[3rem] p-8 md:p-12 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#E60012]/5 to-transparent rounded-full blur-[100px] -mr-48 -mt-48" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#FF6B35]/5 to-transparent rounded-full blur-[100px] -mr-48 -mt-48" />
 
               <div className="flex flex-col md:flex-row gap-12 items-center relative z-10 text-left">
 
                 {/* LEFT: China Market Status UI */}
                 <div className="w-full md:w-1/3 max-w-[320px]">
                   <div className="relative bg-[#1A1A1A] rounded-[2.5rem] p-6 shadow-2xl overflow-hidden border border-white/5">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#E60012]/10 rounded-full blur-[40px]" />
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6B35]/10 rounded-full blur-[40px]" />
 
                     {/* Global Header */}
                     <div className="flex items-center justify-between mb-8 relative z-10">
                       <div className="flex items-center gap-2">
-                        <Globe className="w-4 h-4 text-[#E60012]" />
+                        <Globe className="w-4 h-4 text-[#FF6B35]" />
                         <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">CHINA_ACCESS</span>
                       </div>
                       <div className="px-2 py-0.5 bg-green-500/20 border border-green-500/20 rounded-full text-[9px] text-green-400 font-black uppercase">ICP_VERIFIED</div>
@@ -129,8 +129,8 @@ export default function BaiduAdsPage() {
                     <div className="mb-8 relative h-24 flex items-center justify-center">
                       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
                       <div className="relative flex items-center justify-center gap-4">
-                        <div className="w-3 h-3 bg-red-500 rounded-full animate-ping" />
-                        <div className="h-px w-12 bg-gradient-to-r from-red-500 to-blue-500" />
+                        <div className="w-3 h-3 bg-[#FF6B35] rounded-full animate-ping" />
+                        <div className="h-px w-12 bg-gradient-to-r from-[#FF6B35] to-blue-500" />
                         <div className="w-2 h-2 bg-blue-500 rounded-full" />
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 text-center">
@@ -146,7 +146,7 @@ export default function BaiduAdsPage() {
                       </div>
                       <div className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-2xl border border-white/5">
                         <span className="text-[9px] text-slate-400 font-black uppercase tracking-widest">Lead_Quality</span>
-                        <span className="text-[11px] font-mono text-[#E60012] font-bold">↑_3.2x_ROI</span>
+                        <span className="text-[11px] font-mono text-[#FF6B35] font-bold">↑_3.2x_ROI</span>
                       </div>
                     </div>
                   </div>
@@ -155,31 +155,31 @@ export default function BaiduAdsPage() {
                 {/* RIGHT: Text Content */}
                 <div className="flex-1 space-y-8">
                   <div className="flex items-center gap-4">
-                    <div className="bg-[#E60012] p-3 rounded-2xl">
+                    <div className="bg-[#FF6B35] p-3 rounded-2xl">
                       <Globe className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <span className="text-sm font-black uppercase tracking-[0.3em] text-[#E60012]">China Market Authority</span>
+                      <span className="text-sm font-black uppercase tracking-[0.3em] text-[#FF6B35]">China Market Authority</span>
                       <p className="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Full_Stack_Compliance_2026</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-6">
-                    <div className="w-1.5 h-36 bg-gradient-to-b from-[#E60012] to-transparent rounded-full mt-2" />
+                    <div className="w-1.5 h-36 bg-gradient-to-b from-[#FF6B35] to-transparent rounded-full mt-2" />
                     <div>
                       <h3 className="text-xl font-black text-slate-900 mb-3 uppercase tracking-tight">Baidu Strategy Summary:</h3>
                       <p className="text-lg md:text-2xl text-slate-600 leading-relaxed font-semibold italic">
-                        Frameleads engineers <span className="text-slate-900 font-black underline decoration-[#E60012]/30 text-3xl not-italic">China-Entry Search Ecosystems</span> by bridging Western brand identity with Baidu’s AI-driven algorithms. By utilizing Apollo Data and Jimuyu Managed Pages, we deliver a 3x increase in lead quality.
+                        Frameleads engineers <span className="text-slate-900 font-black underline decoration-[#FF6B35]/30 text-3xl not-italic">China-Entry Search Ecosystems</span> by bridging Western brand identity with Baidu’s AI-driven algorithms. By utilizing Apollo Data and Jimuyu Managed Pages, we deliver a 3x increase in lead quality.
                       </p>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                    <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#E60012]/30 transition-all">
+                    <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#FF6B35]/30 transition-all">
                       <div className="text-[10px] text-slate-400 font-extrabold uppercase mb-1">AI Search Integration</div>
-                      <div className="text-3xl font-black text-[#E60012]">ERNIE Bot</div>
+                      <div className="text-3xl font-black text-[#FF6B35]">ERNIE Bot</div>
                     </div>
-                    <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#E60012]/30 transition-all">
+                    <div className="p-6 bg-slate-50 border border-slate-100 rounded-3xl group hover:border-[#FF6B35]/30 transition-all">
                       <div className="text-[10px] text-slate-400 font-extrabold uppercase mb-1">Conversion Architecture</div>
                       <div className="text-3xl font-black text-[#0F172A]">Jimuyu Engine</div>
                     </div>
@@ -200,7 +200,7 @@ export default function BaiduAdsPage() {
             >
               <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black text-[#0F172A] leading-[0.9] tracking-tighter mb-10">
                 Your Brand, Discovered <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E60012] via-[#FF4D4D] to-[#E60012]">by 1.4 Billion.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35]">by 1.4 Billion.</span>
               </h1>
               <h2 className="text-3xl md:text-5xl font-black text-slate-300 mt-[-1rem] mb-12 uppercase tracking-tight">Beyond the Great Firewall.</h2>
             </motion.div>
@@ -209,11 +209,8 @@ export default function BaiduAdsPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-[#E60012] text-white font-black text-xl rounded-full shadow-[0_20px_40px_-12px_rgba(230,0,18,0.4)] hover:scale-105 transition-all duration-300 group">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-[#FF6B35] text-white font-black text-xl rounded-full shadow-[0_20px_40px_-12px_rgba(255,107,53,0.4)] hover:scale-105 transition-all duration-300 group">
                 Start My China Market Audit <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-white border-2 border-slate-200 text-slate-800 font-black text-xl rounded-full hover:border-[#E60012]/40 hover:shadow-xl transition-all duration-300">
-                Download the 2026 Baidu Compliance Guide
               </Link>
             </div>
           </div>
@@ -224,9 +221,9 @@ export default function BaiduAdsPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-20 items-center">
               <div className="lg:w-1/2">
-                <div className="w-32 h-2 bg-[#E60012] mb-12 rounded-full" />
+                <div className="w-32 h-2 bg-[#FF6B35] mb-12 rounded-full" />
                 <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] leading-tight mb-8">
-                  Establishing Trust in the <span className="text-[#E60012]">Chinese Ecosystem.</span>
+                  Establishing Trust in the <span className="text-[#FF6B35]">Chinese Ecosystem.</span>
                 </h2>
                 <p className="text-xl text-slate-500 leading-relaxed mb-12 font-medium">
                   Unlike Google, you cannot just &quot;start&quot; an ad account on Baidu. In China, trust is the primary driver of CTR. We manage the entire Legal Gateway for you.
@@ -251,7 +248,7 @@ export default function BaiduAdsPage() {
                     }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-8 group">
-                      <div className="w-20 h-20 bg-slate-50 rounded-[2rem] flex flex-shrink-0 items-center justify-center shadow-sm border border-slate-100 group-hover:bg-[#E60012] group-hover:text-white transition-all duration-300">
+                      <div className="w-20 h-20 bg-slate-50 rounded-[2rem] flex flex-shrink-0 items-center justify-center shadow-sm border border-slate-100 group-hover:bg-[#FF6B35] group-hover:text-white transition-all duration-300">
                         <item.icon className="w-8 h-8" />
                       </div>
                       <div>
@@ -294,7 +291,7 @@ export default function BaiduAdsPage() {
                       </div>
                     </div>
 
-                    <div className="p-6 bg-[#E60012] rounded-[2rem] text-white">
+                    <div className="p-6 bg-[#FF6B35] rounded-[2rem] text-white">
                       <div className="text-[10px] font-black uppercase tracking-[0.2em] mb-2 opacity-80 uppercase">Internal Monitoring</div>
                       <div className="text-2xl font-black uppercase tracking-tight">ICP_Status: ACTIVE</div>
                       <div className="text-[10px] font-mono mt-1 opacity-60">Verified_by_MIIT_China</div>
@@ -311,9 +308,9 @@ export default function BaiduAdsPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row-reverse gap-20 items-center">
               <div className="lg:w-1/2">
-                <div className="w-32 h-2 bg-[#E60012] mb-12 rounded-full" />
+                <div className="w-32 h-2 bg-[#FF6B35] mb-12 rounded-full" />
                 <h2 className="text-4xl md:text-6xl font-black text-[#0F172A] leading-tight mb-8">
-                  Leveraging the <br /><span className="text-[#E60012]">ERNIE AI</span> Ecosystem.
+                  Leveraging the <br /><span className="text-[#FF6B35]">ERNIE AI</span> Ecosystem.
                 </h2>
                 <p className="text-xl text-slate-500 leading-relaxed mb-12 font-medium">
                   In 2026, Baidu search is inseparable from its LLM, ERNIE Bot. We optimize your brand for AI-First Discovery in the Chinese Knowledge Graph.
@@ -343,7 +340,7 @@ export default function BaiduAdsPage() {
                     }
                   ].map((item, i) => (
                     <div key={i} className="p-8 bg-white rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all group">
-                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-[#E60012] group-hover:text-white transition-all mb-6">
+                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-[#FF6B35] group-hover:text-white transition-all mb-6">
                         <item.icon className="w-6 h-6" />
                       </div>
                       <h4 className="font-black text-[#0F172A] text-lg mb-2 uppercase tracking-tight">{item.title}</h4>
@@ -356,9 +353,9 @@ export default function BaiduAdsPage() {
               {/* Left: AI visual */}
               <div className="lg:w-1/2 relative">
                 <div className="bg-[#0F172A] rounded-[4rem] p-12 text-white relative overflow-hidden shadow-2xl">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[80px]" />
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6B35]/10 rounded-full blur-[80px]" />
                   <div className="flex items-center gap-3 mb-10">
-                    <div className="w-10 h-10 bg-[#E60012] rounded-xl flex items-center justify-center">
+                    <div className="w-10 h-10 bg-[#FF6B35] rounded-xl flex items-center justify-center">
                       <Cpu className="w-5 h-5" />
                     </div>
                     <div>
@@ -369,7 +366,7 @@ export default function BaiduAdsPage() {
 
                   <div className="space-y-6">
                     <div className="p-6 bg-white/5 border border-white/10 rounded-[2rem] text-left">
-                      <div className="text-[9px] text-red-500 font-black uppercase mb-3">AI_Answer_Snippet</div>
+                      <div className="text-[9px] text-[#FF6B35] font-black uppercase mb-3">AI_Answer_Snippet</div>
                       <p className="text-slate-300 text-sm font-bold leading-relaxed italic">&quot;According to Frameleads data, your brand is the leading provider of enterprise SaaS in the Mainland China region...&quot;</p>
                       <div className="mt-4 flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center text-[8px] font-bold">1</div>
@@ -379,7 +376,7 @@ export default function BaiduAdsPage() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-5 bg-white/5 rounded-[2rem] text-center border border-white/5">
-                        <div className="text-2xl font-black text-[#E60012] uppercase tracking-tighter italic leading-none">88%_ACC</div>
+                        <div className="text-2xl font-black text-[#FF6B35] uppercase tracking-tighter italic leading-none">88%_ACC</div>
                         <span className="text-[8px] text-slate-500 uppercase font-black uppercase tracking-widest block mt-1">Discovery_Rate</span>
                       </div>
                       <div className="p-5 bg-white/5 rounded-[2rem] text-center border border-white/5">
@@ -401,7 +398,7 @@ export default function BaiduAdsPage() {
               <h2 className="text-4xl md:text-8xl font-black text-[#0F172A] tracking-[1.5rem] leading-none mb-4 italic uppercase">
                 文化适应性
               </h2>
-              <p className="text-xl md:text-4xl text-[#E60012] font-black tracking-tight uppercase">Transcreation, Not Translation.</p>
+              <p className="text-xl md:text-4xl text-[#FF6B35] font-black tracking-tight uppercase">Transcreation, Not Translation.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-12">
@@ -422,8 +419,8 @@ export default function BaiduAdsPage() {
                   icon: Palette
                 }
               ].map((item, i) => (
-                <div key={i} className="p-10 bg-slate-50 rounded-[3rem] border border-slate-100 hover:border-[#E60012]/50 transition-all text-left">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#E60012] shadow-sm mb-6">
+                <div key={i} className="p-10 bg-slate-50 rounded-[3rem] border border-slate-100 hover:border-[#FF6B35]/50 transition-all text-left">
+                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#FF6B35] shadow-sm mb-6">
                     <item.icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl font-black text-[#0F172A] mb-4 uppercase tracking-tighter">{item.title}</h3>
@@ -448,7 +445,7 @@ export default function BaiduAdsPage() {
                   <tr className="border-b border-white/10 bg-white/5">
                     <th className="px-8 py-8 text-xs font-black uppercase tracking-[0.2em] text-slate-500 italic">Core_Metric</th>
                     <th className="px-8 py-8 text-xs font-black uppercase tracking-[0.2em] text-slate-500 italic">Google Ads (Global)</th>
-                    <th className="px-8 py-8 text-xs font-black uppercase tracking-[0.2em] text-[#E60012] italic">Frameleads Baidu Engine</th>
+                    <th className="px-8 py-8 text-xs font-black uppercase tracking-[0.2em] text-[#FF6B35] italic">Frameleads Baidu Engine</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
@@ -462,7 +459,7 @@ export default function BaiduAdsPage() {
                     <tr key={i} className="hover:bg-white/5 transition-colors">
                       <td className="px-8 py-8 font-black text-white italic lowercase tracking-tight">{row.feature}</td>
                       <td className="px-8 py-8 text-slate-400 font-bold uppercase text-xs">{row.google}</td>
-                      <td className="px-8 py-8 text-[#E60012] font-black italic tracking-tighter text-xl uppercase">{row.baidu}</td>
+                      <td className="px-8 py-8 text-[#FF6B35] font-black italic tracking-tighter text-xl uppercase">{row.baidu}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -500,7 +497,7 @@ export default function BaiduAdsPage() {
                 }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-white border border-slate-200 shadow-xl rounded-[3rem] p-12 hover:shadow-2xl transition-all group relative overflow-hidden text-left">
-                  <div className="absolute top-0 left-0 w-2 h-full bg-[#E60012] opacity-20 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 left-0 w-2 h-full bg-[#FF6B35] opacity-20 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-2xl font-black text-[#0F172A] mb-6 uppercase tracking-tighter">{faq.q}</h3>
                   <p className="text-slate-500 text-lg leading-relaxed font-medium italic">{faq.a}</p>
                 </div>
@@ -511,17 +508,17 @@ export default function BaiduAdsPage() {
 
         {/* 8. Final CTA */}
         <section className="relative z-10 max-w-6xl mx-auto px-6 py-24">
-          <div className="bg-[#E60012] rounded-[4rem] overflow-hidden relative shadow-2xl p-16 md:p-32 text-center text-left">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-red-400 opacity-20 rounded-full blur-[120px] -mr-60 -mt-60 animate-pulse" />
+          <div className="bg-[#FF6B35] rounded-[4rem] overflow-hidden relative shadow-2xl p-16 md:p-32 text-center text-left">
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF8A50] opacity-20 rounded-full blur-[120px] -mr-60 -mt-60 animate-pulse" />
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-8xl font-black text-white mb-10 leading-[0.9] tracking-tighter uppercase italic">
                 Is Your Brand <br />Invisible to 1/5th <br />of the World?
               </h2>
-              <p className="text-xl md:text-3xl text-red-100 max-w-4xl mb-16 leading-relaxed font-bold italic uppercase tracking-tighter">
+              <p className="text-xl md:text-3xl text-orange-100 max-w-4xl mb-16 leading-relaxed font-bold italic uppercase tracking-tighter">
                 Most Western brands fail in China because they treat Baidu like Google. Our Baidu Technical Audit identifies your &quot;Firewall Latency&quot; and builds the 90-day roadmap for entry.
               </p>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-16 py-8 bg-white text-[#E60012] font-black text-2xl rounded-full shadow-2xl hover:scale-105 transition-all duration-300 group uppercase italic tracking-tighter">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-4 px-16 py-8 bg-white text-[#FF6B35] font-black text-2xl rounded-full shadow-2xl hover:scale-105 transition-all duration-300 group uppercase italic tracking-tighter">
                 Claim My China Market Audit <ChevronRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
               </Link>
             </div>
@@ -533,7 +530,7 @@ export default function BaiduAdsPage() {
           <div className="bg-white rounded-[4rem] shadow-2xl border border-slate-50 p-12 md:p-24">
             <div className="mb-20 text-left uppercase">
               <h2 className="text-3xl md:text-6xl font-black text-[#0F172A] mb-6 tracking-tighter italic">Global Growth Ecosystem</h2>
-              <p className="text-xl text-slate-500 font-bold uppercase tracking-widest leading-none underline decoration-[#E60012]/30">Scale across every high-velocity channel.</p>
+              <p className="text-xl text-slate-500 font-bold uppercase tracking-widest leading-none underline decoration-[#FF6B35]/30">Scale across every high-velocity channel.</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -547,9 +544,9 @@ export default function BaiduAdsPage() {
                 { label: 'Pinterest Ads', href: '/pinterest-ads', icon: Pin, desc: 'Predictive Commerce.' },
                 { label: 'SEO Authority', href: '/seo-services', icon: Search, desc: 'Search dominance hub.' },
               ].map((link, i) => (
-                <Link key={i} href={link.href} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-transparent hover:border-[#E60012]/30 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <Link key={i} href={link.href} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-transparent hover:border-[#FF6B35]/30 hover:bg-white hover:shadow-2xl transition-all duration-500">
                   <div className="flex justify-center mb-6">
-                    <link.icon className="w-12 h-12 text-[#E60012] group-hover:scale-110 transition-transform" />
+                    <link.icon className="w-12 h-12 text-[#FF6B35] group-hover:scale-110 transition-transform" />
                   </div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2 text-center uppercase tracking-tighter">{link.label}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed text-center font-bold italic tracking-tight">{link.desc}</p>
