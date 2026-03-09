@@ -59,7 +59,7 @@ export default function IndustriesPage() {
     {
       name: "E-commerce & Retail",
       icon: ShoppingCart,
-      path: "/shopify-ads",
+      path: "/ecommerce",
       description: "Comprehensive e-commerce marketing strategies for online retailers with conversion expertise",
       services: ["Product Listing Optimization", "Shopping Campaign Management", "Conversion Rate Optimization", "Inventory Marketing", "Seasonal Campaign Planning"],
       results: "250% improvement in Return on Ad Spend (ROAS)",
