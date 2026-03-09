@@ -236,6 +236,28 @@ const icons = {
     <line x1="45" y1="-45" x2="20" y2="-60" stroke-width="1" opacity="0.5" />
     ${circ(-50, -20, 2)}
     ${circ(20, -60, 2)}
+  `,
+
+  'b2b_lead_gen_blog.svg': `
+    <!-- Architectural Funnel/Pipeline -->
+    <path d="M-80,-80 L80,-80 L40,-20 L40,60 L-40,60 L-40,-20 Z" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.4"/>
+    <path d="M-60,-80 L60,-80 L30,-20 L30,40 L-30,40 L-30,-20 Z" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Filtering mechanism / AI Gatekeeper -->
+    <line x1="-50" y1="-20" x2="50" y2="-20" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <line x1="-40" y1="10" x2="40" y2="10" stroke-width="1.5" stroke-dasharray="4 2"/>
+    
+    <!-- Nodes entering the funnel -->
+    ${circ(-40, -60, 2)} ${circ(0, -50, 4)} ${circ(50, -60, 2)} ${circ(-20, -70, 3)}
+    
+    <!-- High-value intent captured at the bottom -->
+    <path d="M-10,40 L0,55 L10,40 Z" fill="#FFF6F2" opacity="0.9" stroke="none"/>
+    <circle cx="0" cy="75" r="5" fill="#FFF6F2"/>
+    ${circ(0, 75, 12)}
+    
+    <!-- Technical connection lines outside -->
+    <polyline points="-120,-40 -80,-40 -60,-20" stroke-width="1" opacity="0.5"/>
+    <polyline points="120,0 60,0 40,20" stroke-width="1" opacity="0.5"/>
   `
 };
 

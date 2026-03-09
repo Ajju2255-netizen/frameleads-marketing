@@ -24,8 +24,9 @@ import * as Post21 from "./scalable-authenticity-nano-banana-elevenlabs"
 import * as Post22 from "./privacy-first-advantage-healthcare-finance-hipaa-soc2"
 import * as Post23 from "./psychology-of-glossy-ui-glassmorphism-fintech"
 import * as Post24 from "./startup-growth-manifesto-technical-architect"
+import * as Post25 from "./best-b2b-lead-generation-agencies-2026-architecture"
 
-export const allPosts = [Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
+export const allPosts = [Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
 
 export const getPostBySlug = (slug: string) => {
     // Basic slug matching
