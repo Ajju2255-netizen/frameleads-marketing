@@ -2,24 +2,23 @@
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="glossyOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF9360" />
-      <stop offset="50%" stop-color="#FF6B35" />
-      <stop offset="100%" stop-color="#CC4000" />
+      <stop offset="0%" stop-color="#FF8A50" />
+      <stop offset="100%" stop-color="#FF6B35" />
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.2"/>
     </filter>
   </defs>
   <rect width="100%" height="100%" fill="url(#glossyOrange)"/>
-  <rect width="100%" height="100%" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect width="100%" height="100%" fill="none" stroke="rgba(255,246,242,0.15)" stroke-width="2"/>
   <g transform="translate(400, 200)" filter="url(#glow)">
     
     <!-- Signal arcs -->
-    <path d="M-60,-20 Q0,-60 60,-20" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M-30,10 Q0,-15 30,10" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="0" cy="40" r="8" fill="rgba(255,255,255,0.4)"/>
+    <path d="M-60,-20 Q0,-60 60,-20" fill="none" stroke="rgba(255,246,242,0.4)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M-30,10 Q0,-15 30,10" fill="none" stroke="rgba(255,246,242,0.4)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="0" cy="40" r="8" fill="rgba(255,246,242,0.4)"/>
     <!-- Checkmark loop / recovery -->
-    <path d="M-20,60 L20,100 L90,20 L80,0" fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-20,60 L20,100 L90,20 L80,0" fill="none" stroke="#FFF6F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
   
   </g>
 </svg>
