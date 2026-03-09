@@ -184,6 +184,31 @@ const icons = {
     <path d="M100,20 Q80,10 70,-20" stroke-width="1" opacity="0.5"/>
     <circle cx="0" cy="-80" r="3" fill="#FFF6F2"/>
     <circle cx="0" cy="80" r="3" fill="#FFF6F2"/>
+  `,
+
+  'glossy_ui_blog.svg': `
+    <!-- Concentric layered glass rings showing UI depth and liquid smooth mechanics -->
+    <circle cx="-20" cy="-20" r="40" stroke-width="1.5" opacity="0.8" />
+    <circle cx="20" cy="20" r="40" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.5" />
+    <rect x="-50" y="-50" width="100" height="100" rx="20" stroke-width="2" opacity="0.9" />
+    
+    <!-- Liquid nodes and wave physics -->
+    <path d="M-50,0 Q0,50 50,0" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M-30,-20 Q0,-50 30,-20" stroke-width="1" fill="none" stroke-dasharray="4 4" opacity="0.4"/>
+    
+    <!-- Technical framing markers mapping the UI component grid -->
+    <polyline points="-80,-60 -80,-80 -60,-80" stroke-width="1.5" opacity="0.5" />
+    <polyline points="60,80 80,80 80,60" stroke-width="1.5" opacity="0.5" />
+    
+    <!-- Connection points establishing trust hierarchy -->
+    ${circ(-20, -20, 4)}
+    ${circ(20, 20, 4)}
+    ${circ(-50, 0, 3)}
+    ${circ(50, 0, 3)}
+
+    <!-- Dynamic rising background vectors -->
+    <line x1="-120" y1="50" x2="-80" y2="10" stroke-width="1" opacity="0.3"/>
+    <line x1="80" y1="-10" x2="120" y2="-50" stroke-width="1" opacity="0.3"/>
   `
 };
 
