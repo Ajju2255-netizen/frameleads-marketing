@@ -9,7 +9,7 @@ export const post = {
     tag: "Data Integration",
     categorySlug: "analytics-and-automations",
     readTime: "7 min read",
-    banner: "/blogs/hipaa_soc2_blog.png",
+    banner: "/blogs/hipaa_soc2_blog.svg",
 }
 
 export const jsonLd = {

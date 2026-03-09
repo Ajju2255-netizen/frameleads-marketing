@@ -9,7 +9,7 @@ export const post = {
     tag: "SEO",
     categorySlug: "seo",
     readTime: "8 min read",
-    banner: "/blogs/geo_seo_blog.png",
+    banner: "/blogs/geo_seo_blog.svg",
 }
 
 export const jsonLd = {

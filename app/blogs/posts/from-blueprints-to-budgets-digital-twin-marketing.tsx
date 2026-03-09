@@ -9,7 +9,7 @@ export const post = {
     tag: "Performance Marketing",
     categorySlug: "performance-marketing",
     readTime: "6 min read",
-    banner: "/blogs/digital_twin_blog.png",
+    banner: "/blogs/digital_twin_blog.svg",
 }
 
 export const jsonLd = {

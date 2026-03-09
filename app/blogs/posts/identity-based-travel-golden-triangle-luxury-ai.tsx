@@ -9,7 +9,7 @@ export const post = {
     tag: "Travel Marketing",
     categorySlug: "performance-marketing",
     readTime: "7 min read",
-    banner: "/blogs/identity_travel_blog.png",
+    banner: "/blogs/identity_travel_blog.svg",
 }
 
 export const jsonLd = {

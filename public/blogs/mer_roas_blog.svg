@@ -1,0 +1,26 @@
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glossyOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9360" />
+      <stop offset="50%" stop-color="#FF6B35" />
+      <stop offset="100%" stop-color="#CC4000" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#glossyOrange)"/>
+  <rect width="100%" height="100%" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <g transform="translate(400, 200)" filter="url(#glow)">
+    
+    <polyline points="-120,60 -60,0 0,40 60,-40 120,-100" fill="none" stroke="#FFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="100,-100 120,-100 120,-80" fill="#FFF" stroke="#FFF" stroke-width="4" stroke-linejoin="round" />
+    <path d="M-120,80 L120,80" stroke="rgba(255,255,255,0.4)" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 12"/>
+    <!-- Shattered lines below -->
+    <path d="M-80,40 L-60,50 L-90,90" fill="none" stroke="#FFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-60" cy="0" r="8" fill="#FFF"/>
+    <circle cx="60" cy="-40" r="8" fill="#FFF"/>
+  
+  </g>
+</svg>

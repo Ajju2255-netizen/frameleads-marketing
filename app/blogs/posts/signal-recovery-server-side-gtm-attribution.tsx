@@ -9,7 +9,7 @@ export const post = {
     tag: "Analytics & Tracking",
     categorySlug: "analytics-and-automations",
     readTime: "7 min read",
-    banner: "/blogs/signal_recovery_blog.png",
+    banner: "/blogs/signal_recovery_blog.svg",
 }
 
 export const jsonLd = {

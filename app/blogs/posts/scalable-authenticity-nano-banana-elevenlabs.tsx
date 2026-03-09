@@ -9,7 +9,7 @@ export const post = {
     tag: "Creative Advertising",
     categorySlug: "creative-advertising",
     readTime: "6 min read",
-    banner: "/blogs/ai_video_blog.png",
+    banner: "/blogs/ai_video_blog.svg",
 }
 
 export const jsonLd = {
