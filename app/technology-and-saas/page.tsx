@@ -108,7 +108,7 @@ export default function SaaSPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-3xl border border-slate-200 bg-white shadow-2xl rounded-3xl overflow-hidden mb-20 group hover:border-[#FF6B35]/30 transition-all duration-500"
+              className="max-w-5xl mx-auto border border-slate-200 bg-white shadow-2xl rounded-3xl overflow-hidden mb-32 group hover:border-[#FF6B35]/30 transition-all duration-500"
             >
               <div className="bg-slate-900 px-6 py-3 flex items-center justify-between">
                 <div className="flex gap-2">
@@ -117,41 +117,48 @@ export default function SaaSPage() {
                   <div className="w-3 h-3 rounded-full bg-emerald-500" />
                 </div>
                 <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">SaaS Intelligence Console v2.0</div>
-                <div className="flex gap-4">
-                  <Terminal className="w-3 h-3 text-slate-400" />
-                  <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
+                <div className="flex gap-4 text-slate-400 font-mono text-[10px]">
+                  <span>PR_MODE: PLG_ENABLED</span>
+                  <div className="flex gap-4">
+                    <Terminal className="w-3 h-3" />
+                    <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
+                  </div>
                 </div>
               </div>
-              <div className="p-8 md:p-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-emerald-50 rounded-2xl">
-                    <Cpu className="w-6 h-6 text-emerald-600" />
-                  </div>
-                  <span className="text-sm font-bold text-emerald-600 uppercase tracking-tight">Active Growth Loop Engine</span>
-                </div>
-                <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
-                  The SaaS Intelligence Snapshot
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                  <span className="font-bold text-slate-900">SaaS Growth Strategy Summary:</span> Frameleads engineers High-Velocity SaaS Ecosystems by aligning Product-Led Growth (PLG) with Demand Generation. We move beyond simple lead gen to <span className="text-[#FF6B35] font-bold">Product-Qualified Lead (PQL) Orchestration</span>. Our 2026 framework utilizes Reverse-ETL data syncing and Interactive Feature-Pages, resulting in an average 32% reduction in Churn and a 4x increase in Expansion Revenue through automated upselling workflows.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                    <div className="text-xs text-slate-400 font-bold uppercase mb-1">System Status</div>
-                    <div className="text-emerald-600 font-black flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                      OPERATIONAL
+              <div className="p-8 md:p-12 lg:p-16">
+                <div className="grid lg:grid-cols-[1.5fr_1fr] gap-12 items-center">
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-3 bg-emerald-50 rounded-2xl">
+                        <Cpu className="w-6 h-6 text-emerald-600" />
+                      </div>
+                      <span className="text-sm font-bold text-emerald-600 uppercase tracking-tight">Active Growth Loop Engine</span>
                     </div>
+                    <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+                      SaaS Intelligence Summary
+                    </h2>
+                    <p className="text-xl text-slate-600 leading-relaxed font-medium mb-8">
+                      <span className="font-bold text-slate-900 italic underline decoration-[#FF6B35]/30">The Strategy:</span> Frameleads engineers High-Velocity SaaS Ecosystems by aligning <span className="text-[#FF6B35] font-bold">Product-Led Growth (PLG)</span> with Demand Generation. We move beyond simple lead gen to PQL Orchestration. Our 2026 framework utilizes Reverse-ETL data syncing, resulting in an average <span className="bg-[#FF6B35]/10 text-[#0F172A] px-2 py-0.5 rounded italic">32% reduction in Churn</span> and a 4x increase in Expansion Revenue.
+                    </p>
                   </div>
-                  <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                    <div className="text-xs text-slate-400 font-bold uppercase mb-1">PQL Flow Rate</div>
-                    <div className="text-slate-900 font-black">+312% YoY</div>
+                  <div className="space-y-4">
+                    <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-center">
+                      <div className="text-xs text-slate-400 font-bold uppercase mb-2 tracking-widest">System Health</div>
+                      <div className="text-emerald-600 text-2xl font-black flex items-center gap-3">
+                        <div className="w-3 h-3 rounded-full bg-emerald-500 animate-ping" />
+                        OPERATIONAL
+                      </div>
+                    </div>
+                    <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-center">
+                      <div className="text-xs text-slate-400 font-bold uppercase mb-2 tracking-widest">PQL Flow Tracking</div>
+                      <div className="text-slate-900 text-3xl font-black">+312% YoY</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -174,14 +181,11 @@ export default function SaaSPage() {
                 <p className="text-2xl text-slate-600 mb-12 leading-relaxed max-w-xl">
                   Building the product was the hard part. Scaling it shouldn't be. Frameleads builds Growth Engines for Software Founders that turn cold traffic into active users and active users into brand evangelists. From API-First SEO to High-Intent LinkedIn ABM, we own the full-stack funnel.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-6">
-                  <Link href="/contact" className="group relative px-10 py-6 bg-[#0F172A] text-white rounded-[2rem] font-black text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl">
-                    <span className="relative z-10 flex items-center gap-3">
-                      Audit My SaaS Growth Loop <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                <div className="flex">
+                  <Link href="/contact" className="group relative px-12 py-8 bg-[#0F172A] text-white rounded-[2.5rem] font-black text-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.3)]">
+                    <span className="relative z-10 flex items-center gap-4">
+                      Audit My SaaS Growth Loop <ChevronRight className="w-8 h-8 group-hover:translate-x-3 transition-transform" />
                     </span>
-                  </Link>
-                  <Link href="/free-marketing-audit" className="px-10 py-6 bg-white text-[#0F172A] border-4 border-[#0F172A] rounded-[2rem] font-black text-xl hover:bg-slate-50 transition-all text-center">
-                    SaaS Benchmarking Report
                   </Link>
                 </div>
               </motion.div>
@@ -192,29 +196,49 @@ export default function SaaSPage() {
                 transition={{ delay: 0.4 }}
                 className="relative hidden lg:block"
               >
-                <div className="relative z-10 bg-white rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(15,23,42,0.15)] border border-slate-100 p-12 overflow-hidden">
-                  <div className="absolute top-0 right-0 p-12 opacity-10">
-                    <Cpu className="w-64 h-64 text-[#FF6B35]" />
+                <div className="relative z-10 bg-[#0F172A] rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(15,23,42,0.3)] border border-white/10 p-12 overflow-hidden transition-all duration-700 hover:scale-[1.02]">
+                  {/* Decorative Code Lines */}
+                  <div className="absolute top-0 right-0 p-8 opacity-20 font-mono text-[10px] text-emerald-400 space-y-1 text-right">
+                    <div>git commit -m "optimize: pql_flow"</div>
+                    <div>yarn deploy --prod</div>
+                    <div>status: healthy [200 OK]</div>
                   </div>
+
                   <div className="relative z-10 space-y-10">
                     {[
-                      { icon: GitBranch, label: 'PQL Attribution', val: '100% Verified' },
-                      { icon: Activity, label: 'LTV Discovery', val: '+42% Expansion' },
-                      { icon: ShieldCheck, label: 'Churn Prevention', val: 'Active' },
-                      { icon: Globe, label: 'Global Scaling', val: 'Multi-Region' }
+                      { icon: GitBranch, label: 'PQL Attribution', val: '100% Verified', color: 'text-emerald-400' },
+                      { icon: Activity, label: 'LTV Discovery', val: '+42% Expansion', color: 'text-[#FF6B35]' },
+                      { icon: ShieldCheck, label: 'Churn Prevention', val: 'Active', color: 'text-blue-400' },
+                      { icon: Globe, label: 'Global Scaling', val: 'Multi-Region', color: 'text-purple-400' }
                     ].map((m, i) => (
-                      <div key={i} className="flex items-center gap-6">
-                        <div className="p-4 bg-slate-50 rounded-3xl group-hover:bg-[#FF6B35]/10 transition-colors">
-                          <m.icon className="w-8 h-8 text-[#FF6B35]" />
+                      <div key={i} className="flex items-center gap-6 group">
+                        <div className="p-4 bg-white/5 rounded-3xl group-hover:bg-white/10 transition-colors border border-white/5">
+                          <m.icon className={`w-8 h-8 ${m.color}`} />
                         </div>
                         <div>
-                          <div className="text-slate-400 text-sm font-bold uppercase tracking-widest">{m.label}</div>
-                          <div className="text-2xl font-black text-[#0F172A]">{m.val}</div>
+                          <div className="text-slate-500 text-xs font-bold uppercase tracking-widest">{m.label}</div>
+                          <div className="text-2xl font-black text-white">{m.val}</div>
                         </div>
                       </div>
                     ))}
                   </div>
+
+                  {/* Visual Graph Mockup */}
+                  <div className="mt-12 flex items-end gap-1 h-20 opacity-30">
+                    {[40, 60, 30, 80, 50, 90, 70, 100, 85, 95].map((h, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ height: 0 }}
+                        animate={{ height: `${h}%` }}
+                        transition={{ delay: 0.5 + i * 0.1 }}
+                        className="flex-1 bg-gradient-to-t from-[#FF6B35] to-transparent rounded-t-sm"
+                      />
+                    ))}
+                  </div>
                 </div>
+                {/* Orbital Rings */}
+                <div className="absolute -top-20 -right-20 w-80 h-80 border border-[#FF6B35]/10 rounded-full animate-spin-slow pointer-events-none" />
+                <div className="absolute -bottom-20 -left-20 w-96 h-96 border border-[#FF6B35]/5 rounded-full animate-reverse-spin pointer-events-none" />
                 <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#FF6B35] rounded-full blur-3xl opacity-20" />
               </motion.div>
             </div>
