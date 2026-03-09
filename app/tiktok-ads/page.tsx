@@ -572,6 +572,7 @@ export default function TikTokAdsPage() {
                 { label: 'Google Ads', href: '/google-ads', icon: Play, desc: 'Value-Based Bidding.' },
                 { label: 'Web Engineering', href: '/website-development', icon: Code, desc: 'Architecture of Authority.' },
                 { label: 'Pinterest Ads', href: '/pinterest-ads', icon: Pin, desc: 'Predictive Commerce.' },
+                { label: 'Shopify Ads', href: '/shopify-ads', icon: ShoppingBag, desc: 'Signal Engineering.' },
                 { label: 'SEO Dominance', href: '/seo-services', icon: SearchIcon, desc: 'Search authority hub.' }
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-transparent hover:border-[#FF6B35]/30 hover:bg-white hover:shadow-2xl transition-all duration-500">
