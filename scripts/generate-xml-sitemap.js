@@ -83,6 +83,8 @@ const CONFIG = {
     '/academy/thank-you': { priority: 0.6, changefreq: 'yearly' },
     '/academy/return-policy': { priority: 0.6, changefreq: 'yearly' },
     '/academy/terms': { priority: 0.6, changefreq: 'yearly' },
+    '/technology-and-saas': { priority: 0.9, changefreq: 'weekly' },
+    '/healthcare-and-medical': { priority: 0.9, changefreq: 'weekly' },
     '/sitemap': { priority: 0.5, changefreq: 'monthly' }
   }
 };
