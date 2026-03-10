@@ -258,6 +258,35 @@ const icons = {
     <!-- Technical connection lines outside -->
     <polyline points="-120,-40 -80,-40 -60,-20" stroke-width="1" opacity="0.5"/>
     <polyline points="120,0 60,0 40,20" stroke-width="1" opacity="0.5"/>
+  `,
+
+  'lead_generation_guide.svg': `
+    <!-- Large Magnet/Capture Core Structure -->
+    <path d="M-60,-50 C-60,-80 60,-80 60,-50 L60,10 C60,40 -60,40 -60,10 Z" fill="none" stroke-width="2" stroke-dasharray="0" opacity="0.6"/>
+    <path d="M-40,-40 C-40,-60 40,-60 40,-40 L40,0 C40,20 -40,20 -40,0 Z" fill="none" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5"/>
+    
+    <!-- Magnetic/Pulling Waves -->
+    <path d="M-80,-60 Q-40,-30 0,0" fill="none" stroke-width="1" opacity="0.4"/>
+    <path d="M80,-60 Q40,-30 0,0" fill="none" stroke-width="1" opacity="0.4"/>
+    <path d="M-100,-20 Q-50,10 0,40" fill="none" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.8"/>
+    <path d="M100,-20 Q50,10 0,40" fill="none" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.8"/>
+
+    <!-- Acquired Data Nodes (Leads) flowing downward -->
+    ${circ(-80, -60, 3)}
+    ${circ(80, -60, 3)}
+    ${circ(-100, -20, 2)}
+    ${circ(100, -20, 2)}
+    ${circ(-50, 10, 4)}
+    ${circ(50, 10, 4)}
+    
+    <!-- Central Processing Vault & High-Intent Anchor -->
+    <rect x="-20" y="30" width="40" height="40" rx="8" fill="none" stroke-width="2" opacity="0.9"/>
+    <circle cx="0" cy="50" r="10" fill="#FFF6F2" opacity="0.9"/>
+    
+    <!-- Base structural lines -->
+    <line x1="-100" y1="80" x2="100" y2="80" stroke-width="2" opacity="0.4"/>
+    <line x1="-80" y1="90" x2="80" y2="90" stroke-width="1" opacity="0.2"/>
+    <line x1="0" y1="70" x2="0" y2="80" stroke-width="2"/>
   `
 };
 
