@@ -327,6 +327,40 @@ const icons = {
     ${circ(-25, 10, 2)}
     ${circ(25, -10, 2)}
     ${circ(75, 5, 2)}
+  `,
+
+  'lead_generation_strategies.svg': `
+    <!-- Multi-channel node web / ecosystem -->
+    <!-- Central business/revenue core -->
+    <polygon points="0,-25 25,0 0,25 -25,0" fill="none" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="10" fill="#FFF6F2" opacity="0.9" />
+    
+    <!-- Strategy Nodes branching out (SEO, Paid, Social, etc) -->
+    <!-- Top Left -->
+    <circle cx="-60" cy="-60" r="12" fill="none" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <path d="M-50,-50 L-15,-15" fill="none" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Top Right -->
+    <rect x="50" y="-70" width="20" height="20" fill="none" stroke-width="1.5" />
+    <path d="M50,-50 L15,-15" fill="none" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Bottom Left -->
+    <circle cx="-70" cy="40" r="8" fill="#FFF6F2" opacity="0.6"/>
+    <path d="M-62,32 L-15,15" fill="none" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- Bottom Right Orbiting -->
+    <path d="M40,40 A15 15 0 1 1 70,40 A15 15 0 1 1 40,40" fill="none" stroke-width="1" opacity="0.6"/>
+    <circle cx="55" cy="25" r="3" fill="#FFF6F2"/>
+    <path d="M45,30 L15,15" fill="none" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Connecting outer grid showing ecosystem stability -->
+    <path d="M-60,-60 Q0,-80 60,-60 T70,40 T-70,40 T-60,-60" fill="none" stroke-width="1" opacity="0.2" />
+    
+    <!-- High-intent signals traversing the channels -->
+    ${circ(-35, -35, 3)}
+    ${circ(35, -35, 3)}
+    ${circ(-40, 23, 2)}
+    ${circ(30, 23, 2)}
   `
 };
 
