@@ -287,6 +287,46 @@ const icons = {
     <line x1="-100" y1="80" x2="100" y2="80" stroke-width="2" opacity="0.4"/>
     <line x1="-80" y1="90" x2="80" y2="90" stroke-width="1" opacity="0.2"/>
     <line x1="0" y1="70" x2="0" y2="80" stroke-width="2"/>
+  `,
+
+  'lead_generation_process.svg': `
+    <!-- Five-stage horizontal cascading pipeline -->
+    <!-- The master connecting track -->
+    <path d="M-120,0 L120,0" stroke-width="2" stroke-dasharray="4 4" opacity="0.3" />
+
+    <!-- 1. Attract Node -->
+    <circle cx="-90" cy="0" r="16" fill="none" stroke-width="1.5" />
+    <circle cx="-90" cy="0" r="8" fill="none" stroke-width="1.5" stroke-dasharray="2 2" />
+    <path d="M-110,-20 Q-90,0 -80,-15" fill="none" stroke-width="1.5" opacity="0.6"/>
+    <path d="M-110,20 Q-90,0 -80,15" fill="none" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- 2. Capture Node (Box) -->
+    <rect x="-55" y="-15" width="30" height="30" rx="4" fill="none" stroke-width="1.5"/>
+    <line x1="-50" y1="-5" x2="-30" y2="-5" stroke-width="1.5" opacity="0.5"/>
+    <line x1="-50" y1="5" x2="-35" y2="5" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- 3. Qualify Node (Filter Diamond) -->
+    <polygon points="0,-18 18,0 0,18 -18,0" fill="none" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#FFF6F2"/>
+
+    <!-- 4. Nurture Node (Looping Cycle) -->
+    <path d="M35,-10 A12 12 0 1 1 35,10" fill="none" stroke-width="1.5" />
+    <path d="M55,10 A12 12 0 1 1 55,-10" fill="none" stroke-width="1.5" />
+    ${circ(45, 0, 2)}
+    
+    <!-- 5. Conversion Vault/Target -->
+    <circle cx="95" cy="0" r="20" fill="none" stroke-width="2" />
+    <circle cx="95" cy="0" r="10" fill="#FFF6F2" opacity="0.9"/>
+    
+    <!-- Progress Indicator Waves underneath -->
+    <path d="M-100,50 Q-50,80 0,50 T100,50" fill="none" stroke-width="1.5" opacity="0.4" />
+    <path d="M-100,65 Q-50,95 0,65 T100,65" fill="none" stroke-width="1" opacity="0.2" />
+
+    <!-- Floating data signals passing through -->
+    ${circ(-70, -10, 2)}
+    ${circ(-25, 10, 2)}
+    ${circ(25, -10, 2)}
+    ${circ(75, 5, 2)}
   `
 };
 
