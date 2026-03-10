@@ -26,7 +26,7 @@
     <!-- Signal hit points -->
     <circle cx="-30" cy="0" r="3" fill="#FFF6F2"/> <circle cx="30" cy="20" r="3" fill="#FFF6F2"/> <circle cx="-10" cy="-30" r="4" fill="#FFF6F2"/> <circle cx="50" cy="-10" r="3" fill="#FFF6F2"/>
     <!-- Surrounding tech lines -->
-    <line x1="-100" y1="-20" x2="-70" y2="-20" opacity="0.6065783814896435"/> <line x1="70" y1="-40" x2="100" y2="-40" opacity="0.35826066318492594"/> <line x1="-90" y1="40" x2="-90" y2="70" opacity="0.33542492236098725"/>
+    <line x1="-100" y1="-20" x2="-70" y2="-20" opacity="0.5842240523582494"/> <line x1="70" y1="-40" x2="100" y2="-40" opacity="0.302165215510598"/> <line x1="-90" y1="40" x2="-90" y2="70" opacity="0.4542891185678732"/>
   
   </g>
 </svg>

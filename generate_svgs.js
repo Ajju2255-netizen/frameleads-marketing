@@ -435,6 +435,41 @@ const icons = {
     <rect x="-70" y="30" width="12" height="4" rx="1" fill="#FFF6F2" opacity="0.5"/>
     <rect x="50" y="20" width="20" height="4" rx="1" fill="#FFF6F2" opacity="0.8"/>
     <rect x="50" y="30" width="16" height="4" rx="1" fill="#FFF6F2" opacity="0.5"/>
+  `,
+
+  'small_business_lead_gen.svg': `
+    <!-- Upward Growth Chart for Small Business -->
+    <!-- Base Foundation (Small Business Structure) -->
+    <path d="M-60,70 L60,70 L30,40 L-30,40 Z" fill="none" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Central Engine / Core System -->
+    <circle cx="0" cy="20" r="15" fill="none" stroke-width="2"/>
+    <circle cx="0" cy="20" r="6" fill="#FFF6F2"/>
+
+    <!-- Cost-effective channels shooting upwards -->
+    <!-- Channel 1: SEO -->
+    <path d="M-15,10 Q-40,-20 -50,-50" fill="none" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+    ${circ(-50, -50, 4)}
+    
+    <!-- Channel 2: Local SEO -->
+    <path d="M0,5 L0,-65" fill="none" stroke-width="2" opacity="0.9"/>
+    <polygon points="0,-75 6,-65 -6,-65" fill="#FFF6F2"/>
+    
+    <!-- Channel 3: Referrals -->
+    <path d="M15,10 Q40,-20 50,-50" fill="none" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+    ${circ(50, -50, 4)}
+
+    <!-- Connecting network of leads filling the space -->
+    <line x1="-50" y1="-50" x2="0" y2="-65" stroke-width="1" opacity="0.3"/>
+    <line x1="50" y1="-50" x2="0" y2="-65" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Floating micro-leads attracted to the pillars -->
+    ${circ(-30, -30, 2)}
+    ${circ(-10, -40, 2)}
+    ${circ(30, -30, 2)}
+    ${circ(10, -40, 2)}
+    ${circ(-25, 0, 1.5)}
+    ${circ(25, 0, 1.5)}
   `
 };
 
