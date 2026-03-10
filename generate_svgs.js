@@ -399,6 +399,42 @@ const icons = {
     <path d="M50,15 L50,60" fill="none" stroke-width="1" opacity="0.3"/>
     <path d="M35,15 L25,40" fill="none" stroke-width="1" opacity="0.2"/>
     <path d="M65,15 L75,40" fill="none" stroke-width="1" opacity="0.2"/>
+  `,
+
+  'high_quality_leads.svg': `
+    <!-- Intensive Filtration / High Quality Extraction System -->
+    <!-- The master intake grid (broad traffic) -->
+    <path d="M-80,-70 L80,-70 L40,-10 L-40,-10 Z" fill="none" stroke-width="1.5" stroke-dasharray="2 4" opacity="0.4"/>
+    
+    <!-- Chaos / Low Intent nodes sitting at the top, unable to pass -->
+    <circle cx="-50" cy="-55" r="2" fill="none" stroke-width="1" opacity="0.5"/>
+    <circle cx="-30" cy="-40" r="1.5" fill="none" stroke-width="1" opacity="0.3"/>
+    <circle cx="0" cy="-60" r="3" fill="none" stroke-width="1" opacity="0.6"/>
+    <circle cx="20" cy="-45" r="2" fill="none" stroke-width="1" opacity="0.4"/>
+    <circle cx="50" cy="-50" r="1.5" fill="none" stroke-width="1" opacity="0.3"/>
+    <circle cx="65" cy="-35" r="2" fill="none" stroke-width="1" opacity="0.5"/>
+
+    <!-- Form/Qualification Barrier (Diamond Array) -->
+    <polygon points="-40,-10 0,20 40,-10 0,-40" fill="none" stroke-width="2" opacity="0.8"/>
+    <polygon points="-20,-10 0,5 20,-10 0,-25" fill="none" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Laser extraction line selecting only high quality -->
+    <line x1="0" y1="-10" x2="0" y2="60" stroke-width="2" opacity="0.9"/>
+    
+    <!-- Golden/High-Quality Nodes that successfully passed through -->
+    <!-- Large glowing core representing the closed user -->
+    <circle cx="0" cy="65" r="12" fill="none" stroke-width="2"/>
+    <circle cx="0" cy="65" r="5" fill="#FFF6F2"/>
+    
+    <!-- Concentric power waves hitting the bottom -->
+    <path d="M-40,85 Q0,75 40,85" fill="none" stroke-width="1.5" opacity="0.4"/>
+    <path d="M-60,95 Q0,85 60,95" fill="none" stroke-width="1" opacity="0.2"/>
+    
+    <!-- Geometric side accents representing scoring/data enrichment -->
+    <rect x="-70" y="20" width="20" height="4" rx="1" fill="#FFF6F2" opacity="0.8"/>
+    <rect x="-70" y="30" width="12" height="4" rx="1" fill="#FFF6F2" opacity="0.5"/>
+    <rect x="50" y="20" width="20" height="4" rx="1" fill="#FFF6F2" opacity="0.8"/>
+    <rect x="50" y="30" width="16" height="4" rx="1" fill="#FFF6F2" opacity="0.5"/>
   `
 };
 
