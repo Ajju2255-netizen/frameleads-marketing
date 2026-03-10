@@ -361,6 +361,44 @@ const icons = {
     ${circ(35, -35, 3)}
     ${circ(-40, 23, 2)}
     ${circ(30, 23, 2)}
+  `,
+
+  'b2b_vs_b2c_lead_generation.svg': `
+    <!-- Split environment / Dual Funnels comparing B2B vs B2C -->
+    <!-- Center divider line -->
+    <line x1="0" y1="-80" x2="0" y2="80" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
+    <text x="-50" y="-70" fill="#FFF6F2" font-family="Arial" font-size="10" font-weight="bold" opacity="0.8" text-anchor="middle">B2B</text>
+    <text x="50" y="-70" fill="#FFF6F2" font-family="Arial" font-size="10" font-weight="bold" opacity="0.8" text-anchor="middle">B2C</text>
+
+    <!-- LEFT SIDE: B2B (Deep, complex, high-value, filtering) -->
+    <!-- Deep Funnel -->
+    <path d="M-90,-50 L-10,-50 L-40,20 L-60,20 Z" fill="none" stroke-width="2" opacity="0.7"/>
+    <!-- Complex stakeholder nodes entering slowly -->
+    <circle cx="-50" cy="-60" r="4" fill="none" stroke-width="1.5"/>
+    <circle cx="-30" cy="-60" r="3" fill="#FFF6F2"/>
+    <circle cx="-70" cy="-60" r="3" fill="#FFF6F2"/>
+    <polyline points="-70,-60 -50,-60 -30,-60" fill="none" stroke-width="1" opacity="0.5"/>
+    <!-- Multi-stage approval lines inside funnel -->
+    <line x1="-75" y1="-25" x2="-25" y2="-25" stroke-width="1" opacity="0.4"/>
+    <line x1="-65" y1="0" x2="-35" y2="0" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+    <!-- Heavy payload outcome -->
+    <rect x="-60" y="40" width="20" height="20" rx="3" fill="none" stroke-width="2"/>
+    <circle cx="-50" cy="50" r="4" fill="#FFF6F2"/>
+
+    <!-- RIGHT SIDE: B2C (Wide, shallow, high-volume, rapid flow) -->
+    <!-- Shallow Funnel -->
+    <path d="M10,-50 L90,-50 L65,-10 L35,-10 Z" fill="none" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+    <!-- High volume of small individual nodes raining down -->
+    ${circ(20, -65, 1.5)} ${circ(35, -75, 2)} ${circ(50, -60, 1.5)} ${circ(65, -70, 2)} ${circ(80, -60, 1.5)}
+    ${circ(40, -40, 2)} ${circ(60, -35, 1.5)} ${circ(50, -20, 2)}
+    <!-- High volume outputs quickly flying out -->
+    ${circ(35, 15, 2)} ${circ(50, 25, 3)} ${circ(65, 15, 2)}
+    ${circ(40, 45, 2)} ${circ(60, 50, 2.5)}
+    
+    <!-- Speed/Velocity lines on B2C side -->
+    <path d="M50,15 L50,60" fill="none" stroke-width="1" opacity="0.3"/>
+    <path d="M35,15 L25,40" fill="none" stroke-width="1" opacity="0.2"/>
+    <path d="M65,15 L75,40" fill="none" stroke-width="1" opacity="0.2"/>
   `
 };
 

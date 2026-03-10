@@ -28,8 +28,9 @@ import * as Post25 from "./best-b2b-lead-generation-agencies-2026-architecture"
 import * as Post26 from "./what-is-lead-generation-the-complete-guide-for-businesses-in-2026"
 import * as Post27 from "./how-lead-generation-works-step-by-step-process"
 import * as Post28 from "./types-of-lead-generation-strategies-that-work-in-2026"
+import * as Post29 from "./b2b-vs-b2c-lead-generation-differences"
 
-export const allPosts = [Post28, Post27, Post26, Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
+export const allPosts = [Post29, Post28, Post27, Post26, Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
 
 export const getPostBySlug = (slug: string) => {
     // Basic slug matching
