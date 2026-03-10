@@ -470,6 +470,51 @@ const icons = {
     ${circ(10, -40, 2)}
     ${circ(-25, 0, 1.5)}
     ${circ(25, 0, 1.5)}
+  `,
+
+  'inbound_vs_outbound.svg': `
+    <!-- Opposing Forces: Pull (Inbound) vs Push (Outbound) -->
+    <!-- Divider -->
+    <line x1="0" y1="-80" x2="0" y2="80" stroke-width="1" stroke-dasharray="4 4" opacity="0.3" />
+    <text x="-50" y="-70" fill="#FFF6F2" font-family="Arial" font-size="10" font-weight="bold" opacity="0.8" text-anchor="middle">INBOUND</text>
+    <text x="50" y="-70" fill="#FFF6F2" font-family="Arial" font-size="10" font-weight="bold" opacity="0.8" text-anchor="middle">OUTBOUND</text>
+
+    <!-- LEFT SIDE: INBOUND (Magnetic Pull) -->
+    <!-- Central Magnet / Content Core -->
+    <path d="M-40,0 A15 15 0 1 1 -40,-30 L-30,-30 L-30,-20 A5 5 0 1 0 -30,-10 L-30,0 Z" fill="none" stroke-width="2" transform="rotate(-90 -40 -15)"/>
+    
+    <!-- Magnetic waves reaching upward/outward -->
+    <path d="M-70,-45 Q-40,-60 -10,-45" fill="none" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
+    <path d="M-80,-60 Q-40,-80 0,-60" fill="none" stroke-width="1" stroke-dasharray="1 3" opacity="0.4"/>
+    
+    <!-- Leads being pulled downwards into the core organically -->
+    <path d="M-60,-50 L-50,-25" fill="none" stroke-width="1" opacity="0.5"/>
+    <path d="M-20,-50 L-30,-25" fill="none" stroke-width="1" opacity="0.5"/>
+    ${circ(-60, -50, 3)}
+    ${circ(-20, -50, 3)}
+    ${circ(-40, -35, 2)}
+    
+    <!-- Converted organic leads nested at bottom -->
+    ${circ(-50, 40, 3)} ${circ(-30, 40, 3)} ${circ(-40, 50, 4)}
+
+    <!-- RIGHT SIDE: OUTBOUND (Targeted Push / Outreach) -->
+    <!-- Central Node / Business Core pushing outward -->
+    <circle cx="50" cy="40" r="10" fill="none" stroke-width="2"/>
+    <circle cx="50" cy="40" r="3" fill="#FFF6F2"/>
+
+    <!-- Targeted outreach beams pushing upward/outward aggressively -->
+    <line x1="40" y1="30" x2="20" y2="-20" stroke-width="1.5" opacity="0.8"/>
+    <line x1="50" y1="30" x2="50" y2="-40" stroke-width="2" opacity="0.9"/>
+    <line x1="60" y1="30" x2="80" y2="-20" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Target acquired nodes (hit targets) -->
+    <rect x="15" y="-30" width="10" height="10" transform="rotate(45 20 -25)" fill="none" stroke-width="1.5"/>
+    <circle cx="50" cy="-50" r="6" fill="#FFF6F2"/> <!-- Direct Hit -->
+    <rect x="75" y="-30" width="10" height="10" transform="rotate(45 80 -25)" fill="none" stroke-width="1.5"/>
+
+    <!-- Additional outreach grid showing massive volume/scale -->
+    <path d="M20,10 Q50,-10 80,10" fill="none" stroke-width="1" opacity="0.3"/>
+    <path d="M10,0 Q50,-30 90,0" fill="none" stroke-width="1" opacity="0.1"/>
   `
 };
 
