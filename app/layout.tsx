@@ -5,6 +5,7 @@ import "./globals.css"
 import GoogleAnalyticsComponent from "./components/google-analytics"
 import { GA_MEASUREMENT_ID } from "../lib/analytics"
 import { StickyMobileCTA } from "./components/sticky-mobile-cta"
+import { MetaPixel } from "./components/meta-pixel"
 import { SchemaInjector } from "@/components/templates/SchemaInjector"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -208,6 +209,7 @@ export default function RootLayout({
         {children}
         <StickyMobileCTA />
         <GoogleAnalyticsComponent GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
+        <MetaPixel pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID} />
       </body>
     </html>
   )

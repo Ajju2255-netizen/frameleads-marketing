@@ -1797,6 +1797,40 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 8 — Lead-capture activation: widen source schema + Meta Pixel + dual-tracker conversion events (landed 2026-06-07):**
+  - **Problem 1**: the `LeadSource` enum (client + Worker) was frozen at the Tier 3/4/5/11 era. All the new CTAs shipped in Phases 7C–7J (money-X, guide-X, hub-X, location-X, vs-hub-X, glossary-hub-X, resources-X, tier12-X, tier13-X, tier14-X, tier15-X) were getting dropped to "free-audit" by the strict set-membership check in `app/free-marketing-audit/page.tsx` — full source attribution lost on submit.
+  - **Problem 2**: Meta Pixel was not wired sitewide. Only GA4 was firing.
+  - **Problem 3**: Lead-submit fired only `lead_submitted` (custom GA4 event). Standard conversion-mapping events (`generate_lead` for Google Ads, `Lead` for Meta Ads) were absent.
+  - **Solutions**:
+    - **Permissive source schema** (`lib/lead-api.ts` + `frameleads-api/src/endpoints/leadSubmit.ts`): replaced `z.enum([...])` / strict `LeadSource` union with `SOURCE_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/`. Every CTA across ~127k pages now carries its full attribution context to the Worker — `money-seo-company-in-mumbai-mid`, `guide-real-estate-marketing-bottom`, `hub-how-to-top`, `location-bangalore-mid`, etc.
+    - **URL parser** (`app/free-marketing-audit/page.tsx`): swapped strict `VALID_SOURCES.has(cta)` for regex test against `SOURCE_PATTERN`. Pass-through verbatim when valid; fall back to "free-audit" otherwise.
+    - **Meta Pixel component** (`app/components/meta-pixel.tsx` — new): env-gated via `NEXT_PUBLIC_META_PIXEL_ID`. Renders nothing unless ID is set, so dev/preview environments don't pollute Meta data.
+    - **Layout wire-up** (`app/layout.tsx`): `<MetaPixel pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID} />` placed alongside `<GoogleAnalyticsComponent>` after children.
+    - **Dual-tracker conversion events** in `submitLead()`:
+      - GA4: `generate_lead` (standard event, mappable to Google Ads conversions) + `lead_submitted` (custom event for full attribution)
+      - Meta Pixel: standard `Lead` event with `content_name = source` and `content_category = service`
+    - **Click-event tracker** in `lib/analytics.ts`: `trackContactClick(channel, source)` fires `contact_clicked` on GA4 + `Contact` on Meta Pixel. Wired into the sticky CTA's WhatsApp button.
+  - **Verified live**: spot-checked 10 CTA URL patterns from across the site — all return 200 with `cta=` query string flowing through to the form's source state, including:
+    - `cta=hub-seo-services-top` (service hub)
+    - `cta=money-seo-company-in-mumbai-mid` (money page)
+    - `cta=guide-real-estate-marketing-bottom` (long-form guide)
+    - `cta=location-bangalore-mid` (location hub)
+    - `cta=tier3-top` (programmatic tier)
+    - `cta=resources-resources-top` (resources hub)
+    - `cta=vs-hub-top` / `cta=glossary-hub-top`
+    - `cta=hub-how-to-bottom` (question hub)
+    - `cta=guide-seo-services-for-real-estate-mid` (cross-cell guide)
+  - **Production prerequisites** (deploy-time, not committed):
+    - Set `NEXT_PUBLIC_META_PIXEL_ID` env var in Cloudflare Worker config
+    - Optionally set `NEXT_PUBLIC_LEAD_API_URL` to production Worker URL (`https://api.frameleads.com/api/lead-submit`)
+    - In Google Ads UI: configure `generate_lead` as a conversion (currency INR, value 0 placeholder)
+    - In Meta Events Manager: standard `Lead` event auto-detected from the Pixel
+  - **Impact**: every lead submission across the ~127k page surface now carries:
+    - Full CTA source attribution to Resend email + R2 archive (Worker side)
+    - Google Ads conversion event firing (GA4 → Ads)
+    - Meta Ads optimization signal (Pixel `Lead` event)
+    - Custom GA4 dimensions preserved for funnel + cohort analysis
+
 - **Phase 7J — /vs (comparisons) + /glossary depth (landed 2026-06-07):**
   - **Problem**: the two remaining catalog hubs (`/vs` and `/glossary`) and their cell templates (Tier 9 comparison pages, Tier 8 glossary term pages) were thinner than the rest of the site. `/vs` hub was 1 h2 / 1 schema; `/glossary` hub same; cell pages 6 h2 / 4 schema.
   - **New canonical templates**:

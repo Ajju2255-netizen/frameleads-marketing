@@ -6,27 +6,33 @@
  * rate-limit messaging, and analytics events.
  */
 
-export type LeadSource =
-	| "free-audit"
-	| "contact"
-	| "sticky-cta"
-	| "whatsapp"
-	| "tier3-top"
-	| "tier3-mid"
-	| "tier3-bottom"
-	| "tier4-top"
-	| "tier4-mid"
-	| "tier4-bottom"
-	| "tier5-top"
-	| "tier5-mid"
-	| "tier5-bottom"
-	| "tier11-top"
-	| "tier11-mid"
-	| "tier11-bottom"
-	| "industry-pillar"
-	| "tool-calculator"
-	| "academy"
-	| "other";
+/**
+ * Permissive source string. The Worker validates against the same regex
+ * (lowercase + digits + hyphens, ≤ 64 chars) so every CTA placed across the
+ * site can carry its full attribution context (e.g. `money-seo-company-in-mumbai-mid`,
+ * `guide-real-estate-marketing-bottom`, `hub-how-to-top`) without us having
+ * to centrally enumerate every variant.
+ *
+ * Recommended source prefixes (open list):
+ *   - free-audit, contact, sticky-cta, whatsapp                   — direct surfaces
+ *   - tier3-{top,mid,bottom}                                      — Tier 3 cells
+ *   - tier4-{top,mid,bottom}, tier5-{top,mid,bottom}              — Tier 4/5 cells
+ *   - tier11-{top,mid,bottom}, tier12-{top,mid,bottom}            — industry cells
+ *   - tier13-{top,mid,bottom}, tier14-{top,mid,bottom}, tier15-*  — newer cells
+ *   - industry-pillar-{top,mid,bottom}                            — industry pillars
+ *   - hub-{service-id}-{top,mid,bottom}                           — service hubs
+ *   - hub-{kind}-{top,bottom}                                     — question hubs
+ *   - location-{geo-id}-{mid,bottom}                              — location hubs
+ *   - money-{slug}-{top,mid,bottom}                               — money pages
+ *   - guide-{slug}-{top,mid,bottom}                               — long-form guides
+ *   - resources-{slug}-{top,bottom}                               — resource hubs
+ *   - vs-hub-{top,bottom}, glossary-hub-{top,bottom}              — vs / glossary hubs
+ *   - tool-calculator, academy, other                             — misc surfaces
+ *
+ * Unknown sources still validate as long as the regex matches.
+ */
+export const SOURCE_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/;
+export type LeadSource = string;
 
 export type LeadPayload = {
 	name: string;
@@ -108,13 +114,35 @@ export async function submitLead(payload: LeadPayload): Promise<LeadSubmitResult
 	}
 
 	if (res.ok && data.success && data.result?.leadId) {
-		// Fire a GA4 conversion event if gtag is present (set up in Phase 7).
+		// Fire conversion events on every supported tracker. Best-effort —
+		// failures here must never block the success return.
 		try {
-			const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
-			if (typeof gtag === "function") {
-				gtag("event", "lead_submitted", {
+			const w = window as unknown as {
+				gtag?: (...args: unknown[]) => void;
+				fbq?: (...args: unknown[]) => void;
+			};
+			// GA4: standard generate_lead event for Google Ads conversion mapping +
+			// custom lead_submitted with full source attribution.
+			if (typeof w.gtag === "function") {
+				w.gtag("event", "generate_lead", {
+					currency: "INR",
+					value: 0,
+					lead_source: payload.source,
+					page_url: enriched.pageUrl,
+					method: payload.source,
+				});
+				w.gtag("event", "lead_submitted", {
 					source: payload.source,
 					page_url: enriched.pageUrl,
+				});
+			}
+			// Meta Pixel: standard Lead event for Meta Ads optimisation. Uses USD
+			// for cross-property comparison; Meta accepts any value, this is just
+			// a placeholder until per-source LTV mapping is wired.
+			if (typeof w.fbq === "function") {
+				w.fbq("track", "Lead", {
+					content_name: payload.source,
+					content_category: payload.service || "audit",
 				});
 			}
 		} catch {

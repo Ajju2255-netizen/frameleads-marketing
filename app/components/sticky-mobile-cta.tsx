@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { MessageCircle, Sparkles, X } from "lucide-react"
+import { trackContactClick } from "@/lib/analytics"
 
 const WHATSAPP_INTENT =
   "https://wa.me/916362821368?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
@@ -57,7 +58,7 @@ export function StickyMobileCTA() {
     >
       <div className="relative mx-auto flex max-w-md items-center gap-2 rounded-2xl border border-[#FFE4D6] bg-white/95 px-3 py-2 shadow-xl shadow-[#FF6B35]/15 backdrop-blur">
         <Link
-          href="/free-marketing-audit?utm_source=sticky-cta"
+          href="/free-marketing-audit?utm_source=sticky-cta&cta=sticky-cta"
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] px-4 py-3 text-sm font-semibold text-white shadow-md shadow-[#FF6B35]/25 active:scale-[0.98]"
         >
           <Sparkles className="h-4 w-4" />
@@ -68,6 +69,7 @@ export function StickyMobileCTA() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
+          onClick={() => trackContactClick("whatsapp", "sticky-cta")}
           className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-md shadow-[#25D366]/30 active:scale-[0.98]"
         >
           <MessageCircle className="h-4 w-4" />

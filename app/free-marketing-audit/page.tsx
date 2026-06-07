@@ -7,23 +7,18 @@ import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
 import Image from "next/image"
-import { submitLead, type LeadSource } from "@/lib/lead-api"
+import { submitLead, SOURCE_PATTERN, type LeadSource } from "@/lib/lead-api"
 
-const VALID_SOURCES: ReadonlySet<LeadSource> = new Set<LeadSource>([
-  "free-audit", "contact", "sticky-cta", "whatsapp",
-  "tier3-top", "tier3-mid", "tier3-bottom",
-  "tier4-top", "tier4-mid", "tier4-bottom",
-  "tier5-top", "tier5-mid", "tier5-bottom",
-  "tier11-top", "tier11-mid", "tier11-bottom",
-  "industry-pillar", "tool-calculator", "academy", "other",
-])
-const ATTR_KEYS: ReadonlyArray<string> = ["industry-pillar-top", "industry-pillar-mid", "industry-pillar-bottom"]
-
+/**
+ * Pull the cta=… query string and pass through verbatim when it matches the
+ * source pattern. Lets every CTA across the site carry its full attribution
+ * (money-seo-company-in-mumbai-mid, guide-real-estate-marketing-top,
+ *  hub-how-to-bottom, location-bangalore-mid, etc.) without enumerating
+ * every variant centrally.
+ */
 function parseSourceFromUrl(cta: string | null): LeadSource {
   if (!cta) return "free-audit"
-  // industry-pillar-{top,mid,bottom} all map to "industry-pillar" enum
-  if (ATTR_KEYS.includes(cta)) return "industry-pillar"
-  if (VALID_SOURCES.has(cta as LeadSource)) return cta as LeadSource
+  if (SOURCE_PATTERN.test(cta)) return cta
   return "free-audit"
 }
 import { 
