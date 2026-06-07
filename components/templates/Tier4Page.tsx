@@ -187,7 +187,7 @@ export function Tier4Page({ service, industry, url }: Props) {
 					serviceLabel={service.label}
 					geoName={industry.label}
 					subhead={subhead}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&cta=tier4-top`}
 					primaryLabel={`Get a free ${industry.name} audit`}
 				/>
 				<TLDRBlock bullets={tldr} />
@@ -203,6 +203,13 @@ export function Tier4Page({ service, industry, url }: Props) {
 				/>
 				<MethodologyCard contextLabel={`${service.label} for ${industry.label}`} />
 				<UseCasesList useCases={useCases} />
+				<CTABlock
+					variant="audit"
+					headline={`See this applied to your ${industry.name} business.`}
+					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${industry.name}-specific CAC/CPC benchmarks and hand you the three highest-leverage moves.`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&cta=tier4-mid`}
+					primaryLabel={`Book a ${industry.name} audit`}
+				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells
 					heading={`${service.label} in ${industry.name}-heavy cities`}
@@ -220,7 +227,7 @@ export function Tier4Page({ service, industry, url }: Props) {
 					variant="audit"
 					headline={`Run ${service.label} for ${industry.label} with a senior team.`}
 					body={`Book a free 30-minute audit. We'll review your current ${service.label.toLowerCase()} setup against the ${industry.name} benchmarks above and tell you the three highest-leverage moves — even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&cta=tier4-bottom`}
 					primaryLabel={`Get a free ${industry.name} audit`}
 				/>
 				<AuthorCard

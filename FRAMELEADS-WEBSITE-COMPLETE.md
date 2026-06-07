@@ -1241,7 +1241,7 @@ Blog (3 posts hard-coded)  → underutilized as an internal-link feeder
 | `/contact` form backend | ✅ Migrated off Formspree to `/api/lead-submit` (Phase 1A) |
 | `/api/lead-submit` endpoint in frameleads-api | ✅ Built — Resend email + R2 archive + KV rate-limit + honeypot (Phase 1A) |
 | Sticky mobile CTA bar | ✅ Live — appears after 30% scroll, 7-day dismiss memory (Phase 1A) |
-| 3-moment CTA pattern in Tier templates | ⏳ Phase 1B (next session) |
+| 3-moment CTA pattern in Tier templates | ✅ Wired across Tier3/4/5/11 + IndustryPillar with source-tagged URLs; `/free-marketing-audit` reads `?cta=` and pre-populates service tag from URL hints (Phase 1B) |
 | GSC verification + sitemap submission | ⏳ Not done (Phase 2) |
 | Off-site entity establishment (Crunchbase / Wikipedia / GBP / Tracxn) | 📋 Not started (Phase 6) |
 | Off-page / backlinks / digital PR program | 📋 Not started (Phase 8) |
@@ -1805,7 +1805,7 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 
 ### ⏳ NEXT (blockers / in progress)
 - **Phase 1A — Lead-capture engine (landed 2026-06-07):** `POST /api/lead-submit` live in `frameleads-api` with Zod validation, Resend email forwarding, R2 archive (`audit/leads/YYYY-MM-DD/<uuid>.json`), KV-backed rate-limit (5/min/IP), CORS allow-list, honeypot. `lib/lead-api.ts` client wrapper with friendly error mapping + GA4 `lead_submitted` event. `/free-marketing-audit` form fixed; `/contact` migrated off Formspree to internal API via shared `<ContactForm>` component. Sticky mobile CTA bar (after 30% scroll, 7-day dismiss memory) mounted in root layout. Production needs `RESEND_API_KEY`, `LEAD_TO_EMAIL`, and `NEXT_PUBLIC_LEAD_API_URL` configured.
-- **Phase 1B — Conversion polish:** 3-moment CTA pattern (top/mid/bottom) in Tier3/4/5/11 templates wired to `<ContactForm source="tier3-mid">`; calculator → lead-capture exit funnel.
+- **Phase 1B — Conversion polish (landed 2026-06-07):** 3-moment CTA pattern (top hero + mid post-methodology + bottom post-FAQ) wired into `Tier3Page`, `Tier4Page`, `Tier5Page`, `Tier11Page`, and `IndustryPillarPage`. Each CTA carries a unique `?cta=tierN-{top|mid|bottom}` URL param. `/free-marketing-audit` reads `useSearchParams("cta")` and uses it as the lead `source`, plus composes a `service` tag from `service`/`industry`/`geo` URL hints so ops sees which programmatic cell the lead came from. Next conversion-polish items: calculator → lead-capture exit funnel; multi-step audit form for higher completion.
 - **Phase 2 — E-E-A-T + GSC indexing:** wire `AuthorCard` + Person schema + `TimestampStamp` + `ReferencesBlock` across Tier templates and blog; move `Organization` + `WebSite` + `SearchAction` JSON-LD to root layout; verify `frameleads.com` in GSC; submit sitemap-index; run first prioritized batch
 
 ### 📋 PLANNED (not started)

@@ -1,12 +1,31 @@
 "use client"
 
 import { useState } from "react"
+import { useSearchParams } from "next/navigation"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
 import Image from "next/image"
-import { submitLead } from "@/lib/lead-api"
+import { submitLead, type LeadSource } from "@/lib/lead-api"
+
+const VALID_SOURCES: ReadonlySet<LeadSource> = new Set<LeadSource>([
+  "free-audit", "contact", "sticky-cta", "whatsapp",
+  "tier3-top", "tier3-mid", "tier3-bottom",
+  "tier4-top", "tier4-mid", "tier4-bottom",
+  "tier5-top", "tier5-mid", "tier5-bottom",
+  "tier11-top", "tier11-mid", "tier11-bottom",
+  "industry-pillar", "tool-calculator", "academy", "other",
+])
+const ATTR_KEYS: ReadonlyArray<string> = ["industry-pillar-top", "industry-pillar-mid", "industry-pillar-bottom"]
+
+function parseSourceFromUrl(cta: string | null): LeadSource {
+  if (!cta) return "free-audit"
+  // industry-pillar-{top,mid,bottom} all map to "industry-pillar" enum
+  if (ATTR_KEYS.includes(cta)) return "industry-pillar"
+  if (VALID_SOURCES.has(cta as LeadSource)) return cta as LeadSource
+  return "free-audit"
+}
 import { 
   Search, 
   DollarSign, 
@@ -38,6 +57,13 @@ import {
 
 export default function FreeMarketingAuditPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const searchParams = useSearchParams()
+  const sourceFromUrl = parseSourceFromUrl(searchParams.get("cta"))
+  // Pre-populate company/service if the user came from a Tier-template CTA with
+  // service/industry/geo query params. Keeps the conversion friction minimal.
+  const serviceParam = searchParams.get("service")
+  const industryParam = searchParams.get("industry")
+  const geoParam = searchParams.get("geo")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,13 +90,22 @@ export default function FreeMarketingAuditPage() {
     e.preventDefault()
     if (submitState.status === "submitting") return
     setSubmitState({ status: "submitting" })
+    // Compose a service tag from the URL hints (service/industry/geo) so the
+    // ops email reflects which Tier cell the lead came from.
+    const serviceTagParts: string[] = []
+    if (serviceParam) serviceTagParts.push(serviceParam)
+    if (industryParam) serviceTagParts.push(`for-${industryParam}`)
+    if (geoParam) serviceTagParts.push(`in-${geoParam}`)
+    const serviceTag = serviceTagParts.length ? serviceTagParts.join(" ") : undefined
+
     const res = await submitLead({
       name: formData.name,
       email: formData.email,
       website: formData.website || undefined,
       company: formData.company || undefined,
       phone: formData.phone || undefined,
-      source: "free-audit",
+      service: serviceTag,
+      source: sourceFromUrl,
       hp: formData.hp || undefined,
     })
     if (res.ok) {

@@ -184,7 +184,7 @@ export function Tier11Page({ industry, geo, url }: Props) {
 					serviceLabel={`${industry.label} marketing`}
 					geoName={geo.name}
 					subhead={subhead}
-					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}&cta=tier11-top`}
 					primaryLabel={`Get a free ${geo.name} ${industry.name} audit`}
 					crumbs={[
 						{ href: "/", label: "Home" },
@@ -216,6 +216,13 @@ export function Tier11Page({ industry, geo, url }: Props) {
 					geoConcentration={industry.geoConcentration}
 				/>
 				<MethodologyCard contextLabel={`${industry.label} marketing in ${geo.name}`} />
+				<CTABlock
+					variant="audit"
+					headline={`Scope this to your ${industry.name} business in ${geo.name}.`}
+					body={`30 minutes, no slides. We'll review your ${industry.name.toLowerCase()} marketing setup against ${geo.name}-specific demand, channel mix, and competitor benchmarks, then hand you the three highest-leverage moves.`}
+					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}&cta=tier11-mid`}
+					primaryLabel={`Book a ${geo.name} audit`}
+				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells
 					heading={`${industry.label} marketing in nearby cities`}
@@ -239,7 +246,7 @@ export function Tier11Page({ industry, geo, url }: Props) {
 					variant="audit"
 					headline={`Run ${industry.label} marketing in ${geo.name} with a senior team.`}
 					body={`Book a free 30-minute audit. We'll review your current ${industry.name} marketing against the ${geo.name} benchmarks above and tell you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}&cta=tier11-bottom`}
 					primaryLabel={`Get a free ${geo.name} ${industry.name} audit`}
 				/>
 				<AuthorCard

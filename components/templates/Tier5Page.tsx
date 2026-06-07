@@ -186,7 +186,7 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 					serviceLabel={`${service.label} for ${industry.label}`}
 					geoName={geo.name}
 					subhead={subhead}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}&cta=tier5-top`}
 					primaryLabel={`Get a free ${geo.name} ${industry.name} audit`}
 				/>
 				<TLDRBlock bullets={tldr} />
@@ -203,6 +203,13 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 				</section>
 				<MethodologyCard
 					contextLabel={`${service.label} for ${industry.label} in ${geo.name}`}
+				/>
+				<CTABlock
+					variant="audit"
+					headline={`Scope this to your ${industry.name} business in ${geo.name}.`}
+					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-${industry.name}-specific demand and competitor benchmarks, then hand you the three highest-leverage moves.`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}&cta=tier5-mid`}
+					primaryLabel={`Book a ${geo.name} audit`}
 				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells
@@ -221,7 +228,7 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 					variant="audit"
 					headline={`Run ${service.label} for ${industry.label} in ${geo.name} with a senior team.`}
 					body={`Book a free 30-minute audit. We'll review your current ${service.label.toLowerCase()} setup against the ${geo.name}-${industry.name} benchmarks — and tell you the three highest-leverage moves, even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}&cta=tier5-bottom`}
 					primaryLabel={`Get a free ${geo.name} ${industry.name} audit`}
 				/>
 				<AuthorCard

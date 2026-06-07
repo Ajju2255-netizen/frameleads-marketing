@@ -220,7 +220,7 @@ export function IndustryPillarPage({ industry, url }: Props) {
 						</p>
 						<div className="mt-6 flex flex-wrap gap-3">
 							<Link
-								href={`/free-marketing-audit?industry=${industry.id}`}
+								href={`/free-marketing-audit?industry=${industry.id}&cta=industry-pillar-top`}
 								className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(255,107,53,0.25)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(255,107,53,0.35)]"
 							>
 								Get a free 30-min {industry.name} audit
@@ -247,6 +247,13 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					items={industry.primaryServices}
 					style="chips"
 				/>
+				<CTABlock
+					variant="audit"
+					headline={`Want this scoped to your ${industry.name} business?`}
+					body={`30 minutes, no slides. We'll review your current ${industry.name} marketing against the pain points and channel mix above and hand you the three highest-leverage moves.`}
+					primaryHref={`/free-marketing-audit?industry=${industry.id}&cta=industry-pillar-mid`}
+					primaryLabel={`Book a ${industry.name} audit`}
+				/>
 				<RelatedCells
 					heading={`${industry.label} services we run`}
 					links={services}
@@ -264,7 +271,7 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					variant="audit"
 					headline={`Operate ${industry.label} marketing with a senior team.`}
 					body={`Book a free 30-minute audit. We'll review your current ${industry.name} marketing against the category benchmarks above and tell you the three highest-leverage moves — even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?industry=${industry.id}`}
+					primaryHref={`/free-marketing-audit?industry=${industry.id}&cta=industry-pillar-bottom`}
 					primaryLabel={`Get a free ${industry.name} audit`}
 				/>
 				<AuthorCard

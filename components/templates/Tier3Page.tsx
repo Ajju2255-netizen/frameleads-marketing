@@ -209,7 +209,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 					serviceLabel={service.label}
 					geoName={geo.name}
 					subhead={subhead}
-					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}&cta=tier3-top`}
 					primaryLabel={`Get a free ${geo.name}-scoped audit`}
 				/>
 				<TLDRBlock bullets={tldr} />
@@ -225,6 +225,13 @@ export function Tier3Page({ service, geo, url }: Props) {
 					intro={localIntro}
 				/>
 				<MethodologyCard contextLabel={`${service.label} in ${geo.name}`} />
+				<CTABlock
+					variant="audit"
+					headline={`Want this audit scoped to ${geo.name}?`}
+					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-specific demand and competitor benchmarks, then hand you the three highest-leverage moves.`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}&cta=tier3-mid`}
+					primaryLabel={`Book a ${geo.name} audit`}
+				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells
 					heading={`Other services we run in ${geo.name}`}
@@ -242,7 +249,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 					variant="audit"
 					headline={`Run ${service.label} in ${geo.name} with a senior team.`}
 					body={`Book a free 30-minute audit. We'll review your current ${service.label.toLowerCase()} setup against the ${geo.name} benchmarks above and tell you the three highest-leverage moves — even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}`}
+					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}&cta=tier3-bottom`}
 					primaryLabel={`Get a free ${geo.name} audit`}
 				/>
 				<AuthorCard
