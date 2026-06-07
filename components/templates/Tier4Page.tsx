@@ -7,6 +7,7 @@ import { UseCasesList } from "./UseCasesList";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
 import { ServiceDepthSection } from "./ServiceDepthSection";
@@ -212,12 +213,11 @@ export function Tier4Page({ service, industry, url }: Props) {
 				<MethodologyCard contextLabel={`${service.label} for ${industry.label}`} />
 				<ServiceDepthSection service={service} industry={industry} />
 				<UseCasesList useCases={useCases} />
-				<CTABlock
-					variant="audit"
-					headline={`See this applied to your ${industry.name} business.`}
-					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${industry.name}-specific CAC/CPC benchmarks and hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&cta=tier4-mid`}
-					primaryLabel={`Book a ${industry.name} audit`}
+				<EmbeddedLeadForm
+					source={`tier4-${service.id}-${industry.id}-mid`}
+					service={service.id}
+					headline={`Get a free audit scoped to ${service.label.toLowerCase()} for ${industry.label.toLowerCase()}`}
+					body={`Fill in the form below to book a free 30-minute audit. We'll review your ${service.label.toLowerCase()} setup against ${industry.label.toLowerCase()}-specific CAC/CPC benchmarks and hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells

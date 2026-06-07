@@ -14,6 +14,7 @@ import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -483,12 +484,11 @@ export function LocationHubPage({ slug }: Props) {
 					</ul>
 				</section>
 
-				<CTABlock
-					variant="audit"
-					headline={`See ${loc.name} marketing applied to your business.`}
-					body={`30 minutes, no slides. We'll review your current setup against ${loc.name}-specific benchmarks + channel-mix expectations + compliance posture, then hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?geo=${loc.slug}&cta=location-${loc.slug}-mid`}
-					primaryLabel={`Book a free ${loc.name} audit`}
+				<EmbeddedLeadForm
+					source={`location-${loc.slug}-mid`}
+					service={loc.topServiceIds[0]}
+					headline={`Get a free audit scoped to ${loc.name}`}
+					body={`Fill in the form below to book a free 30-min audit. We'll review your current setup against ${loc.name}-specific benchmarks + channel-mix expectations + compliance posture, then hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 
 				<FAQBlock items={faqs} />

@@ -1797,6 +1797,39 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 13 — Extend inline lead-form to all remaining commercial Tier templates (landed 2026-06-07):**
+  - **Scope**: extends Phase 12's `EmbeddedLeadForm` from the 3 highest-traffic templates (Money + Guide + Service Hub) to all 7 remaining commercial Tier templates. After Phase 13, the inline mid-page form is the default mid-CTA across the entire commercial surface — agency-hiring intent flows directly into a form instead of through a navigation hop.
+  - **7 templates wired**:
+    | Template | Cells | Source attribution |
+    |---|---:|---|
+    | `Tier3Page` (service × geo) | 1,664 | `tier3-{service.id}-{geo.id}-mid` |
+    | `Tier4Page` (service × industry) | 165 | `tier4-{service.id}-{industry.id}-mid` |
+    | `Tier5Page` (service × industry × geo) | 3,330 | `tier5-{service.id}-{industry.id}-{geo.id}-mid` |
+    | `Tier11Page` (industry × geo) | 696 | `tier11-{industry.id}-{geo.id}-mid` |
+    | `Tier13Page` (service pricing × geo) | 338 | `tier13-{service.id}-{geo.id?}-mid` |
+    | `LocationHubPage` (14 country/city hubs) | 14 | `location-{loc.slug}-mid` |
+    | `IndustryPillarPage` (industry pillars) | ~31 | `industry-pillar-{industry.id}-mid` |
+    | **Total new pages with inline mid-form** | **~6,238** | |
+  - **Combined with Phase 12** (Service Hubs + Money Pages + Guides):
+    | Page family | Cells |
+    |---|---:|
+    | Phase 12 templates (service hub, money, guide) | 11,565 |
+    | Phase 13 templates (Tier 3/4/5/11/13 + LocationHub + IndustryPillar) | 6,238 |
+    | **Total inline-mid-form coverage** | **~17,803** |
+  - **Bottom CTAs preserved as links** to `/free-marketing-audit` across all templates — final-page navigation step intact for readers who reach end-of-page.
+  - **Form behaviour identical to Phase 12**: name + email + phone + service (auto-populated, read-only) + message + honeypot. Submits via `submitLead()`. Fires GA4 `generate_lead` + `lead_submitted` + Meta Pixel `Lead`. Inline success card with WhatsApp escalation. Source attribution preserved.
+  - **Tier 13 placement note**: only template that previously had a single bottom-only CTA. Inline form added BEFORE the FAQ block (mid-page position) — bottom audit CTA retained.
+  - **Verified live (localhost:3000)**:
+    | URL | Status | `<form>` | Audit btn |
+    |---|:---:|:---:|:---:|
+    | `/seo-services-in-mumbai` (Tier 3) | 200 | ✓ | ✓ |
+    | `/seo-services-for-real-estate` (Tier 4) | 200 | ✓ | ✓ |
+    | `/seo-services-for-real-estate-in-mumbai` (Tier 5) | 200 | ✓ | ✓ |
+    | `/real-estate-marketing-in-mumbai` (Tier 11) | 200 | ✓ | ✓ |
+    | `/seo-services-pricing-in-mumbai` (Tier 13) | 200 | ✓ | ✓ |
+    | `/digital-marketing-in-bangalore` (LocationHub) | 200 | ✓ | ✓ |
+    | `/real-estate-marketing` (IndustryPillar) | 200 | ✓ | ✓ |
+
 - **Phase 12 — Embedded inline lead-form on Tier templates: direct conversion at mid-page (landed 2026-06-07):**
   - **Problem**: every mid-page CTA across the ~127k commercial + educational surfaces was a link CTA — "Book a free audit → navigate to /free-marketing-audit → fill the long form there". Navigation friction is the single biggest conversion killer on mid-funnel intent: a reader who's deep in a Tier-3 cell, a money page, or a long-form guide has high commercial intent but has to leave the page they're already engaged with to convert.
   - **Solution**: replaced the link-CTA at mid-position with an **inline EmbeddedLeadForm** that captures the lead right where the reader has commercial intent. No navigation, no friction, source-attribution preserved end-to-end through to the Worker.

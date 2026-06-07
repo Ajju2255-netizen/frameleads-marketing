@@ -5,6 +5,7 @@ import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
@@ -331,6 +332,13 @@ export function Tier13Page({ service, geo, url }: Props) {
 						) : null}
 					</ul>
 				</section>
+
+				<EmbeddedLeadForm
+					source={`tier13-${service.id}${geo ? `-${geo.id}` : ""}-mid`}
+					service={service.id}
+					headline={`Get an exact ${service.label.toLowerCase()} quote ${inLocation}`}
+					body={`Pricing depends on your stage + ICP + unit economics. Fill in the form below to book a free 30-min audit and we'll quote precisely — no slides, just numbers.`}
+				/>
 
 				<FAQBlock items={faqs} />
 

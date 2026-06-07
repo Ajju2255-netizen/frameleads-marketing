@@ -7,6 +7,7 @@ import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
@@ -230,12 +231,11 @@ export function Tier11Page({ industry, geo, url }: Props) {
 					geoConcentration={industry.geoConcentration}
 				/>
 				<MethodologyCard contextLabel={`${industry.label} marketing in ${geo.name}`} />
-				<CTABlock
-					variant="audit"
-					headline={`Scope this to your ${industry.name} business in ${geo.name}.`}
-					body={`30 minutes, no slides. We'll review your ${industry.name.toLowerCase()} marketing setup against ${geo.name}-specific demand, channel mix, and competitor benchmarks, then hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?industry=${industry.id}&geo=${geo.id}&cta=tier11-mid`}
-					primaryLabel={`Book a ${geo.name} audit`}
+				<EmbeddedLeadForm
+					source={`tier11-${industry.id}-${geo.id}-mid`}
+					service={industry.primaryServices[0]}
+					headline={`Get a free audit scoped to ${industry.label.toLowerCase()} in ${geo.name}`}
+					body={`Fill in the form below to book a free 30-minute audit. We'll review your ${industry.label.toLowerCase()} marketing setup against ${geo.name}-specific demand + channel mix + competitor benchmarks, then hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells

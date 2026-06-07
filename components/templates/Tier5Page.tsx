@@ -5,6 +5,7 @@ import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
 import { ServiceDepthSection } from "./ServiceDepthSection";
@@ -232,12 +233,11 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 					contextLabel={`${service.label} for ${industry.label} in ${geo.name}`}
 				/>
 				<ServiceDepthSection service={service} industry={industry} geo={geo} />
-				<CTABlock
-					variant="audit"
-					headline={`Scope this to your ${industry.name} business in ${geo.name}.`}
-					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-${industry.name}-specific demand and competitor benchmarks, then hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&industry=${industry.id}&geo=${geo.id}&cta=tier5-mid`}
-					primaryLabel={`Book a ${geo.name} audit`}
+				<EmbeddedLeadForm
+					source={`tier5-${service.id}-${industry.id}-${geo.id}-mid`}
+					service={service.id}
+					headline={`Get a free audit scoped to ${industry.label.toLowerCase()} in ${geo.name}`}
+					body={`Fill in the form below to book a free 30-minute audit. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-${industry.label.toLowerCase()}-specific demand + competitor benchmarks, then hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells

@@ -7,6 +7,7 @@ import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
 import { ServiceDepthSection } from "./ServiceDepthSection";
@@ -255,12 +256,11 @@ export function Tier3Page({ service, geo, url }: Props) {
 				/>
 				<MethodologyCard contextLabel={`${service.label} in ${geo.name}`} />
 				<ServiceDepthSection service={service} geo={geo} />
-				<CTABlock
-					variant="audit"
-					headline={`Want this audit scoped to ${geo.name}?`}
-					body={`30 minutes, no slides. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-specific demand and competitor benchmarks, then hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&geo=${geo.id}&cta=tier3-mid`}
-					primaryLabel={`Book a ${geo.name} audit`}
+				<EmbeddedLeadForm
+					source={`tier3-${service.id}-${geo.id}-mid`}
+					service={service.id}
+					headline={`Get a free audit scoped to ${service.label.toLowerCase()} in ${geo.name}`}
+					body={`Fill in the form below to book a free 30-minute audit. We'll review your ${service.label.toLowerCase()} setup against ${geo.name}-specific demand and competitor benchmarks, then hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 				<FAQBlock items={faqs} />
 				<RelatedCells

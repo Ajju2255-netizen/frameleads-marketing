@@ -7,6 +7,7 @@ import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
 import { ReferencesBlock } from "./ReferencesBlock";
@@ -251,12 +252,11 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					items={industry.primaryServices}
 					style="chips"
 				/>
-				<CTABlock
-					variant="audit"
-					headline={`Want this scoped to your ${industry.name} business?`}
-					body={`30 minutes, no slides. We'll review your current ${industry.name} marketing against the pain points and channel mix above and hand you the three highest-leverage moves.`}
-					primaryHref={`/free-marketing-audit?industry=${industry.id}&cta=industry-pillar-mid`}
-					primaryLabel={`Book a ${industry.name} audit`}
+				<EmbeddedLeadForm
+					source={`industry-pillar-${industry.id}-mid`}
+					service={industry.primaryServices[0]}
+					headline={`Get a free audit scoped to your ${industry.label.toLowerCase()} business`}
+					body={`Fill in the form below to book a free 30-min audit. We'll review your current ${industry.label.toLowerCase()} marketing against the pain points and channel mix above and hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 				<RelatedCells
 					heading={`${industry.label} services we run`}
