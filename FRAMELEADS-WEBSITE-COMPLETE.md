@@ -1797,6 +1797,61 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 10 — GSC + Bing + Indexing API readiness (landed 2026-06-07):**
+  - **Problem**: the existing `scripts/google-indexing.js` read URLs from `app/sitemap/page.tsx` (the human-readable sitemap page) and fell back to a directory scan. Both approaches **missed the ~127k programmatic pages** that render dynamically via the catchall (Tier 3/4/5/11/12/13/14/15 + money pages + guides). Indexing submissions were running against a few hundred static routes, leaving the long-tail unindexed.
+  - **`scripts/indexnow-submit.js`** (new — ~150 lines): IndexNow protocol implementation for Bing + Yandex (also adopted by Naver, Seznam, IndexNow.org consortium). No daily quota (unlike Google Indexing API), batches of up to 10,000 URLs per request. Reads live sitemap-index, traverses all sub-sitemaps, deduplicates, submits in chunks with 1.5s breather between batches. Targeted mode via `--segment {id}` flag for delta submissions.
+  - **IndexNow key file**: `public/07d4882fd497174341b6b64a8afecef2.txt` — 32-char hex key, file path matches contents (the IndexNow protocol verification convention).
+  - **`scripts/google-indexing.js` rewritten** to use live sitemap traversal:
+    - New `fetchTextOverHttps()` + `extractLocs()` helpers
+    - New `bucketFor(subSitemapId)` — assigns priority 0-9 buckets:
+      - 0: Tier-0 pillars + reports
+      - 1: Hand-curated money pages (highest conversion intent)
+      - 2: Programmatic money pages
+      - 3: Service / industry / country hubs + industry pillars
+      - 4: Tier 3 (Service × Geo)
+      - 5: Tier 4/5/11/13 commercial cross-cells
+      - 6: Tier 8/9/15 glossary + comparisons
+      - 7: Long-form guides (educational intent)
+      - 8: Tier 12/14 question cells (high volume, lower individual priority)
+      - 9: Other
+    - `getAllPages()` now async — fetches `https://frameleads.com/sitemap.xml`, traverses all 47 sub-sitemaps, deduplicates, sorts by bucket. Falls back to directory scan only if live sitemap unreachable.
+    - Honors `GOOGLE_SITE_URL` env var for local + staging dry-runs.
+    - Main entry point wrapped in async IIFE to support `await getAllPages()` from `--dry-run` and submission paths.
+    - Exit on parent error path captured.
+    - `package.json`: added `submit-indexnow` script.
+  - **`public/.well-known/security.txt`** (new) — RFC 9116 security disclosure contact. Press surface trust signal + indirect ranking factor.
+  - **`lib/llms.ts` updated**:
+    - `corePages()` now lists `/resources`, `/resources/guides`, `/press`, `/case-studies` alongside the other Tier-0 entry points
+    - `programmaticSummary()` expanded with three new bucket descriptions:
+      - Money pages (Service × Geo + Industry × Geo = ~5,497 cells)
+      - Long-form guides (six guide patterns = ~6,047 cells)
+      - Intent separation paragraph explaining commercial vs educational cohorts (no keyword cannibalization claim)
+    - All counts come from `allMoney*Slugs()` + `allGuide*Slugs()` so they update automatically as new cells ship.
+  - **Verified live**: `/llms.txt` now includes money pages + guides sections; `/.well-known/security.txt` returns 200; IndexNow key file returns 200 with key contents as plaintext. Both indexing scripts parse cleanly with `node -c`.
+  - **Production deployment-readiness checklist** (post-cf:deploy steps):
+    1. Set `NEXT_PUBLIC_GSC_VERIFICATION` env var → triggers Google Search Console verification meta tag in `<head>`
+    2. Set `NEXT_PUBLIC_BING_VERIFICATION` → Bing Webmaster verification meta tag
+    3. Submit sitemap-index in Google Search Console: `https://frameleads.com/sitemap.xml`
+    4. Submit sitemap-index in Bing Webmaster: same URL
+    5. Configure Google service account → place in `config/google-indexing.json` (covered by existing `setup-google-indexing.js`)
+    6. Verify IndexNow key file: `curl https://frameleads.com/07d4882fd497174341b6b64a8afecef2.txt` → expect the same hex string
+    7. Run `npm run submit-indexnow` → first batch submission to Bing + Yandex
+    8. Run `npm run submit-to-google -- --dry-run` to validate the bucket ordering
+    9. Run `npm run submit-to-google` to submit highest-priority bucket-1 + bucket-2 (money pages) within the Google Indexing API daily quota (~200/day)
+    10. Set up GitHub Action or cron to re-run `submit-indexnow` after each `cf:deploy:full` deployment so Bing sees new content within minutes
+  - **At-a-glance ranking-readiness:**
+    | Surface | State |
+    |---|---|
+    | Sitemap index | 47 sub-sitemaps, ~127k URLs, all under Google's 50k-per-sitemap limit |
+    | robots.txt | Allow rules for all major search engines + 18 explicit AI crawler allow-rules (GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, Applebot, Bytespider, Meta-ExternalAgent, etc.) |
+    | llms.txt | Complete + programmatic-summary auto-counts |
+    | llms-full.txt | Body-inlined variant for direct LLM ingestion |
+    | IndexNow | Key file deployed; submission script ready |
+    | Google Indexing API | Bucket-priority script ready; service account config gated on prod env |
+    | Schema density | 5-6 JSON-LD types per page, sitewide Organization + Person via root layout |
+    | E-E-A-T anchors | /press + /our-team + /about + Shark Tank credential + Person author across all 127k pages |
+    | security.txt | RFC 9116 compliant |
+
 - **Phase 9 — Off-site entity establishment: /press + /case-studies + expanded Organization + Person schema (landed 2026-06-07):**
   - **In-repo on-site infrastructure** for the entity establishment work (Wikidata Q-item, Crunchbase profile, Google Business Profile, AngelList, Tracxn, Glassdoor) that happens off-site. The repo ships the receiving infrastructure now; the off-site entities link back via env-gated `sameAs` once they exist.
   - **`/press` page** (new — `app/press/page.tsx`, ~250 lines): hero + TLDR + Shark Tank India proof section + founder bio (short / medium / speaking topics) + company facts grid (HQ, founded, engagement footprint, attribution tracked, methodology, geographies) + media mentions placeholder + brand-assets request + 6 editorial topics Frameleads can speak to + press-contact CTA + author card. Schema: AboutPage + BreadcrumbList + WebPage(speakable). E-E-A-T anchor for journalists, podcast hosts, conference programmers.

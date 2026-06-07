@@ -17,6 +17,14 @@ import {
 	allTier14Slugs,
 	allTier15Slugs,
 	allIndustryPillarSlugs,
+	allMoneyServiceSlugs,
+	allMoneyIndustrySlugs,
+	allGuideServiceSlugs,
+	allGuideIndustrySlugs,
+	allGuideGeoSlugs,
+	allGuideServiceIndustrySlugs,
+	allGuideServiceGeoSlugs,
+	allGuideIndustryGeoSlugs,
 } from "./data/slugs";
 import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
@@ -83,9 +91,13 @@ function corePages(): string {
 		listItem("Home", "/"),
 		listItem("Free 30-min audit", "/free-marketing-audit", "primary lead-capture path"),
 		listItem("Contact", "/contact"),
+		listItem("Resources library", "/resources", "master index — guides, glossary, comparisons, calculators, reports, question hubs, playbooks, benchmarks, templates"),
+		listItem("Long-form guides", "/resources/guides", "service / industry / location / cross-cell educational guides"),
 		listItem("Glossary", "/glossary", "definitions, formulas, India benchmarks"),
 		listItem("Comparison guides", "/vs", "decision-stage scorecards"),
 		listItem("Reports", "/reports", "original Frameleads data studies"),
+		listItem("Press & media", "/press", "Shark Tank India founder credential, press contact, brand assets"),
+		listItem("Case studies", "/case-studies", "anonymised engagement breakdowns by industry × service"),
 		listItem(
 			"Sitemap-index",
 			"/sitemap.xml",
@@ -186,20 +198,42 @@ function programmaticSummary(): string {
 	const t12 = allTier12Slugs().length;
 	const t14 = allTier14Slugs().length;
 	const t15 = allTier15Slugs().length;
+	const ms = allMoneyServiceSlugs().length;
+	const mi = allMoneyIndustrySlugs().length;
+	const gs = allGuideServiceSlugs().length;
+	const gi = allGuideIndustrySlugs().length;
+	const gg = allGuideGeoSlugs().length;
+	const gsi = allGuideServiceIndustrySlugs().length;
+	const gsg = allGuideServiceGeoSlugs().length;
+	const gig = allGuideIndustryGeoSlugs().length;
 	return section("Programmatic content (high-intent long-tail)", [
-		`**Single-segment programmatic cells (~${t3 + t4 + t5 + t11 + t13} pages):**`,
+		`**Commercial cells (~${t3 + t4 + t5 + t11 + t13} pages):**`,
 		`- ${t3} **Service × Geography** — slug \`/[service]-in-[city]\` (e.g. \`/seo-services-in-pune\`)`,
 		`- ${t4} **Service × Industry** — slug \`/[service]-for-[industry]\` (e.g. \`/meta-ads-for-d2c\`)`,
 		`- ${t5} **Service × Industry × Geography** — slug \`/[service]-for-[industry]-in-[city]\` (e.g. \`/meta-ads-for-real-estate-in-mumbai\`)`,
 		`- ${t11} **Industry × Geography** — slug \`/[industry]-marketing-in-[city]\` (e.g. \`/real-estate-marketing-in-bangalore\`)`,
 		`- ${t13} **Pricing** — slug \`/[service]-pricing\` or \`/[service]-pricing-in-[city]\``,
 		"",
-		`**Two-segment programmatic cells (~${t12 + t14 + t15} pages):**`,
-		`- ${t12} **Question × Industry** — slug \`/[question-slug]/[industry-id]\` (e.g. \`/what-is-performance-marketing/d2c\`). Every "how-to / what-is / why / is-it / best / how-much" question framed for each of the 33 industry verticals.`,
+		`**Money pages — agency-hiring intent (~${ms + mi} pages):**`,
+		`- ${ms} **Service × Geo money pages** — slug \`/[service-short]-company-in-[geo]\` (e.g. \`/seo-company-in-mumbai\`, \`/performance-marketing-company-in-bangalore\`). \`service-short\` strips trailing "-services" off the service.id.`,
+		`- ${mi} **Industry × Geo money pages** — slug \`/[industry-id]-marketing-company-in-[geo]\` (e.g. \`/real-estate-marketing-company-in-mumbai\`, \`/b2b-saas-marketing-company-in-pune\`).`,
+		"",
+		`**Long-form educational guides — distinct from commercial cells (~${gs + gi + gg + gsi + gsg + gig} pages):**`,
+		`- ${gs} **Service guides** — slug \`/resources/guides/[service-id]\``,
+		`- ${gi} **Industry marketing guides** — slug \`/resources/guides/[industry-id]-marketing\``,
+		`- ${gg} **Location guides** — slug \`/resources/guides/digital-marketing-in-[geo-id]\``,
+		`- ${gsi} **Service × Industry guides** — slug \`/resources/guides/[service-id]-for-[industry-id]\``,
+		`- ${gsg} **Service × Geo guides** — slug \`/resources/guides/[service-id]-in-[geo-id]\``,
+		`- ${gig} **Industry × Geo guides** — slug \`/resources/guides/[industry-id]-marketing-in-[geo-id]\``,
+		"",
+		`**Two-segment cells (~${t12 + t14 + t15} pages):**`,
+		`- ${t12} **Question × Industry** — slug \`/[question-slug]/[industry-id]\` (e.g. \`/what-is-performance-marketing/d2c\`). Every "how-to / what-is / why / is-it / best / how-much" question framed for each of the 31 industry verticals.`,
 		`- ${t14} **Question × Geography** — slug \`/[question-slug]/[geo-id]\` (e.g. \`/what-is-performance-marketing/bangalore\`). Restricted to 12 commercial-priority cities (8 India tier-1 + Dubai, Singapore, London, New York).`,
 		`- ${t15} **Industry × Glossary** — slug \`/[industry-id]/[glossary-term]\` (e.g. \`/d2c/ltv\`). Every glossary term re-framed for each industry's unit economics.`,
 		"",
 		`Each programmatic page is data-driven, has unique CAC/CPC ranges per industry / city, and cites the same Frameleads Growth System™ adapted to that exact intersection.`,
+		"",
+		`**Intent separation:** the commercial cells + money pages target buying intent (hire-now, scope, pricing). The /resources/guides/* tier targets educational intent (learn-first, advanced operator vocabulary). Same taxonomy, different SERP cohort, no keyword cannibalization.`,
 		"",
 		`Full machine-readable index: ${SITE_URL}/sitemap.xml`,
 	]);

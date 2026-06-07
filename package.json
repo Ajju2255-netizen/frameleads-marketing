@@ -12,6 +12,7 @@
     "update-readme-files": "node scripts/update-readme-files.js",
     "generate-xml-sitemap": "node scripts/generate-xml-sitemap.js",
     "submit-to-google": "node scripts/google-indexing.js",
+    "submit-indexnow": "node scripts/indexnow-submit.js",
     "setup-google-indexing": "node scripts/setup-google-indexing.js",
     "deploy-workflow": "node scripts/deploy-workflow.js",
     "cf:build": "next build && opennextjs-cloudflare build",

@@ -206,47 +206,119 @@ async function submitUrl(accessToken, siteUrl, url) {
 }
 
 /**
- * Get all pages from the sitemap
+ * Get all pages by traversing the live sitemap-index.
+ *
+ * Strategy at ~127k pages:
+ *   1. Fetch /sitemap.xml — sitemap-index XML with N sub-sitemap URLs.
+ *   2. For each sub-sitemap, fetch + extract <loc> entries.
+ *   3. Bucket by priority — money pages first, then service hubs, then Tier 3,
+ *      then guides, etc. Google Indexing API caps at ~200 URLs/day so the
+ *      highest-leverage pages must come first.
+ *
+ * Falls back to the legacy directory-scan only if the live sitemap is
+ * unreachable (offline build, hostname mis-config, etc.).
  */
-function getAllPages() {
-  const pages = [];
-  
-  try {
-    // Read the generated sitemap page to get all URLs
-    const sitemapFile = path.join(process.cwd(), 'app', 'sitemap', 'page.tsx');
-    if (fs.existsSync(sitemapFile)) {
-      const content = fs.readFileSync(sitemapFile, 'utf8');
-      
-      // Extract URLs from the sitemap content
-      const urlMatches = content.match(/"path":\s*"([^"]+)"/g);
-      if (urlMatches) {
-        urlMatches.forEach(match => {
-          const url = match.match(/"path":\s*"([^"]+)"/)[1];
-          if (url && url !== '/') {
-            pages.push({
-              path: url,
-              fullUrl: `${CONFIG.siteUrl}${url}`,
-              priority: getPagePriority(url)
+async function fetchTextOverHttps(url) {
+  return new Promise((resolve, reject) => {
+    https
+      .get(url, { headers: { 'User-Agent': 'Frameleads-Indexer/1.0' } }, (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          return resolve(fetchTextOverHttps(res.headers.location));
+        }
+        if (res.statusCode !== 200) {
+          return reject(new Error(`GET ${url} -> ${res.statusCode}`));
+        }
+        let data = '';
+        res.on('data', (chunk) => (data += chunk));
+        res.on('end', () => resolve(data));
+      })
+      .on('error', reject);
+  });
+}
+
+function extractLocs(xml) {
+  const out = [];
+  const re = /<loc>([^<]+)<\/loc>/g;
+  let m;
+  while ((m = re.exec(xml)) !== null) {
+    out.push(m[1].trim());
+  }
+  return out;
+}
+
+// Map sub-sitemap id → priority bucket. Lower number = submit first.
+function bucketFor(subSitemapId) {
+  // Tier-0 highest priority — pillars + reports
+  if (subSitemapId.startsWith('0-')) return 0;
+  // Money pages — direct conversion intent
+  if (subSitemapId.startsWith('1-money-pages-curated')) return 1;
+  if (subSitemapId.startsWith('1-money-')) return 2;
+  // Service / industry / country hubs
+  if (subSitemapId === '1-services' || subSitemapId === '1-industries' || subSitemapId === '1-countries') return 3;
+  if (subSitemapId === '1-industry-pillars') return 3;
+  // Tier 3 (service × geo) — commercial intent at scale
+  if (subSitemapId.startsWith('3-')) return 4;
+  // Tier 4 / 5 / 11 / 13 — commercial cross-cells
+  if (subSitemapId.startsWith('4-') || subSitemapId.startsWith('5-')) return 5;
+  if (subSitemapId.startsWith('11-') || subSitemapId.startsWith('13-')) return 5;
+  // Tier 8 / 9 / 15 — glossary + comparisons
+  if (subSitemapId.startsWith('8-') || subSitemapId.startsWith('9-') || subSitemapId.startsWith('15-')) return 6;
+  // Long-form guides — educational intent
+  if (subSitemapId.startsWith('2-guides-')) return 7;
+  // Question cells (Tier 12 / 14) — high volume, lower individual priority
+  if (subSitemapId.startsWith('12-') || subSitemapId.startsWith('14-')) return 8;
+  // Other
+  return 9;
+}
+
+async function getAllPages() {
+  const useLiveSitemap = !process.env.FRAMELEADS_OFFLINE_MODE;
+  // Honor the GOOGLE_SITE_URL env var for local + staging dry-runs without
+  // requiring service-account credentials. Falls back to CONFIG.siteUrl.
+  const baseUrl = (process.env.GOOGLE_SITE_URL || CONFIG.siteUrl).replace(/\/$/, '');
+
+  if (useLiveSitemap) {
+    try {
+      console.log(`Fetching live sitemap-index from ${baseUrl}/sitemap.xml ...`);
+      const indexXml = await fetchTextOverHttps(`${baseUrl}/sitemap.xml`);
+      const subSitemapUrls = extractLocs(indexXml);
+      console.log(`Found ${subSitemapUrls.length} sub-sitemaps in the index.`);
+
+      const all = [];
+      for (const subUrl of subSitemapUrls) {
+        const subId = subUrl.match(/\/sitemaps\/([^/.]+)\.xml/)?.[1] || subUrl;
+        try {
+          const xml = await fetchTextOverHttps(subUrl);
+          const urls = extractLocs(xml);
+          const bucket = bucketFor(subId);
+          for (const u of urls) {
+            const pathPart = u.replace(baseUrl, '') || '/';
+            all.push({
+              path: pathPart,
+              fullUrl: u,
+              priority: bucket,
+              segment: subId,
             });
           }
-        });
+          console.log(`  ✓ ${subId}: ${urls.length} URLs (bucket ${bucket})`);
+        } catch (err) {
+          console.warn(`  ✗ ${subUrl}: ${err.message}`);
+        }
       }
+      // Sort: bucket ascending (lowest = submit first), then path lex order
+      all.sort((a, b) => a.priority - b.priority || a.path.localeCompare(b.path));
+      console.log(`\nTotal URLs from live sitemap-index: ${all.length}`);
+      return all;
+    } catch (err) {
+      console.warn(`Live sitemap fetch failed (${err.message}). Falling back to directory scan...`);
     }
-    
-    // If sitemap not found, scan directory manually
-    if (pages.length === 0) {
-      console.log('Sitemap not found, scanning app directory...');
-      pages.push(...scanDirectoryForPages());
-    }
-    
-    // Sort by priority
-    pages.sort((a, b) => a.priority - b.priority);
-    
-    return pages;
-  } catch (error) {
-    console.error('Error getting pages:', error.message);
-    return [];
   }
+
+  // Fallback — read static directory tree (will miss programmatic pages).
+  console.log('FALLBACK: scanning app directory (will not see programmatic Tier cells).');
+  const pages = scanDirectoryForPages();
+  pages.sort((a, b) => a.priority - b.priority);
+  return pages;
 }
 
 /**
@@ -424,7 +496,7 @@ async function submitPagesToGoogle() {
     
     // Get all pages
     logger.info('📄 Getting all pages...');
-    const pages = getAllPages();
+    const pages = await getAllPages();
     logger.info(`Found ${pages.length} pages to submit`);
     
     if (pages.length === 0) {
@@ -539,6 +611,7 @@ function createSampleConfig() {
 
 // Command line interface
 if (require.main === module) {
+  (async () => {
   const args = process.argv.slice(2);
   
   if (args.includes('--help') || args.includes('-h')) {
@@ -572,7 +645,7 @@ Examples:
   
   if (args.includes('--dry-run')) {
     console.log('🔍 Dry run mode - showing pages that would be submitted:');
-    const pages = getAllPages();
+    const pages = await getAllPages();
     pages.forEach((page, index) => {
       console.log(`${index + 1}. ${page.fullUrl} (Priority: ${page.priority})`);
     });
@@ -581,6 +654,10 @@ Examples:
   }
   
   submitPagesToGoogle();
+  })().catch((err) => {
+    console.error('Fatal:', err.message);
+    process.exit(1);
+  });
 }
 
 module.exports = { submitPagesToGoogle, getAllPages, CONFIG };

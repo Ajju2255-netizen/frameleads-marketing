@@ -1,0 +1,12 @@
+# Frameleads — security.txt (RFC 9116)
+# https://frameleads.com/.well-known/security.txt
+
+Contact: mailto:ajsal@frameleads.com
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://frameleads.com/.well-known/security.txt
+Policy: https://frameleads.com/privacy
+
+# Acknowledgements
+# We acknowledge security researchers who responsibly disclose vulnerabilities
+# in writing on /press once any embargo period ends.
