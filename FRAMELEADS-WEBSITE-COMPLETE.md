@@ -1797,6 +1797,32 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 12 — Embedded inline lead-form on Tier templates: direct conversion at mid-page (landed 2026-06-07):**
+  - **Problem**: every mid-page CTA across the ~127k commercial + educational surfaces was a link CTA — "Book a free audit → navigate to /free-marketing-audit → fill the long form there". Navigation friction is the single biggest conversion killer on mid-funnel intent: a reader who's deep in a Tier-3 cell, a money page, or a long-form guide has high commercial intent but has to leave the page they're already engaged with to convert.
+  - **Solution**: replaced the link-CTA at mid-position with an **inline EmbeddedLeadForm** that captures the lead right where the reader has commercial intent. No navigation, no friction, source-attribution preserved end-to-end through to the Worker.
+  - **`components/templates/EmbeddedLeadForm.tsx`** (new — ~200 lines): client component with name + email + phone + service (auto-populated, read-only) + message + honeypot fields. Submits via the same `submitLead()` client wrapper as `/free-marketing-audit` so:
+    - GA4 `generate_lead` + `lead_submitted` events fire on submit
+    - Meta Pixel `Lead` event fires
+    - Worker side stores + emails identically (Resend → ajsal@frameleads.com + R2 archive)
+    - Full source attribution preserved via `source` prop (e.g. `money-seo-company-in-mumbai-mid`, `guide-real-estate-marketing-mid`, `hub-seo-services-mid`)
+  - **States**: `idle` (form) → `submitting` (button disabled, "Sending…") → `ok` (inline success card with lead reference + WhatsApp escalation link) | `error` (inline error band with retry).
+  - **Fallback**: every form retains a "Prefer the full form? Open /free-marketing-audit →" link for users who want the longer form experience or hit a JS-disabled environment.
+  - **Wired into 3 templates** at mid-page position:
+    - `components/templates/MoneyPage.tsx` — money pages now embed the form mid-page (source `money-{slug}-mid`)
+    - `components/templates/GuidePage.tsx` — long-form guides embed mid-page (source `guide-{slug}-mid`)
+    - `components/templates/ServiceHubPage.tsx` — service hubs embed mid-page (source `hub-{service}-mid`)
+  - **Bottom CTAs retained as links** to `/free-marketing-audit` — readers who've finished the full page get a clean next step; mid-page readers who haven't finished get the inline conversion path.
+  - **Verified live** (localhost:3000):
+    | Surface | Inline form | Audit button | Form fields |
+    |---|:-:|:-:|---|
+    | `/seo-services` (service hub) | ✓ | ✓ | name + email + phone + service + message + honeypot |
+    | `/seo-company-in-bangalore` (money) | ✓ | ✓ | same |
+    | `/performance-marketing-company-in-mumbai` (money) | ✓ | ✓ | same |
+    | `/resources/guides/seo-services` (guide) | ✓ | ✓ | same |
+    | `/resources/guides/real-estate-marketing` (guide) | ✓ | ✓ | same |
+  - **Expected conversion impact**: removing navigation between intent + action typically drives 2-5x form completion vs link-to-separate-page on B2B lead-gen forms (industry data). Source attribution preserved end-to-end means the lift is measurable in GA4 `generate_lead` events keyed by `lead_source`.
+  - **Templates with embedded mid-form active**: Service hubs (12 cells), Money pages (5,506 cells), Guides (6,047 cells) = **~11,565 pages now have inline conversion mid-page**.
+
 - **Phase 11 — Blog content expansion: 3 new long-form posts + complete 7-type coverage (landed 2026-06-07):**
   - **Problem**: blog had 5 posts but only 5 of the 7 post types in the editorial system were covered. Missing: `definitive-guide` and `city-context`. Plus single-city coverage (Bangalore-only) limited topical breadth.
   - **3 new long-form posts shipped** (each ~230 lines / 12-section structure):

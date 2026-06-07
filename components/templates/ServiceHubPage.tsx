@@ -23,6 +23,7 @@ import { TLDRBlock } from "./TLDRBlock";
 import { ServiceDepthSection } from "./ServiceDepthSection";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -305,13 +306,12 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 
 				<ServiceDepthSection service={service} />
 
-				{/* ─── Mid-page CTA ─── */}
-				<CTABlock
-					variant="audit"
-					headline={`See ${lc} applied to your business.`}
-					body={`30 minutes, no slides. We'll review your current setup against the benchmarks above and hand you the three highest-leverage moves — even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?service=${service.id}&cta=hub-${service.id}-mid`}
-					primaryLabel="Book a free audit"
+				{/* ─── Embedded mid-page lead form ─── */}
+				<EmbeddedLeadForm
+					source={`hub-${service.id}-mid`}
+					service={service.id}
+					headline={`Get a free audit scoped to ${lc}`}
+					body={`Fill in the form below to book a free 30-minute audit. We'll review your current ${lc} setup against the benchmarks above and tell you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 
 				<FAQBlock items={faqs} />

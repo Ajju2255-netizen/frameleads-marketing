@@ -30,6 +30,7 @@ import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
+import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -336,13 +337,12 @@ export function GuidePage({ slug, content }: Props) {
 					</section>
 				))}
 
-				{/* ─── Mid CTA ─── */}
-				<CTABlock
-					variant="audit"
+				{/* ─── Embedded mid-page lead form ─── */}
+				<EmbeddedLeadForm
+					source={`guide-${slug}-mid`}
+					service={refsServiceId}
 					headline={`Want this guide applied to your business?`}
-					body={`30 minutes, no slides. We'll diagnose where the leverage is for your specific situation and hand you the three highest-leverage moves — even if you don't engage us.`}
-					primaryHref={`/free-marketing-audit?source=guide&slug=${slug}&cta=guide-${slug}-mid`}
-					primaryLabel="Book a free audit"
+					body={`Fill in the form below to book a free 30-minute audit. We'll diagnose where the leverage is for your specific situation and hand you the three highest-leverage moves — even if you don't engage us.`}
 				/>
 
 				<FAQBlock items={faqs} />
