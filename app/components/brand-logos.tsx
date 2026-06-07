@@ -32,11 +32,11 @@ export default function BrandLogos() {
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 text-[#5A5A5A]/70 text-sm">
             <Star className="h-4 w-4 text-[#FF6B35] fill-current" />
-            <span>500+ successful campaigns</span>
+            <span>200+ engagements</span>
             <span className="text-[#5A5A5A]/50">•</span>
-            <span>₹23 Cr+ monthly revenue generated</span>
+            <span>~₹9 Cr attributed pipeline tracked</span>
             <span className="text-[#5A5A5A]/50">•</span>
-            <span>98.2% client satisfaction</span>
+            <span>audit-first engagement model</span>
           </div>
         </div>
       </div>

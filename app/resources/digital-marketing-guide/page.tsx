@@ -170,7 +170,7 @@ export default function DigitalMarketingGuidePage() {
       industry: "SaaS",
       challenge: "Low organic visibility and poor lead quality",
       solution: "Comprehensive SEO + Content Marketing + PPC",
-      results: ["300% increase in qualified leads", "150% improvement in organic traffic", "40% reduction in cost per lead"],
+      results: ["meaningful increase in qualified leads", "150% improvement in organic traffic", "40% reduction in cost per lead"],
       timeline: "6 months"
     },
     {

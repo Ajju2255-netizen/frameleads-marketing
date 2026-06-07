@@ -321,7 +321,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           >
             Transform your business with data-driven digital marketing strategies that deliver measurable results.
-            As India's leading performance marketing agency, we've helped <span className="text-[#5A5A5A] font-semibold bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 px-2 py-1 rounded-md">500+ brands</span> achieve exponential growth
+            As India's leading performance marketing agency, we've helped <span className="text-[#5A5A5A] font-semibold bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 px-2 py-1 rounded-md">200+ engagements</span> achieve exponential growth
             through strategic SEO, targeted PPC campaigns, and conversion-optimized content marketing.
           </motion.p>
 
@@ -433,7 +433,7 @@ export default function Hero() {
               >
                 <StarHalf className="h-4 w-4 text-[#FF8A50] drop-shadow-[0_0_6px_rgba(255,138,80,0.6)]" />
               </motion.div>
-              <span className="ml-1 text-[#5A5A5A]/80 py-1">4.8/5 from 500+ brands</span>
+              <span className="ml-1 text-[#5A5A5A]/80 py-1">4.8/5 from 200+ engagements</span>
             </div>
           </motion.div>
 

@@ -322,16 +322,6 @@ export default function SitemapPage() {
   ],
   "main": [
     {
-      "path": "/blogs/[slug]",
-      "name": "Blogs - [slug]",
-      "description": "Blogs - [slug] - Frameleads digital marketing services"
-    },
-    {
-      "path": "/blogs/categories/[category]",
-      "name": "Blogs - Categories - [category]",
-      "description": "Blogs - Categories - [category] - Frameleads digital marketing services"
-    },
-    {
       "path": "/blogs/categories",
       "name": "Blogs - Categories",
       "description": "Blogs - Categories - Frameleads digital marketing services"

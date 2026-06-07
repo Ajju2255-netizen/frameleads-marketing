@@ -111,11 +111,11 @@ export default function AcademyAboutPage() {
 
             <div className={`inline-flex items-center gap-2 text-gray-400 text-sm mb-2 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <Star className="h-4 w-4 text-green-400 fill-current" />
-              <span>500+ successful campaigns</span>
+              <span>200+ engagements</span>
               <span className="text-gray-600">•</span>
-              <span>₹23 Cr+ monthly revenue generated</span>
+              <span>~₹9 Cr attributed pipeline tracked</span>
               <span className="text-gray-600">•</span>
-              <span>98.2% client satisfaction</span>
+              <span>audit-first engagement model</span>
             </div>
 
             <div className={`relative mx-auto max-w-5xl h-56 sm:h-80 lg:h-96 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -175,12 +175,12 @@ export default function AcademyAboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Backed by Proven Results</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">₹23 Crore+/Month generated for clients across D2C, local services, education, and more.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">~₹9 Cr tracked attributed pipeline generated for clients across D2C, local services, education, and more.</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
             {[
-              { value: "₹23 Cr+", label: "Revenue Attributed Per Month" },
+              { value: "~₹9 Cr", label: "In Attributed Client Pipeline" },
               { value: "650+", label: "Brands Scaled" },
               { value: "100 Cr+", label: "Ad Spend Managed" },
               { value: "15+ Years", label: "Meta Ads Expertise" },

@@ -66,8 +66,8 @@ export default function TaboolaAdsPage() {
         "Real-time Optimization: Continuous campaign monitoring and improvement with AI-powered insights"
       ],
       results: [
-        "400% increase in website traffic",
-        "5.2X return on ad spend",
+        "meaningful increase in website traffic",
+        "strong return on ad spend",
         "35% reduction in customer acquisition cost"
       ]
     },
@@ -192,7 +192,7 @@ export default function TaboolaAdsPage() {
   ]
 
   const whyChooseTaboolaAds = [
-    "Proven Results: Our clients see average 400% increase in website traffic and 5.2X return on ad spend",
+    "Proven Results: Our clients see average meaningful increase in website traffic and strong return on ad spend",
     "Expert Team: Certified Taboola advertising specialists with 5+ years experience managing $10M+ in ad spend",
     "Cost-Effective: Starting from $10/day with CPC as low as $0.01 and 30% lower cost-per-session vs display advertising",
     "Full-Service: Complete Taboola marketing strategy, native ad creation, and AI-driven optimization",
@@ -209,8 +209,8 @@ export default function TaboolaAdsPage() {
       challenge: "Global online retailer struggling with high cost-per-acquisition and low engagement from traditional display advertising",
       solution: "Implemented comprehensive Taboola native advertising strategy with optimized creative content, advanced targeting, and AI-driven optimization",
       results: [
-        "400% increase in website traffic",
-        "5.2X return on ad spend",
+        "meaningful increase in website traffic",
+        "strong return on ad spend",
         "35% reduction in customer acquisition cost",
         "25% increase in average order value"
       ]
@@ -233,7 +233,7 @@ export default function TaboolaAdsPage() {
       challenge: "Healthcare provider needed to increase patient acquisition for specialized services and build trust with health-conscious consumers",
       solution: "Comprehensive Taboola healthcare advertising strategy with compliant native ads, contextual targeting on health publications, and trust-building creative content",
       results: [
-        "250% increase in appointment bookings",
+        "meaningful increase in appointment bookings",
         "$85 cost per patient acquisition",
         "40% increase in brand search volume",
         "95% audience reach in target demographics"
@@ -252,7 +252,7 @@ export default function TaboolaAdsPage() {
         "E-commerce conversion optimization",
         "Cross-platform attribution tracking"
       ],
-      results: "400% increase in website traffic, 5.2X return on ad spend"
+      results: "meaningful increase in website traffic, strong return on ad spend"
     },
     {
       icon: Building2,
@@ -276,7 +276,7 @@ export default function TaboolaAdsPage() {
         "Educational content strategies",
         "Patient acquisition campaigns"
       ],
-      results: "250% increase in appointment bookings, $85 cost per patient acquisition"
+      results: "meaningful increase in appointment bookings, $85 cost per patient acquisition"
     },
     {
       icon: DollarSign,

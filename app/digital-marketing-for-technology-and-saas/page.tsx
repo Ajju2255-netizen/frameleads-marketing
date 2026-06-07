@@ -66,8 +66,8 @@ export default function WebsiteDevelopmentPage() {
         "Scalable Architecture: Future-ready development that grows with your business"
       ],
       results: [
-        "400% increase in online leads",
-        "250% improvement in user engagement",
+        "meaningful increase in online leads",
+        "meaningful improvement in user engagement",
         "180% growth in conversion rates"
       ]
     },
@@ -100,7 +100,7 @@ export default function WebsiteDevelopmentPage() {
         "Progressive Enhancement: Core functionality works on all devices with enhanced features"
       ],
       results: [
-        "300% increase in mobile traffic",
+        "meaningful increase in mobile traffic",
         "180% improvement in mobile conversions",
         "220% growth in user engagement"
       ]
@@ -182,7 +182,7 @@ export default function WebsiteDevelopmentPage() {
   ]
 
   const whyChooseWebsiteDevelopment = [
-    "Proven Results: Our clients see average 400% increase in online leads and 250% improvement in user engagement",
+    "Proven Results: Our clients see average meaningful increase in online leads and meaningful improvement in user engagement",
     "Expert Team: Award-winning developers and designers with 10+ years experience creating high-performing websites across all industries",
     "Comprehensive Solutions: Complete website development services from strategy to launch with transparent pricing starting from $2,999",
     "Full-Service Approach: Strategic planning, custom development, SEO optimization, and ongoing maintenance support",
@@ -203,7 +203,7 @@ export default function WebsiteDevelopmentPage() {
         "Technical documentation sites",
         "API integration portals"
       ],
-      results: "400% increase in product demos, 250% growth in user signups"
+      results: "meaningful increase in product demos, meaningful growth in user signups"
     },
     {
       icon: Heart,
@@ -215,7 +215,7 @@ export default function WebsiteDevelopmentPage() {
         "Appointment booking systems",
         "Medical information portals"
       ],
-      results: "300% increase in patient engagement, 180% improvement in appointment bookings"
+      results: "meaningful increase in patient engagement, 180% improvement in appointment bookings"
     },
     {
       icon: DollarSign,
@@ -251,7 +251,7 @@ export default function WebsiteDevelopmentPage() {
         "Scalable web applications",
         "Growth-focused platforms"
       ],
-      results: "500% increase in investor interest, 300% growth in user acquisition"
+      results: "500% increase in investor interest, compounding growth in user acquisition"
     },
     {
       icon: Briefcase,
@@ -263,7 +263,7 @@ export default function WebsiteDevelopmentPage() {
         "Client portal systems",
         "Professional portfolios"
       ],
-      results: "250% increase in client inquiries, 180% improvement in conversion rates"
+      results: "meaningful increase in client inquiries, 180% improvement in conversion rates"
     }
   ]
 
@@ -274,9 +274,9 @@ export default function WebsiteDevelopmentPage() {
       challenge: "SaaS startup needed a professional website to showcase their product, attract investors, and convert trial users with limited technical resources and tight timeline",
       solution: "Developed a comprehensive website with product demonstrations, investor-focused sections, and conversion-optimized user onboarding flow using modern web technologies",
       results: [
-        "400% increase in product demos",
-        "250% growth in trial signups",
-        "300% improvement in investor engagement",
+        "meaningful increase in product demos",
+        "meaningful growth in trial signups",
+        "meaningful improvement in investor engagement",
         "Successful Series A funding round"
       ]
     },
@@ -286,7 +286,7 @@ export default function WebsiteDevelopmentPage() {
       challenge: "Medical practice struggling with patient acquisition and appointment booking efficiency in competitive healthcare market",
       solution: "Created a patient-focused website with online appointment booking, patient portal integration, and trust-building design elements",
       results: [
-        "250% increase in online appointments",
+        "meaningful increase in online appointments",
         "180% improvement in patient satisfaction",
         "200% growth in new patient inquiries",
         "150% increase in appointment efficiency"
@@ -546,7 +546,7 @@ export default function WebsiteDevelopmentPage() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Trusted by 500+ businesses worldwide to create high-performing websites that drive growth. Our comprehensive website development services include custom development, e-commerce solutions, and responsive design that help businesses succeed online.
+              Trusted by 200+ engagements worldwide to create high-performing websites that drive growth. Our comprehensive website development services include custom development, e-commerce solutions, and responsive design that help businesses succeed online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -724,7 +724,7 @@ export default function WebsiteDevelopmentPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
-                    <span className="text-gray-600">Proven Results: 400% increase in online leads and 250% improvement in user engagement for our clients</span>
+                    <span className="text-gray-600">Proven Results: meaningful increase in online leads and meaningful improvement in user engagement for our clients</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />

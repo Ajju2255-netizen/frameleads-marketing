@@ -6,7 +6,7 @@ import { Users, Target, Award, TrendingUp, ShieldCheck, Globe2, Trophy, BarChart
 
 export const metadata = {
   title: "About Frameleads | High-Trust Digital Marketing Agency",
-  description: "Frameleads is a results-driven digital marketing agency delivering 400% growth through SEO, PPC, Social, and Content. 500+ clients. Global coverage.",
+  description: "Frameleads is a results-driven digital marketing agency delivering compounding growth through SEO, PPC, Social, and Content. 200+ engagements. Global coverage.",
 }
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
   const credibility = [
     { icon: ShieldCheck, title: "Trusted Partner", text: "4.9/5 average rating across 200+ verified reviews." },
-    { icon: Trophy, title: "Proven Growth", text: "Average 300–400% traffic growth within 6–12 months." },
+    { icon: Trophy, title: "Proven Growth", text: "Average compounding traffic growth within 6–12 months." },
     { icon: BarChart3, title: "Transparent KPIs", text: "Weekly scorecards and monthly executive reporting." },
     { icon: Globe2, title: "Global Expertise", text: "North America, Asia, Europe, LATAM, Middle East, South Asia." },
   ]
@@ -80,7 +80,7 @@ export default function AboutPage() {
           <div className="text-center">
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                High-Trust Digital Marketing Agency • 500+ Success Stories
+                High-Trust Digital Marketing Agency • 200+ Engagement Stories
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">About Frameleads</h1>

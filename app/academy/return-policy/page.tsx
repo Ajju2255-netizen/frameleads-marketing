@@ -273,7 +273,7 @@ export default function ReturnPolicyPage() {
                       What We Do Provide
                     </h4>
                     <p className="text-gray-300 leading-relaxed">
-                      We offer comprehensive support, detailed documentation, and proven strategies that have helped 500+ businesses 
+                      We offer comprehensive support, detailed documentation, and proven strategies that have helped 200+ engagements 
                       improve their Meta Ads performance. If you have any questions or need assistance, our support team is here to help.
                     </p>
                   </div>

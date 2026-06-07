@@ -274,7 +274,7 @@ export default function AcademyPage() {
               </h1>
 
               <p className={`text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                We've managed ads generating <span className="text-green-300 font-semibold">₹23 Cr+/month</span> in revenue. Now, access the same strategies, templates, calculators, targeting stacks & step-by-step launch plan, no fluff. In an affordable, plug-and-play digital toolkit designed for small businesses, D2C brands, and solopreneurs.
+                We've managed ads generating <span className="text-green-300 font-semibold">~₹9 Cr in attributed pipeline tracked</span> in revenue. Now, access the same strategies, templates, calculators, targeting stacks & step-by-step launch plan, no fluff. In an affordable, plug-and-play digital toolkit designed for small businesses, D2C brands, and solopreneurs.
               </p>
 
               <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -358,11 +358,11 @@ export default function AcademyPage() {
             <div className="text-center mt-12">
               <div className="inline-flex items-center gap-2 text-gray-400 text-sm">
                 <Star className="h-4 w-4 text-green-400 fill-current" />
-                <span>500+ successful campaigns</span>
+                <span>200+ engagements</span>
                 <span className="text-gray-500">•</span>
-                <span>₹23 Cr+ monthly revenue generated</span>
+                <span>~₹9 Cr attributed pipeline tracked</span>
                 <span className="text-gray-500">•</span>
-                <span>98.2% client satisfaction</span>
+                <span>audit-first engagement model</span>
               </div>
             </div>
           </div>
@@ -481,12 +481,12 @@ export default function AcademyPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent">Backed by Proven Results</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                ₹23 Crore+/Month generated for clients across D2C, local services, education, and more.
+                ~₹9 Cr tracked attributed pipeline generated for clients across D2C, local services, education, and more.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
               {[
-                { value: "₹23 Cr+", label: "Revenue Attributed Per Month" },
+                { value: "~₹9 Cr", label: "In Attributed Client Pipeline" },
                 { value: "650+", label: "Brands Scaled" },
                 { value: "100 Cr+", label: "Ad Spend Managed" },
                 { value: "15+ Years", label: "Meta Ads Expertise" },
@@ -653,7 +653,7 @@ export default function AcademyPage() {
             <div className="text-center mt-12">
               <div className="inline-flex items-center gap-2 text-gray-400 text-sm">
                 <Users className="h-4 w-4 text-green-400" />
-                <span>Join 500+ businesses already using our strategies</span>
+                <span>Join 200+ engagements already using our strategies</span>
               </div>
             </div>
           </div>
