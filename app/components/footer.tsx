@@ -56,7 +56,6 @@ export default function Footer() {
   const company = [
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/our-team" },
-    { name: "Press & Media", href: "/press" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },

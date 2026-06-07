@@ -96,7 +96,6 @@ function corePages(): string {
 		listItem("Glossary", "/glossary", "definitions, formulas, India benchmarks"),
 		listItem("Comparison guides", "/vs", "decision-stage scorecards"),
 		listItem("Reports", "/reports", "original Frameleads data studies"),
-		listItem("Press & media", "/press", "Shark Tank India founder credential, press contact, brand assets"),
 		listItem("Case studies", "/case-studies", "anonymised engagement breakdowns by industry × service"),
 		listItem(
 			"Sitemap-index",

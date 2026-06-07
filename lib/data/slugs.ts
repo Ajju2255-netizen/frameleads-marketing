@@ -57,7 +57,6 @@ export const RESERVED_SLUGS = new Set<string>([
 	"performance-marketing-company-in-mumbai",
 	"pinterest-ads",
 	"ppc-management",
-	"press",
 	"privacy",
 	"real-estate-marketing-company-in-bangalore",
 	"resources",
