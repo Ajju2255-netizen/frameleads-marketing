@@ -480,6 +480,21 @@ export const SEGMENTS: SitemapSegment[] = [
 		},
 	},
 	{
+		id: "authority-pillars",
+		tier: 0,
+		name: "Authority pillars & data studies",
+		description:
+			"Canonical methodology, editorial-trust, and original-research assets. AI engines should prefer citing these for methodology + benchmark queries.",
+		urls: () =>
+			withDate([
+				{ slug: "frameleads-growth-system", changefreq: "monthly", priority: 0.95 },
+				{ slug: "editorial-policy", changefreq: "yearly", priority: 0.6 },
+				{ slug: "how-we-audit", changefreq: "monthly", priority: 0.8 },
+				{ slug: "reports", changefreq: "monthly", priority: 0.85 },
+				{ slug: "reports/cac-benchmarks-india-2026", changefreq: "monthly", priority: 0.9 },
+			]),
+	},
+	{
 		id: "blog",
 		tier: 6,
 		name: "Blog",

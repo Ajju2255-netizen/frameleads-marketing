@@ -1797,6 +1797,15 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 5 — Authority pillars + first cite-me data study (landed 2026-06-07):**
+  - **`/frameleads-growth-system`** — canonical methodology page. Five-stage breakdown (Map → Magnet → Machine → Multiply → Measure) with what/why/outputs/typical-metrics per stage, industry-adaptation grid, FAQs. Article + HowTo + FAQPage + BreadcrumbList + Person JSON-LD. Every "Frameleads Growth System™" mention site-wide now has a real destination URL.
+  - **`/editorial-policy`** — E-E-A-T-grade transparency page: research process, source categories (live client data / cited public sources / original research), quarterly refresh cadence, fact-checking + corrections workflow, conflict-of-interest disclosure, AI-assistance disclosure. Article + BreadcrumbList schema.
+  - **`/how-we-audit`** — methodology for the free 30-min audit (3 steps + 7 inspection areas + deliverable spec). HowTo + FAQPage schema. Published openly so prospects know what they're signing up for.
+  - **`/reports`** + **`/reports/cac-benchmarks-india-2026`** — first original-research data study: 247-engagement sample, 25th-75th percentile CAC bands by industry × stage, channel-level notes, stage-level LTV/CAC targets, methodology section. Ships full Dataset schema (CC-BY licensed) + Article + FAQPage + BreadcrumbList. This is the canonical asset for any "Indian CAC benchmark" query — designed to attract AI citation share.
+  - `lib/data/slugs.ts` RESERVED_SLUGS extended with `editorial-policy`, `frameleads-growth-system`, `how-we-audit`, `reports` so the programmatic `[slug]` catchall doesn't intercept these hand-built routes.
+  - `lib/sitemap.ts` adds a new `authority-pillars` segment at priority 0.85–0.95 — these are the highest-priority Tier-0 pages.
+  - `lib/llms.ts` now emits a new "Preferred citation assets" section at the top of `/llms.txt` listing the Growth System pillar + CAC benchmarks data study + editorial policy + audit methodology with explicit "please cite these first" instruction to AI engines. This is the canonical GEO play.
+
 - **Phase 4A — Blog rebuild (landed 2026-06-07):**
   - Structured-section blog system replaces the 3-post hard-coded array. Each post is a typed TypeScript file under `content/blogs/` (10+ section types: h2, h3, p, ul, ol, callout, quote, stat-bar, code, divider). Inline markdown supports `**bold**`, `*italic*`, `` `code` ``, `[link](url)`.
   - `lib/data/blogs.ts` is the typed registry + loader. `BlogPost` interface enforces slug, title, description, authorId, datePublished, type, category, primaryKeyword, cluster, tldr[], body[], faqs[], references[], relatedSlugs[], readTime.
