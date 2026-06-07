@@ -1797,6 +1797,44 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7H — Question-hub content depth: heavy augmentation of all 2,046 questions + Tier 12 + Tier 14 (landed 2026-06-07):**
+  - **Problem**: each question page rendered only what was in the bare JSON entry — 3-bullet TLDR, 4-5 short steps, 2-4 FAQs. Pages averaged ~230KB and ~3-4 h2 sections. Across `/how-to`, `/what-is`, `/how-much`, `/why`, `/best`, `/is-it` and the Tier 12 (question × industry) + Tier 14 (question × geo) cells, that's ~91k cells of thin content.
+  - **Solution**: built a content-augmentation engine that derives extensive sections from the question entry + taxonomy. The bare JSON stays the same (no data migration); the augmenter runs at render time to expand each cell with deeper, kind-aware content.
+  - **New module**: `lib/data/question-content.ts` (~500 lines). Exports `buildQuestionContent(entry)` returning a rich `QuestionContent` shape with:
+    | Section | What it carries |
+    |---|---|
+    | `leadParagraph` | AIO/AI-overview-ready direct answer with kind-specific framing |
+    | `extendedTldr` | 6-bullet TLDR (was 3) |
+    | `contextParagraphs` | 2-paragraph "what this page is, how to use it" |
+    | `whyItMatters` | Why it matters in 2026 |
+    | `mainHeading` + `mainIntro` + `mainRows` | Kind-specific main section (how-to: extended steps; what-is: definition + formula + examples + edge cases; why: arguments + counter-arguments; is-it: decision criteria + when YES/NO + gray areas; best: criteria + ranked picks + red flags; how-much: bands + factors + formula + comparison) |
+    | `commonMistakes` | 5 kind-aware mistakes from KIND_MISTAKES pool |
+    | `metrics` | 4 kind-aware KPIs |
+    | `tools` | 5-8 recommended stack items per kind |
+    | `industryAdaptations` | 3-4 industry-specific adaptations (taxonomy-derived from tags + audience) |
+    | `geoAdaptations` | 3-4 geo-specific adaptations (taxonomy-derived from tags) |
+    | `relatedGlossary` | 4-6 glossary cross-links (heuristic match against title + tags) |
+    | `extendedFaqs` | 10-15 FAQs (was 2-4) — original entry FAQs + 4-5 kind-specific universal FAQs |
+    | `adjacentQuestions` | 6 same-kind questions sharing tags |
+    | `adjacentGuides` | 6 long-form guide cross-links into `/resources/guides/*` |
+    | `references` | 3-5 authoritative sources (India: DPDP / ASCI / TRAI; global: GDPR / FTC; plus internal Frameleads links) |
+  - **Tier6Page rebuild** (`components/templates/Tier6Page.tsx`): replaced thin-mode rendering with rich layout — Hero → DefinitionBlock → 6-bullet TLDR → "What this page is" → "Why this matters" → kind-specific main section → Common mistakes → Metrics → Tools → Industry adaptations → Geo adaptations → Related glossary → Extended FAQs → Adjacent questions → Adjacent guides → Related cells → References → Timestamp → CTAs → AuthorCard. Schema: Article + FAQPage + BreadcrumbList + WebPage(speakable), plus HowTo for `how-to` kind, DefinedTerm for `what-is`, ItemList for `best`.
+  - **Tier 12 (question × industry)** + **Tier 14 (question × geo)**: both templates now call `buildQuestionContent` and render the same depth sections (common mistakes + metrics + tools + glossary + adjacent guides), retaining their industry/geo-flavored content above. FAQs now combine 2 industry/geo-specific + 13 augmented = 15 per cell.
+  - **Verified live**:
+    | Surface | Before 7H | After 7H |
+    |---|---:|---:|
+    | Tier 6 (raw question) — how-to | 230 KB / ~4 h2 | 358 KB / **15 h2** + **14 h3** + 6 schema blocks + 9 FAQs |
+    | Tier 6 — what-is | similar | 336 KB / **15 h2** |
+    | Tier 6 — how-much | similar | 335 KB / **15 h2** |
+    | Tier 6 — why | similar | 310 KB / **15 h2** |
+    | Tier 6 — is-it | similar | 315 KB / **15 h2** |
+    | Tier 6 — best | similar | 319 KB / **15 h2** + ItemList schema |
+    | Tier 12 (question × industry) | thin | 363 KB / **13 h2** |
+    | Tier 14 (question × geo) | thin | 348 KB / **13 h2** |
+  - **Impact across the site**: every page that pulls from `QuestionEntry` now inherits the depth — that's **2,046 raw question pages + 67,518 Tier 12 cells + 24,552 Tier 14 cells = ~94k pages** all upgraded from a single augmentation engine, with no JSON data migration.
+  - **No fabrication**: content derived from entry fields + taxonomy + kind-aware static pools (mistakes, metrics, tools that apply universally to the kind). Verifiable claims only; no invented client metrics.
+  - **SEO/AIO/GEO/LLM optimization**: every page now ships Article + FAQPage + BreadcrumbList + WebPage(speakable) + (HowTo / DefinedTerm / ItemList per kind) — 5-6 distinct schema types. AIO-ready direct-answer CSS class on lead paragraph; FAQs ship in both visible HTML and FAQPage JSON-LD; related cross-links + glossary links power citation graph for LLM training data.
+
 - **Phase 7G — Resources hub + programmatic long-form guides across every combination (landed 2026-06-07):**
   - **Problem solved**: `/resources` previously had only one guide (`/resources/digital-marketing-guide`). The hub itself didn't exist. Now `/resources` is a master library with 10 sub-hubs and 6,047 programmatic long-form guides covering every service × industry × location combination.
   - **New URL space** at `/resources/guides/{slug}` with 6 guide patterns:

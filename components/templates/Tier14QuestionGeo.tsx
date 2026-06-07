@@ -14,6 +14,8 @@ import { Breadcrumb } from "./Breadcrumb";
 import { DEFAULT_AUTHOR } from "@/lib/data/authors";
 import type { QuestionEntry } from "@/lib/data/questions";
 import type { Geo } from "@/lib/data";
+import { buildQuestionContent } from "@/lib/data/question-content";
+import Link from "next/link";
 
 const PUBLISHED_AT = "2025-12-01";
 
@@ -47,7 +49,9 @@ export function Tier14QuestionGeo({
 	relatedQuestionsInGeo,
 	relatedGeosForQuestion,
 }: Props) {
-	const faqs = buildGeoFaqs(question, geo);
+	const augmented = buildQuestionContent(question);
+	const geoFaqs = buildGeoFaqs(question, geo);
+	const faqs = [...geoFaqs.slice(0, 2), ...augmented.extendedFaqs].slice(0, 15);
 	const dateModified = new Date().toISOString().slice(0, 10);
 
 	const heroTitle = `${question.title} — in ${geo.name}`;
@@ -223,6 +227,121 @@ export function Tier14QuestionGeo({
 					</section>
 				) : null}
 
+				{/* ─── Common mistakes ─── */}
+				<section
+					aria-labelledby="t14-mistakes-heading"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Common mistakes
+					</div>
+					<h2
+						id="t14-mistakes-heading"
+						className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+					>
+						What goes wrong in {geo.name}
+					</h2>
+					<ul className="mt-5 space-y-3">
+						{augmented.commonMistakes.map((m, idx) => (
+							<li
+								key={idx}
+								className="flex items-start gap-3 rounded-2xl border border-[#FFE4D6] bg-[#FDF8F5] p-4"
+							>
+								<span
+									aria-hidden
+									className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-[12px] font-bold text-[#FF6B35]"
+								>
+									{idx + 1}
+								</span>
+								<span className="text-[14.5px] leading-relaxed text-[#2D3748]/90">{m}</span>
+							</li>
+						))}
+					</ul>
+				</section>
+
+				{/* ─── Metrics ─── */}
+				<section
+					aria-labelledby="t14-metrics-heading"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Metrics
+					</div>
+					<h2
+						id="t14-metrics-heading"
+						className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+					>
+						What to track for {geo.name}
+					</h2>
+					<ul className="mt-5 grid gap-3 sm:grid-cols-2">
+						{augmented.metrics.map((m, idx) => (
+							<li
+								key={idx}
+								className="rounded-2xl border border-[#FFE4D6] bg-white p-4 text-[14px] leading-relaxed text-[#2D3748]/85"
+							>
+								{m}
+							</li>
+						))}
+					</ul>
+				</section>
+
+				{/* ─── Tools ─── */}
+				<section
+					aria-labelledby="t14-tools-heading"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Stack
+					</div>
+					<h2
+						id="t14-tools-heading"
+						className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+					>
+						Tools + channels we use here
+					</h2>
+					<ul className="mt-5 space-y-3">
+						{augmented.tools.map((t, idx) => (
+							<li
+								key={idx}
+								className="rounded-2xl border border-[#FFE4D6] bg-white p-4"
+							>
+								<div className="font-poppins text-[15px] font-semibold text-[#2D3748]">{t.name}</div>
+								<div className="mt-1 text-[14px] leading-relaxed text-[#5A5A5A]">{t.note}</div>
+							</li>
+						))}
+					</ul>
+				</section>
+
+				{/* ─── Related glossary ─── */}
+				{augmented.relatedGlossary.length > 0 && (
+					<section
+						aria-labelledby="t14-glossary-heading"
+						className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+					>
+						<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+							Related glossary terms
+						</div>
+						<h2
+							id="t14-glossary-heading"
+							className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+						>
+							Terms used on this page
+						</h2>
+						<ul className="mt-5 flex flex-wrap gap-2">
+							{augmented.relatedGlossary.map((g) => (
+								<li key={g.href}>
+									<Link
+										href={g.href}
+										className="inline-flex items-center gap-2 rounded-full border border-[#FFE4D6] bg-white px-3 py-1.5 text-[13px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+									>
+										{g.label} <span aria-hidden>→</span>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
+
 				<CTABlock
 					variant="audit"
 					headline={`Want this scoped to ${geo.name}?`}
@@ -232,6 +351,36 @@ export function Tier14QuestionGeo({
 				/>
 
 				<FAQBlock items={faqs} />
+
+				{/* ─── Adjacent guides ─── */}
+				{augmented.adjacentGuides.length > 0 && (
+					<section
+						aria-labelledby="t14-adj-guides"
+						className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+					>
+						<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+							Deeper reading
+						</div>
+						<h2
+							id="t14-adj-guides"
+							className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+						>
+							Long-form guides on related topics
+						</h2>
+						<ul className="mt-5 grid gap-2 sm:grid-cols-2">
+							{augmented.adjacentGuides.map((g) => (
+								<li key={g.href}>
+									<Link
+										href={g.href}
+										className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+									>
+										{g.label} <span aria-hidden>→</span>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
 
 				{relatedQuestionsInGeo.length > 0 ? (
 					<RelatedCells
