@@ -17,6 +17,9 @@ import { Breadcrumb } from "./Breadcrumb";
 import { DEFAULT_AUTHOR } from "@/lib/data/authors";
 import type { GlossaryEntry } from "@/lib/data/glossary";
 import type { Industry } from "@/lib/data";
+import { questions } from "@/lib/data/questions";
+import { getService } from "@/lib/data";
+import Link from "next/link";
 
 const PUBLISHED_AT = "2025-12-01";
 
@@ -188,6 +191,73 @@ export function Tier15IndustryGlossary({
 					/>
 				) : null}
 
+				{/* ─── Extended context: how this metric behaves for the industry ─── */}
+				{entry.extendedExplanation ? (
+					<section
+						aria-labelledby="t15-context"
+						className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+					>
+						<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+							Context
+						</div>
+						<h2
+							id="t15-context"
+							className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+						>
+							How {entry.term} actually behaves in {industry.label.toLowerCase()}
+						</h2>
+						<p className="mt-3 text-[15px] leading-relaxed text-[#2D3748]/90">
+							{entry.extendedExplanation}
+						</p>
+						<p className="mt-3 text-[15px] leading-relaxed text-[#2D3748]/90">
+							For {industry.label.toLowerCase()} specifically, {entry.term} is influenced most by these {industry.primaryServices.length} primary channels — each shifts the metric in a different way: {industry.primaryServices
+								.slice(0, 4)
+								.map((sid) => {
+									const s = getService(sid);
+									return s ? `${s.label} (${s.tagline.toLowerCase().slice(0, 80)})` : sid;
+								})
+								.join("; ")}.
+						</p>
+					</section>
+				) : null}
+
+				{/* ─── Industry-channel adaptations ─── */}
+				<section
+					aria-labelledby="t15-channels"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Channel adaptations
+					</div>
+					<h2
+						id="t15-channels"
+						className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+					>
+						How {entry.term} moves per primary channel for {industry.label.toLowerCase()}
+					</h2>
+					<ul className="mt-5 space-y-3">
+						{industry.primaryServices.slice(0, 5).map((sid) => {
+							const s = getService(sid);
+							if (!s) return null;
+							return (
+								<li
+									key={sid}
+									className="rounded-2xl border border-[#FFE4D6] bg-white p-4"
+								>
+									<div className="font-poppins text-[15px] font-semibold text-[#2D3748]">
+										<Link href={`/${s.id}`} className="hover:text-[#FF6B35]">
+											{s.label} <span aria-hidden>→</span>
+										</Link>
+									</div>
+									<div className="mt-1 text-[13.5px] leading-relaxed text-[#5A5A5A]">
+										For {industry.label.toLowerCase()}, {s.label.toLowerCase()} moves {entry.term} via {s.tagline.toLowerCase()}. CPC band ${s.avgCpcInr} ₹; CAC band ${s.avgCacInr} ₹. Time to first signal: {s.timeToResults}.
+									</div>
+								</li>
+							);
+						})}
+					</ul>
+				</section>
+
 				<CTABlock
 					variant="audit"
 					headline={`Want this ${entry.term} review scoped to your ${industry.name} business?`}
@@ -197,6 +267,97 @@ export function Tier15IndustryGlossary({
 				/>
 
 				<FAQBlock items={faqs} />
+
+				{/* ─── Adjacent questions: questions tagged with this industry that mention the term ─── */}
+				{(() => {
+					const termLower = entry.term.toLowerCase();
+					const adjacentQs = questions
+						.filter(
+							(q) =>
+								q.tags.includes(industry.id) &&
+								(q.title.toLowerCase().includes(termLower) ||
+									q.intent.toLowerCase().includes(termLower) ||
+									q.tags.includes(entry.id)),
+						)
+						.slice(0, 6);
+					if (adjacentQs.length === 0) return null;
+					return (
+						<section
+							aria-labelledby="t15-adj-questions"
+							className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+						>
+							<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+								Adjacent questions
+							</div>
+							<h2
+								id="t15-adj-questions"
+								className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+							>
+								{industry.label} questions involving {entry.term}
+							</h2>
+							<ul className="mt-5 grid gap-2 sm:grid-cols-2">
+								{adjacentQs.map((q) => (
+									<li key={q.slug}>
+										<Link
+											href={`/${q.kind}/${q.slug}`}
+											className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+										>
+											{q.title}
+										</Link>
+									</li>
+								))}
+							</ul>
+						</section>
+					);
+				})()}
+
+				{/* ─── Adjacent guides ─── */}
+				<section
+					aria-labelledby="t15-adj-guides"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Deeper reading
+					</div>
+					<h2
+						id="t15-adj-guides"
+						className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+					>
+						Long-form guides on related topics
+					</h2>
+					<ul className="mt-5 grid gap-2 sm:grid-cols-2">
+						<li>
+							<Link
+								href={`/resources/guides/${industry.id}-marketing`}
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								{industry.label} marketing — the full guide <span aria-hidden>→</span>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href={`/glossary/${entry.id}`}
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								{entry.term} — glossary deep dive <span aria-hidden>→</span>
+							</Link>
+						</li>
+						{industry.primaryServices.slice(0, 4).map((sid) => {
+							const s = getService(sid);
+							if (!s) return null;
+							return (
+								<li key={sid}>
+									<Link
+										href={`/resources/guides/${s.id}-for-${industry.id}`}
+										className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+									>
+										{s.label} for {industry.label} — full guide <span aria-hidden>→</span>
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</section>
 
 				{entry.relatedTerms.length > 0 ? (
 					<RelatedTerms terms={entry.relatedTerms} basePath={`/${industry.id}`} />

@@ -1797,6 +1797,55 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7I — Question-hub indexes + Tier 15 augmentation (landed 2026-06-07):**
+  - **Problem 1**: the 6 question-kind hub pages (`/how-to`, `/what-is`, `/how-much`, `/why`, `/best`, `/is-it`) were thin — 86-113 lines each, single-section flat-grid of question cards. Despite holding 495 / 203 / 500 / 103 / 102 / 643 entries respectively, they rendered with **1 h2** and 1 schema type each.
+  - **Problem 2**: Tier 15 (industry × glossary, 2,697 cells) had decent structure (8 h2) but missed channel-adaptation context and adjacent-question cross-links.
+  - **New canonical template**: `components/templates/QuestionHubIndex.tsx` (~500 lines). Single shared template parameterised by `kind`. Renders:
+    | Section | What it carries |
+    |---|---|
+    | Hero | Breadcrumb + h1 + dek + dual CTAs |
+    | TLDR | 4 bullets about what this hub covers |
+    | Why this hub exists | Single-paragraph framing |
+    | Featured | Top 12 questions per kind |
+    | By industry | Top 8 industries with relevant questions (grouped) |
+    | By location | 6 priority geos with relevant questions (grouped) |
+    | By service | Top 6 services with relevant questions (grouped) |
+    | Methodology | 3 cards: how content is structured, when to follow vs adapt, etc. |
+    | Full A-Z list | Complete alphabetical list of all entries in kind |
+    | Other question hubs | Cross-links to the 5 other kinds |
+    | References + Timestamp + AuthorCard + CTAs | Standard footer |
+  - **Schema upgrade per hub**: CollectionPage + ItemList + BreadcrumbList + WebPage(speakable) — **4 schema types** (was 1) plus configuration-driven metadata per kind. Each kind has unique `KIND_CONFIG` with title, dek, TLDR, methodology cards, and "why this hub exists" prose.
+  - **6 hub pages collapsed** to 4-line wrappers (was 86-113 lines each):
+    - `/how-to` (495 entries) → wrapper using `<QuestionHubIndex kind="how-to" />`
+    - `/what-is` (203 entries) → wrapper
+    - `/how-much` (500 entries) → wrapper
+    - `/why` (103 entries) → wrapper
+    - `/is-it` (102 entries) → wrapper
+    - `/best` (643 entries) → wrapper
+  - **Tier 15 augmentation**: `components/templates/Tier15IndustryGlossary.tsx` — three new sections injected:
+    - **Context paragraph** explaining how the metric actually behaves for this industry + which primary channels move it most
+    - **Channel adaptations** table — for each of industry's primary services, how this metric responds (CPC band, CAC band, time-to-signal per channel)
+    - **Adjacent questions** — questions tagged with this industry that mention the term (heuristic + filtered)
+    - **Adjacent guides** — cross-links to `/resources/guides/{industry}-marketing`, `/glossary/{term}`, and `/resources/guides/{service}-for-{industry}` for each primary service
+  - **Verified live**:
+    | Surface | Before 7I | After 7I |
+    |---|---|---|
+    | `/how-to` | 1 h2, 1 schema, flat grid | **10 h2, 6 schema** (Collection + ItemList + Breadcrumb + WebPage + Article hasParts) |
+    | `/what-is` | thin | 9 h2, 6 schema |
+    | `/how-much` | thin | 7 h2, 6 schema |
+    | `/why` | thin | 9 h2, 6 schema |
+    | `/is-it` | thin | 9 h2, 6 schema |
+    | `/best` | thin | 9 h2, 6 schema |
+    | Tier 15 (e.g. /d2c/ltv) | 8 h2 | **11 h2** with industry-channel adaptations |
+  - **Impact across the site**: 6 hub pages + ~2,697 Tier 15 cells = ~**2,703 pages** upgraded. Each hub now exposes ALL its questions in 4 cross-cut groupings (featured / by industry / by geo / by service / A-Z) so users find the right question via multiple discovery surfaces; AI crawlers see ItemList + CollectionPage schema for citation graph.
+  - **Page-rebuilt totals after 7I**:
+    - 6 hub pages (deep)
+    - 2,046 question pages (Phase 7H — deep)
+    - 67,518 Tier 12 cells (Phase 7H — deep)
+    - 24,552 Tier 14 cells (Phase 7H — deep)
+    - 2,697 Tier 15 cells (Phase 7I — deep)
+    - Total: **~96,820 pages** with the augmenter-driven depth
+
 - **Phase 7H — Question-hub content depth: heavy augmentation of all 2,046 questions + Tier 12 + Tier 14 (landed 2026-06-07):**
   - **Problem**: each question page rendered only what was in the bare JSON entry — 3-bullet TLDR, 4-5 short steps, 2-4 FAQs. Pages averaged ~230KB and ~3-4 h2 sections. Across `/how-to`, `/what-is`, `/how-much`, `/why`, `/best`, `/is-it` and the Tier 12 (question × industry) + Tier 14 (question × geo) cells, that's ~91k cells of thin content.
   - **Solution**: built a content-augmentation engine that derives extensive sections from the question entry + taxonomy. The bare JSON stays the same (no data migration); the augmenter runs at render time to expand each cell with deeper, kind-aware content.
