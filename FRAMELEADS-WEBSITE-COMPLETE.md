@@ -1797,6 +1797,25 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7C — Service-hub refresh (full content replacement) (landed 2026-06-07):**
+  - The 12 service-hub `page.tsx` files (previously hand-built 21KB–93KB each — ~700KB of framer-motion animations, scattered case-study widgets, testimonial blocks, decorative imagery) **collapsed to 4-line wrappers** that render a new `ServiceHubPage` template.
+  - New `components/templates/ServiceHubPage.tsx` — server-rendered, single canonical layout for every /[service] hub:
+    - Hero (Breadcrumb + Service badge + h1 + dek + dual CTAs)
+    - TLDR block (4 lines from taxonomy)
+    - Why Frameleads (3-up differentiation: senior-operator weekly, server-side attribution, methodology published openly)
+    - ServiceDepthSection (the 5 deep sub-sections: deliverables, channel-mix table, 4-phase process, 3-tier pricing, fit-check)
+    - Mid-page CTA
+    - 7 service-level FAQs (cost, time, fit, differentiation, ROAS guarantees, exit clause, senior operator)
+    - ReferencesBlock filtered to service-specific sources
+    - TimestampStamp
+    - Bottom CTA
+    - AuthorCard with Person JSON-LD
+  - Schema stack per hub: `Service` (with `AggregateOffer`) + `Article` (Person author + dates + publisher @id) + `FAQPage` + `BreadcrumbList` + `WebPage(speakable)`.
+  - Per-route Phase-0.3 `layout.tsx` metadata files retained — title/description/canonical/openGraph still per-service.
+  - **End state**: all 12 hubs render only new structured content. Average word count ~2,000 per hub (was variable, but visually heavy + content-light on most of the old pages).
+  - **Storage delta**: 12 × hand-built JSX (~700KB total) → 12 × thin wrappers (~2KB total). 99.7% file-size reduction. Single template means future copy changes ship to all 12 hubs simultaneously.
+  - Phase 7D+ next: 14 country pages, 5 Bangalore money pages, 20 calculators, glossary hubs, IndustryDepthSection variant.
+
 - **Phase 7B — Content depth fan-out (12/12 service hubs + Service-driven generic depth) (landed 2026-06-07):**
   - `lib/data/service-depth.ts` refactor — `getServiceDepth()` now takes a `Service` object, and `genericDepth()` reads from the Service's own `topUseCases`, `primaryKpi`, `timeToResults`, `avgCpcInr`, `avgCacInr` fields. Every fallback page gets cell-unique content from taxonomy (no shared boilerplate across services).
   - 6 additional hand-crafted `ServiceDepth` entries shipped: `linkedin-ads`, `youtube-ads`, `whatsapp-marketing`, `email-marketing`, `ppc-management`, `social-media-marketing`. Together with the 6 from Phase 7A, **12 of 12 services now have hand-crafted depth** (every entry in services.json).
