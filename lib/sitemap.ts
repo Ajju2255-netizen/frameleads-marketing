@@ -14,6 +14,7 @@ import { comparisons } from "./data/comparisons";
 import { questions } from "./data/questions";
 import { subServices } from "./data/sub-services";
 import { BLOG_POSTS } from "./data/blogs";
+import { allMoneyPages } from "./data/money-pages";
 
 export const SITE_URL = "https://frameleads.com";
 
@@ -68,10 +69,6 @@ const STATIC_PILLAR_INDUSTRY_SLUGS = [
 	"ecommerce",
 	"financial-services",
 	"digital-marketing-for-technology-and-saas",
-	"real-estate-marketing-company-in-bangalore",
-	"b2b-marketing-company-in-bangalore",
-	"creative-advertising-company-in-bangalore",
-	"seo-company-in-bangalore",
 ];
 
 const STATIC_PILLAR_COUNTRY_SLUGS = [
@@ -222,6 +219,20 @@ export const SEGMENTS: SitemapSegment[] = [
 					priority: 0.9,
 				})),
 			),
+	},
+	{
+		id: "1-money-pages",
+		tier: 1,
+		name: "Money pages",
+		description:
+			"High-intent /{service}-company-in-{city} landing pages anchored to the Frameleads service catalogue and priority metros.",
+		urls: () =>
+			allMoneyPages().map((m) => ({
+				loc: `${SITE_URL}/${m.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.95,
+			})),
 	},
 	{
 		id: "3-service-geo-india",
