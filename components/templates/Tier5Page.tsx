@@ -7,6 +7,7 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ServiceDepthSection } from "./ServiceDepthSection";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { HeroServiceGeo } from "./HeroServiceGeo";
@@ -230,6 +231,7 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 				<MethodologyCard
 					contextLabel={`${service.label} for ${industry.label} in ${geo.name}`}
 				/>
+				<ServiceDepthSection service={service} industry={industry} geo={geo} />
 				<CTABlock
 					variant="audit"
 					headline={`Scope this to your ${industry.name} business in ${geo.name}.`}

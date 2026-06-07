@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import { ServiceDepthSection } from "@/components/templates/ServiceDepthSection"
+import { services } from "@/lib/data"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -653,6 +655,10 @@ export default function PerformanceMarketingPage() {
         </div>
       </section>
 
+      {(() => {
+        const _svc = services.find((s) => s.id === "performance-marketing");
+        return _svc ? <ServiceDepthSection service={_svc} /> : null;
+      })()}
       <Footer />
     </div>
     </>

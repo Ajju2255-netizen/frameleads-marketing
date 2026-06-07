@@ -9,6 +9,7 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ServiceDepthSection } from "./ServiceDepthSection";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -253,6 +254,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 					intro={localIntro}
 				/>
 				<MethodologyCard contextLabel={`${service.label} in ${geo.name}`} />
+				<ServiceDepthSection service={service} geo={geo} />
 				<CTABlock
 					variant="audit"
 					headline={`Want this audit scoped to ${geo.name}?`}

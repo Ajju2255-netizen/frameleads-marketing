@@ -9,6 +9,7 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ServiceDepthSection } from "./ServiceDepthSection";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { HeroServiceGeo } from "./HeroServiceGeo";
@@ -209,6 +210,7 @@ export function Tier4Page({ service, industry, url }: Props) {
 					geoConcentration={industry.geoConcentration}
 				/>
 				<MethodologyCard contextLabel={`${service.label} for ${industry.label}`} />
+				<ServiceDepthSection service={service} industry={industry} />
 				<UseCasesList useCases={useCases} />
 				<CTABlock
 					variant="audit"
