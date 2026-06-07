@@ -1797,6 +1797,39 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7G — Resources hub + programmatic long-form guides across every combination (landed 2026-06-07):**
+  - **Problem solved**: `/resources` previously had only one guide (`/resources/digital-marketing-guide`). The hub itself didn't exist. Now `/resources` is a master library with 10 sub-hubs and 6,047 programmatic long-form guides covering every service × industry × location combination.
+  - **New URL space** at `/resources/guides/{slug}` with 6 guide patterns:
+    | Pattern | URL form | Count |
+    |---|---|---:|
+    | Service | `/resources/guides/{service-id}` | 12 |
+    | Industry | `/resources/guides/{industry-id}-marketing` | 31 |
+    | Geo | `/resources/guides/digital-marketing-in-{geo-id}` | 128 |
+    | Service × Industry | `/resources/guides/{service-id}-for-{industry-id}` | 372 |
+    | Service × Geo | `/resources/guides/{service-id}-in-{geo-id}` | 1,536 |
+    | Industry × Geo | `/resources/guides/{industry-id}-marketing-in-{geo-id}` | 3,968 |
+    | **Total programmatic guides** | | **6,047** |
+  - **Intent separation from existing surfaces**: Guides target **educational/informational intent** (long-form, table-of-contents, advanced operator vocabulary). The Tier 3/5/11/Money pages target **commercial intent** (deliverables, pricing, fit-check). Same taxonomy, different SERP cohort, different LLM-citation surface — no keyword cannibalization.
+  - **New seed-data layer**: `lib/data/resources.ts` (~700 lines). Six builders (`buildServiceGuide`, `buildIndustryGuide`, `buildGeoGuide`, `buildServiceIndustryGuide`, `buildServiceGeoGuide`, `buildIndustryGeoGuide`) each produce a `GuideContent` object with: title, dek, 4-line TLDR, 7-10 long-form sections (each with heading + intro + paragraphs + bullets + sub-sections + tables), 5-8 FAQs, 4-8 related links. Every cell derives uniqueness from taxonomy (services.json + industries.json + geos-*.json + service-depth.ts + location-depth.ts).
+  - **New canonical template**: `components/templates/GuidePage.tsx` (~370 lines). Server-rendered long-form layout: Hero → TLDR → auto-built TOC → long-form sections with prose / bullets / tables / subsections → mid CTA → FAQs → related links → References → Timestamp → AuthorCard → bottom CTA. Schema stack: Article + HowTo (for service-anchored guides with process phases) + FAQPage + BreadcrumbList + WebPage(speakable).
+  - **New hub-page template**: `components/templates/ResourcesHub.tsx` (~200 lines). Used by all 10 hub pages: Hero + TLDR + grouped sections of resource categories (each card: label + count badge + description + drill-in link) + CTAs + Timestamp + Author. Schema: CollectionPage + ItemList + BreadcrumbList + WebPage(speakable).
+  - **10 new hub pages**:
+    - `/resources` — master index (links to all 120k+ pages via 10 category groups)
+    - `/resources/guides` — guides hub (lists all 12 services, 31 industries, 60 India geos, all global geos, plus featured Service × Industry / Service × Geo / Industry × Geo cross-cells)
+    - `/resources/glossary` — glossary hub (links to /glossary)
+    - `/resources/comparisons` — comparisons hub (links to /vs)
+    - `/resources/calculators` — calculators hub (links to /tools)
+    - `/resources/reports` — reports hub (links to /reports)
+    - `/resources/questions` — question-hub directory
+    - `/resources/playbooks` — playbook directory (links to Tier 5 + Tier 11 + Industry Pillars + Money Pages)
+    - `/resources/benchmarks` — CAC/CPC benchmark directory (links to industry pillars + Tier 13 pricing)
+    - `/resources/templates` — templates & checklists directory
+  - **Slug parser** (`lib/data/slugs.ts`): six new `parseGuide*` parsers + `parseGuideSlug()` master + six `allGuide*Slugs()` generators + six new `GuideMatch` types. Precedence order (deepest first): Service × Industry → Service × Geo → Industry × Geo → Geo → Industry → Service.
+  - **Sitemap (`lib/sitemap.ts`)**: 8 new sub-sitemap segments for guides (split by India / Global for the high-volume cells), plus 10 new entries in `STATIC_HOME_AND_MISC` for the resource hubs. Sitemap index grew from 39 → 47 sub-sitemaps.
+  - **Total new pages**: 10 hubs + 6,047 guides = **6,057**. Total site footprint after Phase 7G: ~120,970 (prior) + 6,057 (this phase) = **~127,027 indexable pages**.
+  - **Schema density**: every programmatic guide ships Article + FAQPage + BreadcrumbList + WebPage(speakable). Service-anchored guides additionally emit HowTo schema (process phases mapped to HowToStep entries). All guides reference DEFAULT_AUTHOR (Ajsal Abbas Person schema) and the canonical Organization @id.
+  - **Verified live (localhost:3000)**: spot-checked 22 routes mixing hub pages (10/10 = 200) and programmatic guides across all 6 patterns (12/12 = 200) — every cell renders unique h1 + TOC + sections + FAQ + schema. Regression-tested existing Tier surfaces — unaffected.
+
 - **Phase 7F — Money pages programmatic scale-out: every service × every geo + every industry × every geo (landed 2026-06-07):**
   - Money-page coverage expanded from 9 hand-curated (Bangalore + Mumbai + Dubai) → **5,506 total** (9 curated + 5,497 programmatic). Architecture: hand-curated takes precedence on the same URL; programmatic fills the rest of the matrix.
   - **Two new URL patterns**, parsed in `lib/data/slugs.ts`:

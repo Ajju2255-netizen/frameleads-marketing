@@ -159,6 +159,60 @@ export type MoneyIndustryMatch = {
 	slug: string;
 };
 
+// ─────────────── Resource Guide matches (under /resources/guides/) ───────────────
+/**
+ * Long-form educational guides — distinct from the commercial Tier surfaces.
+ * Six guide patterns, parsed from the slug after the /resources/guides/ prefix.
+ * URLs:
+ *   /resources/guides/{service-id}
+ *   /resources/guides/{industry-id}-marketing
+ *   /resources/guides/digital-marketing-in-{geo-id}
+ *   /resources/guides/{service-id}-for-{industry-id}
+ *   /resources/guides/{service-id}-in-{geo-id}
+ *   /resources/guides/{industry-id}-marketing-in-{geo-id}
+ */
+export type GuideServiceMatch = {
+	tier: "guide-service";
+	service: Service;
+	slug: string;
+};
+export type GuideIndustryMatch = {
+	tier: "guide-industry";
+	industry: Industry;
+	slug: string;
+};
+export type GuideGeoMatch = {
+	tier: "guide-geo";
+	geo: Geo;
+	slug: string;
+};
+export type GuideServiceIndustryMatch = {
+	tier: "guide-service-industry";
+	service: Service;
+	industry: Industry;
+	slug: string;
+};
+export type GuideServiceGeoMatch = {
+	tier: "guide-service-geo";
+	service: Service;
+	geo: Geo;
+	slug: string;
+};
+export type GuideIndustryGeoMatch = {
+	tier: "guide-industry-geo";
+	industry: Industry;
+	geo: Geo;
+	slug: string;
+};
+
+export type GuideMatch =
+	| GuideServiceMatch
+	| GuideIndustryMatch
+	| GuideGeoMatch
+	| GuideServiceIndustryMatch
+	| GuideServiceGeoMatch
+	| GuideIndustryGeoMatch;
+
 export type Tier13Match = {
 	tier: 13;
 	service: Service;
@@ -786,6 +840,167 @@ export function allTier15Slugs(): Tier15Match[] {
 				entry,
 				slug: ind.id,
 				sub: entry.id,
+			});
+		}
+	}
+	return out;
+}
+
+// ─────────────────── Resource Guide parsers + generators ───────────────────
+
+/**
+ * Parse the {slug} segment of /resources/guides/{slug} into a GuideMatch.
+ *
+ * Specificity order (deepest pattern first to win the parse):
+ *   1. {service}-for-{industry}      — Service × Industry guide
+ *   2. {service}-in-{geo}            — Service × Geo guide
+ *   3. {industry}-marketing-in-{geo} — Industry × Geo guide
+ *   4. digital-marketing-in-{geo}    — Location guide
+ *   5. {industry}-marketing          — Industry guide
+ *   6. {service-id} exact            — Service guide (single segment)
+ */
+export function parseGuideServiceIndustrySlug(
+	slug: string,
+): GuideServiceIndustryMatch | null {
+	if (!slug.includes("-for-")) return null;
+	if (slug.includes("-in-")) return null;
+	for (const svc of sortedServicesDesc()) {
+		const prefix = `${svc.id}-for-`;
+		if (!slug.startsWith(prefix)) continue;
+		const indSlug = slug.slice(prefix.length);
+		const industry = getIndustry(indSlug);
+		if (industry) return { tier: "guide-service-industry", service: svc, industry, slug };
+	}
+	return null;
+}
+
+export function parseGuideServiceGeoSlug(slug: string): GuideServiceGeoMatch | null {
+	if (!slug.includes("-in-")) return null;
+	if (slug.includes("-for-")) return null;
+	if (slug.includes("-marketing-in-")) return null; // industry-geo territory
+	if (slug.startsWith("digital-marketing-in-")) return null; // geo-only territory
+	for (const svc of sortedServicesDesc()) {
+		const prefix = `${svc.id}-in-`;
+		if (!slug.startsWith(prefix)) continue;
+		const geoSlug = slug.slice(prefix.length);
+		const geo = getGeo(geoSlug);
+		if (geo) return { tier: "guide-service-geo", service: svc, geo, slug };
+	}
+	return null;
+}
+
+export function parseGuideIndustryGeoSlug(slug: string): GuideIndustryGeoMatch | null {
+	if (!slug.includes("-marketing-in-")) return null;
+	for (const ind of sortedIndustriesDesc()) {
+		const prefix = `${ind.id}-marketing-in-`;
+		if (!slug.startsWith(prefix)) continue;
+		const geoSlug = slug.slice(prefix.length);
+		const geo = getGeo(geoSlug);
+		if (geo) return { tier: "guide-industry-geo", industry: ind, geo, slug };
+	}
+	return null;
+}
+
+export function parseGuideGeoSlug(slug: string): GuideGeoMatch | null {
+	const prefix = "digital-marketing-in-";
+	if (!slug.startsWith(prefix)) return null;
+	const geoSlug = slug.slice(prefix.length);
+	const geo = getGeo(geoSlug);
+	if (geo) return { tier: "guide-geo", geo, slug };
+	return null;
+}
+
+export function parseGuideIndustrySlug(slug: string): GuideIndustryMatch | null {
+	if (!slug.endsWith("-marketing")) return null;
+	if (slug.includes("-in-")) return null;
+	const indSlug = slug.slice(0, -"-marketing".length);
+	const industry = getIndustry(indSlug);
+	if (industry) return { tier: "guide-industry", industry, slug };
+	return null;
+}
+
+export function parseGuideServiceSlug(slug: string): GuideServiceMatch | null {
+	if (slug.includes("-in-")) return null;
+	if (slug.includes("-for-")) return null;
+	const service = services.find((s) => s.id === slug);
+	if (service) return { tier: "guide-service", service, slug };
+	return null;
+}
+
+export function parseGuideSlug(slug: string): GuideMatch | null {
+	return (
+		parseGuideServiceIndustrySlug(slug) ??
+		parseGuideServiceGeoSlug(slug) ??
+		parseGuideIndustryGeoSlug(slug) ??
+		parseGuideGeoSlug(slug) ??
+		parseGuideIndustrySlug(slug) ??
+		parseGuideServiceSlug(slug)
+	);
+}
+
+export function allGuideServiceSlugs(): GuideServiceMatch[] {
+	return services.map((service) => ({
+		tier: "guide-service" as const,
+		service,
+		slug: service.id,
+	}));
+}
+
+export function allGuideIndustrySlugs(): GuideIndustryMatch[] {
+	return industries.map((industry) => ({
+		tier: "guide-industry" as const,
+		industry,
+		slug: `${industry.id}-marketing`,
+	}));
+}
+
+export function allGuideGeoSlugs(): GuideGeoMatch[] {
+	return geosAll.map((geo) => ({
+		tier: "guide-geo" as const,
+		geo,
+		slug: `digital-marketing-in-${geo.id}`,
+	}));
+}
+
+export function allGuideServiceIndustrySlugs(): GuideServiceIndustryMatch[] {
+	const out: GuideServiceIndustryMatch[] = [];
+	for (const service of services) {
+		for (const industry of industries) {
+			out.push({
+				tier: "guide-service-industry",
+				service,
+				industry,
+				slug: `${service.id}-for-${industry.id}`,
+			});
+		}
+	}
+	return out;
+}
+
+export function allGuideServiceGeoSlugs(): GuideServiceGeoMatch[] {
+	const out: GuideServiceGeoMatch[] = [];
+	for (const service of services) {
+		for (const geo of geosAll) {
+			out.push({
+				tier: "guide-service-geo",
+				service,
+				geo,
+				slug: `${service.id}-in-${geo.id}`,
+			});
+		}
+	}
+	return out;
+}
+
+export function allGuideIndustryGeoSlugs(): GuideIndustryGeoMatch[] {
+	const out: GuideIndustryGeoMatch[] = [];
+	for (const industry of industries) {
+		for (const geo of geosAll) {
+			out.push({
+				tier: "guide-industry-geo",
+				industry,
+				geo,
+				slug: `${industry.id}-marketing-in-${geo.id}`,
 			});
 		}
 	}

@@ -10,6 +10,12 @@ import {
 	allTier15Slugs,
 	allMoneyServiceSlugs,
 	allMoneyIndustrySlugs,
+	allGuideServiceSlugs,
+	allGuideIndustrySlugs,
+	allGuideGeoSlugs,
+	allGuideServiceIndustrySlugs,
+	allGuideServiceGeoSlugs,
+	allGuideIndustryGeoSlugs,
 } from "./data/slugs";
 import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
@@ -99,6 +105,16 @@ const STATIC_HOME_AND_MISC = [
 	{ slug: "blogs", changefreq: "weekly", priority: 0.7 } as const,
 	{ slug: "industries", changefreq: "monthly", priority: 0.7 } as const,
 	{ slug: "locations", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources", changefreq: "weekly", priority: 0.9 } as const,
+	{ slug: "resources/guides", changefreq: "weekly", priority: 0.9 } as const,
+	{ slug: "resources/glossary", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/comparisons", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/calculators", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/reports", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/questions", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/playbooks", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/benchmarks", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "resources/templates", changefreq: "monthly", priority: 0.7 } as const,
 ];
 
 const STATIC_LEGAL = [
@@ -307,6 +323,126 @@ export const SEGMENTS: SitemapSegment[] = [
 				priority: 0.8,
 			}));
 		},
+	},
+	{
+		id: "2-guides-service",
+		tier: 2,
+		name: "Resource guides — Service",
+		description:
+			"Long-form educational guides at /resources/guides/{service-id} (one per service).",
+		urls: () =>
+			allGuideServiceSlugs().map((g) => ({
+				loc: `${SITE_URL}/resources/guides/${g.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.75,
+			})),
+	},
+	{
+		id: "2-guides-industry",
+		tier: 2,
+		name: "Resource guides — Industry",
+		description:
+			"Long-form educational guides at /resources/guides/{industry-id}-marketing (one per industry).",
+		urls: () =>
+			allGuideIndustrySlugs().map((g) => ({
+				loc: `${SITE_URL}/resources/guides/${g.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.75,
+			})),
+	},
+	{
+		id: "2-guides-geo",
+		tier: 2,
+		name: "Resource guides — Geo",
+		description:
+			"Long-form educational guides at /resources/guides/digital-marketing-in-{geo-id} (one per geo).",
+		urls: () =>
+			allGuideGeoSlugs().map((g) => ({
+				loc: `${SITE_URL}/resources/guides/${g.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.7,
+			})),
+	},
+	{
+		id: "2-guides-service-industry",
+		tier: 2,
+		name: "Resource guides — Service × Industry",
+		description:
+			"Long-form educational guides at /resources/guides/{service-id}-for-{industry-id}.",
+		urls: () =>
+			allGuideServiceIndustrySlugs().map((g) => ({
+				loc: `${SITE_URL}/resources/guides/${g.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.7,
+			})),
+	},
+	{
+		id: "2-guides-service-geo-india",
+		tier: 2,
+		name: "Resource guides — Service × Geo (India)",
+		description:
+			"Long-form educational guides at /resources/guides/{service-id}-in-{geo-id} for India geos.",
+		urls: () =>
+			allGuideServiceGeoSlugs()
+				.filter((g) => g.geo.country === undefined || g.geo.country === "India")
+				.map((g) => ({
+					loc: `${SITE_URL}/resources/guides/${g.slug}`,
+					lastmod: today(),
+					changefreq: "monthly" as const,
+					priority: 0.65,
+				})),
+	},
+	{
+		id: "2-guides-service-geo-global",
+		tier: 2,
+		name: "Resource guides — Service × Geo (Global)",
+		description:
+			"Long-form educational guides at /resources/guides/{service-id}-in-{geo-id} for global geos.",
+		urls: () =>
+			allGuideServiceGeoSlugs()
+				.filter((g) => g.geo.country !== undefined && g.geo.country !== "India")
+				.map((g) => ({
+					loc: `${SITE_URL}/resources/guides/${g.slug}`,
+					lastmod: today(),
+					changefreq: "monthly" as const,
+					priority: 0.65,
+				})),
+	},
+	{
+		id: "2-guides-industry-geo-india",
+		tier: 2,
+		name: "Resource guides — Industry × Geo (India)",
+		description:
+			"Long-form educational guides at /resources/guides/{industry-id}-marketing-in-{geo-id} for India geos.",
+		urls: () =>
+			allGuideIndustryGeoSlugs()
+				.filter((g) => g.geo.country === undefined || g.geo.country === "India")
+				.map((g) => ({
+					loc: `${SITE_URL}/resources/guides/${g.slug}`,
+					lastmod: today(),
+					changefreq: "monthly" as const,
+					priority: 0.65,
+				})),
+	},
+	{
+		id: "2-guides-industry-geo-global",
+		tier: 2,
+		name: "Resource guides — Industry × Geo (Global)",
+		description:
+			"Long-form educational guides at /resources/guides/{industry-id}-marketing-in-{geo-id} for global geos.",
+		urls: () =>
+			allGuideIndustryGeoSlugs()
+				.filter((g) => g.geo.country !== undefined && g.geo.country !== "India")
+				.map((g) => ({
+					loc: `${SITE_URL}/resources/guides/${g.slug}`,
+					lastmod: today(),
+					changefreq: "monthly" as const,
+					priority: 0.65,
+				})),
 	},
 	{
 		id: "3-service-geo-india",
