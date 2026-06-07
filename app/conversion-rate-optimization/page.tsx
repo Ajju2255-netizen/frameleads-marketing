@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import { ServiceDepthSection } from "@/components/templates/ServiceDepthSection"
+import { services } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, CheckCircle, Phone, TrendingUp, Users, Award, Target, Zap, BarChart3, Search, Monitor, MousePointer, Clock, DollarSign, ArrowUpRight } from "lucide-react"
@@ -966,6 +968,10 @@ export default function ConversionRateOptimizationPage() {
         </motion.div>
       </motion.div>
 
+      {(() => {
+        const _svc = services.find((s) => s.id === "conversion-rate-optimization");
+        return _svc ? <ServiceDepthSection service={_svc} /> : null;
+      })()}
       <Footer />
     </div>
     </>

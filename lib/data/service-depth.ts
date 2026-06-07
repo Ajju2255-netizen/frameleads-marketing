@@ -9,8 +9,10 @@
  *
  * No invented client names, no fabricated case-study numbers. Every claim
  * either traces to taxonomy data or to a published Frameleads operating
- * principle.
+ * principle. The `genericDepth` fallback reads from each Service's own
+ * fields so even non-hand-crafted entries stay cell-unique.
  */
+import type { Service } from "./index";
 
 export type PricingTier = {
 	name: "Starter" | "Scale" | "Enterprise";
@@ -43,131 +45,137 @@ export type ServiceDepth = {
 	summary: string;
 };
 
-// Generic fallback — used for services without a hand-crafted entry. Reads
-// purely from service taxonomy so output is still cell-unique, but the prose
-// is more templatized than the hand-crafted entries below.
-function genericDepth(): ServiceDepth {
+// Generic fallback that takes the Service object so every fallback page still
+// gets unique content (driven by service.topUseCases, primaryKpi, etc.).
+function genericDepth(s: Service): ServiceDepth {
+	const useCases = s.topUseCases || [];
+	const lcLabel = s.label.toLowerCase();
 	return {
-		summary:
-			"We run a 5-stage Frameleads Growth System engagement: Map the ICP, build the Magnet, operate the Machine, Multiply through retention, Measure with leading indicators.",
+		summary: `${s.shortDescription} We run ${lcLabel} as a five-stage Frameleads Growth System™ engagement — calibrated to your unit economics, instrumented end-to-end, reported weekly.`,
 		deliverables: [
-			"ICP definition + jobs-to-be-done map",
-			"Channel-mix recommendation backed by category benchmarks",
-			"Creative supply pipeline (or content brief library, depending on service)",
-			"Attribution + reporting stack with weekly review cadence",
-			"90-day operator roadmap with kill-criteria for under-performing experiments",
+			`${s.label} audit + ICP-fit assessment with documented findings`,
+			useCases[0]
+				? `${useCases[0]} — set up + first measurable outputs`
+				: `Channel-mix recommendation backed by category benchmarks`,
+			useCases[1]
+				? `${useCases[1]} — production pipeline with weekly cadence`
+				: `Creative / asset supply pipeline with structured testing taxonomy`,
+			useCases[2]
+				? `${useCases[2]} — instrumented for attribution + iteration`
+				: `Attribution + reporting stack with weekly review cadence`,
+			`90-day operator roadmap tied to ${s.primaryKpi} as the leading indicator`,
+			`Kill-rules per experiment so wasted spend is bounded by design`,
 		],
 		channelMix: [
 			{
-				channel: "Primary acquisition channel",
+				channel: useCases[0] ?? `${s.label} primary channel`,
 				weight: "Primary",
-				note: "Determined by ICP discovery behaviour and category competitive intensity.",
+				note: `Where ${lcLabel} delivers the highest signal velocity for your ICP.`,
 			},
 			{
-				channel: "Secondary acquisition channel",
+				channel: useCases[1] ?? `${s.label} supporting channel`,
 				weight: "Supporting",
-				note: "Acts as a creative-test harness + retargeting layer.",
+				note: `Acts as a creative-test harness + retargeting layer.`,
 			},
 			{
-				channel: "Organic / content layer",
+				channel: useCases[2] ?? `${s.label} compound channel`,
 				weight: "Compounding",
-				note: "Slow to start, dominant by month 6.",
+				note: `Slow to start, dominant by month 6. Compounds without proportional spend increase.`,
 			},
 			{
-				channel: "Lifecycle (email + WhatsApp)",
+				channel: useCases[3] ?? `Lifecycle (email + WhatsApp + SMS)`,
 				weight: "Retention",
-				note: "The cheapest 1% revenue uplift in most businesses.",
+				note: `The cheapest 1% revenue uplift in most businesses — almost no brand spends enough here.`,
 			},
 		],
 		processPhases: [
 			{
 				label: "Week 1–2",
-				heading: "Discovery + Map",
+				heading: `${s.label} discovery + Map`,
 				outputs: [
-					"ICP + JTBD documentation",
-					"Unit-economics ceiling (max viable CAC)",
-					"Channel-mix hypothesis with rationale",
-					"Tooling + attribution gap analysis",
+					"ICP + JTBD documentation with category-specific buying triggers",
+					`Unit-economics ceiling: max viable CAC (vs current ${s.avgCacInr} ₹ band)`,
+					`${s.label}-specific tooling + attribution gap analysis`,
+					"Channel-mix hypothesis with rationale + documented test plan",
 				],
 			},
 			{
 				label: "Week 3–8",
 				heading: "Foundation",
 				outputs: [
-					"Magnet assets shipped (pillar content / tools / landing pages)",
-					"Machine launched (paid program live across primary + secondary channels)",
-					"Attribution stack instrumented (CAPI / server-side / post-purchase survey)",
-					"Weekly reporting cadence with kill-rules per experiment",
+					`${s.label} foundation built (account/asset setup, tracking, baseline)`,
+					"Production pipeline live with kill-rules + weekly review cadence",
+					"Attribution stack instrumented (CAPI / server-side / GA4 / post-purchase survey)",
+					`First leading-indicator readout against ${s.primaryKpi}`,
 				],
 			},
 			{
-				label: "Month 3–6",
+				label: `Month 2-${s.timeToResults.includes("14") ? "4" : "6"}`,
 				heading: "Acceleration",
 				outputs: [
-					"Creative supply scaled to 20-50 variants/month",
-					"Multiply layer live (lifecycle flows + referral mechanics)",
+					"Winning experiments scaled; under-performers retired against kill-criteria",
+					"Creative / content supply pipeline running at sustainable cadence",
 					"Cross-channel attribution reconciliation monthly",
-					"Cost-per-acquisition trending toward stage-appropriate target",
+					`${s.primaryKpi} trending toward stage-appropriate target`,
 				],
 			},
 			{
 				label: "Month 6+",
 				heading: "Compound",
 				outputs: [
-					"Organic / AI-citation share growing quarter-over-quarter",
-					"Channel-mix diversified beyond original two acquisition channels",
-					"Retention curves flattening; LTV / CAC ratio compounding",
+					"Channel-mix diversified beyond original two channels",
+					"Retention + organic layers active; LTV / CAC ratio compounding",
 					"Quarterly review + strategic re-baseline against north-star metric",
+					"AI-citation share (where applicable to channel) tracked monthly",
 				],
 			},
 		],
 		whoFor: [
-			"Founders or marketing leads with a clear north-star metric",
-			"Businesses with ≥6 months of runway (acquisition + compounding loops both need time)",
+			`Founders or marketing leads with a clear north-star metric tied to ${s.primaryKpi}`,
+			`Businesses ready for the ${s.timeToResults} timeline ${lcLabel} typically needs`,
 			"Teams ready to share data + ad-account access from day one",
-			"Companies that value attribution rigor over vanity ROAS dashboards",
+			"Companies that value attribution rigor over vanity dashboards",
 		],
 		whoNotFor: [
 			"Brands looking for a fixed-ROAS guarantee in writing — that's a sales tactic, not a forecast",
-			"Sub-₹1L/month total marketing budgets (we're not the right scale)",
-			"Pre-product situations where the problem is product-market fit, not acquisition",
+			`Sub-₹1L/month total marketing budgets where ${lcLabel} can't get enough signal to learn`,
+			"Pre-product situations where the bottleneck is product-market fit, not acquisition",
 		],
 		pricingTiers: [
 			{
 				name: "Starter",
 				monthlyBand: "₹1.5L–₹3L/mo",
-				mediaContext: "Media spend on top, typically 3-5× fees",
-				bestFor:
-					"Pre-PMF brands + small businesses validating one or two channels",
+				mediaContext: "Excludes media spend. Most brands spend 3-5× fees on media for paid services.",
+				bestFor: `Pre-PMF brands + small businesses validating ${lcLabel}`,
 				includes: [
-					"One senior strategist + one media buyer",
-					"1-2 channel program",
+					"One senior strategist + one execution lead",
+					`Focused ${lcLabel} program — 1-2 sub-channels`,
 					"Weekly review + monthly strategic call",
-					"Standard attribution stack",
+					"Standard attribution + reporting stack",
 				],
 			},
 			{
 				name: "Scale",
 				monthlyBand: "₹3L–₹8L/mo",
-				mediaContext: "Media spend on top, typically 3-5× fees",
-				bestFor: "Scaling brands at ₹1Cr–₹10Cr ARR running multi-channel acquisition",
+				mediaContext: "Excludes media spend. Typical multiplier 3-5×.",
+				bestFor: `Scaling brands (₹1-10Cr ARR) running multi-channel ${lcLabel}`,
 				includes: [
-					"Senior strategist + dedicated team",
-					"3-5 channel program",
+					"Senior strategist + dedicated execution team",
+					"3-5 channel / format program",
 					"Weekly reviews + bi-weekly strategy + quarterly business review",
-					"Full attribution + creative supply system",
+					"Full attribution + creative / content supply system",
 				],
 			},
 			{
 				name: "Enterprise",
 				monthlyBand: "₹8L+/mo",
-				mediaContext: "Media spend on top, typically 2-4× fees",
-				bestFor: "Scaled brands ₹10Cr+ ARR with international + multi-segment programs",
+				mediaContext: "Excludes media. Typical multiplier 2-4× at scale.",
+				bestFor: `Scaled brands (₹10Cr+ ARR) running ${lcLabel} across multi-geo + multi-segment programs`,
 				includes: [
-					"Dedicated team across strategy, creative, paid ops, analytics",
+					"Embedded team across strategy, execution, analytics",
 					"5+ channels including emerging + brand layer",
 					"Embedded weekly cadence + quarterly executive readout",
-					"Custom dashboarding + AI-citation tracking",
+					"Custom dashboarding + AI-citation tracking where channel supports",
 				],
 			},
 		],
@@ -952,6 +960,777 @@ const CRO_DEPTH: ServiceDepth = {
 	],
 };
 
+// ─────────────────────── Additional hand-crafted entries (Phase 7B) ───────────────────────
+
+const LINKEDIN_ADS_DEPTH: ServiceDepth = {
+	summary:
+		"LinkedIn Ads for B2B SaaS, fintech, professional services — ABM, conversation ads, document ads, and lead-gen forms operated against pipeline metrics, not vanity CPMs.",
+	deliverables: [
+		"ICP-fit campaign architecture (Sponsored Content + Conversation + Document + Message + Lead-Gen Forms)",
+		"Account-based-marketing (ABM) target-account list + tiering + bid logic",
+		"Creative + copy production tuned to LinkedIn's professional context (no broTok hooks)",
+		"Lead-gen form fields + qualifying logic + CRM routing (HubSpot / Salesforce / Pipedrive)",
+		"LinkedIn Insights Tag + GTM + GA4 + offline-conversion-import wiring",
+		"Weekly review cohort'd by job title × company size × campaign × creative",
+	],
+	channelMix: [
+		{
+			channel: "Sponsored Content (single-image + carousel)",
+			weight: "Primary",
+			note: "Bread-and-butter B2B reach + lead capture.",
+		},
+		{
+			channel: "Conversation + Message Ads",
+			weight: "Supporting",
+			note: "Higher-intent, lower-volume; pair with retargeting tier.",
+		},
+		{
+			channel: "Document Ads (PDF / data study)",
+			weight: "High-intent",
+			note: "Lower CPL than form ads for technical buyers; mid-funnel sweet spot.",
+		},
+		{
+			channel: "Lead-Gen Forms",
+			weight: "Conversion",
+			note: "Pre-filled fields → 2-4× higher conversion than off-platform forms.",
+		},
+		{
+			channel: "Audience-Network display",
+			weight: "Optional",
+			note: "Useful for retargeting; weak for prospecting.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "ICP + targeting",
+			outputs: [
+				"ABM target-account list (top 200-500 named accounts)",
+				"Audience matrix: title × seniority × function × company size",
+				"Insights-Tag + conversion-tracking sanity check",
+				"Creative brief based on past winning LinkedIn examples",
+			],
+		},
+		{
+			label: "Week 3–6",
+			heading: "Launch",
+			outputs: [
+				"Sponsored Content + Lead-Gen Forms live across 3-5 audiences",
+				"Daily CPL monitoring + bid tuning",
+				"First lead quality review (sales-team feedback by day 14)",
+				"Week-4 review: kill loss, scale wins, prep document/conversation tests",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Scale + diversify",
+			outputs: [
+				"Document Ads + Conversation Ads launched for warm + cold cohorts",
+				"Offline conversion import live (Closed-Won feedback loop)",
+				"ABM tier-2 + tier-3 retargeting layers active",
+				"Monthly pipeline reconciliation: leads → MQLs → SQLs → pipeline → revenue",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Optimise pipeline",
+			outputs: [
+				"CAC payback against B2B norms (8-14 months India / 12-18 global)",
+				"Audience exhaustion identified; new ICP wedges tested",
+				"Brand-layer campaigns added (video reach for top-of-funnel mind-share)",
+				"Quarterly review against pipeline-influenced revenue target",
+			],
+		},
+	],
+	whoFor: [
+		"B2B SaaS Series A+ with documented ICP and ACV ≥ $10k",
+		"Professional services + fintech + B2B fintech with named-account targeting",
+		"Brands with a sales motion ready to handle LinkedIn-sourced leads (not consumer)",
+		"Teams with CRM + offline-conversion-import set up (or willing to set up)",
+	],
+	whoNotFor: [
+		"B2C / D2C — LinkedIn CPM is the highest in India; ROI rarely works",
+		"Brands without a sales team — leads will rot without follow-up",
+		"Sub-₹2L/month media budget — LinkedIn's algos need volume to learn",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹2L–₹4L/mo",
+			mediaContext: "Media ₹3-10L/mo typical",
+			bestFor: "B2B brands launching LinkedIn for the first time",
+			includes: [
+				"Sponsored Content + Lead-Gen Forms",
+				"CRM routing + Insights Tag setup",
+				"Weekly review + monthly pipeline reconciliation",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹4L–₹8L/mo",
+			mediaContext: "Media ₹10-50L/mo typical",
+			bestFor: "Scaling B2B brands across ABM + multi-format LinkedIn",
+			includes: [
+				"Everything in Starter",
+				"ABM tiering + Document + Conversation Ads",
+				"Offline conversion import + closed-won loop",
+				"Bi-weekly strategy + quarterly business review",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹8L+/mo",
+			mediaContext: "Media ₹50L+/mo",
+			bestFor: "Multi-geo + multi-segment B2B programs",
+			includes: [
+				"Everything in Scale",
+				"Dedicated paid-ops + RevOps integration",
+				"Multi-language LinkedIn programs",
+				"Executive quarterly pipeline readout",
+			],
+		},
+	],
+};
+
+const YOUTUBE_ADS_DEPTH: ServiceDepth = {
+	summary:
+		"YouTube Ads for awareness, mid-funnel, and Performance Max video — instrumented for view-through, not just direct conversion.",
+	deliverables: [
+		"Campaign architecture across In-Stream + Shorts + Discovery + Demand Gen + Action campaigns",
+		"Video creative briefs with hook + payoff + CTA structure documented",
+		"Audience build-out: in-market + affinity + custom-intent + remarketing tiers",
+		"GA4 + YouTube Analytics + view-through attribution stack",
+		"Brand-suitability + placement-exclusion lists configured",
+		"Weekly performance review with view-through conversion analysis",
+	],
+	channelMix: [
+		{
+			channel: "In-Stream skippable",
+			weight: "Primary (cost-efficient reach)",
+			note: "Pays only after 30 seconds or click; CPM efficient.",
+		},
+		{
+			channel: "YouTube Shorts",
+			weight: "Primary (Gen-Z + mobile reach)",
+			note: "Lowest CPM format; vertical 9:16 creative required.",
+		},
+		{
+			channel: "Demand Gen",
+			weight: "Conversion-focused",
+			note: "Goal-based optimization for purchase / lead / signup.",
+		},
+		{
+			channel: "Discovery (formerly TrueView Discovery)",
+			weight: "Supporting",
+			note: "Surfaces in Watch Next + Home feed; mid-funnel.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Audience + creative brief",
+			outputs: [
+				"Audience matrix: in-market + affinity + custom-intent + remarketing",
+				"Creative brief: hook (0-5s) + payoff (5-30s) + CTA structure",
+				"YouTube Analytics + GA4 attribution wiring",
+				"Brand-suitability + placement-exclusion list",
+			],
+		},
+		{
+			label: "Week 3–6",
+			heading: "Launch + iterate creative",
+			outputs: [
+				"In-Stream + Shorts campaigns live across 3-5 audiences",
+				"3-5 video variants tested per audience",
+				"Daily monitoring of view rate + cost-per-view",
+				"Week-4 review: kill low view-rate, scale winners, prep Demand Gen tests",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Add conversion + mid-funnel",
+			outputs: [
+				"Demand Gen + remarketing campaigns launched",
+				"View-through conversion analysis monthly",
+				"Creative variants expanded to 5-8 per audience",
+				"Cross-channel attribution: YouTube assist + last-click reconciliation",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Scale",
+			outputs: [
+				"Winning audiences expanded; under-performers de-prioritised",
+				"Brand-layer campaigns added (skippable + non-skippable reach)",
+				"Creative-supply rhythm stable at 8-12 new variants/month",
+				"Quarterly review against blended ROAS + brand-lift signals",
+			],
+		},
+	],
+	whoFor: [
+		"D2C brands with video creative capability (or willing to build it)",
+		"Brands ready to instrument view-through + last-click in parallel",
+		"Categories where storytelling + demonstration matter (apparel, food, education, fitness)",
+		"Mid-to-large media budgets where YouTube earns its place in the mix (₹3L+ media monthly)",
+	],
+	whoNotFor: [
+		"Brands without video creative supply — image-only ads don't run on YouTube",
+		"Sub-₹3L/mo media budgets — view-rates need volume to optimise",
+		"Categories where TrueView's skippable model misses the buying moment (high-urgency, search-led)",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹2L–₹4L/mo",
+			mediaContext: "Media ₹3-10L/mo typical",
+			bestFor: "Brands adding YouTube to an existing paid mix",
+			includes: [
+				"In-Stream + Shorts campaigns",
+				"Video creative brief support",
+				"Weekly review + monthly performance",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹4L–₹8L/mo",
+			mediaContext: "Media ₹10-50L/mo typical",
+			bestFor: "Scaling brands across multi-format YouTube",
+			includes: [
+				"Everything in Starter",
+				"Demand Gen + Discovery + remarketing tiers",
+				"View-through attribution + brand-lift analysis",
+				"Bi-weekly creative reviews",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹8L+/mo",
+			mediaContext: "Media ₹50L+/mo",
+			bestFor: "Multi-geo + multi-language YouTube programs",
+			includes: [
+				"Everything in Scale",
+				"In-house video production retainer or studio partnership",
+				"Multi-language creative + dub/subtitle workflow",
+				"Executive quarterly brand-lift + ROAS readout",
+			],
+		},
+	],
+};
+
+const WHATSAPP_MARKETING_DEPTH: ServiceDepth = {
+	summary:
+		"WhatsApp Business marketing — click-to-WhatsApp ads, broadcast automation, conversation flows, and CRM integration for high-intent lead capture.",
+	deliverables: [
+		"WhatsApp Business API setup + verification (Meta Business Manager)",
+		"Click-to-WhatsApp campaign architecture on Meta + Google",
+		"Broadcast list segmentation + opt-in compliance + DPDP-aware data handling",
+		"Conversation flows: welcome + lead-qualifying + handoff to sales / booking",
+		"CRM integration: leads route to HubSpot / Pipedrive / Zoho / custom",
+		"Compliance check: WhatsApp policy + DPDP consent + opt-out flows",
+		"Weekly review by campaign × creative × audience × conversation completion rate",
+	],
+	channelMix: [
+		{
+			channel: "Click-to-WhatsApp (Meta ads)",
+			weight: "Primary",
+			note: "30-50% lower CAC than website-form flows for service categories.",
+		},
+		{
+			channel: "Click-to-WhatsApp (Google ads)",
+			weight: "Supporting",
+			note: "Higher intent capture; pairs with Search campaigns for service businesses.",
+		},
+		{
+			channel: "WhatsApp broadcast / re-engagement",
+			weight: "Retention",
+			note: "Opt-in lists are the highest-engagement direct channel in India.",
+		},
+		{
+			channel: "Conversation flow automation",
+			weight: "Foundation",
+			note: "Without good flow design, lead quality drops fast.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Setup + compliance",
+			outputs: [
+				"WhatsApp Business API verified (BSP setup if required)",
+				"DPDP-aware consent + opt-out flow documented",
+				"Conversation flow design: welcome → qualify → handoff",
+				"CRM routing tested end-to-end",
+			],
+		},
+		{
+			label: "Week 3–6",
+			heading: "Launch",
+			outputs: [
+				"Click-to-WhatsApp campaigns live across Meta (and Google if relevant)",
+				"3-5 audiences tested with 4-6 creative variants each",
+				"Conversation-completion rate monitored daily",
+				"Week-4 review: sales-team feedback on lead quality + flow tuning",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Scale + broadcast layer",
+			outputs: [
+				"Winning audiences scaled; conversation flows refined",
+				"Broadcast list segmentation live for repeat-purchase categories",
+				"Re-engagement campaigns for cold leads (compliant + opt-in)",
+				"Monthly lead-quality reconciliation with sales pipeline",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Optimise",
+			outputs: [
+				"Conversation-to-conversion benchmarks established",
+				"Sales-team workflow integrated end-to-end",
+				"Cross-channel attribution: WhatsApp assist + closed-won tracking",
+				"Quarterly review against blended CAC + LTV / repeat-rate",
+			],
+		},
+	],
+	whoFor: [
+		"Real estate / services / D2C with high-touch sales conversations",
+		"Categories where Indian buyers prefer WhatsApp over forms / phone",
+		"Brands with a sales team that operates inside WhatsApp Business",
+		"Founders willing to invest in opt-in list growth (long-term LTV play)",
+	],
+	whoNotFor: [
+		"Pure self-serve digital products (sales conversation not needed)",
+		"Categories where DPDP compliance friction outweighs WhatsApp's intimacy advantage",
+		"Brands without a sales operator who can handle WhatsApp inbound",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹1.5L–₹3L/mo",
+			mediaContext: "Media ₹2-10L/mo + WhatsApp BSP costs",
+			bestFor: "Service businesses + real-estate launching click-to-WhatsApp",
+			includes: [
+				"Click-to-WhatsApp setup + 1-2 campaigns",
+				"Conversation flow design",
+				"Weekly review + monthly recap",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹3L–₹6L/mo",
+			mediaContext: "Media ₹10-50L/mo + WhatsApp BSP",
+			bestFor: "Scaling brands across click-to-WhatsApp + broadcast + automation",
+			includes: [
+				"Everything in Starter",
+				"Multi-campaign click-to-WhatsApp + broadcast layer",
+				"CRM integration + sales-team workflow",
+				"Bi-weekly strategy + quarterly pipeline review",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹6L+/mo",
+			mediaContext: "Media ₹50L+/mo + enterprise BSP",
+			bestFor: "Multi-brand / multi-region WhatsApp programs",
+			includes: [
+				"Everything in Scale",
+				"Custom conversation-flow engineering",
+				"AI-assisted message routing (where compliant)",
+				"Executive quarterly readout",
+			],
+		},
+	],
+};
+
+const EMAIL_MARKETING_DEPTH: ServiceDepth = {
+	summary:
+		"Email + lifecycle automation that compounds — welcome series, transactional, lifecycle, win-back, post-purchase. Built for LTV expansion, not blast-and-pray.",
+	deliverables: [
+		"ESP audit + migration (Klaviyo / Iterable / Customer.io / Mailchimp) where relevant",
+		"Lifecycle map: welcome → engagement → conversion → retention → win-back",
+		"Transactional email + receipt + shipping flows (revenue-protected, brand-consistent)",
+		"Segmentation logic: RFM + behaviour + product-affinity",
+		"Deliverability + DKIM/SPF/DMARC + domain warmup where needed",
+		"A/B testing rhythm on subject line + CTA + creative + send time",
+		"Monthly LTV-attribution reporting against email-influenced revenue",
+	],
+	channelMix: [
+		{
+			channel: "Transactional + post-purchase",
+			weight: "Foundation",
+			note: "Highest-opened email category; revenue-protected if you instrument it.",
+		},
+		{
+			channel: "Welcome / onboarding series",
+			weight: "Primary",
+			note: "5-12 email sequence that converts free→paid or first-purchase.",
+		},
+		{
+			channel: "Lifecycle (RFM-segmented)",
+			weight: "Retention",
+			note: "The compounding asset; LTV expansion lever.",
+		},
+		{
+			channel: "Win-back + reactivation",
+			weight: "Recovery",
+			note: "Cheapest 5-15% revenue reclaim opportunity in most brands.",
+		},
+		{
+			channel: "Newsletter / content",
+			weight: "Brand",
+			note: "Optional; useful if you have editorial cadence to support it.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Audit + map",
+			outputs: [
+				"ESP audit + deliverability check (DKIM/SPF/DMARC + sender reputation)",
+				"Lifecycle map documenting all touchpoints (existing + planned)",
+				"Segmentation logic + initial RFM scoring",
+				"Brand voice + email-template system",
+			],
+		},
+		{
+			label: "Week 3–8",
+			heading: "Flows live",
+			outputs: [
+				"Welcome series + transactional + post-purchase shipped",
+				"First lifecycle automations live (abandoned cart, browse abandonment, repeat-purchase)",
+				"A/B test framework operating (subject line + CTA + send time)",
+				"Deliverability monitoring + warmup if needed",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Expand + retention",
+			outputs: [
+				"RFM-segmented lifecycle flows active across all customer states",
+				"Win-back + reactivation flows live for cold cohorts",
+				"Cross-channel attribution: email assist + last-click reconciliation",
+				"Monthly LTV-attribution reporting",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Compound",
+			outputs: [
+				"Repeat-purchase rate uplift (typical band: +5-15 points over 6 months)",
+				"Newsletter / content layer added if editorial cadence supports",
+				"Quarterly content + creative refresh based on engagement data",
+				"Executive quarterly review against blended LTV / CAC",
+			],
+		},
+	],
+	whoFor: [
+		"D2C / SaaS / services with a transactional layer that needs lifecycle treatment",
+		"Brands with ≥5,000 contacts (enough volume for segmentation + A/B)",
+		"Teams ready to share customer data + product analytics for segmentation",
+		"Founders who understand LTV expansion is cheaper than acquisition spend",
+	],
+	whoNotFor: [
+		"Sub-1,000-contact lists (do acquisition first; lifecycle later)",
+		"Brands without a transactional event (one-time purchase only, no retention)",
+		"Categories with single-shot business models (no LTV to expand)",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹1.5L–₹3L/mo",
+			mediaContext: "ESP costs separate (₹15k-1L/mo typical for Indian D2C)",
+			bestFor: "Early-scale brands launching lifecycle",
+			includes: [
+				"Welcome + transactional + 3-5 lifecycle flows",
+				"Weekly review + monthly LTV reporting",
+				"Standard A/B testing rhythm",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹3L–₹6L/mo",
+			mediaContext: "ESP costs separate (₹1-5L/mo typical at scale)",
+			bestFor: "Scaling D2C / SaaS with multi-flow lifecycle programs",
+			includes: [
+				"Everything in Starter",
+				"Full RFM lifecycle map + win-back + post-purchase",
+				"Deliverability monitoring + dedicated IP if needed",
+				"Bi-weekly strategy + quarterly LTV review",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹6L+/mo",
+			mediaContext: "ESP + CDP costs separate",
+			bestFor: "Multi-brand / multi-product lifecycle programs",
+			includes: [
+				"Everything in Scale",
+				"Custom segmentation via CDP integration",
+				"AI-assisted send-time + content optimisation",
+				"Executive quarterly LTV readout",
+			],
+		},
+	],
+};
+
+const PPC_MANAGEMENT_DEPTH: ServiceDepth = {
+	summary:
+		"Performance-led paid acquisition with margin discipline — Google + Bing + Meta + the right niche channels operated as a single P&L.",
+	deliverables: [
+		"PPC account audit + restructure (campaign architecture, quality scores, negatives, conversion tracking)",
+		"Cross-platform attribution (CAPI / server-side / GTM SS / GA4 / post-purchase survey)",
+		"Bid-strategy choice per campaign (manual / tCPA / tROAS / Max Conv / Max Conv Value)",
+		"Search-term hygiene + negative-keyword + audience-exclusion sweeps weekly",
+		"Creative + landing-page experiment roadmap with ICE-scored hypotheses",
+		"Weekly review with budget reallocation logic + kill rules",
+		"Monthly attribution reconciliation against blended business metric",
+	],
+	channelMix: [
+		{
+			channel: "Google Search + Performance Max",
+			weight: "Primary",
+			note: "Intent capture + catalog acquisition; the backbone of most PPC programs.",
+		},
+		{
+			channel: "Meta (Facebook + Instagram)",
+			weight: "Primary",
+			note: "Highest creative-test velocity; complements Google's intent capture.",
+		},
+		{
+			channel: "Microsoft / Bing Ads",
+			weight: "Supporting",
+			note: "Underpriced for B2B + older-demographic categories.",
+		},
+		{
+			channel: "Niche networks (TikTok / Pinterest / Snap)",
+			weight: "Tactical",
+			note: "Add when ICP overlap justifies; rarely standalone.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Audit + restructure",
+			outputs: [
+				"Multi-platform account audit (campaign structure, QS, conversion integrity)",
+				"Conversion-tracking sanity check across all platforms",
+				"Keyword + negative-keyword + audience-exclusion baseline",
+				"Bid-strategy decision per campaign (with rationale)",
+			],
+		},
+		{
+			label: "Week 3–8",
+			heading: "Foundation + launch",
+			outputs: [
+				"Restructured campaigns live across primary channels",
+				"Creative + landing-page experiments queued + first round launched",
+				"Daily monitoring + budget tuning by campaign × channel",
+				"Week-4 review: kill low performers, scale winners",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Scale + budget rebalance",
+			outputs: [
+				"Budget reallocated across channels based on marginal CAC",
+				"Audience expansion + new campaign types tested (Shopping, Demand Gen, etc.)",
+				"Landing-page A/B tests live for high-traffic campaigns",
+				"Monthly attribution reconciliation",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Diversify + compound",
+			outputs: [
+				"New channels added (Bing, niche networks where ROI proves out)",
+				"Brand-defense + retargeting tiers stable",
+				"Quarterly P&L review of paid program against business growth target",
+			],
+		},
+	],
+	whoFor: [
+		"Brands with PMF running 2+ paid channels needing single-program operating discipline",
+		"Teams that want a single P&L view of PPC, not channel-by-channel silos",
+		"Businesses with budgets above ₹5L/month total media",
+		"Founders willing to share data + ad-account access from day one",
+	],
+	whoNotFor: [
+		"Single-channel businesses (hire a Google or Meta specialist instead)",
+		"Sub-₹2L/month media (too little to sustain cross-channel experimentation)",
+		"Brands without ICP clarity — PPC doesn't fix product-market-fit issues",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹2L–₹4L/mo",
+			mediaContext: "Media ₹5-30L/mo typical",
+			bestFor: "Multi-channel programs in early-scale phase",
+			includes: [
+				"2-3 channel program",
+				"Weekly cross-channel review",
+				"Monthly attribution reconciliation",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹4L–₹8L/mo",
+			mediaContext: "Media ₹30L-2Cr/mo typical",
+			bestFor: "Scaled brands across 4-5 channels",
+			includes: [
+				"Everything in Starter",
+				"Custom dashboards + offline conversion import",
+				"Landing-page CRO collaboration",
+				"Bi-weekly strategy + quarterly business review",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹8L+/mo",
+			mediaContext: "Media ₹2Cr+/mo",
+			bestFor: "Multi-brand / multi-geo programs",
+			includes: [
+				"Everything in Scale",
+				"Embedded team across paid ops + creative + analytics",
+				"Multi-geo programs with localised creative",
+				"Executive quarterly readout",
+			],
+		},
+	],
+};
+
+const SOCIAL_MEDIA_MARKETING_DEPTH: ServiceDepth = {
+	summary:
+		"Organic social + creator partnerships + paid social — operated as one program so brand-building and acquisition compound each other.",
+	deliverables: [
+		"Channel-priority recommendation (Instagram + LinkedIn + YouTube Shorts + TikTok + niche)",
+		"Content calendar + production pipeline (10-25 posts/month minimum for visibility)",
+		"Creator + influencer strategy (organic + paid + CPS deals where category fits)",
+		"Community management + comment / DM response SLAs",
+		"Paid amplification of top organic posts (best-converting media buy in 2026)",
+		"Brand-voice + visual-identity guide for cross-channel consistency",
+		"Monthly performance review across reach + engagement + share-of-voice + conversion-assist",
+	],
+	channelMix: [
+		{
+			channel: "Instagram (Feed + Reels + Stories)",
+			weight: "Primary for B2C",
+			note: "Visual-led categories: fashion / beauty / F&B / real estate / wellness / D2C.",
+		},
+		{
+			channel: "LinkedIn",
+			weight: "Primary for B2B",
+			note: "Brand-building + thought leadership + organic lead-gen.",
+		},
+		{
+			channel: "YouTube Shorts + TikTok",
+			weight: "Reach",
+			note: "Gen-Z + mid-market reach; vertical video assets.",
+		},
+		{
+			channel: "Creator partnerships",
+			weight: "Amplifier",
+			note: "Mix of macro / mid / nano based on category economics.",
+		},
+		{
+			channel: "X (Twitter)",
+			weight: "Optional",
+			note: "Strong for SaaS founder-led; weak for most B2C categories.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Channel + content strategy",
+			outputs: [
+				"Channel-priority recommendation based on ICP + category",
+				"Content calendar (first 30 days)",
+				"Brand voice + visual identity documented",
+				"Creator-strategy outline (where applicable)",
+			],
+		},
+		{
+			label: "Week 3–8",
+			heading: "Production rhythm",
+			outputs: [
+				"Daily / 3x-weekly posting cadence established",
+				"Engagement + DM response SLAs operating",
+				"First creator collaborations live",
+				"Paid-amplification budget activated on top organic posts",
+			],
+		},
+		{
+			label: "Month 2–4",
+			heading: "Scale + creator network",
+			outputs: [
+				"Creator network expanded (3-10 active partners depending on tier)",
+				"Top-performing content formats identified + scaled",
+				"Cross-channel content repurposing pipeline running",
+				"Share-of-voice tracking + competitor benchmarking monthly",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Compound",
+			outputs: [
+				"Brand mention growth quarter-over-quarter",
+				"Organic reach + engagement compounding without proportional content increase",
+				"Creator program ROI proven + scaled where economics work",
+				"Quarterly review against blended brand-lift + assist-conversion metrics",
+			],
+		},
+	],
+	whoFor: [
+		"Brands willing to commit to a content cadence (10+ posts/month minimum)",
+		"Founders / spokespeople willing to be face-of-brand on at least one channel",
+		"Categories where organic social compounds (lifestyle / consumer / SaaS founder-led)",
+		"Teams with creative-supply capacity (in-house or studio retainer)",
+	],
+	whoNotFor: [
+		"Brands looking for guaranteed direct-conversion ROI from organic social",
+		"Categories with no plausible organic-social hook (deep B2B utility software)",
+		"Teams unable to sustain 10+ posts/month — under that, the algos don't optimize for you",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹2L–₹4L/mo",
+			mediaContext: "Paid amplification ₹1-5L/mo + creator costs separate",
+			bestFor: "Brands launching social with 1-2 priority channels",
+			includes: [
+				"Channel strategy + brand-voice guide",
+				"10-15 posts/month",
+				"Community management",
+				"Monthly performance review",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹4L–₹8L/mo",
+			mediaContext: "Paid amplification ₹5-25L/mo + creator costs",
+			bestFor: "Scaling brands across 3-5 channels with creator program",
+			includes: [
+				"Everything in Starter",
+				"3-5 channel program + creator network",
+				"15-25 posts/month + paid amplification",
+				"Bi-weekly content reviews",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹8L+/mo",
+			mediaContext: "Paid amplification ₹25L+/mo + dedicated creator budget",
+			bestFor: "Multi-brand / multi-geo social programs",
+			includes: [
+				"Everything in Scale",
+				"In-house content studio retainer",
+				"Multi-language / multi-region social",
+				"Executive quarterly brand-lift readout",
+			],
+		},
+	],
+};
+
 // ─────────────────────── Registry + lookup ───────────────────────
 
 const SERVICE_DEPTH_BY_ID: Record<string, ServiceDepth> = {
@@ -961,13 +1740,20 @@ const SERVICE_DEPTH_BY_ID: Record<string, ServiceDepth> = {
 	"performance-marketing": PERFORMANCE_MARKETING_DEPTH,
 	"content-marketing": CONTENT_MARKETING_DEPTH,
 	"conversion-rate-optimization": CRO_DEPTH,
+	"linkedin-ads": LINKEDIN_ADS_DEPTH,
+	"youtube-ads": YOUTUBE_ADS_DEPTH,
+	"whatsapp-marketing": WHATSAPP_MARKETING_DEPTH,
+	"email-marketing": EMAIL_MARKETING_DEPTH,
+	"ppc-management": PPC_MANAGEMENT_DEPTH,
+	"social-media-marketing": SOCIAL_MEDIA_MARKETING_DEPTH,
 };
 
 /**
- * Returns the depth seed for a service. Falls back to generic when no hand-
- * crafted entry exists — the generic still reads from the service's taxonomy
- * fields, so output stays unique per service.
+ * Returns the depth seed for a service. Falls back to a Service-driven generic
+ * template when no hand-crafted entry exists — the generic still reads each
+ * service's own topUseCases / primaryKpi / timeToResults / avgCpc / avgCac so
+ * output stays cell-unique even without a hand-crafted record.
  */
-export function getServiceDepth(serviceId: string): ServiceDepth {
-	return SERVICE_DEPTH_BY_ID[serviceId] ?? genericDepth();
+export function getServiceDepth(service: Service): ServiceDepth {
+	return SERVICE_DEPTH_BY_ID[service.id] ?? genericDepth(service);
 }

@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Head from "next/head"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import { ServiceDepthSection } from "@/components/templates/ServiceDepthSection"
+import { services } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Linkedin, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro, Smartphone as Mobile, Video, MessageCircle, Search, ShoppingBag, Users as People, BarChart, ArrowRight, Play, Eye, ThumbsUp, Share2, Download } from "lucide-react"
@@ -1452,6 +1454,10 @@ export default function YouTubeAdsPage() {
         </motion.div>
       </motion.div>
 
+      {(() => {
+        const _svc = services.find((s) => s.id === "youtube-ads");
+        return _svc ? <ServiceDepthSection service={_svc} /> : null;
+      })()}
       <Footer />
     </div>
     </>

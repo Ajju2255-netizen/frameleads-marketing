@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Head from "next/head"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import { ServiceDepthSection } from "@/components/templates/ServiceDepthSection"
+import { services } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star, TrendingUp, Users, Award, CheckCircle, Phone, Mail, Clock, Target, Zap, BarChart3, Video, MessageSquare, Calendar, Users2, Building2, Briefcase, Shield, Globe, DollarSign, PieChart, Settings, Monitor, Smartphone, ShoppingCart, Heart, GraduationCap, Palette, Crown, Euro, MessageCircle, Search, ShoppingBag, BarChart, ArrowRight, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, ExternalLink, Brain, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, LineChart, Percent, Calculator, BookOpen, FileText, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Trophy, Medal, Home, Coffee, Code, Database, Server, Wrench, Cpu, HardDrive, Network, Terminal, GitBranch, ShieldCheck, Zap as ZapIcon } from "lucide-react"
@@ -1580,6 +1582,10 @@ export default function EmailMarketingAutomationPage() {
         </motion.div>
       </motion.div>
 
+      {(() => {
+        const _svc = services.find((s) => s.id === "email-marketing");
+        return _svc ? <ServiceDepthSection service={_svc} /> : null;
+      })()}
       <Footer />
     </div>
     </>

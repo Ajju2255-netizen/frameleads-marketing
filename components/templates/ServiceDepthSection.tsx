@@ -31,7 +31,7 @@ function contextSuffix(industry?: Industry, geo?: Geo): string {
 }
 
 export function ServiceDepthSection({ service, industry, geo }: Props) {
-	const depth = getServiceDepth(service.id);
+	const depth = getServiceDepth(service);
 	const ctx = contextSuffix(industry, geo);
 
 	return (
