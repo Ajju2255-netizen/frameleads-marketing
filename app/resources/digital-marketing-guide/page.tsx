@@ -305,7 +305,7 @@ export default function DigitalMarketingGuidePage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Digital marketing encompasses all marketing efforts that use electronic devices or the internet. Businesses leverage digital channels such as <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">search engines</Link>, <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">social media</Link>, <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">email</Link>, and websites to connect with current and prospective customers.
+              Digital marketing encompasses all marketing efforts that use electronic devices or the internet. Businesses leverage digital channels such as <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">search engines</Link>, <Link href="/social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">social media</Link>, <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">email</Link>, and websites to connect with current and prospective customers.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               Unlike traditional marketing, digital marketing allows for real-time interaction, precise targeting, and measurable results. This makes it not just more cost-effective, but also more accountable and data-driven than traditional marketing methods. Learn more about our <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">comprehensive digital marketing services</Link>.
@@ -469,7 +469,7 @@ export default function DigitalMarketingGuidePage() {
                   )}
                   {channel.title === "Social Media Marketing" && (
                     <p className="text-sm text-[#FF6B35] mb-4">
-                      <Link href="/Social-media-marketing" className="hover:text-[#FF8A50] font-medium">Discover our social media strategies →</Link>
+                      <Link href="/social-media-marketing" className="hover:text-[#FF8A50] font-medium">Discover our social media strategies →</Link>
                     </p>
                   )}
                   {channel.title === "Content Marketing" && (

@@ -1,5 +1,7 @@
 ## Pages overview (headings and content)
 
+> **Stale notice (2026-06-07):** this file describes a small subset of historical pages. The live site has 108+ `page.tsx` files plus ~5,000 programmatic cells via `app/[slug]/page.tsx`. For an up-to-date inventory, see [`FRAMELEADS-WEBSITE-COMPLETE.md`](./FRAMELEADS-WEBSITE-COMPLETE.md) (Parts II §2 and III §3). Founder/team names below are also stale — live pages reference Ajsal Abbas as Founder & CEO.
+
 This document summarizes all `page.tsx` files under `app/`, listing the main on-page headings and the content shown beneath each.
 
 ### Page: `/` (file: `app/page.tsx`)

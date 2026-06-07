@@ -1,7 +1,9 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+
+const WHATSAPP_INTENT = "https://wa.me/916362821368?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
 
 export default function Footer() {
   const services = [
@@ -9,11 +11,11 @@ export default function Footer() {
     { name: "SEO Services", href: "/seo-services" },
     { name: "PPC Management", href: "/services/ppc-management" },
     { name: "Content Marketing", href: "/content-marketing" },
-    { name: "Social Media Marketing", href: "/Social-media-marketing" },
+    { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "WhatsApp Marketing", href: "/whatsapp-marketing" },
     { name: "Analytics and Automation", href: "/analytics-and-automations" },
     { name: "Conversion Rate Optimization", href: "/conversion-rate-optimization" },
-    { name: "Performance Marketing", href: "/perforamance-marketing" },
+    { name: "Performance Marketing", href: "/performance-marketing" },
     { name: "Email Marketing & Automation", href: "/email-marketing-and-automation-services" },
     { name: "Branding Services", href: "/branding" },
     { name: "Website Development", href: "/website-development" },
@@ -21,7 +23,7 @@ export default function Footer() {
 
   const advertisingPlatforms = [
     { name: "Google Ads", href: "/google-ads" },
-    { name: "Meta Ads", href: "/Meta-ads" },
+    { name: "Meta Ads", href: "/meta-ads" },
     { name: "YouTube Ads", href: "/youtube-ads" },
     { name: "LinkedIn Ads", href: "/linkedin-ads" },
     { name: "TikTok Ads", href: "/tiktok-ads" },
@@ -61,11 +63,12 @@ export default function Footer() {
   ]
 
   const resources = [
-    { name: "Digital Marketing Guide", href: "/resources/digital-marketing-guide" },
-    { name: "Free Marketing Audit", href: "/contact" },
-    { name: "ROI Calculator", href: "/tools/roi-calculator" },
-    { name: "Templates", href: "/templates" },
-    { name: "FAQ", href: "/faq" },
+    { name: "How-to guides", href: "/how-to" },
+    { name: "Glossary", href: "/glossary" },
+    { name: "Compare options", href: "/vs" },
+    { name: "ROI calculator", href: "/tools/roi-calculator" },
+    { name: "Free marketing audit", href: "/free-marketing-audit" },
+    { name: "Service locations", href: "/locations" },
   ]
 
   const legal = [
@@ -77,9 +80,10 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577223400100" },
+    { name: "WhatsApp", icon: MessageCircle, href: WHATSAPP_INTENT },
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/frameleads" },
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/frameleads/" },
+    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577223400100" },
     { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@ajsalabbas8093" },
   ]
 
@@ -233,14 +237,29 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center text-[#5A5A5A] text-sm">
+              <a
+                href="mailto:ajsal@frameleads.com"
+                className="flex items-center text-[#5A5A5A] text-sm hover:text-[#FF6B35] transition-colors duration-300"
+              >
                 <Mail className="h-4 w-4 mr-3 text-[#FF6B35]" />
                 <span>ajsal@frameleads.com</span>
-              </div>
-              <div className="flex items-center text-[#5A5A5A] text-sm">
+              </a>
+              <a
+                href="tel:+916362821368"
+                className="flex items-center text-[#5A5A5A] text-sm hover:text-[#FF6B35] transition-colors duration-300"
+              >
                 <Phone className="h-4 w-4 mr-3 text-[#FF6B35]" />
                 <span>+91 6362821368</span>
-              </div>
+              </a>
+              <a
+                href={WHATSAPP_INTENT}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-[#5A5A5A] text-sm hover:text-[#25D366] transition-colors duration-300"
+              >
+                <MessageCircle className="h-4 w-4 mr-3 text-[#25D366]" />
+                <span>Chat on WhatsApp</span>
+              </a>
               <div className="flex items-center text-[#5A5A5A] text-sm">
                 <MapPin className="h-4 w-4 mr-3 text-[#FF6B35]" />
                 <span>Bangalore, India</span>

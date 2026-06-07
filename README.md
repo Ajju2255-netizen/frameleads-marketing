@@ -72,7 +72,7 @@ This document outlines the headings and content structure for all page.tsx files
 ### Team Section
 - **Heading:** "Meet Our Team"
 - **Team Members:**
-  1. **Rahul Sharma** - Founder & CEO (10+ years experience)
+  1. **Ajsal Abbas** - Founder & CEO (15+ years; Shark Tank India experience)
   2. **Priya Patel** - Head of SEO (8+ years experience)
   3. **Amit Kumar** - Content Strategy Lead
   4. **Sneha Reddy** - Digital Marketing Manager

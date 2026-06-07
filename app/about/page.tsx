@@ -226,7 +226,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50]">SEO Services</Link>
             <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50]">PPC Management</Link>
-            <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Social Media Marketing</Link>
+            <Link href="/social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Social Media Marketing</Link>
             <Link href="/content-marketing" className="text-[#FF6B35] hover:text-[#FF8A50]">Content Marketing</Link>
           </div>
         </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
                 <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
                 <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
                 <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
               </div>
             </div>

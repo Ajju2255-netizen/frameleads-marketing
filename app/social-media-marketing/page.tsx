@@ -23,57 +23,57 @@ export default function PerformanceMarketingPage() {
     setIsVisible(true)
   }, [])
 
-  const performanceBenefits = [
-    "Pay only for results — no wasted spend on impressions",
-    "Real-time performance tracking and insights",
-    "Scalable growth by doubling down on winning campaigns",
-    "Transparent ROI with clear attribution",
+  const coreBenefits = [
+    "Increased brand awareness across key platforms",
+    "Lead generation through conversion-focused funnels",
+    "Customer engagement and community building",
+    "Revenue growth via targeted campaigns and offers",
   ]
 
   const channels = [
     {
-      title: "Paid Search Marketing (PPC)",
+      title: "Social Media Strategy Development",
       points: [
-        "Google Ads optimization for conversion",
-        "Bing Ads with ROI focus",
-        "Advanced keyword and bid strategies",
-        "Landing page CRO",
+        "Platform-specific content strategies",
+        "Audience research and persona development",
+        "Competitive analysis and positioning",
+        "Content calendar and posting optimization",
       ],
     },
     {
-      title: "Social Media Performance Marketing",
+      title: "Social Media Management Services",
       points: [
-        "Facebook and Instagram optimization",
-        "LinkedIn B2B performance campaigns",
-        "TikTok and YouTube strategies",
-        "Cross-platform retargeting",
+        "Daily content creation and publishing",
+        "Community management and engagement",
+        "Brand voice development and consistency",
+        "Real-time monitoring and response",
       ],
     },
     {
-      title: "Affiliate Marketing Programs",
+      title: "Social Media Advertising",
       points: [
-        "Partner network development",
-        "Commission model optimization",
-        "Performance tracking and attribution",
-        "Affiliate recruitment and enablement",
+        "Facebook and Instagram targeted ads",
+        "LinkedIn B2B advertising campaigns",
+        "YouTube video advertising",
+        "TikTok and emerging platform ads",
       ],
     },
     {
-      title: "Email Marketing Performance",
+      title: "Influencer Marketing",
       points: [
-        "Automated conversion-focused journeys",
-        "Advanced segmentation",
-        "A/B testing and experimentation",
-        "Lifecycle marketing automation",
+        "Influencer identification and outreach",
+        "Campaign strategy and execution",
+        "Performance tracking and ROI analysis",
+        "Long-term partnership development",
       ],
     },
     {
-      title: "Programmatic Advertising",
+      title: "Social Analytics & Reporting",
       points: [
-        "Real-time bidding optimization",
-        "Audience targeting and lookalikes",
-        "Cross-device attribution",
-        "Dynamic creative optimization",
+        "Performance dashboards and KPIs",
+        "ROI tracking and attribution",
+        "Audience insights and behavior",
+        "Monthly optimization roadmaps",
       ],
     },
   ]
@@ -81,131 +81,129 @@ export default function PerformanceMarketingPage() {
   const process = [
     {
       step: "01",
-      title: "Performance Audit & Analysis",
+      title: "Social Media Audit & Strategy",
       description:
-        "Comprehensive audit of current digital performance, competitor insights, and identification of high-ROI opportunities across channels.",
+        "Complete analysis of your current presence, competitor benchmarking, and custom strategy aligned to business goals.",
     },
     {
       step: "02",
-      title: "Data-Driven Strategy Development",
+      title: "Content Creation & Management",
       description:
-        "Custom performance marketing strategy aligned to your goals and KPIs, with clear channel, audience, and budget plans.",
+        "Strategic content development with consistent brand messaging, engaging visuals, and optimized posting schedules.",
     },
     {
       step: "03",
-      title: "Implementation & Optimization",
+      title: "Paid Social Advertising",
       description:
-        "Launch multi-channel campaigns with continuous A/B testing, conversion optimization, and real-time performance tracking.",
+        "Targeted ad campaigns to maximize reach, engagement, and conversions with efficient CPC and strong ROAS.",
     },
     {
       step: "04",
-      title: "Analytics, Attribution & Reporting",
+      title: "Analytics & Optimization",
       description:
-        "Advanced attribution modeling and transparent ROI reporting with actionable insights for ongoing improvement.",
+        "Continuous monitoring, performance analysis, and refinement to ensure maximum ROI from social channels.",
     },
   ]
 
   const industries = [
     {
-      title: "E-commerce Performance Marketing",
+      title: "E-commerce Social Media Marketing",
       points: [
-        "Shopping campaign optimization",
-        "Product feed management",
-        "CAC reduction and LTV growth",
-        "Cart abandonment recovery",
+        "Product showcase campaigns",
+        "Shopping ads and conversion optimization",
+        "UGC strategies and testimonials",
+        "Seasonal and flash sale promotions",
       ],
     },
     {
-      title: "B2B Performance Marketing",
+      title: "B2B Social Media Marketing",
       points: [
-        "Lead generation optimization",
-        "Account-based marketing (ABM)",
-        "Funnel performance tracking",
-        "MQL quality and volume improvement",
+        "LinkedIn lead generation",
+        "Thought leadership and community",
+        "Webinar promotion",
+        "Account-based social campaigns",
       ],
     },
     {
-      title: "SaaS Performance Marketing",
+      title: "SaaS Social Media Marketing",
       points: [
-        "Trial-to-paid conversion uplift",
-        "Subscription model growth",
-        "Onboarding and retention",
-        "Churn reduction and activation",
+        "Feature announcements and demos",
+        "Customer success amplification",
+        "Free trial conversion optimization",
+        "Technical content and developer engagement",
       ],
     },
     {
-      title: "Local Business Performance Marketing",
+      title: "Local Business Social Media Marketing",
       points: [
-        "Google Business Profile optimization",
-        "Local search advertising",
-        "Geo-targeted campaigns",
-        "Store visit tracking",
+        "Geotargeted ads for local customers",
+        "Google Business Profile and local SEO",
+        "Community event promotion",
+        "Location-based content and engagement",
       ],
     },
   ]
 
   const platforms = [
-    "Google Ads & GA4",
-    "Facebook Business Manager",
-    "Microsoft Advertising",
-    "LinkedIn Campaign Manager",
-    "Amazon Advertising",
+    "Hootsuite, Buffer, Sprout Social",
+    "Meta Business Suite and LinkedIn Campaign Manager",
+    "Canva, Adobe Creative Suite",
+    "Video editing and production tools",
   ]
 
   const attribution = [
-    "GA4 Enhanced Measurement",
-    "Adobe Analytics",
-    "HubSpot",
-    "Salesforce Marketing Cloud",
-    "Custom UTM and server-side tracking",
+    "Google Analytics 4 and platform insights",
+    "Facebook/Instagram analytics",
+    "Custom UTM tracking",
+    "Cross-platform ROI attribution",
   ]
 
   const caseStudies = [
     {
-      industry: "SaaS Company",
-      result: "65% lower CPA, 180% higher trial-to-paid",
-      description:
-        "Multi-channel strategy across Google, LinkedIn, and email automation delivered cost-efficient acquisition and conversion uplift.",
-    },
-    {
       industry: "E-commerce Brand",
-      result: "250% revenue growth, 40% ROAS improvement",
+      result: "300% revenue increase",
       description:
-        "Google Shopping, Facebook, and affiliates scaled profitable growth and lifted customer lifetime value.",
+        "Influencer partnerships, UGC campaigns, and targeted ads delivered 300% revenue growth and 250% follower increase in 6 months.",
     },
     {
-      industry: "B2B Enterprise",
-      result: "200% more qualified leads, 50% lower CPL",
+      industry: "B2B SaaS Company",
+      result: "400% lead generation",
       description:
-        "ABM-led performance marketing via LinkedIn and Google Ads improved lead quality and conversion rates.",
+        "LinkedIn thought leadership and targeted ads generated 400% more qualified leads and cut CPL by 60%.",
+    },
+    {
+      industry: "Local Restaurant Chain",
+      result: "200% foot traffic",
+      description:
+        "Geotargeted ads, community engagement, and rich creative increased foot traffic by 200% across locations.",
     },
   ]
 
   const faqData = [
     {
-      question: "What is performance marketing and how does it differ?",
+      question: "What is a social media marketing agency?",
       answer:
-        "Performance marketing is a results-focused approach where you pay only when specific actions occur (clicks, leads, sales), unlike traditional marketing that charges for impressions or reach.",
+        "A specialized partner that grows your brand, engagement, and sales through strategic campaigns across platforms like Facebook, Instagram, LinkedIn, and TikTok.",
     },
     {
-      question: "What are the key performance marketing metrics?",
+      question: "How much does a social media marketing agency cost?",
       answer:
-        "Core metrics include CPA, ROAS, CTR, conversion rate, and customer lifetime value (CLV).",
+        "Typical retainers range $1,500–$10,000+ per month depending on scope, platforms, and ad spend. We customize packages for all sizes.",
     },
     {
-      question: "How fast can we see results?",
+      question: "What services are included?",
       answer:
-        "Initial results typically appear within 2–4 weeks, with significant optimization gains after 60–90 days of continuous testing and iteration.",
+        "Strategy, content creation, social management, paid advertising, influencer campaigns, community management, analytics, and reporting.",
     },
     {
-      question: "Which industries benefit most?",
+      question: "How long until we see results?",
       answer:
-        "E-commerce, SaaS, B2B, fintech, healthcare, professional services, and education see outstanding ROI from performance marketing.",
+        "Most brands see engagement lift in 2–4 weeks, with significant growth in followers, leads, and sales within 90 days of consistent work.",
     },
     {
-      question: "How do you ensure transparent ROI reporting?",
+      question: "Which platforms should we use?",
       answer:
-        "We provide real-time dashboards, monthly reports, and full-funnel attribution for complete clarity across channels.",
+        "It depends on your audience and goals. Facebook/Instagram fit most, LinkedIn for B2B, TikTok for younger demographics.",
     },
   ]
 
@@ -214,19 +212,13 @@ export default function PerformanceMarketingPage() {
     "@graph": [
       {
         "@type": "MarketingAgency",
-        "name": "Frameleads Performance Marketing",
-        "description": "Expert performance marketing services delivering measurable ROI through data-driven campaigns",
-        "url": "https://frameleads.com/performance-marketing",
+        "name": "FrameLeads Social Media Marketing Agency",
+        "description": "Professional social media marketing agency providing comprehensive SMM services including strategy, management, advertising, and analytics.",
+        "serviceType": ["Social Media Marketing", "Social Media Management", "Social Media Advertising", "SMM Consulting"],
+        "areaServed": ["North America", "Europe", "Asia", "Latin America", "Middle East", "South Asia"],
+        "url": "https://frameleads.com/social-media-marketing",
         "telephone": "+91 6362821368",
-        "email": "ajsal@frameleads.com",
-        "serviceArea": ["India", "United Arab Emirates", "United States", "United Kingdom"],
-        "services": [
-          "Performance Marketing",
-          "PPC Management",
-          "Social Media Advertising",
-          "Affiliate Marketing",
-          "Conversion Optimization"
-        ]
+        "email": "ajsal@frameleads.com"
       },
       {
         "@type": "FAQPage",
@@ -330,22 +322,22 @@ export default function PerformanceMarketingPage() {
           >
             <div className="inline-block mb-6">
               <span className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-6 py-3 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-                🎯 Results-Driven Performance Marketing Experts
+                🚀 Expert Social Media Marketing Agency
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
-              Performance Marketing Agency — Maximize ROI with Data-Driven Campaigns
+              Social Media Marketing Agency — Drive Growth with Data-Driven SMM Strategies
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Transform your growth with performance marketing solutions that deliver measurable results. Our data-driven approach ensures every marketing dollar drives real ROI through strategic, performance-based campaigns.
+              Transform your brand's social presence into a powerful revenue engine. Our expert social media marketing services deliver measurable ROI through strategic content creation, targeted advertising, and comprehensive social media management.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/contact">
                 <Button className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105">
-                  Get Free Performance Marketing Audit
+                  Get Free Social Media Marketing Audit
                 </Button>
               </Link>
               <Link href="tel:+916362821368" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
@@ -359,34 +351,38 @@ export default function PerformanceMarketingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>500+ successful performance campaigns</span>
+                <span>500+ successful social campaigns</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>5+ years of ROI optimization</span>
+                <span>95% client retention rate</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
-                <span>Average 300% conversion lift</span>
+                <span>Certified social media experts</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-[#FF6B35]" />
+                <span>Results within 30 days</span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* What is Performance Marketing */}
-      <section className="relative py-20" id="what-is-performance">
+      {/* What is Social Media Marketing */}
+      <section className="relative py-20" id="what-is-smm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                What is Performance Marketing? Your Path to Measurable Growth
+                What is Social Media Marketing?
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Performance marketing is a data-driven approach where you pay only for completed actions — clicks, leads, sales, or other conversions. Unlike traditional advertising, performance-based marketing focuses on measurable outcomes and accountable ROI.
+                Social media marketing is the strategic use of platforms to connect with your audience, build brand awareness, and drive business growth.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {performanceBenefits.map((point, index) => (
+                {coreBenefits.map((point, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#FF6B35] flex-shrink-0" />
                     <span className="text-gray-600">{point}</span>
@@ -398,7 +394,7 @@ export default function PerformanceMarketingPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8A50]/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 z-0"></div>
               <Image
                 src="/placeholder.jpg"
-                alt="Performance marketing analytics dashboard"
+                alt="Social media marketing analytics dashboard"
                 fill
                 className="shadow-2xl object-cover z-10"
               />
@@ -413,10 +409,10 @@ export default function PerformanceMarketingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Our Performance Marketing Services?
+              Why Choose Our Social Media Marketing Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We build comprehensive, data-driven strategies across channels, combining advanced analytics, strategic targeting, and continuous optimization to maximize ROI.
+              We build comprehensive, data-driven strategies across platforms, combining advanced analytics, strategic targeting, and continuous optimization to maximize ROI.
             </p>
           </div>
 
@@ -443,10 +439,10 @@ export default function PerformanceMarketingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Performance Marketing Process — Proven Results Framework
+              Our Social Media Marketing Process — Proven Results Framework
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to planning, launching, optimizing, and measuring performance ensures sustained ROI and scalable growth.
+              A systematic approach to planning, launching, optimizing, and measuring social media performance ensures sustained ROI and scalable growth.
             </p>
           </div>
 
@@ -471,9 +467,9 @@ export default function PerformanceMarketingPage() {
       <section className="relative py-20" id="industries">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Performance Marketing Solutions by Industry</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Social Media Marketing Solutions by Industry</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored strategies that reflect your funnel, audience, and business model.
+              Tailored strategies that reflect your audience, business model, and social media goals.
             </p>
           </div>
 
@@ -499,14 +495,14 @@ export default function PerformanceMarketingPage() {
       <section className="relative py-20" id="technology">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Performance Platforms & Technology Stack</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced tools for campaign execution, analytics, and attribution.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Social Media Platforms & Technology Stack</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced tools for social media management, content creation, and analytics.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-6 relative z-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Performance Marketing Tools</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Social Media Management Tools</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   {platforms.map((pt, i) => (
                     <li key={i}>{pt}</li>
@@ -517,7 +513,7 @@ export default function PerformanceMarketingPage() {
             <Card className="group relative bg-white/80 backdrop-blur-xl border-gray-200/50 hover:border-[#FF6B35]/50 transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="p-6 relative z-10">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Attribution & Analytics Platforms</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Attribution Platforms</h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                   {attribution.map((pt, i) => (
                     <li key={i}>{pt}</li>
@@ -533,8 +529,8 @@ export default function PerformanceMarketingPage() {
       <section className="relative py-20" id="case-studies">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Performance Marketing Case Studies — Proven Results</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real business impact through data-driven execution.</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Social Media Marketing Case Studies — Proven Results</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real business impact through data-driven social media execution.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -559,10 +555,10 @@ export default function PerformanceMarketingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions About Performance Marketing
+              Frequently Asked Questions About Social Media Marketing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions and learn how we deliver transparent, ROI-focused growth.
+              Get answers to common questions and learn how we deliver transparent, ROI-focused social media growth.
             </p>
           </div>
 
@@ -585,9 +581,9 @@ export default function PerformanceMarketingPage() {
 
       {/* Contact CTA */}
       <ContactCTA
-        title="Ready to Maximize Your Marketing ROI?"
-        description="Partner with our performance marketing agency to transform your growth through data-driven, results-focused campaigns. Free performance audit within 48 hours."
-        primaryButtonText="Get Free Performance Audit"
+        title="Ready to Maximize Your Social Media ROI?"
+        description="Partner with our social media marketing agency to transform your growth through data-driven, results-focused campaigns. Free social media audit within 48 hours."
+        primaryButtonText="Get Free Social Media Audit"
         secondaryButtonText="Schedule Strategy Consultation"
       />
 
@@ -597,20 +593,20 @@ export default function PerformanceMarketingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Digital Marketing Solutions</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Performance marketing works best when integrated with other digital marketing strategies
+              Social media marketing works best when integrated with other digital marketing strategies
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Performance & Paid Marketing */}
+            {/* Social Media & Content */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance & Paid Marketing</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Social Media & Content</h3>
               <div className="space-y-3">
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
-                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
-                <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
+                <Link href="/social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
                 <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising</Link>
+                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing</Link>
+                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
               </div>
             </div>
 
@@ -621,20 +617,20 @@ export default function PerformanceMarketingPage() {
                 <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
                 <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
                 <Link href="/digital-marketing-in-dubai" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Dubai</Link>
-                <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
+                <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
+                <Link href="/performance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
               </div>
             </div>
 
-            {/* Industry Specializations */}
+            {/* Digital Marketing Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Industry Specializations</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Marketing</h3>
               <div className="space-y-3">
-                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</Link>
-                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing</Link>
-                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising Bangalore</Link>
+                <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
                 <Link href="/digital-marketing-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Bangalore</Link>
-                <Link href="/seo-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Company Bangalore</Link>
+                <Link href="/creative-advertising-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Creative Advertising Bangalore</Link>
+                <Link href="/b2b-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">B2B Marketing Bangalore</Link>
+                <Link href="/real-estate-marketing-company-in-bangalore" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Real Estate Marketing Bangalore</Link>
               </div>
             </div>
 

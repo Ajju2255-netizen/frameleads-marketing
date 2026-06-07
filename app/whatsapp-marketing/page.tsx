@@ -896,9 +896,9 @@ export default function WhatsAppMarketingPage() {
               <div className="space-y-3">
                 <Link href="/whatsapp-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">WhatsApp Marketing</Link>
                 <Link href="/email-marketing-and-automation-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Email Marketing & Automation</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
                 <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
+                <Link href="/performance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
                 <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function FeatureCards() {
         "Build a powerful social media presence that engages customers and drives sales. Our social media specialists create platform-specific strategies for Instagram, Facebook, LinkedIn, and Twitter that increase follower engagement and brand awareness.",
       benefits: ["Multi-Platform", "Engagement Growth", "Brand Awareness"],
       color: "from-orange-400 to-red-400",
-      link: "/Social-media-marketing"
+      link: "/social-media-marketing"
     },
   ]
 

@@ -190,7 +190,7 @@ export default function ROICalculatorPage() {
               Measure the effectiveness of your digital marketing campaigns with our comprehensive ROI calculator. 
               Get instant insights into your <Link href="/ppc-management" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">PPC performance</Link>, 
               <Link href="/seo-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">SEO results</Link>, and{' '}
-              <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">social media campaigns</Link>.
+              <Link href="/social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">social media campaigns</Link>.
             </p>
           </div>
         </div>
@@ -529,7 +529,7 @@ export default function ROICalculatorPage() {
                   retention strategies
                 </Link>{' '}
                 and{' '}
-                <Link href="/Social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">
+                <Link href="/social-media-marketing" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">
                   customer engagement
                 </Link>{' '}
                 to maximize long-term ROI.
