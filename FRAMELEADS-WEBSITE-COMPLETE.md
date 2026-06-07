@@ -1797,6 +1797,15 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 6A — Internal-linking refresh + a11y pass (landed 2026-06-07):**
+  - `/industries` rewritten — programmatically lists all 31 industries from `industries.json`, grouped by Tier A (12) / Tier B (19). Each card surfaces tagline, avg CAC/CPC, primary services (linked to Tier 4 cells), top cities (linked to Tier 11 cells), and a direct link to the Industry Pillar. CollectionPage + BreadcrumbList schema.
+  - `/locations` rewritten — lists every city from `geos-india.json` + `geos-global.json` grouped by India tier-1/2/3 and Global tier-1/2. Each card includes state, population, top services (linked to Tier 3 cells), top industries (linked to Tier 11 cells), and country-pillar link where applicable. In-page anchor navigation between regions.
+  - **Navbar rebuilt with taxonomy-fed mega-menu** — four panels: Services (16 services grouped by Acquisition/Conversion/Lifecycle/Foundation), Industries (31 pillars by Tier A/B), Locations (top India metros + global priority + country pillars), Resources (Blog, Reports, Growth System, Glossary, Tools, vs, How-to, How-we-audit). All four panels are accessibility-graded: `aria-expanded` / `aria-haspopup`, click toggles (not just hover), Escape closes, click-outside closes, focus rings. Real mobile drawer with role="dialog", aria-modal, accordion sections, body-blocking backdrop.
+  - **Skip-to-content link** rendered as the navbar's first focusable element (`sr-only focus:not-sr-only`).
+  - `<main id="main">` added to all 13 tier templates + standalone pages so the skip link reliably lands focus inside the main content area.
+  - `RelatedCells` sibling caps bumped from 6 → 12 across Tier 3/4/5/11/IndustryPillar — every programmatic cell now exposes ~24-36 sibling links (12 same-axis × 2-3 axes).
+  - End result: the 115,470 programmatic cells now have full breadcrumb→hub→sibling→pillar navigation, fed from the same taxonomy as the URL space, with WCAG 2.1 AA-aligned focus + keyboard interactions across the nav surface.
+
 - **Phase 5 — Authority pillars + first cite-me data study (landed 2026-06-07):**
   - **`/frameleads-growth-system`** — canonical methodology page. Five-stage breakdown (Map → Magnet → Machine → Multiply → Measure) with what/why/outputs/typical-metrics per stage, industry-adaptation grid, FAQs. Article + HowTo + FAQPage + BreadcrumbList + Person JSON-LD. Every "Frameleads Growth System™" mention site-wide now has a real destination URL.
   - **`/editorial-policy`** — E-E-A-T-grade transparency page: research process, source categories (live client data / cited public sources / original research), quarterly refresh cadence, fact-checking + corrections workflow, conflict-of-interest disclosure, AI-assistance disclosure. Article + BreadcrumbList schema.

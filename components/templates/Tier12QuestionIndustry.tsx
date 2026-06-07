@@ -133,7 +133,7 @@ export function Tier12QuestionIndustry({
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
 						aria-hidden

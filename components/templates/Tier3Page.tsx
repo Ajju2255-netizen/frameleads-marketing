@@ -69,7 +69,7 @@ function buildRelatedSiblingsForCity(
 	candidateServiceIds.delete(currentService.id);
 
 	const links: CellLink[] = [];
-	for (const sid of Array.from(candidateServiceIds).slice(0, 6)) {
+	for (const sid of Array.from(candidateServiceIds).slice(0, 12)) {
 		links.push({
 			href: `/${sid}-in-${geo.id}`,
 			label: `${getServiceLabel(sid)} in ${geo.name}`,
@@ -109,7 +109,7 @@ function buildRelatedSiblingsForService(
 					(g.country === undefined || g.country === "India"))),
 	);
 	const sorted = others.sort((a, b) => (a.tier ?? 99) - (b.tier ?? 99));
-	return sorted.slice(0, 6).map((g) => ({
+	return sorted.slice(0, 12).map((g) => ({
 		href: `/${service.id}-in-${g.id}`,
 		label: `${service.label} in ${g.name}`,
 	}));
@@ -232,7 +232,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={service.label}
 					geoName={geo.name}

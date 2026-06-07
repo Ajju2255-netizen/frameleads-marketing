@@ -60,7 +60,7 @@ function buildRelatedTier3(
 	industry: Industry,
 ): CellLink[] {
 	// For each industry, surface Tier 3 cells (same service × industry's top geos).
-	const geos = getGeosForIndustry(industry.id).slice(0, 6);
+	const geos = getGeosForIndustry(industry.id).slice(0, 12);
 	return geos.map((g) => ({
 		href: `/${service.id}-in-${g.id}`,
 		label: `${service.label} in ${g.name}`,
@@ -189,7 +189,7 @@ export function Tier4Page({ service, industry, url }: Props) {
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={service.label}
 					geoName={industry.label}

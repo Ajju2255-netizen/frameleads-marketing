@@ -70,7 +70,7 @@ function buildRelatedSiblings(
 ): { sameIndustryOtherGeos: CellLink[]; sameGeoOtherServices: CellLink[] } {
 	const otherGeos = getGeosForIndustry(industry.id)
 		.filter((g) => g.id !== currentGeo.id)
-		.slice(0, 6)
+		.slice(0, 12)
 		.map((g) => ({
 			href: `/${service.id}-for-${industry.id}-in-${g.id}`,
 			label: `${service.label} for ${industry.label} in ${g.name}`,
@@ -78,7 +78,7 @@ function buildRelatedSiblings(
 
 	const otherServices = getServicesForIndustry(industry.id)
 		.filter((s) => s.id !== service.id)
-		.slice(0, 6)
+		.slice(0, 12)
 		.map((s) => ({
 			href: `/${s.id}-for-${industry.id}-in-${currentGeo.id}`,
 			label: `${s.label} for ${industry.label} in ${currentGeo.name}`,
@@ -207,7 +207,7 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={`${service.label} for ${industry.label}`}
 					geoName={geo.name}

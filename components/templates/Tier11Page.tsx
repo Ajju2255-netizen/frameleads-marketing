@@ -74,7 +74,7 @@ function buildRelatedSiblings(
 	// Other geos for same industry
 	const otherGeos = getGeosForIndustry(currentInd.id)
 		.filter((g) => g.id !== currentGeo.id)
-		.slice(0, 6)
+		.slice(0, 12)
 		.map((g) => ({
 			href: `/${currentInd.id}-marketing-in-${g.id}`,
 			label: `${currentInd.label} marketing in ${g.name}`,
@@ -83,14 +83,14 @@ function buildRelatedSiblings(
 	// Other industries in same city (from geo's topIndustries if available)
 	const otherIndustriesInCity = (currentGeo.topIndustries || [])
 		.filter((id) => id !== currentInd.id)
-		.slice(0, 6)
+		.slice(0, 12)
 		.map((id) => ({
 			href: `/${id}-marketing-in-${currentGeo.id}`,
 			label: `${id.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} marketing in ${currentGeo.name}`,
 		}));
 
 	// Specific service × industry × geo (Tier 5 cells)
-	const services = getServicesForIndustry(currentInd.id).slice(0, 6);
+	const services = getServicesForIndustry(currentInd.id).slice(0, 12);
 	const serviceForIndustryInGeo = services.map((s) => ({
 		href: `/${s.id}-for-${currentInd.id}-in-${currentGeo.id}`,
 		label: `${s.label} for ${currentInd.label} in ${currentGeo.name}`,
@@ -193,7 +193,7 @@ export function Tier11Page({ industry, geo, url }: Props) {
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={`${industry.label} marketing`}
 					geoName={geo.name}

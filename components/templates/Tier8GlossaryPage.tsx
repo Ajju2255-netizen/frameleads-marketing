@@ -112,7 +112,7 @@ export function Tier8GlossaryPage({ entry, url }: Props) {
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<HeroGlossary
 					term={entry.term}
 					expansion={entry.expansion}
