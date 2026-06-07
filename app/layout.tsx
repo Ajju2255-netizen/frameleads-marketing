@@ -14,10 +14,7 @@ const OG_IMAGE = "/og-default.png"; // TODO replace with branded 1200×630 asset
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: SITE_TITLE,
-    template: "%s | Frameleads",
-  },
+  title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   generator: 'frameleads',
   applicationName: 'Frameleads',
