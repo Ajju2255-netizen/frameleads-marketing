@@ -101,6 +101,8 @@ const STATIC_HOME_AND_MISC = [
 	{ slug: "our-team", changefreq: "monthly", priority: 0.6 } as const,
 	{ slug: "careers", changefreq: "monthly", priority: 0.5 } as const,
 	{ slug: "contact", changefreq: "monthly", priority: 0.7 } as const,
+	{ slug: "press", changefreq: "monthly", priority: 0.85 } as const,
+	{ slug: "case-studies", changefreq: "weekly", priority: 0.85 } as const,
 	{ slug: "free-marketing-audit", changefreq: "monthly", priority: 0.9 } as const,
 	{ slug: "blogs", changefreq: "weekly", priority: 0.7 } as const,
 	{ slug: "industries", changefreq: "monthly", priority: 0.7 } as const,

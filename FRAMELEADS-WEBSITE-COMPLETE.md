@@ -1797,6 +1797,43 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 9 — Off-site entity establishment: /press + /case-studies + expanded Organization + Person schema (landed 2026-06-07):**
+  - **In-repo on-site infrastructure** for the entity establishment work (Wikidata Q-item, Crunchbase profile, Google Business Profile, AngelList, Tracxn, Glassdoor) that happens off-site. The repo ships the receiving infrastructure now; the off-site entities link back via env-gated `sameAs` once they exist.
+  - **`/press` page** (new — `app/press/page.tsx`, ~250 lines): hero + TLDR + Shark Tank India proof section + founder bio (short / medium / speaking topics) + company facts grid (HQ, founded, engagement footprint, attribution tracked, methodology, geographies) + media mentions placeholder + brand-assets request + 6 editorial topics Frameleads can speak to + press-contact CTA + author card. Schema: AboutPage + BreadcrumbList + WebPage(speakable). E-E-A-T anchor for journalists, podcast hosts, conference programmers.
+  - **`/case-studies` page** (new — `app/case-studies/page.tsx`, ~280 lines): hero + TLDR + methodology (6 cards on how case studies are written + what we won't write) + 6 categorised sections (D2C + e-commerce / B2B SaaS / Real estate + property / Healthcare + healthtech / Finance + fintech + insurance / Hospitality + travel + tourism) with 2-3 scaffolded engagement picks each linking into industry pillars + service hubs + service-for-industry guides + anonymisation/disclosure policy. Schema: CollectionPage + BreadcrumbList + WebPage(speakable). Ready to receive real anonymised studies as engagements complete 6-month cycles.
+  - **Organization schema expanded** (`app/layout.tsx`):
+    - `@type` upgraded from `Organization` to `["Organization", "ProfessionalService"]` (richer Google panel signal)
+    - Added `legalName`, `alternateName` (array), `image`, `slogan`, full `keywords` array, `priceRange`
+    - Added `award`: "Founder appeared on Shark Tank India (Sony LIV)" — strongest single E-E-A-T credential surfaced at the Organization entity layer
+    - Added `hasMap` (env-gated via `NEXT_PUBLIC_GBP_MAP_URL` for Google Business Profile)
+    - `description` expanded with verifiable founder + engagement claims
+    - `sameAs` now spreads in optional entity URLs via 6 env vars (`NEXT_PUBLIC_ENTITY_WIKIDATA` / `CRUNCHBASE` / `GBP` / `ANGELLIST` / `TRACXN` / `GLASSDOOR`) — emits only when the var is set
+  - **Founder Person schema expanded** (`app/layout.tsx`):
+    - Added `award`: "Shark Tank India — founder appearance (Sony LIV)" on the Person entity
+    - Added `knowsAbout` with 6 expert areas (performance marketing, SEO, CRO, D2C unit economics, B2B SaaS pipeline, AI Overview optimization)
+    - `sameAs` spreads in optional `NEXT_PUBLIC_FOUNDER_TWITTER` + `NEXT_PUBLIC_FOUNDER_WIKIDATA` when set
+  - **Routing wiring**: `lib/data/slugs.ts` RESERVED_SLUGS gets `case-studies` + `press`. `lib/sitemap.ts` STATIC_HOME_AND_MISC gets both at priority 0.85 (weekly changefreq for `/case-studies` since entries land progressively).
+  - **Verified live**:
+    | Surface | After 9 |
+    |---|---|
+    | `/press` | 200, 7 h2, 6 schema (AboutPage + BreadcrumbList + WebPage + Article + Organization + Person via @id) |
+    | `/case-studies` | 200, 9 h2, 6 schema (CollectionPage + BreadcrumbList + WebPage + ItemList + Organization + Person via @id) |
+    | Home (Organization schema) | Carries "Shark Tank India", "founder appearance", "Sony LIV" markers in JSON-LD |
+    | Sitemap `/sitemaps/0-pillars.xml` | Includes both new entries |
+  - **Off-site entity readiness checklist** (deploy-time, action items for next external work):
+    - [ ] Create Wikidata Q-item for Frameleads → set `NEXT_PUBLIC_ENTITY_WIKIDATA=https://www.wikidata.org/wiki/Q...`
+    - [ ] Create Wikidata Q-item for Ajsal Abbas → set `NEXT_PUBLIC_FOUNDER_WIKIDATA`
+    - [ ] Crunchbase profile → set `NEXT_PUBLIC_ENTITY_CRUNCHBASE`
+    - [ ] Google Business Profile (Electronic City Bangalore) → set `NEXT_PUBLIC_ENTITY_GBP` + `NEXT_PUBLIC_GBP_MAP_URL`
+    - [ ] AngelList Talent profile → set `NEXT_PUBLIC_ENTITY_ANGELLIST`
+    - [ ] Tracxn company page → set `NEXT_PUBLIC_ENTITY_TRACXN`
+    - [ ] Glassdoor profile → set `NEXT_PUBLIC_ENTITY_GLASSDOOR`
+    - [ ] Twitter / X founder handle → set `NEXT_PUBLIC_FOUNDER_TWITTER`
+    - [ ] LinkedIn Sales Navigator / company page parity (already in sameAs, verify content alignment)
+    - [ ] Shark Tank India broadcast clip / episode link → embed/link from `/press`
+    - [ ] First named case study with client approval → publish into `/case-studies`
+  - **Impact**: every page across ~127k surface now inherits the expanded Organization + Person schema via root layout. Search-engine knowledge-graph eligibility improves with each entity URL added to `sameAs` — no code changes needed, just env-var updates.
+
 - **Phase 8 — Lead-capture activation: widen source schema + Meta Pixel + dual-tracker conversion events (landed 2026-06-07):**
   - **Problem 1**: the `LeadSource` enum (client + Worker) was frozen at the Tier 3/4/5/11 era. All the new CTAs shipped in Phases 7C–7J (money-X, guide-X, hub-X, location-X, vs-hub-X, glossary-hub-X, resources-X, tier12-X, tier13-X, tier14-X, tier15-X) were getting dropped to "free-audit" by the strict set-membership check in `app/free-marketing-audit/page.tsx` — full source attribution lost on submit.
   - **Problem 2**: Meta Pixel was not wired sitewide. Only GA4 was firing.

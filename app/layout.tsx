@@ -96,6 +96,18 @@ export const metadata: Metadata = {
 
 // Site-level JSON-LD — emitted once at root so every page (including programmatic
 // Tier cells) inherits the brand-entity graph. Page-specific schema layers on top.
+// Optional off-site entity URLs — only emitted when env vars are set so we
+// never publish broken / placeholder links. Filled progressively as the
+// off-site entity establishment (Wikidata, Crunchbase, GBP, etc.) lands.
+const OPTIONAL_ORG_SAMEAS = [
+  process.env.NEXT_PUBLIC_ENTITY_WIKIDATA,
+  process.env.NEXT_PUBLIC_ENTITY_CRUNCHBASE,
+  process.env.NEXT_PUBLIC_ENTITY_GBP,
+  process.env.NEXT_PUBLIC_ENTITY_ANGELLIST,
+  process.env.NEXT_PUBLIC_ENTITY_TRACXN,
+  process.env.NEXT_PUBLIC_ENTITY_GLASSDOOR,
+].filter((u): u is string => typeof u === "string" && u.length > 0);
+
 const FOUNDER_PERSON = {
   "@type": "Person",
   "@id": `${SITE_URL}/our-team#ajsal-abbas`,
@@ -103,24 +115,55 @@ const FOUNDER_PERSON = {
   jobTitle: "Founder & CEO",
   url: `${SITE_URL}/our-team`,
   worksFor: { "@id": `${SITE_URL}#organization` },
+  // Award proof — Shark Tank India founder appearance is the strongest
+  // verifiable founder credential and Google's E-E-A-T signals reward it
+  // when surfaced consistently in schema.
+  award: "Shark Tank India — founder appearance (Sony LIV)",
+  knowsAbout: [
+    "Performance Marketing",
+    "Search Engine Optimization",
+    "Conversion Rate Optimization",
+    "D2C Unit Economics",
+    "B2B SaaS Pipeline",
+    "AI Overview Optimization",
+  ],
   sameAs: [
     "https://www.linkedin.com/in/ajsalabbas/",
     "https://www.youtube.com/@ajsalabbas8093",
+    ...(process.env.NEXT_PUBLIC_FOUNDER_TWITTER ? [process.env.NEXT_PUBLIC_FOUNDER_TWITTER] : []),
+    ...(process.env.NEXT_PUBLIC_FOUNDER_WIKIDATA ? [process.env.NEXT_PUBLIC_FOUNDER_WIKIDATA] : []),
   ],
 } as const
 
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${SITE_URL}#organization`,
   name: "Frameleads",
-  alternateName: "Frameleads Growth System",
+  alternateName: ["Frameleads Growth System", "Frameleads Marketing"],
+  legalName: "Frameleads",
   url: SITE_URL,
   logo: `${SITE_URL}/logos/brand-logo.png`,
+  image: `${SITE_URL}/og-default.png`,
+  slogan: "Frameleads Growth System™ — operator-grade performance + organic for India & global markets.",
   description:
-    "Performance-marketing agency for Indian SMBs and global SaaS/D2C brands. SEO, paid acquisition, content, CRO, analytics, and lifecycle programs built on the Frameleads Growth System™.",
+    "Performance-marketing agency for Indian SMBs and global SaaS/D2C brands. SEO, paid acquisition, content, CRO, analytics, and lifecycle programs built on the Frameleads Growth System™. Founder appeared on Shark Tank India; ~200 lifetime engagements; ~₹9Cr in attributed client pipeline tracked.",
   foundingDate: "2019",
   founders: [FOUNDER_PERSON],
+  // Strongest single E-E-A-T credential. Surfaced both on the Organization
+  // entity and on the founder Person above for crawler symmetry.
+  award: "Founder appeared on Shark Tank India (Sony LIV)",
+  keywords: [
+    "performance marketing",
+    "Shark Tank India",
+    "SEO agency Bangalore",
+    "AI Overview optimization",
+    "Frameleads Growth System",
+    "D2C marketing India",
+    "B2B SaaS marketing",
+    "Click-to-WhatsApp ads",
+    "GCC marketing",
+  ],
   knowsAbout: [
     "Search Engine Optimization",
     "Programmatic SEO",
@@ -168,6 +211,7 @@ const ORGANIZATION_SCHEMA = {
     "https://www.instagram.com/frameleads/",
     "https://www.facebook.com/profile.php?id=61577223400100",
     "https://www.youtube.com/@ajsalabbas8093",
+    ...OPTIONAL_ORG_SAMEAS,
   ],
   aggregateRating: {
     "@type": "AggregateRating",
@@ -176,6 +220,9 @@ const ORGANIZATION_SCHEMA = {
     bestRating: "5",
     worstRating: "1",
   },
+  // Service-area-business marker for Google + map crawlers
+  hasMap: process.env.NEXT_PUBLIC_GBP_MAP_URL || undefined,
+  priceRange: "₹₹–₹₹₹",
 }
 
 const WEBSITE_SCHEMA = {
