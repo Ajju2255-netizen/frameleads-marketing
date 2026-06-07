@@ -1,0 +1,254 @@
+[
+  {
+    "id": "seo-services",
+    "name": "SEO",
+    "label": "SEO Services",
+    "displayName": "SEO",
+    "tagline": "Compounding organic growth — pillar/cluster, programmatic, and AI-engine-cited.",
+    "shortDescription": "Search engine optimization that compounds — technical, content, and authority work that ranks pages and earns AI Overview citations.",
+    "topUseCases": [
+      "Pillar + cluster content engine",
+      "Technical SEO (Core Web Vitals, schema, indexation)",
+      "Programmatic SEO at scale",
+      "AI Overview / Perplexity citation share",
+      "Local SEO + Google Business Profile"
+    ],
+    "avgCpcInr": "20–250",
+    "avgCacInr": "1,000–25,000",
+    "primaryKpi": "qualified organic leads / month",
+    "timeToResults": "4–9 months",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "ppc-management",
+    "name": "PPC",
+    "label": "PPC Management",
+    "displayName": "PPC Management",
+    "tagline": "Performance-led paid acquisition with margin discipline.",
+    "shortDescription": "Google Search, Performance Max, YouTube, and display campaigns engineered for ROAS and CAC payback, not just clicks.",
+    "topUseCases": [
+      "Google Search + Performance Max",
+      "YouTube + Discovery",
+      "Conversion tracking + attribution",
+      "Bid strategy + budget pacing",
+      "Creative supply for paid"
+    ],
+    "avgCpcInr": "15–950",
+    "avgCacInr": "500–25,000",
+    "primaryKpi": "blended CAC + ROAS",
+    "timeToResults": "14–60 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "meta-ads",
+    "name": "Meta Ads",
+    "label": "Meta Ads",
+    "displayName": "Meta Ads",
+    "tagline": "Facebook + Instagram + WhatsApp — built for D2C, real-estate, and lead-gen.",
+    "shortDescription": "Meta acquisition with creative-supply systems, audience engineering, and post-iOS attribution rigor.",
+    "topUseCases": [
+      "D2C product acquisition",
+      "Real-estate lead generation",
+      "Click-to-WhatsApp funnels",
+      "Retargeting + lookalike scaling",
+      "Creative-supply pipelines"
+    ],
+    "avgCpcInr": "8–80",
+    "avgCacInr": "200–4,500",
+    "primaryKpi": "blended CAC, contribution margin",
+    "timeToResults": "7–30 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "google-ads",
+    "name": "Google Ads",
+    "label": "Google Ads",
+    "displayName": "Google Ads",
+    "tagline": "Search, Shopping, YouTube, and Performance Max — engineered for Indian unit economics.",
+    "shortDescription": "End-to-end Google Ads management — Search + Performance Max + YouTube — with campaign architecture aligned to your CAC ladder.",
+    "topUseCases": [
+      "Branded + non-branded Search",
+      "Shopping for D2C",
+      "Performance Max with feed engineering",
+      "YouTube for awareness + retargeting",
+      "Local Service Ads where eligible"
+    ],
+    "avgCpcInr": "12–950",
+    "avgCacInr": "400–35,000",
+    "primaryKpi": "ROAS, CPL, blended CAC",
+    "timeToResults": "14–45 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "linkedin-ads",
+    "name": "LinkedIn Ads",
+    "label": "LinkedIn Ads",
+    "displayName": "LinkedIn Ads",
+    "tagline": "B2B + SaaS demand-gen with ABM-grade targeting.",
+    "shortDescription": "LinkedIn paid programs for B2B SaaS, professional services, and ABM motions — sponsored content, conversation ads, and lead-gen forms.",
+    "topUseCases": [
+      "B2B demand generation",
+      "ABM targeting at job-title precision",
+      "SaaS demo bookings",
+      "Thought-leadership distribution",
+      "Recruitment-adjacent campaigns"
+    ],
+    "avgCpcInr": "120–1,400",
+    "avgCacInr": "5,000–60,000",
+    "primaryKpi": "CAC payback, pipeline-sourced revenue",
+    "timeToResults": "30–90 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "youtube-ads",
+    "name": "YouTube Ads",
+    "label": "YouTube Ads",
+    "displayName": "YouTube Ads",
+    "tagline": "Video acquisition + retargeting at scale.",
+    "shortDescription": "YouTube paid programs spanning awareness (skippable, bumper) through performance (Shorts, in-feed, demand-gen).",
+    "topUseCases": [
+      "Brand awareness + reach",
+      "Performance demand-gen",
+      "Shorts + in-feed video",
+      "Retargeting from YouTube viewers",
+      "TrueView for action"
+    ],
+    "avgCpcInr": "1.5–35",
+    "avgCacInr": "300–8,000",
+    "primaryKpi": "view-through CAC, watch time",
+    "timeToResults": "21–60 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "performance-marketing",
+    "name": "Performance Marketing",
+    "label": "Performance Marketing",
+    "displayName": "Performance Marketing",
+    "tagline": "Full-funnel paid acquisition under one operator team.",
+    "shortDescription": "End-to-end performance — Meta + Google + YouTube + LinkedIn + creator — operated under one P&L with clean attribution.",
+    "topUseCases": [
+      "Multi-channel media planning",
+      "Cross-channel attribution",
+      "Creative + production ops",
+      "Funnel CRO integration",
+      "Cohort-level reporting"
+    ],
+    "avgCpcInr": "10–950",
+    "avgCacInr": "300–35,000",
+    "primaryKpi": "blended CAC, contribution margin, payback",
+    "timeToResults": "30–90 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "content-marketing",
+    "name": "Content Marketing",
+    "label": "Content Marketing",
+    "displayName": "Content Marketing",
+    "tagline": "Editorial + programmatic — built to be cited by AI engines.",
+    "shortDescription": "Content engines anchored in pillar/cluster, original data, and named experts — engineered to win Google + AI Overviews simultaneously.",
+    "topUseCases": [
+      "Pillar/cluster architecture",
+      "Original-data reports + earned media",
+      "AI-engine-cited content (GEO)",
+      "Topic clusters with internal linking",
+      "Editorial calendar + production ops"
+    ],
+    "avgCpcInr": "15–250",
+    "avgCacInr": "1,500–25,000",
+    "primaryKpi": "qualified organic leads, AI citation share",
+    "timeToResults": "4–9 months",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "social-media-marketing",
+    "name": "Social Media Marketing",
+    "label": "Social Media Marketing",
+    "displayName": "Social Media Marketing",
+    "tagline": "Owned-channel growth across Instagram, LinkedIn, YouTube, and X.",
+    "shortDescription": "Organic social systems — content production, community engagement, creator partnerships, and editorial calendars built to compound.",
+    "topUseCases": [
+      "Instagram + Reels content engines",
+      "LinkedIn thought-leadership",
+      "YouTube long-form + Shorts",
+      "Community engagement",
+      "Creator + influencer programs"
+    ],
+    "avgCpcInr": "10–80",
+    "avgCacInr": "300–6,000",
+    "primaryKpi": "engagement-led referral, branded search lift",
+    "timeToResults": "60–120 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "whatsapp-marketing",
+    "name": "WhatsApp Marketing",
+    "label": "WhatsApp Marketing",
+    "displayName": "WhatsApp Marketing",
+    "tagline": "Click-to-WhatsApp + automation — the channel Indian buyers actually answer.",
+    "shortDescription": "WhatsApp Business API programs — lead capture, qualification, sales-stage nurture, and post-purchase retention.",
+    "topUseCases": [
+      "Click-to-WhatsApp from Meta + Google",
+      "Lead qualification + routing",
+      "Site-visit booking automation",
+      "Post-purchase retention",
+      "Broadcast + template-message campaigns"
+    ],
+    "avgCpcInr": "5–60",
+    "avgCacInr": "150–4,500",
+    "primaryKpi": "qualified lead → site-visit conversion",
+    "timeToResults": "14–45 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "email-marketing",
+    "name": "Email Marketing",
+    "label": "Email & Marketing Automation",
+    "displayName": "Email & Marketing Automation",
+    "tagline": "Lifecycle email + automation that pays for itself in 30 days.",
+    "shortDescription": "Welcome flows, abandoned-cart, post-purchase, win-back, and behavioral automations — integrated with your CRM and product data.",
+    "topUseCases": [
+      "Welcome + onboarding flows",
+      "Abandoned-cart recovery",
+      "Post-purchase + repeat-buy nudges",
+      "Win-back campaigns",
+      "Behavioral segmentation"
+    ],
+    "avgCpcInr": "n/a (owned channel)",
+    "avgCacInr": "50–1,500 per repeat purchase",
+    "primaryKpi": "repeat-purchase rate, LTV uplift",
+    "timeToResults": "7–30 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "conversion-rate-optimization",
+    "name": "Conversion Rate Optimization",
+    "label": "CRO",
+    "displayName": "Conversion Rate Optimization",
+    "tagline": "Lift conversion 8–25% before you spend more on traffic.",
+    "shortDescription": "Quantitative + qualitative CRO programs — heatmaps, A/B testing, funnel diagnostics, and design-system improvements.",
+    "topUseCases": [
+      "Landing-page A/B testing",
+      "Checkout / lead-form optimization",
+      "Site-search + navigation",
+      "Mobile UX improvements",
+      "Pricing-page optimization"
+    ],
+    "avgCpcInr": "n/a (owned program)",
+    "avgCacInr": "depends on traffic source",
+    "primaryKpi": "conversion-rate lift, revenue per visitor",
+    "timeToResults": "30–90 days",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  }
+]

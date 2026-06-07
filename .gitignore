@@ -10,6 +10,13 @@
 # production
 /build
 
+# OpenNext for Cloudflare
+/.open-next/
+/.wrangler/
+
+# Orphaned nested clone of this repo (legacy snapshot, not part of the active codebase)
+/frameleads-marketing/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -18,8 +25,9 @@ yarn-error.log*
 
 # env files
 .env*
+.dev.vars
 
-# vercel
+# vercel (legacy, no longer used)
 .vercel
 
 # typescript

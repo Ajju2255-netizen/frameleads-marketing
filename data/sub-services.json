@@ -1,0 +1,3765 @@
+[
+  {
+    "id": "technical-seo",
+    "parent_service": "seo-services",
+    "label": "Technical SEO",
+    "h1": "Technical SEO for Indian SMBs (2026)",
+    "direct_answer": "Technical SEO is the engineering work that diagnose core web vitals + crawlability. Frameleads' technical seo retainers ₹50,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Diagnose Core Web Vitals + crawlability",
+      "Schema markup audit + implementation",
+      "Site architecture redesign",
+      "Sitemap + robots.txt optimization",
+      "Indexability + canonical tag review"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing technical seo setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for technical seo. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Technical SEO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Technical SEO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for technical seo?",
+        "answer": "Technical SEO retainers in India ₹50,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until technical seo shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need technical seo if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Technical SEO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can technical seo run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard technical seo retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000/month",
+    "primary_keyword": "technical seo services india",
+    "secondary_keywords": [
+      "technical seo services",
+      "technical seo agency India",
+      "technical seo retainer"
+    ],
+    "tags": [
+      "seo-services",
+      "technical-seo",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "on-page-seo",
+    "parent_service": "seo-services",
+    "label": "On-Page SEO",
+    "h1": "On-Page SEO for Indian SMBs (2026)",
+    "direct_answer": "On-Page SEO is the engineering work that title + meta optimization at scale. Frameleads' on-page seo retainers ₹40,000–₹2,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Title + meta optimization at scale",
+      "Internal linking architecture",
+      "Content gap + briefs",
+      "Schema enrichment per page type",
+      "AIO direct-answer block engineering"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing on-page seo setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for on-page seo. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. On-Page SEO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "On-Page SEO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for on-page seo?",
+        "answer": "On-Page SEO retainers in India ₹40,000–₹2,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until on-page seo shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need on-page seo if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. On-Page SEO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can on-page seo run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard on-page seo retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹2,50,000/month",
+    "primary_keyword": "on-page seo services india",
+    "secondary_keywords": [
+      "on-page seo services",
+      "on-page seo agency India",
+      "on-page seo retainer"
+    ],
+    "tags": [
+      "seo-services",
+      "on-page-seo",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "off-page-seo",
+    "parent_service": "seo-services",
+    "label": "Off-Page SEO",
+    "h1": "Off-Page SEO for Indian SMBs (2026)",
+    "direct_answer": "Off-Page SEO is the engineering work that backlink audit + reclamation. Frameleads' off-page seo retainers ₹60,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Backlink audit + reclamation",
+      "Guest post + HARO outreach",
+      "Digital PR for link earning",
+      "Brand mention monitoring",
+      "Link velocity + anchor diversity tracking"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing off-page seo setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for off-page seo. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Off-Page SEO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Off-Page SEO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for off-page seo?",
+        "answer": "Off-Page SEO retainers in India ₹60,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until off-page seo shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need off-page seo if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Off-Page SEO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can off-page seo run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard off-page seo retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹60,000–₹4,00,000/month",
+    "primary_keyword": "off-page seo backlink services india",
+    "secondary_keywords": [
+      "off-page seo services",
+      "off-page seo agency India",
+      "off-page seo retainer"
+    ],
+    "tags": [
+      "seo-services",
+      "off-page-seo",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "local-seo",
+    "parent_service": "seo-services",
+    "label": "Local SEO",
+    "h1": "Local SEO for Indian SMBs (2026)",
+    "direct_answer": "Local SEO is the engineering work that gbp optimization + verification. Frameleads' local seo retainers ₹30,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "GBP optimization + verification",
+      "Review velocity engine",
+      "Local citations + NAP consistency",
+      "Service-area page builds",
+      "Local-pack ranking tracking"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing local seo setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for local seo. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Local SEO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Local SEO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for local seo?",
+        "answer": "Local SEO retainers in India ₹30,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until local seo shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need local seo if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Local SEO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can local seo run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard local seo retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹30,000–₹1,50,000/month",
+    "primary_keyword": "local seo services india",
+    "secondary_keywords": [
+      "local seo services",
+      "local seo agency India",
+      "local seo retainer"
+    ],
+    "tags": [
+      "seo-services",
+      "local-seo",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "programmatic-seo",
+    "parent_service": "seo-services",
+    "label": "Programmatic SEO",
+    "h1": "Programmatic SEO for Indian SMBs (2026)",
+    "direct_answer": "Programmatic SEO is the engineering work that demand-gated programmatic page architecture. Frameleads' programmatic seo retainers ₹1,50,000–₹8,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Demand-gated programmatic page architecture",
+      "Data-driven content templates",
+      "Schema + Speakable wiring",
+      "Sitemap segmentation + crawl-budget optimization",
+      "Cannibalization detection + fixes"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing programmatic seo setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for programmatic seo. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Programmatic SEO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Programmatic SEO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for programmatic seo?",
+        "answer": "Programmatic SEO retainers in India ₹1,50,000–₹8,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until programmatic seo shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need programmatic seo if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Programmatic SEO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can programmatic seo run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard programmatic seo retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,50,000–₹8,00,000/month",
+    "primary_keyword": "programmatic seo agency india",
+    "secondary_keywords": [
+      "programmatic seo services",
+      "programmatic seo agency India",
+      "programmatic seo retainer"
+    ],
+    "tags": [
+      "seo-services",
+      "programmatic-seo",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "search-campaigns",
+    "parent_service": "google-ads",
+    "label": "Search Campaigns",
+    "h1": "Search Campaigns for Indian SMBs (2026)",
+    "direct_answer": "Search Campaigns is the engineering work that kw research + intent mapping. Frameleads' search campaigns retainers ₹40,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "KW research + intent mapping",
+      "Ad copy + extensions",
+      "Quality Score optimization",
+      "Bid strategy + budget pacing",
+      "Negative keyword refinement"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing search campaigns setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for search campaigns. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Search Campaigns engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Search Campaigns acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for google search campaigns?",
+        "answer": "Google Search Campaigns retainers in India ₹40,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until google search campaigns shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need google search campaigns if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Google Search Campaigns as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can google search campaigns run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard google search campaigns retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹3,00,000/month",
+    "primary_keyword": "google search ads agency india",
+    "secondary_keywords": [
+      "search campaigns services",
+      "search campaigns agency India",
+      "search campaigns retainer"
+    ],
+    "tags": [
+      "google-ads",
+      "search-campaigns",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "performance-max",
+    "parent_service": "google-ads",
+    "label": "Performance Max",
+    "h1": "Performance Max for Indian SMBs (2026)",
+    "direct_answer": "Performance Max is the engineering work that asset group structure. Frameleads' performance max retainers ₹50,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Asset group structure",
+      "Audience signal layering",
+      "Shopping feed quality",
+      "Customer-match + LAL integration",
+      "Channel-level attribution"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing performance max setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for performance max. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Performance Max engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Performance Max acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for performance max?",
+        "answer": "Performance Max retainers in India ₹50,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until performance max shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need performance max if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Performance Max as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can performance max run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard performance max retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹4,00,000/month",
+    "primary_keyword": "google performance max management",
+    "secondary_keywords": [
+      "performance max services",
+      "performance max agency India",
+      "performance max retainer"
+    ],
+    "tags": [
+      "google-ads",
+      "performance-max",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "shopping-ads",
+    "parent_service": "google-ads",
+    "label": "Shopping Ads",
+    "h1": "Shopping Ads for Indian SMBs (2026)",
+    "direct_answer": "Shopping Ads is the engineering work that merchant center setup + feed optimization. Frameleads' shopping ads retainers ₹40,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Merchant Center setup + feed optimization",
+      "GTIN + product attribute compliance",
+      "Bid + budget strategy",
+      "Shopping feed audit + diagnostics",
+      "Promotions + sale events"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing shopping ads setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for shopping ads. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Shopping Ads engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Shopping Ads acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for google shopping ads?",
+        "answer": "Google Shopping Ads retainers in India ₹40,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until google shopping ads shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need google shopping ads if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Google Shopping Ads as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can google shopping ads run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard google shopping ads retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹3,00,000/month",
+    "primary_keyword": "google shopping ads agency india",
+    "secondary_keywords": [
+      "shopping ads services",
+      "shopping ads agency India",
+      "shopping ads retainer"
+    ],
+    "tags": [
+      "google-ads",
+      "shopping-ads",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "youtube-ads-management",
+    "parent_service": "google-ads",
+    "label": "YouTube Ads Management",
+    "h1": "YouTube Ads Management for Indian SMBs (2026)",
+    "direct_answer": "YouTube Ads Management is the engineering work that trueview + in-stream + bumper strategy. Frameleads' youtube ads management retainers ₹50,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "TrueView + In-stream + Bumper strategy",
+      "Audience + intent targeting",
+      "Creative direction + production briefs",
+      "Frequency + CPV optimization",
+      "Brand-lift + view-completion tracking"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing youtube ads setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for youtube ads. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. YouTube Ads engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "YouTube Ads acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for youtube ads management?",
+        "answer": "YouTube Ads Management retainers in India ₹50,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until youtube ads management shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need youtube ads management if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. YouTube Ads Management as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can youtube ads management run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard youtube ads management retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹4,00,000/month",
+    "primary_keyword": "youtube ads agency india",
+    "secondary_keywords": [
+      "youtube ads management services",
+      "youtube ads management agency India",
+      "youtube ads management retainer"
+    ],
+    "tags": [
+      "google-ads",
+      "youtube-ads-management",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "remarketing",
+    "parent_service": "google-ads",
+    "label": "Remarketing",
+    "h1": "Remarketing for Indian SMBs (2026)",
+    "direct_answer": "Remarketing is the engineering work that audience segmentation by intent stage. Frameleads' remarketing retainers ₹30,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Audience segmentation by intent stage",
+      "Dynamic remarketing setup",
+      "Frequency capping + creative refresh",
+      "List-based exclusions",
+      "Cross-platform retargeting orchestration"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing google remarketing setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for google remarketing. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Google Remarketing engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Google Remarketing acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for google remarketing?",
+        "answer": "Google Remarketing retainers in India ₹30,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until google remarketing shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need google remarketing if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Google Remarketing as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can google remarketing run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard google remarketing retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹30,000–₹1,50,000/month",
+    "primary_keyword": "google remarketing services india",
+    "secondary_keywords": [
+      "remarketing services",
+      "remarketing agency India",
+      "remarketing retainer"
+    ],
+    "tags": [
+      "google-ads",
+      "remarketing",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "advantage-shopping",
+    "parent_service": "meta-ads",
+    "label": "Advantage+ Shopping",
+    "h1": "Advantage+ Shopping for Indian SMBs (2026)",
+    "direct_answer": "Advantage+ Shopping is the engineering work that single-campaign architecture. Frameleads' advantage+ shopping retainers ₹50,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Single-campaign architecture",
+      "30+ creative variants",
+      "Audience signal optimization",
+      "ROAS-bid strategy + learning",
+      "Creative-fatigue detection + refresh"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing asc+ setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for asc+. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. ASC+ engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "ASC+ acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for asc+ management?",
+        "answer": "ASC+ Management retainers in India ₹50,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until asc+ management shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need asc+ management if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. ASC+ Management as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can asc+ management run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard asc+ management retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹4,00,000/month",
+    "primary_keyword": "asc+ meta advantage shopping management india",
+    "secondary_keywords": [
+      "advantage+ shopping services",
+      "advantage+ shopping agency India",
+      "advantage+ shopping retainer"
+    ],
+    "tags": [
+      "meta-ads",
+      "advantage-shopping",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "lead-generation",
+    "parent_service": "meta-ads",
+    "label": "Lead Generation",
+    "h1": "Lead Generation for Indian SMBs (2026)",
+    "direct_answer": "Lead Generation is the engineering work that lead gen forms + document ads. Frameleads' lead generation retainers ₹40,000–₹2,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Lead Gen Forms + Document Ads",
+      "Hashed PII for matching",
+      "CRM integration + lead routing",
+      "Lead-quality scoring",
+      "Cost-per-MQL optimization"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing meta lead gen setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for meta lead gen. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Meta Lead Gen engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Meta Lead Gen acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for meta lead generation?",
+        "answer": "Meta Lead Generation retainers in India ₹40,000–₹2,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until meta lead generation shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need meta lead generation if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Meta Lead Generation as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can meta lead generation run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard meta lead generation retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹2,50,000/month",
+    "primary_keyword": "meta lead generation ads agency india",
+    "secondary_keywords": [
+      "lead generation services",
+      "lead generation agency India",
+      "lead generation retainer"
+    ],
+    "tags": [
+      "meta-ads",
+      "lead-generation",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "conversions-api",
+    "parent_service": "meta-ads",
+    "label": "Conversions API",
+    "h1": "Conversions API for Indian SMBs (2026)",
+    "direct_answer": "Conversions API is the engineering work that sgtm + capi implementation. Frameleads' conversions api retainers ₹50,000–₹3,00,000 setup + ₹15,000+/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "sGTM + CAPI implementation",
+      "Hashed PII for high EMQ",
+      "Pixel deduplication",
+      "Server-side event quality monitoring",
+      "Privacy compliance (DPDP + iOS)"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing meta capi setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for meta capi. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Meta CAPI engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Meta CAPI acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for meta conversions api?",
+        "answer": "Meta Conversions API retainers in India ₹50,000–₹3,00,000 setup + ₹15,000+/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until meta conversions api shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need meta conversions api if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Meta Conversions API as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can meta conversions api run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard meta conversions api retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000 setup + ₹15,000+/month",
+    "primary_keyword": "meta capi conversions api setup india",
+    "secondary_keywords": [
+      "conversions api services",
+      "conversions api agency India",
+      "conversions api retainer"
+    ],
+    "tags": [
+      "meta-ads",
+      "conversions-api",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "dynamic-product-ads",
+    "parent_service": "meta-ads",
+    "label": "Dynamic Product Ads",
+    "h1": "Dynamic Product Ads for Indian SMBs (2026)",
+    "direct_answer": "Dynamic Product Ads is the engineering work that catalog-feed setup + optimization. Frameleads' dynamic product ads retainers ₹40,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Catalog-feed setup + optimization",
+      "Audience-stage matching",
+      "Creative variants per product",
+      "Out-of-stock + price-change handling",
+      "Cross-sell + upsell flows"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing dpa setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for dpa. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. DPA engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "DPA acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for dynamic product ads?",
+        "answer": "Dynamic Product Ads retainers in India ₹40,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until dynamic product ads shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need dynamic product ads if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Dynamic Product Ads as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can dynamic product ads run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard dynamic product ads retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹3,00,000/month",
+    "primary_keyword": "dynamic product ads meta agency india",
+    "secondary_keywords": [
+      "dynamic product ads services",
+      "dynamic product ads agency India",
+      "dynamic product ads retainer"
+    ],
+    "tags": [
+      "meta-ads",
+      "dynamic-product-ads",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "creative-testing-framework",
+    "parent_service": "meta-ads",
+    "label": "Creative Testing Framework",
+    "h1": "Creative Testing Framework for Indian SMBs (2026)",
+    "direct_answer": "Creative Testing Framework is the engineering work that 3-3-3 test architecture (3 hooks × 3 angles × 3 formats). Frameleads' creative testing framework retainers ₹50,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "3-3-3 test architecture (3 hooks × 3 angles × 3 formats)",
+      "ABO test campaigns with kill criteria",
+      "Creative cadence + briefs",
+      "Hook-rate + thumb-stop tracking",
+      "Winning-creative graduation to scale"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing creative testing setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for creative testing. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Creative Testing engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Creative Testing acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for creative testing framework?",
+        "answer": "Creative Testing Framework retainers in India ₹50,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until creative testing framework shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need creative testing framework if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Creative Testing Framework as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can creative testing framework run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard creative testing framework retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000/month",
+    "primary_keyword": "meta creative testing framework agency india",
+    "secondary_keywords": [
+      "creative testing framework services",
+      "creative testing framework agency India",
+      "creative testing framework retainer"
+    ],
+    "tags": [
+      "meta-ads",
+      "creative-testing-framework",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "cac-reduction",
+    "parent_service": "performance-marketing",
+    "label": "CAC Reduction",
+    "h1": "CAC Reduction for Indian SMBs (2026)",
+    "direct_answer": "CAC Reduction is the engineering work that multi-channel cac audit. Frameleads' cac reduction retainers ₹1,00,000–₹6,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Multi-channel CAC audit",
+      "Creative-volume scaling",
+      "Funnel-conversion lift",
+      "Landing-page optimization",
+      "Attribution accuracy improvements"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing cac reduction setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for cac reduction. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. CAC Reduction engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "CAC Reduction acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for cac reduction?",
+        "answer": "CAC Reduction retainers in India ₹1,00,000–₹6,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until cac reduction shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need cac reduction if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. CAC Reduction as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can cac reduction run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard cac reduction retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹6,00,000/month",
+    "primary_keyword": "cac reduction agency india",
+    "secondary_keywords": [
+      "cac reduction services",
+      "cac reduction agency India",
+      "cac reduction retainer"
+    ],
+    "tags": [
+      "performance-marketing",
+      "cac-reduction",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "full-funnel-performance",
+    "parent_service": "performance-marketing",
+    "label": "Full-Funnel Performance",
+    "h1": "Full-Funnel Performance for Indian SMBs (2026)",
+    "direct_answer": "Full-Funnel Performance is the engineering work that top-funnel awareness + retargeting + lifecycle in single p&l. Frameleads' full-funnel performance retainers ₹2,00,000–₹15,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Top-funnel awareness + retargeting + lifecycle in single P&L",
+      "Cross-channel orchestration",
+      "Cohort-level attribution",
+      "Owned-channel integration",
+      "CFO-ready reporting"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing full-funnel setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for full-funnel. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Full-Funnel engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Full-Funnel acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for full-funnel performance?",
+        "answer": "Full-Funnel Performance retainers in India ₹2,00,000–₹15,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until full-funnel performance shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need full-funnel performance if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Full-Funnel Performance as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can full-funnel performance run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard full-funnel performance retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹2,00,000–₹15,00,000/month",
+    "primary_keyword": "full funnel performance marketing agency india",
+    "secondary_keywords": [
+      "full-funnel performance services",
+      "full-funnel performance agency India",
+      "full-funnel performance retainer"
+    ],
+    "tags": [
+      "performance-marketing",
+      "full-funnel-performance",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "ltv-engineering",
+    "parent_service": "performance-marketing",
+    "label": "LTV Engineering",
+    "h1": "LTV Engineering for Indian SMBs (2026)",
+    "direct_answer": "LTV Engineering is the engineering work that retention flow + replenishment cadence. Frameleads' ltv engineering retainers ₹1,00,000–₹5,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Retention flow + replenishment cadence",
+      "Subscription model design",
+      "AOV uplift via bundles",
+      "Purchase-frequency optimization",
+      "Cohort-tracking + loyalty programs"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing ltv engineering setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for ltv engineering. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. LTV Engineering engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "LTV Engineering acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for ltv engineering?",
+        "answer": "LTV Engineering retainers in India ₹1,00,000–₹5,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until ltv engineering shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need ltv engineering if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. LTV Engineering as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can ltv engineering run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard ltv engineering retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹5,00,000/month",
+    "primary_keyword": "ltv engineering retention agency india",
+    "secondary_keywords": [
+      "ltv engineering services",
+      "ltv engineering agency India",
+      "ltv engineering retainer"
+    ],
+    "tags": [
+      "performance-marketing",
+      "ltv-engineering",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "incrementality-testing",
+    "parent_service": "performance-marketing",
+    "label": "Incrementality Testing",
+    "h1": "Incrementality Testing for Indian SMBs (2026)",
+    "direct_answer": "Incrementality Testing is the engineering work that holdout test design + execution. Frameleads' incrementality testing retainers ₹1,50,000–₹8,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Holdout test design + execution",
+      "Geo + audience-split experiments",
+      "MMM (Marketing Mix Modeling) for >₹3Cr/mo brands",
+      "Attribution + incrementality reconciliation",
+      "Lift estimation + budget reallocation"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing incrementality testing setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for incrementality testing. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Incrementality Testing engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Incrementality Testing acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for incrementality testing?",
+        "answer": "Incrementality Testing retainers in India ₹1,50,000–₹8,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until incrementality testing shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need incrementality testing if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Incrementality Testing as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can incrementality testing run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard incrementality testing retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,50,000–₹8,00,000/month",
+    "primary_keyword": "incrementality testing mmm agency india",
+    "secondary_keywords": [
+      "incrementality testing services",
+      "incrementality testing agency India",
+      "incrementality testing retainer"
+    ],
+    "tags": [
+      "performance-marketing",
+      "incrementality-testing",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "multi-channel-orchestration",
+    "parent_service": "performance-marketing",
+    "label": "Multi-channel Orchestration",
+    "h1": "Multi-channel Orchestration for Indian SMBs (2026)",
+    "direct_answer": "Multi-channel Orchestration is the engineering work that cross-channel attribution + budget allocation. Frameleads' multi-channel orchestration retainers ₹2,00,000–₹10,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Cross-channel attribution + budget allocation",
+      "Channel-mix optimization quarterly",
+      "Creative-asset reuse + adaptation",
+      "Unified dashboard + reporting cadence",
+      "ABM-style coordination for B2B"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing multi-channel orchestration setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for multi-channel orchestration. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Multi-channel Orchestration engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Multi-channel Orchestration acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for multi-channel orchestration?",
+        "answer": "Multi-channel Orchestration retainers in India ₹2,00,000–₹10,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until multi-channel orchestration shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need multi-channel orchestration if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Multi-channel Orchestration as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can multi-channel orchestration run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard multi-channel orchestration retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹2,00,000–₹10,00,000/month",
+    "primary_keyword": "multi channel marketing orchestration india",
+    "secondary_keywords": [
+      "multi-channel orchestration services",
+      "multi-channel orchestration agency India",
+      "multi-channel orchestration retainer"
+    ],
+    "tags": [
+      "performance-marketing",
+      "multi-channel-orchestration",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "seo-content",
+    "parent_service": "content-marketing",
+    "label": "SEO Content",
+    "h1": "SEO Content for Indian SMBs (2026)",
+    "direct_answer": "SEO Content is the engineering work that pillar + cluster content strategy. Frameleads' seo content retainers ₹80,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Pillar + cluster content strategy",
+      "Keyword + topic gap analysis",
+      "Editorial brief + production cadence",
+      "AIO direct-answer engineering",
+      "Performance tracking + refresh cycles"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing seo content setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for seo content. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. SEO Content engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "SEO Content acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for seo content?",
+        "answer": "SEO Content retainers in India ₹80,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until seo content shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need seo content if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. SEO Content as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can seo content run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard seo content retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹80,000–₹4,00,000/month",
+    "primary_keyword": "seo content writing agency india",
+    "secondary_keywords": [
+      "seo content services",
+      "seo content agency India",
+      "seo content retainer"
+    ],
+    "tags": [
+      "content-marketing",
+      "seo-content",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "long-form-blogs",
+    "parent_service": "content-marketing",
+    "label": "Long-form Blogs",
+    "h1": "Long-form Blogs for Indian SMBs (2026)",
+    "direct_answer": "Long-form Blogs is the engineering work that deep-dive 2,000+ word articles. Frameleads' long-form blogs retainers ₹50,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Deep-dive 2,000+ word articles",
+      "Operator-grade research + sources",
+      "Editorial review + named author byline",
+      "Distribution + amplification",
+      "Quarterly refresh + evergreen optimization"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing long-form blogs setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for long-form blogs. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Long-form Blogs engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Long-form Blogs acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for long-form blogs?",
+        "answer": "Long-form Blogs retainers in India ₹50,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until long-form blogs shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need long-form blogs if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Long-form Blogs as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can long-form blogs run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard long-form blogs retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000/month",
+    "primary_keyword": "long form blog writing agency india",
+    "secondary_keywords": [
+      "long-form blogs services",
+      "long-form blogs agency India",
+      "long-form blogs retainer"
+    ],
+    "tags": [
+      "content-marketing",
+      "long-form-blogs",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "case-study-writing",
+    "parent_service": "content-marketing",
+    "label": "Case Study Writing",
+    "h1": "Case Study Writing for Indian SMBs (2026)",
+    "direct_answer": "Case Study Writing is the engineering work that client interviews + outcome quantification. Frameleads' case study writing retainers ₹50,000–₹2,00,000 per case study are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Client interviews + outcome quantification",
+      "Anonymization where required",
+      "Quote + data validation",
+      "Visual + chart production",
+      "Distribution across LinkedIn + sales enablement"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing case studies setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for case studies. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Case Studies engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Case Studies acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for case study writing?",
+        "answer": "Case Study Writing retainers in India ₹50,000–₹2,00,000 per case study. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until case study writing shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need case study writing if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Case Study Writing as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can case study writing run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard case study writing retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,00,000 per case study",
+    "primary_keyword": "b2b case study writing agency india",
+    "secondary_keywords": [
+      "case study writing services",
+      "case study writing agency India",
+      "case study writing retainer"
+    ],
+    "tags": [
+      "content-marketing",
+      "case-study-writing",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "founder-thought-leadership",
+    "parent_service": "content-marketing",
+    "label": "Founder Thought Leadership",
+    "h1": "Founder Thought Leadership for Indian SMBs (2026)",
+    "direct_answer": "Founder Thought Leadership is the engineering work that founder voice extraction + ghostwriting. Frameleads' founder thought leadership retainers ₹1,00,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Founder voice extraction + ghostwriting",
+      "LinkedIn + Twitter post cadence",
+      "Long-form essay support",
+      "Podcast appearance booking + briefing",
+      "Press + industry-event positioning"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing founder thought leadership setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for founder thought leadership. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Founder Thought Leadership engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Founder Thought Leadership acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for founder thought leadership?",
+        "answer": "Founder Thought Leadership retainers in India ₹1,00,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until founder thought leadership shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need founder thought leadership if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Founder Thought Leadership as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can founder thought leadership run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard founder thought leadership retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹4,00,000/month",
+    "primary_keyword": "founder thought leadership ghostwriting india",
+    "secondary_keywords": [
+      "founder thought leadership services",
+      "founder thought leadership agency India",
+      "founder thought leadership retainer"
+    ],
+    "tags": [
+      "content-marketing",
+      "founder-thought-leadership",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "content-strategy-audit",
+    "parent_service": "content-marketing",
+    "label": "Content Strategy Audit",
+    "h1": "Content Strategy Audit for Indian SMBs (2026)",
+    "direct_answer": "Content Strategy Audit is the engineering work that end-to-end content stack audit. Frameleads' content strategy audit retainers ₹50,000–₹3,00,000 (one-time) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "End-to-end content stack audit",
+      "Topic + ICP + funnel mapping",
+      "Editorial team + workflow review",
+      "Distribution + amplification audit",
+      "Quarterly strategy roadmap"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing content strategy setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for content strategy. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Content Strategy engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Content Strategy acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for content strategy audit?",
+        "answer": "Content Strategy Audit retainers in India ₹50,000–₹3,00,000 (one-time). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until content strategy audit shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need content strategy audit if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Content Strategy Audit as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can content strategy audit run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard content strategy audit retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000 (one-time)",
+    "primary_keyword": "content marketing strategy audit india",
+    "secondary_keywords": [
+      "content strategy audit services",
+      "content strategy audit agency India",
+      "content strategy audit retainer"
+    ],
+    "tags": [
+      "content-marketing",
+      "content-strategy-audit",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "instagram-management",
+    "parent_service": "social-media-marketing",
+    "label": "Instagram Management",
+    "h1": "Instagram Management for Indian SMBs (2026)",
+    "direct_answer": "Instagram Management is the engineering work that reels + stories + feed cadence. Frameleads' instagram management retainers ₹40,000–₹2,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Reels + Stories + Feed cadence",
+      "UGC briefing + collection",
+      "Founder personality integration",
+      "Hashtag + trend monitoring",
+      "Engagement + community management"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing instagram management setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for instagram management. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Instagram Management engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Instagram Management acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for instagram management?",
+        "answer": "Instagram Management retainers in India ₹40,000–₹2,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until instagram management shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need instagram management if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Instagram Management as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can instagram management run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard instagram management retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹2,00,000/month",
+    "primary_keyword": "instagram management agency india",
+    "secondary_keywords": [
+      "instagram management services",
+      "instagram management agency India",
+      "instagram management retainer"
+    ],
+    "tags": [
+      "social-media-marketing",
+      "instagram-management",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "linkedin-organic",
+    "parent_service": "social-media-marketing",
+    "label": "LinkedIn Organic",
+    "h1": "LinkedIn Organic for Indian SMBs (2026)",
+    "direct_answer": "LinkedIn Organic is the engineering work that founder + employee post cadence. Frameleads' linkedin organic retainers ₹50,000–₹2,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Founder + employee post cadence",
+      "Document + carousel production",
+      "Comment + DM engagement strategy",
+      "Profile + page optimization",
+      "Advocacy + employee program"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing linkedin organic setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for linkedin organic. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. LinkedIn Organic engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "LinkedIn Organic acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for linkedin organic?",
+        "answer": "LinkedIn Organic retainers in India ₹50,000–₹2,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until linkedin organic shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need linkedin organic if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. LinkedIn Organic as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can linkedin organic run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard linkedin organic retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,50,000/month",
+    "primary_keyword": "linkedin organic agency india b2b",
+    "secondary_keywords": [
+      "linkedin organic services",
+      "linkedin organic agency India",
+      "linkedin organic retainer"
+    ],
+    "tags": [
+      "social-media-marketing",
+      "linkedin-organic",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "youtube-channel-management",
+    "parent_service": "social-media-marketing",
+    "label": "YouTube Channel Management",
+    "h1": "YouTube Channel Management for Indian SMBs (2026)",
+    "direct_answer": "YouTube Channel Management is the engineering work that long-form + shorts production cadence. Frameleads' youtube channel management retainers ₹80,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Long-form + Shorts production cadence",
+      "Thumbnail + title optimization",
+      "Audience + retention analytics",
+      "Community + comments engagement",
+      "Cross-platform clip distribution"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing youtube channel management setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for youtube channel management. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. YouTube Channel Management engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "YouTube Channel Management acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for youtube channel management?",
+        "answer": "YouTube Channel Management retainers in India ₹80,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until youtube channel management shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need youtube channel management if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. YouTube Channel Management as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can youtube channel management run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard youtube channel management retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹80,000–₹4,00,000/month",
+    "primary_keyword": "youtube channel management india",
+    "secondary_keywords": [
+      "youtube channel management services",
+      "youtube channel management agency India",
+      "youtube channel management retainer"
+    ],
+    "tags": [
+      "social-media-marketing",
+      "youtube-channel-management",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "founder-personal-brand",
+    "parent_service": "social-media-marketing",
+    "label": "Founder Personal Brand",
+    "h1": "Founder Personal Brand for Indian SMBs (2026)",
+    "direct_answer": "Founder Personal Brand is the engineering work that voice + niche definition. Frameleads' founder personal brand retainers ₹1,00,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Voice + niche definition",
+      "Multi-platform cadence (LinkedIn primary)",
+      "Ghostwriting + editorial review",
+      "Engagement strategy + community building",
+      "Press + speaking opportunity sourcing"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing founder personal brand setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for founder personal brand. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Founder Personal Brand engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Founder Personal Brand acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for founder personal brand?",
+        "answer": "Founder Personal Brand retainers in India ₹1,00,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until founder personal brand shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need founder personal brand if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Founder Personal Brand as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can founder personal brand run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard founder personal brand retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹4,00,000/month",
+    "primary_keyword": "founder personal brand agency india",
+    "secondary_keywords": [
+      "founder personal brand services",
+      "founder personal brand agency India",
+      "founder personal brand retainer"
+    ],
+    "tags": [
+      "social-media-marketing",
+      "founder-personal-brand",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "community-building",
+    "parent_service": "social-media-marketing",
+    "label": "Community Building",
+    "h1": "Community Building for Indian SMBs (2026)",
+    "direct_answer": "Community Building is the engineering work that slack/discord/whatsapp community setup. Frameleads' community building retainers ₹80,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Slack/Discord/WhatsApp community setup",
+      "Content + ritual cadence",
+      "Member onboarding + activation",
+      "Moderator + community-manager hiring",
+      "Member-led content sourcing"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing community building setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for community building. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Community Building engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Community Building acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for community building?",
+        "answer": "Community Building retainers in India ₹80,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until community building shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need community building if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Community Building as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can community building run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard community building retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹80,000–₹3,00,000/month",
+    "primary_keyword": "community building agency india b2b saas",
+    "secondary_keywords": [
+      "community building services",
+      "community building agency India",
+      "community building retainer"
+    ],
+    "tags": [
+      "social-media-marketing",
+      "community-building",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "business-api-setup",
+    "parent_service": "whatsapp-marketing",
+    "label": "Business API Setup",
+    "h1": "Business API Setup for Indian SMBs (2026)",
+    "direct_answer": "Business API Setup is the engineering work that waba + bsp selection + onboarding. Frameleads' business api setup retainers ₹50,000–₹2,00,000 setup are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "WABA + BSP selection + onboarding",
+      "Display name + verification",
+      "Phone number + opt-in capture",
+      "Domain + Facebook BM verification",
+      "Initial template approval workflow"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing whatsapp business api setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for whatsapp business api. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. WhatsApp Business API engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "WhatsApp Business API acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for whatsapp business api setup?",
+        "answer": "WhatsApp Business API Setup retainers in India ₹50,000–₹2,00,000 setup. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until whatsapp business api setup shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need whatsapp business api setup if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. WhatsApp Business API Setup as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can whatsapp business api setup run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard whatsapp business api setup retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,00,000 setup",
+    "primary_keyword": "whatsapp business api setup india",
+    "secondary_keywords": [
+      "business api setup services",
+      "business api setup agency India",
+      "business api setup retainer"
+    ],
+    "tags": [
+      "whatsapp-marketing",
+      "business-api-setup",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "template-design",
+    "parent_service": "whatsapp-marketing",
+    "label": "Template Design",
+    "h1": "Template Design for Indian SMBs (2026)",
+    "direct_answer": "Template Design is the engineering work that marketing + utility + auth template architecture. Frameleads' template design retainers ₹30,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Marketing + utility + auth template architecture",
+      "Meta-approval workflow management",
+      "Compliance + DPDP-aligned copy",
+      "A/B variant testing",
+      "Template performance monitoring"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing whatsapp template design setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for whatsapp template design. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. WhatsApp Template Design engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "WhatsApp Template Design acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for whatsapp template design?",
+        "answer": "WhatsApp Template Design retainers in India ₹30,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until whatsapp template design shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need whatsapp template design if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. WhatsApp Template Design as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can whatsapp template design run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard whatsapp template design retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹30,000–₹1,50,000/month",
+    "primary_keyword": "whatsapp template design agency india",
+    "secondary_keywords": [
+      "template design services",
+      "template design agency India",
+      "template design retainer"
+    ],
+    "tags": [
+      "whatsapp-marketing",
+      "template-design",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "abandoned-cart-flow",
+    "parent_service": "whatsapp-marketing",
+    "label": "Abandoned Cart Flow",
+    "h1": "Abandoned Cart Flow for Indian SMBs (2026)",
+    "direct_answer": "Abandoned Cart Flow is the engineering work that 3-message cadence at 1h / 24h / 48h. Frameleads' abandoned cart flow retainers ₹40,000–₹2,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "3-message cadence at 1h / 24h / 48h",
+      "Cart-restoration deep-link integration",
+      "Recovery-rate tracking + optimization",
+      "Discount-strategy testing",
+      "Channel-blend with email backup"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing whatsapp cart recovery setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for whatsapp cart recovery. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. WhatsApp Cart Recovery engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "WhatsApp Cart Recovery acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for whatsapp abandoned cart?",
+        "answer": "WhatsApp Abandoned Cart retainers in India ₹40,000–₹2,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until whatsapp abandoned cart shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need whatsapp abandoned cart if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. WhatsApp Abandoned Cart as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can whatsapp abandoned cart run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard whatsapp abandoned cart retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹2,00,000/month",
+    "primary_keyword": "whatsapp cart recovery agency india",
+    "secondary_keywords": [
+      "abandoned cart flow services",
+      "abandoned cart flow agency India",
+      "abandoned cart flow retainer"
+    ],
+    "tags": [
+      "whatsapp-marketing",
+      "abandoned-cart-flow",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "welcome-flow",
+    "parent_service": "whatsapp-marketing",
+    "label": "Welcome Flow",
+    "h1": "Welcome Flow for Indian SMBs (2026)",
+    "direct_answer": "Welcome Flow is the engineering work that 3-6 message sequence over 7-14 days. Frameleads' welcome flow retainers ₹40,000–₹2,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "3-6 message sequence over 7-14 days",
+      "Brand voice + offer integration",
+      "Personalization via tags + segments",
+      "Conversion-tracking + flow optimization",
+      "Cross-channel handoff to email"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing whatsapp welcome flow setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for whatsapp welcome flow. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. WhatsApp Welcome Flow engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "WhatsApp Welcome Flow acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for whatsapp welcome flow?",
+        "answer": "WhatsApp Welcome Flow retainers in India ₹40,000–₹2,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until whatsapp welcome flow shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need whatsapp welcome flow if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. WhatsApp Welcome Flow as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can whatsapp welcome flow run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard whatsapp welcome flow retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹2,00,000/month",
+    "primary_keyword": "whatsapp welcome flow agency india",
+    "secondary_keywords": [
+      "welcome flow services",
+      "welcome flow agency India",
+      "welcome flow retainer"
+    ],
+    "tags": [
+      "whatsapp-marketing",
+      "welcome-flow",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "win-back-flow",
+    "parent_service": "whatsapp-marketing",
+    "label": "Win-back Flow",
+    "h1": "Win-back Flow for Indian SMBs (2026)",
+    "direct_answer": "Win-back Flow is the engineering work that inactive-customer segmentation (60+ day). Frameleads' win-back flow retainers ₹30,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Inactive-customer segmentation (60+ day)",
+      "Progressive-incentive sequence",
+      "Multi-attempt cap + cold-list move",
+      "Reactivation analytics + reporting",
+      "Cross-channel coordination with email"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing whatsapp win-back setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for whatsapp win-back. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. WhatsApp Win-back engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "WhatsApp Win-back acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for whatsapp win-back flow?",
+        "answer": "WhatsApp Win-back Flow retainers in India ₹30,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until whatsapp win-back flow shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need whatsapp win-back flow if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. WhatsApp Win-back Flow as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can whatsapp win-back flow run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard whatsapp win-back flow retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹30,000–₹1,50,000/month",
+    "primary_keyword": "whatsapp win back flow agency india",
+    "secondary_keywords": [
+      "win-back flow services",
+      "win-back flow agency India",
+      "win-back flow retainer"
+    ],
+    "tags": [
+      "whatsapp-marketing",
+      "win-back-flow",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "landing-page-cro",
+    "parent_service": "conversion-rate-optimization",
+    "label": "Landing Page CRO",
+    "h1": "Landing Page CRO for Indian SMBs (2026)",
+    "direct_answer": "Landing Page CRO is the engineering work that above-fold trust + offer architecture. Frameleads' landing page cro retainers ₹80,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Above-fold trust + offer architecture",
+      "Mobile-first responsive design",
+      "A/B test framework setup",
+      "Heatmap + scroll analysis",
+      "Conversion-rate uplift attribution"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing landing page cro setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for landing page cro. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Landing Page CRO engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Landing Page CRO acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for landing page cro?",
+        "answer": "Landing Page CRO retainers in India ₹80,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until landing page cro shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need landing page cro if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Landing Page CRO as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can landing page cro run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard landing page cro retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹80,000–₹4,00,000/month",
+    "primary_keyword": "landing page cro agency india",
+    "secondary_keywords": [
+      "landing page cro services",
+      "landing page cro agency India",
+      "landing page cro retainer"
+    ],
+    "tags": [
+      "conversion-rate-optimization",
+      "landing-page-cro",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "checkout-optimization",
+    "parent_service": "conversion-rate-optimization",
+    "label": "Checkout Optimization",
+    "h1": "Checkout Optimization for Indian SMBs (2026)",
+    "direct_answer": "Checkout Optimization is the engineering work that multi-step → single-page checkout testing. Frameleads' checkout optimization retainers ₹1,00,000–₹4,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Multi-step → single-page checkout testing",
+      "Payment-method visibility + UPI",
+      "Trust-strip + social-proof injection",
+      "Cart-abandonment recovery integration",
+      "Mobile checkout speed optimization"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing checkout optimization setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for checkout optimization. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Checkout Optimization engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Checkout Optimization acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for checkout optimization?",
+        "answer": "Checkout Optimization retainers in India ₹1,00,000–₹4,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until checkout optimization shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need checkout optimization if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Checkout Optimization as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can checkout optimization run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard checkout optimization retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹4,00,000/month",
+    "primary_keyword": "checkout optimization shopify india",
+    "secondary_keywords": [
+      "checkout optimization services",
+      "checkout optimization agency India",
+      "checkout optimization retainer"
+    ],
+    "tags": [
+      "conversion-rate-optimization",
+      "checkout-optimization",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "cart-recovery",
+    "parent_service": "conversion-rate-optimization",
+    "label": "Cart Recovery",
+    "h1": "Cart Recovery for Indian SMBs (2026)",
+    "direct_answer": "Cart Recovery is the engineering work that email + whatsapp + retargeting recovery flows. Frameleads' cart recovery retainers ₹50,000–₹2,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Email + WhatsApp + retargeting recovery flows",
+      "Cart-restoration deep-links",
+      "Discount + urgency strategy testing",
+      "Recovery-rate attribution by channel",
+      "Lifetime cart-recovery measurement"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing cart recovery setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for cart recovery. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Cart Recovery engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Cart Recovery acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for cart recovery?",
+        "answer": "Cart Recovery retainers in India ₹50,000–₹2,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until cart recovery shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need cart recovery if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Cart Recovery as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can cart recovery run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard cart recovery retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,00,000/month",
+    "primary_keyword": "cart recovery agency india d2c",
+    "secondary_keywords": [
+      "cart recovery services",
+      "cart recovery agency India",
+      "cart recovery retainer"
+    ],
+    "tags": [
+      "conversion-rate-optimization",
+      "cart-recovery",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "ab-testing",
+    "parent_service": "conversion-rate-optimization",
+    "label": "AB Testing",
+    "h1": "AB Testing for Indian SMBs (2026)",
+    "direct_answer": "AB Testing is the engineering work that hypothesis design + significance testing. Frameleads' ab testing retainers ₹80,000–₹3,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Hypothesis design + significance testing",
+      "Test-velocity framework (5+ tests/quarter)",
+      "Multi-variant + sequential testing",
+      "Statistical-significance gates",
+      "Win-rate + lift attribution"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing a/b testing setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for a/b testing. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. A/B Testing engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "A/B Testing acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for a/b testing?",
+        "answer": "A/B Testing retainers in India ₹80,000–₹3,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until a/b testing shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need a/b testing if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. A/B Testing as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can a/b testing run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard a/b testing retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹80,000–₹3,00,000/month",
+    "primary_keyword": "ab testing agency india",
+    "secondary_keywords": [
+      "ab testing services",
+      "ab testing agency India",
+      "ab testing retainer"
+    ],
+    "tags": [
+      "conversion-rate-optimization",
+      "ab-testing",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "cro-audit",
+    "parent_service": "conversion-rate-optimization",
+    "label": "CRO Audit",
+    "h1": "CRO Audit for Indian SMBs (2026)",
+    "direct_answer": "CRO Audit is the engineering work that funnel + cohort analysis. Frameleads' cro audit retainers ₹50,000–₹3,00,000 (one-time) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Funnel + cohort analysis",
+      "Heatmap + session-replay review",
+      "Friction + drop-off identification",
+      "Quick-win + roadmap prioritization",
+      "Quarterly strategic review"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing cro audit setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for cro audit. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. CRO Audit engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "CRO Audit acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for cro audit?",
+        "answer": "CRO Audit retainers in India ₹50,000–₹3,00,000 (one-time). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until cro audit shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need cro audit if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. CRO Audit as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can cro audit run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard cro audit retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000 (one-time)",
+    "primary_keyword": "cro audit agency india",
+    "secondary_keywords": [
+      "cro audit services",
+      "cro audit agency India",
+      "cro audit retainer"
+    ],
+    "tags": [
+      "conversion-rate-optimization",
+      "cro-audit",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "klaviyo-setup",
+    "parent_service": "email-marketing-and-automation-services",
+    "label": "Klaviyo Setup",
+    "h1": "Klaviyo Setup for Indian SMBs (2026)",
+    "direct_answer": "Klaviyo Setup is the engineering work that account + integration + flow architecture. Frameleads' klaviyo setup retainers ₹1,00,000–₹4,00,000 setup + ₹40,000+/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Account + integration + flow architecture",
+      "Welcome + abandon + post-purchase + win-back flow design",
+      "Segmentation + tagging strategy",
+      "List health + deliverability monitoring",
+      "Quarterly performance review"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing klaviyo setup setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for klaviyo setup. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Klaviyo Setup engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Klaviyo Setup acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for klaviyo setup?",
+        "answer": "Klaviyo Setup retainers in India ₹1,00,000–₹4,00,000 setup + ₹40,000+/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until klaviyo setup shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need klaviyo setup if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Klaviyo Setup as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can klaviyo setup run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard klaviyo setup retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹4,00,000 setup + ₹40,000+/month",
+    "primary_keyword": "klaviyo setup agency india",
+    "secondary_keywords": [
+      "klaviyo setup services",
+      "klaviyo setup agency India",
+      "klaviyo setup retainer"
+    ],
+    "tags": [
+      "email-marketing-and-automation-services",
+      "klaviyo-setup",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "welcome-series",
+    "parent_service": "email-marketing-and-automation-services",
+    "label": "Welcome Series",
+    "h1": "Welcome Series for Indian SMBs (2026)",
+    "direct_answer": "Welcome Series is the engineering work that 3-6 message sequence over 7-14 days. Frameleads' welcome series retainers ₹40,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "3-6 message sequence over 7-14 days",
+      "Brand voice + offer + product showcase",
+      "Personalization + dynamic content",
+      "Conversion tracking + revenue attribution",
+      "Cross-channel coordination with WhatsApp"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing email welcome series setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for email welcome series. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Email Welcome Series engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Email Welcome Series acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for email welcome series?",
+        "answer": "Email Welcome Series retainers in India ₹40,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until email welcome series shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need email welcome series if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Email Welcome Series as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can email welcome series run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard email welcome series retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹1,50,000/month",
+    "primary_keyword": "email welcome series design india",
+    "secondary_keywords": [
+      "welcome series services",
+      "welcome series agency India",
+      "welcome series retainer"
+    ],
+    "tags": [
+      "email-marketing-and-automation-services",
+      "welcome-series",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "cart-abandon-flow",
+    "parent_service": "email-marketing-and-automation-services",
+    "label": "Cart Abandon Flow",
+    "h1": "Cart Abandon Flow for Indian SMBs (2026)",
+    "direct_answer": "Cart Abandon Flow is the engineering work that 3-message recovery sequence. Frameleads' cart abandon flow retainers ₹40,000–₹1,50,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "3-message recovery sequence",
+      "Discount + urgency strategy",
+      "Cart-restoration deep-links",
+      "Email + WhatsApp blended recovery",
+      "Lifetime recovery-rate measurement"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing email cart abandon setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for email cart abandon. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Email Cart Abandon engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Email Cart Abandon acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for email cart abandon flow?",
+        "answer": "Email Cart Abandon Flow retainers in India ₹40,000–₹1,50,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until email cart abandon flow shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need email cart abandon flow if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Email Cart Abandon Flow as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can email cart abandon flow run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard email cart abandon flow retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹40,000–₹1,50,000/month",
+    "primary_keyword": "email cart abandon flow india",
+    "secondary_keywords": [
+      "cart abandon flow services",
+      "cart abandon flow agency India",
+      "cart abandon flow retainer"
+    ],
+    "tags": [
+      "email-marketing-and-automation-services",
+      "cart-abandon-flow",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "migration-services",
+    "parent_service": "email-marketing-and-automation-services",
+    "label": "Migration Services",
+    "h1": "Migration Services for Indian SMBs (2026)",
+    "direct_answer": "Migration Services is the engineering work that mailchimp/brevo → klaviyo migration. Frameleads' migration services retainers ₹50,000–₹3,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Mailchimp/Brevo → Klaviyo migration",
+      "List + segment + flow rebuild",
+      "Integration testing + verification",
+      "Deliverability monitoring during transition",
+      "Performance baseline + post-migration review"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing email migration setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for email migration. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Email Migration engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Email Migration acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for email tool migration?",
+        "answer": "Email Tool Migration retainers in India ₹50,000–₹3,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until email tool migration shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need email tool migration if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Email Tool Migration as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can email tool migration run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard email tool migration retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000 (project)",
+    "primary_keyword": "klaviyo migration mailchimp brevo india",
+    "secondary_keywords": [
+      "migration services services",
+      "migration services agency India",
+      "migration services retainer"
+    ],
+    "tags": [
+      "email-marketing-and-automation-services",
+      "migration-services",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "newsletter-strategy",
+    "parent_service": "email-marketing-and-automation-services",
+    "label": "Newsletter Strategy",
+    "h1": "Newsletter Strategy for Indian SMBs (2026)",
+    "direct_answer": "Newsletter Strategy is the engineering work that editorial calendar + cadence design. Frameleads' newsletter strategy retainers ₹50,000–₹2,00,000/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Editorial calendar + cadence design",
+      "Subject-line + preview-text optimization",
+      "Segmentation + personalization",
+      "List-growth + landing-page integration",
+      "Performance dashboards + monthly review"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing newsletter strategy setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for newsletter strategy. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Newsletter Strategy engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Newsletter Strategy acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for newsletter strategy?",
+        "answer": "Newsletter Strategy retainers in India ₹50,000–₹2,00,000/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until newsletter strategy shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need newsletter strategy if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Newsletter Strategy as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can newsletter strategy run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard newsletter strategy retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,00,000/month",
+    "primary_keyword": "newsletter strategy agency india",
+    "secondary_keywords": [
+      "newsletter strategy services",
+      "newsletter strategy agency India",
+      "newsletter strategy retainer"
+    ],
+    "tags": [
+      "email-marketing-and-automation-services",
+      "newsletter-strategy",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "brand-identity-design",
+    "parent_service": "branding",
+    "label": "Brand Identity Design",
+    "h1": "Brand Identity Design for Indian SMBs (2026)",
+    "direct_answer": "Brand Identity Design is the engineering work that logo + visual system. Frameleads' brand identity design retainers ₹2,00,000–₹15,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Logo + visual system",
+      "Typography + color palette",
+      "Photography + illustration guidelines",
+      "Print + digital application",
+      "Brand bible documentation"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing brand identity design setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for brand identity design. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Brand Identity Design engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Brand Identity Design acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for brand identity design?",
+        "answer": "Brand Identity Design retainers in India ₹2,00,000–₹15,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until brand identity design shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need brand identity design if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Brand Identity Design as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can brand identity design run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard brand identity design retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹2,00,000–₹15,00,000 (project)",
+    "primary_keyword": "brand identity design agency india",
+    "secondary_keywords": [
+      "brand identity design services",
+      "brand identity design agency India",
+      "brand identity design retainer"
+    ],
+    "tags": [
+      "branding",
+      "brand-identity-design",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "positioning-strategy",
+    "parent_service": "branding",
+    "label": "Positioning Strategy",
+    "h1": "Positioning Strategy for Indian SMBs (2026)",
+    "direct_answer": "Positioning Strategy is the engineering work that category + competitor analysis. Frameleads' positioning strategy retainers ₹2,00,000–₹10,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Category + competitor analysis",
+      "ICP + JTBD definition",
+      "Positioning statement + messaging framework",
+      "Internal alignment + rollout",
+      "Quarterly review + iteration"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing positioning strategy setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for positioning strategy. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Positioning Strategy engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Positioning Strategy acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for positioning strategy?",
+        "answer": "Positioning Strategy retainers in India ₹2,00,000–₹10,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until positioning strategy shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need positioning strategy if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Positioning Strategy as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can positioning strategy run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard positioning strategy retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹2,00,000–₹10,00,000 (project)",
+    "primary_keyword": "positioning strategy agency india b2b",
+    "secondary_keywords": [
+      "positioning strategy services",
+      "positioning strategy agency India",
+      "positioning strategy retainer"
+    ],
+    "tags": [
+      "branding",
+      "positioning-strategy",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "rebranding",
+    "parent_service": "branding",
+    "label": "Rebranding",
+    "h1": "Rebranding for Indian SMBs (2026)",
+    "direct_answer": "Rebranding is the engineering work that audit + recommendation. Frameleads' rebranding retainers ₹5,00,000–₹50,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Audit + recommendation",
+      "New visual + verbal identity",
+      "Migration plan (SEO-preserving)",
+      "Internal + external rollout",
+      "Post-launch monitoring"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing rebranding setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for rebranding. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Rebranding engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Rebranding acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for rebranding?",
+        "answer": "Rebranding retainers in India ₹5,00,000–₹50,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until rebranding shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need rebranding if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Rebranding as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can rebranding run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard rebranding retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹5,00,000–₹50,00,000 (project)",
+    "primary_keyword": "rebranding agency india",
+    "secondary_keywords": [
+      "rebranding services",
+      "rebranding agency India",
+      "rebranding retainer"
+    ],
+    "tags": [
+      "branding",
+      "rebranding",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "shopify-development",
+    "parent_service": "website-development",
+    "label": "Shopify Development",
+    "h1": "Shopify Development for Indian SMBs (2026)",
+    "direct_answer": "Shopify Development is the engineering work that theme customization or headless build. Frameleads' shopify development retainers ₹2,00,000–₹15,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Theme customization or headless build",
+      "App ecosystem integration",
+      "Performance + Core Web Vitals optimization",
+      "Razorpay + Shiprocket integration",
+      "Migration from other platforms"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing shopify development setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for shopify development. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Shopify Development engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Shopify Development acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for shopify development?",
+        "answer": "Shopify Development retainers in India ₹2,00,000–₹15,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until shopify development shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need shopify development if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Shopify Development as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can shopify development run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard shopify development retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹2,00,000–₹15,00,000 (project)",
+    "primary_keyword": "shopify development agency india",
+    "secondary_keywords": [
+      "shopify development services",
+      "shopify development agency India",
+      "shopify development retainer"
+    ],
+    "tags": [
+      "website-development",
+      "shopify-development",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "nextjs-development",
+    "parent_service": "website-development",
+    "label": "NextJS Development",
+    "h1": "NextJS Development for Indian SMBs (2026)",
+    "direct_answer": "NextJS Development is the engineering work that next.js 15 app router architecture. Frameleads' nextjs development retainers ₹3,00,000–₹40,00,000 (project) are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Next.js 15 App Router architecture",
+      "Headless commerce (Shopify Hydrogen + Sanity)",
+      "ISR + Cloudflare Workers deployment",
+      "AIO/GEO/SEO baked into stack",
+      "Performance + accessibility audit"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing next.js development setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for next.js development. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Next.js Development engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Next.js Development acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for next.js development?",
+        "answer": "Next.js Development retainers in India ₹3,00,000–₹40,00,000 (project). Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until next.js development shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need next.js development if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Next.js Development as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can next.js development run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard next.js development retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹3,00,000–₹40,00,000 (project)",
+    "primary_keyword": "nextjs development agency india",
+    "secondary_keywords": [
+      "nextjs development services",
+      "nextjs development agency India",
+      "nextjs development retainer"
+    ],
+    "tags": [
+      "website-development",
+      "nextjs-development",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "ga4-setup",
+    "parent_service": "analytics-and-automations",
+    "label": "GA4 Setup",
+    "h1": "GA4 Setup for Indian SMBs (2026)",
+    "direct_answer": "GA4 Setup is the engineering work that ga4 + gtm container + ecommerce events. Frameleads' ga4 setup retainers ₹50,000–₹3,00,000 setup + ₹15,000+/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "GA4 + GTM container + ecommerce events",
+      "Enhanced conversions + EMQ optimization",
+      "BigQuery export + retention extension",
+      "Looker Studio dashboards",
+      "Quarterly tracking audit"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing ga4 setup setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for ga4 setup. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. GA4 Setup engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "GA4 Setup acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for ga4 setup?",
+        "answer": "GA4 Setup retainers in India ₹50,000–₹3,00,000 setup + ₹15,000+/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until ga4 setup shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need ga4 setup if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. GA4 Setup as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can ga4 setup run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard ga4 setup retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹3,00,000 setup + ₹15,000+/month",
+    "primary_keyword": "ga4 setup agency india",
+    "secondary_keywords": [
+      "ga4 setup services",
+      "ga4 setup agency India",
+      "ga4 setup retainer"
+    ],
+    "tags": [
+      "analytics-and-automations",
+      "ga4-setup",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "server-side-tagging",
+    "parent_service": "analytics-and-automations",
+    "label": "Server-Side Tagging",
+    "h1": "Server-Side Tagging for Indian SMBs (2026)",
+    "direct_answer": "Server-Side Tagging is the engineering work that gtm server in cloud run deployment. Frameleads' server-side tagging retainers ₹1,00,000–₹4,00,000 setup + ₹20,000+/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "GTM Server in Cloud Run deployment",
+      "Meta CAPI + Google Ads + GA4 routing",
+      "Hashed PII + privacy compliance",
+      "EMQ score monitoring + optimization",
+      "Cross-platform deduplication"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing server-side tagging setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for server-side tagging. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Server-Side Tagging engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Server-Side Tagging acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for server-side tagging (sgtm)?",
+        "answer": "Server-Side Tagging (sGTM) retainers in India ₹1,00,000–₹4,00,000 setup + ₹20,000+/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until server-side tagging (sgtm) shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need server-side tagging (sgtm) if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Server-Side Tagging (sGTM) as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can server-side tagging (sgtm) run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard server-side tagging (sgtm) retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹1,00,000–₹4,00,000 setup + ₹20,000+/month",
+    "primary_keyword": "server side tagging sgtm agency india",
+    "secondary_keywords": [
+      "server-side tagging services",
+      "server-side tagging agency India",
+      "server-side tagging retainer"
+    ],
+    "tags": [
+      "analytics-and-automations",
+      "server-side-tagging",
+      "india",
+      "sub-service"
+    ]
+  },
+  {
+    "id": "triple-whale-setup",
+    "parent_service": "analytics-and-automations",
+    "label": "Triple Whale Setup",
+    "h1": "Triple Whale Setup for Indian SMBs (2026)",
+    "direct_answer": "Triple Whale Setup is the engineering work that account + integration + dashboard configuration. Frameleads' triple whale setup retainers ₹50,000–₹2,00,000 setup + ₹15,000+/month are scoped per stage + ICP, with weekly diagnostics and quarterly strategic reviews.",
+    "deliverables": [
+      "Account + integration + dashboard configuration",
+      "Pixel + sGTM coordination",
+      "Custom event + report setup",
+      "Onboarding + team training",
+      "Quarterly optimization"
+    ],
+    "process_steps": [
+      {
+        "name": "Audit current state",
+        "text": "Audit your existing triple whale setup setup against 6 dimensions: tracking, channel mix, creative, audience, conversion, retention. Surface the 3 highest-leverage gaps."
+      },
+      {
+        "name": "Set up foundational tracking",
+        "text": "GA4 + Meta CAPI + server-side tagging for triple whale setup. Without measurement, optimization is blind."
+      },
+      {
+        "name": "Build the engine",
+        "text": "Channel mix + creative cadence + retention infrastructure. Triple Whale Setup engagements need 30-90 days of compounding before plateau."
+      },
+      {
+        "name": "Optimize weekly",
+        "text": "Weekly diagnostic ritual: ROAS, CPM trend, creative concentration, funnel conversion. Kill underperformers fast."
+      },
+      {
+        "name": "Compound via retention",
+        "text": "Triple Whale Setup acquisition is half the equation; retention via email/WhatsApp doubles LTV/CAC over 12 months."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's a realistic monthly retainer for triple whale setup?",
+        "answer": "Triple Whale Setup retainers in India ₹50,000–₹2,00,000 setup + ₹15,000+/month. Below the floor, signal is too thin. Above the ceiling, scope expands beyond standard sub-service work."
+      },
+      {
+        "question": "How long until triple whale setup shows results?",
+        "answer": "Performance signals: 14-60 days. Compounding outcomes: 4-9 months. Plan minimum 6-month commitment."
+      },
+      {
+        "question": "Do I need triple whale setup if I already have full-service marketing?",
+        "answer": "Sub-service depth differs from full-service breadth. Triple Whale Setup as a specialist engagement makes sense when your full-service team lacks that specific capability."
+      },
+      {
+        "question": "Can triple whale setup run alongside in-house team?",
+        "answer": "Yes — most engagements augment internal teams. Frameleads handles the specialist execution while in-house owns brand + strategy."
+      },
+      {
+        "question": "What's NOT included in a standard triple whale setup retainer?",
+        "answer": "Media spend, third-party tooling licenses, custom video production. All scoped explicitly during onboarding."
+      }
+    ],
+    "cost_band": "₹50,000–₹2,00,000 setup + ₹15,000+/month",
+    "primary_keyword": "triple whale setup agency india d2c",
+    "secondary_keywords": [
+      "triple whale setup services",
+      "triple whale setup agency India",
+      "triple whale setup retainer"
+    ],
+    "tags": [
+      "analytics-and-automations",
+      "triple-whale-setup",
+      "india",
+      "sub-service"
+    ]
+  }
+]

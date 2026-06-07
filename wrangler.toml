@@ -1,0 +1,57 @@
+# Cloudflare Workers config for Frameleads marketing site
+# Powered by @opennextjs/cloudflare — full Next.js ISR on Workers + R2 + KV.
+# Mirror of Leadkaun's pattern (see Leadkaun-Main/leadkaun-marketing/wrangler.toml)
+
+name = "frameleads-marketing"
+main = ".open-next/worker.js"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+account_id = "19650c4ca8e6e4ed2699a0b288206b03"
+
+# ─────────────────────────────────────────────────────────────────────────
+# Static assets (CSS, JS, images bundled by Next/OpenNext)
+# ─────────────────────────────────────────────────────────────────────────
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# ─────────────────────────────────────────────────────────────────────────
+# R2 — OpenNext incremental cache (page bodies + fetch responses)
+# Bucket: created in Phase 3 with `wrangler r2 bucket create frameleads-isr-cache`
+# ─────────────────────────────────────────────────────────────────────────
+[[r2_buckets]]
+binding = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "frameleads-isr-cache"
+
+# ─────────────────────────────────────────────────────────────────────────
+# R2 — PSEO data layer (programmatic SEO JSON files for the 100k-page plan)
+# Bucket: created in Phase 3 with `wrangler r2 bucket create frameleads-pseo`
+# Empty at create time; populated when the data table from the growth plan lands.
+# ─────────────────────────────────────────────────────────────────────────
+[[r2_buckets]]
+binding = "PSEO_DATA"
+bucket_name = "frameleads-pseo"
+
+# ─────────────────────────────────────────────────────────────────────────
+# KV — OpenNext tag cache (revalidateTag / revalidatePath index)
+# ID populated in Phase 3 after `wrangler kv namespace create FRAMELEADS_KV`.
+# ─────────────────────────────────────────────────────────────────────────
+[[kv_namespaces]]
+binding = "NEXT_TAG_CACHE_KV"
+id = "230601eacea54cf595f4c06e7e922932"
+
+# ─────────────────────────────────────────────────────────────────────────
+# Public env (exposed to the browser bundle via NEXT_PUBLIC_*)
+# Server-only secrets go in `.dev.vars` (local) and `wrangler secret put` (prod).
+# ─────────────────────────────────────────────────────────────────────────
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://frameleads.com"
+NEXT_PUBLIC_API_URL = "https://frameleads-api.workajsal.workers.dev"
+
+# ─────────────────────────────────────────────────────────────────────────
+# Observability
+# ─────────────────────────────────────────────────────────────────────────
+[observability]
+enabled = true
+head_sampling_rate = 1
