@@ -13,6 +13,7 @@ import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
 import { questions } from "./data/questions";
 import { subServices } from "./data/sub-services";
+import { BLOG_POSTS } from "./data/blogs";
 
 export const SITE_URL = "https://frameleads.com";
 
@@ -476,6 +477,24 @@ export const SEGMENTS: SitemapSegment[] = [
 					priority: 0.7,
 				}));
 			return withDate([...STATIC_GLOSSARY_HUB, ...dynamic]);
+		},
+	},
+	{
+		id: "blog",
+		tier: 6,
+		name: "Blog",
+		description: "Operator-grade marketing playbooks reviewed quarterly.",
+		urls: () => {
+			const hub = withDate([
+				{ slug: "blogs", changefreq: "weekly", priority: 0.85 },
+			]);
+			const posts = BLOG_POSTS.map((p) => ({
+				loc: `${SITE_URL}/blogs/${p.slug}`,
+				lastmod: p.dateModified ?? p.datePublished,
+				changefreq: "monthly" as const,
+				priority: 0.8,
+			}));
+			return [...hub, ...posts];
 		},
 	},
 	{

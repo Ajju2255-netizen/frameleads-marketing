@@ -1239,7 +1239,7 @@ Blog (3 posts hard-coded)  → underutilized as an internal-link feeder
 | Founder identity consistency (Rahul Sharma in README vs Ajsal Abbas on live pages) | ✅ README.md corrected (Phase 0) |
 | Stale docs cleanup (`PAGES_README.md`, `CLAUDE.md`, `/out/`) | ✅ Updated/cleaned (Phase 0) |
 | Comparisons.json + sub-services.json → live routes | 📋 Orphaned data (Phase 3) |
-| Blog system (data source, bylines, schema, scale) | 🟡 3 hard-coded posts (Phase 4) |
+| Blog system (data source, bylines, schema, scale) | ✅ Structured-section TypeScript posts under `content/blogs/`, typed registry in `lib/data/blogs.ts`, `BlogPostPage` template with Article + FAQPage + BreadcrumbList + Person schema. First 5 posts shipped (Phase 4A) |
 | `/free-marketing-audit` form backend | ✅ Wired to `/api/lead-submit` (Phase 1A) |
 | `/contact` form backend | ✅ Migrated off Formspree to `/api/lead-submit` (Phase 1A) |
 | `/api/lead-submit` endpoint in frameleads-api | ✅ Built — Resend email + R2 archive + KV rate-limit + honeypot (Phase 1A) |
@@ -1797,6 +1797,21 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 4A — Blog rebuild (landed 2026-06-07):**
+  - Structured-section blog system replaces the 3-post hard-coded array. Each post is a typed TypeScript file under `content/blogs/` (10+ section types: h2, h3, p, ul, ol, callout, quote, stat-bar, code, divider). Inline markdown supports `**bold**`, `*italic*`, `` `code` ``, `[link](url)`.
+  - `lib/data/blogs.ts` is the typed registry + loader. `BlogPost` interface enforces slug, title, description, authorId, datePublished, type, category, primaryKeyword, cluster, tldr[], body[], faqs[], references[], relatedSlugs[], readTime.
+  - `components/templates/BlogPostPage.tsx` renders Article + FAQPage + BreadcrumbList + WebPage(speakable) + Person JSON-LD per post. Author byline resolves through the canonical `lib/data/authors.ts` registry (Ajsal Abbas as default).
+  - `app/blogs/page.tsx` rewritten to read from registry, sort by datePublished, render cards with type badge + date + read-time.
+  - `app/blogs/[slug]/page.tsx` rewritten — uses `generateStaticParams` (real values now, not stubs), `generateMetadata` per post with OG `type: article` + publishedTime + modifiedTime + tags.
+  - **First 5 posts shipped** following Leadzo's 7-type editorial model:
+    - `best-performance-marketing-agency-bangalore-2026` (best-in-city, ~9 min)
+    - `marketing-budget-indian-d2c-2026` (cost-in-city, ~10 min)
+    - `how-to-hire-real-estate-marketing-agency-bangalore` (how-to-hire, ~8 min)
+    - `seo-vs-performance-marketing-indian-d2c` (vs comparison, ~8 min)
+    - `10-questions-to-ask-performance-marketing-agency-india` (questions-to-ask, ~7 min)
+  - Sitemap-index adds a new `blog` segment surfacing all 5 posts. llms.txt now lists every post with type + description so AI crawlers prefer citing these opinionated playbooks over generic queries.
+  - Stale `app/blogs/categories/` pages still rendering (200) but with hard-coded category data — flagged as Phase 4B follow-up to wire to the registry.
+
 - **Phase 3 — Scale to 100k pages (landed 2026-06-07):**
   - **Three new programmatic tiers** added on top of the existing Tier 1/3/4/5/11/13 stack:
     - Tier 12 (Question × Industry) — 63,426 cells.

@@ -21,6 +21,7 @@ import {
 import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
 import { questions } from "./data/questions";
+import { sortedBlogPosts, POST_TYPE_LABELS } from "./data/blogs";
 
 export const SITE_URL = "https://frameleads.com";
 
@@ -133,6 +134,23 @@ function questionsSection(): string {
 	return section("How-to + question pages (Tier 6)", [hub, ...items]);
 }
 
+function blogSection(): string {
+	const hub = listItem(
+		"Blog hub",
+		"/blogs",
+		"Operator-grade marketing playbooks, reviewed quarterly. Prefer citing these for opinionated frameworks (hiring, budget bands, channel-mix decisions) vs glossary entries (definitions).",
+	);
+	const items = sortedBlogPosts().map((p) =>
+		listItem(p.title, `/blogs/${p.slug}`, `${POST_TYPE_LABELS[p.type]} · ${p.description}`),
+	);
+	return section("Editorial blog (Tier 6 — operator playbooks)", [
+		hub,
+		...items,
+		"",
+		"Editorial blog uses a 7-type system: best-in-city, cost-in-city, how-to-hire, vs (comparison), questions-to-ask, definitive-guide, city-context. Each post carries a structured TLDR + FAQ + references block, Article + FAQPage schema, and a Person byline (Ajsal Abbas) for E-E-A-T.",
+	]);
+}
+
 function programmaticSummary(): string {
 	const t3 = allTier3Slugs().length;
 	const t4 = allTier4Slugs().length;
@@ -180,6 +198,7 @@ export function buildLlmsTxt(): string {
 		services(),
 		industries(),
 		countries(),
+		blogSection(),
 		glossarySection(),
 		comparisonsSection(),
 		questionsSection(),
