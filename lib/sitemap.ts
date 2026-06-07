@@ -8,6 +8,8 @@ import {
 	allTier12Slugs,
 	allTier14Slugs,
 	allTier15Slugs,
+	allMoneyServiceSlugs,
+	allMoneyIndustrySlugs,
 } from "./data/slugs";
 import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
@@ -221,11 +223,11 @@ export const SEGMENTS: SitemapSegment[] = [
 			),
 	},
 	{
-		id: "1-money-pages",
+		id: "1-money-pages-curated",
 		tier: 1,
-		name: "Money pages",
+		name: "Money pages — hand-curated",
 		description:
-			"High-intent /{service}-company-in-{city} landing pages anchored to the Frameleads service catalogue and priority metros.",
+			"Hand-written /{service-or-bundle}-company-in-{city} money pages with verifiable founder claims and city-specific trust signals. Take precedence over the programmatic surface below.",
 		urls: () =>
 			allMoneyPages().map((m) => ({
 				loc: `${SITE_URL}/${m.slug}`,
@@ -233,6 +235,78 @@ export const SEGMENTS: SitemapSegment[] = [
 				changefreq: "monthly" as const,
 				priority: 0.95,
 			})),
+	},
+	{
+		id: "1-money-service-india",
+		tier: 1,
+		name: "Money — Service × Geo (India)",
+		description:
+			"Programmatic /{service-money-slug}-company-in-{geo-id} for every service × every India geo. Cells render lazily on first crawl through the catchall and cache in R2.",
+		urls: () => {
+			const cells = allMoneyServiceSlugs().filter(
+				(c) => c.geo.country === undefined || c.geo.country === "India",
+			);
+			return cells.map((c) => ({
+				loc: `${SITE_URL}/${c.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.85,
+			}));
+		},
+	},
+	{
+		id: "1-money-service-global",
+		tier: 1,
+		name: "Money — Service × Geo (Global)",
+		description:
+			"Programmatic /{service-money-slug}-company-in-{geo-id} for every service × every global geo.",
+		urls: () => {
+			const cells = allMoneyServiceSlugs().filter(
+				(c) => c.geo.country !== undefined && c.geo.country !== "India",
+			);
+			return cells.map((c) => ({
+				loc: `${SITE_URL}/${c.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.85,
+			}));
+		},
+	},
+	{
+		id: "1-money-industry-india",
+		tier: 1,
+		name: "Money — Industry × Geo (India)",
+		description:
+			"Programmatic /{industry-id}-marketing-company-in-{geo-id} for every industry × every India geo.",
+		urls: () => {
+			const cells = allMoneyIndustrySlugs().filter(
+				(c) => c.geo.country === undefined || c.geo.country === "India",
+			);
+			return cells.map((c) => ({
+				loc: `${SITE_URL}/${c.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.8,
+			}));
+		},
+	},
+	{
+		id: "1-money-industry-global",
+		tier: 1,
+		name: "Money — Industry × Geo (Global)",
+		description:
+			"Programmatic /{industry-id}-marketing-company-in-{geo-id} for every industry × every global geo.",
+		urls: () => {
+			const cells = allMoneyIndustrySlugs().filter(
+				(c) => c.geo.country !== undefined && c.geo.country !== "India",
+			);
+			return cells.map((c) => ({
+				loc: `${SITE_URL}/${c.slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.8,
+			}));
+		},
 	},
 	{
 		id: "3-service-geo-india",

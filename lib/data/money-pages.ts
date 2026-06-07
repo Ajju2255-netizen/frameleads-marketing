@@ -24,6 +24,14 @@
  */
 
 import type { ChannelMixRow } from "@/lib/data/location-depth";
+import { getLocationDepth } from "@/lib/data/location-depth";
+import {
+	getIndustry,
+	getService,
+	type Geo,
+	type Industry,
+	type Service,
+} from "@/lib/data";
 
 export type MoneyPageFaq = {
 	question: string;
@@ -684,4 +692,304 @@ export function allMoneyPages(): MoneyPage[] {
 
 export function moneyPagesForGeo(geoId: string): MoneyPage[] {
 	return ALL.filter((m) => m.geoId === geoId);
+}
+
+// ─────────────────────── Programmatic content builders ───────────────────────
+
+/**
+ * Service money-slug helper (mirrors slugs.ts so this module can build slugs
+ * without importing from slugs.ts and creating a cycle).
+ */
+function moneySlugForService(s: Service): string {
+	return s.id === "seo-services" ? "seo" : s.id;
+}
+
+/**
+ * Strip a trailing "Services" off a Service.label so headings read naturally
+ * in money-page context: "SEO Company in Mumbai", not "SEO Services Company
+ * in Mumbai".
+ */
+function shortServiceLabel(s: Service): string {
+	return s.label.replace(/\s+Services?$/i, "").trim();
+}
+
+function indLabel(id: string): string {
+	return getIndustry(id)?.label ?? id;
+}
+
+function svcLabel(id: string): string {
+	return getService(id)?.label ?? id;
+}
+
+function geoIsIndia(geo: Geo): boolean {
+	return geo.country === undefined || geo.country === "India";
+}
+
+function complianceHintForGeo(geo: Geo): string | null {
+	const loc = getLocationDepth(geo.id);
+	if (loc && loc.compliance.length > 0) {
+		return loc.compliance
+			.slice(0, 2)
+			.map((c) => c.name)
+			.join(" + ");
+	}
+	if (geoIsIndia(geo)) return "DPDP Act 2023 + ASCI + sector regulators (RBI / SEBI / IRDAI / RERA / MCI as applicable)";
+	if (geo.country === "UAE") return "UAE PDPL + DLD + Trakheesi (where applicable)";
+	if (geo.country === "Singapore") return "PDPA + MAS (financial)";
+	if (geo.country === "UK" || geo.country === "United Kingdom") return "UK-GDPR + ICO + ASA";
+	if (geo.country === "USA" || geo.country === "United States") return "CCPA + state laws + FTC + HIPAA (healthcare)";
+	if (geo.country === "Saudi Arabia") return "KSA PDPL + SAMA (financial)";
+	if (geo.country === "Australia") return "Privacy Act 1988 + ACMA + ACCC";
+	if (geo.country === "Canada") return "PIPEDA + Quebec Law 25 + CASL";
+	return null;
+}
+
+function geoTopIndustryLabels(geo: Geo, n: number = 3): string {
+	const labels = geo.topIndustries
+		.slice(0, n)
+		.map((id) => indLabel(id))
+		.filter(Boolean);
+	return labels.length ? labels.join(", ") : "growth-stage";
+}
+
+const STANDARD_PROOF_POINTS: string[] = [
+	"Founder appeared on Shark Tank India (verifiable founder credential)",
+	"~200 lifetime engagements across the founder's career — agency-side and brand-side growth functions",
+	"~₹9Cr in attributed pipeline tracked across multi-quarter retainers",
+	"Free 30-minute audit before any retainer — we turn down ~30% of inbound where the engagement isn't yet the right fit",
+];
+
+/**
+ * Build a programmatic Service × Geo MoneyPage from taxonomy alone.
+ * Auto-generates hero + bullets + FAQs without inventing client metrics.
+ */
+export function buildProgrammaticServiceMoneyPage(
+	service: Service,
+	geo: Geo,
+): MoneyPage {
+	const slugBase = moneySlugForService(service);
+	const shortLabel = shortServiceLabel(service);
+	const slug = `${slugBase}-company-in-${geo.id}`;
+	const compliance = complianceHintForGeo(geo);
+	const topInds = geoTopIndustryLabels(geo);
+
+	const heroDek = `A ${shortLabel.toLowerCase()} company built for ${geo.name}'s ${topInds.toLowerCase()} markets. ${service.shortDescription}`;
+
+	const whyLocalBullets: string[] = [
+		`${shortLabel} adapted to ${geo.name}'s buyer mix — pages, channel weighting, and CAC bands tuned to ${topInds.toLowerCase()} unit economics`,
+		`Operating cadence on IST overlap with ${geo.name}-based teams; ${service.timeToResults} to first signal, ${service.primaryKpi.toLowerCase()} tracked as the leading indicator from week two`,
+		`CPC ${service.avgCpcInr} ₹ and CAC ${service.avgCacInr} ₹ are the bands ${shortLabel.toLowerCase()} engagements typically run inside — we'll diagnose where your account currently sits on the free audit before recommending a tier`,
+	];
+	if (compliance) {
+		whyLocalBullets.push(
+			`Working knowledge of ${geo.name} regulatory framework: ${compliance} — relevant rules baked into ad-creative + landing-page review`,
+		);
+	}
+	if (geo.landmarks && geo.landmarks.length > 0) {
+		whyLocalBullets.push(
+			`Cluster-level awareness across ${geo.name}: ${geo.landmarks.slice(0, 4).join(", ")} each codes differently in search + paid — planning reflects that from the audit forward`,
+		);
+	}
+
+	const localFaqs: MoneyPageFaq[] = [
+		{
+			question: `How long does ${shortLabel.toLowerCase()} take to show results for a ${geo.name} business?`,
+			answer: `${service.timeToResults}. Performance-channel signal arrives fastest; organic and compounding loops take 4–9 months. For competitive ${geo.name} commercial queries the band sits at the higher end. Anyone promising significant returns in week one is selling, not forecasting.`,
+		},
+		{
+			question: `What's a realistic ${shortLabel.toLowerCase()} investment for ${geo.name} brands?`,
+			answer: `Three engagement tiers (Starter / Scale / Enterprise) — see the pricing block below for what each tier includes and the monthly band. The right tier depends on your stage, the channels in play, and the cadence you want. We'll recommend the tier (or recommend you don't engage yet) on the free 30-min audit.`,
+		},
+		{
+			question: `Do you have a ${geo.name} office?`,
+			answer:
+				geo.id === "bangalore"
+					? `Yes — Frameleads is headquartered in Bangalore (Electronic City). Most ${shortLabel.toLowerCase()} work happens with the in-person option for kick-offs + quarterly reviews when the engagement is locally hosted.`
+					: `Operations are run from Bangalore (Frameleads HQ). For ${geo.name} engagements above Scale tier we travel for kick-off workshops + quarterly business reviews + critical milestones. Most ongoing work happens over shared Notion / Linear / Slack — the workflow is documented end-to-end so ${geo.name} engagements don't lose continuity. If you specifically need a ${geo.name}-resident agency, we'll say so on the audit call and refer.`,
+		},
+		{
+			question: `How do you handle ${geo.name}'s top buyer industries — ${topInds}?`,
+			answer: `${shortLabel} adapts per category: ${geo.topIndustries
+				.slice(0, 3)
+				.map((id) => {
+					const ind = getIndustry(id);
+					return ind ? `${ind.label.toLowerCase()} (CAC ${ind.avgCacInr} ₹)` : id;
+				})
+				.join("; ")}. The free audit reviews your specific category against the benchmarks before any commercial conversation.`,
+		},
+		{
+			question: `Will you work with our existing ${geo.name} team or agency?`,
+			answer: `Yes — split-team is the default mode of operation. We own ${shortLabel.toLowerCase()} strategy + execution + reporting; your in-house team owns brand voice + deploys + sales follow-through. Documented in shared Notion + Linear so handoffs don't degrade.`,
+		},
+	];
+
+	return {
+		slug,
+		geoId: geo.id,
+		label: `${shortLabel} Company in ${geo.name}`,
+		intent: "service",
+		primaryServiceId: service.id,
+		heroDek,
+		whyLocalBullets,
+		proofPoints: STANDARD_PROOF_POINTS,
+		localFaqs,
+	};
+}
+
+/**
+ * Auto-generated industry-money channel mix: derive weighting from
+ * industry.primaryServices ordering. First service is Primary, next two
+ * Secondary, rest Supporting. Notes inserted are taxonomy-grounded.
+ */
+function autoChannelMixForIndustry(industry: Industry, geo: Geo): ChannelMixRow[] {
+	const tag: Record<number, string> = { 0: "Primary", 1: "Primary", 2: "Secondary", 3: "Secondary" };
+	return industry.primaryServices.slice(0, 5).map((sid, idx) => {
+		const s = getService(sid);
+		const weight = tag[idx] ?? "Supporting";
+		const note = s
+			? `${s.label} runs at CPC ${s.avgCpcInr} ₹ in this category. For ${industry.label.toLowerCase()} in ${geo.name}, ${s.label.toLowerCase()} is part of the ${weight.toLowerCase()} channel mix — ${s.tagline.toLowerCase()}.`
+			: `${sid} as a ${weight.toLowerCase()} channel for ${industry.label.toLowerCase()} in ${geo.name}.`;
+		return { channel: s ? s.label : sid, weight, note };
+	});
+}
+
+function autoDeliverablesForIndustry(industry: Industry, geo: Geo): string[] {
+	const out: string[] = [
+		`${industry.label} ICP definition + buyer-persona map specific to ${geo.name}'s market mix`,
+		`Positioning + messaging review against the ${industry.label.toLowerCase()} competitive set in ${geo.name}`,
+	];
+	industry.primaryServices.slice(0, 4).forEach((sid) => {
+		const s = getService(sid);
+		if (s) out.push(`${s.label} engine — ${s.tagline.toLowerCase()}`);
+	});
+	if (industry.topPainPoints && industry.topPainPoints.length > 0) {
+		out.push(
+			`Direct fix for ${industry.label.toLowerCase()}'s most common pain point in ${geo.name}: ${industry.topPainPoints[0].toLowerCase()}`,
+		);
+	}
+	out.push(
+		`Attribution + reporting: weekly dashboards with CAC by channel, leads + opportunities tracked through to revenue where CRM is integrated`,
+	);
+	return out;
+}
+
+/**
+ * Build a programmatic Industry × Geo MoneyPage from taxonomy.
+ */
+export function buildProgrammaticIndustryMoneyPage(
+	industry: Industry,
+	geo: Geo,
+): MoneyPage {
+	const slug = `${industry.id}-marketing-company-in-${geo.id}`;
+	const compliance = complianceHintForGeo(geo);
+	const isTopIndustryHere = geo.topIndustries.includes(industry.id);
+
+	const heroDek = `A ${industry.label.toLowerCase()} marketing company for ${geo.name} brands — ${industry.tagline.toLowerCase()}. ${
+		isTopIndustryHere
+			? `${industry.label} is one of ${geo.name}'s dominant buyer industries; we run the full engagement as a connected system.`
+			: `Engagements tuned to ${industry.label.toLowerCase()} unit economics regardless of whether it's a dominant ${geo.name} category.`
+	}`;
+
+	const whyLocalBullets: string[] = [
+		`${industry.label} unit economics: CPC ${industry.avgCpcInr} ₹, CAC ${industry.avgCacInr} ₹ — the bands ${geo.name} ${industry.label.toLowerCase()} engagements run inside`,
+		`Primary channel mix: ${industry.primaryServices
+			.slice(0, 3)
+			.map((id) => svcLabel(id))
+			.join(" + ")} — derived from ${industry.label.toLowerCase()} buyer journeys, not generic playbooks`,
+	];
+	if (industry.topPainPoints && industry.topPainPoints.length > 0) {
+		whyLocalBullets.push(
+			`We engage with ${industry.label.toLowerCase()}'s actual pain points: ${industry.topPainPoints.slice(0, 2).join("; ")}`,
+		);
+	}
+	if (compliance) {
+		whyLocalBullets.push(
+			`${geo.name} regulatory awareness: ${compliance} — applied to ${industry.label.toLowerCase()} ad creative + landing-page review where the industry has additional disclosure requirements`,
+		);
+	}
+	if (isTopIndustryHere) {
+		whyLocalBullets.push(
+			`${industry.label} is in ${geo.name}'s top buyer-industry mix, which means: better local benchmark data, more pre-existing channel-performance evidence, and faster cycle to first signal`,
+		);
+	}
+
+	const localFaqs: MoneyPageFaq[] = [
+		{
+			question: `What's the typical CAC for ${industry.label.toLowerCase()} in ${geo.name}?`,
+			answer: `Category band sits at CAC ${industry.avgCacInr} ₹, CPC ${industry.avgCpcInr} ₹. Within the band, the spread depends on offer, AOV, and channel mix. The free audit will diagnose your specific position against the band before any commercial conversation.`,
+		},
+		{
+			question: `What channels work best for ${industry.label.toLowerCase()} in ${geo.name}?`,
+			answer: `Primary channels (in order): ${industry.primaryServices
+				.slice(0, 3)
+				.map((id) => svcLabel(id))
+				.join(", ")}. See the channel-mix table above for the exact weighting + the rationale per channel.`,
+		},
+		{
+			question: `Do you have ${industry.label.toLowerCase()} experience in ${geo.name} specifically?`,
+			answer:
+				isTopIndustryHere
+					? `Yes — ${industry.label} is one of ${geo.name}'s dominant buyer industries, which means our engagement count + benchmark data is meaningfully higher for this combination than for non-priority categories. The audit will share what we can disclose about prior ${industry.label.toLowerCase()} engagements.`
+					: `${industry.label} engagements happen across geographies — the playbook adapts to ${geo.name}'s market context. The free audit will diagnose category-channel fit and share what we can disclose about prior ${industry.label.toLowerCase()} engagements.`,
+		},
+		{
+			question: `What's a typical engagement length for ${industry.label.toLowerCase()} marketing?`,
+			answer: `Three months minimum for paid channels to optimise through 2–3 reporting cycles; six months minimum for organic + content engines to begin compounding. Most ${industry.label.toLowerCase()} engagements settle at 6–12 month retainers, then move month-to-month with 30 days notice in either direction.`,
+		},
+		{
+			question: `Will you work with our existing ${industry.label.toLowerCase()} team or agency in ${geo.name}?`,
+			answer: `Yes — split-team is the default. We own strategy + execution + attribution; in-house team owns brand voice + deploys + sales follow-through. Documented in shared Notion + Linear so handoffs don't degrade.`,
+		},
+	];
+
+	return {
+		slug,
+		geoId: geo.id,
+		label: `${industry.label} Marketing Company in ${geo.name}`,
+		intent: "composite",
+		composite: {
+			summary: `A ${industry.label.toLowerCase()} marketing company for ${geo.name} brands. We run the full engagement: ${industry.primaryServices
+				.slice(0, 4)
+				.map((id) => svcLabel(id).toLowerCase())
+				.join(" + ")}, tuned to ${industry.label.toLowerCase()} unit economics.`,
+			serviceIds: industry.primaryServices,
+			industryBias: [industry.id],
+			deliverables: autoDeliverablesForIndustry(industry, geo),
+			channelMix: autoChannelMixForIndustry(industry, geo),
+		},
+		heroDek,
+		whyLocalBullets,
+		proofPoints: STANDARD_PROOF_POINTS,
+		localFaqs,
+	};
+}
+
+/**
+ * Resolve a money-page slug into a MoneyPage object.
+ *
+ *   1. Hand-curated entries (the 9 in this file) take precedence.
+ *   2. Programmatic service × geo (parsed by parseMoneyServiceSlug).
+ *   3. Programmatic industry × geo (parsed by parseMoneyIndustrySlug).
+ *
+ * Note: this function does not consume the parsed match; callers that already
+ * have a parsed MoneyServiceMatch / MoneyIndustryMatch can use the dedicated
+ * builders directly to skip the lookup.
+ */
+export function resolveMoneyPage(
+	slug: string,
+	resolvers: {
+		service?: Service;
+		industry?: Industry;
+		geo?: Geo;
+	} = {},
+): MoneyPage | undefined {
+	const curated = getMoneyPage(slug);
+	if (curated) return curated;
+	if (resolvers.service && resolvers.geo) {
+		return buildProgrammaticServiceMoneyPage(resolvers.service, resolvers.geo);
+	}
+	if (resolvers.industry && resolvers.geo) {
+		return buildProgrammaticIndustryMoneyPage(resolvers.industry, resolvers.geo);
+	}
+	return undefined;
 }

@@ -6,6 +6,7 @@ import { Tier5Page } from "@/components/templates/Tier5Page";
 import { Tier11Page } from "@/components/templates/Tier11Page";
 import { Tier13Page } from "@/components/templates/Tier13Page";
 import { IndustryPillarPage } from "@/components/templates/IndustryPillarPage";
+import { MoneyPage } from "@/components/templates/MoneyPage";
 import { parseProgrammaticSlug } from "@/lib/data/slugs";
 
 // Strict ISR — first hit renders on the worker, R2 caches the response,
@@ -95,6 +96,31 @@ export async function generateMetadata({
 		};
 	}
 
+	if (match.tier === "money-service") {
+		const { service, geo } = match;
+		const shortLabel = service.label.replace(/\s+Services?$/i, "").trim();
+		const title = `${shortLabel} Company in ${geo.name} — Frameleads`;
+		const description = `${shortLabel} company in ${geo.name}. ${shortLabel} tuned to ${geo.name}'s buyer mix, CPC ${service.avgCpcInr} ₹, CAC ${service.avgCacInr} ₹. Free 30-min audit before any retainer.`;
+		return {
+			title,
+			description,
+			alternates: { canonical: url },
+			openGraph: { title, description, url, type: "website" },
+		};
+	}
+
+	if (match.tier === "money-industry") {
+		const { industry, geo } = match;
+		const title = `${industry.label} Marketing Company in ${geo.name} — Frameleads`;
+		const description = `${industry.label} marketing company for ${geo.name} brands. CPC ${industry.avgCpcInr} ₹, CAC ${industry.avgCacInr} ₹, full-funnel engagement. Free 30-min audit.`;
+		return {
+			title,
+			description,
+			alternates: { canonical: url },
+			openGraph: { title, description, url, type: "website" },
+		};
+	}
+
 	const { service, industry, geo } = match;
 	const title = `${service.label} for ${industry.label} in ${geo.name} — Frameleads Growth System™`;
 	const description = `${service.label} for ${industry.label} in ${geo.name}. Local-economic + category-specific playbook. CAC ${industry.avgCacInr} ₹. Free audit.`;
@@ -154,5 +180,9 @@ export default async function ProgrammaticSlugPage({
 					url={url}
 				/>
 			);
+		case "money-service":
+			return <MoneyPage service={match.service} geo={match.geo} />;
+		case "money-industry":
+			return <MoneyPage industry={match.industry} geo={match.geo} />;
 	}
 }

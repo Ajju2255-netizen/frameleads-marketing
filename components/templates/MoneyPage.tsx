@@ -44,13 +44,31 @@ import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
 import { AuthorCard } from "./AuthorCard";
 import { DEFAULT_AUTHOR } from "@/lib/data/authors";
-import { services, getGeo, type Service, type Geo } from "@/lib/data";
-import { getMoneyPage, type MoneyPage as MoneyPageData } from "@/lib/data/money-pages";
+import { services, getGeo, type Service, type Geo, type Industry } from "@/lib/data";
+import {
+	getMoneyPage,
+	buildProgrammaticServiceMoneyPage,
+	buildProgrammaticIndustryMoneyPage,
+	type MoneyPage as MoneyPageData,
+} from "@/lib/data/money-pages";
 
 const SITE_URL = "https://frameleads.com";
 const PUBLISHED_AT = "2025-12-01";
 
-type Props = { slug: string };
+/**
+ * Three input modes:
+ *   - { slug }                — look up hand-curated MoneyPage from money-pages.ts
+ *   - { service, geo }        — programmatic Service × Geo (taxonomy-derived)
+ *   - { industry, geo }       — programmatic Industry × Geo (taxonomy-derived)
+ *
+ * Internally all three resolve to the same MoneyPageData shape and feed the
+ * same render path, so layout / schema / SEO remain identical across the
+ * curated and programmatic surfaces.
+ */
+type Props =
+	| { slug: string; service?: undefined; industry?: undefined; geo?: undefined }
+	| { slug?: undefined; service: Service; industry?: undefined; geo: Geo }
+	| { slug?: undefined; service?: undefined; industry: Industry; geo: Geo };
 
 function buildFaqs(m: MoneyPageData): FAQItem[] {
 	return m.localFaqs.map((f) => ({ question: f.question, answer: f.answer }));
@@ -143,8 +161,27 @@ function buildSchema(
 	];
 }
 
-export function MoneyPage({ slug }: Props) {
-	const money = getMoneyPage(slug);
+export function MoneyPage(props: Props) {
+	// ─── Mode resolution ──────────────────────────────────────────────
+	let money: MoneyPageData | undefined;
+	let geo: Geo | undefined;
+
+	if (props.slug) {
+		money = getMoneyPage(props.slug);
+		geo = money ? getGeo(money.geoId) : undefined;
+	} else if (props.service && props.geo) {
+		// Service × Geo programmatic
+		geo = props.geo;
+		// Check for hand-curated overlay first; fall back to programmatic build.
+		const overlaySlug = `${props.service.id === "seo-services" ? "seo" : props.service.id}-company-in-${props.geo.id}`;
+		money = getMoneyPage(overlaySlug) ?? buildProgrammaticServiceMoneyPage(props.service, props.geo);
+	} else if (props.industry && props.geo) {
+		// Industry × Geo programmatic
+		geo = props.geo;
+		const overlaySlug = `${props.industry.id}-marketing-company-in-${props.geo.id}`;
+		money = getMoneyPage(overlaySlug) ?? buildProgrammaticIndustryMoneyPage(props.industry, props.geo);
+	}
+
 	if (!money) {
 		return (
 			<>
@@ -163,7 +200,6 @@ export function MoneyPage({ slug }: Props) {
 		);
 	}
 
-	const geo = getGeo(money.geoId);
 	if (!geo) {
 		return (
 			<>

@@ -136,6 +136,29 @@ export type Tier11Match = {
 	slug: string;
 };
 
+/**
+ * Money-page Service × Geo match.
+ * URL pattern: /{service-money-slug}-company-in-{geo-id}
+ * where service-money-slug strips trailing "-services" from service.id.
+ */
+export type MoneyServiceMatch = {
+	tier: "money-service";
+	service: Service;
+	geo: Geo;
+	slug: string;
+};
+
+/**
+ * Money-page Industry × Geo match.
+ * URL pattern: /{industry-id}-marketing-company-in-{geo-id}
+ */
+export type MoneyIndustryMatch = {
+	tier: "money-industry";
+	industry: Industry;
+	geo: Geo;
+	slug: string;
+};
+
 export type Tier13Match = {
 	tier: 13;
 	service: Service;
@@ -173,7 +196,9 @@ export type ProgrammaticMatch =
 	| Tier5Match
 	| Tier1IndustryMatch
 	| Tier11Match
-	| Tier13Match;
+	| Tier13Match
+	| MoneyServiceMatch
+	| MoneyIndustryMatch;
 
 export type TwoSegmentMatch = Tier12Match | Tier14Match | Tier15Match;
 
@@ -340,8 +365,77 @@ export function parseTier11Slug(slug: string): Tier11Match | null {
 	return null;
 }
 
+/**
+ * Service money-slug helper. Service.id "seo-services" → "seo" for the
+ * money-page URL pattern (we use the shorter form because that's what buyers
+ * type into Google: "seo company in mumbai", not "seo services company in
+ * mumbai"). All other service.ids pass through unchanged.
+ */
+export function serviceMoneySlug(s: Service): string {
+	if (s.id === "seo-services") return "seo";
+	return s.id;
+}
+
+/**
+ * Parse `/{service-money-slug}-company-in-{geo-id}` → Money × Service × Geo.
+ *
+ * Examples:
+ *   seo-company-in-mumbai               → seo-services × Mumbai
+ *   google-ads-company-in-delhi-ncr     → google-ads  × Delhi NCR
+ *   performance-marketing-company-in-pune → performance-marketing × Pune
+ */
+export function parseMoneyServiceSlug(slug: string): MoneyServiceMatch | null {
+	if (RESERVED_SLUGS.has(slug)) return null;
+	if (!slug.includes("-company-in-")) return null;
+
+	// Order-sensitive: try longer service prefixes first so e.g.
+	// "performance-marketing-company-in-..." matches "performance-marketing"
+	// before the (non-existent) "performance" service.
+	for (const svc of sortedServicesDesc()) {
+		const moneySlug = serviceMoneySlug(svc);
+		const prefix = `${moneySlug}-company-in-`;
+		if (slug.startsWith(prefix)) {
+			const geoSlug = slug.slice(prefix.length);
+			const geo = getGeo(geoSlug);
+			if (geo) {
+				return { tier: "money-service", service: svc, geo, slug };
+			}
+		}
+	}
+	return null;
+}
+
+/**
+ * Parse `/{industry-id}-marketing-company-in-{geo-id}` → Money × Industry × Geo.
+ *
+ * Examples:
+ *   real-estate-marketing-company-in-mumbai   → real-estate × Mumbai
+ *   healthcare-marketing-company-in-bangalore → healthcare  × Bangalore
+ *   b2b-saas-marketing-company-in-pune        → b2b-saas    × Pune
+ */
+export function parseMoneyIndustrySlug(slug: string): MoneyIndustryMatch | null {
+	if (RESERVED_SLUGS.has(slug)) return null;
+	if (!slug.includes("-marketing-company-in-")) return null;
+
+	for (const ind of sortedIndustriesDesc()) {
+		const prefix = `${ind.id}-marketing-company-in-`;
+		if (slug.startsWith(prefix)) {
+			const geoSlug = slug.slice(prefix.length);
+			const geo = getGeo(geoSlug);
+			if (geo) {
+				return { tier: "money-industry", industry: ind, geo, slug };
+			}
+		}
+	}
+	return null;
+}
+
 export function parseProgrammaticSlug(slug: string): ProgrammaticMatch | null {
 	return (
+		// Money pages win over generic Tier 11 / Tier 3 because their URL
+		// pattern is strictly more specific (contains "-company-in-").
+		parseMoneyIndustrySlug(slug) ??
+		parseMoneyServiceSlug(slug) ??
 		parseTier13Slug(slug) ??
 		parseTier5Slug(slug) ??
 		parseTier11Slug(slug) ??
@@ -349,6 +443,39 @@ export function parseProgrammaticSlug(slug: string): ProgrammaticMatch | null {
 		parseTier3Slug(slug) ??
 		parseTier1IndustrySlug(slug)
 	);
+}
+
+/**
+ * Money page generators — enumerate Service × Geo and Industry × Geo cells.
+ *
+ * Each generator opens every service / industry to every supported geo. The
+ * canonical MoneyPage template demand-filters within (e.g., FAQs surface
+ * only the most relevant top industries per geo). The breadth is intentional
+ * for organic capture across the agency-hiring SERP cohort.
+ */
+export function allMoneyServiceSlugs(): MoneyServiceMatch[] {
+	const out: MoneyServiceMatch[] = [];
+	for (const svc of services) {
+		const moneySlug = serviceMoneySlug(svc);
+		for (const geo of geosAll) {
+			const slug = `${moneySlug}-company-in-${geo.id}`;
+			if (RESERVED_SLUGS.has(slug)) continue;
+			out.push({ tier: "money-service", service: svc, geo, slug });
+		}
+	}
+	return out;
+}
+
+export function allMoneyIndustrySlugs(): MoneyIndustryMatch[] {
+	const out: MoneyIndustryMatch[] = [];
+	for (const ind of industries) {
+		for (const geo of geosAll) {
+			const slug = `${ind.id}-marketing-company-in-${geo.id}`;
+			if (RESERVED_SLUGS.has(slug)) continue;
+			out.push({ tier: "money-industry", industry: ind, geo, slug });
+		}
+	}
+	return out;
 }
 
 /**
