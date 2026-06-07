@@ -1797,6 +1797,27 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7D — Location-hub refresh (14 country/city pages) (landed 2026-06-07):**
+  - New seed-data layer: `lib/data/location-depth.ts` — 14 hand-crafted `LocationDepth` records (India, UAE, Dubai, Singapore, UK, US, Saudi Arabia, Australia, Canada, Germany, France, Brazil, China, Bangalore). Each entry: type (country/city/city-state) + ISO + population + currency + languages + 1-paragraph market context + topServiceIds + topIndustryIds + channelMix table + compliance refs with regulator URLs + sub-locations + market nuances + 4-6 location-specific FAQs. Every claim anchored to public-domain facts (regulators, central banks, recognized analyst data) — no fabricated client numbers.
+  - New canonical template: `components/templates/LocationHubPage.tsx` — server-rendered hub layout with 9 sub-sections (hero + TLDR + market context + services grid + channel-mix table + industries chips + compliance refs + sub-locations grid + market nuances) + standard FAQs + references + CTAs + AuthorCard. Schema: `Service` + `Article` + `FAQPage` + `BreadcrumbList` + `WebPage(speakable)` + `Place`.
+  - **14 country/city pages collapsed to thin wrappers**:
+    - `/digital-marketing-in-india`        (85 KB → 152 B)
+    - `/digital-marketing-in-uae`          (85 KB → 150 B)
+    - `/digital-marketing-in-dubai`        (38 KB → 152 B)
+    - `/digital-marketing-in-singapore`    (76 KB → 156 B)
+    - `/digital-marketing-in-unitedkingdom` (74 KB → 160 B)
+    - `/digital-marketing-in-unitedstates` (69 KB → 159 B)
+    - `/digital-marketing-in-saudi-arabia` (86 KB → 159 B)
+    - `/digital-marketing-in-australia`    (85 KB → 156 B)
+    - `/digital-marketing-in-canada`       (86 KB → 153 B)
+    - `/digital-marketing-in-germany`      (74 KB → 154 B)
+    - `/digital-marketing-in-france`       (77 KB → 153 B)
+    - `/digital-marketing-in-brazil`       (75 KB → 153 B)
+    - `/digital-marketing-in-china`        (85 KB → 152 B)
+    - `/digital-marketing-in-bangalore`    (60 KB → 156 B)
+  - **Storage delta**: ~1.1 MB hand-built JSX → ~2 KB of wrappers. 99.8% file-size reduction. Single template means future copy iteration ships to all 14 hubs simultaneously.
+  - Phase 7E+ next: 5 Bangalore money pages, 20 calculators, glossary hubs, IndustryDepthSection variant for Tier 11 + IndustryPillar.
+
 - **Phase 7C — Service-hub refresh (full content replacement) (landed 2026-06-07):**
   - The 12 service-hub `page.tsx` files (previously hand-built 21KB–93KB each — ~700KB of framer-motion animations, scattered case-study widgets, testimonial blocks, decorative imagery) **collapsed to 4-line wrappers** that render a new `ServiceHubPage` template.
   - New `components/templates/ServiceHubPage.tsx` — server-rendered, single canonical layout for every /[service] hub:
