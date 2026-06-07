@@ -55,20 +55,48 @@ export default function Footer() {
 
   const company = [
     { name: "About Us", href: "/about" },
-    { name: "Academy", href: "/academy" },
     { name: "Our Team", href: "/our-team" },
+    { name: "Press & Media", href: "/press" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },
+    { name: "Academy", href: "/academy" },
+    { name: "Frameleads Growth System™", href: "/frameleads-growth-system" },
+    { name: "How We Audit", href: "/how-we-audit" },
+    { name: "Editorial Policy", href: "/editorial-policy" },
   ]
 
   const resources = [
+    { name: "Resources hub", href: "/resources" },
+    { name: "All guides (6k+)", href: "/resources/guides" },
+    { name: "Glossary (87 terms)", href: "/glossary" },
+    { name: "Comparisons", href: "/vs" },
+    { name: "Calculators (19)", href: "/tools" },
+    { name: "Reports & data studies", href: "/reports" },
+    { name: "Playbooks", href: "/resources/playbooks" },
+    { name: "Benchmarks", href: "/resources/benchmarks" },
+    { name: "Templates", href: "/resources/templates" },
+    { name: "Question hubs", href: "/resources/questions" },
+  ]
+
+  const questionHubs = [
     { name: "How-to guides", href: "/how-to" },
-    { name: "Glossary", href: "/glossary" },
-    { name: "Compare options", href: "/vs" },
-    { name: "ROI calculator", href: "/tools/roi-calculator" },
-    { name: "Free marketing audit", href: "/free-marketing-audit" },
-    { name: "Service locations", href: "/locations" },
+    { name: "What-is definitions", href: "/what-is" },
+    { name: "How-much pricing", href: "/how-much" },
+    { name: "Why-rationale", href: "/why" },
+    { name: "Is-it decisions", href: "/is-it" },
+    { name: "Best-of lists", href: "/best" },
+  ]
+
+  const moneyPages = [
+    { name: "SEO Company in Bangalore", href: "/seo-company-in-bangalore" },
+    { name: "SEO Company in Mumbai", href: "/seo-company-in-mumbai" },
+    { name: "SEO Company in Dubai", href: "/seo-company-in-dubai" },
+    { name: "Performance Marketing in Bangalore", href: "/performance-marketing-company-in-bangalore" },
+    { name: "Performance Marketing in Mumbai", href: "/performance-marketing-company-in-mumbai" },
+    { name: "B2B Marketing in Bangalore", href: "/b2b-marketing-company-in-bangalore" },
+    { name: "Real Estate Marketing in Bangalore", href: "/real-estate-marketing-company-in-bangalore" },
+    { name: "Creative Advertising in Bangalore", href: "/creative-advertising-company-in-bangalore" },
   ]
 
   const legal = [
@@ -198,7 +226,11 @@ export default function Footer() {
               <li><Link href="/technology-and-saas" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Technology & SaaS</Link></li>
               <li><Link href="/healthcare-and-medical" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Healthcare & Medical</Link></li>
               <li><Link href="/financial-services" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Financial Services</Link></li>
-              <li><Link href="/industries" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300 text-sm font-medium">More industries →</Link></li>
+              <li><Link href="/d2c-marketing" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">D2C Brands</Link></li>
+              <li><Link href="/b2b-saas-marketing" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">B2B SaaS</Link></li>
+              <li><Link href="/real-estate-marketing" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Real Estate</Link></li>
+              <li><Link href="/ecommerce" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">E-commerce</Link></li>
+              <li><Link href="/industries" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300 text-sm font-medium">All 31 industries →</Link></li>
             </ul>
           </div>
 
@@ -210,6 +242,17 @@ export default function Footer() {
                 <li key={resource.name}>
                   <Link href={resource.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
                     {resource.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Question Hubs</h3>
+            <ul className="space-y-2 mb-6">
+              {questionHubs.map((q) => (
+                <li key={q.name}>
+                  <Link href={q.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
+                    {q.name}
                   </Link>
                 </li>
               ))}
@@ -227,13 +270,23 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support & Contact */}
+          {/* Money Pages + Contact */}
           <div>
-            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Support</h3>
+            <h3 className="text-base font-bold text-[#2D2D2D] mb-4">Hire Frameleads</h3>
             <ul className="space-y-2 mb-6">
-              <li><Link href="/contact" className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">Contact Us</Link></li>
+              {moneyPages.map((m) => (
+                <li key={m.name}>
+                  <Link href={m.href} className="text-[#5A5A5A] hover:text-[#FF6B35] transition-colors duration-300 text-sm">
+                    {m.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] transition-colors duration-300 text-sm font-medium">
+                  All service catalog →
+                </Link>
+              </li>
             </ul>
-
 
             {/* Contact Info */}
             <div className="space-y-3">
