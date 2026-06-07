@@ -14,6 +14,12 @@ import { SchemaInjector } from "./SchemaInjector";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
 import { getGlossaryEntry, type GlossaryEntry } from "@/lib/data/glossary";
+import { ReferencesBlock } from "./ReferencesBlock";
+import { referencesFor } from "@/lib/data/references";
+import { DEFAULT_AUTHOR } from "@/lib/data/authors";
+import { industries } from "@/lib/data";
+import { questions } from "@/lib/data/questions";
+import Link from "next/link";
 
 type Props = {
 	entry: GlossaryEntry;
@@ -148,17 +154,149 @@ export function Tier8GlossaryPage({ entry, url }: Props) {
 					/>
 				) : null}
 				<FAQBlock items={faqs} />
+
+				{/* Industry adaptations grid — links to Tier 15 cells */}
+				<section
+					aria-labelledby="gloss-industries"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Industry adaptations
+					</div>
+					<h2
+						id="gloss-industries"
+						className="mt-2 font-poppins text-[24px] sm:text-[28px] font-bold tracking-tight text-[#2D3748]"
+					>
+						How {entry.term} behaves per industry
+					</h2>
+					<p className="mt-3 text-[15px] leading-relaxed text-[#5A5A5A]">
+						{entry.term} is a universal metric, but its band, drivers, and optimisation levers vary by category. Drill into the industry-specific version below for the deep view.
+					</p>
+					<ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+						{industries.slice(0, 12).map((ind) => (
+							<li key={ind.id}>
+								<Link
+									href={`/${ind.id}/${entry.id}`}
+									className="block h-full rounded-2xl border border-[#FFE4D6] bg-white p-4 transition-colors hover:border-[#FF6B35]/40"
+								>
+									<div className="font-poppins text-[14px] font-semibold text-[#2D3748]">
+										{entry.term} for {ind.label}
+									</div>
+									<div className="mt-1 text-[12px] text-[#5A5A5A]">CAC {ind.avgCacInr} ₹ · CPC {ind.avgCpcInr} ₹</div>
+									<div className="mt-2 text-[12px] font-semibold text-[#FF6B35]">
+										Open <span aria-hidden>→</span>
+									</div>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</section>
+
+				{/* Adjacent questions */}
+				{(() => {
+					const termLower = entry.term.toLowerCase();
+					const adjacentQs = questions
+						.filter(
+							(q) =>
+								q.title.toLowerCase().includes(termLower) ||
+								q.intent.toLowerCase().includes(termLower) ||
+								q.tags.includes(entry.id),
+						)
+						.slice(0, 8);
+					if (adjacentQs.length === 0) return null;
+					return (
+						<section
+							aria-labelledby="gloss-adj-q"
+							className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+						>
+							<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+								Adjacent questions
+							</div>
+							<h2
+								id="gloss-adj-q"
+								className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+							>
+								Questions about {entry.term}
+							</h2>
+							<ul className="mt-5 grid gap-2 sm:grid-cols-2">
+								{adjacentQs.map((q) => (
+									<li key={q.slug}>
+										<Link
+											href={`/${q.kind}/${q.slug}`}
+											className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+										>
+											{q.title}
+										</Link>
+									</li>
+								))}
+							</ul>
+						</section>
+					);
+				})()}
+
+				{/* Adjacent guides */}
+				<section
+					aria-labelledby="gloss-adj-g"
+					className="mx-auto max-w-3xl border-t border-[#FFE4D6]/60 px-6 py-10"
+				>
+					<div className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+						Deeper reading
+					</div>
+					<h2
+						id="gloss-adj-g"
+						className="mt-2 font-poppins text-[22px] sm:text-[26px] font-bold tracking-tight text-[#2D3748]"
+					>
+						Long-form guides on related topics
+					</h2>
+					<ul className="mt-5 grid gap-2 sm:grid-cols-2">
+						<li>
+							<Link
+								href={`/what-is/what-is-${entry.id}`}
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								What is {entry.term}? (long-form definition page) <span aria-hidden>→</span>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/resources/guides/performance-marketing"
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								Performance marketing — full guide <span aria-hidden>→</span>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/tools"
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								Calculator that uses this metric <span aria-hidden>→</span>
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/resources"
+								className="block rounded-xl border border-[#FFE4D6] bg-white px-4 py-3 text-[14px] font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+							>
+								Full resources library <span aria-hidden>→</span>
+							</Link>
+						</li>
+					</ul>
+				</section>
+
 				<RelatedTerms terms={related} />
+				<ReferencesBlock references={referencesFor({})} />
 				<TimestampStamp
 					updatedAt={new Date().toISOString().slice(0, 10)}
-					reviewedBy="Frameleads Editorial Team"
+					reviewedBy={DEFAULT_AUTHOR.name}
 				/>
 				<CTABlock variant={entry.ctaVariant} />
 				<AuthorCard
-					name="Frameleads Editorial Team"
-					role="Performance + organic operators"
-					bio={`Frameleads writes glossary entries from operator experience across 80+ live D2C, SaaS, healthcare, and SMB engagements. Numbers cited are refreshed quarterly.`}
-					linkedin="https://www.linkedin.com/company/frameleads"
+					person={DEFAULT_AUTHOR}
+					name={DEFAULT_AUTHOR.name}
+					role={DEFAULT_AUTHOR.role}
+					bio={`${DEFAULT_AUTHOR.bio} Glossary entries reviewed quarterly against live engagement data.`}
+					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={new Date().toISOString().slice(0, 10)}
 				/>
 				<InboundLinksHint count={related.length} />

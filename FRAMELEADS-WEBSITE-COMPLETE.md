@@ -1797,6 +1797,44 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 7J — /vs (comparisons) + /glossary depth (landed 2026-06-07):**
+  - **Problem**: the two remaining catalog hubs (`/vs` and `/glossary`) and their cell templates (Tier 9 comparison pages, Tier 8 glossary term pages) were thinner than the rest of the site. `/vs` hub was 1 h2 / 1 schema; `/glossary` hub same; cell pages 6 h2 / 4 schema.
+  - **New canonical templates**:
+    - `components/templates/ComparisonsHub.tsx` (~250 lines) — `/vs` hub with hero + TLDR + purpose + featured + by-category grouping (Organic-vs-paid / Paid-channel-vs-paid-channel / Performance-vs-brand / Agency-build-vs-buy / Business-model / Local-vs-national / Organic-strategy) + methodology + full A-Z list + cross-links to other hubs. Schema: CollectionPage + ItemList + BreadcrumbList + WebPage(speakable).
+    - `components/templates/GlossaryHub.tsx` (~270 lines) — `/glossary` hub with hero + TLDR + purpose + featured (12 most-referenced terms) + by-category grouping (Acquisition metrics / Retention + lifecycle / Paid-channel performance / Unit economics / SaaS-specific / Attribution + tracking) + methodology + full A-Z list. Schema: DefinedTermSet + CollectionPage + ItemList + BreadcrumbList + WebPage(speakable).
+  - **Augmented cell templates**:
+    - `components/templates/Tier9Page.tsx` (comparison pages) — added: common mistakes (5 universal comparison failure modes), decision metrics (decision-quality score + reversibility + cost-of-wrong + time-to-rerun), related glossary (heuristic from comparison content), 4 universal extended FAQs (cost of wrong, hybrid, revisit cadence, vendor bias disclosure), 6 adjacent comparisons (token-similarity scored from same library), references, switched from Organization → Person (Ajsal) author with proper @id linking.
+    - `components/templates/Tier8GlossaryPage.tsx` (glossary term pages) — added: industry adaptations grid (12 Tier 15 cross-links with CAC/CPC bands), adjacent questions (questions matching the term in title/intent/tags, up to 8), adjacent guides (long-form definition / performance-marketing guide / calculators / resources), references, switched to Person author with @id linking.
+  - **2 hub pages collapsed** to wrappers:
+    - `/vs` (~105 lines → 14-line wrapper using ComparisonsHub)
+    - `/glossary` (~164 lines → 14-line wrapper using GlossaryHub)
+  - **Verified live**:
+    | Surface | Before 7J | After 7J |
+    |---|---|---|
+    | `/vs` hub | 1 h2, 1 schema | **8 h2, 6 schema** + by-category groupings |
+    | `/glossary` hub | 1 h2, 1 schema | **8 h2, 6 schema** + DefinedTermSet schema |
+    | `/vs/{comparison}` | 6 h2, 4 schema | **11 h2, 6 schema** + decision metrics + adjacent comparisons |
+    | `/glossary/{term}` | 6 h2, 4 schema | **9-10 h2, 6 schema** + 12 industry-adaptation cells + adjacent questions |
+  - **Impact**: 2 hub pages + 50 comparison cells + 87 glossary term cells = **139 pages** upgraded to the same depth standard as the rest of the augmented surfaces.
+  - **Cross-cutting wins**:
+    - All comparison + glossary cells now expose 12 Tier 15 industry-adaptation cross-links per glossary page → strengthens the citation graph for `/{industry}/{term}` Tier 15 entries
+    - Adjacent comparison surface across the /vs library uses token-similarity scoring — discovers semantically related comparisons even when slug tokens vary
+    - Person author + Organization @id linking finally aligned across these last two cell families
+  - **Content-depth pass complete across all programmatic surfaces:**
+    | Surface | Cells | Depth (h2 sections) | Schema types |
+    |---|---:|---:|---:|
+    | Tier 3 / 4 / 5 / 11 / 13 (programmatic Tier hubs) | ~6,200 | 10-15 | 5-6 |
+    | Money pages (Service × Geo + Industry × Geo) | 5,506 | 8-12 | 5-6 |
+    | Resource guides (every cross-combination) | 6,047 | 8-12 | 5-6 |
+    | Question pages (6 kinds × 2,046) | 2,046 | 15 | 5-6 |
+    | Tier 12 (question × industry) | 67,518 | 13 | 4-5 |
+    | Tier 14 (question × geo) | 24,552 | 13 | 4-5 |
+    | Tier 15 (industry × glossary) | 2,697 | 11 | 4-5 |
+    | Comparison cells (`/vs/{slug}`) | 50 | 11 | 6 |
+    | Glossary cells (`/glossary/{term}`) | 87 | 9-10 | 6 |
+    | All hub indexes (resources + question + vs + glossary) | 16 | 7-10 | 6 |
+    | **Total pages with operator-grade depth** | **~127,000** | | |
+
 - **Phase 7I — Question-hub indexes + Tier 15 augmentation (landed 2026-06-07):**
   - **Problem 1**: the 6 question-kind hub pages (`/how-to`, `/what-is`, `/how-much`, `/why`, `/best`, `/is-it`) were thin — 86-113 lines each, single-section flat-grid of question cards. Despite holding 495 / 203 / 500 / 103 / 102 / 643 entries respectively, they rendered with **1 h2** and 1 schema type each.
   - **Problem 2**: Tier 15 (industry × glossary, 2,697 cells) had decent structure (8 h2) but missed channel-adaptation context and adjacent-question cross-links.
