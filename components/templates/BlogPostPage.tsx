@@ -185,7 +185,7 @@ function SectionView({ section }: { section: Section }) {
 				section.tone === "warn"
 					? "Heads-up"
 					: section.tone === "tldr"
-						? "TL;DR"
+						? "Key point"
 						: "Note";
 			return (
 				<aside
