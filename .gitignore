@@ -23,6 +23,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# generated logs (deploy + indexing scripts)
+/logs/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
 # env files
 .env*
 .dev.vars

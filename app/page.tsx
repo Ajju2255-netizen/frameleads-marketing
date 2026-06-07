@@ -261,8 +261,8 @@ export default function Home() {
                 <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
                 <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
                 <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
-                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
+                <Link href="/social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/performance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
                 <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
               </div>
             </div>
@@ -298,6 +298,93 @@ export default function Home() {
                 <Link href="/academy" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">FrameLeads Academy</Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Operator playbooks + resources */}
+      <section className="relative py-16 border-t border-[#FFE4D6]/40 bg-gradient-to-b from-white via-[#FFF7F2]/40 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#FFE4D6] bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35] mb-4">
+              <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6B35]" />
+              Resources
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2D3748] mb-4">Operator playbooks &amp; reference</h2>
+            <p className="text-lg text-[#5A5A5A] max-w-2xl mx-auto">
+              How-to guides, glossary, decision comparisons, and calculators — built from live client engagements with India-specific benchmarks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <Link
+              href="/how-to"
+              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
+            >
+              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">How-to guides</div>
+              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Operator playbooks</h3>
+              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
+                Step-by-step playbooks for D2C launch, CAC reduction, AIO/GEO, local SEO, and seasonal campaigns.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
+                Browse guides <span aria-hidden>→</span>
+              </span>
+            </Link>
+
+            <Link
+              href="/glossary"
+              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
+            >
+              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Glossary</div>
+              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Metrics &amp; formulas</h3>
+              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
+                CAC, ROAS, LTV, CAC payback — definitions, formulas, India 2026 benchmarks, and common mistakes.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
+                Open glossary <span aria-hidden>→</span>
+              </span>
+            </Link>
+
+            <Link
+              href="/vs"
+              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
+            >
+              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Compare</div>
+              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Decision guides</h3>
+              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
+                Side-by-side scorecards — Meta vs Google, in-house vs agency, SEO vs PPC, and more.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
+                Compare options <span aria-hidden>→</span>
+              </span>
+            </Link>
+
+            <Link
+              href="/tools/roi-calculator"
+              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
+            >
+              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Tools</div>
+              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">ROI calculator</h3>
+              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
+                Plug in spend, AOV, conversion — get CAC, LTV, payback, and 12-month projection in 60 seconds.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
+                Run calculator <span aria-hidden>→</span>
+              </span>
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm text-[#5A5A5A]">
+            <span>Also explore:</span>
+            <Link href="/locations" className="rounded-full border border-[#FFE4D6] bg-white px-4 py-2 font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]">
+              80+ Indian cities &amp; 44 global metros
+            </Link>
+            <Link href="/industries" className="rounded-full border border-[#FFE4D6] bg-white px-4 py-2 font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]">
+              31 industry pillars
+            </Link>
+            <Link href="/free-marketing-audit" className="rounded-full border border-[#FF6B35] bg-[#FF6B35] px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-[#FF8A50]">
+              Get free 30-min audit →
+            </Link>
           </div>
         </div>
       </section>

@@ -111,9 +111,16 @@ export default function CheckoutDrawer({
       console.log("Starting checkout process...");
       console.log("Customer details:", customerDetails);
 
-      const res = await fetch("https://frameleads-api.workajsal.workers.dev/api/create-order", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://frameleads-api.workajsal.workers.dev";
+      const idempotencyKey = (typeof crypto !== "undefined" && "randomUUID" in crypto)
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      const res = await fetch(`${apiUrl}/api/create-order`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Idempotency-Key": idempotencyKey,
+        },
         body: JSON.stringify(customerDetails),
       });
       
@@ -174,8 +181,6 @@ export default function CheckoutDrawer({
       if (razorpayKey.length !== 23) {
         console.warn("Razorpay key length is unusual. Expected 23 characters, got:", razorpayKey.length);
       }
-
-      debugger;
 
       const options = {
         key: razorpayKey,

@@ -79,7 +79,7 @@ export function ToolChrome({ slug, title, directAnswer, tldr, faqs, children, re
 		<>
 			<SchemaInjector schema={schema} />
 			<Navbar />
-			<main>
+			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div
 						aria-hidden
