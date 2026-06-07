@@ -4,20 +4,18 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import Navbar from "./components/navbar"
 import Hero from "./components/hero"
 import BrandLogos from "./components/brand-logos"
 import FeatureCards from "./components/feature-cards"
 import ServicesSteps from "./components/services-steps"
 import Testimonials from "./components/testimonials"
 import CardDecks from "./components/card-decks"
-import Footer from "./components/footer"
 import FloatingNotifications from "./components/floating-notifications"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
   const { scrollYProgress } = useScroll()
-  
+
   // Parallax transforms for background elements
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -100])
@@ -32,11 +30,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
       <FloatingNotifications />
-      
+
       {/* Organic Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle gradient overlays */}
-        <motion.div 
+        <motion.div
           style={{ y: y1, rotate: rotate1 }}
           className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#FFE4D6]/20 to-[#FFCAB0]/15 rounded-full blur-3xl"
           animate={{
@@ -49,8 +47,8 @@ export default function Home() {
             ease: "easeInOut"
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           style={{ y: y2, rotate: rotate2 }}
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#FFCAB0]/15 to-[#FFE4D6]/10 rounded-full blur-3xl"
           animate={{
@@ -64,8 +62,8 @@ export default function Home() {
             delay: 3
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           style={{ y: y3 }}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[#FFE4D6]/10 to-[#FFCAB0]/8 rounded-full blur-3xl"
           animate={{
@@ -81,7 +79,7 @@ export default function Home() {
         />
 
         {/* Organic dotted patterns */}
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-20 w-2 h-2 bg-[#FF6B35]/20 rounded-full"
           animate={{
             y: [0, -15, 0],
@@ -94,8 +92,8 @@ export default function Home() {
             ease: "easeInOut"
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           className="absolute top-40 right-32 w-1.5 h-1.5 bg-[#FF8A50]/25 rounded-full"
           animate={{
             y: [0, 12, 0],
@@ -109,8 +107,8 @@ export default function Home() {
             delay: 2
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           className="absolute bottom-32 left-40 w-1 h-1 bg-[#FF6B35]/30 rounded-full"
           animate={{
             y: [0, -18, 0],
@@ -126,7 +124,7 @@ export default function Home() {
         />
 
         {/* Subtle geometric shapes */}
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FFE4D6]/30 rounded-sm rotate-45"
           animate={{
             y: [0, -20, 0],
@@ -140,8 +138,8 @@ export default function Home() {
             delay: 1
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full"
           animate={{
             y: [0, -15, 0],
@@ -156,7 +154,7 @@ export default function Home() {
         />
 
         {/* Layered transparency effects */}
-        <motion.div 
+        <motion.div
           className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-[#FFE4D6]/8 to-transparent rounded-3xl blur-2xl"
           animate={{
             scale: [1, 1.05, 1],
@@ -168,8 +166,8 @@ export default function Home() {
             ease: "easeInOut"
           }}
         />
-        
-        <motion.div 
+
+        <motion.div
           className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-gradient-to-tl from-[#FFCAB0]/6 to-transparent rounded-2xl blur-2xl"
           animate={{
             scale: [1.05, 1, 1.05],
@@ -184,7 +182,6 @@ export default function Home() {
         />
       </div>
 
-      <Navbar />
       <Hero />
       <BrandLogos />
 
@@ -242,7 +239,7 @@ export default function Home() {
       <ServicesSteps />
       <Testimonials />
       <CardDecks />
-      
+
       {/* Internal Links Section */}
       <section className="relative py-16 bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,7 +249,7 @@ export default function Home() {
               Explore our comprehensive digital marketing services, industry specializations, and international offerings
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Core Digital Marketing Services */}
             <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50">
@@ -261,9 +258,12 @@ export default function Home() {
                 <Link href="/digital-marketing-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Digital Marketing Services</Link>
                 <Link href="/seo-services" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">SEO Services</Link>
                 <Link href="/content-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Content Marketing</Link>
-                <Link href="/social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
-                <Link href="/performance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
+                <Link href="/Social-media-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Social Media Marketing</Link>
+                <Link href="/perforamance-marketing" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Performance Marketing</Link>
                 <Link href="/ppc-management" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">PPC Management</Link>
+                <Link href="/tiktok-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">TikTok Ads</Link>
+                <Link href="/snapchat-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Snapchat Ads</Link>
+                <Link href="/pinterest-ads" className="block text-[#FF6B35] hover:text-[#FF8A50] font-medium">Pinterest Ads</Link>
               </div>
             </div>
 
@@ -302,94 +302,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Operator playbooks + resources */}
-      <section className="relative py-16 border-t border-[#FFE4D6]/40 bg-gradient-to-b from-white via-[#FFF7F2]/40 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FFE4D6] bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35] mb-4">
-              <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6B35]" />
-              Resources
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2D3748] mb-4">Operator playbooks &amp; reference</h2>
-            <p className="text-lg text-[#5A5A5A] max-w-2xl mx-auto">
-              How-to guides, glossary, decision comparisons, and calculators — built from live client engagements with India-specific benchmarks.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Link
-              href="/how-to"
-              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
-            >
-              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">How-to guides</div>
-              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Operator playbooks</h3>
-              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
-                Step-by-step playbooks for D2C launch, CAC reduction, AIO/GEO, local SEO, and seasonal campaigns.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
-                Browse guides <span aria-hidden>→</span>
-              </span>
-            </Link>
-
-            <Link
-              href="/glossary"
-              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
-            >
-              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Glossary</div>
-              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Metrics &amp; formulas</h3>
-              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
-                CAC, ROAS, LTV, CAC payback — definitions, formulas, India 2026 benchmarks, and common mistakes.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
-                Open glossary <span aria-hidden>→</span>
-              </span>
-            </Link>
-
-            <Link
-              href="/vs"
-              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
-            >
-              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Compare</div>
-              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">Decision guides</h3>
-              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
-                Side-by-side scorecards — Meta vs Google, in-house vs agency, SEO vs PPC, and more.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
-                Compare options <span aria-hidden>→</span>
-              </span>
-            </Link>
-
-            <Link
-              href="/tools/roi-calculator"
-              className="group block rounded-2xl border border-[#FFE4D6] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF6B35]/40 hover:shadow-md"
-            >
-              <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">Tools</div>
-              <h3 className="mt-2 text-lg font-semibold text-[#2D3748] group-hover:text-[#FF6B35]">ROI calculator</h3>
-              <p className="mt-2 text-sm text-[#5A5A5A] leading-relaxed">
-                Plug in spend, AOV, conversion — get CAC, LTV, payback, and 12-month projection in 60 seconds.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#FF6B35]">
-                Run calculator <span aria-hidden>→</span>
-              </span>
-            </Link>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm text-[#5A5A5A]">
-            <span>Also explore:</span>
-            <Link href="/locations" className="rounded-full border border-[#FFE4D6] bg-white px-4 py-2 font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]">
-              80+ Indian cities &amp; 44 global metros
-            </Link>
-            <Link href="/industries" className="rounded-full border border-[#FFE4D6] bg-white px-4 py-2 font-medium text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]">
-              31 industry pillars
-            </Link>
-            <Link href="/free-marketing-audit" className="rounded-full border border-[#FF6B35] bg-[#FF6B35] px-4 py-2 font-medium text-white shadow-sm transition-colors hover:bg-[#FF8A50]">
-              Get free 30-min audit →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
     </div>
   )
 }

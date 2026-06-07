@@ -1,0 +1,34 @@
+
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep elegant gradient matching the 2nd & 3rd inspirations -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A3D" />
+      <stop offset="60%" stop-color="#DE5D1A" />
+      <stop offset="100%" stop-color="#9E3500" />
+    </linearGradient>
+    <radialGradient id="glowHighlight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.2)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  <rect width="100%" height="100%" fill="url(#glowHighlight)"/>
+  
+  <g transform="translate(400, 250)" stroke="#FFF6F2" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Film strip combined with node graph -->
+    <path d="M-80,-60 Q-40,0 -80,60" fill="none" stroke-width="1"/>
+    <path d="M-40,-60 Q0,0 -40,60" fill="none" stroke-width="2"/>
+    <path d="M40,-60 Q0,0 40,60" fill="none" stroke-width="2"/>
+    <path d="M80,-60 Q40,0 80,60" fill="none" stroke-width="1"/>
+    <!-- Horizontal film strips (curved) -->
+    <line x1="-35" y1="-50" x2="35" y2="-50" stroke-width="1" opacity="0.6"/><line x1="-35" y1="-30" x2="35" y2="-30" stroke-width="1" opacity="0.6"/><line x1="-35" y1="-10" x2="35" y2="-10" stroke-width="1" opacity="0.6"/><line x1="-35" y1="10" x2="35" y2="10" stroke-width="1" opacity="0.6"/><line x1="-35" y1="30" x2="35" y2="30" stroke-width="1" opacity="0.6"/><line x1="-35" y1="50" x2="35" y2="50" stroke-width="1" opacity="0.6"/>
+    <!-- AI nodes extending from frames -->
+    <path d="M40,-40 L70,-50 L90,-30" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <path d="M40,20 L80,10 L100,40" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <circle cx="70" cy="-50" r="3" fill="#FFF6F2"/> <circle cx="90" cy="-30" r="2" fill="#FFF6F2"/> <circle cx="80" cy="10" r="3" fill="#FFF6F2"/> <circle cx="100" cy="40" r="2" fill="#FFF6F2"/>
+  
+  </g>
+</svg>

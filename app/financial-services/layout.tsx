@@ -1,22 +1,30 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Financial Services Marketing | NBFC + Insurance + Wealth",
-  description: "Marketing for NBFCs, insurance brokers, and wealth platforms — trust-led, compliance-aware acquisition.",
-  alternates: { canonical: "https://frameleads.com/financial-services" },
-  openGraph: {
-    title: "Financial Services Marketing | NBFC + Insurance + Wealth",
-    description: "Marketing for NBFCs, insurance brokers, and wealth platforms — trust-led, compliance-aware acquisition.",
-    url: "https://frameleads.com/financial-services",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Financial Services Marketing | NBFC + Insurance + Wealth",
-    description: "Marketing for NBFCs, insurance brokers, and wealth platforms — trust-led, compliance-aware acquisition.",
-  },
-};
+    title: 'Financial Services Marketing | Fintech, Banking & Wealth Management Growth | Frameleads',
+    description: 'Compliance-first digital growth for Fintech, Wealth Management, and Banking sectors. We specialize in Audit-Ready tracking, deep-funnel attribution, and Financial E-E-A-T.',
+    alternates: {
+        canonical: 'https://frameleads.com/financial-services',
+    },
+    openGraph: {
+        title: 'Financial Services Marketing | Fintech, Banking & Wealth Management Growth',
+        description: 'High-trust digital ecosystems for financial entities. Scale your Fintech or Wealth Management firm with performance-first engineering.',
+        url: 'https://frameleads.com/financial-services',
+        siteName: 'Frameleads',
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Financial Services Marketing | Fintech, Banking & Wealth Management Growth',
+        description: 'High-trust digital ecosystems for financial entities. Scale your Fintech or Wealth Management firm with performance-first engineering.',
+    },
+}
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function FinancialLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return <>{children}</>
 }

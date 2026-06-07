@@ -1,22 +1,14 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Baidu Ads Agency — Reach Mainland China Buyers",
-  description: "Baidu Ads agency for India + APAC brands targeting Mainland China. Search, display, Tieba — built by Frameleads' performance team.",
-  alternates: { canonical: "https://frameleads.com/baidu-ads" },
-  openGraph: {
-    title: "Baidu Ads Agency — Reach Mainland China Buyers",
-    description: "Baidu Ads agency for India + APAC brands targeting Mainland China. Search, display, Tieba — built by Frameleads' performance team.",
-    url: "https://frameleads.com/baidu-ads",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baidu Ads Agency — Reach Mainland China Buyers",
-    description: "Baidu Ads agency for India + APAC brands targeting Mainland China. Search, display, Tieba — built by Frameleads' performance team.",
-  },
-};
+    title: "Baidu Ads Management & China Market Entry | Frameleads",
+    description: "Enterprise-level Baidu advertising, ICP license management, and ERNIE Bot AI optimization for Western brands entering China. Master the 1.4B user market.",
+}
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function BaiduAdsLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return <>{children}</>
 }

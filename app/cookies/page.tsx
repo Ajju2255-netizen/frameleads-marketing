@@ -1,14 +1,12 @@
 "use client"
 
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 
 export default function CookiePolicyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE] relative overflow-hidden">
       <FloatingNotifications />
-      <Navbar />
+      
 
       <section className="relative py-20 lg:py-28 pt-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +46,7 @@ export default function CookiePolicyPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

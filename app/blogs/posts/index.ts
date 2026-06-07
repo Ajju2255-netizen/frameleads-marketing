@@ -1,0 +1,41 @@
+
+import * as Post1 from "./bangalore-marketing-benchmarks-2025"
+import * as Post2 from "./saas-churn-reduction-performance-marketing"
+import * as Post3 from "./bangalore-real-estate-neighborhood-marketing"
+import * as Post4 from "./seo-vs-geo-future-of-search-bangalore"
+import * as Post5 from "./vernacular-marketing-bangalore-hinglish-kannada"
+import * as Post6 from "./bangalore-ad-scheduling-salary-cycle-strategy"
+
+import * as Post7 from "./ai-predictive-lead-scoring-bangalore"
+import * as Post8 from "./bangalore-d2c-logistics-marketing-synergy"
+import * as Post9 from "./privacy-first-lead-generation-dpdp-compliance"
+import * as Post10 from "./meta-conversions-api-capi-setup-guide-2025"
+import * as Post11 from "./meta-advantage-plus-vs-manual-targeting-2025"
+import * as Post12 from "./meta-ads-creative-velocity-testing-framework"
+import * as Post13 from "./founders-guide-to-geo"
+import * as Post14 from "./stop-spamming-start-elevating-ai-agents-b2b"
+import * as Post15 from "./death-of-the-form-intent-signals-2026"
+import * as Post16 from "./roas-is-a-vanity-metric-why-frameleads-uses-mer"
+import * as Post17 from "./from-blueprints-to-budgets-digital-twin-marketing"
+import * as Post18 from "./winning-the-pql-war-saas-server-side"
+import * as Post19 from "./identity-based-travel-golden-triangle-luxury-ai"
+import * as Post20 from "./signal-recovery-server-side-gtm-attribution"
+import * as Post21 from "./scalable-authenticity-nano-banana-elevenlabs"
+import * as Post22 from "./privacy-first-advantage-healthcare-finance-hipaa-soc2"
+import * as Post23 from "./psychology-of-glossy-ui-glassmorphism-fintech"
+import * as Post24 from "./startup-growth-manifesto-technical-architect"
+import * as Post25 from "./best-b2b-lead-generation-agencies-2026-architecture"
+import * as Post26 from "./what-is-lead-generation-the-complete-guide-for-businesses-in-2026"
+import * as Post27 from "./how-lead-generation-works-step-by-step-process"
+import * as Post28 from "./types-of-lead-generation-strategies-that-work-in-2026"
+import * as Post29 from "./b2b-vs-b2c-lead-generation-differences"
+import * as Post30 from "./how-businesses-generate-high-quality-leads-complete-guide"
+import * as Post31 from "./best-lead-generation-strategies-for-small-businesses-2026"
+import * as Post32 from "./inbound-vs-outbound-lead-generation"
+
+export const allPosts = [Post32, Post31, Post30, Post29, Post28, Post27, Post26, Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
+
+export const getPostBySlug = (slug: string) => {
+    // Basic slug matching
+    return allPosts.find((p) => p.post.slug === slug)
+}

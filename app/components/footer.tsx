@@ -9,7 +9,7 @@ export default function Footer() {
   const services = [
     { name: "Digital Marketing Services", href: "/digital-marketing-services" },
     { name: "SEO Services", href: "/seo-services" },
-    { name: "PPC Management", href: "/services/ppc-management" },
+    { name: "PPC Management", href: "/ppc-management" },
     { name: "Content Marketing", href: "/content-marketing" },
     { name: "Social Media Marketing", href: "/social-media-marketing" },
     { name: "WhatsApp Marketing", href: "/whatsapp-marketing" },
@@ -51,7 +51,7 @@ export default function Footer() {
     { name: "Digital Marketing in France", href: "/digital-marketing-in-france" },
     { name: "Digital Marketing in Brazil", href: "/digital-marketing-in-brazil" },
   ]
-  
+
 
   const company = [
     { name: "About Us", href: "/about" },
@@ -91,7 +91,7 @@ export default function Footer() {
     <footer className="relative bg-white border-t border-[#FFE4D6]/30 py-12">
       {/* Glowing Line Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-[#FF6B35] to-transparent mb-8 shadow-lg shadow-[#FF6B35]/50"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* CTA Banner */}
         <div className="bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 border border-[#FF6B35]/20 rounded-xl p-6 mb-8">
@@ -124,7 +124,7 @@ export default function Footer() {
                 <span className="text-[#2D3748]">FRAMELE</span><span className="text-[#FF6B35]">ADS</span>
               </Link>
               <p className="text-[#5A5A5A] mt-4 leading-relaxed text-sm">
-                India's leading digital marketing agency helping businesses achieve exponential growth through strategic SEO, 
+                India's leading digital marketing agency helping businesses achieve exponential growth through strategic SEO,
                 PPC campaigns, and performance marketing.
               </p>
             </div>

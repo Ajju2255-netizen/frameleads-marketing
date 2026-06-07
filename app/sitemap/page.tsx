@@ -14,11 +14,11 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2026-05-09T09:50:50.188Z
+  // Auto-generated page data - Updated: 2026-03-09T14:43:09.805Z
   const pageData = {
   "services": [
     {
-      "path": "/social-media-marketing",
+      "path": "/Social-media-marketing",
       "name": "Social Media Marketing",
       "description": "Social Media Marketing - Frameleads digital marketing services"
     },
@@ -53,12 +53,12 @@ export default function SitemapPage() {
       "description": "Email Marketing And Automation Services - Frameleads digital marketing services"
     },
     {
-      "path": "/performance-marketing",
+      "path": "/perforamance-marketing",
       "name": "Perforamance Marketing",
       "description": "Perforamance Marketing - Frameleads digital marketing services"
     },
     {
-      "path": "/ppc-management",
+      "path": "/ppc management",
       "name": "Ppc management",
       "description": "Ppc management - Frameleads digital marketing services"
     },
@@ -80,7 +80,7 @@ export default function SitemapPage() {
   ],
   "advertisingPlatforms": [
     {
-      "path": "/meta-ads",
+      "path": "/Meta-ads",
       "name": "Meta Ads",
       "description": "Meta advertising management"
     },
@@ -324,11 +324,6 @@ export default function SitemapPage() {
   ],
   "main": [
     {
-      "path": "/[slug]",
-      "name": "[slug]",
-      "description": "[slug] - Frameleads digital marketing services"
-    },
-    {
       "path": "/blogs/[slug]",
       "name": "Blogs - [slug]",
       "description": "Blogs - [slug] - Frameleads digital marketing services"
@@ -364,26 +359,6 @@ export default function SitemapPage() {
       "description": "Financial Services - Frameleads digital marketing services"
     },
     {
-      "path": "/glossary/[term]",
-      "name": "Glossary - [term]",
-      "description": "Glossary - [term] - Frameleads digital marketing services"
-    },
-    {
-      "path": "/glossary/cac",
-      "name": "Glossary - Cac",
-      "description": "Glossary - Cac - Frameleads digital marketing services"
-    },
-    {
-      "path": "/glossary",
-      "name": "Glossary",
-      "description": "Glossary - Frameleads digital marketing services"
-    },
-    {
-      "path": "/glossary/roas",
-      "name": "Glossary - Roas",
-      "description": "Glossary - Roas - Frameleads digital marketing services"
-    },
-    {
       "path": "/industries",
       "name": "Industries",
       "description": "Industries we serve"
@@ -399,6 +374,11 @@ export default function SitemapPage() {
       "description": "Page.tsx - Frameleads digital marketing services"
     },
     {
+      "path": "/ppc-management",
+      "name": "Ppc Management",
+      "description": "Ppc Management - Frameleads digital marketing services"
+    },
+    {
       "path": "/sitemap",
       "name": "Sitemap",
       "description": "Complete website sitemap and navigation"
@@ -407,16 +387,6 @@ export default function SitemapPage() {
       "path": "/technology-and-saas",
       "name": "Technology And Saas",
       "description": "Technology And Saas - Frameleads digital marketing services"
-    },
-    {
-      "path": "/vs/[comparison]",
-      "name": "Vs - [comparison]",
-      "description": "Vs - [comparison] - Frameleads digital marketing services"
-    },
-    {
-      "path": "/vs",
-      "name": "Vs",
-      "description": "Vs - Frameleads digital marketing services"
     }
   ]
 };
@@ -446,7 +416,7 @@ export default function SitemapPage() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold text-[#2D3748] leading-tight mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
               Website{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] via-[#FF8A50] to-[#FF6B35] drop-shadow-[0_0_20px_rgba(255,107,53,0.3)]">
                 Sitemap
@@ -456,7 +426,7 @@ export default function SitemapPage() {
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
             <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-              🔄 Auto-generated • Last updated: 9/5/2026
+              🔄 Auto-generated • Last updated: 3/9/2026
             </div>
           </motion.div>
         </div>
@@ -522,7 +492,7 @@ export default function SitemapPage() {
       <section className="relative py-16 bg-gradient-to-r from-[#FF6B35]/5 to-[#FF8A50]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#2D3748] mb-4">Website Overview</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Website Overview</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Our comprehensive digital marketing platform covers all aspects of online growth</p>
           </div>
           

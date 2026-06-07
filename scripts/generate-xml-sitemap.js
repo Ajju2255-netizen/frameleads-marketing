@@ -22,7 +22,7 @@ const CONFIG = {
   lastmod: new Date().toISOString().split('T')[0], // YYYY-MM-DD format
   changefreq: 'monthly',
   defaultPriority: 0.8,
-  
+
   // Page-specific priorities and change frequencies
   pageSettings: {
     '/': { priority: 1.0, changefreq: 'weekly' },
@@ -83,6 +83,8 @@ const CONFIG = {
     '/academy/thank-you': { priority: 0.6, changefreq: 'yearly' },
     '/academy/return-policy': { priority: 0.6, changefreq: 'yearly' },
     '/academy/terms': { priority: 0.6, changefreq: 'yearly' },
+    '/technology-and-saas': { priority: 0.9, changefreq: 'weekly' },
+    '/healthcare-and-medical': { priority: 0.9, changefreq: 'weekly' },
     '/sitemap': { priority: 0.5, changefreq: 'monthly' }
   }
 };
@@ -92,13 +94,13 @@ const CONFIG = {
  */
 function getAllPages() {
   const pages = [];
-  
+
   try {
     // Read the generated sitemap page to get all URLs
     const sitemapFile = path.join(process.cwd(), 'app', 'sitemap', 'page.tsx');
     if (fs.existsSync(sitemapFile)) {
       const content = fs.readFileSync(sitemapFile, 'utf8');
-      
+
       // Extract URLs from the sitemap content
       const urlMatches = content.match(/"path":\s*"([^"]+)"/g);
       if (urlMatches) {
@@ -110,21 +112,21 @@ function getAllPages() {
         });
       }
     }
-    
+
     // If sitemap not found, scan directory manually
     if (pages.length === 0) {
       console.log('Sitemap not found, scanning app directory...');
       pages.push(...scanDirectoryForPages());
     }
-    
+
     // Add home page
     if (!pages.includes('/')) {
       pages.unshift('/');
     }
-    
+
     // Remove duplicates and sort
     const uniquePages = [...new Set(pages)].sort();
-    
+
     return uniquePages;
   } catch (error) {
     console.error('Error getting pages:', error.message);
@@ -138,16 +140,16 @@ function getAllPages() {
 function scanDirectoryForPages() {
   const pages = [];
   const appDir = path.join(process.cwd(), 'app');
-  
+
   function scanDir(dir, basePath = '') {
     try {
       const items = fs.readdirSync(dir);
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const relativePath = path.join(basePath, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           if (!['api', 'components', 'lib', 'hooks'].includes(item)) {
             scanDir(fullPath, relativePath);
@@ -163,7 +165,7 @@ function scanDirectoryForPages() {
       console.warn(`Warning: Could not scan directory ${dir}:`, error.message);
     }
   }
-  
+
   scanDir(appDir);
   return pages;
 }
@@ -179,28 +181,28 @@ function getPageSettings(url) {
       changefreq: settings.changefreq
     };
   }
-  
+
   // Default settings based on URL patterns
   if (url === '/') {
     return { priority: 1.0, changefreq: 'weekly' };
   }
-  
+
   if (url.includes('/digital-marketing-in-')) {
     return { priority: 0.8, changefreq: 'monthly' };
   }
-  
+
   if (url.includes('-ads')) {
     return { priority: 0.8, changefreq: 'weekly' };
   }
-  
+
   if (url.includes('/academy')) {
     return { priority: 0.7, changefreq: 'monthly' };
   }
-  
+
   if (url.includes('/privacy') || url.includes('/terms') || url.includes('/cookies') || url.includes('/disclaimer')) {
     return { priority: 0.5, changefreq: 'yearly' };
   }
-  
+
   return {
     priority: CONFIG.defaultPriority,
     changefreq: CONFIG.changefreq
@@ -219,7 +221,7 @@ function generateXMLSitemap(pages) {
   const urlEntries = pages.map(url => {
     const settings = getPageSettings(url);
     const fullUrl = `${CONFIG.siteUrl}${url}`;
-    
+
     return `  <url>
     <loc>${fullUrl}</loc>
     <lastmod>${CONFIG.lastmod}</lastmod>
@@ -238,45 +240,45 @@ ${xmlFooter}`;
  */
 function generateXMLSitemapFile() {
   console.log('🚀 Starting XML sitemap generation...');
-  
+
   try {
     // Get all pages
     console.log('📄 Getting all pages...');
     const pages = getAllPages();
     console.log(`✅ Found ${pages.length} pages`);
-    
+
     // Generate XML content
     console.log('📝 Generating XML sitemap content...');
     const xmlContent = generateXMLSitemap(pages);
-    
+
     // Ensure output directory exists
     const outputDir = path.dirname(CONFIG.outputFile);
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    
+
     // Write XML sitemap file
     fs.writeFileSync(CONFIG.outputFile, xmlContent);
     console.log(`✅ XML sitemap generated successfully: ${CONFIG.outputFile}`);
-    
+
     // Summary
     console.log(`\n📊 Summary:`);
     console.log(`  Total pages: ${pages.length}`);
     console.log(`  Site URL: ${CONFIG.siteUrl}`);
     console.log(`  Last modified: ${CONFIG.lastmod}`);
     console.log(`  Output: ${CONFIG.outputFile}`);
-    
+
     // Show some example URLs
     console.log(`\n📋 Sample URLs:`);
     pages.slice(0, 10).forEach((url, index) => {
       const settings = getPageSettings(url);
       console.log(`  ${index + 1}. ${url} (Priority: ${settings.priority}, Change: ${settings.changefreq})`);
     });
-    
+
     if (pages.length > 10) {
       console.log(`  ... and ${pages.length - 10} more pages`);
     }
-    
+
   } catch (error) {
     console.error('❌ Error generating XML sitemap:', error.message);
     process.exit(1);
@@ -286,7 +288,7 @@ function generateXMLSitemapFile() {
 // Command line interface
 if (require.main === module) {
   const args = process.argv.slice(2);
-  
+
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
 XML Sitemap Generator
@@ -306,7 +308,7 @@ Examples:
     `);
     process.exit(0);
   }
-  
+
   if (args.includes('--validate')) {
     console.log('🔍 Validating XML sitemap...');
     // Basic XML validation
@@ -322,7 +324,7 @@ Examples:
     }
     process.exit(0);
   }
-  
+
   if (args.includes('--stats')) {
     console.log('📊 XML Sitemap Statistics:');
     try {
@@ -337,7 +339,7 @@ Examples:
     }
     process.exit(0);
   }
-  
+
   generateXMLSitemapFile();
 }
 

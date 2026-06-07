@@ -1,5 +1,3 @@
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import Image from "next/image"
 import Link from "next/link"
 import FloatingNotifications from "../components/floating-notifications"
@@ -118,7 +116,7 @@ export default function OurTeamPage() {
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full animate-pulse"></div>
       </div>
 
-      <Navbar />
+      
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -278,7 +276,7 @@ export default function OurTeamPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

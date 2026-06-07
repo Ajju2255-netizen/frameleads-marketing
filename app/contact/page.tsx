@@ -1,7 +1,5 @@
 "use client"
 
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import { ContactForm } from "../components/ContactForm"
 import { useEffect, useState } from "react"
@@ -81,7 +79,7 @@ export default function ContactPage() {
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full animate-pulse"></div>
       </div>
 
-      <Navbar />
+      
 
       {/* Hero */}
       <section className="relative py-20 lg:py-32 pt-28">
@@ -216,7 +214,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

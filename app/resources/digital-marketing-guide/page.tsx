@@ -1,5 +1,3 @@
-import Navbar from "../../components/navbar"
-import Footer from "../../components/footer"
 import Image from "next/image"
 import Link from "next/link"
 import FloatingNotifications from "../../components/floating-notifications"
@@ -245,7 +243,7 @@ export default function DigitalMarketingGuidePage() {
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-[#FFCAB0]/25 rounded-full animate-pulse"></div>
       </div>
 
-      <Navbar />
+      
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-28" id="hero">
@@ -805,7 +803,7 @@ export default function DigitalMarketingGuidePage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

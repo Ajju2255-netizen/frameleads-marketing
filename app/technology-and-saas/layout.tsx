@@ -1,22 +1,15 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Marketing for Technology & SaaS Companies | Frameleads",
-  description: "Marketing for technology and SaaS companies — SEO, content, paid, LinkedIn, lifecycle, retention.",
-  alternates: { canonical: "https://frameleads.com/technology-and-saas" },
-  openGraph: {
-    title: "Marketing for Technology & SaaS Companies | Frameleads",
-    description: "Marketing for technology and SaaS companies — SEO, content, paid, LinkedIn, lifecycle, retention.",
-    url: "https://frameleads.com/technology-and-saas",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Marketing for Technology & SaaS Companies | Frameleads",
-    description: "Marketing for technology and SaaS companies — SEO, content, paid, LinkedIn, lifecycle, retention.",
-  },
-};
+    title: 'SaaS Growth Engineering & PLG Strategy | Frameleads',
+    description: 'Scale your SaaS at the speed of code. Specialized in Product-Led Growth (PLG), PQL orchestration, and feature-driven SEO for software brands globally.',
+    keywords: 'SaaS marketing, PLG strategy, Product-Led Growth, PQL orchestration, SaaS SEO, technology marketing, software growth engineering',
+}
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function SaaSLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return <>{children}</>
 }

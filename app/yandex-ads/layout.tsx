@@ -1,22 +1,18 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Yandex Ads Agency — Russia + CIS Reach",
-  description: "Yandex Direct + Display advertising for India brands expanding to Russia and CIS markets.",
-  alternates: { canonical: "https://frameleads.com/yandex-ads" },
-  openGraph: {
-    title: "Yandex Ads Agency — Russia + CIS Reach",
-    description: "Yandex Direct + Display advertising for India brands expanding to Russia and CIS markets.",
-    url: "https://frameleads.com/yandex-ads",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Yandex Ads Agency — Russia + CIS Reach",
-    description: "Yandex Direct + Display advertising for India brands expanding to Russia and CIS markets.",
-  },
-};
+    title: 'Yandex Ads Management & Neural Growth Engineering | Frameleads',
+    description: 'Master the Eurasian market with Neural-First Yandex Ads. Leveraging YandexART 2.0, YandexGPT, and Ecomm+ scaling for 2026 performance growth in CIS & Middle East.',
+    keywords: 'Yandex Ads, Yandex Direct, YandexART 2.0, YandexGPT, Yandex Metrica, CIS Market Entry, E-commerce Yandex, Ecomm+',
+    alternates: {
+        canonical: 'https://frameleads.com/yandex-ads',
+    },
+}
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function YandexAdsLayout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
+    return children
 }

@@ -1,12 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import GoogleAnalyticsComponent from "./components/google-analytics"
 import { GA_MEASUREMENT_ID } from "../lib/analytics"
 import { StickyMobileCTA } from "./components/sticky-mobile-cta"
 import { MetaPixel } from "./components/meta-pixel"
 import { SchemaInjector } from "@/components/templates/SchemaInjector"
+// Note: Navbar + Footer are imported per-template (every page template renders
+// its own Navbar/Footer to control breadcrumbs + skip-link target). Upstream's
+// global Navbar/Footer refactor was reverted on merge to avoid duplicate render.
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -251,6 +255,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* Google Ads Tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17423294527"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-gtag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17423294527');
+        `}
+      </Script>
+      {/* Microsoft Clarity */}
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "v9xdrxmvsp");
+        `}
+      </Script>
       <body className={`${inter.className}`}>
         <SchemaInjector schema={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]} />
         {children}
