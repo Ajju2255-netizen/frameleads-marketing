@@ -877,7 +877,7 @@ Frameleads is **not a small hand-built agency site**. Underneath the marketing v
 | **Deploy** | Cloudflare Workers via OpenNext (`@opennextjs/cloudflare`); R2 ISR cache; `revalidate = 86400` |
 | **Total `page.tsx` files** | 108 |
 | **Top-level route directories** | 77 |
-| **Programmatic cells (target)** | ~5,000 across Tier 3/4/5/11/13 |
+| **Programmatic cells (Phase 3, live)** | **~99,000 across Tier 1/3/4/5/11/12/13/14/15** — 8,216 single-segment + 63,426 Tier 12 + 24,552 Tier 14 + 2,697 Tier 15 |
 | **Programmatic rendering** | `app/[slug]/page.tsx` + `app/[slug]/[sub]/page.tsx`; no `generateStaticParams`; first crawl renders, R2 caches for 24h |
 | **Hand-crafted commercial pages** | ~30 (Bangalore agency suite + ad-platform pages + 14 country-level digital-marketing pages) |
 | **Free tools / calculators** | 20 (CAC, LTV, ROAS, ROI, channel-mix, ad-spend planner, etc.) |
@@ -1325,7 +1325,7 @@ Frameleads runs a layered SEO architecture: hand-crafted commercial pages for hi
 
 | Dimension | Value | Status |
 |---|---|---|
-| Total programmatic cell capacity | ~5,000 (Tier 3/4/5/11/13 combinatorial) | ✅ Architecture |
+| Total programmatic cell capacity | ~99,000 (Tier 1/3/4/5/11/12/13/14/15) | ✅ Live (Phase 3) |
 | Hand-crafted pages | ~30 (money + ad-platform + country) | ✅ Live |
 | Free calculators | 20 (`/tools/*`) | ✅ Live |
 | Total `page.tsx` files | 108 | ✅ |
@@ -1797,6 +1797,18 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 3 — Scale to 100k pages (landed 2026-06-07):**
+  - **Three new programmatic tiers** added on top of the existing Tier 1/3/4/5/11/13 stack:
+    - Tier 12 (Question × Industry) — 63,426 cells.
+    - Tier 14 (Question × Geography, top 12 metros) — 24,552 cells.
+    - Tier 15 (Industry × Glossary term) — 2,697 cells.
+  - Three new templates under `components/templates/`: `Tier12QuestionIndustry.tsx`, `Tier14QuestionGeo.tsx`, `Tier15IndustryGlossary.tsx`. Each ships Article + FAQPage + BreadcrumbList + WebPage(speakable) JSON-LD, Person author via the canonical `DEFAULT_AUTHOR` registry, 3-moment CTAs with `cta=tierN-{top|mid|bottom}` attribution, ReferencesBlock filtered by industry, and TimestampStamp.
+  - `lib/data/slugs.ts` extended with: `Tier12Match`, `Tier14Match`, `Tier15Match` types; `TIER14_GEO_IDS` (12-city allow-list); `parseTier12`, `parseTier14`, `parseTier15`, `parseTwoSegmentSlug` parsers; `allTier12Slugs`, `allTier14Slugs`, `allTier15Slugs` generators.
+  - `app/[slug]/[sub]/page.tsx` upgraded to dispatch: Tier 2 sub-services first (existing), then `parseTwoSegmentSlug` → Tier 12/14/15 templates.
+  - `lib/sitemap.ts` extended with 8 new sub-sitemap segments (6 sharded Tier 12 by question kind to keep each ≤ 50k URLs, + Tier 14 + Tier 15). Sitemap-index now indexes 32 sub-sitemaps.
+  - `lib/llms.ts` updated with the new URL pattern formulas + per-tier counts so AI crawlers can extrapolate URL space.
+  - Total programmatic capacity moved from ~5,000 → **~99,000 cells**, with ISR-on-first-hit + R2 cache strategy unchanged so build time stays flat.
+
 - **Phase 2 — E-E-A-T schema (landed 2026-06-07):**
   - Root layout emits site-level `Organization` + `WebSite` + `SearchAction` JSON-LD (NAP, sameAs LinkedIn/Instagram/Facebook/YouTube, founder Person, AggregateRating 4.9/200, areaServed across 8 countries, knowsAbout).
   - Canonical author registry at `lib/data/authors.ts` with Ajsal Abbas as `DEFAULT_AUTHOR`; tier templates use it for visible byline + invisible `personJsonLd()` Person schema.
@@ -1818,6 +1830,13 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - **Phase 1B — Conversion polish (landed 2026-06-07):** 3-moment CTA pattern (top hero + mid post-methodology + bottom post-FAQ) wired into `Tier3Page`, `Tier4Page`, `Tier5Page`, `Tier11Page`, and `IndustryPillarPage`. Each CTA carries a unique `?cta=tierN-{top|mid|bottom}` URL param. `/free-marketing-audit` reads `useSearchParams("cta")` and uses it as the lead `source`, plus composes a `service` tag from `service`/`industry`/`geo` URL hints so ops sees which programmatic cell the lead came from. Next conversion-polish items: calculator → lead-capture exit funnel; multi-step audit form for higher completion.
 - **Phase 2 — E-E-A-T schema (landed 2026-06-07):** root layout emits `Organization` + `WebSite` + `SearchAction` JSON-LD with NAP, sameAs (LinkedIn/Instagram/Facebook/YouTube), founder (Ajsal Abbas Person), AggregateRating 4.9/200, knowsAbout, areaServed (8 countries). Tier3/4/5/11/IndustryPillar each ship Article schema with Person author (Ajsal) + datePublished/dateModified + publisher @id ref. AuthorCard injects Person JSON-LD via canonical `lib/data/authors.ts` registry. ReferencesBlock wired with industry/service-filtered authoritative source pools (RBI, SEBI, IRDAI, NMC, RERA, NASSCOM, IAMAI, IBEF, MoSPI, ASCI, MEITY DPDP, Google/Meta/LinkedIn policy docs). Site-search verification metadata supported via `NEXT_PUBLIC_GSC_VERIFICATION` env var.
 - **Phase 2B — GSC indexing run:** user to verify `frameleads.com` in Search Console (`public/google-site-verification-PLACEHOLDER.txt` documents both methods), drop in the verification token / file, submit `/sitemap.xml`, configure `scripts/setup-google-indexing.js` with a service account, run `scripts/google-indexing.js` for the first prioritized batch (money pages → Bangalore Tier 3 → service hubs → ad-platform → country).
+- **Phase 3 — Scale to 100k pages (landed 2026-06-07):** three new programmatic tiers shipped through the existing `app/[slug]/[sub]/page.tsx` 2-segment catchall.
+  - **Tier 12 — Question × Industry** (`/[question-slug]/[industry-id]`): 63,426 cells. Every "how-to / what-is / why / is-it / best / how-much" question framed for each of 33 industry verticals. New `components/templates/Tier12QuestionIndustry.tsx` template ships Article + FAQPage + BreadcrumbList + WebPage(speakable) + Person schema, IndustryContextBlock with industry-specific CAC/CPC, question.steps rendered as a numbered playbook, and 3-moment CTAs (`cta=tier12-top/mid/bottom`).
+  - **Tier 14 — Question × Geography** (`/[question-slug]/[geo-id]`): 24,552 cells across 12 commercial-priority cities (8 India tier-1 + Dubai, Singapore, London, New York). New `components/templates/Tier14QuestionGeo.tsx`. Same schema stack with LocalContextBlock + Place schema.
+  - **Tier 15 — Industry × Glossary** (`/[industry-id]/[glossary-term]`): 2,697 cells. Every glossary term re-framed for industry-specific unit economics. New `components/templates/Tier15IndustryGlossary.tsx` ships DefinedTerm + Article + FAQPage + BreadcrumbList schema with industry-flavored benchmarks and common-mistakes lists.
+  - All three tiers reuse `lib/data/authors.ts` (Ajsal Abbas as canonical Person), `lib/data/references.ts` (filtered by industry where applicable), `ContactForm`/`CTABlock` plumbing, and the ISR-on-first-hit R2 cache strategy. No build-time pre-rendering; cells render lazily on first crawl.
+  - Sitemap-index now contains **32 sub-sitemaps**: 8 new shards for Tier 12 (one per question kind, largest is `how-to` at 15,345 URLs — well under Google's 50k-per-sitemap limit), Tier 14 (24,552 URLs), and Tier 15 (2,697 URLs).
+  - `lib/llms.ts` programmatic summary updated with the new URL pattern formulas + per-tier counts so AI crawlers can construct URLs without explicit listing.
 
 ### 📋 PLANNED (not started)
 - **Dynamic OG image route** (`/api/og?…` via `next/og`)

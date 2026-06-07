@@ -8,6 +8,8 @@ import {
 	type Industry,
 	type Geo,
 } from "./index";
+import { questions, getQuestion, type QuestionEntry } from "./questions";
+import { glossary, getGlossaryEntry, type GlossaryEntry } from "./glossary";
 
 /**
  * Existing static routes that should NOT be intercepted by the
@@ -132,6 +134,30 @@ export type Tier13Match = {
 	slug: string;
 };
 
+export type Tier12Match = {
+	tier: 12;
+	question: QuestionEntry;
+	industry: Industry;
+	slug: string;
+	sub: string;
+};
+
+export type Tier14Match = {
+	tier: 14;
+	question: QuestionEntry;
+	geo: Geo;
+	slug: string;
+	sub: string;
+};
+
+export type Tier15Match = {
+	tier: 15;
+	industry: Industry;
+	entry: GlossaryEntry;
+	slug: string;
+	sub: string;
+};
+
 export type ProgrammaticMatch =
 	| Tier3Match
 	| Tier4Match
@@ -139,6 +165,30 @@ export type ProgrammaticMatch =
 	| Tier1IndustryMatch
 	| Tier11Match
 	| Tier13Match;
+
+export type TwoSegmentMatch = Tier12Match | Tier14Match | Tier15Match;
+
+/**
+ * Commercial-priority cities for Tier 14 (Question × Geo). Capped at 12 to keep
+ * cell count workable for first-pass content quality reviews; expand later by
+ * adding to this list.
+ */
+export const TIER14_GEO_IDS: ReadonlyArray<string> = [
+	// India tier-1 (8)
+	"mumbai",
+	"bangalore",
+	"delhi-ncr",
+	"chennai",
+	"hyderabad",
+	"pune",
+	"ahmedabad",
+	"kolkata",
+	// Global commercial-priority (4)
+	"dubai",
+	"singapore",
+	"london",
+	"new-york",
+];
 
 const sortedServicesDesc = () =>
 	[...services].sort((a, b) => b.id.length - a.id.length);
@@ -485,4 +535,123 @@ export function allProgrammaticSlugs(): ProgrammaticMatch[] {
 		...allTier4Slugs(),
 		...allTier5Slugs(),
 	];
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+// Two-segment programmatic tiers (12, 14, 15)
+// Routed via app/[slug]/[sub]/page.tsx. The parser distinguishes based on
+// whether the head slug matches a question-id / industry-id and the sub
+// matches an industry-id / geo-id / glossary-term-id.
+// ───────────────────────────────────────────────────────────────────────────
+
+/**
+ * Parse `/{question-slug}/{industry-id}` → Tier 12 (Question × Industry).
+ */
+export function parseTier12(slug: string, sub: string): Tier12Match | null {
+	const question = getQuestion(slug);
+	if (!question) return null;
+	const industry = getIndustry(sub);
+	if (!industry) return null;
+	return { tier: 12, question, industry, slug, sub };
+}
+
+/**
+ * Parse `/{question-slug}/{geo-id}` → Tier 14 (Question × Geo).
+ * Restricted to TIER14_GEO_IDS so the URL space stays commercial-priority.
+ */
+export function parseTier14(slug: string, sub: string): Tier14Match | null {
+	const question = getQuestion(slug);
+	if (!question) return null;
+	if (!TIER14_GEO_IDS.includes(sub)) return null;
+	const geo = getGeo(sub);
+	if (!geo) return null;
+	return { tier: 14, question, geo, slug, sub };
+}
+
+/**
+ * Parse `/{industry-id}/{glossary-term}` → Tier 15 (Industry × Glossary).
+ */
+export function parseTier15(slug: string, sub: string): Tier15Match | null {
+	const industry = getIndustry(slug);
+	if (!industry) return null;
+	const entry = getGlossaryEntry(sub);
+	if (!entry) return null;
+	return { tier: 15, industry, entry, slug, sub };
+}
+
+/**
+ * Two-segment dispatcher. Resolution order:
+ *   1. Tier 15 (industry head × glossary sub) — disambiguates first because
+ *      industry ids and question slugs cannot collide today.
+ *   2. Tier 12 (question head × industry sub)
+ *   3. Tier 14 (question head × priority-geo sub)
+ * Sub-services (Tier 2) are still handled by app/[slug]/[sub]/page.tsx
+ * before this function is called for non-service heads.
+ */
+export function parseTwoSegmentSlug(
+	slug: string,
+	sub: string,
+): TwoSegmentMatch | null {
+	return (
+		parseTier15(slug, sub) ?? parseTier12(slug, sub) ?? parseTier14(slug, sub)
+	);
+}
+
+/**
+ * Tier 12 generator — Question × Industry. Full cross-product (~2,046 × 33).
+ */
+export function allTier12Slugs(): Tier12Match[] {
+	const out: Tier12Match[] = [];
+	for (const q of questions) {
+		for (const ind of industries) {
+			out.push({
+				tier: 12,
+				question: q,
+				industry: ind,
+				slug: q.slug,
+				sub: ind.id,
+			});
+		}
+	}
+	return out;
+}
+
+/**
+ * Tier 14 generator — Question × Geo across TIER14_GEO_IDS (~2,046 × 12).
+ */
+export function allTier14Slugs(): Tier14Match[] {
+	const out: Tier14Match[] = [];
+	for (const q of questions) {
+		for (const gid of TIER14_GEO_IDS) {
+			const geo = getGeo(gid);
+			if (!geo) continue;
+			out.push({
+				tier: 14,
+				question: q,
+				geo,
+				slug: q.slug,
+				sub: gid,
+			});
+		}
+	}
+	return out;
+}
+
+/**
+ * Tier 15 generator — Industry × Glossary (~33 × 87).
+ */
+export function allTier15Slugs(): Tier15Match[] {
+	const out: Tier15Match[] = [];
+	for (const ind of industries) {
+		for (const entry of glossary) {
+			out.push({
+				tier: 15,
+				industry: ind,
+				entry,
+				slug: ind.id,
+				sub: entry.id,
+			});
+		}
+	}
+	return out;
 }

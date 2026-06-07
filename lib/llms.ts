@@ -11,6 +11,11 @@ import {
 	allTier3Slugs,
 	allTier4Slugs,
 	allTier5Slugs,
+	allTier11Slugs,
+	allTier12Slugs,
+	allTier13Slugs,
+	allTier14Slugs,
+	allTier15Slugs,
 	allIndustryPillarSlugs,
 } from "./data/slugs";
 import { glossary } from "./data/glossary";
@@ -132,12 +137,25 @@ function programmaticSummary(): string {
 	const t3 = allTier3Slugs().length;
 	const t4 = allTier4Slugs().length;
 	const t5 = allTier5Slugs().length;
+	const t11 = allTier11Slugs().length;
+	const t13 = allTier13Slugs().length;
+	const t12 = allTier12Slugs().length;
+	const t14 = allTier14Slugs().length;
+	const t15 = allTier15Slugs().length;
 	return section("Programmatic content (high-intent long-tail)", [
-		`- ${t3} **Service × Geography** pages — slug pattern: \`/[service]-in-[city]\` (e.g. \`/seo-services-in-pune\`)`,
-		`- ${t4} **Service × Industry** pages — slug pattern: \`/[service]-for-[industry]\` (e.g. \`/meta-ads-for-d2c\`)`,
-		`- ${t5} **Service × Industry × Geography** pages — slug pattern: \`/[service]-for-[industry]-in-[city]\` (e.g. \`/meta-ads-for-real-estate-in-mumbai\`)`,
+		`**Single-segment programmatic cells (~${t3 + t4 + t5 + t11 + t13} pages):**`,
+		`- ${t3} **Service × Geography** — slug \`/[service]-in-[city]\` (e.g. \`/seo-services-in-pune\`)`,
+		`- ${t4} **Service × Industry** — slug \`/[service]-for-[industry]\` (e.g. \`/meta-ads-for-d2c\`)`,
+		`- ${t5} **Service × Industry × Geography** — slug \`/[service]-for-[industry]-in-[city]\` (e.g. \`/meta-ads-for-real-estate-in-mumbai\`)`,
+		`- ${t11} **Industry × Geography** — slug \`/[industry]-marketing-in-[city]\` (e.g. \`/real-estate-marketing-in-bangalore\`)`,
+		`- ${t13} **Pricing** — slug \`/[service]-pricing\` or \`/[service]-pricing-in-[city]\``,
 		"",
-		`Each programmatic page is data-driven, has unique CAC/CPC ranges per industry, and cites the same Frameleads Growth System™ adapted to that exact intersection.`,
+		`**Two-segment programmatic cells (~${t12 + t14 + t15} pages):**`,
+		`- ${t12} **Question × Industry** — slug \`/[question-slug]/[industry-id]\` (e.g. \`/what-is-performance-marketing/d2c\`). Every "how-to / what-is / why / is-it / best / how-much" question framed for each of the 33 industry verticals.`,
+		`- ${t14} **Question × Geography** — slug \`/[question-slug]/[geo-id]\` (e.g. \`/what-is-performance-marketing/bangalore\`). Restricted to 12 commercial-priority cities (8 India tier-1 + Dubai, Singapore, London, New York).`,
+		`- ${t15} **Industry × Glossary** — slug \`/[industry-id]/[glossary-term]\` (e.g. \`/d2c/ltv\`). Every glossary term re-framed for each industry's unit economics.`,
+		"",
+		`Each programmatic page is data-driven, has unique CAC/CPC ranges per industry / city, and cites the same Frameleads Growth System™ adapted to that exact intersection.`,
 		"",
 		`Full machine-readable index: ${SITE_URL}/sitemap.xml`,
 	]);

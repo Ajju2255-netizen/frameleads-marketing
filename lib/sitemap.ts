@@ -5,6 +5,9 @@ import {
 	allTier11Slugs,
 	allTier13Slugs,
 	allIndustryPillarSlugs,
+	allTier12Slugs,
+	allTier14Slugs,
+	allTier15Slugs,
 } from "./data/slugs";
 import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
@@ -534,6 +537,56 @@ export const SEGMENTS: SitemapSegment[] = [
 		name: "Legal",
 		description: "Privacy, terms, cookies.",
 		urls: () => withDate(STATIC_LEGAL),
+	},
+	// ───────────────────────────────────────────────────────────────────
+	// Tier 12 — Question × Industry. ~2,046 × 33 = ~67,518 URLs. Sharded by
+	// question kind (6 kinds) so each sub-sitemap stays well under the
+	// 50,000-URL per-sitemap limit.
+	// ───────────────────────────────────────────────────────────────────
+	...(["how-to", "what-is", "why", "is-it", "best", "how-much"] as const).map(
+		(kind) => ({
+			id: `12-question-industry-${kind}`,
+			tier: 12 as const,
+			name: `Tier 12 — Question × Industry (${kind})`,
+			description: `Programmatic — every "${kind}" question framed for each of the 33 industry verticals.`,
+			urls: () =>
+				allTier12Slugs()
+					.filter((c) => c.question.kind === kind)
+					.map((c) => ({
+						loc: `${SITE_URL}/${c.slug}/${c.sub}`,
+						lastmod: today(),
+						changefreq: "monthly" as const,
+						priority: 0.55,
+					})),
+		}),
+	),
+	{
+		id: "14-question-geo",
+		tier: 14,
+		name: "Tier 14 — Question × Geo (commercial-priority cities)",
+		description:
+			"Programmatic — every question framed for the 12 commercial-priority cities (8 Indian tier-1 + Dubai, Singapore, London, New York).",
+		urls: () =>
+			allTier14Slugs().map((c) => ({
+				loc: `${SITE_URL}/${c.slug}/${c.sub}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.6,
+			})),
+	},
+	{
+		id: "15-industry-glossary",
+		tier: 15,
+		name: "Tier 15 — Industry × Glossary",
+		description:
+			"Programmatic — every glossary term framed for each of the 33 industry verticals.",
+		urls: () =>
+			allTier15Slugs().map((c) => ({
+				loc: `${SITE_URL}/${c.slug}/${c.sub}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.6,
+			})),
 	},
 ];
 
