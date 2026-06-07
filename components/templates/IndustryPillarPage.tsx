@@ -9,6 +9,8 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ReferencesBlock } from "./ReferencesBlock";
+import { referencesFor } from "@/lib/data/references";
 import { ListBlock } from "./ListBlock";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
@@ -17,6 +19,9 @@ import {
 	getGeosForIndustry,
 	type Industry,
 } from "@/lib/data";
+import { DEFAULT_AUTHOR } from "@/lib/data/authors";
+
+const PUBLISHED_AT = "2025-12-01";
 
 type Props = {
 	industry: Industry;
@@ -88,6 +93,8 @@ export function IndustryPillarPage({ industry, url }: Props) {
 
 	const definition = `${industry.label} marketing is the operating discipline of acquiring and retaining ${industry.label.toLowerCase()} customers using a calibrated channel mix, unit-economics bands specific to the category (CAC ${industry.avgCacInr} ₹), and creative norms tuned to ${industry.topPainPoints[0]?.toLowerCase() ?? "category-specific buyer behaviour"}.`;
 
+	const dateModified = new Date().toISOString().slice(0, 10);
+
 	const schema = [
 		{
 			"@context": "https://schema.org",
@@ -108,24 +115,21 @@ export function IndustryPillarPage({ industry, url }: Props) {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			headline: `${industry.label} Marketing — A 2026 Operator's Playbook`,
-			mainEntityOfPage: url,
-			datePublished: new Date().toISOString().slice(0, 10),
-			dateModified: new Date().toISOString().slice(0, 10),
+			headline: `${industry.label} marketing — A 2026 Operator's Playbook | Frameleads`,
+			description: industry.tagline,
+			url,
+			datePublished: PUBLISHED_AT,
+			dateModified,
+			inLanguage: "en-IN",
 			author: {
-				"@type": "Organization",
-				name: "Frameleads",
-				url: "https://frameleads.com",
+				"@type": "Person",
+				"@id": `${DEFAULT_AUTHOR.url}#person`,
+				name: DEFAULT_AUTHOR.name,
+				url: DEFAULT_AUTHOR.url,
 			},
-			publisher: {
-				"@type": "Organization",
-				name: "Frameleads",
-				url: "https://frameleads.com",
-				logo: {
-					"@type": "ImageObject",
-					url: "https://frameleads.com/favicon.png",
-				},
-			},
+			publisher: { "@id": "https://frameleads.com#organization" },
+			mainEntityOfPage: { "@type": "WebPage", "@id": url },
+			about: [{ "@type": "Audience", name: industry.label }],
 		},
 		{
 			"@context": "https://schema.org",
@@ -263,9 +267,10 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					links={geos}
 				/>
 				<FAQBlock items={faqs} />
+				<ReferencesBlock references={referencesFor({ industryId: industry.id })} />
 				<TimestampStamp
-					updatedAt={new Date().toISOString().slice(0, 10)}
-					reviewedBy="Frameleads Editorial Team"
+					updatedAt={dateModified}
+					reviewedBy={DEFAULT_AUTHOR.name}
 				/>
 				<CTABlock
 					variant="audit"
@@ -275,11 +280,12 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					primaryLabel={`Get a free ${industry.name} audit`}
 				/>
 				<AuthorCard
-					name="Frameleads Editorial Team"
-					role="Performance + organic operators"
-					bio={`Frameleads runs ${industry.label} marketing across India and global priority markets. CAC and CPC bands cited come from live client data refreshed quarterly.`}
-					linkedin="https://www.linkedin.com/company/frameleads"
-					updatedAt={new Date().toISOString().slice(0, 10)}
+					person={DEFAULT_AUTHOR}
+					name={DEFAULT_AUTHOR.name}
+					role={DEFAULT_AUTHOR.role}
+					bio={`${DEFAULT_AUTHOR.bio} This pillar covers ${industry.label} marketing end-to-end; numbers cited come from live client data refreshed quarterly.`}
+					linkedin={DEFAULT_AUTHOR.linkedin}
+					updatedAt={dateModified}
 				/>
 				<InboundLinksHint count={services.length + geos.length} />
 			</main>

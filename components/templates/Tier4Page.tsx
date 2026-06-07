@@ -9,6 +9,8 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ReferencesBlock } from "./ReferencesBlock";
+import { referencesFor } from "@/lib/data/references";
 import { HeroServiceGeo } from "./HeroServiceGeo";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
@@ -18,6 +20,9 @@ import {
 	type Service,
 	type Industry,
 } from "@/lib/data";
+import { DEFAULT_AUTHOR } from "@/lib/data/authors";
+
+const PUBLISHED_AT = "2025-12-01";
 
 type Props = {
 	service: Service;
@@ -95,6 +100,8 @@ export function Tier4Page({ service, industry, url }: Props) {
 
 	const useCases = service.topUseCases.slice(0, 5);
 
+	const dateModified = new Date().toISOString().slice(0, 10);
+
 	const schema = [
 		{
 			"@context": "https://schema.org",
@@ -115,24 +122,24 @@ export function Tier4Page({ service, industry, url }: Props) {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			headline: `${service.label} for ${industry.label}`,
-			mainEntityOfPage: url,
-			datePublished: new Date().toISOString().slice(0, 10),
-			dateModified: new Date().toISOString().slice(0, 10),
+			headline: `${service.label} for ${industry.label} — Frameleads Growth System™`,
+			description: service.shortDescription,
+			url,
+			datePublished: PUBLISHED_AT,
+			dateModified,
+			inLanguage: "en-IN",
 			author: {
-				"@type": "Organization",
-				name: "Frameleads",
-				url: "https://frameleads.com",
+				"@type": "Person",
+				"@id": `${DEFAULT_AUTHOR.url}#person`,
+				name: DEFAULT_AUTHOR.name,
+				url: DEFAULT_AUTHOR.url,
 			},
-			publisher: {
-				"@type": "Organization",
-				name: "Frameleads",
-				url: "https://frameleads.com",
-				logo: {
-					"@type": "ImageObject",
-					url: "https://frameleads.com/favicon.png",
-				},
-			},
+			publisher: { "@id": "https://frameleads.com#organization" },
+			mainEntityOfPage: { "@type": "WebPage", "@id": url },
+			about: [
+				{ "@type": "Service", name: service.label },
+				{ "@type": "Audience", name: industry.label },
+			],
 		},
 		{
 			"@context": "https://schema.org",
@@ -219,9 +226,10 @@ export function Tier4Page({ service, industry, url }: Props) {
 					heading={`Other services we run for ${industry.label}`}
 					links={sameIndustrySiblings}
 				/>
+				<ReferencesBlock references={referencesFor({ serviceId: service.id, industryId: industry.id })} />
 				<TimestampStamp
-					updatedAt={new Date().toISOString().slice(0, 10)}
-					reviewedBy="Frameleads Editorial Team"
+					updatedAt={dateModified}
+					reviewedBy={DEFAULT_AUTHOR.name}
 				/>
 				<CTABlock
 					variant="audit"
@@ -231,11 +239,12 @@ export function Tier4Page({ service, industry, url }: Props) {
 					primaryLabel={`Get a free ${industry.name} audit`}
 				/>
 				<AuthorCard
-					name="Frameleads Editorial Team"
-					role="Performance + organic operators"
-					bio={`Frameleads runs ${service.label.toLowerCase()} for ${industry.label} businesses across India and global priority markets. CAC and CPC bands cited come from live client data refreshed quarterly.`}
-					linkedin="https://www.linkedin.com/company/frameleads"
-					updatedAt={new Date().toISOString().slice(0, 10)}
+					person={DEFAULT_AUTHOR}
+					name={DEFAULT_AUTHOR.name}
+					role={DEFAULT_AUTHOR.role}
+					bio={`${DEFAULT_AUTHOR.bio} This page covers ${service.label.toLowerCase()} for ${industry.label}; numbers cited come from live client data refreshed quarterly.`}
+					linkedin={DEFAULT_AUTHOR.linkedin}
+					updatedAt={dateModified}
 				/>
 				<InboundLinksHint
 					count={relatedTier3.length + sameIndustrySiblings.length}

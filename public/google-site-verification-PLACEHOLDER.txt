@@ -1,0 +1,28 @@
+FRAMELEADS — Search Console verification placeholder
+─────────────────────────────────────────────────────
+
+This file is a placeholder. To verify the site in Google Search Console:
+
+OPTION A — meta-tag method (preferred; survives deploys cleanly)
+  1. Go to https://search.google.com/search-console/welcome
+  2. Add property: https://frameleads.com (or use Domain property if DNS-verified)
+  3. Choose "HTML tag" verification. Copy the `content="..."` token.
+  4. Set NEXT_PUBLIC_GSC_VERIFICATION=<token> in .env.local (and in the
+     Cloudflare Worker / hosting env for production).
+  5. Redeploy. The Next.js Metadata API in app/layout.tsx emits
+     <meta name="google-site-verification" content="..."> automatically.
+  6. Hit "Verify" in Search Console.
+
+OPTION B — HTML file method (alternate; also works on subfolder properties)
+  1. In Search Console, choose "HTML file" verification.
+  2. Download `google[hash].html`.
+  3. Drop it into THIS public/ directory next to this placeholder file.
+  4. Deploy. Search Console will fetch /google[hash].html and verify.
+
+After verification, also do:
+  - Submit the sitemap-index: https://frameleads.com/sitemap.xml
+  - Configure scripts/setup-google-indexing.js with a service account that has
+    "Owner" access to the verified GSC property to run the bulk indexing
+    pipeline in scripts/google-indexing.js.
+
+Once verification is live, delete this placeholder file.

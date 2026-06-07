@@ -9,6 +9,8 @@ import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
+import { ReferencesBlock } from "./ReferencesBlock";
+import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
 import {
@@ -18,6 +20,9 @@ import {
 	type Service,
 	type Geo,
 } from "@/lib/data";
+import { DEFAULT_AUTHOR } from "@/lib/data/authors";
+
+const PUBLISHED_AT = "2025-12-01";
 
 type Props = {
 	service: Service;
@@ -114,6 +119,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 	const faqs = buildFaqs(service, geo);
 	const cityServiceSiblings = buildRelatedSiblingsForCity(service, geo);
 	const sameServiceSiblings = buildRelatedSiblingsForService(service, geo);
+	const dateModified = new Date().toISOString().slice(0, 10);
 
 	const subhead = `${service.shortDescription} Built for ${geo.name} — calibrated to ${geo.topIndustries.slice(0, 3).join(", ")}.`;
 
@@ -198,6 +204,28 @@ export function Tier3Page({ service, geo, url }: Props) {
 				cssSelector: [".tldr", ".faq-answer"],
 			},
 		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Article",
+			headline: `${service.label} in ${geo.name} — Frameleads Growth System™`,
+			description: service.shortDescription,
+			url,
+			datePublished: PUBLISHED_AT,
+			dateModified,
+			inLanguage: "en-IN",
+			author: {
+				"@type": "Person",
+				"@id": `${DEFAULT_AUTHOR.url}#person`,
+				name: DEFAULT_AUTHOR.name,
+				url: DEFAULT_AUTHOR.url,
+			},
+			publisher: { "@id": "https://frameleads.com#organization" },
+			mainEntityOfPage: { "@type": "WebPage", "@id": url },
+			about: [
+				{ "@type": "Service", name: service.label },
+				{ "@type": "Place", name: geo.name },
+			],
+		},
 	];
 
 	return (
@@ -241,9 +269,10 @@ export function Tier3Page({ service, geo, url }: Props) {
 					heading={`${service.label} in nearby cities`}
 					links={sameServiceSiblings}
 				/>
+				<ReferencesBlock references={referencesFor({ serviceId: service.id })} />
 				<TimestampStamp
-					updatedAt={new Date().toISOString().slice(0, 10)}
-					reviewedBy="Frameleads Editorial Team"
+					updatedAt={dateModified}
+					reviewedBy={DEFAULT_AUTHOR.name}
 				/>
 				<CTABlock
 					variant="audit"
@@ -253,11 +282,12 @@ export function Tier3Page({ service, geo, url }: Props) {
 					primaryLabel={`Get a free ${geo.name} audit`}
 				/>
 				<AuthorCard
-					name="Frameleads Editorial Team"
-					role="Performance + organic operators"
-					bio={`Frameleads runs ${service.label.toLowerCase()} engagements across ${geo.name} and ${geo.country ?? "India"}. Numbers cited come from live client data refreshed quarterly.`}
-					linkedin="https://www.linkedin.com/company/frameleads"
-					updatedAt={new Date().toISOString().slice(0, 10)}
+					person={DEFAULT_AUTHOR}
+					name={DEFAULT_AUTHOR.name}
+					role={DEFAULT_AUTHOR.role}
+					bio={`${DEFAULT_AUTHOR.bio} This page is part of Frameleads' ${geo.name} ${service.label} coverage; numbers cited come from live client data refreshed quarterly.`}
+					linkedin={DEFAULT_AUTHOR.linkedin}
+					updatedAt={dateModified}
 				/>
 				<InboundLinksHint
 					count={cityServiceSiblings.length + sameServiceSiblings.length}

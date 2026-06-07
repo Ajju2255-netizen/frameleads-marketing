@@ -11,6 +11,8 @@ import { AuthorCard } from "./AuthorCard";
 import { TimestampStamp } from "./TimestampStamp";
 import { InboundLinksHint } from "./InboundLinksHint";
 import { SchemaInjector } from "./SchemaInjector";
+import { ReferencesBlock } from "./ReferencesBlock";
+import { referencesFor } from "@/lib/data/references";
 import { HeroServiceGeo } from "./HeroServiceGeo";
 import {
 	getServicesForIndustry,
@@ -19,6 +21,9 @@ import {
 	type Industry,
 	type Geo,
 } from "@/lib/data";
+import { DEFAULT_AUTHOR } from "@/lib/data/authors";
+
+const PUBLISHED_AT = "2025-12-01";
 
 type Props = {
 	industry: Industry;
@@ -110,6 +115,8 @@ export function Tier11Page({ industry, geo, url }: Props) {
 
 	const industryIntro = `${industry.label} in ${geo.name}: ${industry.topPainPoints.slice(0, 2).join(", and ")}. Channel mix that wins this category in ${geo.name}: ${industry.primaryServices.slice(0, 4).join(", ")}. Compliance considerations specific to ${industry.name} apply, with ${geo.name}-specific enforcement quirks.`;
 
+	const dateModified = new Date().toISOString().slice(0, 10);
+
 	const schema = [
 		{
 			"@context": "https://schema.org",
@@ -133,17 +140,24 @@ export function Tier11Page({ industry, geo, url }: Props) {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			headline: `${industry.label} Marketing in ${geo.name} — Operator Playbook`,
-			mainEntityOfPage: url,
-			datePublished: new Date().toISOString().slice(0, 10),
-			dateModified: new Date().toISOString().slice(0, 10),
-			author: { "@type": "Organization", name: "Frameleads", url: "https://frameleads.com" },
-			publisher: {
-				"@type": "Organization",
-				name: "Frameleads",
-				url: "https://frameleads.com",
-				logo: { "@type": "ImageObject", url: "https://frameleads.com/favicon.png" },
+			headline: `${industry.label} marketing in ${geo.name} — Frameleads Growth System™`,
+			description: industry.tagline,
+			url,
+			datePublished: PUBLISHED_AT,
+			dateModified,
+			inLanguage: "en-IN",
+			author: {
+				"@type": "Person",
+				"@id": `${DEFAULT_AUTHOR.url}#person`,
+				name: DEFAULT_AUTHOR.name,
+				url: DEFAULT_AUTHOR.url,
 			},
+			publisher: { "@id": "https://frameleads.com#organization" },
+			mainEntityOfPage: { "@type": "WebPage", "@id": url },
+			about: [
+				{ "@type": "Audience", name: industry.label },
+				{ "@type": "Place", name: geo.name },
+			],
 		},
 		{
 			"@context": "https://schema.org",
@@ -238,9 +252,10 @@ export function Tier11Page({ industry, geo, url }: Props) {
 						links={sameGeoOtherIndustries}
 					/>
 				) : null}
+				<ReferencesBlock references={referencesFor({ industryId: industry.id })} />
 				<TimestampStamp
-					updatedAt={new Date().toISOString().slice(0, 10)}
-					reviewedBy="Frameleads Editorial Team"
+					updatedAt={dateModified}
+					reviewedBy={DEFAULT_AUTHOR.name}
 				/>
 				<CTABlock
 					variant="audit"
@@ -250,11 +265,12 @@ export function Tier11Page({ industry, geo, url }: Props) {
 					primaryLabel={`Get a free ${geo.name} ${industry.name} audit`}
 				/>
 				<AuthorCard
-					name="Frameleads Editorial Team"
-					role="Performance + organic operators"
-					bio={`Frameleads runs ${industry.label.toLowerCase()} marketing across India. The ${geo.name} ${industry.name} bands cited come from live client data refreshed quarterly.`}
-					linkedin="https://www.linkedin.com/company/frameleads"
-					updatedAt={new Date().toISOString().slice(0, 10)}
+					person={DEFAULT_AUTHOR}
+					name={DEFAULT_AUTHOR.name}
+					role={DEFAULT_AUTHOR.role}
+					bio={`${DEFAULT_AUTHOR.bio} This page covers ${industry.label} marketing in ${geo.name}; numbers cited come from live client data refreshed quarterly.`}
+					linkedin={DEFAULT_AUTHOR.linkedin}
+					updatedAt={dateModified}
 				/>
 				<InboundLinksHint count={sameIndustryOtherGeos.length + serviceForIndustryInGeo.length + sameGeoOtherIndustries.length} />
 			</main>

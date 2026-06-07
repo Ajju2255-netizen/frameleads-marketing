@@ -1231,8 +1231,11 @@ Blog (3 posts hard-coded)  → underutilized as an internal-link feeder
 | Static-page server metadata (client-only pages) | ✅ Live — 51 client-only routes now ship per-route `layout.tsx` metadata (Phase 0) |
 | Path hygiene (`Meta-ads`, `Social-media-marketing`, `ppc management`, `perforamance-marketing`) | ✅ Renamed + 301-redirected (Phase 0) |
 | Footer `tel:` + `mailto:` + WhatsApp click-to-chat | ✅ Live (Phase 0) |
-| Person author schema + AuthorCard usage | 📋 Component built, not wired (Phase 2) |
-| TimestampStamp + ReferencesBlock usage | 📋 Components built, not wired (Phase 2) |
+| Person author schema + AuthorCard usage | ✅ Canonical author (Ajsal Abbas) wired across Tier3/4/5/11/IndustryPillar; `lib/data/authors.ts` registry; AuthorCard emits Person JSON-LD (Phase 2) |
+| TimestampStamp + ReferencesBlock usage | ✅ Both blocks active in all Tier templates; ReferencesBlock pulls from `lib/data/references.ts` (RBI/SEBI/IRDAI/NMC/RERA/NASSCOM/IAMAI/IBEF/MoSPI/ASCI/G2/Statista/UGC/AICTE/MEITY DPDP/Google/Meta/LinkedIn) filtered by service+industry (Phase 2) |
+| Root `Organization` + `WebSite` + `SearchAction` JSON-LD | ✅ Emitted from `app/layout.tsx` so every page inherits brand-entity graph (Phase 2) |
+| Article schema with Person + dates on tier templates | ✅ datePublished + dateModified + Person author + publisher @id ref (Phase 2) |
+| GSC / Bing / Yandex verification | ⏳ Wired via `NEXT_PUBLIC_GSC_VERIFICATION` / `NEXT_PUBLIC_BING_VERIFICATION` / `NEXT_PUBLIC_YANDEX_VERIFICATION` env vars in root metadata. User to fetch tokens + set env. See `public/google-site-verification-PLACEHOLDER.txt` (Phase 2) |
 | Founder identity consistency (Rahul Sharma in README vs Ajsal Abbas on live pages) | ✅ README.md corrected (Phase 0) |
 | Stale docs cleanup (`PAGES_README.md`, `CLAUDE.md`, `/out/`) | ✅ Updated/cleaned (Phase 0) |
 | Comparisons.json + sub-services.json → live routes | 📋 Orphaned data (Phase 3) |
@@ -1794,6 +1797,13 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 2 — E-E-A-T schema (landed 2026-06-07):**
+  - Root layout emits site-level `Organization` + `WebSite` + `SearchAction` JSON-LD (NAP, sameAs LinkedIn/Instagram/Facebook/YouTube, founder Person, AggregateRating 4.9/200, areaServed across 8 countries, knowsAbout).
+  - Canonical author registry at `lib/data/authors.ts` with Ajsal Abbas as `DEFAULT_AUTHOR`; tier templates use it for visible byline + invisible `personJsonLd()` Person schema.
+  - `Article` schema added/upgraded on Tier3/4/5/11/IndustryPillar with Person author, `datePublished`, `dateModified`, publisher `@id` reference to root Organization, and `about` entities.
+  - `ReferencesBlock` activated across all Tier templates; sources curated in `lib/data/references.ts` and filtered per-page by `referencesFor({serviceId, industryId})` — pools for finance (RBI/SEBI/IRDAI), healthcare (DPDP/NMC), real-estate (RERA/CREDAI), tech-saas (NASSCOM/G2/DPDP), e-commerce (Consumer-Protection Rules/Statista), education (UGC/AICTE), performance platforms (Google/Meta/LinkedIn), SEO (Search Essentials/AI Overviews), plus general India (IBEF/IAMAI/MoSPI/ASCI).
+  - GSC / Bing / Yandex verification meta tags emitted conditionally via `NEXT_PUBLIC_GSC_VERIFICATION` / `_BING_VERIFICATION` / `_YANDEX_VERIFICATION` env vars. Placeholder doc at `public/google-site-verification-PLACEHOLDER.txt` walks the user through both verification methods.
+
 - **Phase 0 — Hygiene + foundations (landed 2026-06-07):**
   - Path hygiene: `Meta-ads` → `meta-ads`, `Social-media-marketing` → `social-media-marketing`, `ppc management` → `ppc-management`, `perforamance-marketing` → `performance-marketing`; `git mv` + 301 redirects in `next.config.mjs` + `RESERVED_SLUGS` updated + ~20 internal `Link` hrefs rewritten
   - Root `metadataBase` + default OG/Twitter/canonical in `app/layout.tsx`
@@ -1806,7 +1816,8 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 ### ⏳ NEXT (blockers / in progress)
 - **Phase 1A — Lead-capture engine (landed 2026-06-07):** `POST /api/lead-submit` live in `frameleads-api` with Zod validation, Resend email forwarding, R2 archive (`audit/leads/YYYY-MM-DD/<uuid>.json`), KV-backed rate-limit (5/min/IP), CORS allow-list, honeypot. `lib/lead-api.ts` client wrapper with friendly error mapping + GA4 `lead_submitted` event. `/free-marketing-audit` form fixed; `/contact` migrated off Formspree to internal API via shared `<ContactForm>` component. Sticky mobile CTA bar (after 30% scroll, 7-day dismiss memory) mounted in root layout. Production needs `RESEND_API_KEY`, `LEAD_TO_EMAIL`, and `NEXT_PUBLIC_LEAD_API_URL` configured.
 - **Phase 1B — Conversion polish (landed 2026-06-07):** 3-moment CTA pattern (top hero + mid post-methodology + bottom post-FAQ) wired into `Tier3Page`, `Tier4Page`, `Tier5Page`, `Tier11Page`, and `IndustryPillarPage`. Each CTA carries a unique `?cta=tierN-{top|mid|bottom}` URL param. `/free-marketing-audit` reads `useSearchParams("cta")` and uses it as the lead `source`, plus composes a `service` tag from `service`/`industry`/`geo` URL hints so ops sees which programmatic cell the lead came from. Next conversion-polish items: calculator → lead-capture exit funnel; multi-step audit form for higher completion.
-- **Phase 2 — E-E-A-T + GSC indexing:** wire `AuthorCard` + Person schema + `TimestampStamp` + `ReferencesBlock` across Tier templates and blog; move `Organization` + `WebSite` + `SearchAction` JSON-LD to root layout; verify `frameleads.com` in GSC; submit sitemap-index; run first prioritized batch
+- **Phase 2 — E-E-A-T schema (landed 2026-06-07):** root layout emits `Organization` + `WebSite` + `SearchAction` JSON-LD with NAP, sameAs (LinkedIn/Instagram/Facebook/YouTube), founder (Ajsal Abbas Person), AggregateRating 4.9/200, knowsAbout, areaServed (8 countries). Tier3/4/5/11/IndustryPillar each ship Article schema with Person author (Ajsal) + datePublished/dateModified + publisher @id ref. AuthorCard injects Person JSON-LD via canonical `lib/data/authors.ts` registry. ReferencesBlock wired with industry/service-filtered authoritative source pools (RBI, SEBI, IRDAI, NMC, RERA, NASSCOM, IAMAI, IBEF, MoSPI, ASCI, MEITY DPDP, Google/Meta/LinkedIn policy docs). Site-search verification metadata supported via `NEXT_PUBLIC_GSC_VERIFICATION` env var.
+- **Phase 2B — GSC indexing run:** user to verify `frameleads.com` in Search Console (`public/google-site-verification-PLACEHOLDER.txt` documents both methods), drop in the verification token / file, submit `/sitemap.xml`, configure `scripts/setup-google-indexing.js` with a service account, run `scripts/google-indexing.js` for the first prioritized batch (money pages → Bangalore Tier 3 → service hubs → ad-platform → country).
 
 ### 📋 PLANNED (not started)
 - **Dynamic OG image route** (`/api/og?…` via `next/og`)

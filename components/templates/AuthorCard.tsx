@@ -1,12 +1,21 @@
+import { SchemaInjector } from "./SchemaInjector";
+import { type Author, personJsonLd } from "@/lib/data/authors";
+
 type Props = {
 	name: string;
 	role: string;
 	bio: string;
 	linkedin?: string;
 	updatedAt?: string;
+	/**
+	 * When provided, an inline Person JSON-LD is emitted next to the card so
+	 * search/AI engines see the canonical author entity in addition to the
+	 * page's Article schema.
+	 */
+	person?: Author;
 };
 
-export function AuthorCard({ name, role, bio, linkedin, updatedAt }: Props) {
+export function AuthorCard({ name, role, bio, linkedin, updatedAt, person }: Props) {
 	const initials = name
 		.split(" ")
 		.map((p) => p[0])
@@ -16,6 +25,7 @@ export function AuthorCard({ name, role, bio, linkedin, updatedAt }: Props) {
 
 	return (
 		<aside className="mx-auto max-w-3xl px-6 py-7">
+			{person ? <SchemaInjector schema={personJsonLd(person)} /> : null}
 			<div className="flex flex-col gap-4 rounded-2xl border border-[#FFE4D6] bg-white p-5 sm:flex-row sm:items-start sm:gap-5 sm:p-6 shadow-[0_4px_16px_rgba(45,55,72,0.04)]">
 				<div
 					aria-hidden
