@@ -769,7 +769,7 @@ const UNITED_STATES: LocationDepth = {
 		{
 			question: "What about AI Overview impact on US SEO?",
 			answer:
-				"AI Overview now shows on ~50% of US Google queries. Head-term click-through has dropped 20-40% for some categories. We optimize for citation (TLDR + FAQ + structured comparisons + llms.txt) alongside classic rankings. See /reports for our quarterly AI-citation tracking methodology.",
+				"AI Overview now shows on ~50% of US Google queries. Head-term click-through has dropped 20-40% for some categories. We optimize for citation (direct-answer summary + FAQ + structured comparisons + llms.txt) alongside classic rankings. See /reports for our quarterly AI-citation tracking methodology.",
 		},
 		{
 			question: "When should we ramp up for BFCM + Q4?",

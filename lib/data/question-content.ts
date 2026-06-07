@@ -720,7 +720,7 @@ export function buildQuestionContent(entry: QuestionEntry): QuestionContent {
 	].slice(0, 6);
 
 	const contextParagraphs = [
-		`This page is part of the Frameleads operator library. It's intentionally long — operators report that the short version sells, but the long version actually executes. Skim the TLDR if you're scanning; read top-to-bottom if you're committing.`,
+		`This page is part of the Frameleads operator library. It's intentionally long — operators report that the short version sells, but the long version actually executes. Skim the key points if you're scanning; read top-to-bottom if you're committing.`,
 		`Below: the direct answer, the operational detail, the common mistakes that show up in our audits, the metrics to track, the recommended stack, and adjacent reading. ${entry.kind === "best" || entry.kind === "how-much" ? "Vendor / pricing context disclosed transparently — Frameleads is in the relevant category and rated against the same criteria as competitors." : ""}`,
 	];
 
