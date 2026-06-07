@@ -1,7 +1,5 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { SchemaInjector } from "./SchemaInjector";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
@@ -303,7 +301,6 @@ export function BlogPostPage({ post }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -407,7 +404,6 @@ export function BlogPostPage({ post }: Props) {
 					</section>
 				) : null}
 			</main>
-			<Footer />
 			{/* Hidden Person JSON-LD via AuthorCard already covers this — no extra schema here. */}
 			{author ? <SchemaInjector schema={personJsonLd(author)} /> : null}
 		</>

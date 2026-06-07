@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { HeroGlossary } from "./HeroGlossary";
 import { TLDRBlock } from "./TLDRBlock";
 import { DefinitionBlock } from "./DefinitionBlock";
@@ -117,7 +115,6 @@ export function Tier8GlossaryPage({ entry, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<HeroGlossary
 					term={entry.term}
@@ -301,7 +298,6 @@ export function Tier8GlossaryPage({ entry, url }: Props) {
 				/>
 				<InboundLinksHint count={related.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

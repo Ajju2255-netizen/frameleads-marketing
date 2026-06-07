@@ -20,8 +20,6 @@
  */
 
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
 import { CTABlock } from "./CTABlock";
@@ -286,7 +284,6 @@ export function QuestionHubIndex({ kind }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				{/* Hero */}
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
@@ -629,7 +626,6 @@ export function QuestionHubIndex({ kind }: Props) {
 					updatedAt={today}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

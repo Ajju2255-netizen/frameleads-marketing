@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
@@ -208,7 +206,6 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={`${service.label} for ${industry.label}`}
@@ -272,7 +269,6 @@ export function Tier5Page({ service, industry, geo, url }: Props) {
 					count={sameIndustryOtherGeos.length + sameGeoOtherServices.length}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { Breadcrumb } from "./Breadcrumb";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
@@ -78,7 +76,6 @@ export function ToolChrome({ slug, title, directAnswer, tldr, faqs, children, re
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div
@@ -166,7 +163,6 @@ export function ToolChrome({ slug, title, directAnswer, tldr, faqs, children, re
 					updatedAt={today}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

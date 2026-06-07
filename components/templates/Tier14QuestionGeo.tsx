@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { LocalContextBlock } from "./LocalContextBlock";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
@@ -137,7 +135,6 @@ export function Tier14QuestionGeo({
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -420,7 +417,6 @@ export function Tier14QuestionGeo({
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

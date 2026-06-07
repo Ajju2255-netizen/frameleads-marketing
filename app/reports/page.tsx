@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import { SchemaInjector } from "@/components/templates/SchemaInjector";
 import { Breadcrumb } from "@/components/templates/Breadcrumb";
 
@@ -58,7 +56,6 @@ export default function ReportsPage() {
 	return (
 		<>
 			<SchemaInjector schema={SCHEMA} />
-			<Navbar />
 			<main>
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -108,7 +105,6 @@ export default function ReportsPage() {
 					</ul>
 				</section>
 			</main>
-			<Footer />
 		</>
 	);
 }

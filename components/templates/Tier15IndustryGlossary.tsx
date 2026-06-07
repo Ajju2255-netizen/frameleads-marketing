@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { DefinitionBlock } from "./DefinitionBlock";
 import { FormulaCard } from "./FormulaCard";
@@ -133,7 +131,6 @@ export function Tier15IndustryGlossary({
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -393,7 +390,6 @@ export function Tier15IndustryGlossary({
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

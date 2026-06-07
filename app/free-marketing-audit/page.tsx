@@ -2,8 +2,6 @@
 
 import { useState } from "react"
 import { useSearchParams } from "next/navigation"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
 import Image from "next/image"

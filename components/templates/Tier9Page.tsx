@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { ScorecardTable } from "./ScorecardTable";
 import { ListBlock } from "./ListBlock";
@@ -162,7 +160,6 @@ export function Tier9Page({ entry, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-48 bg-[radial-gradient(1000px_300px_at_25%_-30%,rgba(255,107,53,0.10),transparent_55%)]" />
@@ -270,7 +267,6 @@ export function Tier9Page({ entry, url }: Props) {
 
 				<InboundLinksHint count={adjacent.length + relatedGlossary.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

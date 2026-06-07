@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { HeroServiceGeo } from "./HeroServiceGeo";
 import { TLDRBlock } from "./TLDRBlock";
 import { LocalContextBlock } from "./LocalContextBlock";
@@ -233,7 +231,6 @@ export function Tier3Page({ service, geo, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={service.label}
@@ -295,7 +292,6 @@ export function Tier3Page({ service, geo, url }: Props) {
 					count={cityServiceSiblings.length + sameServiceSiblings.length}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

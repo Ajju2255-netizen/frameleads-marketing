@@ -16,8 +16,6 @@
  */
 
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
 import { CTABlock } from "./CTABlock";
@@ -136,7 +134,6 @@ export function GlossaryHub() {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-48 bg-[radial-gradient(1100px_320px_at_30%_-30%,rgba(255,107,53,0.10),transparent_55%)]" />
@@ -241,7 +238,6 @@ export function GlossaryHub() {
 				<TimestampStamp updatedAt={today} reviewedBy={DEFAULT_AUTHOR.name} />
 				<AuthorCard person={DEFAULT_AUTHOR} name={DEFAULT_AUTHOR.name} role={DEFAULT_AUTHOR.role} bio={`${DEFAULT_AUTHOR.bio} Glossary entries are reviewed quarterly against live engagement data.`} linkedin={DEFAULT_AUTHOR.linkedin} updatedAt={today} />
 			</main>
-			<Footer />
 		</>
 	);
 }

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import { SchemaInjector } from "@/components/templates/SchemaInjector";
 import { Breadcrumb } from "@/components/templates/Breadcrumb";
 import { KeyPointsBlock } from "@/components/templates/KeyPointsBlock";
@@ -103,7 +101,6 @@ export default function Page() {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-48 bg-[radial-gradient(1100px_320px_at_30%_-30%,rgba(255,107,53,0.10),transparent_55%)]" />
@@ -283,7 +280,6 @@ export default function Page() {
 
 				<AuthorCard person={DEFAULT_AUTHOR} name={DEFAULT_AUTHOR.name} role={DEFAULT_AUTHOR.role} bio={DEFAULT_AUTHOR.bio} linkedin={DEFAULT_AUTHOR.linkedin} updatedAt={today} />
 			</main>
-			<Footer />
 		</>
 	);
 }

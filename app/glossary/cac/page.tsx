@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import { HeroGlossary } from "@/components/templates/HeroGlossary";
 import { TLDRBlock } from "@/components/templates/TLDRBlock";
 import { DefinitionBlock } from "@/components/templates/DefinitionBlock";
@@ -135,7 +133,6 @@ export default function CACGlossaryPage() {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main>
 				<HeroGlossary
 					term={TERM}
@@ -228,7 +225,6 @@ export default function CACGlossaryPage() {
 					updatedAt="May 5, 2026"
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

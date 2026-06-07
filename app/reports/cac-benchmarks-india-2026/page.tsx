@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import { SchemaInjector } from "@/components/templates/SchemaInjector";
 import { Breadcrumb } from "@/components/templates/Breadcrumb";
 import { TLDRBlock } from "@/components/templates/TLDRBlock";
@@ -236,7 +234,6 @@ export default function CACBenchmarksPage() {
 	return (
 		<>
 			<SchemaInjector schema={SCHEMA} />
-			<Navbar />
 			<main>
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -442,7 +439,6 @@ export default function CACBenchmarksPage() {
 					updatedAt={DATE_MODIFIED}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

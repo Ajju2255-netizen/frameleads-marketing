@@ -7,8 +7,6 @@
  */
 
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { SchemaInjector } from "./SchemaInjector";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
@@ -114,7 +112,6 @@ function buildSchema(loc: LocationDepth, url: string, dateModified: string, faqs
 function NotFound({ slug }: { slug: string }) {
 	return (
 		<>
-			<Navbar />
 			<main id="main" className="mx-auto max-w-3xl px-6 py-16">
 				<h1 className="font-poppins text-3xl font-bold">Location not found</h1>
 				<p className="mt-4 text-[#5A5A5A]">
@@ -124,7 +121,6 @@ function NotFound({ slug }: { slug: string }) {
 					</Link>
 				</p>
 			</main>
-			<Footer />
 		</>
 	);
 }
@@ -166,7 +162,6 @@ export function LocationHubPage({ slug }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				{/* ─── Hero ─── */}
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
@@ -514,7 +509,6 @@ export function LocationHubPage({ slug }: Props) {
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

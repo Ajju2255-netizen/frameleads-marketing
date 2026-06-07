@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { MethodologyCard } from "./MethodologyCard";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
@@ -234,7 +232,6 @@ export function Tier13Page({ service, geo, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div
@@ -367,7 +364,6 @@ export function Tier13Page({ service, geo, url }: Props) {
 
 				<InboundLinksHint count={related.length + otherCities.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { DefinitionBlock } from "./DefinitionBlock";
 import { MethodologyCard } from "./MethodologyCard";
@@ -179,7 +177,6 @@ export function IndustryPillarPage({ industry, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
 					<div
@@ -289,7 +286,6 @@ export function IndustryPillarPage({ industry, url }: Props) {
 				/>
 				<InboundLinksHint count={services.length + geos.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { IndustryContextBlock } from "./IndustryContextBlock";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
@@ -136,7 +134,6 @@ export function Tier12QuestionIndustry({
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -425,7 +422,6 @@ export function Tier12QuestionIndustry({
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

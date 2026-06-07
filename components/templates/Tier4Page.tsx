@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { IndustryContextBlock } from "./IndustryContextBlock";
 import { MethodologyCard } from "./MethodologyCard";
@@ -190,7 +188,6 @@ export function Tier4Page({ service, industry, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={service.label}
@@ -252,7 +249,6 @@ export function Tier4Page({ service, industry, url }: Props) {
 					count={relatedTier3.length + sameIndustrySiblings.length}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

@@ -16,8 +16,6 @@
  */
 
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { SchemaInjector } from "./SchemaInjector";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
@@ -121,7 +119,6 @@ export function ResourcesHub({ slug, title, dek, tldr, groups, breadcrumbAncesto
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				{/* ─── Hero ─── */}
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
@@ -237,7 +234,6 @@ export function ResourcesHub({ slug, title, dek, tldr, groups, breadcrumbAncesto
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

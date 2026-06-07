@@ -15,8 +15,6 @@
  */
 
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { SchemaInjector } from "./SchemaInjector";
 import { Breadcrumb } from "./Breadcrumb";
 import { TLDRBlock } from "./TLDRBlock";
@@ -87,14 +85,12 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 		// rather than throwing so the build doesn't break on a typo.
 		return (
 			<>
-				<Navbar />
 				<main id="main" className="mx-auto max-w-3xl px-6 py-16">
 					<h1 className="font-poppins text-3xl font-bold">Service not found</h1>
 					<p className="mt-4 text-[#5A5A5A]">
 						This service couldn't be loaded. <Link href="/digital-marketing-services" className="text-[#FF6B35] underline">Browse all services →</Link>
 					</p>
 				</main>
-				<Footer />
 			</>
 		);
 	}
@@ -197,7 +193,6 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				{/* ─── Hero ─── */}
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
@@ -338,7 +333,6 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 					updatedAt={dateModified}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }

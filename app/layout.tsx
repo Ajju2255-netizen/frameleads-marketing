@@ -8,9 +8,8 @@ import { GA_MEASUREMENT_ID } from "../lib/analytics"
 import { StickyMobileCTA } from "./components/sticky-mobile-cta"
 import { MetaPixel } from "./components/meta-pixel"
 import { SchemaInjector } from "@/components/templates/SchemaInjector"
-// Note: Navbar + Footer are imported per-template (every page template renders
-// its own Navbar/Footer to control breadcrumbs + skip-link target). Upstream's
-// global Navbar/Footer refactor was reverted on merge to avoid duplicate render.
+import Navbar from "./components/navbar"
+import Footer from "./components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -280,7 +279,9 @@ export default function RootLayout({
       </Script>
       <body className={`${inter.className}`}>
         <SchemaInjector schema={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]} />
+        <Navbar />
         {children}
+        <Footer />
         <StickyMobileCTA />
         <GoogleAnalyticsComponent GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
         <MetaPixel pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID} />

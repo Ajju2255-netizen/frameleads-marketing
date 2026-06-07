@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { Breadcrumb } from "./Breadcrumb";
 import { KeyPointsBlock } from "./KeyPointsBlock";
 import { DefinitionBlock } from "./DefinitionBlock";
@@ -138,7 +136,6 @@ export function Tier6Page({ entry, url, related }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				{/* ─── Hero ─── */}
 				<header className="relative overflow-hidden border-b border-[#FFE4D6] bg-gradient-to-b from-[#FFF7F2] via-white to-white">
@@ -529,7 +526,6 @@ export function Tier6Page({ entry, url, related }: Props) {
 
 				<InboundLinksHint count={related.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

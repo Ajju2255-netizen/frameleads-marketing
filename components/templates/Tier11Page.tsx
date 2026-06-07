@@ -1,5 +1,3 @@
-import Navbar from "../../app/components/navbar";
-import Footer from "../../app/components/footer";
 import { TLDRBlock } from "./TLDRBlock";
 import { LocalContextBlock } from "./LocalContextBlock";
 import { IndustryContextBlock } from "./IndustryContextBlock";
@@ -193,7 +191,6 @@ export function Tier11Page({ industry, geo, url }: Props) {
 	return (
 		<>
 			<SchemaInjector schema={schema} />
-			<Navbar />
 			<main id="main">
 				<HeroServiceGeo
 					serviceLabel={`${industry.label} marketing`}
@@ -274,7 +271,6 @@ export function Tier11Page({ industry, geo, url }: Props) {
 				/>
 				<InboundLinksHint count={sameIndustryOtherGeos.length + serviceForIndustryInGeo.length + sameGeoOtherIndustries.length} />
 			</main>
-			<Footer />
 		</>
 	);
 }

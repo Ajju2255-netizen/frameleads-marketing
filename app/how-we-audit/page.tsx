@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import { SchemaInjector } from "@/components/templates/SchemaInjector";
 import { Breadcrumb } from "@/components/templates/Breadcrumb";
 import { CTABlock } from "@/components/templates/CTABlock";
@@ -170,7 +168,6 @@ export default function HowWeAuditPage() {
 	return (
 		<>
 			<SchemaInjector schema={SCHEMA} />
-			<Navbar />
 			<main>
 				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
 					<div
@@ -288,7 +285,6 @@ export default function HowWeAuditPage() {
 					updatedAt={DATE_MODIFIED}
 				/>
 			</main>
-			<Footer />
 		</>
 	);
 }
