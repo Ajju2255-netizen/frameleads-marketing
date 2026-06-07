@@ -88,6 +88,9 @@ import { post as d2cMarketingBudget2026 } from "@/content/blogs/marketing-budget
 import { post as hireRealEstateBangalore } from "@/content/blogs/how-to-hire-real-estate-marketing-agency-bangalore";
 import { post as seoVsPerformance } from "@/content/blogs/seo-vs-performance-marketing-indian-d2c";
 import { post as questionsToAskAgency } from "@/content/blogs/10-questions-to-ask-performance-marketing-agency-india";
+import { post as aiOverviewsGeoPlaybook2026 } from "@/content/blogs/ai-overviews-geo-india-operator-playbook-2026";
+import { post as mumbaiPerformancePlaybook2026 } from "@/content/blogs/mumbai-performance-marketing-operator-playbook-2026";
+import { post as bestSeoAgencyMumbai2026 } from "@/content/blogs/best-seo-agency-mumbai-2026";
 
 export const BLOG_POSTS: BlogPost[] = [
 	performanceBangalore2026,
@@ -95,6 +98,9 @@ export const BLOG_POSTS: BlogPost[] = [
 	hireRealEstateBangalore,
 	seoVsPerformance,
 	questionsToAskAgency,
+	aiOverviewsGeoPlaybook2026,
+	mumbaiPerformancePlaybook2026,
+	bestSeoAgencyMumbai2026,
 ];
 
 // ───────────────────────────── Helpers ─────────────────────────────

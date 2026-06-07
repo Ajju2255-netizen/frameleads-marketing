@@ -1797,6 +1797,37 @@ Goal: get **cited inside** AI-generated answers / AI Overviews.
 - Razorpay checkout live on `/academy`
 - GA4 install
 - Real NAP (Electronic City Bangalore, phone, email) with `sameAs` to LinkedIn + Instagram
+- **Phase 11 — Blog content expansion: 3 new long-form posts + complete 7-type coverage (landed 2026-06-07):**
+  - **Problem**: blog had 5 posts but only 5 of the 7 post types in the editorial system were covered. Missing: `definitive-guide` and `city-context`. Plus single-city coverage (Bangalore-only) limited topical breadth.
+  - **3 new long-form posts shipped** (each ~230 lines / 12-section structure):
+    | Slug | Type | Primary keyword | Cluster |
+    |---|---|---|---|
+    | `ai-overviews-geo-india-operator-playbook-2026` | definitive-guide | ai overviews geo india | AI Search + GEO |
+    | `mumbai-performance-marketing-operator-playbook-2026` | city-context | performance marketing mumbai | City Context |
+    | `best-seo-agency-mumbai-2026` | best-in-city | best seo agency in mumbai | SEO + GEO |
+  - **`ai-overviews-geo-india-operator-playbook-2026`** — definitive guide on Google AI Overviews + Perplexity + ChatGPT + Gemini + Copilot citation strategy for Indian brands. 10 h2 sections covering: 2026 AI Overview footprint, how AI engines actually pick citations, why Indian sites under-index in AI surfaces (compliance + INR + city gaps), the 5-stage GEO playbook (schema-first audit → content depth → cluster build-out → llms.txt → measurement loop), anti-patterns, Frameleads' published approach. 6 FAQs, 4 references (llmstxt.org, IndexNow docs, Google Search Central, Schema.org).
+  - **`mumbai-performance-marketing-operator-playbook-2026`** — city-context post (new type). 12 h2 sections covering: 12 Mumbai sub-locality buyer profiles (Bandra/Khar/Andheri/Powai/Lower Parel/Worli/BKC/Nariman Point/Juhu+Pali Hill/Thane+Navi Mumbai/Mira Road+Borivali/Dadar+Matunga), channel mix shifts vs Tier-1 default, M-RERA + SEBI + RBI + IRDAI + TRAI compliance overlays, Marathi-overlay decision criteria, festive Q3-Q4 + FY-end Jan-Mar cycles, attribution rigour (long buying cycles + cross-device + channel-partner attribution), engagement-tier pricing context, 5 cross-cutting workstream shape. 6 FAQs, 4 references (M-RERA portal, SEBI, TRAI DLT, IRDAI).
+  - **`best-seo-agency-mumbai-2026`** — best-in-city for Mumbai SEO. 10 h2 sections covering: why Mumbai SEO is structurally different, 7-criteria evaluation framework (methodology depth, senior access, category track record, sub-locality awareness, AI Overview/GEO, attribution rigour, transparency), realistic Mumbai retainer bands (SMB/mid-market/funded/premium-luxury), 7 red flags, 30-day discovery sprint format, Frameleads' transparent scoring against the framework. 6 FAQs, 4 references (M-RERA, SEBI, Google Search Central, Frameleads Growth System).
+  - **Blog editorial system now covers all 7 post types**:
+    | Type | Posts | Examples |
+    |---|---:|---|
+    | best-in-city | 2 | Bangalore performance, Mumbai SEO |
+    | cost-in-city | 1 | D2C marketing budget India |
+    | how-to-hire | 1 | Real estate agency Bangalore |
+    | vs | 1 | SEO vs performance marketing |
+    | questions-to-ask | 1 | 10 questions to ask agency |
+    | definitive-guide | 1 | AI Overviews + GEO India playbook |
+    | city-context | 1 | Mumbai performance marketing |
+    | **Total** | **8** | All 7 types covered |
+  - **Verified live**:
+    | Post | Bytes | h2 sections | Schema types |
+    |---|---:|---:|---:|
+    | AI Overviews + GEO | 354 KB | 10 | 8 |
+    | Mumbai performance | 372 KB | 12 | 8 |
+    | Best SEO Mumbai | 353 KB | 10 | 8 |
+  - **Auto-propagation**: because /blogs index + /llms.txt + sitemap-index all read from `BLOG_POSTS`, the new posts appear automatically across all surfaces without per-page wiring. Sitemap auto-updates; llms.txt re-counts; blog index card grid grows; categories index picks up the new clusters (AI Search + GEO, City Context).
+  - **Cross-link graph**: every new post sets `relatedSlugs` pointing to 2-3 previously-published posts in the cluster, building the topical authority network the GEO playbook itself describes.
+
 - **Phase 10 — GSC + Bing + Indexing API readiness (landed 2026-06-07):**
   - **Problem**: the existing `scripts/google-indexing.js` read URLs from `app/sitemap/page.tsx` (the human-readable sitemap page) and fell back to a directory scan. Both approaches **missed the ~127k programmatic pages** that render dynamically via the catchall (Tier 3/4/5/11/12/13/14/15 + money pages + guides). Indexing submissions were running against a few hundred static routes, leaving the long-tail unindexed.
   - **`scripts/indexnow-submit.js`** (new — ~150 lines): IndexNow protocol implementation for Bing + Yandex (also adopted by Naver, Seznam, IndexNow.org consortium). No daily quota (unlike Google Indexing API), batches of up to 10,000 URLs per request. Reads live sitemap-index, traverses all sub-sitemaps, deduplicates, submits in chunks with 1.5s breather between batches. Targeted mode via `--segment {id}` flag for delta submissions.
