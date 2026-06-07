@@ -33,7 +33,12 @@ import * as Post30 from "./how-businesses-generate-high-quality-leads-complete-g
 import * as Post31 from "./best-lead-generation-strategies-for-small-businesses-2026"
 import * as Post32 from "./inbound-vs-outbound-lead-generation"
 
-export const allPosts = [Post32, Post31, Post30, Post29, Post28, Post27, Post26, Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
+// Frameleads operator library — 2026 long-form posts
+import * as Post33 from "./ai-overviews-geo-india-operator-playbook-2026"
+import * as Post34 from "./mumbai-performance-marketing-operator-playbook-2026"
+import * as Post35 from "./best-seo-agency-mumbai-2026"
+
+export const allPosts = [Post35, Post34, Post33, Post32, Post31, Post30, Post29, Post28, Post27, Post26, Post25, Post24, Post23, Post22, Post21, Post20, Post19, Post18, Post17, Post16, Post15, Post14, Post13, Post1, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9, Post10, Post11, Post12]
 
 export const getPostBySlug = (slug: string) => {
     // Basic slug matching
