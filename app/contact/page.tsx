@@ -3,10 +3,10 @@
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
+import { ContactForm } from "../components/ContactForm"
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Clock } from "lucide-react"
 
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -112,29 +112,7 @@ export default function ContactPage() {
             <Card className="group relative bg-white/80 backdrop-blur-xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-500">
               <CardContent className="p-8 relative z-10">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h2>
-                <form action="https://formspree.io/f/xgvpgwyb" method="POST" className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message:</label>
-                    <textarea id="message" name="message" rows={5} placeholder="Your Message" required className="w-full px-4 py-3 bg-white/80 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent resize-none"></textarea>
-                  </div>
-
-                  <input type="hidden" name="_subject" value="New Message from Frameleads Website" />
-                  <input type="text" name="_gotcha" style={{ display: 'none' }} />
-
-                  <Button type="submit" className="group relative bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] w-full text-white font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 transform hover:scale-105 py-4">
-                    <Send className="h-5 w-5 mr-2 relative z-10" /> Send Message
-                  </Button>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
 

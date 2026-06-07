@@ -6,6 +6,7 @@ import Footer from "../components/footer"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
 import Image from "next/image"
+import { submitLead } from "@/lib/lead-api"
 import { 
   Search, 
   DollarSign, 
@@ -42,8 +43,15 @@ export default function FreeMarketingAuditPage() {
     email: "",
     website: "",
     company: "",
-    phone: ""
+    phone: "",
+    hp: "" // honeypot — should always stay empty
   })
+  const [submitState, setSubmitState] = useState<
+    { status: "idle" }
+    | { status: "submitting" }
+    | { status: "success"; leadId: string }
+    | { status: "error"; error: string }
+  >({ status: "idle" })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -52,10 +60,25 @@ export default function FreeMarketingAuditPage() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    if (submitState.status === "submitting") return
+    setSubmitState({ status: "submitting" })
+    const res = await submitLead({
+      name: formData.name,
+      email: formData.email,
+      website: formData.website || undefined,
+      company: formData.company || undefined,
+      phone: formData.phone || undefined,
+      source: "free-audit",
+      hp: formData.hp || undefined,
+    })
+    if (res.ok) {
+      setSubmitState({ status: "success", leadId: res.leadId })
+      setFormData({ name: "", email: "", website: "", company: "", phone: "", hp: "" })
+    } else {
+      setSubmitState({ status: "error", error: res.error })
+    }
   }
 
   const auditIncludes = [
@@ -245,13 +268,35 @@ export default function FreeMarketingAuditPage() {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent"
                   />
+                  {/* Honeypot — hidden from humans, bots fill it */}
+                  <input
+                    type="text"
+                    name="hp"
+                    value={formData.hp}
+                    onChange={handleInputChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 flex items-center justify-center gap-2"
+                    disabled={submitState.status === "submitting"}
+                    className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Get My Free Audit
-                    <ArrowRight className="h-5 w-5" />
+                    {submitState.status === "submitting" ? "Submitting…" : "Get My Free Audit"}
+                    {submitState.status !== "submitting" && <ArrowRight className="h-5 w-5" />}
                   </button>
+                  {submitState.status === "success" && (
+                    <div role="status" className="mt-4 rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">
+                      Thanks — we've received your request and will send your audit within 48 hours. (Reference: {submitState.leadId.slice(0, 8)})
+                    </div>
+                  )}
+                  {submitState.status === "error" && (
+                    <div role="alert" className="mt-4 rounded-lg bg-red-50 border border-red-200 p-4 text-sm text-red-800">
+                      {submitState.error}
+                    </div>
+                  )}
                 </form>
                 <p className="text-sm text-gray-500 mt-4 text-center">
                   🔒 Your information is secure and will never be shared

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import GoogleAnalyticsComponent from "./components/google-analytics"
 import { GA_MEASUREMENT_ID } from "../lib/analytics"
+import { StickyMobileCTA } from "./components/sticky-mobile-cta"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -87,6 +88,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         {children}
+        <StickyMobileCTA />
         <GoogleAnalyticsComponent GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
       </body>
     </html>
