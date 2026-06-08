@@ -11,10 +11,10 @@ export const metadata = {
 
 export default function AboutPage() {
   const stats = [
-    { number: "500+", label: "Happy Clients" },
-    { number: "1,000+", label: "Projects Delivered" },
+    { number: "200+", label: "Lifetime Engagements" },
+    { number: "~₹9 Cr", label: "Attributed Pipeline Tracked" },
     { number: "4.9/5", label: "Average Rating" },
-    { number: "6+", label: "Regions Global Delivery" },
+    { number: "8", label: "Countries Served" },
   ]
 
   const values = [
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
   const credibility = [
     { icon: ShieldCheck, title: "Trusted Partner", text: "4.9/5 average rating across 200+ verified reviews." },
-    { icon: Trophy, title: "Proven Growth", text: "Average compounding traffic growth within 6–12 months." },
+    { icon: Trophy, title: "Proven Growth", text: "Compounding traffic growth from quarter 2 of every engagement." },
     { icon: BarChart3, title: "Transparent KPIs", text: "Weekly scorecards and monthly executive reporting." },
     { icon: Globe2, title: "Global Expertise", text: "North America, Asia, Europe, LATAM, Middle East, South Asia." },
   ]

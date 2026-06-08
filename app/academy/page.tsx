@@ -816,7 +816,7 @@ export default function AcademyPage() {
                         {/* Urgency + Social Proof Note */}
                         <div className="mt-4 p-3 bg-gradient-to-r from-green-500/10 to-green-400/10 rounded-lg border border-green-500/20">
                           <div className="text-xs text-green-300 font-medium mb-1">⚡ Limited Time Offer</div>
-                          <div className="text-xs text-gray-400">Join 500+ successful businesses who've already transformed their ads!</div>
+                          <div className="text-xs text-gray-400">The same playbook our team runs on retainers — distilled into a self-paced curriculum.</div>
                         </div>
                         
                         <div className="text-xs text-gray-500 mt-3">Secure checkout with Razorpay. Stripe/PayPal on request.</div>

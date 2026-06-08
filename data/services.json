@@ -250,5 +250,68 @@
     "timeToResults": "30–90 days",
     "geoModifier": "in",
     "industryModifier": "for"
+  },
+  {
+    "id": "branding",
+    "name": "Branding",
+    "label": "Branding & Design",
+    "displayName": "Branding & Design Services",
+    "tagline": "Brand identity + design systems + creative direction that compounds.",
+    "shortDescription": "Strategic brand identity, visual systems, and creative direction — built so every paid + organic asset that follows pulls from one coherent source.",
+    "topUseCases": [
+      "Brand strategy + positioning",
+      "Visual identity + logo systems",
+      "Design systems + component libraries",
+      "Packaging + print collateral",
+      "Brand guidelines + rollout"
+    ],
+    "avgCpcInr": "n/a (owned program)",
+    "avgCacInr": "n/a (brand asset, not a CAC channel)",
+    "primaryKpi": "brand recall + creative consistency score",
+    "timeToResults": "8–16 weeks for system; ongoing for refresh",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "website-development",
+    "name": "Website Development",
+    "label": "Website Development",
+    "displayName": "Website Development",
+    "tagline": "Fast, conversion-engineered sites on Next.js, Webflow, or Shopify.",
+    "shortDescription": "Marketing sites + commerce stores built for Core Web Vitals, SEO, and conversion — Next.js, Webflow, Shopify, or headless stacks depending on the use case.",
+    "topUseCases": [
+      "Marketing site rebuilds (Next.js / Webflow)",
+      "D2C commerce stores (Shopify / Shopify Plus)",
+      "Headless commerce builds (Next.js + Shopify Hydrogen / Sanity)",
+      "Programmatic SEO site architecture",
+      "Core Web Vitals + performance overhauls"
+    ],
+    "avgCpcInr": "n/a (owned program)",
+    "avgCacInr": "n/a (foundation, not a CAC channel)",
+    "primaryKpi": "Core Web Vitals + organic conversion lift",
+    "timeToResults": "6–14 weeks for marketing site; 10–24 for commerce",
+    "geoModifier": "in",
+    "industryModifier": "for"
+  },
+  {
+    "id": "analytics-and-automations",
+    "name": "Analytics & Automations",
+    "label": "Analytics & Automations",
+    "displayName": "Analytics & Marketing Automations",
+    "tagline": "GA4 + server-side + Meta CAPI + lifecycle automations — measurement that holds up post-iOS.",
+    "shortDescription": "Attribution stack engineering — GA4, GTM server-side, Meta CAPI, Google Ads server-side conversions, plus lifecycle automation builds across email, WhatsApp, and CRM.",
+    "topUseCases": [
+      "GA4 + GTM server-side setup",
+      "Meta Conversions API (CAPI) wiring",
+      "Google Ads enhanced + offline conversions",
+      "CRM + warehouse pipelines (Segment, RudderStack)",
+      "Lifecycle automations (Klaviyo, Customer.io, Wati)"
+    ],
+    "avgCpcInr": "n/a (owned program)",
+    "avgCacInr": "n/a (infrastructure, not a CAC channel)",
+    "primaryKpi": "attribution coverage + signal quality",
+    "timeToResults": "3–8 weeks for stack; ongoing for automations",
+    "geoModifier": "in",
+    "industryModifier": "for"
   }
 ]

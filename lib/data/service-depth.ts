@@ -1731,6 +1731,401 @@ const SOCIAL_MEDIA_MARKETING_DEPTH: ServiceDepth = {
 	],
 };
 
+// ─────────────────────── Phase 14 — branding / website-dev / analytics-and-automations ───────────────────────
+
+const BRANDING_DEPTH: ServiceDepth = {
+	summary:
+		"Brand identity, visual systems, and creative direction — built so every paid + organic asset that follows pulls from one coherent source.",
+	deliverables: [
+		"Brand strategy: positioning, audience archetypes, message house, tone of voice",
+		"Visual identity system: logo, type, colour, motion, photography direction",
+		"Design system + component library (Figma) ready for product, web, and marketing reuse",
+		"Brand guidelines document covering print, digital, social, packaging, and AV",
+		"Asset library: hero illustrations, iconography, presentation templates, social templates",
+		"Rollout support across marketing site, sales collateral, ad creative templates, packaging",
+		"Quarterly brand-consistency audit + refresh recommendations",
+	],
+	channelMix: [
+		{
+			channel: "Brand strategy + positioning",
+			weight: "Foundation",
+			note: "Done first. Every visual + creative decision downstream traces back to the documented positioning.",
+		},
+		{
+			channel: "Visual identity system",
+			weight: "Primary",
+			note: "Logo + type + colour + motion + photography direction; the assets every other team pulls from.",
+		},
+		{
+			channel: "Design system in Figma",
+			weight: "Compounding",
+			note: "Components reused across web, ad creative, sales collateral; saves 30–60% of asset-production hours over 12 months.",
+		},
+		{
+			channel: "Rollout + guidelines",
+			weight: "Supporting",
+			note: "Brand guidelines document + on-call asset support during rollout. Prevents brand drift from in-house teams executing without strategic context.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–3",
+			heading: "Discovery + strategy",
+			outputs: [
+				"Stakeholder + customer interviews (8–15)",
+				"Competitive + category audit",
+				"Positioning territory exploration → recommended positioning",
+				"Message house: primary value prop + supporting pillars + proof",
+			],
+		},
+		{
+			label: "Week 4–8",
+			heading: "Visual identity design",
+			outputs: [
+				"Logo + wordmark exploration → final marks",
+				"Type + colour + motion + photography direction defined",
+				"Design system foundations in Figma (components, tokens, spacing scale)",
+				"Sample applications: marketing site hero, social post, ad creative, packaging",
+			],
+		},
+		{
+			label: "Week 9–14",
+			heading: "Rollout + handover",
+			outputs: [
+				"Brand guidelines document delivered (PDF + web)",
+				"Marketing site refresh (when in scope) shipped",
+				"Sales collateral templates: deck, one-pagers, email signatures",
+				"On-call asset support during in-house team rollout",
+			],
+		},
+		{
+			label: "Month 4+",
+			heading: "Refresh cadence",
+			outputs: [
+				"Quarterly brand-consistency audit",
+				"Asset library expansions for new product lines / campaigns",
+				"Annual creative refresh against fatigue + market evolution",
+				"Hand-off documentation maintained for in-house design team continuity",
+			],
+		},
+	],
+	whoFor: [
+		"Brands at inflection points: rebrands, category repositioning, post-funding refreshes",
+		"Founders who recognise that fragmented brand expression is leaking conversion + trust",
+		"Companies with multi-product / multi-region rollout where consistency matters",
+		"Brands ready to invest in a system, not a one-off logo or social asset",
+	],
+	whoNotFor: [
+		"Brands looking for a logo for ₹50k — that's a freelancer brief, not a system engagement",
+		"Pre-PMF startups where positioning is still moving every 30 days — brand work compounds only on stable positioning",
+		"Companies unwilling to commit to a 8–14 week strategy + design timeline",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹4L–₹8L one-time + ₹50k/mo retainer",
+			mediaContext: "Project fee for the system build + optional monthly retainer for asset support",
+			bestFor: "Early-stage brands rebranding for the first proper time",
+			includes: [
+				"Brand strategy + positioning",
+				"Visual identity (logo, type, colour)",
+				"Brand guidelines PDF",
+				"5–10 launch assets (social, web hero, business cards)",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹10L–₹25L one-time + ₹1L/mo retainer",
+			mediaContext: "Project fee for full system + ongoing retainer for rollout + refresh",
+			bestFor: "Funded brands or scaled D2C undergoing meaningful rebrand or category repositioning",
+			includes: [
+				"Everything in Starter",
+				"Design system in Figma (components + tokens)",
+				"Marketing site design (build separate)",
+				"Sales collateral templates (deck, one-pagers, email signatures)",
+				"Quarterly brand consistency audit",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹25L+ one-time + ₹2L+/mo retainer",
+			mediaContext: "Multi-brand / multi-region engagements",
+			bestFor: "Enterprise brands with sub-brand systems, multi-region rollout, or category-creation positioning",
+			includes: [
+				"Everything in Scale",
+				"Sub-brand / family-brand system architecture",
+				"Motion + AV + photography direction at scale",
+				"On-call senior creative director embedded with in-house team",
+				"Annual creative review + market-evolution refresh",
+			],
+		},
+	],
+};
+
+const WEBSITE_DEVELOPMENT_DEPTH: ServiceDepth = {
+	summary:
+		"Fast, conversion-engineered marketing sites + commerce stores — Next.js, Webflow, Shopify, or headless depending on the use case.",
+	deliverables: [
+		"Technology recommendation: Next.js vs Webflow vs Shopify vs headless, anchored to your team's maintenance capacity + SEO needs",
+		"Information architecture + content modelling for marketing or commerce",
+		"Design-system implementation (Tailwind / shadcn / Figma tokens)",
+		"Front-end build with Core Web Vitals as a hard gate (LCP < 2.0s, INP < 200ms, CLS < 0.1)",
+		"SEO foundations: schema injection, sitemap automation, breadcrumb logic, semantic HTML",
+		"Programmatic SEO scaffolding (when the data + intent support it)",
+		"CMS integration (Sanity, Contentful, Strapi, Storyblok, or Shopify-native)",
+		"Analytics + tag-management wired (GA4, GTM, server-side via dedicated route)",
+		"Hand-off documentation + 30-day post-launch support",
+	],
+	channelMix: [
+		{
+			channel: "Next.js (App Router + RSC)",
+			weight: "Primary",
+			note: "Default for content-heavy marketing sites, programmatic SEO at scale, and headless commerce. Deploys to Vercel or Cloudflare Workers.",
+		},
+		{
+			channel: "Webflow",
+			weight: "Supporting",
+			note: "Best when in-house marketing team will own the CMS and dev capacity is constrained. Trade-off: less control over performance + custom logic.",
+		},
+		{
+			channel: "Shopify (Plus or standard)",
+			weight: "Primary",
+			note: "D2C commerce default. Shopify-native vs Shopify Hydrogen (headless) chosen against catalog complexity + custom-UX needs.",
+		},
+		{
+			channel: "Headless (Next.js + Sanity / Shopify)",
+			weight: "Compounding",
+			note: "For brands where marketing site + commerce + content need shared design system and editorial workflows. Higher upfront build, lower long-term content velocity.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Discovery + architecture",
+			outputs: [
+				"Stakeholder interviews + technical audit of current stack",
+				"Technology recommendation (Next.js / Webflow / Shopify / headless)",
+				"Information architecture + content model",
+				"Performance + SEO baseline measurement",
+			],
+		},
+		{
+			label: "Week 3–8",
+			heading: "Design + build foundations",
+			outputs: [
+				"Design system implementation (Figma → code)",
+				"Component library built (Tailwind + shadcn or framework equivalent)",
+				"Core page templates shipped: home, service, money page, blog index",
+				"CMS integrated; content team onboarded to authoring flow",
+			],
+		},
+		{
+			label: "Week 9–12",
+			heading: "Scale + ship",
+			outputs: [
+				"All remaining page templates built",
+				"Programmatic SEO scaffolding live (if scoped)",
+				"Analytics + GTM + server-side wired",
+				"Core Web Vitals certified across templates",
+			],
+		},
+		{
+			label: "Week 13+",
+			heading: "Launch + iterate",
+			outputs: [
+				"Soft launch + monitoring",
+				"30-day post-launch support (bugs + analytics validation)",
+				"Hand-off documentation delivered",
+				"Quarterly performance + SEO review cadence",
+			],
+		},
+	],
+	whoFor: [
+		"Funded brands or scaled D2C with marketing site that's bottlenecking SEO or conversion",
+		"Brands moving from Wix / Squarespace / WordPress to a performance-engineered modern stack",
+		"D2C brands building Shopify Plus or headless commerce builds",
+		"Companies investing in programmatic SEO at 1,000+ page scale",
+	],
+	whoNotFor: [
+		"Brands looking for a 5-page brochure site for ₹50k — that's a freelancer brief",
+		"Companies unwilling to commit to a 8–14 week build + soft-launch cycle",
+		"Brands without a marketing or content owner who can keep the CMS populated post-launch",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹4L–₹10L project fee + ₹30k/mo support",
+			mediaContext: "Project fee for build + optional monthly support retainer",
+			bestFor: "Marketing site rebuilds for early-stage brands (≤10 pages)",
+			includes: [
+				"Next.js or Webflow build",
+				"Design-system implementation",
+				"5–10 core pages",
+				"GA4 + GTM wired",
+				"30-day post-launch support",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹10L–₹30L project fee + ₹75k/mo support",
+			mediaContext: "Project fee for build + ongoing iteration retainer",
+			bestFor: "Funded brands or scaled D2C with content-heavy or programmatic-SEO sites",
+			includes: [
+				"Everything in Starter",
+				"Programmatic SEO scaffolding (1k–10k pages)",
+				"Headless CMS integration",
+				"Server-side GTM + Meta CAPI wired",
+				"Quarterly performance + SEO review",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹30L+ project fee + ₹1.5L+/mo support",
+			mediaContext: "Multi-locale / multi-brand engagements; Shopify Plus + headless commerce",
+			bestFor: "Enterprise brands building commerce or content platforms at scale",
+			includes: [
+				"Everything in Scale",
+				"Multi-locale / multi-language architecture",
+				"Shopify Plus + Hydrogen headless build",
+				"Custom CMS workflows + editorial automations",
+				"Embedded engineering + design ops",
+			],
+		},
+	],
+};
+
+const ANALYTICS_AUTOMATIONS_DEPTH: ServiceDepth = {
+	summary:
+		"GA4 + GTM server-side + Meta CAPI + Google Ads server-side conversions + lifecycle automations — attribution + automation infrastructure that holds up post-iOS.",
+	deliverables: [
+		"Attribution audit: current pixel + tag setup, attribution gaps, signal loss measurement",
+		"GA4 implementation: enhanced ecommerce, custom events, consent mode v2, audience definitions",
+		"Google Tag Manager: client-side + server-side container builds; data-layer engineering",
+		"Meta Conversions API (CAPI) wired server-to-server with deduplication",
+		"Google Ads enhanced + offline conversions wired for full-funnel attribution",
+		"CRM + warehouse pipeline (Segment, RudderStack, or custom) where relevant",
+		"Lifecycle automation builds: Klaviyo (email), Customer.io (cross-channel), Wati (WhatsApp), Salesforce / HubSpot (CRM)",
+		"Dashboarding: Looker Studio, custom warehouse + Metabase, or BI-tool of choice",
+		"Quarterly attribution audit + signal-quality review",
+	],
+	channelMix: [
+		{
+			channel: "GA4 + GTM (client + server-side)",
+			weight: "Foundation",
+			note: "Required baseline. Server-side GTM hosted on Cloudflare Workers or Google Cloud Run for first-party domain ownership of pixel + event data.",
+		},
+		{
+			channel: "Meta CAPI + Google Ads server-side conversions",
+			weight: "Primary",
+			note: "Server-to-server event API for post-iOS attribution rigor. Deduplicated against client-side pixel events.",
+		},
+		{
+			channel: "Lifecycle automations (Klaviyo / Customer.io / Wati)",
+			weight: "Compounding",
+			note: "Email + WhatsApp + SMS lifecycle flows triggered from CRM + warehouse data. Highest-leverage retention investment in most businesses.",
+		},
+		{
+			channel: "CRM + warehouse pipeline",
+			weight: "Supporting",
+			note: "Segment / RudderStack / Snowplow into warehouse → reverse-ETL back to ad platforms. Required for cohort-level attribution + LTV-based bidding.",
+		},
+	],
+	processPhases: [
+		{
+			label: "Week 1–2",
+			heading: "Attribution + automation audit",
+			outputs: [
+				"Current pixel + tag inventory; signal-loss quantified",
+				"Attribution gap analysis (Meta + Google + GA4 reconciliation)",
+				"Lifecycle automation audit + journey mapping",
+				"Recommendation: build sequence prioritised by leverage",
+			],
+		},
+		{
+			label: "Week 3–6",
+			heading: "Foundation: GA4 + GTM + CAPI",
+			outputs: [
+				"GA4 enhanced ecommerce / custom events live",
+				"GTM client-side + server-side containers deployed",
+				"Meta CAPI wired with deduplication",
+				"Google Ads enhanced + offline conversions live",
+				"Consent mode v2 + DPDP-compliant cookie consent layer",
+			],
+		},
+		{
+			label: "Week 7–10",
+			heading: "Automation builds",
+			outputs: [
+				"Welcome + onboarding flows live (email + WhatsApp where applicable)",
+				"Abandoned-cart + browse-abandonment flows live",
+				"Post-purchase + win-back flows live",
+				"CRM + sales-team automation triggers wired",
+			],
+		},
+		{
+			label: "Month 3+",
+			heading: "Compound + iterate",
+			outputs: [
+				"Quarterly attribution audit + signal-quality review",
+				"Lifecycle flow optimisation against revenue / repeat-purchase data",
+				"Warehouse + reverse-ETL pipelines extended (cohort-based audience activation)",
+				"Hand-off documentation maintained for in-house ops continuity",
+			],
+		},
+	],
+	whoFor: [
+		"Brands running paid acquisition at ≥₹3L/month media spend who need post-iOS attribution rigor",
+		"D2C brands with email + WhatsApp + SMS lifecycle that's under-built",
+		"SaaS brands wanting product-led automation + CRM-integrated lifecycle flows",
+		"Funded brands building the attribution + automation infrastructure for the next 12–24 months",
+	],
+	whoNotFor: [
+		"Brands at sub-₹50k/month media spend — attribution rigor matters less than just running the channel",
+		"Companies unwilling to wire server-side endpoints + own a tag-management workflow",
+		"Brands looking for a 'set up GA4 once and forget' engagement — this is ongoing infrastructure",
+	],
+	pricingTiers: [
+		{
+			name: "Starter",
+			monthlyBand: "₹2L–₹4L/mo",
+			mediaContext: "Fees only; tool subscriptions billed separately",
+			bestFor: "Brands wiring server-side attribution + 2–3 lifecycle flows for the first time",
+			includes: [
+				"GA4 + GTM client-side setup",
+				"Meta CAPI + Google Ads server-side conversions",
+				"2–3 lifecycle automation flows live",
+				"Looker Studio dashboard",
+			],
+		},
+		{
+			name: "Scale",
+			monthlyBand: "₹4L–₹10L/mo",
+			mediaContext: "Fees only; tool subscriptions billed separately",
+			bestFor: "Scaling brands running multi-channel paid + multi-channel lifecycle",
+			includes: [
+				"Everything in Starter",
+				"GTM server-side (Cloudflare Workers / Google Cloud Run)",
+				"Klaviyo + Wati + CRM integration",
+				"5–10 lifecycle flows live",
+				"Quarterly attribution + signal-quality audit",
+			],
+		},
+		{
+			name: "Enterprise",
+			monthlyBand: "₹10L+/mo",
+			mediaContext: "Multi-product / multi-region engagements",
+			bestFor: "Enterprise brands with warehouse + reverse-ETL + custom BI requirements",
+			includes: [
+				"Everything in Scale",
+				"Warehouse + reverse-ETL pipelines (Segment / RudderStack / Hightouch)",
+				"Custom BI + dashboarding",
+				"Cohort-based audience activation across paid + lifecycle",
+				"Embedded analytics + automation engineer",
+			],
+		},
+	],
+};
+
 // ─────────────────────── Registry + lookup ───────────────────────
 
 const SERVICE_DEPTH_BY_ID: Record<string, ServiceDepth> = {
@@ -1746,6 +2141,9 @@ const SERVICE_DEPTH_BY_ID: Record<string, ServiceDepth> = {
 	"email-marketing": EMAIL_MARKETING_DEPTH,
 	"ppc-management": PPC_MANAGEMENT_DEPTH,
 	"social-media-marketing": SOCIAL_MEDIA_MARKETING_DEPTH,
+	branding: BRANDING_DEPTH,
+	"website-development": WEBSITE_DEVELOPMENT_DEPTH,
+	"analytics-and-automations": ANALYTICS_AUTOMATIONS_DEPTH,
 };
 
 /**
