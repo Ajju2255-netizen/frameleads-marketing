@@ -1,128 +1,123 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import {
+	categorySlugs,
+	categoryMetaFor,
+	postsByCategorySlug,
+	POST_TYPE_LABELS,
+} from "@/lib/data/blogs";
+import { SchemaInjector } from "@/components/templates/SchemaInjector";
 
-import Link from "next/link"
-import Image from "next/image"
-import { allPosts } from "../../posts"
+export const revalidate = 86400;
 
-interface CategoryPageProps {
-  params: Promise<{ category: string }>
-}
-
-const categoryMeta: Record<string, { name: string; description: string }> = {
-  "performance-marketing": {
-    name: "Performance Marketing",
-    description: "Acquisition frameworks, media buying, and measurement",
-  },
-  seo: {
-    name: "SEO",
-    description: "Technical SEO, content strategy, and entity optimization",
-  },
-  "paid-social": {
-    name: "Paid Social",
-    description: "Creative strategy, hooks, and platform insights",
-  },
+interface PageProps {
+	params: Promise<{ category: string }>;
 }
 
 export function generateStaticParams() {
-  return [
-    { category: "performance-marketing" },
-    { category: "seo" },
-    { category: "paid-social" },
-  ]
+	return categorySlugs().map((category) => ({ category }));
 }
 
-export default async function BlogCategoryPage({ params }: CategoryPageProps) {
-  const { category } = await params
-  const meta = categoryMeta[category]
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+	const { category } = await params;
+	const meta = categoryMetaFor(category);
+	if (!meta) return { title: "Category Not Found | Frameleads" };
+	return {
+		title: `${meta.name} — Frameleads Blog`,
+		description: meta.description,
+		alternates: { canonical: `https://frameleads.com/blogs/categories/${category}` },
+		openGraph: {
+			title: `${meta.name} — Frameleads Blog`,
+			description: meta.description,
+			url: `https://frameleads.com/blogs/categories/${category}`,
+			type: "website",
+		},
+	};
+}
 
-  // Filter posts by categorySlug
-  const posts = (allPosts
-    .map(p => p.post)
-    .filter((p) => p && p.categorySlug === category)) as Array<{
-      slug: string;
-      title: string;
-      tag: string;
-      summary: string;
-      readTime: string;
-      banner?: string;
-    }>
+export default async function Page({ params }: PageProps) {
+	const { category } = await params;
+	const meta = categoryMetaFor(category);
+	if (!meta) notFound();
+	const posts = postsByCategorySlug(category);
 
-  if (!meta) {
-    return (
-      <main className="min-h-screen bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <h1 className="text-2xl font-bold text-[#2D2D2D]">Category not found</h1>
-          <p className="text-[#5A5A5A] mt-2">The category you are looking for does not exist.</p>
-          <Link
-            href="/blogs/categories"
-            className="text-[#FF6B35] font-semibold inline-block mt-4"
-          >
-            Back to categories
-          </Link>
-        </div>
-      </main>
-    )
-  }
+	const breadcrumbSchema = {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{ "@type": "ListItem", position: 1, name: "Home", item: "https://frameleads.com" },
+			{ "@type": "ListItem", position: 2, name: "Blog", item: "https://frameleads.com/blogs" },
+			{ "@type": "ListItem", position: 3, name: meta.name, item: `https://frameleads.com/blogs/categories/${category}` },
+		],
+	};
 
-  return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-b from-[#FFF6F2] to-white border-b border-[#FFE4D6]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-          <p className="text-[#FF6B35] font-semibold mb-3">Category</p>
-          <h1 className="text-3xl md:text-5xl font-bold text-[#2D2D2D] leading-tight">
-            {meta.name}
-          </h1>
-          <p className="text-[#5A5A5A] mt-4 text-base max-w-2xl">{meta.description}</p>
-        </div>
-      </section>
+	return (
+		<>
+			<SchemaInjector schema={breadcrumbSchema} />
+			<main id="main">
+				<header className="relative overflow-hidden border-b border-[#FFE4D6]">
+					<div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_320px_at_75%_-30%,rgba(255,107,53,0.2),transparent_60%)]" />
+					<div className="relative mx-auto max-w-5xl px-6 py-12 sm:py-16">
+						<nav aria-label="Breadcrumb" className="mb-5 text-[13px] text-[#5A5A5A]">
+							<ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+								<li>
+									<Link href="/" className="hover:text-[#FF6B35]">Home</Link>
+								</li>
+								<li aria-hidden className="text-[#FFE4D6]">/</li>
+								<li>
+									<Link href="/blogs" className="hover:text-[#FF6B35]">Blog</Link>
+								</li>
+								<li aria-hidden className="text-[#FFE4D6]">/</li>
+								<li className="text-[#2D3748]">{meta.name}</li>
+							</ol>
+						</nav>
+						<div className="inline-flex items-center gap-2 rounded-full border border-[#FFE4D6] bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B35]">
+							<span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6B35]" />
+							Category · {posts.length} post{posts.length === 1 ? "" : "s"}
+						</div>
+						<h1 className="mt-4 font-poppins text-[34px] sm:text-[46px] font-bold leading-[1.05] tracking-tight text-[#2D3748]">
+							{meta.name}
+						</h1>
+						<p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-[#5A5A5A]">
+							{meta.description}
+						</p>
+					</div>
+				</header>
 
-      <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {posts.length === 0 ? (
-            <p className="text-[#5A5A5A]">No posts yet in this category.</p>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <article
-                  key={post.slug}
-                  className="group border border-[#FFE4D6] rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#FF6B35]/10 transition-all bg-white"
-                >
-                  <Link href={`/blogs/${post.slug}`} className="relative aspect-video w-full overflow-hidden block">
-                    <Image
-                      src={post.banner || "/blogs/placeholder.png"}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </Link>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 text-xs text-[#5A5A5A]">
-                      <span>{post.readTime}</span>
-                    </div>
-                    <h2 className="mt-3 text-xl font-bold text-[#2D2D2D] group-hover:text-[#FF6B35] transition-colors">
-                      <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
-                    </h2>
-                    <p className="mt-2 text-[#5A5A5A] text-sm leading-relaxed">{post.summary}</p>
-                    <div className="mt-4">
-                      <Link
-                        href={`/blogs/${post.slug}`}
-                        className="text-[#FF6B35] hover:text-[#FF8A50] font-semibold text-sm"
-                      >
-                        Read article →
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
-          <div className="mt-10">
-            <Link href="/blogs" className="text-[#FF6B35] font-semibold">
-              ← Back to all blogs
-            </Link>
-          </div>
-        </div>
-      </section>
-
-    </main >
-  )
+				<section className="mx-auto max-w-5xl px-6 py-10">
+					{posts.length === 0 ? (
+						<p className="text-[#5A5A5A]">No posts yet in this category.</p>
+					) : (
+						<ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+							{posts.map((p) => (
+								<li key={p.slug} className="rounded-2xl border border-[#FFE4D6] bg-white p-5 shadow-[0_1px_8px_rgba(45,55,72,0.04)] transition-shadow hover:shadow-[0_4px_16px_rgba(45,55,72,0.08)]">
+									<Link href={`/blogs/${p.slug}`} className="block">
+										<div className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#FF6B35]">
+											{POST_TYPE_LABELS[p.type]}
+										</div>
+										<h2 className="mt-2 font-poppins text-[15.5px] font-semibold leading-snug text-[#2D3748]">
+											{p.title}
+										</h2>
+										<p className="mt-2 text-[12.5px] leading-relaxed text-[#5A5A5A] line-clamp-3">
+											{p.description}
+										</p>
+										<div className="mt-3 flex items-center justify-between">
+											<span className="text-[12px] text-[#5A5A5A]">{p.readTime}</span>
+											<span className="text-[12px] font-semibold text-[#FF6B35]">Read →</span>
+										</div>
+									</Link>
+								</li>
+							))}
+						</ul>
+					)}
+					<div className="mt-10">
+						<Link href="/blogs" className="text-[#FF6B35] font-semibold">
+							← Back to all blogs
+						</Link>
+					</div>
+				</section>
+			</main>
+		</>
+	);
 }

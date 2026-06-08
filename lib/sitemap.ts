@@ -21,7 +21,9 @@ import { glossary } from "./data/glossary";
 import { comparisons } from "./data/comparisons";
 import { questions } from "./data/questions";
 import { subServices } from "./data/sub-services";
-import { BLOG_POSTS } from "./data/blogs";
+import { BLOG_POSTS, allBlogPosts } from "./data/blogs";
+import { pillarSlugs } from "./data/pillars";
+import { allPosts as legacyAllPosts } from "@/app/blogs/posts";
 import { allMoneyPages } from "./data/money-pages";
 
 export const SITE_URL = "https://frameleads.com";
@@ -720,18 +722,37 @@ export const SEGMENTS: SitemapSegment[] = [
 		id: "blog",
 		tier: 6,
 		name: "Blog",
-		description: "Operator-grade marketing playbooks reviewed quarterly.",
+		description: "Operator-grade marketing playbooks reviewed quarterly + programmatic city/service playbooks.",
 		urls: () => {
 			const hub = withDate([
 				{ slug: "blogs", changefreq: "weekly", priority: 0.85 },
 			]);
-			const posts = BLOG_POSTS.map((p) => ({
+			const pillarUrls = pillarSlugs().map((slug) => ({
+				loc: `${SITE_URL}/blogs/pillars/${slug}`,
+				lastmod: today(),
+				changefreq: "monthly" as const,
+				priority: 0.9,
+			}));
+			const structuredPosts = allBlogPosts().map((p) => ({
 				loc: `${SITE_URL}/blogs/${p.slug}`,
 				lastmod: p.dateModified ?? p.datePublished,
 				changefreq: "monthly" as const,
 				priority: 0.8,
 			}));
-			return [...hub, ...posts];
+			// Legacy posts at app/blogs/posts/*.tsx — surface alongside structured.
+			// Dedup against structured slugs (some legacy were ported in prior sessions).
+			const structuredSlugSet = new Set(allBlogPosts().map((p) => p.slug));
+			const legacyPosts = legacyAllPosts
+				.filter((p) => p && p.post && p.post.slug)
+				.map((p) => p.post.slug.trim())
+				.filter((slug) => !structuredSlugSet.has(slug))
+				.map((slug) => ({
+					loc: `${SITE_URL}/blogs/${slug}`,
+					lastmod: today(),
+					changefreq: "monthly" as const,
+					priority: 0.75,
+				}));
+			return [...hub, ...pillarUrls, ...structuredPosts, ...legacyPosts];
 		},
 	},
 	{

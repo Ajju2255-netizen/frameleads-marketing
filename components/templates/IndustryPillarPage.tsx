@@ -6,6 +6,7 @@ import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { RelatedCells, type CellLink } from "./RelatedCells";
 import { CTABlock } from "./CTABlock";
 import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
+import { LatestFromTheFieldBlock } from "./LatestFromTheFieldBlock";
 import { AuthorCard } from "./AuthorCard";
 import { SchemaInjector } from "./SchemaInjector";
 import { ReferencesBlock } from "./ReferencesBlock";
@@ -264,6 +265,12 @@ export function IndustryPillarPage({ industry, url }: Props) {
 					links={geos}
 				/>
 				<FAQBlock items={faqs} />
+				<LatestFromTheFieldBlock
+					industryId={industry.id}
+					heading={`Latest ${industry.label.toLowerCase()} marketing playbooks`}
+					eyebrow="Operator notes"
+					limit={3}
+				/>
 				<ReferencesBlock references={referencesFor({ industryId: industry.id })} />
 				<TimestampStamp
 					updatedAt={dateModified}

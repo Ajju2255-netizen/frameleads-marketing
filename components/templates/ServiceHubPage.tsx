@@ -22,6 +22,7 @@ import { ServiceDepthSection } from "./ServiceDepthSection";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
 import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
+import { LatestFromTheFieldBlock } from "./LatestFromTheFieldBlock";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -310,6 +311,13 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 				/>
 
 				<FAQBlock items={faqs} />
+
+				<LatestFromTheFieldBlock
+					serviceId={service.id}
+					heading={`Latest ${lc} playbooks from the field`}
+					eyebrow="Operator notes"
+					limit={3}
+				/>
 
 				<ReferencesBlock references={referencesFor({ serviceId: service.id })} />
 

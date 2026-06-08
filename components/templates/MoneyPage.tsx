@@ -38,6 +38,7 @@ import { ServiceDepthSection } from "./ServiceDepthSection";
 import { FAQBlock, type FAQItem } from "./FAQBlock";
 import { CTABlock } from "./CTABlock";
 import { EmbeddedLeadForm } from "./EmbeddedLeadForm";
+import { LatestFromTheFieldBlock } from "./LatestFromTheFieldBlock";
 import { ReferencesBlock } from "./ReferencesBlock";
 import { referencesFor } from "@/lib/data/references";
 import { TimestampStamp } from "./TimestampStamp";
@@ -508,6 +509,14 @@ export function MoneyPage(props: Props) {
 				/>
 
 				<FAQBlock items={faqs} />
+
+				<LatestFromTheFieldBlock
+					cityTag={geo.id}
+					serviceId={service?.id ?? money.composite?.serviceIds[0]}
+					heading={`Operator notes from ${geo.name}`}
+					eyebrow="Latest from the field"
+					limit={2}
+				/>
 
 				<ReferencesBlock
 					references={referencesFor({
