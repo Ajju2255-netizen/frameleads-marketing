@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import FloatingNotifications from "../components/floating-notifications"
 import Link from "next/link"
@@ -48,7 +48,7 @@ import {
   Sparkles
 } from "lucide-react"
 
-export default function FreeMarketingAuditPage() {
+function FreeMarketingAuditContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const searchParams = useSearchParams()
   const sourceFromUrl = parseSourceFromUrl(searchParams.get("cta"))
@@ -363,5 +363,13 @@ export default function FreeMarketingAuditPage() {
 
       
     </div>
+  )
+}
+
+export default function FreeMarketingAuditPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <FreeMarketingAuditContent />
+    </Suspense>
   )
 }
