@@ -254,12 +254,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Google Ads Tag (gtag.js) */}
+      {/* Google Ads Tag (gtag.js) — lazyOnload defers until browser is idle,
+          keeping main thread free for hydration + above-the-fold render. */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-17423294527"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-ads-gtag" strategy="afterInteractive">
+      <Script id="google-ads-gtag" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -267,8 +268,8 @@ export default function RootLayout({
           gtag('config', 'AW-17423294527');
         `}
       </Script>
-      {/* Microsoft Clarity */}
-      <Script id="microsoft-clarity" strategy="afterInteractive">
+      {/* Microsoft Clarity — lazyOnload, deferred until idle */}
+      <Script id="microsoft-clarity" strategy="lazyOnload">
         {`
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
