@@ -8,6 +8,13 @@ compatibility_date = "2025-04-01"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 
 account_id = "19650c4ca8e6e4ed2699a0b288206b03"
+workers_dev = true
+
+# Custom-domain routes — zone added to Cloudflare 2026-06-10
+routes = [
+  { pattern = "frameleads.com", custom_domain = true, zone_name = "frameleads.com" },
+  { pattern = "www.frameleads.com", custom_domain = true, zone_name = "frameleads.com" }
+]
 
 # ─────────────────────────────────────────────────────────────────────────
 # Static assets (CSS, JS, images bundled by Next/OpenNext)
