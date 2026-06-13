@@ -113,13 +113,17 @@ function scanDirectory(dir, basePath = '') {
         if (CONFIG.excludeDirs.includes(item)) {
           continue;
         }
-        
+        // Skip Next.js dynamic segments like [slug], [topic] — they aren't real URLs
+        if (item.startsWith('[')) {
+          continue;
+        }
+
         // Recursively scan subdirectories
         const subPages = scanDirectory(fullPath, relativePath);
         pages.push(...subPages);
       } else if (stat.isFile() && item === 'page.tsx') {
         // Found a page file
-        const route = relativePath.replace(/\/page\.tsx$/, '');
+        const route = relativePath.replace(/(^|\/)page\.tsx$/, '');
         if (route) {
           pages.push({
             path: `/${route}`,
