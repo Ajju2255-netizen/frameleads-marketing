@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 import Link from "next/link"
 import { ArrowRight, ExternalLink, Search, MapPin, Building2, FileText, Users, Globe, Target, Zap, BarChart3, Mail, Phone, Calendar, Award, BookOpen, Calculator, Shield, Heart, GraduationCap, Palette, Crown, Euro, MessageCircle, ShoppingBag, BarChart, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, ExternalLink as ExternalLinkIcon, Brain, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, LineChart, Percent, Calculator as CalcIcon, BookOpen as BookIcon, FileText as FileIcon, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Trophy, Medal, Home, Coffee, Code, Database, Server, Wrench, Cpu, HardDrive, Network, Terminal, GitBranch, ShieldCheck, Zap as ZapIcon } from "lucide-react"
 
@@ -12,14 +14,9 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2026-03-09T14:43:09.805Z
+  // Auto-generated page data - Updated: 2026-06-10T16:33:05.322Z
   const pageData = {
   "services": [
-    {
-      "path": "/Social-media-marketing",
-      "name": "Social Media Marketing",
-      "description": "Social Media Marketing - Frameleads digital marketing services"
-    },
     {
       "path": "/analytics-and-automations",
       "name": "Analytics And Automations",
@@ -51,16 +48,6 @@ export default function SitemapPage() {
       "description": "Email Marketing And Automation Services - Frameleads digital marketing services"
     },
     {
-      "path": "/perforamance-marketing",
-      "name": "Perforamance Marketing",
-      "description": "Perforamance Marketing - Frameleads digital marketing services"
-    },
-    {
-      "path": "/ppc management",
-      "name": "Ppc management",
-      "description": "Ppc management - Frameleads digital marketing services"
-    },
-    {
       "path": "/seo-services",
       "name": "Seo Services",
       "description": "Seo Services - Frameleads digital marketing services"
@@ -77,11 +64,6 @@ export default function SitemapPage() {
     }
   ],
   "advertisingPlatforms": [
-    {
-      "path": "/Meta-ads",
-      "name": "Meta Ads",
-      "description": "Meta advertising management"
-    },
     {
       "path": "/baidu-ads",
       "name": "Baidu Ads",
@@ -266,14 +248,154 @@ export default function SitemapPage() {
       "description": "Get a free marketing audit"
     },
     {
+      "path": "/resources/benchmarks",
+      "name": "Resources - Benchmarks",
+      "description": "Resources - Benchmarks - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/calculators",
+      "name": "Resources - Calculators",
+      "description": "Resources - Calculators - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/comparisons",
+      "name": "Resources - Comparisons",
+      "description": "Resources - Comparisons - Frameleads digital marketing services"
+    },
+    {
       "path": "/resources/digital-marketing-guide",
       "name": "Resources - Digital Marketing Guide",
       "description": "Comprehensive digital marketing guide"
     },
     {
+      "path": "/resources/glossary",
+      "name": "Resources - Glossary",
+      "description": "Resources - Glossary - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/guides/[slug]",
+      "name": "Resources - Guides - [slug]",
+      "description": "Resources - Guides - [slug] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/guides",
+      "name": "Resources - Guides",
+      "description": "Resources - Guides - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/playbooks",
+      "name": "Resources - Playbooks",
+      "description": "Resources - Playbooks - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/questions",
+      "name": "Resources - Questions",
+      "description": "Resources - Questions - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/reports",
+      "name": "Resources - Reports",
+      "description": "Resources - Reports - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources/templates",
+      "name": "Resources - Templates",
+      "description": "Resources - Templates - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/ad-spend-planner",
+      "name": "Tools - Ad Spend Planner",
+      "description": "Tools - Ad Spend Planner - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/aov-uplift-calculator",
+      "name": "Tools - Aov Uplift Calculator",
+      "description": "Tools - Aov Uplift Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/burn-runway-calculator",
+      "name": "Tools - Burn Runway Calculator",
+      "description": "Tools - Burn Runway Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/cac-calculator",
+      "name": "Tools - Cac Calculator",
+      "description": "Tools - Cac Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/cac-payback-calculator",
+      "name": "Tools - Cac Payback Calculator",
+      "description": "Tools - Cac Payback Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/channel-mix-calculator",
+      "name": "Tools - Channel Mix Calculator",
+      "description": "Tools - Channel Mix Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/conversion-rate-calculator",
+      "name": "Tools - Conversion Rate Calculator",
+      "description": "Tools - Conversion Rate Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/diwali-budget-planner",
+      "name": "Tools - Diwali Budget Planner",
+      "description": "Tools - Diwali Budget Planner - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/email-list-value-calculator",
+      "name": "Tools - Email List Value Calculator",
+      "description": "Tools - Email List Value Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/influencer-roi-calculator",
+      "name": "Tools - Influencer Roi Calculator",
+      "description": "Tools - Influencer Roi Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/ltv-cac-ratio-calculator",
+      "name": "Tools - Ltv Cac Ratio Calculator",
+      "description": "Tools - Ltv Cac Ratio Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/ltv-calculator",
+      "name": "Tools - Ltv Calculator",
+      "description": "Tools - Ltv Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/marketing-budget-calculator",
+      "name": "Tools - Marketing Budget Calculator",
+      "description": "Tools - Marketing Budget Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/roas-calculator",
+      "name": "Tools - Roas Calculator",
+      "description": "Tools - Roas Calculator - Frameleads digital marketing services"
+    },
+    {
       "path": "/tools/roi-calculator",
       "name": "Tools - Roi Calculator",
       "description": "Calculate your marketing ROI"
+    },
+    {
+      "path": "/tools/rto-impact-calculator",
+      "name": "Tools - Rto Impact Calculator",
+      "description": "Tools - Rto Impact Calculator - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/saas-pipeline-projector",
+      "name": "Tools - Saas Pipeline Projector",
+      "description": "Tools - Saas Pipeline Projector - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/seo-traffic-projector",
+      "name": "Tools - Seo Traffic Projector",
+      "description": "Tools - Seo Traffic Projector - Frameleads digital marketing services"
+    },
+    {
+      "path": "/tools/whatsapp-roi-calculator",
+      "name": "Tools - Whatsapp Roi Calculator",
+      "description": "Tools - Whatsapp Roi Calculator - Frameleads digital marketing services"
     }
   ],
   "academy": [
@@ -322,6 +444,41 @@ export default function SitemapPage() {
   ],
   "main": [
     {
+      "path": "/[slug]/[sub]",
+      "name": "[slug] - [sub]",
+      "description": "[slug] - [sub] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/[slug]",
+      "name": "[slug]",
+      "description": "[slug] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/automotive-marketing",
+      "name": "Automotive Marketing",
+      "description": "Automotive Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/best/[topic]",
+      "name": "Best - [topic]",
+      "description": "Best - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/best",
+      "name": "Best",
+      "description": "Best - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs/[slug]",
+      "name": "Blogs - [slug]",
+      "description": "Blogs - [slug] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs/categories/[category]",
+      "name": "Blogs - Categories - [category]",
+      "description": "Blogs - Categories - [category] - Frameleads digital marketing services"
+    },
+    {
       "path": "/blogs/categories",
       "name": "Blogs - Categories",
       "description": "Blogs - Categories - Frameleads digital marketing services"
@@ -330,6 +487,16 @@ export default function SitemapPage() {
       "path": "/blogs",
       "name": "Blogs",
       "description": "Blogs - Frameleads digital marketing services"
+    },
+    {
+      "path": "/blogs/pillars/[slug]",
+      "name": "Blogs - Pillars - [slug]",
+      "description": "Blogs - Pillars - [slug] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/case-studies",
+      "name": "Case Studies",
+      "description": "Case Studies - Frameleads digital marketing services"
     },
     {
       "path": "/contact",
@@ -342,9 +509,84 @@ export default function SitemapPage() {
       "description": "Ecommerce - Frameleads digital marketing services"
     },
     {
+      "path": "/editorial-policy",
+      "name": "Editorial Policy",
+      "description": "Editorial Policy - Frameleads digital marketing services"
+    },
+    {
+      "path": "/education-and-training",
+      "name": "Education And Training",
+      "description": "Education And Training - Frameleads digital marketing services"
+    },
+    {
+      "path": "/faq",
+      "name": "Faq",
+      "description": "Faq - Frameleads digital marketing services"
+    },
+    {
       "path": "/financial-services",
       "name": "Financial Services",
       "description": "Financial Services - Frameleads digital marketing services"
+    },
+    {
+      "path": "/food-beverage-marketing",
+      "name": "Food Beverage Marketing",
+      "description": "Food Beverage Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/frameleads-growth-system",
+      "name": "Frameleads Growth System",
+      "description": "Frameleads Growth System - Frameleads digital marketing services"
+    },
+    {
+      "path": "/gaming-marketing",
+      "name": "Gaming Marketing",
+      "description": "Gaming Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/glossary/[term]",
+      "name": "Glossary - [term]",
+      "description": "Glossary - [term] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/glossary/cac",
+      "name": "Glossary - Cac",
+      "description": "Glossary - Cac - Frameleads digital marketing services"
+    },
+    {
+      "path": "/glossary",
+      "name": "Glossary",
+      "description": "Glossary - Frameleads digital marketing services"
+    },
+    {
+      "path": "/glossary/roas",
+      "name": "Glossary - Roas",
+      "description": "Glossary - Roas - Frameleads digital marketing services"
+    },
+    {
+      "path": "/how-much/[topic]",
+      "name": "How Much - [topic]",
+      "description": "How Much - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/how-much",
+      "name": "How Much",
+      "description": "How Much - Frameleads digital marketing services"
+    },
+    {
+      "path": "/how-to/[topic]",
+      "name": "How To - [topic]",
+      "description": "How To - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/how-to",
+      "name": "How To",
+      "description": "How To - Frameleads digital marketing services"
+    },
+    {
+      "path": "/how-we-audit",
+      "name": "How We Audit",
+      "description": "How We Audit - Frameleads digital marketing services"
     },
     {
       "path": "/industries",
@@ -352,9 +594,29 @@ export default function SitemapPage() {
       "description": "Industries we serve"
     },
     {
+      "path": "/is-it/[topic]",
+      "name": "Is It - [topic]",
+      "description": "Is It - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/is-it",
+      "name": "Is It",
+      "description": "Is It - Frameleads digital marketing services"
+    },
+    {
       "path": "/locations",
       "name": "Locations",
       "description": "All our global locations"
+    },
+    {
+      "path": "/manufacturing-and-industrial",
+      "name": "Manufacturing And Industrial",
+      "description": "Manufacturing And Industrial - Frameleads digital marketing services"
+    },
+    {
+      "path": "/meta-ads",
+      "name": "Meta Ads",
+      "description": "meta advertising management"
     },
     {
       "path": "/page.tsx",
@@ -362,9 +624,59 @@ export default function SitemapPage() {
       "description": "Page.tsx - Frameleads digital marketing services"
     },
     {
+      "path": "/performance-marketing",
+      "name": "Performance Marketing",
+      "description": "Performance Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/performance-marketing-company-in-bangalore",
+      "name": "Performance Marketing Company In Bangalore",
+      "description": "Performance Marketing Company In Bangalore - Frameleads digital marketing services"
+    },
+    {
+      "path": "/performance-marketing-company-in-dubai",
+      "name": "Performance Marketing Company In Dubai",
+      "description": "Performance Marketing Company In Dubai - Frameleads digital marketing services"
+    },
+    {
+      "path": "/performance-marketing-company-in-mumbai",
+      "name": "Performance Marketing Company In Mumbai",
+      "description": "Performance Marketing Company In Mumbai - Frameleads digital marketing services"
+    },
+    {
       "path": "/ppc-management",
       "name": "Ppc Management",
       "description": "Ppc Management - Frameleads digital marketing services"
+    },
+    {
+      "path": "/professional-services-marketing",
+      "name": "Professional Services Marketing",
+      "description": "Professional Services Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/reports/cac-benchmarks-india-2026",
+      "name": "Reports - Cac Benchmarks India 2026",
+      "description": "Reports - Cac Benchmarks India 2026 - Frameleads digital marketing services"
+    },
+    {
+      "path": "/reports",
+      "name": "Reports",
+      "description": "Reports - Frameleads digital marketing services"
+    },
+    {
+      "path": "/resources",
+      "name": "Resources",
+      "description": "Resources - Frameleads digital marketing services"
+    },
+    {
+      "path": "/seo-company-in-dubai",
+      "name": "Seo Company In Dubai",
+      "description": "Seo Company In Dubai - Frameleads digital marketing services"
+    },
+    {
+      "path": "/seo-company-in-mumbai",
+      "name": "Seo Company In Mumbai",
+      "description": "Seo Company In Mumbai - Frameleads digital marketing services"
     },
     {
       "path": "/sitemap",
@@ -372,9 +684,49 @@ export default function SitemapPage() {
       "description": "Complete website sitemap and navigation"
     },
     {
+      "path": "/social-media-marketing",
+      "name": "Social Media Marketing",
+      "description": "Social Media Marketing - Frameleads digital marketing services"
+    },
+    {
       "path": "/technology-and-saas",
       "name": "Technology And Saas",
       "description": "Technology And Saas - Frameleads digital marketing services"
+    },
+    {
+      "path": "/travel-hospitality-marketing",
+      "name": "Travel Hospitality Marketing",
+      "description": "Travel Hospitality Marketing - Frameleads digital marketing services"
+    },
+    {
+      "path": "/vs/[comparison]",
+      "name": "Vs - [comparison]",
+      "description": "Vs - [comparison] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/vs",
+      "name": "Vs",
+      "description": "Vs - Frameleads digital marketing services"
+    },
+    {
+      "path": "/what-is/[topic]",
+      "name": "What Is - [topic]",
+      "description": "What Is - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/what-is",
+      "name": "What Is",
+      "description": "What Is - Frameleads digital marketing services"
+    },
+    {
+      "path": "/why/[topic]",
+      "name": "Why - [topic]",
+      "description": "Why - [topic] - Frameleads digital marketing services"
+    },
+    {
+      "path": "/why",
+      "name": "Why",
+      "description": "Why - Frameleads digital marketing services"
     }
   ]
 };
@@ -393,6 +745,7 @@ export default function SitemapPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
+      <Navbar />
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
@@ -413,7 +766,7 @@ export default function SitemapPage() {
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
             <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-              🔄 Auto-generated • Last updated: 3/9/2026
+              🔄 Auto-generated • Last updated: 10/6/2026
             </div>
           </motion.div>
         </div>
@@ -535,6 +888,7 @@ export default function SitemapPage() {
         </div>
       </section>
 
+      <Footer />
     </div>
   )
 }
