@@ -14,7 +14,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2026-06-10T16:33:05.322Z
+  // Auto-generated page data - Updated: 2026-06-13T07:55:01.279Z
   const pageData = {
   "services": [
     {
@@ -273,11 +273,6 @@ export default function SitemapPage() {
       "description": "Resources - Glossary - Frameleads digital marketing services"
     },
     {
-      "path": "/resources/guides/[slug]",
-      "name": "Resources - Guides - [slug]",
-      "description": "Resources - Guides - [slug] - Frameleads digital marketing services"
-    },
-    {
       "path": "/resources/guides",
       "name": "Resources - Guides",
       "description": "Resources - Guides - Frameleads digital marketing services"
@@ -444,39 +439,14 @@ export default function SitemapPage() {
   ],
   "main": [
     {
-      "path": "/[slug]/[sub]",
-      "name": "[slug] - [sub]",
-      "description": "[slug] - [sub] - Frameleads digital marketing services"
-    },
-    {
-      "path": "/[slug]",
-      "name": "[slug]",
-      "description": "[slug] - Frameleads digital marketing services"
-    },
-    {
       "path": "/automotive-marketing",
       "name": "Automotive Marketing",
       "description": "Automotive Marketing - Frameleads digital marketing services"
     },
     {
-      "path": "/best/[topic]",
-      "name": "Best - [topic]",
-      "description": "Best - [topic] - Frameleads digital marketing services"
-    },
-    {
       "path": "/best",
       "name": "Best",
       "description": "Best - Frameleads digital marketing services"
-    },
-    {
-      "path": "/blogs/[slug]",
-      "name": "Blogs - [slug]",
-      "description": "Blogs - [slug] - Frameleads digital marketing services"
-    },
-    {
-      "path": "/blogs/categories/[category]",
-      "name": "Blogs - Categories - [category]",
-      "description": "Blogs - Categories - [category] - Frameleads digital marketing services"
     },
     {
       "path": "/blogs/categories",
@@ -487,11 +457,6 @@ export default function SitemapPage() {
       "path": "/blogs",
       "name": "Blogs",
       "description": "Blogs - Frameleads digital marketing services"
-    },
-    {
-      "path": "/blogs/pillars/[slug]",
-      "name": "Blogs - Pillars - [slug]",
-      "description": "Blogs - Pillars - [slug] - Frameleads digital marketing services"
     },
     {
       "path": "/case-studies",
@@ -544,11 +509,6 @@ export default function SitemapPage() {
       "description": "Gaming Marketing - Frameleads digital marketing services"
     },
     {
-      "path": "/glossary/[term]",
-      "name": "Glossary - [term]",
-      "description": "Glossary - [term] - Frameleads digital marketing services"
-    },
-    {
       "path": "/glossary/cac",
       "name": "Glossary - Cac",
       "description": "Glossary - Cac - Frameleads digital marketing services"
@@ -564,19 +524,9 @@ export default function SitemapPage() {
       "description": "Glossary - Roas - Frameleads digital marketing services"
     },
     {
-      "path": "/how-much/[topic]",
-      "name": "How Much - [topic]",
-      "description": "How Much - [topic] - Frameleads digital marketing services"
-    },
-    {
       "path": "/how-much",
       "name": "How Much",
       "description": "How Much - Frameleads digital marketing services"
-    },
-    {
-      "path": "/how-to/[topic]",
-      "name": "How To - [topic]",
-      "description": "How To - [topic] - Frameleads digital marketing services"
     },
     {
       "path": "/how-to",
@@ -592,11 +542,6 @@ export default function SitemapPage() {
       "path": "/industries",
       "name": "Industries",
       "description": "Industries we serve"
-    },
-    {
-      "path": "/is-it/[topic]",
-      "name": "Is It - [topic]",
-      "description": "Is It - [topic] - Frameleads digital marketing services"
     },
     {
       "path": "/is-it",
@@ -617,11 +562,6 @@ export default function SitemapPage() {
       "path": "/meta-ads",
       "name": "Meta Ads",
       "description": "meta advertising management"
-    },
-    {
-      "path": "/page.tsx",
-      "name": "Page.tsx",
-      "description": "Page.tsx - Frameleads digital marketing services"
     },
     {
       "path": "/performance-marketing",
@@ -699,29 +639,14 @@ export default function SitemapPage() {
       "description": "Travel Hospitality Marketing - Frameleads digital marketing services"
     },
     {
-      "path": "/vs/[comparison]",
-      "name": "Vs - [comparison]",
-      "description": "Vs - [comparison] - Frameleads digital marketing services"
-    },
-    {
       "path": "/vs",
       "name": "Vs",
       "description": "Vs - Frameleads digital marketing services"
     },
     {
-      "path": "/what-is/[topic]",
-      "name": "What Is - [topic]",
-      "description": "What Is - [topic] - Frameleads digital marketing services"
-    },
-    {
       "path": "/what-is",
       "name": "What Is",
       "description": "What Is - Frameleads digital marketing services"
-    },
-    {
-      "path": "/why/[topic]",
-      "name": "Why - [topic]",
-      "description": "Why - [topic] - Frameleads digital marketing services"
     },
     {
       "path": "/why",
@@ -766,7 +691,7 @@ export default function SitemapPage() {
               Navigate through all our pages and find exactly what you're looking for. Our comprehensive sitemap helps you discover our services, locations, and resources.
             </p>
             <div className="inline-block bg-gradient-to-r from-[#FF6B35]/10 to-[#FF8A50]/10 backdrop-blur-xl text-[#FF6B35] px-4 py-2 rounded-full text-sm font-medium border border-[#FF6B35]/20">
-              🔄 Auto-generated • Last updated: 10/6/2026
+              🔄 Auto-generated • Last updated: 13/6/2026
             </div>
           </motion.div>
         </div>
