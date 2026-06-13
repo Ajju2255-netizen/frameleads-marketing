@@ -6,7 +6,7 @@ import { MessageCircle, Sparkles, X } from "lucide-react"
 import { trackContactClick } from "@/lib/analytics"
 
 const WHATSAPP_INTENT =
-  "https://wa.me/916362821368?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
+  "https://wa.me/919901450425?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
 
 const SHOW_AFTER_SCROLL_PCT = 0.3
 const DISMISS_KEY = "frameleads:sticky-cta:dismissed-at"

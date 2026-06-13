@@ -390,7 +390,7 @@ export default function ReturnPolicyPage() {
               <div className="text-center md:text-left">
                 <h3 className="text-green-400 font-semibold mb-4">Contact</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>+91 6362821368</p>
+                  <p>+91 9901450425</p>
                   <p>ajsal@frameleads.com</p>
                   <p>cloe@frameleads.com</p>
                 </div>

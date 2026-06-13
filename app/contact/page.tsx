@@ -21,7 +21,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 6362821368", "Mon-Fri: 9AM-6PM"],
+      details: ["+91 9901450425", "Mon-Fri: 9AM-6PM"],
     },
     {
       icon: Mail,

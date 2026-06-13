@@ -155,7 +155,7 @@ export function Tier3Page({ service, geo, url }: Props) {
 			name: `Frameleads — ${service.label} in ${geo.name}`,
 			areaServed: { "@type": "City", name: geo.name },
 			url,
-			telephone: "+91-6362821368",
+			telephone: "+91-9901450425",
 			parentOrganization: {
 				"@type": "Organization",
 				name: "Frameleads",

@@ -22,7 +22,7 @@ export default function ContactCTA({
   secondaryButtonText = "Schedule Call",
   primaryButtonHref = "/contact",
   secondaryButtonHref = "/contact",
-  phone = "+91 6362821368",
+  phone = "+91 9901450425",
   email = "ajsal@frameleads.com",
   hours = "Mon-Fri: 9AM-6PM",
   className = "",

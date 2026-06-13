@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     'Shark Tank India',
     'Frameleads Growth System',
   ],
-  authors: [{ name: 'Ajsal Abbas', url: SITE_URL + '/our-team' }],
-  creator: 'Ajsal Abbas',
+  authors: [{ name: 'Frameleads', url: SITE_URL + '/about' }],
+  creator: 'Frameleads',
   publisher: 'Frameleads',
   icons: {
     icon: '/favicon.png',
@@ -111,33 +111,6 @@ const OPTIONAL_ORG_SAMEAS = [
   process.env.NEXT_PUBLIC_ENTITY_GLASSDOOR,
 ].filter((u): u is string => typeof u === "string" && u.length > 0);
 
-const FOUNDER_PERSON = {
-  "@type": "Person",
-  "@id": `${SITE_URL}/our-team#ajsal-abbas`,
-  name: "Ajsal Abbas",
-  jobTitle: "Founder & CEO",
-  url: `${SITE_URL}/our-team`,
-  worksFor: { "@id": `${SITE_URL}#organization` },
-  // Award proof — Shark Tank India founder appearance is the strongest
-  // verifiable founder credential and Google's E-E-A-T signals reward it
-  // when surfaced consistently in schema.
-  award: "Shark Tank India — founder appearance (Sony LIV)",
-  knowsAbout: [
-    "Performance Marketing",
-    "Search Engine Optimization",
-    "Conversion Rate Optimization",
-    "D2C Unit Economics",
-    "B2B SaaS Pipeline",
-    "AI Overview Optimization",
-  ],
-  sameAs: [
-    "https://www.linkedin.com/in/ajsalabbas/",
-    "https://www.youtube.com/@ajsalabbas8093",
-    ...(process.env.NEXT_PUBLIC_FOUNDER_TWITTER ? [process.env.NEXT_PUBLIC_FOUNDER_TWITTER] : []),
-    ...(process.env.NEXT_PUBLIC_FOUNDER_WIKIDATA ? [process.env.NEXT_PUBLIC_FOUNDER_WIKIDATA] : []),
-  ],
-} as const
-
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": ["Organization", "ProfessionalService"],
@@ -150,15 +123,10 @@ const ORGANIZATION_SCHEMA = {
   image: `${SITE_URL}/og-default.png`,
   slogan: "Frameleads Growth System™ — operator-grade performance + organic for India & global markets.",
   description:
-    "Performance-marketing agency for Indian SMBs and global SaaS/D2C brands. SEO, paid acquisition, content, CRO, analytics, and lifecycle programs built on the Frameleads Growth System™. Founder appeared on Shark Tank India; ~200 lifetime engagements; ~₹9Cr in attributed client pipeline tracked.",
+    "Performance-marketing agency for Indian SMBs and global SaaS/D2C brands. SEO, paid acquisition, content, CRO, analytics, and lifecycle programs built on the Frameleads Growth System™. ~200 lifetime engagements; ~₹9Cr in attributed client pipeline tracked.",
   foundingDate: "2019",
-  founders: [FOUNDER_PERSON],
-  // Strongest single E-E-A-T credential. Surfaced both on the Organization
-  // entity and on the founder Person above for crawler symmetry.
-  award: "Founder appeared on Shark Tank India (Sony LIV)",
   keywords: [
     "performance marketing",
-    "Shark Tank India",
     "SEO agency Bangalore",
     "AI Overview optimization",
     "Frameleads Growth System",
@@ -202,7 +170,7 @@ const ORGANIZATION_SCHEMA = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+91-6362821368",
+      telephone: "+91-9901450425",
       contactType: "sales",
       areaServed: ["IN", "AE", "SA", "SG", "GB", "US", "CA", "AU"],
       availableLanguage: ["en", "hi"],
@@ -213,7 +181,6 @@ const ORGANIZATION_SCHEMA = {
     "https://www.linkedin.com/company/frameleads",
     "https://www.instagram.com/frameleads/",
     "https://www.facebook.com/profile.php?id=61577223400100",
-    "https://www.youtube.com/@ajsalabbas8093",
     ...OPTIONAL_ORG_SAMEAS,
   ],
   aggregateRating: {

@@ -786,7 +786,7 @@ export default function DigitalMarketingGuidePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Transform Your Digital Marketing?</h2>
                       <p className="text-xl text-gray-600 mb-8">
-              Get a free consultation and discover how our <Link href="/our-team" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">expert team</Link> can help you achieve your digital marketing goals. Learn more about our <Link href="/about" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">company</Link> and <Link href="/academy" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">training programs</Link>.
+              Get a free consultation and discover how our <Link href="/about" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">senior operators</Link> can help you achieve your digital marketing goals. Learn more about <Link href="/about" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">Frameleads</Link> and our <Link href="/academy" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium">training programs</Link>.
             </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-block">
@@ -796,7 +796,7 @@ export default function DigitalMarketingGuidePage() {
             </Link>
             <Link href="/about" className="inline-block">
               <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">
-                Learn About Our Team
+                About Frameleads
               </span>
             </Link>
           </div>

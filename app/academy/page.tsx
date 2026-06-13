@@ -185,7 +185,7 @@ export default function AcademyPage() {
     { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577223400100" },
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/frameleads" },
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/frameleads/" },
-    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@ajsalabbas8093" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@Frameleads" },
   ]
 
   return (
@@ -844,10 +844,10 @@ export default function AcademyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Ajsal Abbas</span>: The Marketer Who Turns <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Clicks into Crores</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Frameleads Academy</span>: The Operator Playbook That Turns <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Clicks into Crores</span>
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  Ajsal Abbas is the founder of Frameleads Agency, trusted by <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ people</span> and <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">650+ brands</span> worldwide. He has generated <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">2,00,000+ leads</span>, managed <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">₹100+ crores</span> in ad revenue, and taken a brand from scratch all the way to <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">Shark Tank India</span>. With clients across <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">12+ countries</span> and multiple businesses under his belt, Ajsal blends creativity with performance. And while <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ people</span> trust him with their marketing, his family still just calls him “the guy who runs Facebook ads.”
+                  Frameleads Academy distils the same playbook our senior operators use on retainers into a self-paced curriculum, trusted by <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ learners</span> and <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">650+ brands</span> worldwide. The frameworks behind it have generated <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">2,00,000+ leads</span>, managed <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">₹100+ crores</span> in ad spend, and built brands across <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">12+ countries</span>. No fluff, no theory-only modules — just the systems Frameleads ships every day on live client work.
                 </p>
               </div>
               <div className="relative h-80 group">
@@ -933,7 +933,7 @@ export default function AcademyPage() {
               <div className="text-center md:text-left">
                 <h3 className="text-green-400 font-semibold mb-4">Contact</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>+91 6362821368</p>
+                  <p>+91 9901450425</p>
                   <p>ajsal@frameleads.com</p>
                 </div>
               </div>

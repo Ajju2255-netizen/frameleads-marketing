@@ -52,7 +52,7 @@ export default function AcademyAboutPage() {
       },
       prefill: {
         email: "you@example.com",
-        contact: "+91 99999 99999",
+        contact: "+91 9901450425",
       },
       theme: { color: "#00ff00" },
       notes: { product: "Meta Ads Starter Kit" },
@@ -102,11 +102,11 @@ export default function AcademyAboutPage() {
             </div>
 
             <h1 className={`text-4xl md:text-6xl font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Ajsal Abbas</span>: The Marketer Who Turns <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Clicks into Crores</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Frameleads Academy</span>: The Operator Playbook That Turns <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">Clicks into Crores</span>
             </h1>
 
             <p className={`text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Ajsal Abbas is the founder of Frameleads Agency, trusted by <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ people</span> and <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">650+ brands</span> worldwide. He has generated <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">2,00,000+ leads</span>, managed <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">₹100+ crores</span> in ad revenue, and taken a brand from scratch all the way to <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">Shark Tank India</span>. With clients across <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">12+ countries</span> and multiple businesses under his belt, Ajsal blends creativity with performance. And while <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ people</span> trust him with their marketing, his family still just calls him “the guy who runs Facebook ads.”
+              Frameleads Academy distils the same playbook our senior operators use on retainers into a self-paced curriculum, trusted by <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">1,000+ learners</span> and <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">650+ brands</span> worldwide. The frameworks behind it have generated <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">2,00,000+ leads</span>, managed <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">₹100+ crores</span> in ad spend, and built brands across <span className="text-white font-semibold bg-gradient-to-r from-green-400/30 to-green-300/30 px-1.5 py-0.5 rounded">12+ countries</span>. No fluff, no theory-only modules — just the systems Frameleads ships every day on live client work.
             </p>
 
             <div className={`inline-flex items-center gap-2 text-gray-400 text-sm mb-2 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

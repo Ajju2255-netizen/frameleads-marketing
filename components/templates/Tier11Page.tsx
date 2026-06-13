@@ -133,7 +133,7 @@ export function Tier11Page({ industry, geo, url }: Props) {
 			name: `Frameleads — ${industry.label} marketing in ${geo.name}`,
 			areaServed: { "@type": "City", name: geo.name },
 			url,
-			telephone: "+91-6362821368",
+			telephone: "+91-9901450425",
 			parentOrganization: { "@type": "Organization", name: "Frameleads", url: "https://frameleads.com" },
 		},
 		{

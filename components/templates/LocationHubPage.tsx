@@ -504,7 +504,7 @@ export function LocationHubPage({ slug }: Props) {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} Ajsal personally reviews ${loc.name} campaigns at the Scale + Enterprise tiers; channel-mix recommendations on this page reflect Frameleads' live operating data from ${loc.name}-targeted engagements.`}
+					bio={`${DEFAULT_AUTHOR.bio} A senior operator reviews ${loc.name} campaigns at the Scale + Enterprise tiers; channel-mix recommendations on this page reflect Frameleads' live operating data from ${loc.name}-targeted engagements.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={dateModified}
 				/>

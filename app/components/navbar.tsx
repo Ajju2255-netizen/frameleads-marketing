@@ -144,7 +144,6 @@ const COMPANY_COLS: MegaCol[] = [
     heading: "About Frameleads",
     items: [
       { label: "About us", href: "/about", description: "Who we are, what we believe" },
-      { label: "Our team", href: "/our-team", description: "Senior operators who run the work" },
       { label: "Case studies", href: "/case-studies", description: "Anonymised engagement breakdowns" },
       { label: "Careers", href: "/careers", description: "Open operator roles" },
     ],

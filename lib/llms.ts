@@ -197,7 +197,7 @@ function blogSection(): string {
 		hub,
 		...editorialItems,
 		"",
-		`Editorial blog uses an 8-type system: best-in-city, cost-in-city, how-to-hire, vs (comparison), questions-to-ask, definitive-guide, city-context, pillar. Each post carries a structured TLDR + FAQ + references block, Article + FAQPage + BreadcrumbList + Person + WebPage(speakable) schema, and a Person byline (Ajsal Abbas) for E-E-A-T.`,
+		`Editorial blog uses an 8-type system: best-in-city, cost-in-city, how-to-hire, vs (comparison), questions-to-ask, definitive-guide, city-context, pillar. Each post carries a structured TLDR + FAQ + references block, Article + FAQPage + BreadcrumbList + WebPage(speakable) schema, and an Organization byline (Frameleads Editorial Team) for E-E-A-T.`,
 		"",
 		`Plus ${programmaticCount} programmatic city × service playbooks at \`/blogs/best-{service}-agency-in-{city}-2026\`, \`/blogs/{service}-cost-in-{city}-2026\`, and \`/blogs/how-to-hire-{service}-agency-in-{city}\`. Programmatic posts kept out of this curated list to keep signal-to-noise high; full enumeration available in /sitemap.xml.`,
 	]);

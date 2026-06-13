@@ -109,11 +109,11 @@ export function EmbeddedLeadForm({
 					Your audit request is in. A senior Frameleads operator will email you within
 					one business day to schedule the 30-minute call. If you're in a hurry,
 					WhatsApp <a
-						href="https://wa.me/916362821368?text=Hi%20Frameleads%2C%20following%20up%20on%20my%20audit%20request"
+						href="https://wa.me/919901450425?text=Hi%20Frameleads%2C%20following%20up%20on%20my%20audit%20request"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-[#FF6B35] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:decoration-[#FF6B35]"
-					>+91 6362821368</a> with the lead reference and we'll move it up the queue.
+					>+91 9901450425</a> with the lead reference and we'll move it up the queue.
 				</p>
 				<p className="mt-3 text-[12px] text-[#5A5A5A]">Reference: {result.leadId}</p>
 			</section>

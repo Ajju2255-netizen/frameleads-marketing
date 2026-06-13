@@ -232,7 +232,7 @@ export default function CheckoutDrawer({
         if (shouldContact) {
           // Open WhatsApp or email
           const message = `Hi, I'd like to purchase the Meta Ads Playbook for ₹1,999. My details: ${customerDetails.name}, ${customerDetails.email}, ${customerDetails.phone}`;
-          const whatsappUrl = `https://wa.me/916362821368?text=${encodeURIComponent(message)}`;
+          const whatsappUrl = `https://wa.me/919901450425?text=${encodeURIComponent(message)}`;
           window.open(whatsappUrl, '_blank');
         }
       } else {

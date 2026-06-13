@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, M
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-const WHATSAPP_INTENT = "https://wa.me/916362821368?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
+const WHATSAPP_INTENT = "https://wa.me/919901450425?text=Hi%20Frameleads%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20project."
 
 export default function Footer() {
   const services = [
@@ -55,7 +55,6 @@ export default function Footer() {
 
   const company = [
     { name: "About Us", href: "/about" },
-    { name: "Our Team", href: "/our-team" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },
@@ -111,7 +110,7 @@ export default function Footer() {
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/frameleads" },
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/frameleads/" },
     { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61577223400100" },
-    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@ajsalabbas8093" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@Frameleads" },
   ]
 
   return (
@@ -297,11 +296,11 @@ export default function Footer() {
                 <span>ajsal@frameleads.com</span>
               </a>
               <a
-                href="tel:+916362821368"
+                href="tel:+919901450425"
                 className="flex items-center text-[#5A5A5A] text-sm hover:text-[#FF6B35] transition-colors duration-300"
               >
                 <Phone className="h-4 w-4 mr-3 text-[#FF6B35]" />
-                <span>+91 6362821368</span>
+                <span>+91 9901450425</span>
               </a>
               <a
                 href={WHATSAPP_INTENT}

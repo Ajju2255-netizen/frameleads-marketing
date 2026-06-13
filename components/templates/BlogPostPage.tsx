@@ -329,7 +329,7 @@ export function BlogPostPage({ post }: Props) {
 							<span>
 								By{" "}
 								<Link
-									href={author.url.startsWith("http") ? author.url : `/our-team`}
+									href={author.url.startsWith("http") ? author.url : `/about`}
 									className="text-[#2D3748] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:text-[#FF6B35] hover:decoration-[#FF6B35]"
 								>
 									{author.name}

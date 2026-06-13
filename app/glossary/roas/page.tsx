@@ -94,9 +94,9 @@ const schema = [
 		datePublished: "2026-05-05",
 		dateModified: "2026-05-05",
 		author: {
-			"@type": "Person",
+			"@type": "Organization",
 			name: "Frameleads Editorial Team",
-			url: "https://frameleads.com/our-team",
+			url: "https://frameleads.com/about",
 		},
 		publisher: {
 			"@type": "Organization",

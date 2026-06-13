@@ -280,7 +280,7 @@ export default function HowWeAuditPage() {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} Ajsal personally runs ~25% of Frameleads' audits; the rest are run by the senior team using the same methodology described on this page.`}
+					bio={`${DEFAULT_AUTHOR.bio} Every Frameleads audit is run by a senior operator following the methodology described on this page.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={DATE_MODIFIED}
 				/>

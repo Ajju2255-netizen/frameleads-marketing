@@ -77,9 +77,9 @@ function endpointUrl(): string {
 
 const FRIENDLY = {
 	400: "Please check the highlighted fields and try again.",
-	429: "You're sending requests too quickly. Try again in a minute — or WhatsApp us on +91 6362821368.",
-	500: "Something went wrong on our side. Please try again, or WhatsApp us on +91 6362821368.",
-	OFFLINE: "Looks like you're offline. Reconnect and try again, or WhatsApp us on +91 6362821368.",
+	429: "You're sending requests too quickly. Try again in a minute — or WhatsApp us on +91 9901450425.",
+	500: "Something went wrong on our side. Please try again, or WhatsApp us on +91 9901450425.",
+	OFFLINE: "Looks like you're offline. Reconnect and try again, or WhatsApp us on +91 9901450425.",
 } as const;
 
 export async function submitLead(payload: LeadPayload): Promise<LeadSubmitResult> {

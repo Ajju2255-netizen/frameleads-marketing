@@ -16,7 +16,7 @@ export default function AcademyContactPage() {
 
   const contactInfo = [
     { icon: MapPin, title: 'Visit Our Office', details: ['Electronic City, Bangalore', 'Karnataka 560100', 'India'] },
-    { icon: Phone, title: 'Call Us', details: ['+91 63628 21368', 'Mon-Fri: 9AM-6PM'] },
+    { icon: Phone, title: 'Call Us', details: ['+91 9901450425', 'Mon-Fri: 9AM-6PM'] },
     { icon: Mail, title: 'Email Us', details: ['ajsal@frameleads.com', 'cloe@frameleads.com'] },
     { icon: Clock, title: 'Business Hours', details: ['Mon - Fri: 9:00 AM - 6:00 PM'] },
   ]
@@ -105,7 +105,7 @@ export default function AcademyContactPage() {
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input id="phone" name="phone" placeholder="+91 63628 21368" className="w-full px-4 py-3 bg-black/40 border border-green-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" />
+                    <input id="phone" name="phone" placeholder="+91 9901450425" className="w-full px-4 py-3 bg-black/40 border border-green-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" />
                   </div>
 
                   <div>

@@ -34,7 +34,7 @@ export default function ThankYouPage() {
             <ul className="mt-2 space-y-1">
               <li>• Check your email for the download link</li>
               <li>• Contact us at <a href="mailto:ajsal@frameleads.com" className="text-[#FF6B35] hover:underline">ajsal@frameleads.com</a></li>
-              <li>• WhatsApp us at <a href="https://wa.me/916362821368" className="text-[#FF6B35] hover:underline">+91 6362821368</a></li>
+              <li>• WhatsApp us at <a href="https://wa.me/919901450425" className="text-[#FF6B35] hover:underline">+91 9901450425</a></li>
             </ul>
           </div>
         </div>

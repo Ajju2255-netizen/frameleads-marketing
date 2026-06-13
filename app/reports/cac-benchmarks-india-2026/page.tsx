@@ -262,7 +262,7 @@ export default function CACBenchmarksPage() {
 							<span>
 								By{" "}
 								<Link
-									href="/our-team"
+									href="/about"
 									className="text-[#2D3748] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:text-[#FF6B35] hover:decoration-[#FF6B35]"
 								>
 									{DEFAULT_AUTHOR.name}
@@ -434,7 +434,7 @@ export default function CACBenchmarksPage() {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} This report aggregates results across 247 engagements Ajsal's team has run since 2021. Individual client data is confidential; aggregate bands are CC-BY licensed for citation.`}
+					bio={`${DEFAULT_AUTHOR.bio} This report aggregates results across 247 engagements Frameleads has run since 2021. Individual client data is confidential; aggregate bands are CC-BY licensed for citation.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={DATE_MODIFIED}
 				/>

@@ -181,8 +181,8 @@ export default function CareersPage() {
               <Link href="#open-positions" className="inline-block">
                 <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">View Open Positions</span>
               </Link>
-              <Link href="/our-team" className="inline-block">
-                <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">Meet Our Team</span>
+              <Link href="/about" className="inline-block">
+                <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">About Frameleads</span>
               </Link>
             </div>
           </div>
@@ -343,8 +343,8 @@ export default function CareersPage() {
             <Link href="/contact" className="inline-block">
               <span className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] hover:from-[#FF8A50] hover:to-[#FF6B35] text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-[#FF6B35]/25 hover:shadow-[#FF6B35]/40 transition-all duration-300">Send Your Resume</span>
             </Link>
-            <Link href="/our-team" className="inline-block">
-              <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-3 rounded-xl font-semibold transition-all duration-300">Meet Our Team</span>
+            <Link href="/about" className="inline-block">
+              <span className="inline-flex items-center justify-center border border-[#FF6B35]/40 text-gray-700 hover:text-[#FF6B35] px-8 py-3 rounded-xl font-semibold transition-all duration-300">About Frameleads</span>
             </Link>
           </div>
         </div>

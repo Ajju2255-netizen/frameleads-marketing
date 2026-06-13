@@ -547,7 +547,7 @@ export default function ROICalculatorPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Need Help Optimizing Your ROI?</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Our <Link href="/our-team" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">expert team</Link> can help you
+            Our <Link href="/about" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">senior operators</Link> can help you
             improve your marketing ROI with proven strategies and{' '}
             <Link href="/digital-marketing-services" className="text-[#FF6B35] hover:text-[#FF8A50] font-medium transition-colors duration-200">comprehensive digital marketing services</Link>.
           </p>

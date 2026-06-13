@@ -31,11 +31,27 @@ export default function AboutPage() {
     { icon: Globe2, title: "Global Expertise", text: "North America, Asia, Europe, LATAM, Middle East, South Asia." },
   ]
 
-  const team = [
-    { name: "Ajsal Abbas", position: "Founder & CEO", image: "/team/ajsal-abbas.png", bio: "15+ years in digital marketing leading growth programs across SEO, PPC and CRO." },
-    { name: "Priya Patel", position: "Head of SEO", image: "/team/priya-patel.png", bio: "Technical and local SEO specialist focused on sustainable visibility." },
-    { name: "Amit Kumar", position: "Content Strategy Lead", image: "/team/amit-kumar.png", bio: "Owns full-funnel content that ranks and converts across industries." },
-    { name: "Sneha Reddy", position: "Digital Marketing Manager", image: "/team/sneha-reddy.png", bio: "Paid media strategist for Google, Meta, and LinkedIn ecosystems." },
+  const howWeWork = [
+    {
+      icon: ShieldCheck,
+      title: "Senior operators only",
+      description: "No junior account managers fronting calls. The strategist running your account is the same person making the decisions — capped at 3-4 active retainers per operator so attention scales.",
+    },
+    {
+      icon: BarChart3,
+      title: "Operator-grade reporting",
+      description: "Weekly scorecards, monthly executive reviews, and a live dashboard. You see CAC, ROAS, pipeline, and channel mix the moment we do — no spin, no hidden metrics.",
+    },
+    {
+      icon: Trophy,
+      title: "Compounding outcomes",
+      description: "Growth that doesn't stop when you stop spending. Organic infrastructure, owned content, lifecycle automation, and durable creative — engineered to compound from Q2 of every engagement.",
+    },
+    {
+      icon: Handshake,
+      title: "Partnership terms",
+      description: "30-day exit clauses, ad accounts and creative files transferable to you on day one, source-of-truth analytics owned by your domain. Anyone refusing these terms is structuring against your interests.",
+    },
   ]
 
   const jsonLd = {
@@ -45,7 +61,7 @@ export default function AboutPage() {
     "url": "https://frameleads.com/about",
     "logo": "https://frameleads.com/logos/brand-logo.png",
     "sameAs": ["https://linkedin.com/company/frameleads", "https://www.instagram.com/frameleads/"],
-    "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91 6362821368", "contactType": "customer service", "areaServed": "Worldwide" }],
+    "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91 9901450425", "contactType": "customer service", "areaServed": "Worldwide" }],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "200" }
   }
 
@@ -174,24 +190,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* How We Work */}
       <section className="relative py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Leadership Team</h2>
-            <p className="text-xl text-gray-600">Hands-on leaders who partner with you from strategy to execution.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How We Work</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">The operating principles behind every Frameleads engagement.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, i) => (
-              <div key={i} className="text-center group">
-                <div className="relative mb-6">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} width={300} height={300} className="rounded-2xl mx-auto group-hover:scale-105 transition-transform duration-300" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {howWeWork.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <div key={i} className="bg-white/80 backdrop-blur-xl border border-[#FF6B35]/20 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start gap-5">
+                    <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8A50] w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-gray-900 font-semibold text-xl mb-3">{item.title}</h3>
+                      <p className="text-gray-600 text-base leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-[#FF6B35] font-medium mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

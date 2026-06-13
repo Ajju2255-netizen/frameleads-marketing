@@ -78,9 +78,9 @@ export function Tier8GlossaryPage({ entry, url }: Props) {
 			datePublished: new Date().toISOString().slice(0, 10),
 			dateModified: new Date().toISOString().slice(0, 10),
 			author: {
-				"@type": "Person",
+				"@type": "Organization",
 				name: "Frameleads Editorial Team",
-				url: "https://frameleads.com/our-team",
+				url: "https://frameleads.com/about",
 			},
 			publisher: {
 				"@type": "Organization",

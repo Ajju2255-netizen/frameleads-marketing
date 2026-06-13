@@ -275,10 +275,10 @@ export function MoneyPage(props: Props) {
 								<span aria-hidden>→</span>
 							</Link>
 							<a
-								href="tel:+916362821368"
+								href="tel:+919901450425"
 								className="inline-flex items-center gap-2 rounded-full border border-[#FFE4D6] bg-white px-5 py-3 text-sm font-semibold text-[#2D3748] transition-colors hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
 							>
-								Call +91 63628 21368
+								Call +91 9901450425
 							</a>
 						</div>
 					</div>
@@ -539,7 +539,7 @@ export function MoneyPage(props: Props) {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} Ajsal personally runs the audit + first 90 days on ${geo.name} engagements at the Scale and Enterprise tiers.`}
+					bio={`${DEFAULT_AUTHOR.bio} A senior operator runs the audit + first 90 days on ${geo.name} engagements at the Scale and Enterprise tiers.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={dateModified}
 				/>

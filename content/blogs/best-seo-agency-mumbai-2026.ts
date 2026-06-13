@@ -185,7 +185,7 @@ export const post: BlogPost = {
 			type: "ul",
 			items: [
 				"**Methodology**: Published openly at /frameleads-growth-system. Score: high.",
-				"**Senior-consultant access**: Founder (Ajsal Abbas) runs the audit + first 90 days on Scale+ engagements; capped at 3-4 active retainers per senior. Score: high.",
+				"**Senior-consultant access**: A senior operator runs the audit + first 90 days on Scale+ engagements; capped at 3-4 active retainers per senior. Score: high.",
 				"**Category-specific track record**: ~200 lifetime engagements; specific Mumbai work in BFSI, real estate (M-RERA), D2C. References on request. Score: high.",
 				"**Sub-locality awareness**: Mumbai sub-locality framework baked into our city-context playbook (see the Mumbai operator playbook on the blog). Score: high.",
 				"**AI Overview + GEO**: GEO playbook published; monthly 10-query × 5-engine citation testing protocol; explicit AI-crawler allow-rules in robots.txt + llms.txt + IndexNow submission. Score: high.",

@@ -511,7 +511,7 @@ export function AdPlatformHub({ platform: p, url }: Props) {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} Ajsal is the senior operator on most ${p.label} engagements at the Scale and Enterprise tiers.`}
+					bio={`${DEFAULT_AUTHOR.bio} A senior operator leads most ${p.label} engagements at the Scale and Enterprise tiers.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={dateModified}
 				/>

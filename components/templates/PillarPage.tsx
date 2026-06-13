@@ -178,7 +178,7 @@ type Props = { pillar: Pillar };
 
 export function PillarPage({ pillar }: Props) {
 	const url = `${SITE_URL}/blogs/pillars/${pillar.slug}`;
-	const author = AUTHORS["ajsal-abbas"];
+	const author = AUTHORS["frameleads-editorial-team"];
 	const dateModified = pillar.dateModified ?? pillar.datePublished;
 	const spokes = postsByPillar(pillar.slug);
 
@@ -300,7 +300,7 @@ export function PillarPage({ pillar }: Props) {
 						<div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-[#5A5A5A]">
 							<span>
 								By{" "}
-								<Link href={author.url.startsWith("http") ? author.url : "/our-team"} className="text-[#2D3748] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:text-[#FF6B35] hover:decoration-[#FF6B35]">
+								<Link href={author.url.startsWith("http") ? author.url : "/about"} className="text-[#2D3748] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:text-[#FF6B35] hover:decoration-[#FF6B35]">
 									{author.name}
 								</Link>
 							</span>

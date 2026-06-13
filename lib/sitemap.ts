@@ -100,7 +100,6 @@ const STATIC_PILLAR_COUNTRY_SLUGS = [
 const STATIC_HOME_AND_MISC = [
 	{ slug: "", changefreq: "weekly", priority: 1.0 } as const,
 	{ slug: "about", changefreq: "monthly", priority: 0.7 } as const,
-	{ slug: "our-team", changefreq: "monthly", priority: 0.6 } as const,
 	{ slug: "careers", changefreq: "monthly", priority: 0.5 } as const,
 	{ slug: "contact", changefreq: "monthly", priority: 0.7 } as const,
 	{ slug: "case-studies", changefreq: "weekly", priority: 0.85 } as const,

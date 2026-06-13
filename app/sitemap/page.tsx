@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
 import Link from "next/link"
 import { ArrowRight, ExternalLink, Search, MapPin, Building2, FileText, Users, Globe, Target, Zap, BarChart3, Mail, Phone, Calendar, Award, BookOpen, Calculator, Shield, Heart, GraduationCap, Palette, Crown, Euro, MessageCircle, ShoppingBag, BarChart, Play, Eye, ThumbsUp, Share2, Download, PlayCircle, Sparkles, Megaphone, Camera, Music, Hash, ExternalLink as ExternalLinkIcon, Brain, MousePointer, Layers, BarChart2, TrendingDown, ArrowUpRight, Filter, RefreshCw, Maximize, Minimize, Activity, LineChart, Percent, Calculator as CalcIcon, BookOpen as BookIcon, FileText as FileIcon, HelpCircle, ChevronRight, CheckCircle2, XCircle, AlertCircle, Info, Lightbulb, Rocket, Trophy, Medal, Home, Coffee, Code, Database, Server, Wrench, Cpu, HardDrive, Network, Terminal, GitBranch, ShieldCheck, Zap as ZapIcon } from "lucide-react"
 
@@ -14,7 +12,7 @@ export default function SitemapPage() {
     setIsVisible(true)
   }, [])
 
-  // Auto-generated page data - Updated: 2026-06-13T07:55:01.279Z
+  // Auto-generated page data - Updated: 2026-06-13T09:58:55.990Z
   const pageData = {
   "services": [
     {
@@ -234,11 +232,6 @@ export default function SitemapPage() {
       "path": "/careers",
       "name": "Careers",
       "description": "Join our digital marketing team"
-    },
-    {
-      "path": "/our-team",
-      "name": "Our Team",
-      "description": "Our Team - Frameleads digital marketing services"
     }
   ],
   "resources": [
@@ -670,8 +663,7 @@ export default function SitemapPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FEFEFE] via-[#FDF8F5] to-[#FEFEFE]">
-      <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -813,7 +805,6 @@ export default function SitemapPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

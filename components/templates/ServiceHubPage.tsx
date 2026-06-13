@@ -73,7 +73,7 @@ function buildServiceFaqs(s: Service): FAQItem[] {
 		},
 		{
 			question: `Will the senior operator I meet at the audit actually run my account?`,
-			answer: `Yes — that's a policy, not a sales line. The audit is run by a senior Frameleads operator (typically Ajsal Abbas for high-priority categories, otherwise a senior strategist). The same person stays on the account through the engagement, with junior media buyers / content producers handling execution under their direction. We hold senior-operator load at 3-4 active retainers per person so attention scales.`,
+			answer: `Yes — that's a policy, not a sales line. The audit is run by a senior Frameleads operator (a senior strategist or practice lead). The same person stays on the account through the engagement, with junior media buyers / content producers handling execution under their direction. We hold senior-operator load at 3-4 active retainers per person so attention scales.`,
 		},
 	];
 }
@@ -336,7 +336,7 @@ export function ServiceHubPage({ serviceId, urlPath }: Props) {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} Ajsal leads the ${lc} practice and is the senior operator on most engagements at the Scale and Enterprise tiers.`}
+					bio={`${DEFAULT_AUTHOR.bio} A senior operator leads the ${lc} practice on most engagements at the Scale and Enterprise tiers.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={dateModified}
 				/>

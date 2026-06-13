@@ -95,12 +95,12 @@ export default function EditorialPolicyPage() {
 					<p className="mt-3 text-[16px] leading-[1.75] text-[#2D3748]/90">
 						All editorial content on frameleads.com is written or reviewed by the Frameleads editorial team, with{" "}
 						<Link
-							href="/our-team"
+							href="/about"
 							className="text-[#FF6B35] underline decoration-[#FFE4D6] decoration-2 underline-offset-4 hover:decoration-[#FF6B35]"
 						>
-							Ajsal Abbas
+							Frameleads editorial team
 						</Link>{" "}
-						(founder &amp; CEO, 15+ years in performance + organic marketing) as the canonical byline on operator-grade posts. We do not use ghost-writers, content mills, or generic AI-generated content. Where AI assists a draft (e.g. for outlines, fact-checks against our internal data, copy editing), the senior editor reviews every paragraph and signs off before publish.
+						 — senior performance and organic operators with 10+ years running SEO, paid acquisition, and CRO programs. We do not use ghost-writers, content mills, or generic AI-generated content. Where AI assists a draft (e.g. for outlines, fact-checks against our internal data, copy editing), the senior editor reviews every paragraph and signs off before publish.
 					</p>
 
 					<h2 className="mt-12 font-poppins text-[24px] sm:text-[28px] font-bold text-[#2D3748]">
@@ -217,7 +217,7 @@ export default function EditorialPolicyPage() {
 					person={DEFAULT_AUTHOR}
 					name={DEFAULT_AUTHOR.name}
 					role={DEFAULT_AUTHOR.role}
-					bio={`${DEFAULT_AUTHOR.bio} As editor-in-chief, Ajsal is the final reviewer on every editorial page that ships under his byline.`}
+					bio={`${DEFAULT_AUTHOR.bio} A senior editor is the final reviewer on every editorial page before publish.`}
 					linkedin={DEFAULT_AUTHOR.linkedin}
 					updatedAt={DATE_MODIFIED}
 				/>
