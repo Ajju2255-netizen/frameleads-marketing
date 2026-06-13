@@ -28,11 +28,6 @@ const CONFIG = {
       critical: true
     },
     {
-      name: 'Generate XML Sitemap',
-      command: 'npm run generate-xml-sitemap',
-      critical: true
-    },
-    {
       name: 'Submit to Google',
       command: 'npm run submit-to-google',
       critical: false
